@@ -1,0 +1,181 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsfonts,amsmath,amstext,amssymb,amsthm,color}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{pgf}
+\usepackage{tikz,tikz-cd}
+
+
+
+
+
+
+
+
+
+\usepackage{graphicx,graphpap}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathreplacing,decorations.markings}
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+\newcommand{\pint}[2]{\langle #1,#2\rangle}
+	
+\renewcommand{\hom}{\mathrm{Hom}}
+
+\newenvironment{sol}{\noindent\normalsize {\sc Solução:}}
+
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\im}{Im}
+
+
+
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+  \draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+\newtheorem{df}{Definição}[subsection]
+\newtheorem{thm}[df]{Teorema}
+\newtheorem{cor}[df]{Corolário}
+\newtheorem{prop}[df]{Proposição}
+\newtheorem{lemma}[df]{Lema}
+\newtheorem{conjec}[df]{Conjectura}
+\newtheorem{exerc}[df]{Exercício(s)}
+\newtheorem{qst}{Questão}
+\newtheorem{ex}[df]{Exemplo(s)}
+\newtheorem{enunc}{Enunciado}[exn]
+
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\author{``3º Testinho'' - GAAL}
+\date{18 de Junho de 2019}
+\title{}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+Em todas as questões abaixo deixe sempre explícito o seu raciocínio, não apenas a resposta correta.
+
+\begin{qst}
+Para cada equação abaixo, diga que tipo de cônica ele representa e faça um esboço dessa cônica.
+\begin{enumerate}[a)]
+	\item $x=9y^2$;
+	\item $4x^2+9x^2=36$;
+	\item $x^2-\dfrac{y^2}{16}=-1$.
+\end{enumerate}
+\end{qst}
+\begin{qst}
+	Diga qual das equações abaixo descreve uma cônica rotacionada e qual descreve uma cônica transladada. Em seguida, apresente a matriz de rotação para a cônica rotacionada e o vetor de translação para a cônica transladada.
+	\begin{enumerate}[a)]
+		\item $9x^2-4xy+6y^2=30$;
+		\item $4x^2-9y^2-8x-36y=76$.
+	\end{enumerate}
+\end{qst}
+
+\begin{qst}	
+	Dada a equação \[13 x^2 + 10 x y - 22 x + 13 y^2 + 58 y + 37 = 0\]faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Reescreva equação acima em forma matricial.
+		\item Encontre os autovalores e autovetores associados à parte de grau 2 da equação acima.
+		\item Identifique a matriz de rotação associada a essa equação.
+		\item Faça a mudança de coordenadas que diagonaliza a forma matricial obtida no item (a).
+		\item Identifique a translação associada a essa equação.
+		\item Faça uma translação de forma que a equação obtida no item (d) esteja na forma padrão.
+		\item Identifique qual a cônica descrita pela equação.
+		\item Faça um esboço dessa cônica.
+	\end{enumerate}
+\end{qst}
+
+\end{document}

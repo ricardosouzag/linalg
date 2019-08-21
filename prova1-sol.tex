@@ -1,0 +1,444 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsfonts,amsmath,amstext,amssymb,amsthm,color}
+\usepackage{thmtools}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{pgf}
+\usepackage{tikz,tikz-cd}
+\usepackage{arydshln}
+\usepackage{tcolorbox}
+\usepackage[bottom=3cm]{geometry}
+
+
+
+
+
+
+
+
+\tcbuselibrary{breakable}
+\usepackage{graphicx,graphpap}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathreplacing,decorations.markings}
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+\renewcommand{\hom}{\mathrm{Hom}}
+
+\newenvironment{sol}{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=blue!40!white,title=\normalsize {\sc{Solução}},coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{augmatrix}{\left(\begin{array}}{\end{array}\right)}
+
+
+
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+  \draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+\newtheorem{qst}{Questão}
+\declaretheorem[numbered=no, name=Questão Bônus]{bonus}
+\newtheorem{enunc}{Enunciado}[exn]
+
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\author{Primeira Prova - GAAL}
+\date{04 de Abril de 2019}
+\title{}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+\begin{document}
+\begin{center}
+	{\Large{\sc Solucionário - Primeira Prova - GAAL}}
+\end{center}
+
+\begin{qst}
+	Considere o sistema linear
+	\[\begin{pmatrix}
+	3&0&-1&0\\4&1&-1&-2\\0&1&0&-1
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	0\\0\\0
+	\end{pmatrix}\]e faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Exiba a matriz aumentada desse sistema.
+		\item Exiba a matriz escalonada desse sistema.
+		\item Calcule o conjunto solução desse sistema.
+		\item Exiba uma solução do sistema, e verifique que ela é, de fato, uma solução.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	\begin{enumerate}[a)]
+		\item A matriz aumentada do sistema é
+		\[\begin{augmatrix}{cccc:c}
+		3&0&-1&0&0\\
+		4&1&-1&-2&0\\
+		0&1&0&-1&0
+		\end{augmatrix}.\]
+		\item Vamos escalonar:
+		\begin{align*}
+		\begin{augmatrix}{cccc:c}
+		3&0&-1&0&0\\
+		4&1&-1&-2&0\\
+		0&1&0&-1&0
+		\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+		1&0&-1/3&0&0\\
+		4&1&-1&-2&0\\
+		0&1&0&-1&0
+		\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+		1&0&-1/3&0&0\\
+		0&1&1/3&-2&0\\
+		0&1&0&-1&0
+		\end{augmatrix}\\\\
+		\rightsquigarrow\begin{augmatrix}{cccc:c}
+		1&0&-1/3&0&0\\
+		0&1&1/3&-2&0\\
+		0&0&-1/3&1&0
+		\end{augmatrix}
+		\rightsquigarrow\begin{augmatrix}{cccc:c}
+		1&0&-1/3&0&0\\
+		0&1&1/3&-2&0\\
+		0&0&1&-3&0
+		\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+		1&0&0&-1&0\\
+		0&1&0&-1&0\\
+		0&0&1&-3&0
+		\end{augmatrix}
+		\end{align*}e obter que a matriz escalonada do sistema é \[\begin{augmatrix}{cccc:c}
+		1&0&0&-1&0\\
+		0&1&0&- 1&0\\
+		0&0&1&-3&0
+		\end{augmatrix}.\]
+		\item Com a matriz escalonada, vemos que temos as equações $x=w$, $y=w$ e $z=3w$. Como $x,y,z$ dependem de $w$, vamos declarar $w$ variável livre e expressar o conjunto solução como
+		\[S=\left\{(x,y,z,w)\in\R^4\mid x=y=z=3w\right\},\] (ou
+		\[S=\left\{\lambda \begin{pmatrix}
+		1\\1\\3\\1
+		\end{pmatrix}\mid \lambda\in \R \right\}\]se você preferir).
+		\item Para achar uma solução não-trivial, basta escolher qualquer $w\neq 0$, por exemplo, $w=1$. Assim obtemos a solução $X_1=\begin{pmatrix}
+		1\\1\\3\\1
+		\end{pmatrix}$.
+		
+		Vamos checar se é solução:
+		\[
+		\begin{pmatrix}
+		3&0&-1&0\\4&1&-1&-2\\0&1&0&-1
+		\end{pmatrix}\begin{pmatrix}
+		1\\1\\3\\1
+		\end{pmatrix}=\begin{pmatrix}
+		3-3 \\ 4+1-3-2 \\ 1-1
+		\end{pmatrix}=\begin{pmatrix}
+		0\\0\\0
+		\end{pmatrix},\] ou seja, $X_1$ é, de fato, solução.
+	\end{enumerate}
+\end{sol}\pagebreak
+
+\begin{qst}
+	Considere a matriz $A=\begin{pmatrix}
+	1&1&1\\2&5&-2\\1&7&-7
+	\end{pmatrix}$ e faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Resolva o sistema linear homogêneo $AX=0$.
+		\item Dada a matriz coluna $X_1=\begin{pmatrix}
+		1\\1\\1
+		\end{pmatrix}$ encontre uma matriz $B$ tal que $X_1$ seja solução do sistema $AX=B$.
+		\item Encontre, sem fazer contas, outra solução qualquer do sistema $AX=B$ e mostre que ela é solução.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	\begin{enumerate}[a)]
+		\item Para resolver o sistema linear homogêneo, vamos escalonar $A$:
+		\[\begin{array}{rl}
+		\begin{pmatrix}
+		1&1&1\\2&5&-2\\1&7&-7
+		\end{pmatrix}&\rightsquigarrow\begin{pmatrix}
+		1&1&1\\0&3&-4\\0&6&-8
+		\end{pmatrix}\cr\cr
+		\rightsquigarrow\begin{pmatrix}
+		1&1&1\\0&1&-4/3\\0&6&-8
+		\end{pmatrix}&\rightsquigarrow\begin{pmatrix}
+		1&0&7/3\\0&1&-4/3\\0&0&0
+		\end{pmatrix}
+		\end{array}\]agora vemos que temos equações $x=-7z/3$ e $y=4z/3$. Como $x$ e $y$ dependem de $z$, vamos declarar $z$ como variável livre e escrever
+		\[S=\left\{(x,y,z)\in\R^3\mid x=-7z/3\mbox{ e }y=4z/3\right\}\] (ou
+		\[S=\left\{\lambda\begin{pmatrix}
+		-7/3\\4/3\\1
+		\end{pmatrix}\mid \lambda\in \R\right\}\]se você preferir).
+		
+		\item Como a matriz $X_1$ é solução do sistema $AX=B$, por definição de solução sabemos que $AX_1=B$. Mas já temos $A$ e $X_1$, assim podemos calcular $B$:
+		\[B=AX_1=\begin{pmatrix}
+		1&1&1\\2&5&-2\\1&7&-7
+		\end{pmatrix}\begin{pmatrix}
+		1\\1\\1
+		\end{pmatrix}=\begin{pmatrix}
+		1+1+1\\2+5-2\\1+7-7
+		\end{pmatrix}=\begin{pmatrix}
+		3\\5\\1
+		\end{pmatrix}.\] Ou seja, a única matriz $B$ tal que $X_1$ é solução do sistema $AX=B$ é a matriz $\begin{pmatrix}
+		3\\5\\1
+		\end{pmatrix}$.
+		\item Já sabemos que a soma de uma solução não-trivial do sistema homogêneo $AX=0$ com uma solução do sistema $AX=B$ também é solução do sistema $AX=B$. Então, escolhendo $\lambda=1$ temos que $X_0=\begin{pmatrix}
+		-7/3\\4/3\\1
+		\end{pmatrix}$ é solução não-trivial do sistema homogêneo, donde $X_0+X_1=\begin{pmatrix}
+		-7/3\\4/3\\1
+		\end{pmatrix}+\begin{pmatrix}
+		1\\1\\1
+		\end{pmatrix}=\begin{pmatrix}
+		-4/3\\7/3\\2
+		\end{pmatrix}$ é solução do sistema $AX=B$. Vamos verificar:
+		\[\begin{pmatrix}
+		1&1&1\\2&5&-2\\1&7&-7
+		\end{pmatrix}\begin{pmatrix}
+		-4/3\\7/3\\2
+		\end{pmatrix}=\begin{pmatrix}
+		-4/3+7/3+2\\-8/3+35/3-4\\-4/3+49/3-14
+		\end{pmatrix}=\begin{pmatrix}
+		3\\5\\1
+		\end{pmatrix}=B,\]como queríamos mostrar.
+	\end{enumerate}
+\end{sol}\pagebreak
+
+\begin{qst}
+	Dadas as matrizes $A=\begin{pmatrix}
+	1&2&3\\1&1&2\\0&1&2
+	\end{pmatrix}$ e $B=\begin{pmatrix}
+	5\\7\\-2
+	\end{pmatrix}$, faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Calcule $A^{-1}$.
+		\item Calcule $A^{-1}B$.
+		\item Exiba o conjunto solução do sistema linear $AX=B$.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	\begin{enumerate}[a)]
+		\item Para achar $A^{-1}$ temos que resolver o sistema $AX=I$. Vamos lá:
+		\[\begin{array}{rl}
+		\begin{augmatrix}{ccc:ccc}
+		1&2&3&1&0&0\\
+		1&1&2&0&1&0\\
+		0&1&2&0&0&1
+		\end{augmatrix}&\rightsquigarrow\begin{augmatrix}{ccc:ccc}
+		1&2&3&1&0&0\\
+		0&-1&-1&-1&1&0\\
+		0&1&2&0&0&1
+		\end{augmatrix}\cr\cr
+		\rightsquigarrow\begin{augmatrix}{ccc:ccc}
+		1&2&3&1&0&0\\
+		0&1&1&1&-1&0\\
+		0&1&2&0&0&1
+		\end{augmatrix}&\rightsquigarrow\begin{augmatrix}{ccc:ccc}
+		1&0&1&-1&2&0\\
+		0&1&1&1&-1&0\\
+		0&0&1&-1&1&1
+		\end{augmatrix}\cr\cr
+		\rightsquigarrow\begin{augmatrix}{ccc:ccc}
+		1&0&0&0&1&-1\\
+		0&1&0&2&-2&-1\\
+		0&0&1&-1&1&1
+		\end{augmatrix}
+		\end{array}\]e vemos que $A^{-1}=\begin{pmatrix}
+		0&1&-1\\2&-2&-1\\-1&1&1
+		\end{pmatrix}$. Vamos conferir:
+		\[\begin{pmatrix}
+		1&2&3\\1&1&2\\0&1&2
+		\end{pmatrix}\begin{pmatrix}
+		0&1&-1\\2&-2&-1\\-1&1&1
+		\end{pmatrix}=\begin{pmatrix}
+		4-3 & 1-4+3 & -1-2+3\\
+		2-2 & 1-2+2 & -1-1+2\\
+		2-2 & -2+2 & -1+2
+		\end{pmatrix}=I\]
+		\[\begin{pmatrix}
+		0&1&-1\\2&-2&-1\\-1&1&1
+		\end{pmatrix}\begin{pmatrix}
+		1&2&3\\1&1&2\\0&1&2
+		\end{pmatrix}=\begin{pmatrix}
+		1 & 1-1 & 2-2\\
+		2-2 & 4-2-1 & 6-4-2\\
+		-1+1 & -2+1+1 & -3+2+2
+		\end{pmatrix}=I\]ou seja, elas são mesmo inversas.
+		\item Vamos calcular $A^{-1}B$:
+		\[A^{-1}B=\begin{pmatrix}
+		0&1&-1\\2&-2&-1\\-1&1&1
+		\end{pmatrix}\begin{pmatrix}
+		5\\7\\-2
+		\end{pmatrix}=\begin{pmatrix}
+		7+2\\10-14+2\\-5+7-2
+		\end{pmatrix}=\begin{pmatrix}
+		9\\-2\\0
+		\end{pmatrix}\]logo $A^{-1}B=\begin{pmatrix}
+		9\\-2\\0
+		\end{pmatrix}$.
+		\item Como $A$ é inversível, o sistema $AX=B$ possui solução única dada por $A^{-1}B$, ou seja,
+		\[S=\left\{\begin{pmatrix}
+		9\\-2\\0
+		\end{pmatrix}\right\}.\]
+	\end{enumerate}
+\end{sol}
+\pagebreak
+
+\begin{qst}
+	Dadas as matrizes $A=\begin{pmatrix}
+	1&1\\0&1
+	\end{pmatrix}$ e $B=\begin{pmatrix}
+	0&1\\1&0
+	\end{pmatrix}$, faça o que se pede:
+	
+	\begin{enumerate}[a)]
+		\item Calcule $AB$ e $BA$ e compare os resultados obtidos.
+		\item Escolha $A$ ou $B$. Você seria capaz de encontrar uma matriz $C$ que comute com a matriz que você escolheu (por exemplo, se você escolher a matriz $A$, uma matriz $C$ tal que $AC=CA$)? Explique seu raciocínio.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	\begin{enumerate}[a)]
+		\item Vamos calcular:
+		\[AB=\begin{pmatrix}
+		1&1\\0&1
+		\end{pmatrix}\begin{pmatrix}
+		0&1\\1&0
+		\end{pmatrix}=\begin{pmatrix}
+		1 & 1\\1&0
+		\end{pmatrix}\]
+		\[BA=\begin{pmatrix}
+		0&1\\1&0
+		\end{pmatrix}\begin{pmatrix}
+		1&1\\0&1
+		\end{pmatrix}=\begin{pmatrix}
+		0&1\\1&1
+		\end{pmatrix}.\]
+		
+		Comparando os resultados obtidos, vemos que $AB\neq BA$.
+		\item A resposta é sim, independente de ter escolhido $A$ ou $B$. Por exemplo, você poderia escolher $C=0$ ou $C=I$ e, nesse caso, certamente $AC=CA$ e $BC=CB$. Além disso, poderia notar que $A$ e $B$ são inversíveis e, portanto, $AA^{-1}=A^{-1}A=I$ e $BB^{-1}=B^{-1}B=I$, ou seja, poderíamos tomar $C$ como sendo a inversa da matriz escolhida. Ou você poderia encontrar alguma matriz $C$ aleatória da sua cabeça que comute com $A$ ou $B$.
+		
+		O importante aqui é que você saiba que \textbf{o produto em geral não é comutativo, mas isso não significa que ele nunca é comutativo}.
+	\end{enumerate}
+\end{sol}\pagebreak
+
+\begin{bonus}
+	Considere a reação
+	\[x{\rm Fe_3O_4}+y{\rm CO}\rightarrow z{\rm FeO}+w{\rm CO_2},\]em que $x,y,z,w\in \R$ são coeficientes de balanceamento, e faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Escreva as equações que relacionam as quantidades de cada substância na reação - uma equação para o ferro, uma equação para o oxigênio e uma equação para o carbono (por exemplo, como temos $3x$ átomos de ferro do lado esquerdo e $z$ átomos de ferro do lado direito, isso nos dá a equação $3x=z$).
+		\item Use as equações que obtidas no item anterior para montar um sistema linear homogêneo.
+		\item Resolva o sistema obtido no item anterior.
+		\item Escolha uma solução não-trivial do sistema e verifique que ela é um balanceamento da reação.
+		\item Conclua descrevendo um procedimento sistemático para balanceamento de reações.
+	\end{enumerate}
+\end{bonus}
+\begin{sol}
+	\begin{enumerate}[a)]
+		\item Comparando o ferro obtemos $3x=z$, comparando o oxigênio obtemos $4x+y=z+2w$ e comparando o carbono obtemos $y=w$.
+		\item Podemos reescrever todas essas equações como $3x-z=0$, $4x+y-z-2w=0$ e $y-w=0$ e montar o sistema linear homogêneo
+		\[\begin{pmatrix}
+		3&0&1&0\\4&1&-1&-2\\0&1&0&-1
+		\end{pmatrix}\begin{pmatrix}
+		x\\y\\z\\w
+		\end{pmatrix}=\begin{pmatrix}
+		0\\0\\0
+		\end{pmatrix}.\]
+		\item Ao invés de resolver o sistema, note que é o mesmo sistema da Questão 1, e já sabemos a solução:\[S=\left\{\lambda \begin{pmatrix}
+		1\\1\\3\\1
+		\end{pmatrix}\mid \lambda\in \R \right\}.\]
+		\item Podemos novamente escolher a solução $X_1=\begin{pmatrix}
+		1\\1\\3\\1
+		\end{pmatrix}$ e ver que a reação
+		\[{\rm Fe_3O_4}+{\rm CO}\rightarrow 3{\rm FeO}+{\rm CO_2}\]está balanceada.
+		\item Dada uma reação qualquer, podemos atribuir variáveis aos coeficientes de balanceamento e, comparando ambos os lados, obter equações relacionando essas variáveis.
+		
+		Com essas equações podemos montar um sistema linear homogêneo.
+		
+		Resolvendo esse sistema, obtemos um conjunto de soluções que podemos facilmente verificar que são balanceamentos da reação original.
+	\end{enumerate}
+\end{sol}
+\end{document}

@@ -1,0 +1,262 @@
+\documentclass[numbers]{report}
+\setcounter{tocdepth}{4}
+\usepackage[numbers]{natbib}
+\usepackage{amsfonts,amsmath,amstext,amssymb,color}
+\usepackage{amsthm,thmtools,thm-restate}
+\usepackage{arydshln}
+\usepackage{tcolorbox}
+\usepackage{nameref}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{enumerate}
+\usepackage{chngcntr}
+% \usepackage{graphicx,graphpap}
+\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
+\columnsep=20pt % This is the amount of white space between the columns in the poster
+\raggedbottom
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]   
+%{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+%\titlespacing*{\chapter}{0pt}{-50pt}{40pt}
+\usepackage{dsfont}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+
+
+
+\hypersetup{
+	colorlinks=true,       % false: boxed links; true: colored links
+	linkcolor=[rgb]{0,0,0.5},          % color of internal links (change box color with linkbordercolor)
+	citecolor=[rgb]{0.1,0.05,0.67},        % color of links to bibliography
+	filecolor=magenta,      % color of file links
+	urlcolor=cyan           % color of external links
+}
+
+
+\tcbuselibrary{breakable}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathmorphing,decorations.pathreplacing,decorations.markings}
+
+\tikzstyle{printersafe}=[decoration={snake,amplitude=0pt}]
+
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb{Z}}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\def\L{\Lambda}
+\def\G{\Gamma}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\End{{\rm End}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcommand{\epi}{\twoheadrightarrow}
+\newcommand{\mono}{\hookrightarrow}
+\newcommand{\iso}{\cong}
+\newcommand{\isomor}{\stackrel{\iso}{\to}}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+
+\newcommand{\ladj}{\dashv}
+\newcommand{\radj}{\vdash}
+\renewcommand{\mod}{\mathrm{Mod}}
+\newcommand{\bimod}[2]{#1\text{-}#2\text{-}\mathrm{Bimod}}
+\newcommand{\comod}{\mathrm{Comod}}
+\newcommand{\contra}{\mathrm{Contra}}
+\newcommand{\bicomod}[2]{(#1,#2)\text{-}\mathrm{Bicomod}}
+\newcommand{\cat}[1]{\mathrm{#1}}
+\newcommand{\comA}[1]{\mathrm{Hom}_{\text{-}#1}}
+\newcommand{\com}[1]{\mathrm{Hom}_{#1\text{-}}}
+\renewcommand{\hom}{\mathrm{Hom}}
+\newcommand{\mor}{\mathrm{Mor}}
+\newcommand{\pcmod}[1]{\mathrm{PCmod}\text{-}#1}
+\newcommand{\pcbimod}[2]{(#1,#2)\text{-}\mathrm{PCbimod}}
+\newcommand{\codim}{\mathrm{codim}}
+\newcommand{\arrow}[1]{\stackrel{#1}{\longrightarrow}}
+\newcommand{\qf}[1]{#1\text{-}\mathrm{comod}}
+\newcommand{\Cohom}[1]{\mathrm{Cohom}_#1}
+\newcommand{\sqf}[1]{\mathrm{comod_s}\text{-}{#1}}
+\newcommand{\inj}[1]{\mathrm{inj}\text{-}{#1}}
+\newcommand{\proj}[1]{\mathrm{proj}\text{-}{#1}}
+\newcommand{\ninj}[1]{\mathrm{comod}_{\mathcal{I}}\text{-}{#1}}
+\newcommand{\vect}[1]{\mathrm{Vect}\text{-}{#1}}
+\newcommand{\restrict}{\!\!\restriction}
+\newcommand{\cprod}{\mathbin{\rotatebox[origin=c]{45}{\(\square\)}}}
+\newcommand{\coch}{\mathrm{Coch}}
+\newcommand{\ch}{\mathrm{Ch}}
+\newcommand{\ho}{\mathrm{Ho}}
+
+\newcommand{\abs}[1]{\lvert#1\rvert}
+
+\newcommand{\gen}[1]{\langle #1\rangle}
+\newcommand{\ses}[5]{\[0\arrow{}#1\arrow{#4}#2\arrow{#5}#3\arrow{}0\]}
+
+\DeclareMathOperator{\add}{add}
+\DeclareMathOperator{\dual}{D}
+\DeclareMathOperator{\cohom}{Cohom}
+\DeclareMathOperator{\coend}{Coend}
+\DeclareMathOperator{\coext}{Coext}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\tr}{Tr}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\rad}{Rad}
+\DeclareMathOperator{\corad}{Corad}
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\Coker}{Coker}
+\DeclareMathOperator{\cogen}{Cogen}
+\DeclareMathOperator*{\cotensor}{\mathbin{\square}}
+\DeclareMathOperator{\ctens}{\widehat{\otimes}}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator*{\tensor}{\mathbin{\otimes}}
+\DeclareMathOperator*{\bigcprod}{\Large \cprod}
+
+\newenvironment{sol}{\noindent\normalsize {\sc Solução:}}
+
+\newenvironment{ex}{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=white!80!black,title=\normalsize {\sc EXAMPLE(S):},coltitle=black]}{\end{tcolorbox}}
+\newenvironment{blockenv}[1]{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=white!80!black,title=\normalsize {\sc #1:},coltitle=black]}{\end{tcolorbox}}
+
+\newcounter{exerc}
+\numberwithin{exerc}{section}
+\renewcommand*{\theexerc}{(\arabic{chapter}.\arabic{section}.\arabic{exerc})}
+\newenvironment{exerc}{\stepcounter{exerc}\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=blue!40!white,title=\normalsize {\sc\textbf{Exercise} \theexerc},coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{cdiag}{\begin{displaymath}\begin{tikzcd}}{\end{tikzcd}\end{displaymath}}
+\newenvironment{multicdiag}{\begin{equation*}\begin{tikzcd}
+}{\end{tikzcd}\end{equation*}}
+
+\newenvironment{augmatrix}{\left(\begin{array}}{\end{array}\right)}
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+	\draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+	% style to apply some styles to each segment of a path
+	on each segment/.style={
+		decorate,
+		decoration={
+			show path construction,
+			moveto code={},
+			lineto code={
+				\path [#1]
+				(\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+			},
+			curveto code={
+				\path [#1] (\tikzinputsegmentfirst)
+				.. controls
+				(\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+				..
+				(\tikzinputsegmentlast);
+			},
+			closepath code={
+				\path [#1]
+				(\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+			},
+		},
+	},
+	% style to add an arrow in the middle of a path
+	mid arrow/.style={postaction={decorate,decoration={
+				markings,
+				mark=at position .5 with {\arrow[#1]{stealth}}
+	}}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+\setlength{\fboxsep}{4pt}
+
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+
+\declaretheorem[name=Definition,refname={definição,definições},Refname={Definição,Definições}]{df}
+\numberwithin{df}{section}
+\renewcommand*{\thedf}{\arabic{chapter}.\arabic{section}.\arabic{df}}
+\declaretheorem[numberlike=df,name=Theorem,refname={teorema,teoremas},
+Refname={Teorema,Teoremas}]{theorem}
+\declaretheorem[sibling=df,name=Corolary,refname={corolário,corolários},
+Refname={Corolário,Corolários}]{cor}
+\declaretheorem[sibling=df,name=Lemma,refname={lema,lemas},
+Refname={Lema,Lemas}]{lemma}
+\declaretheorem[sibling=df,name=Proposition,refname={proposição,proposições},
+Refname={Proposição,Proposições}]{prop}
+\declaretheorem[sibling=df,name=Property,refname={propriedade,propriedades},
+Refname={Propriedade,Propriedades}]{pp}
+%\declaretheorem[name=Exercício,refname={exercício,exercícios},Refname={Exercício,Exercícios}]{exerc}
+\declaretheorem[sibling=df,name=Remark,refname={observação,observações},Refname={Observação,Observações}]{rmk}
+
+
+% \makeatletter
+% \let\c@equation\c@df
+% \let\theequation\thedf
+% \makeatother
+\renewcommand*{\theequation}{E(\arabic{section}.\arabic{equation})}
+
+
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\title{A first course on linear algebra}
+
+\author{Ricardo Souza}
+\begin{document}
+	\maketitle
+
+\tableofcontents
+\input{ch1}
+
+%\nocite{*}
+%\bibliographystyle{alphanum}
+%\bibliography{test} 
+\end{document}

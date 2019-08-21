@@ -1,0 +1,62 @@
+\chapter{Basic set theory}
+\section{Naive set theory}
+\subsection{Axioms and you}
+
+Most, if not all, concepts in mathematics are phrased in the language of set theory: Geometric figures are just collections of points, transformations between two different objects are the collections of all the transitional states inbetween etc.
+
+Hence, it makes sense to give some more formal foothold when studying any area of maths by beginning with some basic set theory.
+
+But then, why \textit{naive}?
+
+Well, formal mathematics (that is, all contemporary and modern mathematics for more than a hundred years) is based on what we like to call \textit{axioms} - you can think of them as the ``rules of the game'', in some sense.
+
+Let me give you all an example of a well-accepted axiom of Euclidean geometry:
+
+\begin{blockenv}{Axiom}
+	Given any two distinct points, there is one, and only one, line through them.
+\end{blockenv}
+
+Some people say it's ``something that you can't prove", but it's not exactly that - axioms are either things that you don't \textit{want} to prove, and just want to assume as truth (maybe because it is, indeed, impossible to prove it) or things that are, in some vague sense, ``natural" or ``self-evident".
+
+Either way, the correct mindset to approach axioms is to think of them as the building blocks with which you build maths - just like atoms are the building blocks of matter -: by combining different axioms in different ways you get different results - the so called ``theorems''.
+
+That's what maths is all about: Working with axioms and already proven theorems to prove new theorems. It's kinda like a game of scrabble, where the axioms are not only the blocks you (and everyone else) has in their hands, but also the rules of the game and the game board, and the theorems are the words you can make - subject to the rules of the game, the pieces and the board.
+
+Hence, \textit{naive} set theory is called so not because it is a theory of naive sets, but because it's a theory that's not properly formalized, and relies heavily on intuition and common sense.
+
+In proper, axiomatic, set theory you'd have to define what is, and what isn't, a set. In naive set theory, however, we can just hand-wave it and say
+\begin{blockenv}{Naive axiom(?)}
+	Any collection of things is a set.
+\end{blockenv}
+
+Now, as to \textit{why} this isn't formal, it's due to the fact that it leads to a logical contradiction - a paradox. We're gonna show this contradiction in what follows, but if it doesn't interest you (you filthy, you) you can just skip the next section. It's fine, I won't judge you (actually, I will).
+
+\subsection{Russell's Paradox}
+
+Imagine that every random collection of random things is a set. Then it is only natural to consider the collection of all sets. But, since it is a collection (duh) it is also a set. But since it is the collection of all sets, it is an element of itself.
+
+That's weird, ok? Try thinking of any sets - I'll give you plenty of time, don't worry - that are like that: they contain themselves as elements. You can't, right?
+
+While that's not a contradiction, per se, it \textit{really is weird}.
+
+So let us consider $N$ the collection of all non-weird sets - that is, the collection of all sets that do not contain themselves as elements.
+
+Now, one naturally asks the question: Is $N$ itself a weird set? That is, $N\in N$?
+
+Well, I don't know. But if it was, then, by definition, all elements of $N$ are non-weird sets, so $N$, being an element of $N$, would have to be a non-weird set - that is, $N\notin N$. So... If we assume that $N\in N$ we can logically infer that $N\notin N$...
+
+Okay, maybe we made a mistake all along by assuming that $N\in N$! Yeah, that must be the case! Clearly, $N$ can't be a weird set!... But then, since $N$ isn't weird, it must be an element of $N$ (since $N$ contains \textit{all} non-weird sets)... That is, $N\in N$. So if we assume $N\notin N$ we can logically deduce that $N\in N$.
+
+We have just proven that $N\in N$ and $N\notin N$ are \textit{logically equivalent}. But by the \textbf{Principle of Non-Contradiction} (something can't be simultaneously both true and false) those two can't be equivalent!
+
+So, by assuming that there is a set containing all sets we can logically derive a contradiction - that, my friends, is the definition of a paradox.
+
+This is the famous \textbf{Russell's Paradox} and it applies in broader contexts - it basically means that, from a logical POV, self-references are \textit{kinda weird and you shouldn't actually do that}.
+
+For instance, if you put as an axiom that ``anything that can be stated can be proven", then you could ask ``can I prove that there is something that cannot be proven?" and the answer would have to be \textit{yes}, since you said (by axiom) that everything had to be provable. But that's a contradiction - by forcing everything to have a proof you have proven that you cannot prove everything.
+
+This was proposed by philosopher-mathematicial Bertrand Russell to show that maths really does need a formal framework to work with - otherwise we might be working in a system where contradictions arise (as we have seen).
+
+There is, however, a solution to this. We have a set of axioms for set theory called the Zermello-Frankel axioms, which are a list of axioms that do not generate that kind of contradiction. It is, however, \textit{impossible} to prove whether it does or doesn't generate \textit{any} paradox (this is due to a bunch of hard maths/philosophy that is waaaaay out of the scope of this text).
+
+Just know that if you ever see ZFC anywhere you can rest safe because you're working with a (relatively) safe set of axioms.

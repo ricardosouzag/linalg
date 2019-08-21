@@ -1,0 +1,1984 @@
+\chapter{Matrizes}
+\section{Definições e Propriedades Básicas}
+
+Matrizes são simplesmente o nome matemático dado a tabelas de valores. Por exemplos, podemos ter matrizes numéricas
+\[\begin{pmatrix}
+1 & 2 & 9\\
+-8 & 5 & \pi
+\end{pmatrix}, \begin{pmatrix}
+0 & 0\\
+0 & 0
+\end{pmatrix},
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 5 & 0\\
+0 & 0 & -16
+\end{pmatrix},\cdots\] ou de qualquer outra natureza, realmente
+\[\begin{pmatrix}
+\text{Geometria} & \text{Analítica}\\
+\text{Álgebra} & \text{Linear}
+\end{pmatrix},\begin{pmatrix}
+\sqcup & \triangle & \triangledown\\
+\circledcirc & \nabla & \sum
+\end{pmatrix},\cdots.\]
+
+A princípio pode parecer meio arbitrário estudar esses objetos - e mais ainda definir operações e fazer matemática com eles. A motivação para isso ficará em um capítulo posterior. Neste momento, vamos dar uma motivação bem ``rasa'':
+
+\begin{ex}
+	Suponha que cinco amigos, Ana, Bernardo, Carlos, Diogo e Eliza resolveram sair para comemorar o aniversário de Carlos no boliche. Eles acabaram jogando três partidas e obtiveram os seguintes resultados:
+	\[\bordermatrix{
+	&\text{Ana} & \text{Bernando} & \text{Carlos} & \text{Diogo} &\text{Eliza}\cr
+	\text{Primeiro jogo} & 101 & 96 & 99 & 87 & 123\cr
+	\text{Segundo jogo} & 95 & 100 & 110 & 80 & 102\cr
+	\text{Terceiro jogo} & 90 & 103 & 80 & 86 & 110}.\]Inconformado com o resultado, Diogo praticou bastante. Alguns meses depois, em seu aniversário, convidou os amigos para repetirem a jogatina, e obtiveram os seguintes resultados:
+	\[\bordermatrix{
+		&\text{Ana} & \text{Bernando} & \text{Carlos} & \text{Diogo} &\text{Eliza}\cr
+		\text{Primeiro jogo} & 97 & 87 & 90 & 150 & 103\cr
+		\text{Segundo jogo} & 80 & 105 & 100 & 170 & 98\cr
+		\text{Terceiro jogo} & 120 & 110 & 80 & 127 & 115}.\] Surpresos com o resultados, eles resolveram computar quem tinha o maior total de pontos, combinando os dois aniversários. Com isso, eles obtiveram
+	\[\bordermatrix{
+		&\text{Ana} & \text{Bernando} & \text{Carlos} & \text{Diogo} &\text{Eliza}\cr
+		\text{Primeiro jogo} & 101+97 & 96+87 & 99+90 & 87+150 & 123+103\cr
+		\text{Segundo jogo} & 95+80 & 100+105 & 110+100 & 80+170 & 102+98\cr
+		\text{Terceiro jogo} & 90+120 & 103+110 & 80+80 & 86+127 & 110+115}\]\[=\bordermatrix{
+		&\text{Ana} & \text{Bernando} & \text{Carlos} & \text{Diogo} &\text{Eliza}\cr
+		 & 198 & 183 & 189 & 237 & 226\cr
+		 & 175 & 205 & 210 & 250 & 200\cr
+		 & 210 & 213 & 160 & 213 & 225}\]
+\end{ex}
+
+\subsection{Somas e Produtos por Números}
+
+\begin{df}
+	Denotaremos por $M_{n\times m}(\R)$ o \textbf{conjunto das matrizes com $n$ linhas e $m$ colunas, e com entradas em $\R$}. Caso $n=m$ diremos que nossas matrizes são \textbf{quadradas} e notaremos simplesmente $M_n(\R)$.
+	
+	De maneira análoga, denotaremos o elemento na linha $i$, coluna $j$ de uma matriz $M$ por $M_{i,j}$.
+\end{df}
+
+\begin{ex}
+	A matriz \[M=\begin{pmatrix}
+	1 & 2 & 9\\
+	-8 & 5 & \pi
+	\end{pmatrix}\]claramente pertence a $M_{2\times 3}(\R)$. Além disso, temos: $M_{1,1}=1,M_{1,2}=2,M_{1,3}=9,M_{2,1}=-8,M_{2,2}=5$ e $M_{2,3}=\pi$.
+	
+	\bigskip
+	Reciprocamente, se dissermos que uma matriz $N\in M_{3\times 2}(\R)$ tem como entradas $N_{1,1}=0=N_{3,2},N_{1,2}=1,N_{2,1}=-1,N_{2,2}=\pi$ e $N_{3,1}=-\pi$, podemos recuperar a matriz $N$:
+	\[N=\begin{pmatrix}
+	0 & 1\\
+	-1 & \pi\\
+	-\pi &0
+	\end{pmatrix}\]
+\end{ex}
+
+Desse exemplo tiramos uma informação muito importante: \textbf{uma matriz está unicamente determinada por seus elementos} - isto é, dada uma matriz $M$, então existe uma única coleção de elementos $M_{i,j}$; e dada qualquer coleção $a_{i,j}$ existe uma única matriz $A$ cujos elementos são exatamente $A_{i,j}=a_{i,j}$.
+
+Isso pode parecer trivial, mas nos permite, por exemplo, criar a seguinte definição:
+
+\begin{df}
+	Dadas duas matrizes $M,N\in M_{n\times m}(\R)$, definimos a \textbf{soma de $M$ e $N$} como sendo uma matriz $M+N$ dada por
+	\[(M+N)_{i,j}:= M_{i,j}+N_{i,j}.\]
+\end{df}
+\begin{rmk}
+	Aqui, o símbolo ``$x:=y$'' significa ``estamos definindo $x$ como sendo igual a $y$'' ou ``$x=y$ por definição''.
+\end{rmk}
+\begin{rmk}
+	Note que a definição acima faz todo sentido: para cada par de índices $i,j$, $M_{i,j}$ e $N_{i,j}$ são números reais (que nós já sabemos somar!) e portanto $M_{i,j}+N_{i,j}$ também é um número real. Nós estamos, então, coletando todas as somas, variando $i$ e $j$, e chamando essa matriz, cujos elementos são somas dos elementos de $M$ e $N$, de $M+N$.
+\end{rmk}
+\begin{exerc}
+	Do jeito que definimos, só sabemos somar matrizes que têm o mesmo número de linhas e colunas. Tente criar uma definição de soma de matrizes que funcione para quaisquer duas matrizes. Por que não usamos uma definição desse tipo?
+\end{exerc}
+
+Similarmente a como fizemos com a soma, definindo elemento a elemento, podemos também definir multiplicação por números:
+
+\begin{df}
+	Seja $a\in \R$ um número real qualquer e $M\in M_{n\times m}(\R)$ uma matriz $n\times m$ real. Definimos o \textbf{produto de $a$ cópias de $M$} como sendo a matriz $aM$ dada por
+	\[(aM)_{i,j}:=a\cdot M_{i,j}.\]
+\end{df}
+
+Novamente, pelo mesmo argumento acima, isso faz sentido, porque como $a$ e cada $M_{i,j}$ são números reais (que nós sabemos multiplicar!), então $aM_{i,j}$ também é um número real.
+
+\begin{ex}
+	Sejam $M=\begin{pmatrix}
+	1 & -8\\
+	2 & 5\\
+	9 & \pi
+	\end{pmatrix}$ e $N=\begin{pmatrix}
+	0 & 1\\
+	-1 & \pi\\
+	-\pi &0
+	\end{pmatrix}$ matrizes reais, e $a=\pi$. Então, podemos computar:
+	\begin{alignat*}{3}
+	&(M+N)_{1,1}=M_{1,1}+N_{1,1}=1+0=1\quad&\quad&(M+N)_{1,2}=M_{1,2}+N_{1,2}=-8+1=-7\\
+	&(M+N)_{2,1}=M_{2,1}+N_{2,1}=2+(-1)=1\quad&\quad&(M+N)_{2,2}=M_{2,2}+N_{2,2}=5+\pi\\
+	&(M+N)_{3,1}=M_{3,1}+N_{3,1}=9+(-\pi)=9-\pi\quad&\quad&(M+N)_{3,2}=M_{3,2}+N_{3,2}=\pi+0=\pi
+	\end{alignat*}e escrever
+	\[M+N=\begin{pmatrix}
+	1 & -7\\
+	1 & 5+\pi\\
+	9-\pi & \pi
+	\end{pmatrix}.\]
+	\tcblower
+	Similarmente, podemos computar
+	\begin{alignat*}{3}
+	&(\pi M)_{1,1}=\pi\cdot 1=\pi\quad&\quad &(\pi M)_{1,2}=\pi\cdot (-8)=-8\pi\\
+	&(\pi M)_{2,1}=\pi\cdot 2 = 2\pi\quad&\quad &(\pi M)_{2,2}=\pi\cdot 5 = 5\pi\\
+	&(\pi M)_{3,1}=\pi\cdot 9 = 9\pi\quad&\quad 	&(\pi M)_{3,2}=\pi\cdot \pi=\pi^2
+	\end{alignat*}e escrever
+	\[\pi M=\begin{pmatrix}
+	\pi & -8\pi\\
+	2\pi & 5\pi\\
+	9\pi &\pi^2
+	\end{pmatrix}.\]
+\end{ex}
+
+\begin{exerc}
+	Calcule, usando os dados do exemplo acima, $aN$ e $a(M+N)$. Em seguida, calcule $(M+M)+N$ e $2M+N$. O que podemos dizer dessas duas últimas matrizes?
+\end{exerc}
+
+\subsection{Produtos(?)}
+
+Agora que sabemos somar matrizes e multiplicar matrizes por números, o mais natural seria definirmos uma multiplicação de matrizes. Poderíamos, intuitivamente, nos inspirar nas construções acima e definir que dadas duas matrizes $M,N\in M_{n\times m}(\R)$, o produto delas será uma matriz $M\times N$ dada por
+\[(M\times N)_{i,j}:=M_{i,j}\cdot N_{i,j}\]o que faria sentido, já que para cada par de índices $i,j$, ambos $M_{i,j}$ e $N_{i,j}$ são números reais - o que já sabemos multiplicar. Além disso, essa operação de produto teria excelentes propriedades: Seria comutativa, associativa, teria inverso, teria elemento neutro...
+
+\underline{Por que então não definimos a multiplicação de matrizes assim?}
+
+A resposta simples é que o produto que vamos definir, apesar de não parecer intuitivo, é o que mais faz sentido quando consideramos as aplicações de matrizes que veremos mais à frente. 
+
+\begin{df}[Multiplicação Clássica]\label{df:produto-classico}
+	Dadas duas matrizes $M\in M_{n\times m}(\R)$ e $N\in M_{m\times l}(\R)$, definimos o \textbf{produto de $M$ com $N$} como sendo uma matriz $MN$ dada por
+	\[(MN)_{i,j}:=M_{i,1}N_{1,j}+M_{i,2}N_{2,j}+\cdots+M_{i,m}N_{m,j}.\]
+\end{df}
+
+\begin{rmk}
+	Novamente, convém notar que essa definição faz todo sentido, porque para cada trio de índices $i,j$ e $k$, $M_{i,k}$ e $N_{k,j}$ são números reais (que nós sabemos multiplicar!) e portanto $M_{i,k}N_{k,j}$ também é um número real; e como $(MN)_{i,j}$ é uma soma de números reais, $(MN)_{i,j}$ é, em si, um número real. Além disso,  essa definição explica a necessidade de o número de colunas de $M$ ser o número de linhas de $N$: esse número é exatamente o número de termos da soma.
+\end{rmk}
+
+Essa é a multiplicação de matrizes que já conhecemos desde sempre. Contudo, como comentamos previamente, ela ``não faz sentido'' - parece que surge do nada, e é desnecessariamente complicada.
+
+Visando ``facilitar'' esse processo, vamos gastar um tempo tentando criar uma intuição de onde surge essa multiplicação de matrizes. Mas não se assuste - o resultado que vamos chegar é ``o mesmo''. A única diferença é que vamos explicar cada passo e tentar justificar essa definição. 
+
+Sendo assim, continuem calculando produtos de matrizes como sempre fizeram, mas atentem para os raciocínios que virão a seguir para entender de onde esses produtos vêm.
+
+\bigskip
+\begin{df}
+	Definimos por $e_{i,j}^n\in M_n(\R)$ a matriz dada por:
+	\[(e_{i,j}^n)_{r,s}:=\begin{cases}
+	1\text{ se } r=i \text{ e } s=j\\
+	0\text{ caso contrário }
+	\end{cases}.\]
+\end{df}
+
+\begin{ex}
+	A matriz $e^2_{1,2}\in M_{2}(\R)$ é a matriz $2\times 2$ que tem $1$ na linha 1, coluna 2, e $0$ em todo o resto - ou seja,\[e^2_{1,2}=\begin{pmatrix}
+	0 & 1\\
+	0 & 0
+	\end{pmatrix}.\] Já a matriz $e^3_{1,2}\in M_3(\R)$ é a matriz $3\times 3$ que tem $1$ na linha 1, coluna 2, e $0$ em todo o resto, ou seja, \[e^3_{1,2}=\begin{pmatrix}
+	0 & 1&0\\
+	0 & 0&0\\
+	0&0&0
+	\end{pmatrix}.\]
+\end{ex}
+
+Mais à frente, vamos estender essa definição para matrizes de tamanho arbitrário - não necessariamente quadradas. Por enquanto, vamos nos abster às matrizes quadradas para facilitar a vida.
+
+\begin{df}
+	Definimos por $E^n_{i,j}:M_{n\times m}(\R)\to M_{n\times m}(\R)$ a \textbf{função} dada por:
+	\[\bordermatrix{&&&&\cr
+		&M_{1,1} & M_{1,2} & \cdots & M_{1,m}\cr
+		& M_{2,1}& M_{2,2} & \cdots & M_{2,m}\cr
+		& \vdots & \vdots & \ddots & \vdots\cr		
+		j\text{-ésima linha}& M_{j,1} & M_{j,2} & \cdots & M_{j,m}\cr
+		& \vdots & \vdots & \ddots & \vdots\cr
+		&M_{n,1} & M_{n,2} & \cdots & M_{n,m}	
+	}\mapsto
+	\bordermatrix{
+	&&&&\cr
+	&0&0&\cdots&0\cr
+	&0&0&\cdots&0\cr
+	& \vdots & \vdots & \ddots & \vdots\cr
+	i\text{-ésima linha}& M_{j,1} & M_{j,2} & \cdots & M_{j,m}\cr
+	& \vdots & \vdots & \ddots & \vdots\cr
+	&0&0&\cdots&0
+	}.
+	\]
+\end{df}
+
+Ou seja, $E^n_{i,j}$ é a função que leva matrizes de $n$ linhas (e qualquer quantidade de colunas) em matrizes de $n$ linhas (e a mesma quantidade de colunas) simplesmente colando uma cópia da $j$-ésima linha da matriz original na $i$-ésima linha da imagem, e preenchendo o resto com $0$s.
+
+\begin{ex}
+	A função $E^{3}_{1,2}$ aplicada na matriz $M=\begin{pmatrix}
+	1 & -8\\
+	2 & 5\\
+	9 & \pi
+	\end{pmatrix}$ nos dá a matriz \(E^3_{1,2}(M)=\bordermatrix{
+	&&\cr
+	& 2 & 5\cr
+	& 0 &0\cr
+	&0 &0
+	}\) em que nós simplesmente copiamos a segunda linha de $M$ e colocamos na primeira linha da matriz nova, preenchendo o resto com $0$s.
+
+	Analogamente, se $N=\begin{pmatrix}
+	0 & 1\\
+	-1 & \pi\\
+	-\pi & 0
+	\end{pmatrix}$, então $E^3_{1,2}(N)=\begin{pmatrix}
+	-1 & \pi\\
+	0 & 0\\
+	0 & 0
+	\end{pmatrix}$ em que nós simplesmente copiamos a segunda linha de $N$ e colocamos na primeira linha da matriz nova, preenchendo o resto com $0$s.
+\end{ex}
+
+\begin{rmk}
+	Aqui, o ``expoente'' da função simplesmente serve para indicar a quantidade de linhas das matrizes que você quer computar. Nos exemplos acima, o 3 no expoente de $E^3_{1,2}$ simplesmente indica que a função $E^3_{1,2}$ só pode ser aplicada em matrizes com três linhas.
+\end{rmk}
+\begin{exerc}
+	Usando os dados do exemplo acima, calcule $E^3_{1,1}, E^3_{1,3}, E^3_{2,1}, E^3_{2,2}, E^3_{2,3},E^3_{3,1}, E^3_{3,2}$ e $E^3_{3,3}$ aplicadas tanto em $M$ quanto em $N$.
+	
+	O que podemos dizer sobre $E^3_{i,j}$ quando $i=j$? Ou seja, calcule $E^3_{1,1},E^3_{2,2}$ e $E^3_{3,3}$ de $M$ e $N$. O que essas matrizes têm de especial?
+\end{exerc}
+\begin{exerc}
+	Usando o exemplo acima, existe algum par de índices $i,j$ tal que $E^3_{i,j}(E^3_{i,j}(M))=E^3_{i,j}(M)$? E para $N$?
+\end{exerc}
+
+Com isso temos nossa primeira noção de multiplicação de matrizes:
+
+\begin{df}
+	Dadas uma matriz $M\in M_{n\times m}(\R)$ qualquer e $e^n_{i,j}\in M_n(\R)$, definimos o \textbf{produto de $e^n_{i,j}$ e $M$} como sendo a matriz $e^n_{i,j}M$ dada por
+	\[e^n_{i,j}M:=E^n_{i,j}(M).\]
+\end{df}
+
+\begin{ex}
+	Ainda com os dados do exemplo anterior, podemos agora computar o produto
+	\[\begin{pmatrix}
+	0 & 1 & 0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\cdot\begin{pmatrix}
+	1 & -8\\
+	2 & 5\\
+	9 &\pi
+	\end{pmatrix}=e^3_{1,2}M:=E^3_{1,2}(M)=\begin{pmatrix}
+	2 & 5\\0&0\\0&0
+	\end{pmatrix}\]e
+		\[\begin{pmatrix}
+	0 & 1 & 0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\cdot\begin{pmatrix}
+	0 & 1\\
+	-1 & \pi\\
+	-\pi &0
+	\end{pmatrix}=e^3_{1,2}N:=E^3_{1,2}(N)=\begin{pmatrix}
+	-1 &\pi\\0&0\\0&0
+	\end{pmatrix}.\]
+\end{ex}
+
+\begin{rmk}
+	Vamos mostrar, com alguns exemplos, que nossa definição até agora coincide com a definição clássica \ref{df:produto-classico}:
+	\[\begin{pmatrix}
+	0 & 1 & 0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\cdot\begin{pmatrix}
+	1 & -8\\
+	2 & 5\\
+	9 &\pi
+	\end{pmatrix}=\begin{pmatrix}
+	0\cdot 1+1\cdot 2+0\cdot 9 & 0\cdot(-8)+1\cdot 5+0\cdot\pi\\
+	0\cdot1+0\cdot2+0\cdot 9 & 0\cdot(-8)+0\cdot 5+0\cdot \pi\\
+	0\cdot1+0\cdot2+0\cdot 9 & 0\cdot(-8)+0\cdot 5+0\cdot \pi
+	\end{pmatrix}=\begin{pmatrix}
+	2 & 5\\0&0\\0&0
+	\end{pmatrix}\]que é exatamente o resultado que obtivemos aplicando $E^3_{1,2}$ em $M$.
+\end{rmk}
+
+\begin{exerc}
+	Calcule $E^4_{3,2}$ de uma matriz $M=\begin{pmatrix}
+	a & b\\
+	c & d\\
+	e & f\\
+	g & h
+	\end{pmatrix}\in M_{4\times 2}(\R)$ genérica. Em seguida, calcule $e^4_{3,2}M$ usando a multiplicação clássica de matrizes e compare os resultados.
+\end{exerc}
+
+
+\bigskip
+O próximo passo é considerar matrizes que são \textit{quase} $e^n_{i,j}$. Por exemplo, como vamos multiplicar $\begin{pmatrix}
+0 & 8 & 0\\
+0 & 0 & 0\\
+0&0&0
+\end{pmatrix}$ por $M=\begin{pmatrix}
+1 & -8\\
+2 & 5\\
+9 & \pi
+\end{pmatrix}$? Bom, podemos perceber que $\begin{pmatrix}
+0 & 8 & 0\\
+0 & 0 & 0\\
+0&0&0
+\end{pmatrix}=8\cdot\begin{pmatrix}
+0 & 1 & 0\\
+0 & 0 & 0\\
+0&0&0
+\end{pmatrix}=8\cdot e^3_{1,2}$ e que nós já sabemos multiplicar números por matrizes e $e^3_{1,2}$ por $M$.
+
+Dito de outra maneira, queremos calcular $(8\cdot e^3_{1,2})\cdot M$ sendo que já sabemos calcular $e^3_{1,2}\cdot M$. Como a multiplicação de números reais é associativa ($(ab)c=a(bc)$) faz sentido que desejemos que essa operação que vamos definir seja associativa. Assim, podemos simplesmente definir
+\[(8\cdot e^3_{1,2})\cdot M:=8\cdot(e^3_{1,2}\cdot M)\]o que faz sentido, já que $8\in \R$, $e^3_{1,2}\cdot M\in M_{n\times m}(\R)$ e \textbf{já sabemos multiplicar matrizes por números}.
+
+De maneira geral, podemos definir:
+
+\begin{df}
+	Dado um número real $a\in\ R$, uma matriz real $M\in M_{n\times m}(\R)$ e uma matriz quadrada $e^n_{i,j}\in M_n(\R)$, definimos o \textbf{produto de $ae^n_{ij}$ com $M$} como sendo a matriz $(ae^n_{i,j})M$ dada por
+	\[(ae^n_{i,j})M:=a(e^n_{i,j}M).\]
+\end{df}
+
+\begin{exerc}
+	Usando $M$ e $N$ do exemplo anterior, calcule $\begin{pmatrix}
+	0 & 5 & 0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\cdot M$ e $\begin{pmatrix}
+	0 & 0 & 0\\
+	0&0&-\pi\\
+	0&0&0
+	\end{pmatrix}\cdot N$ usando nossa nova definição e compare com a multiplicação clássica de matrizes.
+\end{exerc}
+
+\bigskip
+Outro tipo de matrizes que são \textit{quase} $e^n_{i,j}$ são matrizes que são \textit{somas} de matrizes $e^n_{i,j}$. Por exemplo, a matriz $A=\begin{pmatrix}
+0 & 1 & 1\\
+1 & 0 & 0\\
+0 & 1 & 0
+\end{pmatrix}$ pode ser escrita como
+\[A=\begin{pmatrix}
+0 & 1 & 1\\
+1 & 0 & 0\\
+0 & 1 & 0
+\end{pmatrix}=\begin{pmatrix}
+0 & 1 & 0\\
+0&0&0\\
+0&0&0
+\end{pmatrix}+ \begin{pmatrix}
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}  + \begin{pmatrix}
+0 & 0 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}  + \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 1 & 0 
+\end{pmatrix}  =e^3_{1,2}+e^3_{1,3}+e^3_{2,1}+e^3_{3,2}.\] Agora, dada uma matriz $M=\begin{pmatrix}
+1 & -8\\
+2 & 5\\
+9 & \pi
+\end{pmatrix}$ queremos definir a multiplicação $A\cdot M$. Novamente, vamos nos lembrar que \textbf{já sabemos somar matrizes}, \textbf{já sabemos multiplicar matrizes $e^3_{i,j}$ por $M$} e \textbf{o produto de números reais distribui sobre a soma}. Assim, podemos definir, inspirados por essas três propriedades,
+\[AM=(e^3_{1,2}+e^3_{1,3}+e^3_{2,1}+e^3_{3,2})M:=e^3_{1,2}M+e^3_{1,3}M+e^3_{2,1}M+e^3_{3,2}M,\]e calculando
+\[e^3_{1,2}M=\begin{pmatrix}
+2 & 5\\
+0 & 0\\
+0 & 0
+\end{pmatrix},e^3_{1,3}M=\begin{pmatrix}
+9 & \pi\\
+0 & 0\\
+0 & 0
+\end{pmatrix},e^3_{2,1}M=\begin{pmatrix}
+0 & 0\\
+1 & -8\\
+0 & 0
+\end{pmatrix},e^3_{3,2}M=\begin{pmatrix}
+0 & 0\\
+9 & \pi\\
+0 & 0
+\end{pmatrix}\]vemos que
+\[AM=\begin{pmatrix}
+2 & 5\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+9 & \pi\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+1 & -8\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+9 & \pi\\
+0 & 0
+\end{pmatrix}=\begin{pmatrix}
+11 & 5+\pi\\
+10 & \pi-8\\
+0 & 0
+\end{pmatrix}\]
+
+\begin{exerc}
+	Compare o resultado obtido acima com a definição clássica de multiplicação de matrizes.
+\end{exerc}
+
+\begin{df}
+	Dados um conjunto de pares de índices $\{i_1,j_1\},\{i_2,j_2\},\cdots,\{i_k,j_k\}$ e uma matriz $M\in M_{n\times m}(\R)$, definimos o \textbf{produto da soma de todos os $e^n_{i_r,j_r}$ com $M$} como sendo a matriz $(e^n_{i_1,j_1}+e^n_{i_2,j_2}+\cdots+e^n_{i_k,j_k})M$ dada por
+	\[(e^n_{i_1,j_1}+e^n_{i_2,j_2}+\cdots+e^n_{i_k,j_k})M:=e^n_{i_1,j_1}M+e^n_{i_2,j_2}M+\cdots+e^n_{i_k,j_k}M.\]
+\end{df}
+
+\bigskip
+Agora podemos combinar os dois resultados: Considere a matriz $A=\begin{pmatrix}
+0 & 5 & 2\\
+-7 & 0 & 0\\
+0 & 10 & 0
+\end{pmatrix}$ e a matriz $M=\begin{pmatrix}
+1 & -8\\
+2 & 5\\
+9 & \pi
+\end{pmatrix}$. Como vamos definir o produto $AM$?
+
+Primeiro vamos decompor $A$ como soma de matrizes \textit{quase} $e^n_{i,j}$
+\[A=\begin{pmatrix}
+0 & 5 & 2\\
+-7 & 0 & 0\\
+0 & 10 & 0
+\end{pmatrix}=\begin{pmatrix}
+0 & 5 & 0\\
+0&0&0\\
+0&0&0
+\end{pmatrix}+ \begin{pmatrix}
+0 & 0 & 2 \\
+0 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}  + \begin{pmatrix}
+0 & 0 & 0 \\
+-7 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}  + \begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 10 & 0 
+\end{pmatrix}\]e em seguida escrever cada uma dessas matrizes como produto de um número por uma matriz $e^n_{i,j}$
+\begin{alignat*}{7}
+A=\begin{pmatrix}
+0 & 5 & 2\\
+-7 & 0 & 0\\
+0 & 10 & 0
+\end{pmatrix}&=&\begin{pmatrix}
+0 & 5 & 0\\
+0&0&0\\
+0&0&0
+\end{pmatrix}&+&\begin{pmatrix}
+0 & 0 & 2 \\
+0 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}&+&\begin{pmatrix}
+0 & 0 & 0 \\
+-7 & 0 & 0 \\
+0 & 0 & 0 
+\end{pmatrix}&+&\begin{pmatrix}
+0 & 0 & 0 \\
+0 & 0 & 0 \\
+0 & 10 & 0 
+\end{pmatrix}\\&=&5e^3_{1,2} \quad\ &+&2e^3_{1,3}\quad&+&(-7)e^3_{2,1}\quad&+&10e^3_{3,2}\quad
+\end{alignat*}e finalmente, como já sabemos multiplicar cada pedaço por $M$, vamos definir
+\[AM=(5e^3_{1,2}+2e^3_{1,3}+(-7)e^3_{2,1}+10e^3_{3,2})M:=5e^3_{1,2}M+2e^3_{1,3}M+(-7)e^3_{2,1}M+10e^3_{3,2}M.\] Efetuando, vamos obter:
+\begin{align*}
+AM&=5\begin{pmatrix}
+2 & 5\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+2\begin{pmatrix}
+9 & \pi\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+(-7)\begin{pmatrix}
+0 & 0\\
+1 & -8\\
+0 & 0
+\end{pmatrix}+10\begin{pmatrix}
+0 & 0\\
+9 & \pi\\
+0 & 0
+\end{pmatrix}\\
+&=\begin{pmatrix}
+10 & 25\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+18 & 2\pi\\
+0 & 0\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+-7 & 56\\
+0 & 0
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+90 & 10\pi\\
+0 & 0
+\end{pmatrix}=\begin{pmatrix}
+28 & 25+2\pi\\
+83 & 56+10\pi\\
+0 & 0
+\end{pmatrix}.
+\end{align*}
+
+\begin{rmk}
+	Note que qualquer matriz quadrada pode ser escrita como acima - isto é, somando vários produtos de números com matrizes $e^n_{i,j}$. Isso nos permite finalmente definir produtos quase totalmente gerais:
+\end{rmk}
+
+\begin{df}
+	Seja $A\in M_n(\R)$ uma matriz quadrada e $M\in M_{n\times m}(\R)$ qualquer. Definimos o \textbf{produto de $A$ com $M$} como sendo a matriz $AM$ dada por
+	\begin{align*}
+	AM&=(A_{1,1}e^n_{1,1}+A_{1,2}e^n_{1,2}+\cdots+A_{1,n}e^n_{1,n}+A_{2,1}e^n_{2,1}+\cdots A_{n,n}e^n_{n,n})M\\&:=A_{1,1}e^n_{1,1}M+A_{1,2}e^n_{1,2}M+\cdots+A_{1,n}e^n_{1,n}M+A_{2,1}e^n_{2,1}M+\cdots A_{n,n}e^n_{n,n}M
+	\end{align*}
+\end{df}
+
+\begin{ex}
+	Dada a matriz quadrada $A=\begin{pmatrix}
+	a & b\\
+	c & d
+	\end{pmatrix}$ e uma matriz qualquer $M=\begin{pmatrix}
+a' &b' & c'\\
+d' & e' & f'
+\end{pmatrix}$, temos que $AM$ é simplesmente
+\[\begin{pmatrix}
+a & 0\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}
+a' &b' & c'\\
+d' & e' & f'
+\end{pmatrix}+\begin{pmatrix}
+0 & b\\
+0 & 0
+\end{pmatrix}\begin{pmatrix}
+a' &b' & c'\\
+d' & e' & f'
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+c & 0
+\end{pmatrix}\begin{pmatrix}
+a' &b' & c'\\
+d' & e' & f'
+\end{pmatrix}+\begin{pmatrix}
+0 & 0\\
+0 & d
+\end{pmatrix}\begin{pmatrix}
+a' &b' & c'\\
+d' & e' & f'
+\end{pmatrix}\]
+\[=\begin{pmatrix}
+aa' &ab' & ac'\\
+0 & 0 & 0
+\end{pmatrix}+\begin{pmatrix}
+bd' & be' & bf'\\
+0&0&0
+\end{pmatrix}+\begin{pmatrix}
+0&0&0\\
+ca' &cb' & cc'
+\end{pmatrix}+\begin{pmatrix}
+0&0&0\\
+dd' & de' & df'
+\end{pmatrix}\]
+\[=\begin{pmatrix}
+aa'+bd' &ba'+be' & ac'+bf'\\
+ca'+dd' & cb'+de' & cc'+df'
+\end{pmatrix}\]
+\end{ex}
+
+\begin{rmk}
+	Em matemática, quando vamos escrever uma soma muito grande, ou com muitos termos, costumamos usar um símbolo especial para isso - $\sum$ - o \textbf{somatório}. Ele funciona da seguinte maneira: Ao invés de escrever $x_1+x_2+\cdots+x_n$ vamos escrever
+	\[\sum_{i=1}^n x_i.\] A ideia é a seguinte: $i$ denota um índice variável, e os números $1$ e $n$ que aparecem abaixo e acima, respectivamente, do somatório indicam qual o valor mínimo e máximo que $i$ pode assumir, sempre variando de 1 em 1.
+\end{rmk}
+
+\begin{ex}
+	Podemos escrever a soma de todos os números naturais entre 1 e $n$ usando \(\sum_{i=1}^ni,\) por exemplo,
+	\[1+2+3+4=\sum_{i=1}^4i.\]
+	
+	Podemos escrever a soma dos quadrados dos números naturais entre 1 e $n$ como \(\sum_{i=1}^ni^2,\) por exemplo,
+	\[1+4+9+16+25=1^2+2^2+3^2+4^2+5^2=\sum_{i=1}^5i^2.\]
+	
+	Podemos escrever a soma dos $n$ primeiros números ímpares e pares, respectivamente, como $\sum_{i=1}^n 2i-1\text{ e }\sum_{i=1}^n2i,$ por exemplo,
+	\[1+3+5+7+9+11 = (2\cdot1-1)+(2\cdot2-1)+(2\cdot3-1)+(2\cdot3-1)+(2\cdot4-1)+(2\cdot5-1)+(2\cdot6-1) = \sum_{i=1}^62i-1\]\[2+4+6+8+10+12+14 = (2\cdot 1)+(2\cdot2)+(2\cdot3)+(2\cdot4)+(2\cdot5)+(2\cdot6)+(2\cdot7 )= \sum_{i=1}^72i\]
+	
+	Podemos escrever o produto clássico (\ref{df:produto-classico}) das matrizes $M\in M_{n,m}(\R)$ e $N\in M_{m,l}(\R)$ como $$(MN)_{i,j}=\sum_{k=1}^{m}M_{i,k}N_{k,j}.$$
+\end{ex}
+
+Com isso, por exemplo, podemos tornar a definição de produto mais compacta:
+\begin{df}
+	Seja $A\in M_n(\R)$ uma matriz quadrada e $M\in M_{n\times m}(\R)$ qualquer. Definimos o \textbf{produto de $A$ com $M$} como sendo a matriz $AM$ dada por
+	\begin{align*}
+	AM&=\left(\sum_{j=1}^n\sum_{i=1}^nA_{i,j}e^n_{i,j}\right)M\\&:=\sum_{j=1}^n\sum_{i=1}^n\left(A_{i,j}e^n_{i,j}M\right)
+	\end{align*}
+\end{df}
+
+\bigskip
+
+Finalmente, para encerrar esta seção, vamos aprender a multiplicar matrizes de tamanho qualquer, usando o raciocínio acima.
+
+\begin{df}
+	Vamos denotar por $e_{i,j}^{n,m}$ a matriz $n\times m$ dada por
+	\[(e^{n,m}_{i,j})_{r,s}:=\begin{cases}
+	1,\text{ se } r=i \text{ e } s=j\\
+	0, \text{ caso contrário}.
+	\end{cases}\]
+\end{df}
+
+Ou seja, é apenas uma generalização das nossas já familiares matrizes $e^n_{i,j}$ para matrizes não-quadradas com a mesma propriedade - elas têm 1 na entrada $i,j$ e 0 em todas as outras entradas.
+
+Novamente, podemos definir agora funções que vão realizar nossas multiplicações:
+\begin{df}
+	Definimos por $E^{l,n}_{i,j}:M_{n\times m}(\R)\to M_{l\times m}(\R)$ a \textbf{função} dada por:
+	\[\bordermatrix{&&&&\cr
+		&M_{1,1} & M_{1,2} & \cdots & M_{1,m}\cr
+		& M_{2,1}& M_{2,2} & \cdots & M_{2,m}\cr
+		& \vdots & \vdots & \ddots & \vdots\cr		
+		j\text{-ésima linha}& M_{j,1} & M_{j,2} & \cdots & M_{j,m}\cr
+		& \vdots & \vdots & \ddots & \vdots\cr
+		&M_{n,1} & M_{n,2} & \cdots & M_{n,m}	
+	}\mapsto
+	\bordermatrix{
+		&&&&\cr
+		&0&0&\cdots&0\cr
+		&0&0&\cdots&0\cr
+		& \vdots & \vdots & \ddots & \vdots\cr
+		i\text{-ésima linha}& M_{j,1} & M_{j,2} & \cdots & M_{j,m}\cr
+		& \vdots & \vdots & \ddots & \vdots\cr
+		&0&0&\cdots&0
+	}.
+	\]
+\end{df}
+
+\begin{rmk}
+	Assim como antes, o expoente em $E^{l,n}_{i,j}$ significa apenas que estamos transformando matrizes de $n$ linhas em matrizes de $l$ linhas.
+\end{rmk}
+
+\begin{ex}
+	Dada uma matriz $M=\begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}\in M_{2\times 3}(\R)$, temos que
+	\[E^{3,2}_{1,1}(M)=\begin{pmatrix}
+	5 & -8 & \sqrt2\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\quad\quad E^{3,2}_{1,2}(M)=\begin{pmatrix}
+	4 & 4&0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\]
+	\[E^{3,2}_{2,1}(M)=\begin{pmatrix}
+	0&0&0\\
+	5 & -8 & \sqrt2\\	
+	0&0&0
+	\end{pmatrix}\quad\quad E^{3,2}_{2,2}(M)=\begin{pmatrix}
+	0&0&0\\
+	4 & 4 & 0\\	
+	0&0&0
+	\end{pmatrix}\]
+	\[E^{3,2}_{3,1}(M)=\begin{pmatrix}
+	0&0&0\\
+	0&0 & 0\\	
+	5 & -8 & \sqrt2
+	\end{pmatrix}\quad\quad E^{3,2}_{3,2}(M)=\begin{pmatrix}
+	0&0&0\\
+	0&0&0\\	
+	4 & 4 & 0
+	\end{pmatrix}\]
+\end{ex}
+
+Com isso, vamos simplesmente imitar o procedimento anterior:
+\begin{df}
+	Dada uma matriz $M\in M_{n\times m}(\R)$, $l\in \N$ e qualquer par de índices $i,j$ com $i\leq l$ e $j\leq n$, definimos o produto de $e^{l,n}_{i,j}$ com $M$ como sendo a matriz $e^{l,n}_{i,j}M$ dada por
+	\[e^{l,n}_{i,j}M:=E^{l,n}_{i,j}(M).\]
+\end{df}
+
+\begin{ex}
+	Continuando o exemplo acima, em que $M=\begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}\in M_{2\times 3}(\R)$, temos que
+	\[\begin{pmatrix}
+	1 & 0\\
+	0&0\\
+	0&0
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{1,1}M:=E^{3,2}_{1,1}(M)=\begin{pmatrix}
+	5 & -8 & \sqrt2\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+	0&1\\
+	0&0\\
+	0&0
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{1,2}M:=E^{3,2}_{1,2}(M)=\begin{pmatrix}
+	4 & 4&0\\
+	0&0&0\\
+	0&0&0
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+	0&0\\
+	1&0\\
+	0&0
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{2,1}M:=E^{3,2}_{2,1}(M)=\begin{pmatrix}
+	0&0&0\\
+	5 & -8 & \sqrt2\\	
+	0&0&0
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+	0 & 0\\
+	0&1\\
+	0&0
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{1,1}M:=E^{3,2}_{2,2}(M)=\begin{pmatrix}
+	0&0&0\\
+	4 & 4 & 0\\	
+	0&0&0
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+	0&0\\
+	0&0\\
+	1&0
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{3,1}M:=E^{3,2}_{3,1}(M)=\begin{pmatrix}
+	0&0&0\\
+	0&0&0\\	
+	5 & -8 & \sqrt2
+	\end{pmatrix}\]
+	\[\begin{pmatrix}
+	0&0\\
+	0&0\\
+	0&1
+	\end{pmatrix}\cdot \begin{pmatrix}
+	5 & -8 & \sqrt 2\\
+	4 & 4 & 0
+	\end{pmatrix}=e^{3,2}_{3,2}M:=E^{3,2}_{3,2}(M)=\begin{pmatrix}
+	0&0&0\\
+	0&0&0\\	
+	4 & 4 & 0
+	\end{pmatrix}\]
+\end{ex}
+
+\begin{exerc}
+	Essa multiplicação coincide com a multiplicação clássica de matrizes? Se sim, você consegue mostrar que isso sempre é verdade? Se não, você consegue mostrar um caso onde falha?
+\end{exerc}
+
+Feito isso, vamos agora simplesmente repetir o que fizemos antes acima para ensinar a multiplicar matrizes de tamanho ``qualquer''.
+
+\begin{ex}
+	Considere as matrizes $M=\begin{pmatrix}
+	a&b&c\\
+	d&e&f
+	\end{pmatrix}\in M_{2\times 3}(\R)$ e $N=\begin{pmatrix}
+	\alpha &\beta\\
+	\gamma & \delta\\
+	\epsilon & \eta	
+	\end{pmatrix}\in M_{3\times 2}(\R)$. Para calcular $MN$ podemos fazer como fizemos com as matrizes quadradas:
+	
+	Primeiro, vamos decompor $M$ em matrizes $e^{l,n}_{i,j}$:
+	
+	\begin{align*}
+	M&=\begin{pmatrix}
+	a&b&c\\
+	d&e&f
+	\end{pmatrix}\\
+	&=\begin{pmatrix}
+	a&0&0\\
+	0&0&0
+	\end{pmatrix}+
+	\begin{pmatrix}
+	0&b&0\\
+	0&0&0
+	\end{pmatrix}+
+	\begin{pmatrix}
+	0&0&c\\
+	0&0&0
+	\end{pmatrix}+
+	\begin{pmatrix}
+	0&0&0\\
+	d&0&0
+	\end{pmatrix}+
+	\begin{pmatrix}
+	0&0&0\\
+	0&e&0
+	\end{pmatrix}+
+	\begin{pmatrix}
+	0&0&0\\
+	0&0&f
+	\end{pmatrix}\\
+	&=a\begin{pmatrix}
+	1&0&0\\
+	0&0&0
+	\end{pmatrix}+b
+	\begin{pmatrix}
+	0&1&0\\
+	0&0&0
+	\end{pmatrix}+c
+	\begin{pmatrix}
+	0&0&1\\
+	0&0&0
+	\end{pmatrix}+d
+	\begin{pmatrix}
+	0&0&0\\
+	1&0&0
+	\end{pmatrix}+e
+	\begin{pmatrix}
+	0&0&0\\
+	0&1&0
+	\end{pmatrix}+f
+	\begin{pmatrix}
+	0&0&0\\
+	0&0&1
+	\end{pmatrix}
+	\end{align*}e cada uma dessas matrizes $e^{l,n}_{i,j}$ sabemos multiplicar por $N$:
+	\begin{align*}
+		\begin{pmatrix}
+		1&0&0\\
+		0&0&0
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		\alpha &\beta\\
+		0 & 0	
+		\end{pmatrix}\quad\quad&\begin{pmatrix}
+		0&0&0\\
+		1&0&0
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		0 & 0\\
+		\alpha &\beta
+		\end{pmatrix}\\		
+		\begin{pmatrix}
+		0&1&0\\
+		0&0&0
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		\gamma &\delta\\
+		0 & 0	
+		\end{pmatrix}\quad\quad&\begin{pmatrix}
+		0&0&0\\
+		0&1&0
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		0 & 0\\
+		\gamma &\delta
+		\end{pmatrix}\\		
+		\begin{pmatrix}
+		0&0&1\\
+		0&0&0
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		\epsilon &\eta\\
+		0 & 0	
+		\end{pmatrix}\quad\quad&\begin{pmatrix}
+		0&0&0\\
+		0&0&1
+		\end{pmatrix}\begin{pmatrix}
+		\alpha &\beta\\
+		\gamma & \delta\\
+		\epsilon & \eta	
+		\end{pmatrix}:=\begin{pmatrix}
+		0 & 0\\
+		\epsilon &\eta
+		\end{pmatrix}
+	\end{align*}e cada uma dessas matrizes sabemos multiplicar por números:
+	\begin{align*}
+	a\begin{pmatrix}
+	\alpha &\beta\\
+	0 & 0	
+	\end{pmatrix}=\begin{pmatrix}
+	a\alpha &a\beta\\
+	0 & 0	
+	\end{pmatrix} \quad\quad& d\begin{pmatrix}
+	0 & 0\\
+	\alpha &\beta
+	\end{pmatrix}=\begin{pmatrix}
+	0 & 0\\
+	d\alpha&d\beta
+	\end{pmatrix}\\
+	b\begin{pmatrix}
+	\gamma &\delta\\
+	0 & 0	
+	\end{pmatrix}=\begin{pmatrix}
+	b\gamma &b\delta\\
+	0 & 0	
+	\end{pmatrix} \quad\quad& e\begin{pmatrix}
+	0 & 0\\
+	\gamma &\delta
+	\end{pmatrix}=\begin{pmatrix}
+	0 & 0\\
+	e\gamma &e\delta
+	\end{pmatrix}\\
+	c\begin{pmatrix}
+	\epsilon &\eta\\
+	0 & 0	
+	\end{pmatrix}=\begin{pmatrix}
+	c\epsilon &c\eta\\
+	0 & 0	
+	\end{pmatrix} \quad\quad& f\begin{pmatrix}
+	0 & 0\\
+	\epsilon &\eta
+	\end{pmatrix}=\begin{pmatrix}
+	0 & 0\\
+	f\epsilon &f\eta
+	\end{pmatrix}
+	\end{align*}e como todas têm o mesmo tamanho, nós sabemos somar todas elas:
+	\begin{gather*}	
+	\begin{pmatrix}
+	a\alpha &a\beta\\
+	0 & 0	
+	\end{pmatrix}+\begin{pmatrix}
+	b\gamma &b\delta\\
+	0 & 0	
+	\end{pmatrix}+\begin{pmatrix}
+	c\epsilon &c\eta\\
+	0 & 0	
+	\end{pmatrix}+\begin{pmatrix}
+	0 & 0\\
+	d\alpha&d\beta
+	\end{pmatrix}+\begin{pmatrix}
+	0 & 0\\
+	e\gamma &e\delta
+	\end{pmatrix}+\begin{pmatrix}
+	0 & 0\\
+	f\epsilon &f\eta
+	\end{pmatrix}\\
+	=\begin{pmatrix}
+	a\alpha+b\gamma+c\epsilon & a\beta+b\delta+c\eta\\
+	d\alpha+e\gamma+f\epsilon & d\beta+e\delta+f\eta
+	\end{pmatrix}
+	\end{gather*}e finalmente, vemos chamar esse resultado de $MN$.
+\end{ex}
+
+Finalmente podemos definir o produto de matrizes compatíveis:
+\begin{df}
+	Sejam $M\in M_{n\times m}(\R)$ e $N\in M_{m\times l}(\R)$. Definimos o produto de $M$ com $N$ como sendo a matriz $MN$ dada por
+	\[MN:=\sum_{j=1}^m\sum_{i=1}^n\left(M_{i,j}e^{n,m}_{i,j}N\right)\]
+\end{df}
+
+\begin{exerc}
+	Calcule, usando os dados do exemplo acima, $NM$, usando o método que preferir (isto é, o método clássico, ou o que estamos definindo) e compare o resultado que você obtiver com o $MN$ calculado acima.
+\end{exerc}
+\begin{exerc}
+	Sejam $A$ e $B$ matrizes quaisquer, tais que ambos os produtos $AB$ e $BA$ existem. Isso significa que $AB=BA$? Se sim, tente provar por que isso é verdade. Se não, dê um contra-exemplo.
+\end{exerc}
+
+\begin{exerc}
+	Tente provar as seguintes propriedades:
+	\begin{itemize}
+		\item[] \textbf{(Comutatividade da soma)} Para quaisquer duas matrizes $M,N\in M_{n\times m}(\R)$ temos que $M+N=N+M$;
+		\item[] \textbf{(Elemento neutro da soma)} Para qualquer matriz $M\in M_{n\times m}(\R)$ existe uma única matriz $Z\in M_{n\times m}(\R)$ tal que $M+Z=M$. Vamos chamar essa matriz de \textbf{zero} e notar por 0;
+		\item[] \textbf{(Inverso da soma)} Para qualquer matriz $M\in M_{n\times m}(\R)$ existe uma única matriz $N\in M_{n\times m}(\R)$ tal que $M+N=0$. Vamos chamar essa matriz de \textbf{inversa  aditiva de $M$} e notar por $-M$;
+		\item[] \textbf{(Associatividade da soma) }Para quaisquer três matrizes $L,M,N\in M_{n\times m}(\R)$ temos que $L+(M+N)=(L+M)+N$;
+		\item[] \textbf{(Comutatividade do produto por número) }Para qualquer número real $a\in \R$ e qualquer matriz $M\in M_{n\times m}(\R)$ temos que $aM=Ma$;
+		\item[] \textbf{(Elemento neutro do produto por número)} Para qualquer matriz $M\in M_{n\times m}(\R)$ existe um único número $u\in \R$ tal que $uM=M$; 
+		\item[] \textbf{(Associatividade do produto por número)} Para quaisquer dois números $a,b\in \R$ e qualquer matriz $M\in M_{n\times m}(\R)$, temos que $a(bM)=(ab)M$;
+		\item[] \textbf{(Distributividade do produto por número sobre a soma)} Para quaisquer duas matrizes $M,N\in M_{n\times m}(\R)$ e qualquer número real $a\in \R$ temos que $a(M+N)=aM+aN$;
+		\item[] \textbf{(Distributividade do produto por número sobre a soma de números)} Para quaisquer dois números reais $a,b\in \R$ e qualquer matriz $M\in M_{n\times m}(\R)$ temos que $(a+b)M=aM+bM$;
+		\item[] \textbf{(Elemento neutro do produto)} Para qualquer matriz $M\in M_{n\times m}(\R)$ existe uma única matriz $I\in M_m(\R)$ tal que $MI=M=IM$. Vamos chamar essa matriz de \textbf{identidade};
+		\item[] \textbf{(Associatividade do produto)} Para quaisquer três matrizes $L\in M_{n\times m}(\R)$, $M\in M_{m\times l}(\R)$ e $N\in M_{l\times k}(\R)$ temos que $(LM)N=L(MN)$;
+		\item[] \textbf{(Associatividade do produto com produto por números)} Para quaisquer duas matrizes $M\in M_{n\times m}(\R)$ e $N\in M_{m\times l}(\R)$ e qualquer número real $a\in \R$ temos que $a(MN)=(aM)N$;
+		\item[] \textbf{(Distributividade do produto sobre a soma)} Para quaisquer duas matrizes $L,M\in M_{n\times m}(\R)$ qualquer matriz $N\in M_{m\times l}(\R)$ e qualquer matriz $K\in M_{o\times n}(\R)$ temos que $K(L+M)=KL+KM$ e $(L+M)N=LN+MN$.
+	\end{itemize}
+\end{exerc}
+\pagebreak
+
+\section{Sistemas Lineares}
+
+Vamos agora tentar dar uma primeira justificativa para o estudo de matrizes reais: A resolução de sistemas lineares.
+
+\begin{df}
+	Um \textbf{sistema linear de $n$ equações em $m$ variáveis} consiste em uma coleção de $n$ equações, em que a $i$-ésima equação é da forma $a_{i,1}x_1+a_{i,2}x_2+\cdots+a_{i,m}x_m=b_i$, em que $\{a_{i,j}\}_{i,j\in \N}$ e $\{b_i\}_{i\in \N}$ são números reais. Vamos denotar sistemas dessa forma por
+	\[
+	\begin{cases}
+	a_{1,1}x_1+a_{1,2}x_2+&\cdots\quad+a_{1,m}x_m=b_1\\
+	a_{2,1}x_1+a_{2,2}x_2+&\cdots\quad+a_{2,m}x_m=b_2\\
+	&\ \vdots\\
+	a_{n,1}x_1+a_{n,2}x_2+&\cdots\quad+a_{n,m}x_m=b_n
+	\end{cases}
+	\]
+\end{df}
+
+\begin{rmk}
+	A motivação por trás de chamarmos tais sistemas de \textbf{lineares} ficará para um capítulo posterior.
+\end{rmk}
+
+\begin{ex}
+	Considere o sistema de equações
+	\[\begin{cases}
+	5x+4y-7z=0\\
+	3x+y-z=9.
+	\end{cases}\] Ele é composto de duas equações ($5x+4y-7z=0$ e $3x+y-z=9$), ambas são lineares e ambas têm três variáveis ($x$, $y$ e $z$). Assim, o sistema acima é um sistema linear de duas equações e três incógnitas.
+	
+	\tcblower
+	
+	Contudo, o sistema
+	\[
+	\begin{cases}
+	8x+y+z=2\\
+	-4x+y+z^2=4
+	\end{cases}
+	\]não é linear. Ele é composto de duas equações e três variáveis - contudo, a segunda equação \textbf{não é linear}.
+\end{ex}
+
+Em outras palavras, sistemas lineares são sistemas de equações onde só aparecem somas de números multiplicados a variáveis - nada de funções trigonométricas, nada de potências, nada de funções exponenciais ou qualquer outro tipo de funções. Apenas multiplicação por números.
+
+Se voltarmos para a definição de sistemas lineares de $n$ equações e $m$ incógnitas, vamos ver que cada equação tem exatamente $m$ números (chamados coeficientes) multiplicando as variáveis. Assim, como temos $n$ equações, temos $n\times m$ coeficientes no total. Isso sugere que podemos pegar um sistema
+\[
+\begin{cases}
+a_{1,1}x_1+a_{1,2}x_2+&\cdots\quad+a_{1,m}x_m=b_1\\
+a_{2,1}x_1+a_{2,2}x_2+&\cdots\quad+a_{2,m}x_m=b_2\\
+&\ \vdots\\
+a_{n,1}x_1+a_{n,2}x_2+&\cdots\quad+a_{n,m}x_m=b_n
+\end{cases}
+\]e representá-lo por uma matriz, da seguinte forma:
+
+Primeiro, temos uma matriz
+\[A=\begin{pmatrix}
+a_{1,1} & a_{1,2} & \cdots & a_{1,m}\\
+a_{2,1} & a_{2,2} & \cdots & a_{2,m}\\
+\vdots & \vdots & \ddots & \vdots\\
+a_{n,1} & a_{n,2} & \cdots & a_{n,m}
+\end{pmatrix}\]chamada de \textbf{matriz de coeficientes} que faz exatamente o que o nome diz - coleta todos os coeficientes do sistema.
+
+Em seguida, temos uma matriz
+\[X=\begin{pmatrix}
+x_1\\
+x_2\\
+\vdots\\
+x_m
+\end{pmatrix}\]chamada de \textbf{matriz de variáveis} que, novamente, é auto-descritiva: ela contém todas as variáveis do sistema.
+
+Por fim, temos uma matriz
+\[B=\begin{pmatrix}
+b_1\\
+b_2\\
+\vdots\\
+b_n
+\end{pmatrix}\] chamada de \textbf{matriz resultante} que, mais uma vez, é simplesmente a matriz que contém todos os resultados do sistema.
+
+Por que isso é legal? Bom, primeiro vamos notar que $A\in M_{n\times m}(\R)$, $X$ é uma matriz $m\times 1$ com entradas que são variáveis, e que $B\in M_{n,1}(\R)$ . Agora, lembrando da multiplicação de matrizes, não é difícil ver que podemos multiplicar $AX$. Mas o que seria, por exemplo, o elemento na posição $i,j$ de $AX$? Bom, por definição,
+
+\[(AX)_{i,j}=\sum_{l=1}^m A_{i,l}X_{l,j}=\sum_{l=1}^m a_{i,l}X_{l,j}\]e como $AX\in M_{n,1}(\R)$, $j=1$, de forma que podemos continuar:
+\[(AX)_{i,j}=(AX)_{i,1}=\sum_{l=1}^m a_{i,l}X_{l,j}=\sum_{l=1}^m a_{i,l}X_{l,1}=\sum_{l=1}^m a_{i,l}x_l,\]e expandindo temos
+\[(AX)_{i,1}=a_{i,1}x_1+a_{i,2}x_2+\cdots+a_{i,m}x_m\]que é exatamente $b_i$. Mas $b_i=B_{i,1}$. Disso temos que $(AX)_{i,1}=B_{i,1}$ - ou seja, as matrizes $AX$ e $B$ são iguais em \textbf{todas} as entradas e, portanto, são \textbf{iguais}.
+
+Em outras palavras, ao escrever um sistema usando as matrizes $A$, $X$ e $B$, vemos que o sistema pode ser descrito como a igualdade de matrizes $AX=B$. Ou, dito de outra maneira - se $A'\in M_{n\times m}(\R)$, $X'$ é uma matriz $m\times 1$ com entradas que são variáveis, e $B'\in M_{n,1}(\R)$ são matrizes quaisquer, então uma equação matricial $A'X'=B'$ determina um único sistema linear.
+
+\subsection{Escalonamentos}
+
+Contudo, resolver sistemas lineares não é tarefa fácil. Vamos aqui apresentar uma técnica - chamada \textbf{escalonamento} - para resolver (se possível!) um sistema linear. Antes disso, porém, precisamos entender o que significa \textit{resolver um sistema linear}.
+
+\begin{df}
+	Dado um sistema linear $AX=B$, dizemos que \textbf{$C$ é uma solução para o sistema} se $AC=B$.
+\end{df}
+
+\begin{ex}
+	Dado o sistema linear
+	\[\begin{pmatrix}
+	1 & 1 & 1\\
+	0 & 1 & 1\\
+	0 & 0 & 1
+	\end{pmatrix}\begin{pmatrix}
+	x\\
+	y\\
+	z
+	\end{pmatrix}=\begin{pmatrix}
+	6\\
+	3\\
+	1
+	\end{pmatrix},\] temos que uma solução do sistema é a matriz
+	\[\begin{pmatrix}
+	3\\
+	2\\
+	1
+	\end{pmatrix}.\]
+	
+	De fato,
+	\[\begin{pmatrix}
+	1 & 1 & 1\\
+	0 & 1 & 1\\
+	0 & 0 & 1
+	\end{pmatrix}\begin{pmatrix}
+	3\\
+	2\\
+	1
+	\end{pmatrix}=\begin{pmatrix}
+	3+2+1\\
+	2+1\\
+	1
+	\end{pmatrix}=\begin{pmatrix}
+	6\\
+	3\\
+	1
+	\end{pmatrix}.\]
+	
+	Afirmamos ainda que essa solução é única.
+	
+	De fato, suponha que temos alguma matrix $\begin{pmatrix}
+	a\\b\\c
+	\end{pmatrix}$ tal que 
+	\[\begin{pmatrix}
+	1 & 1 & 1\\
+	0 & 1 & 1\\
+	0 & 0 & 1
+	\end{pmatrix}\begin{pmatrix}
+	a\\b\\c
+	\end{pmatrix}=\begin{pmatrix}
+	6\\
+	3\\
+	1
+	\end{pmatrix}.\] Então teríamos três equações: $a+b+c=6$, $b+c=3$ e $c=1$ Como $c=1$ e $b+c=3$, segue que $b=2$. Similarmente, como $b+c=3$ e $a+b+c=6$, segue que $a=3$ -  ou seja, a matriz dada é, de fato, a única solução do sistema.
+\end{ex}
+
+\begin{exerc}
+	Encontre uma solução do sistema
+	\[\begin{pmatrix}
+	1 & 0 & 0\\ 1&1&0\\1&1&1
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z
+	\end{pmatrix}=\begin{pmatrix}
+	6\\13\\21
+	\end{pmatrix}.\] Essa solução é única? Se não, encontre outra. Se sim, prove.
+\end{exerc}
+
+Vamos agora lembrar de como resolvíamos sistemas de equações lineares antes:
+
+\begin{ex}
+	Considere o sistema
+	\[\begin{cases}
+	4x+2y=0\\
+	-4x+9y=22
+	\end{cases}.\] Nós podemos perceber que o coeficiente de $x$ em ambas as equações é o mesmo, com o sinal invertido. Isso nos diz que se somarmos as equações, obteremos uma nova equação com o coeficiente de $x$ sendo 0
+	\[
+	\begin{array}[b]{lr}
+	&4x+2y=0\\
+	+&-4x+9y=22\\
+	\hline
+	&0x+11y=22
+	\end{array}
+	\]com isso, conseguimos resolver a equação $11y=22$, que tem como única solução $y=2$. Agora, com o valor de $y$ em mãos, podemos escolher qualquer equação original e resolvê-la - por exemplo a primeira
+	\[\begin{array}{rl}
+		4x+2y=0&\\
+		4x+2\cdot2=0 & \text{(usando }y=2\text{)}\\
+		4x+4=0&\\
+		4(x+1)=0 & \text{(colocando 4 em evidência)}\\
+		x+1=0 &\\
+		x=-1,
+	\end{array}\] e agora afirmamos que a solução do sistema original é $(-1,2)$.
+	
+	O que fizemos, em suma, foi trocar o sistema
+	\[\begin{cases}
+	4x+2y=0\\
+	-4x+9y=22
+	\end{cases}\]pelo sistema
+	\[
+	\begin{cases}
+	4x+2y=0\\
+	11y=22,
+	\end{cases}\]resolver esse segundo sistema e afirmar que essa solução obtida também é solução do sistema original.
+	
+	\tcblower
+	
+	Pensando do ponto de vista de matrizes, vamos chamar
+	\[A=\begin{pmatrix}
+	4 &2\\-4 &9
+	\end{pmatrix}\]a matriz de coeficientes do sistema original e 
+	\[A'=\begin{pmatrix}
+	4 & 2\\ 0 & 11
+	\end{pmatrix}\]a matriz de coeficientes do sistema que obtemos somando as duas equações do sistema original.
+	
+	Mas como obtivemos a matriz $A'$? Vamos analisar ela por partes:
+	
+	\begin{itemize}
+		\item A linha 1 de $A'$ é simplesmente a linha 1 de $A$;
+		\item A linha 2 de $A'$ é simplesmente a soma das linhas 1 e 2 de $A$.
+	\end{itemize}
+
+Ou seja, se escrevermos
+\[A'=\begin{pmatrix}
+4 & 2\\0&0
+\end{pmatrix}+\begin{pmatrix}
+0&0\\0&11
+\end{pmatrix}\]podemos ver que $\left(\begin{smallmatrix}
+4&2\\0&0
+\end{smallmatrix}\right)=e^2_{1,1}A$. Além disso, como já dissemos, 
+\[\begin{pmatrix}
+0&0\\0&11
+\end{pmatrix}=\begin{pmatrix}
+0&0\\4&2
+\end{pmatrix}+\begin{pmatrix}
+0&0\\-4&9
+\end{pmatrix}=e^2_{2,1}A+e^2_{2,2}A,\]ou seja,
+\[A'=\begin{pmatrix}
+4 & 2\\0&0
+\end{pmatrix}+\begin{pmatrix}
+0&0\\0&11
+\end{pmatrix}=e^2_{1,1}A+e^2_{2,1}A+e^2_{2,2}A=(e^2_{1,1}+e^2_{2,1}+e^2_{2,2})A\]que é simplesmente
+\[A'=\begin{pmatrix}
+1 & 0\\1 & 1
+\end{pmatrix}A.\]Em outras palavras, nós multiplicamos $A$ por uma soma de matrizes $e^n_{i,j}$ e obtivemos uma matriz $A'$ com as mesmas soluções de $A$.
+\end{ex}
+\begin{ex}
+	Similarmente ao exemplo anterior, considere o sistema linear
+	\[\begin{cases}
+	-7x+24y=8\\
+	x-3y=1
+	\end{cases}.\]Para resolvê-lo, geralmente somaríamos a linha 1 com sete vezes a linha 2:
+	\[
+	\begin{array}[b]{lr}
+	&-7x+24y=8\\
+	+&7(x-3y=1)\\
+	\hline
+	&0x+3y=15
+	\end{array}
+	\]e repetindo acima, podemos encontrar $y=5$. Agora, com $y$ em mãos, podemos escolher alguma das equações originais (por exemplo, a segunda) e resolvê-la, obtendo $x=16$, e, portanto, a solução é o par $(16,5)$.
+	
+	\tcblower
+	
+	Novamente, temos duas matrizes: A matriz do sistema original
+	\[A=\begin{pmatrix}
+	-7 & 24\\1&-3
+	\end{pmatrix}\]e a matriz que obtivemos somando a primeira linha com sete vezes a segunda linha
+	\[A'=\begin{pmatrix}
+	1&-3\\0&3
+	\end{pmatrix}.\]Será que conseguimos expressar $A'$ como um produto de alguma matriz por $A$ - como fizemos antes?
+	
+	Vamos começar desmembrando $A'$:
+	\[A'=\begin{pmatrix}
+	1 & -3 \\0&0
+	\end{pmatrix}+\begin{pmatrix}
+	0&0\\0&3
+	\end{pmatrix}\]em que o primeiro pedaço não é nada mais que uma cópia da segunda linha de $A$ - ou seja, $e^2_{1,2}A$ - e o segundo pedaço é a soma da primeira linha de $A$ com sete vezes a segunda linha de $A$ - ou seja, 
+	\[\begin{pmatrix}
+	0&0\\0&3
+	\end{pmatrix}=\begin{pmatrix}
+	0&0\\-7&24
+	\end{pmatrix}+7\begin{pmatrix}
+	0&0\\1&-3
+	\end{pmatrix}=e^2_{2,1}A+7e^2_{2,2}A\]e, portanto, 
+	\[A'=e^2_{1,2}A+e^2_{2,1}A+7e^2_{2,2}A=(e^2_{1,2}+e^2_{2,1}+7e^2_{2,2})A,\]ou seja,
+	\[A'=\begin{pmatrix}
+	0&1\\
+	1 & 7
+	\end{pmatrix}A,\]como queríamos.
+	
+	Neste caso, multiplicamos $A$ por uma matriz que era soma de múltiplos de matrizes $e^n_{i,j}$ e ainda obtivemos uma matriz que tem as mesmas soluções.
+\end{ex}
+
+\begin{rmk}
+	Cuidado! Nem toda multiplicação de $A$ por matrizes $e^n_{i,j}$ preserva soluções. Por exemplo, fazendo $\begin{pmatrix}
+	0&0\\1&1
+	\end{pmatrix}$ vezes $A=\begin{pmatrix}
+	-7 & 24\\1&-3
+	\end{pmatrix}$ obtemos a matriz $\begin{pmatrix}
+	1 & -3\\1&-3
+	\end{pmatrix}$ que claramente não tem as mesmas soluções que $A$.
+	
+	Em breve veremos condições para que isso não aconteça.
+\end{rmk}
+
+Mais à frente veremos exatamente \textit{porquê} isso é verdade. Por agora, nos basta focar nessas operações.
+
+\begin{df}
+	Um \textbf{escalonamento} de uma matriz $A\in M_{n\times m}(\R)$ qualquer, é uma matriz $A'$ que pode ser obtida de $A$ por composições das seguintes operações:
+	\begin{itemize}
+		\item Somar uma linha de $A$ a um múltiplo de outra linha de $A$;
+		\item Trocar duas linhas de $A$;
+		\item Multiplicar uma linha inteira de $A$ por um mesmo número.
+	\end{itemize}
+\end{df}
+
+Pelos exemplos acima, podemos ver que sempre podemos realizar escalonamentos de $A$ por multiplicações $XA$, em que $X$ é uma soma de múltiplos de matrizes $e^n_{i,j}$.
+
+\begin{exerc}
+	Construa uma matriz $X\in M_2(\R)$ diferente de 0 que seja soma de matrizes $e^2_{i,j}$ tal que $XA$ \textbf{não} seja um escalonamento de $A$ (ou seja, não tenha as mesmas soluções de $A$) para qualquer matriz $A\in M_{2\times m}(\R)$.
+\end{exerc}
+
+Finalmente, podemos enunciar o teorema mais forte desta seção:
+
+\begin{theorem}\label{thm:sol-escsol}
+	Uma matriz $A$ possui solução se, e somente se, todo escalonamento de $A$ possui solução.
+\end{theorem}
+
+Não vamos demonstrar esse teorema agora, mas vamos chamar a atenção para o seguinte corolário:
+
+\begin{cor}\label{cor:sol-id}
+	Se, a matriz identidade é um escalonamento de $A$, então $A$ possui solução única.
+\end{cor}
+
+\begin{rmk}
+	Em matemática, um \textbf{corolário} é um resultado que segue imediatamente de um resultado anterior. Então estamos afirmando que o
+	\Cref{cor:sol-id} segue imediatamente do \Cref{thm:sol-escsol}.
+\end{rmk}
+
+\begin{exerc}
+	Prove o \Cref{cor:sol-id} assumindo que o \Cref{thm:sol-escsol} seja verdade.
+\end{exerc}
+
+\bigskip
+\subsection{Resolvendo sistemas lineares}
+
+Vamos finalmente aprender a obter soluções usando escalonamentos. Para isso, considere o exemplo abaixo:
+
+\begin{ex}
+	Sejam $$A=\begin{pmatrix}
+	1&1\\1&1\\1&-1\\1&-1
+	\end{pmatrix},\quad B=\begin{pmatrix}
+	1\\-1\\1\\-1
+	\end{pmatrix}$$ e $AX=B$ um sistema linear. Para escalonar $A$ vamos fazer:
+	\begin{alignat*}{4}
+	\begin{pmatrix}
+	1&1\\1&1\\1&-1\\1&-1
+	\end{pmatrix}\quad&\rightsquigarrow\quad\bordermatrix{&&\cr&1&1\cr l_2-l_1&0&0\cr l_3-l_1&0&-2\cr l_4-l_1&0&-2}\quad&\rightsquigarrow\quad\bordermatrix{&&\cr&1&1\cr&0&0\cr\frac{l_3}{-2}&0&1\cr&0&-2}\quad&\rightsquigarrow\quad\bordermatrix{
+	&&\cr l_1-l_3&1&0\cr &0&0\cr &0&1\cr l_4+2l_3 & 0 & 0
+	}
+	\end{alignat*}no primeiro passo multiplicamos $A$ por $P_1=\begin{pmatrix}
+	1&0&0&0\\-1&1&0&0\\-1&0&1&0\\-1&0&0&1
+	\end{pmatrix}$, no segundo por $P_2=\begin{pmatrix}
+	1&0&0&0\\0&1&0&0\\0&0&\frac{1}{-2}&0\\0&0&0&1
+	\end{pmatrix}$ e no terceiro por $P_3=\begin{pmatrix}
+	1&0&-1&0\\0&1&0&0\\0&0&1&0\\0&0&2&1
+	\end{pmatrix}$, obtendo a matrix escalonada $P_3P_2P_1A$.
+	
+	Se fizermos, agora, $(P_3P_2P_1A)X$ e lembrarmos que o produto de matrizes é associativo, teremos
+	\[(P_3P_2P_1A)X=P_3P_2P_1(AX)=P_3P_2P_1B\]onde do lado direito aparece $B$ \underline{escalonada pelas mesmas matrizes que $A$ foi escalonada}. Além disso, a equação $(P_3P_2P_1A)X=P_3P_2P_1B$ nos diz que a solução ($X$) do sistema original continua sendo solução do sistema escalonado. Assim, podemos calcular $P_3P_2P_1B$:
+	\[P_1B=\bordermatrix{&\cr l_1&1\cr l_2-l_1&-2\cr l_3-l_1&0\cr l_4-l_1&-2}
+	\]
+	\[P_2(P_1B)=\bordermatrix{&\cr l_1&1\cr l_2&-2\cr \frac{l_3}{-2}&0\cr l_4&-2}
+	\]
+	\[P_3(P_2P_1B)=\bordermatrix{&\cr l_1-l_3&1\cr l_2&-2\cr l_3&0\cr l_4+2l_3&-2},\]ou seja,
+	\[\begin{pmatrix}
+	1&0\\0&0\\0&1\\0&0
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=\begin{pmatrix}
+	1\\-2\\0\\-2
+	\end{pmatrix}\quad\text{ e }\quad\begin{pmatrix}
+	1&1\\1&1\\1&-1\\1&-1
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=\begin{pmatrix}
+	1\\-1\\1\\-1
+	\end{pmatrix}\]têm as mesmas soluções.
+	
+	Contudo, o sistema escalonado nos diz que (pela última linha) $0x+0y=-2$, e nós sabemos que $0a=0$ para qualquer $a\in \R$. Em particular, não existe $(x,y)\in \R^2$ tal que $0x+0y=-2$ - ou seja, o sistema escalonado \textbf{não admite solução} e, portanto, o sistema original também não.
+\end{ex}
+
+\begin{rmk}
+	De maneira geral, sempre que, ao escalonar uma matriz, obtivermos uma linha de zeros sendo igual a algo diferente de zero, podemos parar o escalonamento e concluir, imediatamente, que o sistema não possui soluções.
+\end{rmk}
+
+\begin{df}
+	Seja $AX=B$ um sistema linear. Denotamos por $\begin{augmatrix}{c:c}
+	A&B
+	\end{augmatrix}$ a \textbf{matrix aumentada do sistema} obtida de $A$ simplesmente colando uma cópia de $B$ à direita.
+\end{df}
+
+\begin{ex}
+	No exemplo anterior, em que $A=\begin{pmatrix}
+	1&1\\1&1\\1&-1\\1&-1
+	\end{pmatrix}$ e $B=\begin{pmatrix}
+	1\\-1\\1\\-1
+	\end{pmatrix}$, a \textbf{matrix aumentada} é
+	\[A\mid B=\left(\begin{array}{c c:c}
+	1&1&1\\1&1&-1\\1&-1&1\\1&-1&-1
+	\end{array}\right).\]A vantagem de se trabalhar com a matriz aumentada é a seguinte: Ao invés de escalonar $A$ e depois repetir o procedimento em $B$, nós escalonamos ambas as matrizes ao mesmo tempo:
+	\begin{alignat*}{4}
+	\begin{augmatrix}{cc:c}
+	1&1&1\\1&1&-1\\1&-1&1\\1&-1&-1
+	\end{augmatrix}\quad&\rightsquigarrow\quad\begin{augmatrix}{cc:c}
+	1&1&1\\0&0&-2\\0&-2&0\\0&-2&-2
+	\end{augmatrix}\quad&\rightsquigarrow\quad\begin{augmatrix}{cc:c}
+	1&1&1\\0&0&-2\\0&1&0\\0&-2&-2
+	\end{augmatrix}\quad&\rightsquigarrow\quad\begin{augmatrix}{cc:c}
+	1&0&0\\0&0&-2\\0&1&0\\0&0&-2
+	\end{augmatrix}.
+	\end{alignat*}
+	
+	Por exemplo, para o sistema linear
+	\[\begin{pmatrix}
+	1&1\\1&-1
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=\begin{pmatrix}
+	1\\1
+	\end{pmatrix}\]temos a matriz aumentada $\begin{augmatrix}{cc:c}
+	1&1&1\\1&-1&1
+	\end{augmatrix}$ que podemos escalonar e obter
+	\[\begin{augmatrix}{cc:c}
+	1&1&1\\1&-1&1
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cc:c}
+	1&1&1\\0&-2&0
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cc:c}
+	1&1&1\\0&1&0
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cc:c}
+	1&0&1\\0&1&0
+	\end{augmatrix}\]e podemos dizer imediatamente que as equações são $1x=1$ e $1y=0$, donde vemos que a única solução do sistema é $(1,0)\in \R^2$.
+\end{ex}
+
+\begin{ex}
+	Vamos resolver um último sistema antes de avançar:
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	1\\3
+	\end{pmatrix},\]cuja matriz aumentada é $\begin{augmatrix}{cccc:c}
+	1&2&1&1&1\\
+	1&3&-1&2&3
+	\end{augmatrix}$. Escalonando obtemos
+	\[\begin{augmatrix}{cccc:c}
+	1&2&1&1&1\\
+	1&3&-1&2&3
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+	1&2&1&1&1\\0&1&-2&1&2
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+	1&0&5&-1&-3\\0&1&-2&1&2
+	\end{augmatrix}\]que nos dá as equações $x+5z-w=-3$ e $y-2z+w=2$. Não temos mais restrições no sistema, então todos os pontos que satisfazem a essas equações são soluções.
+	
+	Para denotar, então, essa solução, note que podemos isolar $x$ e $y$ acima, obtendo $x=-5z+w-3$ e $y=2z-w+2$. Assim, vemos que \textit{para cada valor distinto de $z$ e $w$ temos uma solução diferente do sistema}. Por exemplo, se $w=z=0$, temos que $x=-3$ e $y=2$. Substituindo, então, o ponto $(-3,2,0,0)$ no sistema original vemos que
+	\[(-3)+2(2)+(0)+(0)=4-3=1\]
+	\[(-3)+3(2)-1(0)+2(0)=6-3=3\]e, de fato, o ponto $(-3,2,0,0)$ é solução.
+	
+	De maneira geral, como para cada valor possível de $z$ e $w$ temos uma solução, vamos notar o conjunto de todas as soluções por 
+	\[S=\{(-5z+w-3,2z-w+2,z,w)\in\R^4\mid z\in \R,w\in \R\}.\]
+\end{ex}
+
+\begin{rmk}
+	No caso do exemplo acima dizemos que $z$ e $w$ são \textbf{variáveis livres}. A ideia é que elas não têm um valor fixo, mas são ``livres'' para assumir o valor que quiserem e o sistema continua tendo solução.
+\end{rmk}
+
+\begin{exerc}
+	Use os exemplos acima para responder: Seja $AX=B$ um sistema $n\times m$, com $n\neq m$. O que podemos dizer sobre a existência de soluções do sistema?
+	
+	E no caso das matrizes quadradas, i.e., $n=m$?
+\end{exerc}
+
+\subsection{Sistemas homogêneos}
+
+\begin{df}
+	Um sistema linear $AX=B$ é dito \textbf{homogêneo} se $B=0$.
+\end{df}
+
+Poderíamos nos perguntar a importância de destacar sistemas homogêneos dentre todos os sistemas lineares. Contudo, se nos lembrarmos do que já fizemos, vamos ver que um sistema não possui solução se, e somente se, sua forma escalonada possui uma linha de zeros, com a entrada correspondente na matriz resultante diferente de zero - por exemplo, algo da forma
+\[\begin{pmatrix}
+1&0\\
+0&0\\
+\end{pmatrix}\begin{pmatrix}
+x\\y
+\end{pmatrix}=\begin{pmatrix}
+1\\1
+\end{pmatrix}.\] Mas ao lidar com sistemas homogêneos, todas as entradas da matriz resultante são nulas - ou seja, mesmo que durante o processo de escalonamento alguma linha se anule, ainda assim o sistema continua tendo solução.
+
+\begin{prop}
+	Todo sistema linear homogêneo possui solução.
+\end{prop}
+
+Um jeito óbvio de ver isso é:
+
+\begin{ex}
+	Considere o sistema linear homogêneo
+	\[\begin{pmatrix}
+	1&7\\8&9\\17&-10\\25&3
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=\begin{pmatrix}
+	0\\0
+	\end{pmatrix}.\] Ao invés de tentar escalonar o sistema, note que estamos multiplicando a matrix $\begin{pmatrix}
+	1&7\\8&9\\17&-10\\25&3
+	\end{pmatrix}$ por uma outra matriz, e queremos que o resultado seja $0$. Mas já sabemos que $A0=0$ para qualquer matriz $A$ - ou seja, tomando $X_0=\begin{pmatrix}
+	0\\0
+	\end{pmatrix}$ vemos que $X_0$ é solução do sistema.
+\end{ex}
+
+De fato, todo sistema homogêneo possui a solução $(0,0)$ - por isso ela é chamada de \textbf{solução trivial}.
+
+\begin{ex}
+	Vamos voltar a um exemplo que fizemos acima:
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	1\\3
+	\end{pmatrix}.\] Já vimos que o conjunto de soluções desse sistema, $S$, é da forma
+	\[S=\{(x,y,z,w)\in \R^4\mid x=-5z+w-3,y=2z-w+2\}.\] Vamos, agora, resolver o sistema homogêneo associado ao sistema acima, em que nós simplesmente trocamos a matriz resultante pela matriz de zeros:
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	0\\0
+	\end{pmatrix}.\]
+	
+	Escalonando obtemos
+	\[\begin{augmatrix}{cccc:c}
+	1&2&1&1&0\\
+	1&3&-1&2&0
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+	1&2&1&1&0\\0&1&-2&1&0
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cccc:c}
+	1&0&5&-1&0\\0&1&-2&1&0
+	\end{augmatrix}\]que nos dá as equações $x+5z-w=0$ e $y-2z+w=0$. Não temos mais restrições no sistema, então todos os pontos que satisfazem a essas equações são soluções - ou seja, o conjunto de soluções do sistema homogêneo, $S_0$, é da forma
+	\[S_0=\{(x,y,z,w)\in\R^4\mid x=-5z+w,y=2z-w\}.\]
+	
+	Comparando os dois conjuntos, não é difícil ver que se $X_0$ é uma solução do sistema homogêneo, então $X_0+\begin{pmatrix}
+	-3\\2\\0\\0
+	\end{pmatrix}$ é solução do sistema original.
+	
+	Por exemplo, escolhendo $X_0=\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}$ vamos primeiro conferir que $X_0$ é, de fato, solução do sistema homogêneo:
+	\[\begin{pmatrix}
+		1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	1\\-1\\0\\1
+\end{pmatrix}=\begin{pmatrix}
+1\cdot 1+2\cdot(-1)+1\cdot 0+1\cdot 1\\
+1\cdot 1+3\cdot(-1)+(-1)\cdot 0+2\cdot 1
+\end{pmatrix}=\begin{pmatrix}
+1-2+0+1\\1-3+0+2
+\end{pmatrix}=\begin{pmatrix}
+0\\0
+\end{pmatrix}.\] Agora vamos somar $\begin{pmatrix}
+-3\\2\\0\\0
+\end{pmatrix}$ a $X_0$, obtendo uma nova matriz
+\[X=\begin{pmatrix}
+1\\-1\\0\\1
+\end{pmatrix}+\begin{pmatrix}
+-3\\2\\0\\0
+\end{pmatrix}=\begin{pmatrix}
+-2\\1\\0\\1
+\end{pmatrix}.\] Afirmamos que $X$ é solução do sistema original. Vamos conferir:
+\[\begin{pmatrix}
+1&2&1&1\\1&3&-1&2
+\end{pmatrix}\begin{pmatrix}
+-2\\1\\0\\1
+\end{pmatrix}=\begin{pmatrix}
+1\cdot(-2)+2\cdot 1+1\cdot 0+1\cdot1\\
+1\cdot(-2)+3\cdot1+(-1)\cdot 0+2\cdot1
+\end{pmatrix}=\begin{pmatrix}
+-2+2+0+1\\-2+3+0+2
+\end{pmatrix}=\begin{pmatrix}
+1\\3
+\end{pmatrix},\]ou seja, $X$ é de fato uma solução do sistema original.
+
+Será que isso acontece por acaso?
+\end{ex}
+
+\begin{prop}
+	Dado um sistema linear $AX=B$, uma solução $X_0$ do sistema homogêneo $AX=0$, e $X_1$ uma solução qualquer do sistema $AX=B$, então $X_0+X_1$ é solução de $AX=B$.
+\end{prop}
+\begin{proof}
+	Se $X_0$ é solução do sistema homogêneo, temos que $AX_0=0$. Similarmente, se $X_1$ é solução do sistema $AX=B$, temos que $AX_1=B$. Agora, como o produto de matrizes distribui sobre a soma, temos que
+	\[A(X_0+X_1)=AX_0+AX_1=0+B=B,\] ou seja, $X_0+X_1$ também é solução do sistema $AX=B$.
+\end{proof}
+
+Mas será que qualquer solução do sistema pode ser calculada assim - sabendo uma solução do sistema homogêneo e uma solução do sistema original? A resposta é sim, e vamos mostrar em seguida, mas antes, vamos fazer um exemplo:
+
+\begin{ex}
+	Ainda no exemplo anterior, considere o sistema
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	1\\3
+	\end{pmatrix}.\] Já vimos que $X_0=\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}$ é solução do sistema homogêneo. Vamos escolher qualquer outra solução do sistema original, por exemplo, $X_1=\begin{pmatrix}
+	-13\\6\\2\\0
+	\end{pmatrix}$ (verifique que isso é uma solução!). Será que existe alguma solução $X_2$ tal que $X_1=X_0+X_2$? Ora, resolver isso é o mesmo que resolver $X_2=X_1-X_0$ - o que nós já sabemos fazer:
+	\[X_2=\begin{pmatrix}
+	-13\\6\\2\\0
+	\end{pmatrix}-\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}=\begin{pmatrix}
+	-14\\7\\2\\-1
+	\end{pmatrix}.\] Nos resta mostrar que $X_2$ é solução:
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	-14\\7\\2\\-1
+	\end{pmatrix}=\begin{pmatrix}
+	1\cdot(-14)+2\cdot 7+1\cdot2+1\cdot(-1)\\
+	1\cdot(-14)+3\cdot7+(-1)\cdot2+2\cdot(-1)
+	\end{pmatrix}=\begin{pmatrix}
+	-14+14+2-1\\-14+21-2-2
+	\end{pmatrix}=\begin{pmatrix}
+	1\\3
+	\end{pmatrix},\]como queríamos.
+\end{ex}
+
+\begin{prop}
+	Dado um sistema linear $AX=B$, uma solução do sistema homogêneo $X_0$ e uma solução do sistema original $X_1$, então existe uma solução do sistema original $X_2$ tal que $X_1=X_0+X_2$.
+\end{prop}
+
+Finalmente, vamos caminhar para uma caracterização geral desse tipo de problema:
+
+\begin{ex}
+	Mais uma vez, vamos voltar ao sistema 
+	\[\begin{pmatrix}
+	1 & 2 & 1 & 1\\1&3&-1&2
+	\end{pmatrix}\begin{pmatrix}
+	x\\y\\z\\w
+	\end{pmatrix}=\begin{pmatrix}
+	1\\3
+	\end{pmatrix}.\] Já vimos que $S_0=\{(x,y,z,w)\in\R^4\mid x=-5z+w,y=2z-w\}$ - ou seja, uma matrix $X_0$ está em $S_0$ se, e somente se, $X_0$ é da forma
+	\[X_0=\begin{pmatrix}
+	-5z+w\\2z-w\\z\\w
+	\end{pmatrix}.\] Mas podemos reescrever isso como
+	\[X_0=\begin{pmatrix}
+	-5z\\2z\\z\\0
+	\end{pmatrix}+\begin{pmatrix}
+	w\\-w\\0\\w
+	\end{pmatrix},\] que finalmente se torna
+	\[X_0=z\begin{pmatrix}
+	-5\\2\\1\\0
+	\end{pmatrix}+w\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}.\]Ou seja, para quaisquer valores de $z,w\in \R$ temos uma solução do sistema homogêneo.
+	
+	Também já vimos que $S=\{(x,y,z,w)\in \R^4\mid x=-5z+w-3,y=2z-w+2\}$, e podemos fazer a mesma análise: $X_1$ é solução se, e somente se, é da forma
+	\[X_1=\begin{pmatrix}
+	-5z+w-3\\2z-w+2\\z\\w
+	\end{pmatrix}=z\begin{pmatrix}
+	-5\\2\\1\\0
+	\end{pmatrix}+w\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}+\begin{pmatrix}
+	-3\\2\\0\\0
+	\end{pmatrix}=X_0+\begin{pmatrix}
+	-3\\2\\0\\0
+	\end{pmatrix}.\]
+	
+	Isso nos mostra que qualquer solução $X_1$ do sistema original é da forma $X_0+\begin{pmatrix}
+	-3\\2\\0\\0
+	\end{pmatrix}$.
+	
+	Mas o que é a matriz $\begin{pmatrix}
+	-3\\2\\0\\0
+	\end{pmatrix}$? Se voltarmos a quando resolvemos o sistema pela primeira vez, vamos ver que $-3$ e $2$ é exatamente como fica a matriz resultante após o escalonamento. Os zeros nas linhas de baixo, então, simbolizam o fato de que o sistema não tem informação suficiente para determinar todas as quatro variáveis.
+	
+	Por fim, note que se $X_0$ e $X'_0$ são soluções do sistema homogêneo, então, pelo que fizemos acima, 
+	\[X_0=z\begin{pmatrix}
+		-5\\2\\1\\0
+	\end{pmatrix}+w\begin{pmatrix}
+		1\\-1\\0\\1
+	\end{pmatrix}\]e
+	\[X'_0=z'\begin{pmatrix}
+	-5\\2\\1\\0
+	\end{pmatrix}+w'\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix},\] e como $z,z',w.w'$ são números reais, podemos escrever $w'=\frac{ww'}{w}=w\frac{w'}{w}$ e $z'=\frac{zz'}{z}=z\frac{z'}{z}$, ou seja,
+	\[X'_0=z'\begin{pmatrix}
+	-5\\2\\1\\0
+	\end{pmatrix}+w'\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}=\frac{z'}{z}\left(z\begin{pmatrix}
+	-5\\2\\1\\0
+	\end{pmatrix}\right)+\frac{w'}{w}\left(w\begin{pmatrix}
+	1\\-1\\0\\1
+	\end{pmatrix}\right),\]e vemos que duas soluções do sistema homogêneo diferem apenas por multiplicações de números.
+\end{ex}
+
+Para obter um grande resultado conclusivo para esta seção, precisaremos avançar mais no curso.
+
+\section{Matrizes Inversas}
+
+Já vimos que as matrizes possuem o que costumamos chama de \textit{identidade multiplicativa} - ou seja, uma matriz tal que toda matriz vezes ela é a própria matriz.
+
+\begin{df}
+	A matriz $I_n\in M_n(\R)$ dada por
+	\[I_n:=\begin{pmatrix}
+	1&0&\cdots&0\\0&1&\cdots&0\\\vdots&\vdots&\ddots&\vdots\\0&0&\cdots&1
+	\end{pmatrix}\] é chamada de \textbf{matriz identidade $n\times n$}.
+\end{df}
+
+\begin{ex}
+	Dada a matriz $A=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}\in M_2(\R)$, é fácil ver que
+	\[AI_2=I_2A=A.\]
+	
+	De fato:
+	\[AI_2=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}=\begin{pmatrix}
+	a\cdot1+b\cdot 0&a\cdot0+b\cdot 1\\c\cdot1+d\cdot0&c\cdot0+d\cdot0
+	\end{pmatrix}=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}=A\]e
+	\[I_2A=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}=\begin{pmatrix}
+	1\cdot a+0\cdot c&1\cdot b+0\cdot d\\0\cdot a+ 1\cdot c&0\cdot b+1\cdot d
+	\end{pmatrix}=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}=A.\]
+\end{ex}
+
+Os números reais também têm essa propriedade: Existe um número real (1) tal que para qualquer número real $a$ temos $a\cdot 1=1\cdot a=a$.
+
+Além disso, os números reais têm outra propriedade: Para qualquer número real $a$ existe um (único) número real $a^{-1}$ tal que $a\cdot a^{-1}=a^{-1}\cdot a=1$. Nós chamamos esse número de \textit{inverso de $a$}.
+
+Surge então a pergunta natural: Será que matrizes reais têm inversas?
+
+\begin{rmk}
+	Note que se toda matriz quadrada $A\in M_n(\R)$ possui inversa, então qualquer sistema da forma $AX=B$ pode ser resolvido multiplicando ambos os lados por $A^{-1}$:
+	\[AX=B\Leftrightarrow A^{-1}(AX)=A^{-1}B\Leftrightarrow(A^{-1}A)X=A^{-1}B\Leftrightarrow X=A^{-1}B.\] Dito de outra forma, se toda matriz $A$ for inversível, todo sistema $AX=B$ teria solução dada por $X=A^{-1}B$.
+\end{rmk}
+
+Contudo, como já vimos acima, \textit{nem todo sistema possui solução}. Isso nos diz imediatamente que \textit{nem toda matriz possui inversa}.
+
+Para ver quais são as matrizes que possuem inversa, vamos precisar de dar uma definição formal para elas.
+
+\begin{df}
+	Dada uma matriz $A\in M_n(\R)$, dizemos que \textbf{$A$ é inversível} se existe uma matriz $B\in M_n(\R)$ tal que $AB=BA=I_n$.
+\end{df}
+
+\begin{exerc}
+	Prove que se $B$ e $C$ são duas inversas para $A$, então $B=C$ (dica: comece assim: ``como $I_n$ vezes qualquer matriz é a própria matriz, $B=BI_n$ e $C=I_nC$. Além disso, como $B$ e $C$ são inversos de $A$, temos que $I_n=AC=BA$'').
+\end{exerc}
+
+Vamos agora abordar um método para calcular inversos, quando estes existirem:
+
+\begin{ex}
+	Considere a matriz\[A=\begin{pmatrix}
+	2&5\\1&3
+	\end{pmatrix}.\] Queremos achar uma matriz $B$ tal que $AB=I_2$. Mas isso é um sistema linear! Nós temos uma matriz de dados iniciais ($A$) que multiplicada por uma matriz que queremos determinar ($B$) dá uma matriz de resultados ($I_2$). E nós já sabemos resolver sistemas lineares - via escalonamento! Então, vamos lá:
+	
+	\[\begin{array}{rl}
+	\begin{augmatrix}{cc:cc}
+	2&5&1&0\\
+	1&3&0&1
+	\end{augmatrix}&\rightsquigarrow\begin{augmatrix}{cc:cc}
+	1&\frac{5}{2}&\frac{1}{2}&0\\
+	1&3&0&1
+	\end{augmatrix}\\\\&\rightsquigarrow\begin{augmatrix}{cc:cc}
+	1&\frac{5}{2}&\frac{1}{2}&0\\
+	0&\frac{1}{2}&-\frac{1}{2}&1
+	\end{augmatrix}\\\\&\rightsquigarrow\begin{augmatrix}{cc:cc}
+	1&\frac{5}{2}&\frac{1}{2}&0\\
+	0&1&-1&2
+	\end{augmatrix}\rightsquigarrow\begin{augmatrix}{cc:cc}
+	1&0&3&-5\\
+	0&1&-1&2
+	\end{augmatrix}
+	\end{array}\]Então estamos dizendo que a matriz inversa de $A$ é a matriz
+	\[A^{-1}=\begin{pmatrix}
+	3&-5\\-1&2
+	\end{pmatrix}.\]
+	
+	Vamos testar:
+	\[AA^{-1}=\begin{pmatrix}
+	2&5\\1&3
+	\end{pmatrix}\begin{pmatrix}
+	3&-5\\-1&2
+	\end{pmatrix}=\begin{pmatrix}
+	2\cdot3+5\cdot(-1)&2\cdot(-5)+5\cdot2\\
+	1\cdot3+3\cdot(-1)&1\cdot(-5)+3\cdot2
+	\end{pmatrix}=\begin{pmatrix}
+	6-5 & -10+10\\3-3&-5+6
+	\end{pmatrix}=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}\]e
+	\[A^{-1}A=\begin{pmatrix}
+	3&-5\\-1&2
+	\end{pmatrix}\begin{pmatrix}
+	2&5\\1&3
+	\end{pmatrix}=\begin{pmatrix}
+	3\cdot2+(-5)\cdot1&3\cdot5+(-5)\cdot3\\
+	(-1)\cdot2+2\cdot1&(-1)\cdot5+2\cdot3
+	\end{pmatrix}=\begin{pmatrix}
+	6-5&-5+5\\
+	-2+2&-5+6
+	\end{pmatrix}=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}\]
+\end{ex}
+
+\begin{prop}
+	Seja $\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}\in M_2(\R)$ uma matriz. Então a inversa, se existir, é da forma
+	\[\frac{1}{ad-bc}\begin{pmatrix}
+	d&-b\\
+	-c&a
+	\end{pmatrix}.\]
+\end{prop}
+
+Essa é a primeira vez que vemos o determinante de uma matriz aparecendo. Mais pra frente vamos definir o determinante de outra maneira e ver para que ele serve.
+
+Outro resultado que vamos usar agora, mesmo que não sejamos capazes de mostrar ainda é o seguinte:
+
+\begin{lemma}
+	Seja $A\in M_n(\R)$ matriz quadrada. Se existe matriz $B\in M_n(\R)$ tal que $AB=I_n$, então $B$ é inversa de $A$. Similarmente, se existe matriz $C\in M_n(\R)$ tal que $CA=I_n$, então $C$ é inversa de $A$.
+\end{lemma}
+
+Em outras palavras, para matrizes, basta checar se o produto em uma ordem dá a identidade, que isso é suficiente para concluir que o produto na outra ordem também dará.
+
+Agora sim, vamos ver um resultado que conseguimos provar:
+
+\begin{lemma}
+	Uma matriz $A\in M_n(\R)$ é inversível se, e somente se, $A$ pode ser escalonada em $I_n$.
+\end{lemma}
+\begin{proof}
+	Por um lado, é óbvio que a matriz identidade pode ser escalonada em si mesma (fazendo nada) e que a matriz identidade é inversível: $I_nI_n=I_n$ - de fato, ela é seu próprio inverso. Além disso, já vimos que se $A'$ pode ser obtida de $A$ via escalonamento, então o sistema $AX=B$ tem as mesmas soluções do sistema $A'X=B'$, em que $B'$ é obtida de $B$ pelo mesmo escalonamento que leva $A$ em $A'$. 
+	
+	Então, se $I_n$ pode ser obtida de $A$ por escalonamento, o sistema $AX=I_n$ tem as mesmas soluções do sistema $I_nX=C$, em que $C$ é obtida de $I_n$ pelo mesmo escalonamento que leva $A$ em $I_n$. Mas $I_nX=C$ nos diz que $C=X$ e, logo, $AC=I_n$. O lema acima agora nos garante que $CA=I_n$ e portanto $A$ é inversível.
+	
+	\bigskip
+	Analogamente, suponha que $A$ é inversível - ou seja, o sistema $AX=I_n$ tem solução $B$ - em outras palavras, $X=B$. Mas podemos re-escrever isso como $I_nX=B$ e ver que esse sistema tem a mesma solução de $AX=I_n$, donde podemos concluir que $I_n$ pode ser obtido de $A$ por escalonamentos.
+\end{proof}
+
+Finalmente, vamos encerrar essa seção retomando as matrizes de escalonamento.
+
+Como dissemos anteriormente, nem toda soma de matrizes $e^n_{i,j}$ é um escalonamento.
+
+\begin{prop}
+	Toda matriz invertível é um escalonamento.
+\end{prop}
+
+\begin{proof}
+	Dado um sistema $AX=B$, se $E$ é inversível com inversa $E^{-1}$, tome $Z$ solução de $(EA)X=EB$. Vamos mostrar que $Z$ também é solução de $AX=B$ - e portanto, $E$ é escalonamento.
+	
+	De fato:
+	
+	\[AZ=I_n(AZ)=(E^{-1}E)(AZ)=E^{-1}((EA)Z)=E^{-1}(EB)=(E^{-1}E)B=I_nB=B,\]logo $Z$ é solução de $AX=B$ e, portanto, $E$ é um escalonamento.
+\end{proof}
+
+Gostaríamos de mostrar mais - gostaríamos de mostrar que todo escalonamento é invertível, mas não temos ferramentas para isso ainda. Contudo, para matrizes $2\times 2$ é fácil:
+
+\begin{ex}
+	Os possíveis escalonamentos são combinações de 
+	\begin{itemize}
+		\item Troca de linhas;
+		\item Multiplicação de uma linha por um número;
+		\item Soma de uma linha a outra linha.
+	\end{itemize}
+
+	Vamos exibir as matrizes que realizam cada operação:
+	
+	\begin{itemize}
+		\item A matriz que troca as duas linhas de uma matriz $2\times 2$ é dada por $\begin{pmatrix}
+		0&1\\1&0
+		\end{pmatrix}$, de fato:
+		\[\begin{pmatrix}
+		0&1\\1&0
+		\end{pmatrix}\begin{pmatrix}
+		a&b\\c&d
+		\end{pmatrix}=\begin{pmatrix}
+		0\cdot a+1\cdot c&0\cdot b+1\cdot d\\
+		1\cdot a+0\cdot c&1\cdot b+0\cdot d
+		\end{pmatrix}=\begin{pmatrix}
+		c&d\\a&b
+		\end{pmatrix}.\]
+		
+		\item A matriz que multiplica a linha 1 por $\lambda\in \R$ é $\begin{pmatrix}
+		\lambda&0\\0&1
+		\end{pmatrix}$ e a matriz que multiplica a linha 2 por $\mu\in \R$ é $\begin{pmatrix}
+		1&0\\0&\mu
+		\end{pmatrix}$. De fato, 
+		\[\begin{pmatrix}
+			\lambda&0\\
+			0&\mu
+		\end{pmatrix}\begin{pmatrix}
+		a&b\\c&d
+		\end{pmatrix}=\begin{pmatrix}
+		\lambda\cdot a+0\cdot c&\lambda\cdot b+0\cdot d\\
+		0\cdot a+\mu\cdot c&0\cdot b+\mu\cdot d
+		\end{pmatrix}=\begin{pmatrix}
+		\lambda a&\lambda b\\\mu c&\mu d
+		\end{pmatrix}.\]
+		\item A matrix que soma a linha 1 na linha 2 é $\begin{pmatrix}
+		1&0\\1&1
+		\end{pmatrix}$ e a matriz que soma a linha 2 na linha 1 é $\begin{pmatrix}
+		1&1\\0&1
+		\end{pmatrix}$. De fato,
+		\[\begin{pmatrix}
+		1&0\\1&1
+		\end{pmatrix}\begin{pmatrix}
+		a&b\\c&d
+		\end{pmatrix}=\begin{pmatrix}
+		1\cdot a+0\cdot c&1\cdot b+0\cdot d\\
+		1\cdot a+1\cdot c&1\cdot b+1\cdot d
+		\end{pmatrix}=\begin{pmatrix}
+		a & b\\
+		a+c&b+d
+		\end{pmatrix}\]e
+		\[\begin{pmatrix}
+		1&1\\0&1
+		\end{pmatrix}\begin{pmatrix}
+		a&b\\c&d
+		\end{pmatrix}=\begin{pmatrix}
+		1\cdot a+1\cdot c&1\cdot b+1\cdot d\\
+		0\cdot a+1\cdot c&0\cdot b+1\cdot d
+		\end{pmatrix}=\begin{pmatrix}
+		a+c & b+d\\
+		c&d
+		\end{pmatrix}.\]
+	\end{itemize}
+
+	Mas todas essas matrizes são inversíveis: 
+	\begin{itemize}
+		\item O inverso da matriz $\begin{pmatrix}
+		0&1\\1&0
+		\end{pmatrix}$ é ela mesma, já que trocar as duas linhas duas vezes é a mesma coisa de não fazer nada.
+		\item Os inversos das matrizes $\begin{pmatrix}
+		\lambda &0\\0&1
+		\end{pmatrix}$ e $\begin{pmatrix}
+		1&0\\0&\mu
+		\end{pmatrix}$ são as matrizes $\begin{pmatrix}
+		\lambda^{-1}&0\\0&1
+		\end{pmatrix}$ e $\begin{pmatrix}
+		1&0\\0&\mu^{-1}
+		\end{pmatrix}$, respectivamente, já que o inverso de ``multiplicar uma linha por $x$'' é ``dividir uma linha por $x$''.
+		\item Os inversos das matrizes $\begin{pmatrix}
+		1&0\\1&1
+		\end{pmatrix}$ e $\begin{pmatrix}
+		1&1\\0&1
+		\end{pmatrix}$ são, respectivamente, as matrizes $\begin{pmatrix}
+		1&0\\-1&1
+		\end{pmatrix}$ e $\begin{pmatrix}
+		1&-1\\0&1
+		\end{pmatrix}$, já que o inverso de ``somar a linha $i$ na linha $j$'' é ``subtrair a linha $i$ da linha $j$''.
+	\end{itemize}
+
+	Finalmente, note que se $A$ e $B$ são inversíveis, então o produto $AB$ também é, pois $(AB)(B^{-1}A^{-1})=A((BB^{-1})A^{-1})=A(I_nA^{-1})=AA^{-1}=I_n$. Assim, como qualquer escalonamento é produto das matrizes acima, segue que qualquer escalonamento é invertível, já que cada uma delas é.
+\end{ex}
+
+\begin{exerc}
+	Prove que os inversos que apresentamos acima são, de fato, inversos.
+\end{exerc}

@@ -1,0 +1,437 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsfonts,amsmath,amstext,amssymb,amsthm,color}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{mathrsfs}
+\usepackage{pgf}
+\usepackage{tikz,tikz-cd,pgfplots}
+
+
+
+
+
+
+
+
+
+\usepackage{graphicx,graphpap}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathreplacing,decorations.markings}
+\usetikzlibrary{arrows}
+\pgfplotsset{compat=1.15}
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+\newcommand{\pint}[2]{\langle #1,#2\rangle}
+	
+\renewcommand{\hom}{\mathrm{Hom}}
+
+\newenvironment{sol}{\noindent\normalsize {\sc Solução:}}
+
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\im}{Im}
+
+
+
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+  \draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+\newtheorem{df}{Definição}[subsection]
+\newtheorem{thm}[df]{Teorema}
+\newtheorem{cor}[df]{Corolário}
+\newtheorem{prop}[df]{Proposição}
+\newtheorem{lemma}[df]{Lema}
+\newtheorem{conjec}[df]{Conjectura}
+\newtheorem{exerc}[df]{Exercício(s)}
+\newtheorem{qst}{Questão}
+\newtheorem{ex}[df]{Exemplo(s)}
+\newtheorem{enunc}{Enunciado}[exn]
+
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\author{``3º Testinho'' - Solucionário - GAAL}
+\date{18 de Junho de 2019}
+\title{}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+Em todas as questões abaixo deixe sempre explícito o seu raciocínio, não apenas a resposta correta.
+
+\begin{qst}
+Para cada equação abaixo, diga que tipo de cônica ele representa e faça um esboço dessa cônica.
+\begin{enumerate}[a)]
+	\item $x=9y^2$;
+	\item $4x^2+9x^2=36$;
+	\item $x^2-\dfrac{y^2}{16}=-1$.
+\end{enumerate}
+\end{qst}
+\begin{sol}
+	\[\definecolor{ffqqqq}{rgb}{1.,0.,0.}
+	\definecolor{qqffqq}{rgb}{0.,1.,0.}
+	\definecolor{qqqqff}{rgb}{0.,0.,1.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45]
+	\begin{axis}[
+	x=.5cm,y=.5cm,
+	axis lines=middle,
+	xmin=-4,
+	xmax=8,
+	ymin=-10,
+	ymax=10,
+	xtick={-2.0,0.0,...,8.0},
+	ytick={-10.0,-8.0,...,10.0},]
+	\clip(-4,-10) rectangle (8,10);
+	\draw [samples=50,rotate around={-90.:(0.,0.)},xshift=0.cm,yshift=0.cm,color=qqqqff,domain=-5.0:5.0)] plot (\x,{(\x)^2/2/0.5});
+	\draw [rotate around={0.:(0.,0.)},color=qqffqq] (0.,0.) ellipse (1.5cm and 1cm);
+	\draw [samples=50,domain=-pi/3:pi/3,rotate around={90.:(0,0)},xshift=0.cm,yshift=0.cm,color=ffqqqq] plot ({4*(1+(\x)^2)/(1-(\x)^2)},{2*(\x)/(1-(\x)^2)});
+	\draw [samples=50,domain=-pi/3:pi/3,rotate around={90.:(0,0)},xshift=0.cm,yshift=0.cm,color=ffqqqq] plot ({4*(-1-(\x)^2)/(1-(\x)^2)},{(-2)*(\x)/(1-(\x)^2)});
+	\end{axis}
+	\end{tikzpicture}\]onde \textcolor{red}{a equação (c) é uma hipérbole}, \textcolor{green}{a equação (b) é uma elipse} e \textcolor{blue}{a equação (a) é uma parábola}.
+\end{sol}
+\pagebreak
+\begin{qst}
+	Diga qual das equações abaixo descreve uma cônica rotacionada e qual descreve uma cônica transladada. Em seguida, apresente a matriz de rotação para a cônica rotacionada e o vetor de translação para a cônica transladada.
+	\begin{enumerate}[a)]
+		\item $9x^2-4xy+6y^2=30$;
+		\item $4x^2-9y^2-8x-36y=76$.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	A equação (a) descreve uma cônica rotacionada, devido à presença do termo $xy$. Ela pode ser reescrita como
+	\[\begin{pmatrix}
+	x&y
+	\end{pmatrix}\begin{pmatrix}
+	9&-2\\-2&6
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=30\tag{*}\] A matriz $\begin{pmatrix}
+	9&-2\\-2&6
+	\end{pmatrix}$ possui como autovalores as soluções da equação
+	\[\det\begin{pmatrix}
+	9-\lambda&-2\\-2&6-\lambda
+	\end{pmatrix}=0\]que se traduz em $(9-\lambda)(6-\lambda)-4=0$, ou seja, $\lambda^2-15\lambda+50=0$. Ou seja, os autovalores da matriz são da forma
+	\[\lambda=\frac{15\pm\sqrt{225-200}}{2}=\frac{15\pm 5}{2}\] ou seja, $\lambda=10$ e $\lambda=5$ são os nossos autovalores.
+	
+	Como os autovetores são as soluções não-triviais do sistema
+	\[\begin{pmatrix}
+	9-\lambda&-2\\-2&6-\lambda
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=0,\]podemos calcular os autovetores substituindo os autovalores obtidos acima, por exemplo $\lambda=5$:
+	\[\begin{pmatrix}
+	9-5&-2\\-2&6-5
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=0\]ou seja, queremos achar as soluções do sistema
+	\[\begin{pmatrix}
+	4&-2\\-2&1
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=0.\] Note, contudo, que as linhas da matriz são múltiplas uma da outra, e, portanto, qualquer uma delas nos dá todas as soluções: $W_1=\{-2x+y=0\}$, ou, visto de outra forma, $W_1=\{y=2x\}$. Escolhendo $v=(1,2)\in W_1$, vemos que $\lVert v\rVert = \sqrt{1^2+2^2}=\sqrt{5}$ e, portanto, podemos escolher o autovetor unitário $v_1=(1/\sqrt{5},2/\sqrt{5})$ associado ao autovalor $5$.
+	
+	Como os autoespaços de uma matriz simétrica são ortogonais, podemos tomar $v_2=(-2/\sqrt{5},1/\sqrt{5})$ e obter a matriz de rotação
+	\[P=\begin{pmatrix}
+	v_1&v_2
+	\end{pmatrix}=\frac{1}{\sqrt5}\begin{pmatrix}
+	1&-2\\
+	2&1
+	\end{pmatrix}.\]Por fim, reescrevendo a equação (*) usando a matriz de autovalores e a matriz de rotação obtemos
+	\[\begin{pmatrix}
+	x&y
+	\end{pmatrix}P\begin{pmatrix}
+	5&0\\0&10
+	\end{pmatrix}P^t\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=30\] ou seja,
+	\[\begin{pmatrix}
+	x'&y'
+	\end{pmatrix}\begin{pmatrix}
+	5&0\\0&10
+	\end{pmatrix}\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}=30,\]donde $5x'^2+10y'^2=30$ (fazendo $(x',y')=P^t(x,y)$) e vemos que a cônica descrita por (a) está apenas rotacionada pela matriz de rotação $P$.
+	
+	\bigskip
+	A equação (b), por sua vez, não possui o termo $xy$ e, portanto, não está rotacionada. Para descobrirmos a translação, temos que completar quadrados:
+	\begin{align*}
+		4x^2-9y^2-8x-36y=76\\
+		4(x^2-2x)-9(y^2-4y)=76 & \quad\text{ agrupando os termos com $x$ e $y$}\\
+		4((x-1)^2-1)-9((y-2)^2-4)=76 & \quad\text{ completando os quadrados}\\
+		4(x-1)^2-4-9(y-2)^2+36=76 & \quad\text{ distribuindo $4$ e $9$}\\
+		4x'^2-9y'^2=36 & \quad\text{ substituindo $(x',y')=(x-1,y-2)$}
+	\end{align*}e vemos que o vetor translação é exatamente $T=(1,2)$.
+\end{sol}\pagebreak
+
+\begin{qst}	
+	Dada a equação \[13 x^2 + 10 x y - 22 x + 13 y^2 + 58 y + 37 = 0\]faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Reescreva equação acima em forma matricial.
+		\item Encontre os autovalores e autovetores associados à parte de grau 2 da equação acima.
+		\item Identifique a matriz de rotação associada a essa equação.
+		\item Faça a mudança de coordenadas que diagonaliza a forma matricial obtida no item (a).
+		\item Identifique a translação associada a essa equação.
+		\item Faça uma translação de forma que a equação obtida no item (d) esteja na forma padrão.
+		\item Identifique qual a cônica descrita pela equação.
+		\item Faça um esboço dessa cônica.
+	\end{enumerate}
+\end{qst}
+\begin{sol}
+	Começamos re-escrevendo a equação na forma
+	\[\begin{pmatrix}
+	x&y
+	\end{pmatrix}\begin{pmatrix}
+	13 & 5\\5&13
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}+\begin{pmatrix}
+	-22&58
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}+37=0\tag{$\ast$}.\]Vamos agora diagonalizar a matriz $A=\begin{pmatrix}
+	13&5\\5&13
+	\end{pmatrix}$. Para isso, vamos calcular os autovalores como sendo as soluções da equação
+	\[\det \begin{pmatrix}
+	13-\lambda&5\\5&13-\lambda
+	\end{pmatrix}=0,\]ou seja, $(13-\lambda)^2-25=0$, que podemos ainda re-escrever como
+	\[\lambda^2-26\lambda+169-25=\lambda^2-26\lambda+144=0.\] Sabemos, ainda, que as soluções dessa equação são da forma
+	\[\lambda=\frac{26\pm\sqrt{26^2-4\cdot144}}{2}=\frac{26\pm\sqrt{676-576}}{2}=\frac{26\pm10}{2},\] ou seja, $\lambda_1=18$ e $\lambda_2=8$.
+	
+	Com isso, podemos calcular os autoespaços $W_1$ e $W_2$ como sendo as soluções não-triviais da equação $(A-\lambda I)X=0$ para cada valor de $\lambda$. Para $\lambda_1$ temos:
+	\[\begin{pmatrix}
+	13-18 & 5\\5&13-18
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=0,\]ou seja,
+	\[\begin{pmatrix}
+	-5 & 5\\5&-5
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}=0\]que admite solução da forma $W_1=\{-5x+5y=0\}$ ou seja, $W_1=\{x=y\}$. Assim, podemos pegar o vetor $v_1=(1/\sqrt 2,1/\sqrt2)\in W_1$ e ver que $\lVert v_1\rVert = \sqrt{(1/\sqrt2)^2+(1/\sqrt2)^2}=\sqrt{1/2+1/2}=\sqrt{1}=1$, ou seja, $v_1$ é um autovetor normal da matriz $A$ associado ao autovalor $18$.
+	
+	Como $A$ é simétrica, sabemos que $W_2=W_1^\perp$ e, portanto, podemos simplesmente tomar $v_2=(-1/\sqrt 2,1/\sqrt 2)$.
+	
+	Claramente $\lVert v_2\rVert = 1$ (já que $\lVert v_2\rVert = \lVert v_1\rVert$) e $v_1\perp v_2$ (por construção). Segue que $A=PDP^t$ onde $P=\begin{pmatrix}
+	v_1 & v_2
+	\end{pmatrix}=\frac{1}{\sqrt2}\begin{pmatrix}
+	1&-1\\1&1
+	\end{pmatrix}$ e $D=\begin{pmatrix}
+	18&0\\0&8
+	\end{pmatrix}$.
+	
+	Com isso, vamos reescrever ($\ast$):
+	
+	\[\begin{pmatrix}
+	x&y
+	\end{pmatrix}PDP^t\begin{pmatrix}
+	x\\y
+	\end{pmatrix}+\begin{pmatrix}
+	-22&58
+	\end{pmatrix}\begin{pmatrix}
+	x\\y
+	\end{pmatrix}+37=0\]e, fazendo a mudança de coordenadas $\begin{pmatrix}
+	x&y
+	\end{pmatrix}P=\begin{pmatrix}
+	x' & y'
+	\end{pmatrix}$ temos que $\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}=P^t\begin{pmatrix}
+	x\\y
+	\end{pmatrix}$ e, portanto, multiplicando à esquerda por $P$ ambos os lados da equação acima, obtemos
+	$P\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}=\begin{pmatrix}
+	x\\y
+	\end{pmatrix}$. Assim, obtemos
+	\[\begin{pmatrix}
+	x'&y'
+	\end{pmatrix}D\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}+\begin{pmatrix}
+	-22 & 58
+	\end{pmatrix}P\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}+37=0.\] Antes de avançar, vamos calcular $\begin{pmatrix}
+	-22&58
+	\end{pmatrix}P$:
+	\[\begin{pmatrix}
+	-22&58
+	\end{pmatrix}P=\begin{pmatrix}
+	-22&58
+	\end{pmatrix}\frac{1}{\sqrt2}\begin{pmatrix}
+	1&-1\\1&1
+	\end{pmatrix}=\frac{1}{\sqrt2}\begin{pmatrix}
+	36&80
+	\end{pmatrix}\]e escrever, finalmente,
+	\[\begin{pmatrix}
+	x'&y'
+	\end{pmatrix}\begin{pmatrix}
+	18&0\\0&8
+	\end{pmatrix}\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}+1/\sqrt{2}\begin{pmatrix}
+	36&80
+	\end{pmatrix}\begin{pmatrix}
+	x'\\y'
+	\end{pmatrix}+37=0\tag{$\ast\ast$}.\]
+	
+	Agora, obtemos a equação $18x'^2+8y'^2+36/\sqrt{2}x'+80/\sqrt{2}y'+37=0$ que podemos completar quadrados:
+	\begin{align*}
+		18x'^2+8y'^2+36/\sqrt{2}x'+80/\sqrt{2}y'+37=0\\
+		(18x'^2+36/\sqrt{2}x')+(8y'^2+80/\sqrt{2}y')+37=0&\quad\text{ agrupando $x'$ e $y'$}\\
+		18(x'^2+2/\sqrt{2}x)+8(y'^2+10/\sqrt{2}y')+37=0&\quad\text{ colocando $18$ e $8$ em evidência}\\
+		18((x'+1/\sqrt{2})^2-1/2)+8((y'+5/\sqrt{2})^2-25/2)&\quad\text{ completando os quadrados}\\
+		18(x'+1/\sqrt{2})^2-9+8(y'+5/\sqrt{2})^2-100+37=0&\quad\text{ distribuindo $18$ e $8$}\\
+		18x''^2-9+8y''^2-100+37=0&\quad\text{ fazendo $\begin{pmatrix}
+			x''\\y''
+			\end{pmatrix}=\begin{pmatrix}
+			x'+1/\sqrt{2}\\y'+5/\sqrt{2}
+			\end{pmatrix}$}\\
+		18x''^2+8y''^2=72&\quad\text{ fazendo as operações com números restantes}
+	\end{align*}o que nos diz que fazendo a mudança de coordenadas $\begin{pmatrix}
+	x''\\y''
+	\end{pmatrix}=\begin{pmatrix}
+	x'+1/\sqrt{2}\\y'+5/\sqrt{2}
+	\end{pmatrix}$ podemos re-escrever ($\ast\ast$) como
+	\[18x''^2+8y''^2=72\tag{$\ast\ast\ast$}.\]
+	
+	Finalmente, dividindo ambos os lados por $72$ obtemos
+	\[\frac{x''^2}{4}+\frac{y''^2}{9}=1\]e, portanto, concluímos que a equação ($\ast$) descreve uma elipse de semi-eixos $2$ e $3$. 
+	
+	Para esboçar a cônica, precisamos achar o quanto ela está rodada e transladada. Achar a rotação é fácil: Basta notar que $P=R_{45^\circ}$.
+	
+	 Para descobrir a translação, note que já sabemos o quanto o eixo $(x'',y'')$ está transladado em relação ao eixo $(x',y'')$: exatamente $(-1/\sqrt{2},-5/\sqrt{2})$. Mas sabemos que $(x',y')=P^t(x,y)$, ou seja, a translação pode ser calculada como $P(-1/\sqrt2,-5/\sqrt{2})$:
+	 \[\frac{1}{\sqrt{2}}\begin{pmatrix}
+	 1&-1\\1&1
+	 \end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}
+	 -1\\-5
+	 \end{pmatrix}=\frac{1}{2}\begin{pmatrix}
+	 4\\-6
+	 \end{pmatrix}=\begin{pmatrix}
+	 2\\-3
+	 \end{pmatrix}\]o que nos dá uma translação de $T=(2,-3)$, e podemos esboçar nossa cônica:
+	 \[\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+	 \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	 \begin{axis}[
+	 x=1.0cm,y=1.0cm,
+	 axis lines=middle,
+	 xmin=-1.9220943849833594,
+	 xmax=6.007070171729744,
+	 ymin=-6.020931362186028,
+	 ymax=2.0498254187540863,
+	 xtick={-1.0,0.0,...,6.0},
+	 ytick={-6.0,-5.0,...,2.0},]
+	 \clip(-1.9220943849833594,-6.020931362186028) rectangle (6.007070171729744,2.0498254187540863);
+	 \draw [shift={(5.,0.)},color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (0.:0.47197408075673236) arc (0.:45.:0.47197408075673236) -- cycle;
+	 \draw [rotate around={-45.:(2.,-3.)},] (2.,-3.) ellipse (3.cm and 2.cm);
+	 \draw [->,] (0.,0.) -- (2.,-3.);
+	 \draw [line width=1.2pt,dotted,domain=-1.9220943849833594:6.007070171729744] plot(\x,{(-1.-1.*\x)/1.});
+	 \draw [line width=1.2pt,dotted,domain=-1.9220943849833594:6.007070171729744] plot(\x,{(-5.--1.*\x)/1.});
+	 \draw [->,] (2.,-3.) -- (2.7071067811865475,-2.2928932188134525);
+	 \draw [->,] (2.,-3.) -- (1.2928932188134525,-2.2928932188134525);
+	 \begin{scriptsize}
+	 \draw [fill=uuuuuu] (2.,-3.) circle (2.0pt);
+	 \draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+	 \draw[color=black] (1.5,-1.3247892586565462) node {$T$};
+	 \draw[color=black] (2.522328208809204,-3) node {$v_1$};
+	 \draw[color=black] (1.5626475779371811,-3) node {$v_2$};
+	 \draw[color=qqwuqq] (5.5,0.1697953304064379) node {$45^\circ$};
+	 \end{scriptsize}
+	 \end{axis}
+	 \end{tikzpicture}\]
+\end{sol}
+
+\end{document}

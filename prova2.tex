@@ -1,0 +1,227 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsfonts,amsmath,amstext,amssymb,amsthm,color}
+\usepackage{thmtools}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{pgf}
+\usepackage{tikz,tikz-cd}
+\usepackage{arydshln}
+\usepackage{tcolorbox}
+\usepackage[bottom=3cm]{geometry}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+
+
+
+
+
+
+\tcbuselibrary{breakable}
+\usepackage{graphicx,graphpap}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathreplacing,decorations.markings}
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+\renewcommand{\hom}{\mathrm{Hom}}
+
+\newenvironment{sol}{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=blue!40!white,title=\normalsize {\sc{Solução}},coltitle=black]}{\end{tcolorbox}}
+
+\newenvironment{augmatrix}{\left(\begin{array}}{\end{array}\right)}
+
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\im}{Im}
+
+
+
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+  \draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+\newtheorem{qst}{Questão}
+\declaretheorem[numbered=no, name=Questão Bônus]{bonus}
+\newtheorem{enunc}{Enunciado}[exn]
+
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\author{Segunda Prova - GAAL}
+\date{04 de Abril de 2019}
+\title{}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+\begin{document}
+\begin{center}
+	{\Large{\sc Segunda Prova - GAAL}}
+\end{center}
+
+	
+Em todas as questões abaixo, sempre que encontrar uma solução você deve mostrar que ela é, de fato, uma solução.
+
+\begin{qst}
+	Considere a matriz real $A=\begin{pmatrix}
+	1 & -1\\-2&2
+	\end{pmatrix}$ e faça o que se pede.
+	\begin{enumerate}[a)]
+		\item Calcule $\Ker A$ e $\im A$ e faça um esboço gráfico desses subespaços de $\R^2$.
+		\item Exiba (se possível) um conjunto de geradores l.i. para $\Ker A$ e para $\im A$.
+		\item Sem fazer contas, exiba o conjunto solução do sistema
+		\[\begin{pmatrix}
+		3&-3\\-6&6
+		\end{pmatrix}\begin{pmatrix}
+		x\\y
+		\end{pmatrix}=\begin{pmatrix}
+		6\\9
+		\end{pmatrix}.\] 
+	\end{enumerate}
+\end{qst}
+
+\begin{qst}
+	Considere as retas em $\R^3$ dadas por $$q=\{v\in\R^3\mid v=\lambda (1,1,1)+(1,2,3)\}$$ $$r=\{v\in\R^3\mid v=\lambda (1,0,1)+(2,2,1)\}$$ $$s=\{v\in\R^3\mid v=\lambda (5,5,5)\}$$$$t=\{v\in\R^3\mid v=\lambda (-1,0,-1)+(-2,1,0)\}$$ e faça o que se pede:
+	\begin{enumerate}[a)]
+		\item Classifique-as quanto a paralelas, concorrentes ou reversas.
+		\item Calcule as interseções dos pares de retas que forem concorrentes.
+	\end{enumerate}
+\end{qst}
+
+\begin{qst}
+	Considere os planos $$\pi_1=\{v\in \R^3\mid v=\lambda(1,1,1)+\mu(1,0,-1),\mbox{ com }\lambda\mbox{ e }\mu\in \R\}$$ $$\pi_2=\{(x,y,z)\in\R^3\mid x-2y+7z=0\}.$$
+	\begin{enumerate}[a)]
+		\item Calcule a interseção desses planos.
+		\item Exiba um conjunto de geradores l.i. dessa interseção.
+	\end{enumerate}
+\end{qst}
+
+\begin{qst}
+	Considere a matriz real $2\times 2$ $A$ cujo núcleo é a reta $y=2x$ e cuja imagem é o eixo $Y$.
+	\begin{enumerate}[a)]
+		\item Exiba um conjunto de geradores $l.i.$ para o núcleo e a imagem de $A$.
+		\item Responda, sem fazer contas: $A$ é invertível? Justifique sua resposta.
+		\item Exiba uma possível expressão para $A$ que seja compatível com o enunciado.
+	\end{enumerate}
+\end{qst}
+
+\begin{bonus}
+	Considere $v,u\in\R^2$ vetores não-nulos arbitrário e faça o que se pede:
+	\begin{enumerate}[a)]		
+		\item Faça um esboço gráfico de $v$, $u$, $v+u$ e $v-u$.
+		\item Calcule $\lVert v-u\rVert^2$.
+		\item Compare o resultado acima com a Lei dos Cossenos (ver abaixo).
+		\item Obtenha uma fórmula que relacione o ângulo $\theta$ entre $v$ e $u$ e o produto interno $\langle v,u\rangle$.
+		\item Conclua mostrando que $v$ e $u$ são l.i. se, e somente se, $\cos\theta\neq 0$.
+	\end{enumerate}
+\end{bonus}
+
+\textbf{\underline{Lei dos Cossenos:}}
+
+Qualquer triângulo
+\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=.2cm,y=.2cm]
+\clip(2.02,-1.86) rectangle (10.68,4.74);
+\draw [shift={(2.48,-0.34)}] (0,0) -- (-2.0972181819517335:0.6) arc (-2.0972181819517335:56.19204008995808:0.6) -- cycle;
+\draw  (5.48,4.14)-- (2.48,-0.34);
+\draw  (2.48,-0.34)-- (9.58,-0.6);
+\draw  (9.58,-0.6)-- (5.48,4.14);
+\begin{scriptsize}
+\draw (3.76,2.25) node {$c$};
+\draw (6.06,-0.8) node {$b$};
+\draw (7.82,2.15) node {$a$};
+\draw (3.52,0.07) node {$\theta$};
+\end{scriptsize}
+\end{tikzpicture}satisfaz a seguinte relação: $a^2=b^2+c^2-2bc\cos\theta$.
+
+\end{document}

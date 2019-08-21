@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsfonts,amsmath,amstext,amssymb,amsthm,color}
+\usepackage[brazil,portuguese]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{enumerate}
+\usepackage{pgf}
+\usepackage{tikz,tikz-cd}
+
+
+
+
+
+
+
+
+
+\usepackage{graphicx,graphpap}
+\usetikzlibrary{calc,intersections,through,backgrounds,positioning,decorations.pathreplacing,decorations.markings}
+
+
+
+
+
+%------- DEFINIÇÕES DE COMANDOS UTILIZADOS -----------------------------------
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\eqmod{\!\!\!\mod}
+\def\herm#1{\langle #1\rangle}
+\def\hmod#1{\parallel #1\parallel}
+\newcommand{\dps}{\displaystyle}
+\newcommand{\bn}{\bigskip\noindent}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mtt}{\mathtt}
+\def\ang{{\rm ang}}
+\def\id{{\rm id}}
+\def\sen{{\rm sen\ }}
+\def\diag{{\rm diag}}
+\def\dist{{\rm dist}}
+\def\sdo{\raisebox{.06cm}{$\bigcirc$\hspace{-0.38cm}\raisebox{0.0cm}{$\bot$}}\,}
+\def\spen{{\rm span}}
+\def\rectanglepath{-- ++(1cm,0cm) -- ++(0cm,1cm) -- ++(-1cm,0cm) -- cycle}
+\newcommand{\del}{\partial}
+\newcounter{exn}
+\setcounter{exn}{1}
+\newcommand{\exn}{\theexn\stepcounter{exn}}
+\newcommand{\rin}{\rotatebox[origin=c]{-90}{\Large $\in$}}
+\newcommand{\rsubset}{\rotatebox[origin=c]{-90}{\Large $\subset$}}
+\newcommand{\Lsubset}{\rotatebox[origin=c]{0}{\Large $\subset$}}
+\newcommand{\pint}[2]{\langle #1,#2\rangle}
+	
+\renewcommand{\hom}{\mathrm{Hom}}
+
+\newenvironment{sol}{\noindent\normalsize {\sc Solução:}}
+
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\im}{Im}
+
+
+
+
+
+
+%------ Desenha ângulos retos no espaço ---------------------------------------------------------------------
+%--- Parâmetros (A,B,C,t,s)
+%--- sendo A, B, C pontos no epaço, e t e s números reais entre 0 e 1.
+%--- t é a fração do segmento AB, e s é a fração do segmento BC utilizadas para contruir o quadradinho.
+%------------------------------------------------------------------------------------------------------------
+\newcommand\drawanguloreto[5]{
+  \draw[-] ($#2 - #4*#2 + #4*#1$)  -- ($#2 - #4*#2 + #4*#1 - #5*#2 + #5*#3$) -- ($#2 - #5*#2 + #5*#3$);
+}
+
+\tikzset{
+  % style to apply some styles to each segment of a path
+  on each segment/.style={
+    decorate,
+    decoration={
+      show path construction,
+      moveto code={},
+      lineto code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+      curveto code={
+        \path [#1] (\tikzinputsegmentfirst)
+        .. controls
+        (\tikzinputsegmentsupporta) and (\tikzinputsegmentsupportb)
+        ..
+        (\tikzinputsegmentlast);
+      },
+      closepath code={
+        \path [#1]
+        (\tikzinputsegmentfirst) -- (\tikzinputsegmentlast);
+      },
+    },
+  },
+  % style to add an arrow in the middle of a path
+  mid arrow/.style={postaction={decorate,decoration={
+        markings,
+        mark=at position .5 with {\arrow[#1]{stealth}}
+      }}},
+}
+%------------------------------------------------------------------------------------------------------------
+
+
+
+
+%--------  AJUSTANDO O TAMANHO DAS PÁGINAS -----------------------------------------------------
+\addtolength{\textwidth}{4 cm}
+\addtolength{\textheight}{3 cm}
+\addtolength{\oddsidemargin}{-2 cm}
+\addtolength{\evensidemargin}{-2 cm}
+\addtolength{\topmargin}{-3 cm}
+
+
+
+%-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
+\newtheorem{df}{Definição}[subsection]
+\newtheorem{thm}[df]{Teorema}
+\newtheorem{cor}[df]{Corolário}
+\newtheorem{prop}[df]{Proposição}
+\newtheorem{lemma}[df]{Lema}
+\newtheorem{conjec}[df]{Conjectura}
+\newtheorem{exerc}[df]{Exercício(s)}
+\newtheorem{qst}{Questão}
+\newtheorem{ex}[df]{Exemplo(s)}
+\newtheorem{enunc}{Enunciado}[exn]
+
+%--------  TÍTULO E DATA   ----------------------------------------------------------
+\author{``2º Testinho'' - GAAL}
+\date{02 de Maio de 2019}
+\title{}
+
+
+
+
+
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-----    INÍCIO DO TEXTO   ----------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+Em todas as questões abaixo, sempre que encontrar uma solução você deve mostrar que ela é, de fato, uma solução.
+
+\begin{qst}
+Considere a função $f:\R^2\to \R^2$ definida por $f(x,y)=\frac{1}{2}(x+y,x+y)$.
+\begin{enumerate}[a)]
+	\item Mostre que $f$ é linear.
+	\item Calcule $\Ker f$ e $\im f$.
+	\item Exiba um conjunto de geradores l.i. para $\Ker f$ e $\im f$.
+	\item Calcule o produto interno de qualquer gerador de $\Ker f$ com qualquer gerador de $\im f$ escolhidos acima.
+	\item Conclua que $\Ker f\perp\im f$, isto é, qualquer elemento de $\Ker f$ é ortogonal a qualquer elemento de $\im f$.
+\end{enumerate}
+\end{qst}
+
+\begin{qst}
+Considere o conjunto de vetores $\{(1,1), (2,3), (3,5), (-1, 5)\}$ em $\R^2$.
+\begin{enumerate}[a)]
+	\item Mostre que esse conjunto é l.d.
+	\item Mostre que os vetores $(1,0)$ e $(0,1)$ são gerado por esse conjunto.
+	\item Calcule o subespaço de $\R^2$ gerado por esse conjunto.
+	\item É possível encontrar uma subcoleção desses vetores com dois elementos e que seja l.i.? Se sim, exiba tal subcoleção, se não, prove que é impossível.
+\end{enumerate}
+\end{qst}
+
+\begin{qst}
+	Considere os vetores $v=(1,1,1)$, $u=(1,0,-1)$ e $w=(-1,-2,3)$ em $\R^3$.
+	\begin{enumerate}[a)]
+		\item Calcule os produtos internos $\pint{v}{u}$, $\pint v w$ e $\pint u w$.
+		\item Usando o item acima, conclua que existe um plano $\pi$ que é gerado por dois dos vetores acima e é ortogonal ao terceiro. Explicite quais são os vetores que geram o plano e qual é o vetor ortogonal ao plano.
+		\item Calcule o produto vetorial dos vetores que geram o plano e compare o resultado com o vetor ortogonal ao plano.
+	\end{enumerate}
+\end{qst}
+\begin{qst}
+Considere os planos $$\pi_1=\{v\in \R^3\mid v=\lambda(1,1,1)+\mu(1,0,-1)+(0,0,3),\mbox{ com }\lambda\mbox{ e }\mu\in \R\}$$ $$\pi_2=\{(x,y,z)\in\R^3\mid x-2y+7z=5\}.$$
+\begin{enumerate}[a)]
+	\item Calcule a interseção desses planos.
+	\item Explicite um conjunto de geradores l.i. dessa interseção.
+\end{enumerate}
+\end{qst}
+
+\end{document}
