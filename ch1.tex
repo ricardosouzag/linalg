@@ -70,5 +70,18 @@ Since we cannot (as seen in the previous section) consider ``the set of all sets
 When we have an object that is in that set we say that it is an \textbf{element} of that set, and usually denote it by a non-capital letter (once again, not always). In symbols, if we want to say that $a$ is an element of $X$ we would write that as $a\in X$ - which should be read as ``$a$ is an element of $X$", ``$a$ is in $X$'' or even ``$X$ contains $a$ as an element".
 
 \begin{ex}
-	Let $E$ be the collection of all even integers. So $2\in E$ and $28\in E$, but $5\notin E$ (``$5$ isn't in $E$'') and \textit{dog} $\notin E$ (because \textit{dog} is not an even integer).
+	Let $E$ be the collection of all even integers. So $2\in E$ and $28\in E$, but $5\notin E$ (``$5$ isn't in $E$'', or ``$5$ isn't an even integer") and \textit{dog} $\notin E$ (because \textit{dog} is \textbf{not} an even integer). Actually, you can see this as a formal proof of the well known fact that all dogs are \textit{odd}.
+\end{ex}
+
+You can, however, take all the elements of a set and ask if they satisfy a certain condition.
+
+\begin{ex}
+	Following up on the previous example, let $\phi$ denote the proposition ``\textit{can be written in english with only three letters}''. Now we can consider the \textit{subset} of $E$ formed by all elements of $E$ that also satisfy $\phi$ (if $x\in E$ is such an element, we simply write $\phi(x)$ to denote ``$x$ satifies $\phi$''). This is written as follows:
+	$$E_\phi:=\{x\in E\mid \phi(x)\}.$$
+	
+	Let us break this down bit-by-bit:
+	\begin{itemize}
+		\item The symbol $E_\phi$ is non-standard notation that we're introducing here to mean ``the set $E$ subject to the condition $\phi$'';
+		\item The symbol $:=$ means 
+	\end{itemize}
 \end{ex}
