@@ -183,33 +183,45 @@ Now we have our first non-trivial result:
 This proposition is the most common tool used by mathematicians to prove that two sets are equal: We simply prove that each one contains the other - therefore, they must be equal.
 
 \begin{ex}
-	Let $A=\{0,1\}$ and $B$ be the set of all possible remainders you could get when dividing a natural number by $2$. For instance: $5:2$ is just $2\cdot 2+1$ - that means it has a remainder of $1$; $8:2$ is just $4\cdot 2+0$ - that means it has a remainder of $0$ etc.
-	
-	So it would seem from these two examples that the only possible remainders are $0$ and $1$ - that is, $A=B$ - but how can we \textit{prove} that?
-	
-	We'll just use the precedin proposition!
-	
-	Clearly $A\subseteq B$ - that is, clearly $0$ and $1$ are possible remainders when dividing by $2$, as the two examples we did show.
-	
-	Now, let us prove that $B\subseteq A$ - that is, that every such remainder is either $0$ or $1$.
-	
-	Take any natural number $n$ and divide it by $2$, getting something like $q\cdot 2+ r$ where $q$ is the quotient of this division, and $r$ is the remainder.
-	
-	What would happen if $r\geq 2$? Well, if $r\geq 2$ then $r-2$ is also an integer - let's call it $s$.
-	
-	This means - just by rearranging terms - that $s+2=r$. And so, we can rewrite $q\cdot 2+r$ as $q\cdot 2+s+2$, group up all the 2s together as $q\cdot 2+2+s$ and factor out the 2 as $(q+1)\cdot 2+s$.
-	
-	This is weird - this is saying that $q+1$ is also a quotient of $n$ divided by $2$, but quotients are uniquely defined!
-	
-	When you divide $n:2$ you should always get the same unique answer - which is $q$ - and we've just shown that you can get \textit{two different answers} (because clearly $q\neq q+1$, otherwise you could prove that $0=1$, just by canceling $q$ on both sides).
-	
-	Ok, so by assuming that $r\geq2$ we have arrived at a contradiction: we have proven that something which we know to be \textit{false} is actually \textit{true}. This must mean that our assumption that $r\geq 2$ has to be \textit{false} - that is, $r<2$ must be \textit{true}.
-	
-	Notice that this doesn't lead to any new contradictions (see Russell's Paradox, where either case led to a contradiction) so  $r<2$ being true is the only possible case which doesn't lead to a contradiction.
-	
-	What we've just shown is that if the remainder is anything \textit{aside} from $0$ and $1$ then our maths would be inconsistent, leading to paradoxes. Since we don't want that, we need the only possible remainders to be $0$ and $1$ - that is, we need $B\subseteq A$.
-	
-	This shows that $A=B$, just as stated.
+%	Let $A=\{0,1\}$ and $B$ be the set of all possible remainders you could get when dividing a natural number by $2$. For instance: $5:2$ is just $2\cdot 2+1$ - that means it has a remainder of $1$; $8:2$ is just $4\cdot 2+0$ - that means it has a remainder of $0$ etc.
+%	
+%	So it would seem from these two examples that the only possible remainders are $0$ and $1$ - that is, $A=B$ - but how can we \textit{prove} that?
+%	
+%	We'll just use the precedin proposition!
+%	
+%	Clearly $A\subseteq B$ - that is, clearly $0$ and $1$ are possible remainders when dividing by $2$, as the two examples we did show.
+%	
+%	Now, let us prove that $B\subseteq A$ - that is, that every such remainder is either $0$ or $1$.
+%	
+%	Take any natural number $n$ and divide it by $2$, getting something like $q\cdot 2+ r$ where $q$ is the quotient of this division, and $r$ is the remainder.
+%	
+%	What would happen if $r\geq 2$? Well, if $r\geq 2$ then $r-2$ is also an integer - let's call it $s$.
+%	
+%	This means - just by rearranging terms - that $s+2=r$. And so, we can rewrite $q\cdot 2+r$ as $q\cdot 2+s+2$, group up all the 2s together as $q\cdot 2+2+s$ and factor out the 2 as $(q+1)\cdot 2+s$.
+%	
+%	This is weird - this is saying that $q+1$ is also a quotient of $n$ divided by $2$, but quotients are uniquely defined!
+%	
+%	When you divide $n:2$ you should always get the same unique answer - which is $q$ - and we've just shown that you can get \textit{two different answers} (because clearly $q\neq q+1$, otherwise you could prove that $0=1$, just by canceling $q$ on both sides).
+%	
+%	Ok, so by assuming that $r\geq2$ we have arrived at a contradiction: we have proven that something which we know to be \textit{false} is actually \textit{true}. This must mean that our assumption that $r\geq 2$ has to be \textit{false} - that is, $r<2$ must be \textit{true}.
+%	
+%	Notice that this doesn't lead to any new contradictions (see Russell's Paradox, where either case led to a contradiction) so  $r<2$ being true is the only possible case which doesn't lead to a contradiction.
+%	
+%	What we've just shown is that if the remainder is anything \textit{aside} from $0$ and $1$ then our maths would be inconsistent, leading to paradoxes. Since we don't want that, we need the only possible remainders to be $0$ and $1$ - that is, we need $B\subseteq A$.
+%	
+%	This shows that $A=B$, just as stated.
+Let $A$ be the set of roots of the polynomial $x^2-x$ - that is, the set of numbers $r$ such that $r^2-r=0$ - and $B=\{0,1\}$. We claim that $A=B$.
+
+First, let us show that $B\subseteq A$ - that is, both 0 and 1 are roots of $x^2-x$. This is done by a simple verification:
+\[0^2-0=0-0=0\quad\quad\mbox{and}\quad\quad 1^2-1=1-1=0\]so they are, indeed, roots of $x^2-x$ - and therefore, $B\subseteq A$.
+
+Now, to prove that $A\subseteq B$ we need to show that those are the only two possible roots.
+
+To do that, let $r$ be any root of $x^2-x$ - that is, $r^2-r=0$. But then, $r^2=r$, by adding $r$ on both sides, and we see that $r=0$ is indeed a solution to this equation ($0^2=0$). So if we assume that $r\neq0$ we can divide both sides by $r$ and get $\frac{r^2}{r}=\frac{r}{r}$ which is the same as $r=1$, which was a unique solution being $r=1$.
+
+Hence we have proven that any root $r$ of $x^2-x$ is either 0 or 1, and therefore $A\subseteq B$.
+
+Finally, since $A\subseteq B$ and $B\subseteq A$ we can finally say that $A=B$, as we had previously stated.
 \end{ex}
 
 Finally, we can use all that we've done so far to construct a very special set - the empty set.
