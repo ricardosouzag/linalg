@@ -145,3 +145,27 @@ Notice, however, that we can sort of ``relax'' the conditions of the preceding d
 \begin{prop}
 	For any set $A$ we have that $A\subseteq A$.
 \end{prop}
+\begin{proof}
+	We want to show that every element $a\in A$ is also an element of $A$. But that's trivial. The result follows.
+\end{proof}
+
+\begin{rmk}
+	In mathematics, a \emph{proof} of a proposition/lemma/theorem/corolary is nothing more than a logical reasoning explaining why what we said is true. Proofs are to mathematics as scientific experiments are to sciences. This is what mathematicians do and work with all their lives.
+	
+	One could argue that maths is the science of reasoning and arguing.
+\end{rmk}
+
+Now we have our first non-trivial result:
+
+\begin{prop}
+	Let $A$ and $B$ be two sets. Then $A=B$ is, and only if, $A\subseteq B$ and $B\subseteq A$.
+\end{prop}
+\begin{proof}
+	Assume that $A=B$. We want to show that $A\subseteq B$ and $B\subseteq A$, but this is trivial in light of the preceding proposition.
+	
+	Assume now that $A\subseteq B$ and $B\subseteq A$. We want to show that $A=B$ - that is, every element of $A$ is an element of $B$, and every element of $B$ is an element of $A$.
+	
+	Notice, however, that the phrase ``every element of $A$ is an element of $B$" is the definition of the symbol $A\subseteq B$, and the phrase ``every element of $B$ is an element of $A$" is the definition of the symbol $B\subseteq A$ - both of which we are assuming to be true.
+	
+	Therefore, we have just proven that $A=B$, as stated, which finishes the proof.
+\end{proof}
