@@ -145,7 +145,7 @@
 \newcounter{rmk}
 \numberwithin{rmk}{section}
 \renewcommand*{\thermk}{\arabic{chapter}.\arabic{section}.\arabic{df}}
-\newenvironment{rmk}{\stepcounter{rmk}\begin{tcolorbox}[breakable,colback=red!5!white,colframe=red!40!white,title=\normalsize {\sc\textbf{Remark} \thermk},coltitle=black]}{\end{tcolorbox}}
+\newenvironment{rmk}{\stepcounter{df}\begin{tcolorbox}[breakable,colback=red!5!white,colframe=red!40!white,title=\normalsize {\sc\textbf{Remark} \thermk},coltitle=black]}{\end{tcolorbox}}
 
 \newcounter{exerc}
 \numberwithin{exerc}{section}
