@@ -142,6 +142,11 @@
 \newenvironment{ex}{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=white!80!black,title=\normalsize {\sc EXAMPLE(S):},coltitle=black]}{\end{tcolorbox}}
 \newenvironment{blockenv}[1]{\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=white!80!black,title=\normalsize {\sc #1:},coltitle=black]}{\end{tcolorbox}}
 
+\newcounter{rmk}
+\numberwithin{rmk}{section}
+\renewcommand*{\thermk}{(\arabic{chapter}.\arabic{section}.\arabic{rmk})}
+\newenvironment{rmk}{\stepcounter{rmk}\begin{tcolorbox}[breakable,colback=red!5!white,colframe=red!40!white,title=\normalsize {\sc\textbf{Remark} \thermk},coltitle=black]}{\end{tcolorbox}}
+
 \newcounter{exerc}
 \numberwithin{exerc}{section}
 \renewcommand*{\theexerc}{(\arabic{chapter}.\arabic{section}.\arabic{exerc})}
@@ -226,7 +231,7 @@ Refname={Proposição,Proposições}]{prop}
 \declaretheorem[sibling=df,name=Property,refname={propriedade,propriedades},
 Refname={Propriedade,Propriedades}]{pp}
 %\declaretheorem[name=Exercício,refname={exercício,exercícios},Refname={Exercício,Exercícios}]{exerc}
-\declaretheorem[sibling=df,name=Remark,refname={observação,observações},Refname={Observação,Observações}]{rmk}
+%\declaretheorem[sibling=df,name=Remark,refname={observação,observações},Refname={Observação,Observações}]{rmk}
 
 
 % \makeatletter
