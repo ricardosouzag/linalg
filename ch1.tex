@@ -278,7 +278,15 @@ Finally, we can use all that we've done so far to construct a very special set -
 \end{df}
 
 \begin{prop}
-	For any set $A$ we have that $\varnothing\subseteq A$. Furthermore, we have that $\varnothing\subset A$ if, and only if, $A\neq\varnothing$.
+	For any set $A$ we have that $\varnothing\subseteq A$. Furthermore, we have that $A\subseteq\varnothing$ if, and only if, $A=\varnothing$.
 \end{prop}
+\begin{proof}
+	If $\varnothing\not\subseteq A$, then there'd be some element in $\varnothing$ that was not in $A$. But $\varnothing$ is empty, therefore $\varnothing\not\subseteq A$ is false, and hence $\varnothing \subseteq A$.
+	
+	\bigskip
+	For the second statement, we clearly have $A\subseteq \varnothing$ if $A=\varnothing$, by definition of set equality.
+	
+	But if we assume that $A\subseteq\varnothing$, we can now use the first statement of this proof, which proves that $\varnothing\subseteq A$, to conclude, by definition of set equality, that $A=\varnothing$, and this finishes the proof.
+\end{proof}
 
 \subsection{United we stand, intersected we... Fall?}
