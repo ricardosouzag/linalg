@@ -169,3 +169,11 @@ Now we have our first non-trivial result:
 	
 	Therefore, we have just proven that $A=B$, as stated, which finishes the proof.
 \end{proof}
+
+\begin{rmk}
+	In mathematics, an \emph{if, and only if,} statement is the equivalent of a logical equivalence. Basically, whenever we say ``\emph{this} holds if, and only if, \emph{that} holds" what that means is that \emph{this} and \emph{that} are equivalent: \emph{this} is true precisely when \emph{that} is true, and \emph{this} is false precisely when \emph{that} is also false.
+	
+	Without going too much into propositional logic, we usually write ``$a$ if, and only if, $b$" in symbols as $a\iff b$, which is logically equivalent to saying that ``$a$ being true is sufficient for us to prove that $b$ is also true" and ``$b$ being true is sufficient for us to prove that $a$ is also true". In symbols we would write these, respectively, as $a\implies b$ and $b\implies a$ - which should be read as ``$a$ implies $b$" and ``$b$ implies $a$", respectively.
+	
+	That's what we did in the preceding proposition: If $a$=``$A=B$" and $b$=``$A\subseteq B$ and $B\subseteq A$", we proved that assuming $a$ we can conclude $b$, and that assuming $b$ we can conclude $a$.
+\end{rmk}
