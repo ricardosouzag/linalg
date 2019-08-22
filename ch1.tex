@@ -62,6 +62,7 @@ There is, however, a solution to this. We have a set of axioms for set theory ca
 Just know that if you ever see ZFC anywhere you can rest safe because you're working with a (relatively) safe set of axioms.
 
 \section{Basic results and properties of sets}
+\subsection{Equality always}
 
 As we have previously stated, a \textit{set} is a collection of objects. We will usually denote a set by a capital letter (not always), such as $X$, $A$ or $B$.
 
@@ -210,3 +211,31 @@ This proposition is the most common tool used by mathematicians to prove that tw
 	
 	This shows that $A=B$, just as stated.
 \end{ex}
+
+Finally, we can use all that we've done so far to construct a very special set - the empty set.
+
+\begin{ex}
+	Let $\N$ be the set of natural numbers and let $\phi$ be the proposition ``is not a natural number". For instance, $\phi({\rm car})$ is just ``car is not a natural number", which is true.
+	
+	Now we can do just as we did before and consider
+	\[\N_\phi:=\{n\in\N\mid \phi(n)\}\]that is, the set of all natural numbers which are not natural numbers.
+	
+	What \textbf{is} this set? Is there any natural number that isn't a natural number? Of course not! So this is a set \textit{which has no elements}.
+	
+	Take now $\Z$ the set of all integers and let $\psi$ be the proposition ``is not an integer". We can then define, once more,
+	\[\Z_\psi:=\{n\in\Z\mid\psi(n)\}\]that is, the set of all integers which aren't integers.
+	
+	This set is, once again, empty.
+	
+	This begets the question: $\N_\phi=\Z_\psi$ - that is, are two empty sets always equal?
+\end{ex}
+
+\begin{df}
+	Given any set $X$ we call the \textbf{empty set defined by $X$} to be the set of all elements of $X$ which aren't elements of $X$, denoted by $\varnothing_X$.
+\end{df}
+
+\begin{theorem}
+	Let $A$ be a set and $\varnothing_A$ and $\nu_A$ be two possible empty sets. Then they are equal.
+\end{theorem}
+
+\subsection{United we stand, intersected we... Fall?}
