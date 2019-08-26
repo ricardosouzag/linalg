@@ -306,11 +306,11 @@ First things first, let us show that this definition makes sense - that is, that
 \begin{lemma}
 	Let $A$ and $B$ be two sets, and $C$ and $D$ be two sets satisfying the above definition. Then $C=D$.
 \end{lemma}
-\begin{df}
+\begin{proof}
 	Since $C$ and $D$ are unions of $A$ and $B$, they contain both of them as subsets (item (a)). Now, since $C$ satisfies (a) and $D$ satisfies (b), we get that $D\subseteq C$. Similarly, since $D$ satisfies (a) and $C$ satisfies (b), we get that $C\subseteq D$.
 	
 	It follows that $C=D$, and so the union of two sets is indeed well-defined,
-\end{df}
+\end{proof}
 
 With that out of the way, let us show some examples to build some intuition:
 
@@ -384,3 +384,14 @@ Finally, let's end our discussions on the union with the following alternative c
 	
 	Finally, to show that $x\in A\cup B$ implies $x\in A$ or $x\in B$, take any $x\in A\cup B$ and notice, by what we've done, that this is the same as saying that $x\in U$. But, then again, this is the same as saying that $x\notin N$ - that is $x$ is in $A$ or $B$, just as stated. This finishes the proof.
 \end{proof}
+
+\bigskip
+Going in the opposite direction of unions, there is the concept of intersections. If unions take two sets to build a bigger one, interceptions take two sets to build a smaller one:
+
+\begin{df}
+		Let $A$ and $B$ be two sets. The \textbf{intersection} of $A$ and $B$ is another set - denoted by $A\cap B$ defined by the following properties:
+	\begin{enumerate}[(a)]
+		\item $A\cap B$ is contained in both $A$ and $B$ as a subset;
+		\item Any other set $C$ that is contained both $A$ and $B$ as a subset is also contained $A\cup B$ as a subset.
+	\end{enumerate}
+\end{df}
