@@ -429,5 +429,7 @@ Contrary to unions, however, we cannot refine intersections. We can, however, st
 	
 	But this is a conundrum, because $A\cap B$ \textit{contains} every set that is contained in both $A$ and $B$ (by definition of set intersection).
 	
-	This shows that $I=A\cap B$, and therefore $N=\varnothing$. This finishes the proof.
+	This shows that $I=A\cap B$, and therefore $N=\varnothing$.
+	
+	Finally, to show that $x\in A$ and $x\in B$ implies $x\in A\cap B$, take any $x\in A$ and $x\in B$ and notice, by what we've done, that this is the same as saying that $x\notin N$ (since it is empty). But, then again, this is the same as saying that $x\in I$ - that is $x$ is in $A\cap B$, just as stated. This finishes the proof.
 \end{proof}
