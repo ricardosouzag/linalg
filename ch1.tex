@@ -380,5 +380,7 @@ Finally, let's end our discussions on the union with the following alternative c
 	
 	But this is a conundrum, because $A\cup B$ is \textit{contained} in every set that contains $A$ and $B$ (by definition of set union) - in particular, since $U$ contains $A$ and $B$ this means that $U$ \textit{also contains} $A\cup B$.
 	
-	This shows that $U=A\cup B$, and therefore $N=\varnothing$, just like we wanted to prove.
+	This shows that $U=A\cup B$, and therefore $N=\varnothing$.
+	
+	Finally, to show that $x\in A\cup B$ implies $x\in A$ or $x\in B$, take any $x\in A\cup B$ and notice, by what we've done, that this is the same as saying that $x\in U$. But, then again, this is the same as saying that $x\notin N$ - that is $x$ is in $A$ or $B$, just as stated. This finishes the proof.
 \end{proof}
