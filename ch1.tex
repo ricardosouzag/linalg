@@ -372,5 +372,13 @@ Finally, let's end our discussions on the union with the following alternative c
 	
 	Let us prove then that $x\in A\cup B$ implies $x\in A$ or $x\in B$.
 	
-	Assume not - that is, there is some $x\in A\cup B$ that is in neither $A$ nor $B$. Now define $N=\{x\in A\cup B\mid x\notin A\mbox{ and }x\notin B\}$ the collection of all such elements - which is, by definition, a subset of $A\cup B$.
+	Define $N=\{x\in A\cup B\mid x\notin A\mbox{ and }x\notin B\}$ the collection of all elements of $A\cup B$ which are in neither $A$ nor $B$ - which is, by definition, a subset of $A\cup B$.
+	
+	We can now define $U=\{x\in A\cup B\mid x\notin N\}$ the collection of all elements of $A\cup B$ which are not in $N$ - which is, by definition, a subset of $A\cup B$.
+	
+	We claim that $U$ contains $A$ and $B$ as subsets. This is easy to see: Take $y$ in either $A$ or $B$ (doesn't matter which). Since $A\cup B$ contains both of them, $y\in A\cup B$. But since $x$ came from either $A$ or $B$, it cannot be in $N$ (by definition of $N$) - so it must be in $U$ (by definition of $U$). It follows that both $A$ and $B$ are contained in $U$.
+	
+	But this is a conundrum, because $A\cup B$ is \textit{contained} in every set that contains $A$ and $B$ (by definition of set union) - in particular, since $U$ contains $A$ and $B$ this means that $U$ \textit{also contains} $A\cup B$.
+	
+	This shows that $U=A\cup B$, and therefore $N=\varnothing$, just like we wanted to prove.
 \end{proof}
