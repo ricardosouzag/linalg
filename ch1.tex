@@ -301,7 +301,18 @@ Now that we have a basic understanding of sets and subsets, we're going to build
 	\end{enumerate}
 \end{df}
 
-Let us show some examples to build some intuition:
+First things first, let us show that this definition makes sense - that is, that given two sets, their union is a unique set:
+
+\begin{lemma}
+	Let $A$ and $B$ be two sets, and $C$ and $D$ be two sets satisfying the above definition. Then $C=D$.
+\end{lemma}
+\begin{df}
+	Since $C$ and $D$ are unions of $A$ and $B$, they contain both of them as subsets (item (a)). Now, since $C$ satisfies (a) and $D$ satisfies (b), we get that $D\subseteq C$. Similarly, since $D$ satisfies (a) and $C$ satisfies (b), we get that $C\subseteq D$.
+	
+	It follows that $C=D$, and so the union of two sets is indeed well-defined,
+\end{df}
+
+With that out of the way, let us show some examples to build some intuition:
 
 \begin{ex}
 	Let $A$ be the set of all dogs and $B$ be the set of all cats. Let $C$ be the set of all animals. We ask: $C=A\cup B$?
@@ -333,6 +344,20 @@ Well, in formal set theory, for instance ZFC, you can always use your axioms to 
 	
 	To do that, take any $x\in C_\phi$. Then, by definition, $\phi(x)$ is true - that is, $x\in A$ or $x\in B$. But since both $A\subseteq D$ and $B\subseteq D$ hold, it doesn't matter if $x\in A$ or $x\in B$ is true - as long as one of them is true, we can conclude that $x\in D$. And since this holds for any $x\in C_\phi$, we have just shown that $C_\phi\subseteq D$.
 	
-	Since the $D$ we chose was general, the result follows.
-	
+	Since the $D$ we chose was general, the result follows.	
 \end{proof}
+
+This is important: We now have a way to construct the union of two sets - just take any set containing both of them and restrict it to be only the elements from the original sets.
+
+That, however, requires the existence of some set containing both of them - and that's where ZFC comes in: There's an axiom that states that there always exists a set containing any amount of other sets.
+
+Since we're foregoing axioms here, we're going to provide a ``construction'' that should be enough for most purposes:
+
+\begin{ex}
+	Following up on the previous example, we can now see that $A\cup B$ is any one of ``the set of all animals which are cats or dogs'', ``the set of all mammals which are cats or dogs'' or ``the set of all mammal quadrupeds which are cats or dogs'' - any one of those work, by what we've already proven.
+	
+	We could, however, give a more explicit construction: $A\cup B$ is just the set of all cats and dogs.
+\end{ex}
+\begin{ex}
+	Another, even more constructive example: Let $A=\{a,b,c\}$ and $B=\{c,d,e,f\}$. Then $A\cup B=\{a,b,c,d,e,f\}$ (prove it using the definition if you're not convinced).
+\end{ex}
