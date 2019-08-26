@@ -290,3 +290,44 @@ Finally, we can use all that we've done so far to construct a very special set -
 \end{proof}
 
 \subsection{United we stand, intersected we... Fall?}
+
+Now that we have a basic understanding of sets and subsets, we're going to build new sets from existing ones.
+
+\begin{df}
+	Let $A$ and $B$ be two sets. The \textbf{union} of $A$ and $B$ is another set - denoted by $A\cup B$ defined by the following properties:
+	\begin{enumerate}[(a)]
+		\item $A\cup B$ contains both $A$ and $B$ as subsets;
+		\item Any other set $C$ that contains both $A$ and $B$ as subsets also contains $A\cup B$ as a subset.
+	\end{enumerate}
+\end{df}
+
+Let us show some examples to build some intuition:
+
+\begin{ex}
+	Let $A$ be the set of all dogs and $B$ be the set of all cats. Let $C$ be the set of all animals. We ask: $C=A\cup B$?
+	
+	Certainly, $C$ satisfies (a) (since all dogs and all cats are animals), but does it satisfy (b)?
+	
+	Well, certainly not! Because the set $D$ of all mammals also contains $A$ and $B$, but it clearly doesn't contain $C$ (because not every animal is a mammal - for instance, there are birds).
+	
+	Now we ask: Ok, since $C$ is not the union of $A$ and $B$, maybe $D$ is?
+	
+	Well, no, because we can consider $E$ - the set of all mammal quadrupeds  - and see that it contains both $A$ and $B$ as susbets, but not $D$.
+	
+	And so on, and so forth...
+\end{ex}
+
+How can we make sure that we don't get an endless regression - that is, we're always inching closer to the result, but never truly getting there?
+
+Well, in formal set theory, for instance ZFC, you can always use your axioms to guarantee the existence of such a set. Here, however, we're going to have to appeal to intuition:
+
+\begin{prop}
+	Given two sets $A$ and $B$ and any set $C$ containing both $A$ and $B$, their union is precisely the subset of $C$ given by the proposition $\phi=$ ``is in any one of the sets $A$ or $B$''.
+\end{prop}
+\begin{proof}
+	First, take any such $C$, and look at the set $C_\phi$ - that is, the set of all elements $c\in C$ such that $\phi(c)$. We claim that $C_\phi=A\cup B$.
+	
+	To see that $A\cup B\subseteq C_\phi$ is easy: It suffices to show that $A$ and $B$ are subsets of $C_\phi$, and then we can use (b) from the definition of the set union.
+	
+	To show that $A$ (resp. $B$) is a subset of $C_\phi$ we'll just use the definition: Take $a\in A$ (resp. $b\in B$). Since $A\subseteq C$ (resp. $B\subseteq C$) we have that $a\in C$ (resp. $b\in C$). We then ask: is $\phi(a)$ (resp. $\phi(b)$) true? Well, it trivially is - $\phi(x)$ is true if, and only if $x$ is in $A$ or $B$ - and $a$ (resp. $b$) certainly is. Therefore, for any $a\in A$ (resp. $b\in B$) we can conclude $\phi(a)$ (resp. $\phi(b)$) - and therefore, $a\in C_\phi$ (resp. $b\in C_\phi$). This shows that $A\subseteq C_\phi$ (resp. $B\subseteq C_\phi$).
+\end{proof}
