@@ -421,13 +421,13 @@ Contrary to unions, however, we cannot refine intersections. We can, however, st
 	
 	Let us prove then that $x\in A$ and $x\in B$ implies $x\in A\cap B$.
 	
-	Define $N=\{x\in A\mbox{ and } x\in B\mid x\notin A\cap B\}$ the collection of all which are, at once, in both $A$ and $B$, but not in $A\cap B$ - which is, by definition, a subset of both $A$ and $B$.
+	Define $N=\{x\in A\mbox{ and } x\in B\mid x\notin A\cap B\}$ the collection of all elements which are, at once, in both $A$ and $B$, but not in $A\cap B$ - which is, by definition, a subset of both $A$ and $B$.
 	
-	We can now define $I=\{x\in A\mbox{ and} x\in B\mid x\notin N\}$ the collection of all elements of both $A$ and $B$ which are not in $N$ - which is, by definition, a subset of both $A$ and $B$. This implies, by definition of set intersection, that $I\subseteq A\cap B$.
+	We can now define $I=\{x\in A\mbox{ and } x\in B\mid x\notin N\}$ the collection of all elements of both $A$ and $B$ which are not in $N$ - which is, by definition, a subset of both $A$ and $B$. This implies, by definition of set intersection, that $I\subseteq A\cap B$.
 	
-	But this is a conundrum, because $A\cup B$ is \textit{contained} in every set that contains $A$ and $B$ (by definition of set union) - in particular, since $U$ contains $A$ and $B$ this means that $U$ \textit{also contains} $A\cup B$.
+	We claim now that $I$ contains $A\cap B$ as a subset. This is easy to see: Take any $y\in A\cap B$. Since $A\cap B\subseteq A$ and $A\cap B\subseteq B$, we see that $y\in A$ and $y\in B$. So this $y$ is an element of both $A$ and $B$ which is in $A\cap B$ - which is the definition of an element of $I$. This shows that $y\in I$.
 	
-	This shows that $U=A\cup B$, and therefore $N=\varnothing$.
+	But this is a conundrum, because $A\cap B$ \textit{contains} every set that is contained in both $A$ and $B$ (by definition of set intersection).
 	
-	Finally, to show that $x\in A\cup B$ implies $x\in A$ or $x\in B$, take any $x\in A\cup B$ and notice, by what we've done, that this is the same as saying that $x\in U$. But, then again, this is the same as saying that $x\notin N$ - that is $x$ is in $A$ or $B$, just as stated. This finishes the proof.
+	This shows that $I=A\cap B$, and therefore $N=\varnothing$. This finishes the proof.
 \end{proof}
