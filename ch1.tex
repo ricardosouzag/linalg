@@ -325,9 +325,14 @@ Well, in formal set theory, for instance ZFC, you can always use your axioms to 
 	Given two sets $A$ and $B$ and any set $C$ containing both $A$ and $B$, their union is precisely the subset of $C$ given by the proposition $\phi=$ ``is in any one of the sets $A$ or $B$''.
 \end{prop}
 \begin{proof}
-	First, take any such $C$, and look at the set $C_\phi$ - that is, the set of all elements $c\in C$ such that $\phi(c)$. We claim that $C_\phi=A\cup B$.
+	First, we'll show that $A\subset C_\phi$ and $B\subseteq C_\phi$.
 	
-	To see that $A\cup B\subseteq C_\phi$ is easy: It suffices to show that $A$ and $B$ are subsets of $C_\phi$, and then we can use (b) from the definition of the set union.
+	To do that we'll just use the definition: Take $a\in A$ (resp. $b\in B$). Since $A\subseteq C$ (resp. $B\subseteq C$) we have that $a\in C$ (resp. $b\in C$). We then ask: is $\phi(a)$ (resp. $\phi(b)$) true? Well, it trivially is - $\phi(x)$ is true if, and only if $x$ is in $A$ or $B$ - and $a$ (resp. $b$) certainly is. Therefore, for any $a\in A$ (resp. $b\in B$) we can conclude $\phi(a)$ (resp. $\phi(b)$) - and therefore, $a\in C_\phi$ (resp. $b\in C_\phi$). This shows that $A\subseteq C_\phi$ (resp. $B\subseteq C_\phi$) - and therefore, $C_\phi$ satifies item (a) of the definition of set union.
 	
-	To show that $A$ (resp. $B$) is a subset of $C_\phi$ we'll just use the definition: Take $a\in A$ (resp. $b\in B$). Since $A\subseteq C$ (resp. $B\subseteq C$) we have that $a\in C$ (resp. $b\in C$). We then ask: is $\phi(a)$ (resp. $\phi(b)$) true? Well, it trivially is - $\phi(x)$ is true if, and only if $x$ is in $A$ or $B$ - and $a$ (resp. $b$) certainly is. Therefore, for any $a\in A$ (resp. $b\in B$) we can conclude $\phi(a)$ (resp. $\phi(b)$) - and therefore, $a\in C_\phi$ (resp. $b\in C_\phi$). This shows that $A\subseteq C_\phi$ (resp. $B\subseteq C_\phi$).
+	Now, take any set $D$ such that $D$ contains both $A$ and $B$ as subsets. If we show that $D$ also contains $C_\phi$ as a subset, we'll have shown that $C_\phi$ satisfies the definition of union - and therefore it must be the union.
+	
+	To do that, take any $x\in C_\phi$. Then, by definition, $\phi(x)$ is true - that is, $x\in A$ or $x\in B$. But since both $A\subseteq D$ and $B\subseteq D$ hold, it doesn't matter if $x\in A$ or $x\in B$ is true - as long as one of them is true, we can conclude that $x\in D$. And since this holds for any $x\in C_\phi$, we have just shown that $C_\phi\subseteq D$.
+	
+	Since the $D$ we chose was general, the result follows.
+	
 \end{proof}
