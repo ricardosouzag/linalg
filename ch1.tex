@@ -549,7 +549,7 @@ Understanding functions is, basically, the most important thing in all of mathem
 Since this is a naive introduction to set theory, we're not gonna bother with certain technicalities and simply define:
 
 \begin{df}
-	Let $A$ and $B$ be two sets. A formula $\phi$ is said to be of \textbf{function type} (or a \textbf{function}) if for any $a\in A$ there's a unique $b\in B$ such that $\phi(a,b)$.
+	Let $A$ and $B$ be two sets. A formula $\phi$ is said to be of \textbf{function type} (or a \textbf{function}) from $A$ to $B$ if for any $a\in A$ there's a unique $b\in B$ such that $\phi(a,b)$.
 	
 	In that case, we will write that as $\phi(a)=b$ and say that \textbf{$b$ is the image of $a$ under $\phi$}.
 \end{df}
@@ -559,6 +559,10 @@ Since this is a naive introduction to set theory, we're not gonna bother with ce
 	
 	Now, define $\psi(x,y)=\phi(y,x)$. Is $\psi$ also a function? The answer is no: Indeed, for any $a\in A$, there exists, at most, one $b\in B$ such that $\psi(a,b)$. But the thing is - there are some $a$ for which there is no $b$! For instance, for $a=3$, there is no $b$ such that $\psi(3,b)$. So $\psi$ can't be a function.
 \end{ex}
+
+\begin{df}
+	Let $A,B$ be sets and $\phi$ be a function from $A$ to $B$. We will call $A$ the \textbf{domain} of the function and $B$ its \textbf{codomain}, somtimes written as $\mathrm{Dom}(\phi)$ and $\mathrm{Cod}(\phi)$.
+\end{df}
 
 %\subsection{Operating on sets}
 %
