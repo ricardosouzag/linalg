@@ -617,16 +617,31 @@ Finally we can start working with some very important classes of functions: Inje
 	Let $f,g:\{1,2,3\}\to\{a,b,c,d\}$ be defined by: $f(1)=a,f(2)=b,f(3)=c$ and $g(1)=g(2)=g(3)=d$. Then $f$ is injective and $g$ is clearly not injective.
 	
 	\bigskip 
-	Let, now, $f:\R\to\R$ be defined by $f(x)=x^2$. Is $f$ injective?
+	Let, now, $h:\R\to\R$ be defined by $h(x)=x^2$. Is $h$ injective?
 	
-	Well, suppose $x$ and $x'$ are such that $f(x)=f(x')$. This means that $x^2=x'^2$. Taking square roots on both sides we get that $\lvert x\rvert=\lvert x'\rvert$ - which can be further simplified to mean $x=\pm x'$. In other words, we see that if two points have the same square, then they must differ only by a sign. That's good and all, but also shows us that two numbers that differ by a sign have the same image under $f$ - and therefore $f$ cannot be injective.
+	Well, suppose $x$ and $x'$ are such that $h(x)=h(x')$. This means that $x^2=x'^2$. Taking square roots on both sides we get that $\lvert x\rvert=\lvert x'\rvert$ - which can be further simplified to mean $x=\pm x'$. In other words, we see that if two points have the same square, then they must differ only by a sign. That's good and all, but also shows us that two numbers that differ by a sign have the same image under $h$ - and therefore $h$ cannot be injective.
 	
-	For instance, $2\neq -2$, but $f(2)=f(-2)=4$.
+	For instance, $2\neq -2$, but $h(2)=h(-2)=4$.
 \end{ex}
 
 \begin{df}
 	A function $f:A\to B$ is called a \textbf{surjection} if for any $b\in B$ there is some $a\in A$ such that $f(a)=b$.
 \end{df}
+
+\begin{ex}
+	Following up on the previous example, neither $f$ nor $g$ are surjections: $d\in \{a,b,c,d\}$ isn't in the image of any point over both $f$ and $g$.
+	
+	Let us then define $f':\{a,b,c,d\}\to \{1,2,3\}$ by putting $f'(a)=1,f'(b)=2,f'(c)=3,f'(d)=3$. Now, $f'$ is indeed a surjection.
+	
+	\bigskip
+	Notice that $h$ too isn't a surjection: $-1$ isn't the image of any real number under $h$. However, if we define $h':\R\to\R^{\geq0}$, where $\R^{\geq0}$ the set of all non-negative real numbers, by putting $h'(x)=h(x)$, we see that $h'$ is, now, a surjection.
+\end{ex}
+
+\begin{rmk}
+	Note that, in the example above, we defined $h'$ by putting $h'(x)=h(x)$. Does that mean that $h'=h$?
+	
+	The answer is \textbf{no}: By the definition of function equality, for two functions to be equal they must have the same domain and codomain.
+\end{rmk}
 
 %\subsection{Operating on sets}
 %
