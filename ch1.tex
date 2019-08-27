@@ -730,6 +730,7 @@ A function is a monomorphism if, and only if, it is an injection.
 \begin{proof}
 	Assume that \(f:A\to B\) is injective. Then given \(g,h:C\to A\) such that \(f\circ g= f\circ h\) we want to show that $g=h$. Since \(f\) is injective, \(f(g(c))=f(h(c))\) implies \(g(c)=h(c)\), for all \(c\in C\). It follows, then, that \(g= h\) and \(f\) is monic.
 	
+	\bigskip
 	Conversely, if \(f:A\to B\) is monic, define \(g,h:\{c\}\to A\) by putting \(g(c)=a\) and \(h(c)=a'\) for two \(a\neq a'\in A\) fixed. Now, since \(f\) is monic, by assumption, and since \(g\neq h\), we have that \(f\circ g\neq f\circ h\) (otherwise we would have $f$ monic, $f\circ g=f\circ h$ and $g\neq h$ all being true, which is impossible). But then:
 	\[f(a')=f(h(c))=f\circ h(c)\neq f\circ g(c)=f(g(c))=f(a)\]that is, \(a\neq a'\) assures us that \(f(a)\neq f(a')\), and so \(f\) is injective.
 \end{proof}
