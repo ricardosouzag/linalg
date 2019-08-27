@@ -433,3 +433,45 @@ Contrary to unions, however, we cannot refine intersections. We can, however, st
 	
 	Finally, to show that $x\in A$ and $x\in B$ implies $x\in A\cap B$, take any $x\in A$ and $x\in B$ and notice, by what we've done, that this is the same as saying that $x\notin N$ (since it is empty). But, then again, this is the same as saying that $x\in I$ - that is $x$ is in $A\cap B$, just as stated. This finishes the proof.
 \end{proof}
+
+Finally, let's do some examples:
+
+\begin{ex}
+	\begin{itemize}
+		\item Let $A=\{1,2,3,4\}$ and $B=\{1,3,5,7,9\}$. Then, $A\cap B=\{1,3\}$.
+		\item If $A$ is the set of all even integers, and $B$ is the set of all odd integers, then $A\cap B=\varnothing$.
+		\item If $A$ is the set of all cats and $B$ is the set of all brown animals, then $A\cap B$ is the set of all brown cats.
+	\end{itemize}
+\end{ex}
+
+
+\bigskip
+As a final topic on this section, let us consider another construction.
+
+\begin{df}
+	Given any set $X$ we denote the \textbf{set of all subsets of $X$} by $\mc P(X)$ (or $2^X$) and call it the \textbf{power set} of $X$.
+\end{df}
+\begin{rmk}
+	Note that, at this point, we have not define products and sums of sets - even less exponents. So, for now, the symbol $2^X$ is just that - a symbol. It has no meaning resembling the powering of real numbers.
+	
+	We will, however, as this text progresses, show two reasons why this notation makes sense, and we'll expand it to be able to take any set to the power of any other set.
+\end{rmk}
+
+Okay, before anything else, let us do some examples:
+\begin{ex}
+	Let $A=\{1,2,3\}$. What is $\mc P(A)$? Well, by definition it is the set of all subsets of $A$. Well then - what are the subsets of $A$?
+	
+	We can list a few: $\varnothing$, $A$, $\{1\}$, $\{2\}$, $\{3\}$, $\{1,2\}$, $\{1,3\}$ and $\{2,3\}$. But are there any others?
+	
+	Well, assume $B\subseteq A$. Then we can ask if $B$ has any elements or not. If it doesn't, great!, because $B=\varnothing$, which we've already accounted for.
+	
+	If it does, we can ask if it contains $1$. And then, we can ask if it contains $2$ and $3$. And depending on those answers we can pinpoint $B$ exactly, and see that it is, indeed, in the list above (e.g., if it contains $1$ and $2$, but not $3$, then $B=\{1,2\}$, which is on the list above).
+	
+	At this point, it is easy to see that\[\mc P(A)=\{\varnothing,\{1\},\{2\},\{3\},\{1,2\},\{1,3\},\{2,3\},A\}.\]
+	
+	The preceding reasoning, however, gives us our first insight into how to understand the symbol $2^A$: Making a subset of $A$ is the same as asking each element of $A$ if it is, or not, in there.
+	
+	Imagine the elements of $A$ are cards in a deck and you want to make a hand. Making a hand is the same as going through the deck, card by card, and choosing which cards you want to keep, or not.
+	
+	Since every card has two options (to be, or not to be), the amount of hands is precisely $2$ to the number of cards.
+\end{ex}
