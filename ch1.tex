@@ -509,10 +509,12 @@ To really wrap up this section, then, we're gonna make a list of properties for 
 	Let $A,B,C$ be any three subsets of a given, fixed, set $X$. Then the following properties always hold:
 	\begin{multicols}{2}
 		\begin{enumerate}[(1)]
+			\item $A\cup B=B\cup A$;
 			\item $A\cup(B\cup C)=(A\cup B)\cup C$;
 			\item $A\cup\varnothing = A$;
 			\item $A\cup X=X$;
 			\item $A\cup A=A$;
+			\item $A\cap B=B\cap A$;
 			\item $A\cap(B\cap C)=(A\cap B)\cap C$;
 			\item $A\cap\varnothing=\varnothing$;
 			\item $A\cap X=A$;
@@ -532,3 +534,7 @@ To really wrap up this section, then, we're gonna make a list of properties for 
 		\end{enumerate}%
 	\end{multicols}%
 \end{prop}
+
+\begin{rmk}
+	In the preceding proposition, as well as in maths as a whole, we usually save the parenthesis to mean ``this should be done first''. For instance, $A\cup(B\cup C)$ means ``the union of $A$ and the union of $B$ and $C$", whereas $(A\cup B)\cup C$ means ``the union of the union of $A$ and $B$ and $C$".
+\end{rmk}
