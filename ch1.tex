@@ -727,6 +727,10 @@ Now that that's out of the way, we need to start working towards more interestin
 \begin{theorem}
 A function is a monomorphism if, and only if, it is an injection.
 \end{theorem}
+\begin{proof}
+	Suponha que \(f:A\to B\) é injetiva. Então dados \(g,h:C\to A\) tais que \(fg\equiv fh\), como \(f\) é injetiva, \(f(g(c))=f(h(c))\) implica \(g(c)=h(c)\), para todo \(c\in C\). Logo \(g\equiv h\) e \(f\) é monomorfismo. Reciprocamente, se \(f:A\to B\) é monomorfismo, defina as funções \(g,h:\{c\}\to A\) fazendo \(g(c)=a\) e \(h(c)=a'\) para \(a\neq a'\in A\) fixos. Então o monomorfismo de \(f\) nos garante que como \(g\not\equiv h\), temos \(fg\not\equiv fh\). Mas, então:
+	\[f(a')=f(h(c))=fh(c)\neq fg(c)=f(g(c))=f(a)\]ou seja, \(a\neq a'\) nos garante que \(f(a)\neq f(a')\), logo \(f\) é injetiva.
+\end{proof}
 
 \begin{df}
 	A function $f:A\to B$ is calle an \textbf{epimorphism} if given any other two functions $g,h:B\to C$, we have that $g\circ f=h\circ f$ implies $g=h$.
