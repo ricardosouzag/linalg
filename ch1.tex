@@ -739,6 +739,14 @@ A function is a monomorphism if, and only if, it is an injection.
 	This finishes the proof.
 \end{proof}
 
+\begin{lemma}
+	Every isomorphism is a monomorphism.
+\end{lemma}
+\begin{proof}
+	Let $f:A\to B$ be an isomorphism and $g,h:C\to A$ any two functions such that $f\circ g=f\circ h$. Then, since $f$ is an isomorphism, there is a unique inverse, $f^{-1}:B\to A$ such that $\id_A=f^{-1}\circ f$ and $\id_B=f\circ f^{-1}$. Therefore:
+	\[g=\id_A\circ g=(f^{-1}\circ f)\circ g=f^{-1}\circ (f\circ g)=f^{-1}\circ (f\circ h)=(f^{-1}\circ f)\circ h=\id_A\circ h=h\]and we see that $f$ is monic.
+\end{proof}
+
 \begin{df}
 	A function $f:A\to B$ is called an \textbf{epimorphism} if given any other two functions $g,h:B\to C$, we have that $g\circ f=h\circ f$ implies $g=h$.
 \end{df}
