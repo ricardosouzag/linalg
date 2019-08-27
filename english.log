@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  27 AUG 2019 12:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  27 AUG 2019 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1013,16 +1013,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 276.
  (./english.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 276.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 276.
-Package rerunfilecheck Info: File `english.out' has not changed.
-(rerunfilecheck)             Checksum: 7F0EF104F59ECCE92D6C1408D4C2B888;591.
 
+
+Package rerunfilecheck Warning: File `english.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `english.out':
+(rerunfilecheck)             Before: 7F0EF104F59ECCE92D6C1408D4C2B888;591
+(rerunfilecheck)             After:  BA73486F7865550F92C46A69D0D58334;860.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31891 strings out of 492646
- 766396 string characters out of 6133325
+ 31898 strings out of 492646
+ 766504 string characters out of 6133325
  965926 words of memory out of 5000000
  35131 multiletter control sequences out of 15000+600000
  15006 words of font info for 59 fonts, out of 8000000 for 9000
@@ -1039,10 +1045,10 @@ r8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 :/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (17 pages, 193362 bytes).
+Output written on english.pdf (17 pages, 195854 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 232 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 240 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
  77 words of extra memory for PDF output out of 10000 (max. 10000000)
 
