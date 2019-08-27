@@ -733,6 +733,10 @@ A function is a monomorphism if, and only if, it is an injection.
 	\bigskip
 	Conversely, if \(f:A\to B\) is monic, define \(g,h:\{c\}\to A\) by putting \(g(c)=a\) and \(h(c)=a'\) for two \(a\neq a'\in A\) fixed. Now, since \(f\) is monic, by assumption, and since \(g\neq h\), we have that \(f\circ g\neq f\circ h\) (otherwise we would have $f$ monic, $f\circ g=f\circ h$ and $g\neq h$ all being true, which is impossible). But then:
 	\[f(a')=f(h(c))=f\circ h(c)\neq f\circ g(c)=f(g(c))=f(a)\]that is, \(a\neq a'\) assures us that \(f(a)\neq f(a')\), and so \(f\) is injective.
+	
+	Notice that we used the fact that there are two distinct points in $A$: $a$ and $a'$. If, however, $A$ has only one point it is even simpler: Any function from a set with a single point has to be injective - in particular, monomorphisms whose domain are a single point are injective.
+	
+	This finishes the proof.
 \end{proof}
 
 \begin{df}
