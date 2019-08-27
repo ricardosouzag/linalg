@@ -714,6 +714,16 @@ Now that that's out of the way, we need to start working towards more interestin
 	A function $f:A\to B$ is called a \textbf{monomorphism} if given any other two functions $g,h:C\to A$, we have that $f\circ g=f\circ h$ implies $g=h$.
 \end{df}
 
+\begin{ex}
+	Let $f:\{1,2,3\}\to \{a,b,c,d\}$ be defined by $f(1)=a, f(2)=b,f(3)=c$. We claim that $f$ is a monomorphism.
+	
+	To see that, take any $g,h:C\to\{1,2,3\}$ such that $f\circ g=f\circ h$. In particular, for any $x\in C$ we have that $f(g(x))=f(h(x))$. Well, this means that $f(g(x))$ is either $a$, $b$ or $c$. In either case, we know precisely who $g(x)$ is (for instance, if $f(g(x)))=b$, then $g(x)=2$, since 2 is the only point which is taken to $b$ via $f$).
+	
+	But since $f(g(x))=f(h(x))$, there's a unique $u\in\{1,2,3\}$ such that $y=g(x)=h(x)$. In particular, $g(x)=h(x)$.
+	
+	This shows that $g=h$, and, therefore, $f$ is a monomorphism.
+\end{ex}
+
 \begin{df}
 	A function $f:A\to B$ is calle an \textbf{epimorphism} if given any other two functions $g,h:B\to C$, we have that $g\circ f=h\circ f$ implies $g=h$.
 \end{df}
