@@ -477,3 +477,30 @@ Okay, before anything else, let us do some examples:
 	
 	Note that in this particular example, $2^A=\mc P(A)$ has precisely $2^3=8$ elements, while $A$ has precisely $3$ elements.
 \end{ex}
+
+Now that we're talking about power sets, we can define one of the most important concepts of set theory:
+
+\begin{df}
+	Let $X$ be a set and $2^X$ its power set. Given any $A\in 2^X$, we define its \textbf{complement} to be the set denoted by $X\setminus A$, which is given by\[X\setminus A:=\{x\in X\mid x\notin A\}.\]
+\end{df}
+
+That is, the complement of a set is the collection of all elements that \textit{do not} belong to that set.
+
+\begin{ex}
+	Following up on the previous example, let $B=\{1\}$. Then what is $A\setminus B$? Well, by definition, it's the collection of all elements of $A$ that are not in $B$ - that is, $2$ and $3$, so $A\setminus B=\{2,3\}$.
+	
+	Call $C=A\setminus B$. What is, then, $A\setminus C$? Once again, by definition, it's the set of all elements of $A$ which are not in $C$ - that is, $1$, so $A\setminus C=B$.
+\end{ex}
+
+And finally, just before wrapping up this section, let us give one final definition and example:
+
+\begin{df}
+	Let $A$ and $B$ be any two sets. We define $A\setminus B$ to be equal to $(A\cup B)\setminus B$ - that is, $A\setminus B$ is the complement of $B$ in $A\cup B$.
+\end{df}
+\begin{ex}
+	Let $A=\{a,b,c,d,e,f,g,h,i,j\}$ and $B=\{a,e,i,o,u\}$. Then $A\setminus B$ is, by definition, the set of all elements of $A\cup B$ which are not in $B$. So writing $A\cup B=\{a,b,c,e,f,g,h,i,j,o,u\}$ we see that $A\setminus B$ is just $\{b,c,d,f,g,h,j\}$.
+	
+	Similarly, $B\setminus A$ is the set of all elements of $A\cup B$ which are not in $A$ - that is, $B\setminus A=\{o,u\}$.
+\end{ex}
+
+To really wrap up this section, then, we're gonna make a list of properties for the things we've just described. You're welcome to try to prove them, although most of them are really trivial (that is, they follow immediately from the definitions or a quick observation).

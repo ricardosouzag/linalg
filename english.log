@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  27 AUG 2019 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  27 AUG 2019 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1007,7 +1007,7 @@ ne 266.
  [8]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 307.
- [9] [10] [11] [12]) [13]
+ [9] [10] [11] [12] [13]) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 267.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 267.
  (./english.aux)
@@ -1021,10 +1021,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31838 strings out of 492646
- 765821 string characters out of 6133325
+ 31845 strings out of 492646
+ 765922 string characters out of 6133325
  952926 words of memory out of 5000000
- 35112 multiletter control sequences out of 15000+600000
+ 35114 multiletter control sequences out of 15000+600000
  15006 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,9n,119p,830b,624s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1039,10 +1039,10 @@ r8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 :/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (14 pages, 182213 bytes).
+Output written on english.pdf (15 pages, 186550 bytes).
 PDF statistics:
- 211 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 189 compressed objects within 2 object streams
+ 69 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 
