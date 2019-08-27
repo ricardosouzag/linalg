@@ -1007,10 +1007,7 @@ ne 266.
  [8]
 Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
 line 307.
- [9] [10] [11] [12] [13]
-Package hyperref Info: bookmark level for unknown pp defaults to 0 on input lin
-e 509.
-) [14]
+ [9] [10] [11] [12] [13]) [14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 274.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 274.
  (./english.aux)
@@ -1024,10 +1021,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 31872 strings out of 492646
- 766144 string characters out of 6133325
+ 31871 strings out of 492646
+ 766135 string characters out of 6133325
  965926 words of memory out of 5000000
- 35119 multiletter control sequences out of 15000+600000
+ 35118 multiletter control sequences out of 15000+600000
  15006 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,9n,119p,830b,691s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1042,7 +1039,7 @@ r8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c
 :/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/
 2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (15 pages, 188906 bytes).
+Output written on english.pdf (15 pages, 188897 bytes).
 PDF statistics:
  248 PDF objects out of 1000 (max. 8388607)
  216 compressed objects within 3 object streams
