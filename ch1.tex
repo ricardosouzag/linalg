@@ -667,8 +667,28 @@ Finally, we can define:
 Now that that's out of the way, we need to start working towards more interesting results. For that, we'll need some definitions first.
 
 \begin{df}
-	Given any two functions $f:A\to B$ and $g:B\to C$, we call the function $g\circ f:A\to C$ defined by $(g\circ f)(a)=g(f(a))$ the \textbf{composition} of $f$ and $g$.
+	Given any two functions $f:A\to B$ and $g:B\to C$, we call the function $g\circ f:A\to C$ defined by $(g\circ f)(a):=g(f(a))$ the \textbf{composition} of $f$ and $g$.
 \end{df}
+
+\begin{df}
+	Given any set $X$, we call the function $\id_X:X\to X$ defined by $\id_X(x):=x$ the \textbf{identity function} of $X$.
+\end{df}
+
+\begin{df}
+	Given a function $f:A\to B$, we say that \textbf{$f$ is an isomorphism} if there is some function $g:B\to A$ such that $f\circ g=\id_B$ and $g\circ f=\id_A$. In this case, we say that $g$ is an \textbf{inverse} for $f$.
+\end{df}
+
+\begin{prop}
+	Function composition is associative - that is, if $A\arrow{f}B\arrow{g}C\arrow{h}D$, then $h\circ(g\circ f)=(h\circ g)\circ f$.
+\end{prop}
+\begin{proof}
+	Take $a\in A$. Then,
+	\begin{align*}
+		(h\circ(g\circ f))(a)&=h((g\circ f)(a))\\
+		&=h(g(f(a)))\\
+		&=(h\circ g)(f(a))=((h\circ g)\circ f)(a)
+	\end{align*}and therefore $(h\circ(g\circ f))(a)=((h\circ g)\circ f)(a)$ for any $a\in A$ which, by the definition of function equality, implies that $h\circ(g\circ f)=(h\circ g)\circ f$.
+\end{proof}
 
 %\subsection{Operating on sets}
 %
