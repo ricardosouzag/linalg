@@ -976,8 +976,10 @@ And now, finally, to end this section, some technical results that appear all th
 	Let $A\arrow{f}B\arrow{g}C$ be two functions such that $g\circ f$ is monic (resp. epic). Then $f$ is also monic (resp. $g$ is also epic).
 \end{lemma}
 \begin{proof}
-	If $g\circ f$ is monic, by \cref{lem: mono left-inverse}, we see that there is some function $h:C\to A$ that is a left-inverse to $g\circ f$ - that is, $\id_A=h\circ(g\circ f)$. But now, by \cref{prop: composition is associative}, we see that $h\circ(g\circ f)=(h\circ g)\circ f$ and, therefore, $\id_A=(h\circ g)\circ f$ and we see that $h\circ g$ is a left-inverse for $f$. Now the converse of \cref{lem: mono left-inverse} tells is that since $f$ has a left-inverse, it must be monic.
+	If $g\circ f$ is monic, by \cref{lem: mono left-inverse}, we see that there is some function $h:C\to A$ that is a left-inverse to $g\circ f$ - that is, $\id_A=h\circ(g\circ f)$. But now, by \cref{prop: composition is associative}, we see that $h\circ(g\circ f)=(h\circ g)\circ f$ and, therefore, $\id_A=(h\circ g)\circ f$ and we see that $h\circ g$ is a left-inverse for $f$. Now the converse of \cref{lem: mono left-inverse} tells us that since $f$ has a left-inverse, it must be monic.
 	
 	\bigskip
-	Anaolgously, if $g\circ f$ is epic, by \cref{lem: epi right-inverse}, we see that there is some function $h:B\to C$ that is a right-inverse to $g\circ f$ - that is, $\id_B=(g\circ f)\circ h$. But now, by \cref{prop: composition is associative}, we see that $(g\circ f)\circ h=g\circ(f\circ h)$ and, therefore, $\id_B=g\circ(f\circ h)$ and we see that $f\circ h$ is a right-inverse to $g$.
+	Anaolgously, if $g\circ f$ is epic, by \cref{lem: epi right-inverse}, we see that there is some function $h:B\to C$ that is a right-inverse to $g\circ f$ - that is, $\id_B=(g\circ f)\circ h$. But now, by \cref{prop: composition is associative}, we see that $(g\circ f)\circ h=g\circ(f\circ h)$ and, therefore, $\id_B=g\circ(f\circ h)$ and we see that $f\circ h$ is a right-inverse to $g$. Now, the converse of \cref{lem: epi right-inverse} tells us that since $g$ has a right-inverse, it must be epic.
+	
+	The result then follows.
 \end{proof}
