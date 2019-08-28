@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  28 AUG 2019 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  28 AUG 2019 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,10 +1022,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32043 strings out of 492646
- 768785 string characters out of 6133325
+ 32044 strings out of 492646
+ 768801 string characters out of 6133325
  965926 words of memory out of 5000000
- 35189 multiletter control sequences out of 15000+600000
+ 35190 multiletter control sequences out of 15000+600000
  15006 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,691s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1041,7 +1041,7 @@ mr17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (29 pages, 256607 bytes).
+Output written on english.pdf (29 pages, 257506 bytes).
 PDF statistics:
  444 PDF objects out of 1000 (max. 8388607)
  396 compressed objects within 4 object streams
