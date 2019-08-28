@@ -690,6 +690,44 @@ Finally, we can define:
 	Notice that bijections don't have to abide by our expectations (such is life).
 \end{ex}
 
+\begin{lemma}
+	If $f:A\to B$ is injective, then there is a bijection $g:A\to f(A)$.
+\end{lemma}
+\begin{proof}
+	Let $g:A\to f(A)$ be defined by $g(a):=f(a)$ for all $a\in A$. 
+	\begin{itemize}
+		\item $g$ is injective:
+		
+		To see that, take $a,a'\in A$ such that $g(a)=g(a')$. Then, by definition, this implies $f(a)=f(a')$, and since $f$ is injective, this in turn implies $a=a'$, so $g$ is injective.
+		
+		\item $g$ is surjective:
+		
+		To see that, take any $b\in f(A)$. By definition of image, there exists some $a\in A$ such that $b=f(a)$. But now, by defintion of $g$, this means that $b=g(a)$.
+		
+		We have just shown that every point in the codomain of $g$ is the image of some point in the domain of $g$ under $g$ - this means that $g$ is surjective.
+	\end{itemize}
+
+Since $g$ is both injective and surjective, it is, by definition, a bijection, which ends the proof.
+\end{proof}
+
+\begin{lemma}
+	If $f:A\to B$ is surjective, then there is a bijection $g:f(A)\to B$.
+\end{lemma}
+\begin{proof}
+	Let $g:f(A)\to B$ be defined by $g(b):=b$ for all $b\in f(A)$.
+	\begin{itemize}
+		\item $g$ is surjective:
+		
+		To see that, take any $b\in B$. Since $f$ is surjective, for each point in $B$ there is at least one point in $A$ which is its inverse image under $f$ - in particular, there is some $a\in A$ such that $f(a)=b$. But this means that $b\in f(A)$, by definition of image of $f$. Now, since $b\in f(A)$, we see that $g(b)=b$ and, therefore, $g$ is surjective.
+		
+		\item $g$ is injective:
+		
+		To see that, take any two points $b,b'\in f(A)$ such that $g(b)=g(b')$. But, by definition of $g$, this is the same as saying $g=g'$ - therefore $g$ is injective.		
+	\end{itemize}
+
+Since $g$ is both injective and surjective, it is, by definition, a bijection, which ends the proof.
+\end{proof}
+
 Now that that's out of the way, we need to start working towards more interesting results. For that, we'll need some definitions first.
 
 \begin{df}
