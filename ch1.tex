@@ -710,6 +710,22 @@ Finally, we can define:
 Since $g$ is both injective and surjective, it is, by definition, a bijection, which ends the proof.
 \end{proof}
 
+We can use this lemma to easily determine whether a function is, or isn't, an injection.
+
+\begin{ex}
+	Let $f:\{a,b,c\}\to\{1,2\}$ be defined by $f(a)=1,f(b)=2,f(c)=1$. Is $f$ injective?
+	
+	Well, $f$ takes two different points ($a$ and $c$) to the same point ($1$), so it can't be injective.
+	
+	Actually - is it possible for there to be an injective function from $\{a,b,c\}$ to $\{1,2\}$?
+	
+	Let's try making one: First, we choose an image for $a$ - it can be either $1$ or $2$ - doesn't matter which. Now, to choose an image for $b$ we can't choose the same point as we chose for $a$ - otherwise $f$ won't be injective. So $b$'s image is now uniquely determined: the only point left in $\{1,2\}$ after we take out $f(a)$. Finally, when we try to choose an image for $c$, it can't be $f(a)$, nor can in be $f(b)$ (otherwise, $f$ wouldn't be injective). But $\{1,2\}=\{f(a),f(b)\}$ - that is, if $f(c)$ can't be $f(a)$ and it can't be $f(b)$, then there's \textbf{nothing} that it can be!
+	
+	But, on the other hand, since $f$ is a function, we \textbf{have to} take $c$ somewhere. This means that we \textbf{have to} repeat either $f(a)$ or $f(b)$.
+	
+	This shows that there are no injective functions from $\{a,b,c\}$ to $\{1,2\}$.
+\end{ex}
+
 \begin{lemma}\label{lem: surj iso im}
 	If $f:A\to B$ is surjective, then there is a bijection $g:f(A)\to B$.
 \end{lemma}
@@ -867,7 +883,7 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	\end{cases}$$where $a\in A$ is any (literally any) element of $A$.
 	
 	We claim that this $g$ is a left-inverse for $f$. Indeed, for any $x\in A$ we have
-	\[(g\circ f)(x)=g(f(x))=f^{-1}(f(x))=x\]since $f(x)\in f(A)$ for all $x\in A$. Therefore, we have shown that for all $x$ we have $(g\circ f)(x)=x=\id_A(x)$ - which implies, by the definition of function equality, that $g\circ f=\id_A$.
+	\[(g\circ f)(x)=g(f(x))=f^{-1}(f(x))=x=\id_A(x)\]since $f(x)\in f(A)$ for all $x\in A$. Therefore, we have shown that for all $x$ we have $(g\circ f)(x)=x=\id_A(x)$ - which implies, by the definition of function equality, that $g\circ f=\id_A$.
 	
 	This finishes the proof.
 \end{proof}
