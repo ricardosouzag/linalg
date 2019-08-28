@@ -751,6 +751,31 @@ A function is a monomorphism if, and only if, it is an injection.
 	A function $f:A\to B$ is called an \textbf{epimorphism} if given any other two functions $g,h:B\to C$, we have that $g\circ f=h\circ f$ implies $g=h$.
 \end{df}
 
+\begin{ex}
+	Let $f:\{a,b,c\}\to\{1,2\}$ be defined by $f(a)=f(b)=1$ and $f(c)=2$. We claim that $f$ is epic.
+	
+	To see that, take any two functions $g,h:\{1,2\}\to C$ such that $g\circ f=h\circ f$. We want to show that $g=h$ - that is, for any $x\in\{1,2\}$, we have that $g(x)=h(x)$.
+	
+	But since $f$ is surjective (check!), there is some $y\in\{a,b,c\}$ such that, then $x=f(y)$, so
+	\[g(x)=g(f(y))=(g\circ f)(y)=(h\circ f)(y)=h(f(y))=h(x)\]and therefore we see that $g=h$, which proves that $f$ is indeed an epimorphism.
+\end{ex}
+
+\begin{theorem}
+	A function $f:A\to B$ is an epimorphism if, and only if, it is a surjection.
+\end{theorem}
+\begin{proof}
+	First, let us assume that \(f:A\to B\) is surjective. Then, given \(g,h:B\to C\) such that\(g\circ f= h\circ f\) we wish to show that $g=h$. We can just proceed as above: Proving that $g=h$ is the same as proving that for all $x\in B$, we have that $g(x)=h(x)$, but since $f$ is surjective, by assumption, we have that there is some $y\in A$ such that $x=f(y)$. It follows then that
+	\[g(x)=g(f(y))=(g\circ f)(y)=(h\circ f)(y)=h(f(y))=h(x)\]and therefore $h=g$, which shows that $f$ is epic.
+	
+	 Conversely, assume that $f$ is epic, and let $C=\{c,c'\}$. Now pick a point $b\in B$ and define $g,h:B\to C$ by putting $g(x)=c$ for all $x\in B$, $h(b)=c'$ and $h(x)=c$ if $x\neq b$.
+	 
+	 Now, $g(b)\neq h(b)$, so $g\neq h$. Since $f$ is epic, we must then have that $g\circ f\neq h\circ f$, by definition of epimorphism. This means that there is some $a\in A$ such that $g(f(ay))\neq h(f(a))$.
+	 
+	 Since $g$ takes everyone to $c$, the only possible value of $h(f(a))$ that could be different from that is is $h(f(a))=c'$, but the only element of $B$ that is taken to $c'$ by $h$ is $b$ - this means that $f(a)=b$.
+	 
+	 We have just proven that given any $b\in B$ there is some $a\in A$ such that $f(a)=b$ - that is, $f$ is surjective, which finishes the proof.
+\end{proof}
+
 %\subsection{Operating on sets}
 %
 %We've defined unions and intersections as operations on sets, but they might not be what you expect. 
