@@ -724,7 +724,7 @@ Now that that's out of the way, we need to start working towards more interestin
 	This shows that $g=h$, and, therefore, $f$ is a monomorphism.
 \end{ex}
 
-\begin{theorem}
+\begin{theorem}\label{thm:mono is inj}
 A function is a monomorphism if, and only if, it is an injection.
 \end{theorem}
 \begin{proof}
@@ -776,7 +776,7 @@ A function is a monomorphism if, and only if, it is an injection.
 	 We have just proven that given any $b\in B$ there is some $a\in A$ such that $f(a)=b$ - that is, $f$ is surjective, which finishes the proof.
 \end{proof}
 
-\begin{lemma}\label{lem: iso is epi}
+\begin{lemma}\label{lem:iso is epi}
 	Every isomorphism is an epimorphism.
 \end{lemma}
 \begin{proof}
@@ -790,13 +790,20 @@ A function is a monomorphism if, and only if, it is an injection.
 
 Clearly, by what we've already shown, bijections and bimorphisms are the same thing. However, we can do one better than that:
 
+\begin{lemma}
+	Every monomorphism $f:A\to B$ has a left-inverse, that is, a function $g:B\to A$ such that $\id_A=g\circ f$.
+\end{lemma}
+\begin{proof}
+	Let $f:A\to B$ be a monomorphism and let $\im(f)$ be the set of all elements of $B$ which are image of some element of $A$ under $f$. Since $f$ is monic, by \cref{thm:mono is inj}, we see that $f$ is injective. This means that if we take two different points $a\neq a'\in A$ then their images under $f$ will also be different - $f(a)\neq f(a')\in\im(f)$.
+\end{proof}
+
 \begin{theorem}
 	A function $f$ is an isomorphism if, and only if, it is a bimorphism.
 \end{theorem}
 \begin{proof}
-	In light of \ref{lem: iso is epi,lem:iso is mono}, we see that every isomorphism is monic and epic and, therefore, a bimorphism.
+	In light of \cref{lem:iso is epi,lem:iso is mono}, we see that every isomorphism is monic and epic and, therefore, a bimorphism.
 	
-	
+	Take now any bimorphism $f:A\to B$.
 \end{proof}
 
 %\subsection{Operating on sets}
