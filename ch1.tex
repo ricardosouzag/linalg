@@ -795,6 +795,12 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 \end{lemma}
 \begin{proof}
 	Let $f:A\to B$ be a monomorphism and let $\im(f)$ be the set of all elements of $B$ which are image of some element of $A$ under $f$. Since $f$ is monic, by \cref{thm:mono is inj}, we see that $f$ is injective. This means that if we take two different points $a\neq a'\in A$ then their images under $f$ will also be different - $f(a)\neq f(a')\in\im(f)$.
+	
+	We then define $g:B\to A$ by
+	$$g(b)=\begin{cases}
+	\mbox{ the unique }a\in A \mbox{ such that } f(a)=b, \mbox{ if }b\in\im(f)\\
+	\mbox{anything, otherwise.}
+	\end{cases}$$
 \end{proof}
 
 \begin{theorem}
