@@ -998,28 +998,9 @@ And now, finally, to end this section, some technical results that appear all th
 		
 		\item If $g\circ f$ is epic, by \cref{lem: epi right-inverse}, we see that there is some function $h:B\to C$ that is a right-inverse to $g\circ f$ - that is, $\id_B=(g\circ f)\circ h$. But now, by \cref{prop: composition is associative}, we see that $(g\circ f)\circ h=g\circ(f\circ h)$ and, therefore, $\id_B=g\circ(f\circ h)$ and we see that $f\circ h$ is a right-inverse to $g$. Now, the converse of \cref{lem: epi right-inverse} tells us that since $g$ has a right-inverse, it must be epic.
 		
-		\item Since $f$ and $g\circ f$ are iso, there are inverses $f^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_A=(g\circ f)^{-1}\circ(g\circ f),$$ and composing by $f^{-1}$ on the right on both sides of this equation gives us $$f^{-1}=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}.$$ Now we see that
-		\begin{align*}
-			f^{-1}&=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}\\&=(g\circ f)^{-1}\circ((g\circ f)\circ f^{-1})\\&=(g\circ f)^{-1}\circ(g\circ (f\circ f^{-1}))\\&=(g\circ f)^{-1}\circ(g\circ \id_B)=(g\circ f)^{-1}\circ g.
-		\end{align*}
+		\item If $g\circ f$ and $f$ are iso, so is $f^{-1}$ (its inverse is precisely $f$). Therefore, the equality $g\circ f=g\circ f$ yields the equality $(g\circ f)\circ f^{-1}=g$ by composing $f^{-1}$ to the right on both sides of the equality. Now we use item (c) to conclude that since $g$ is the composition of two isomorphisms, it is also an isomorphism.
 		
-		Finally, by composing $f$ on the left on both sides of the equation we get $$\id_B=(f\circ (g\circ f)^{-1})\circ g,$$ and so $f\circ(g\circ f)^{-1}$ is a left-inverse for $g$.
-		
-		But it is also clearly a right-inverse: 
-		\[g\circ(f\circ(g\circ f)^{-1})=(g\circ f)\circ(g\circ f)^{-1}=\id_C\]so $g$ has an inverse and is, therefore, an isomorphism.
-		\item Since $g$ and $g\circ f$ are iso, there are inverses $g^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_C=(g\circ f)\circ(g\circ f)^{-1},$$ and composing by $g^{-1}$ on the left on both sides of this equation gives us $$g^{-1}=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1}).$$ Now we see that
-		\begin{align*}
-		g^{-1}&=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1})\\
-		&=(g^{-1}\circ(g\circ f))\circ(g\circ f)^{-1}\\
-		&=((g^{-1}\circ g)\circ f)\circ(g\circ f)^{-1}\\
-		&=((\id_B)\circ f)\circ(g\circ f)^{-1}
-		=f\circ(g\circ f)^{-1}
-		\end{align*}
-		
-		Finally, by composing $g$ on the right on both sides of the equation we get $$\id_B=f\circ ((g\circ f)^{-1}\circ g),$$ and so $(g\circ f)^{-1}\circ g$ is a right-inverse for $f$.
-		
-		But it is also clearly a left-inverse: 
-		\[((g\circ f)^{-1}\circ g)\circ f=(g\circ f)^{-1}\circ (g\circ f)=\id_A\]so $f$ has an inverse and is, therefore, an isomorphism.
+		\item If $g\circ f$ and $g$ are iso, so is $g^{-1}$ (its inverse is precisely $g$). Therefore, the equality $g\circ f=g\circ f$ yields the equality $g^{-1}\circ(g\circ f)=f$ by composing $g^{-1}$ to the left on both sides of the equality. Now we use item (c) to conclude that since $f$ is the composition of two isomorphisms, it is also an isomorphism.
 	\end{enumerate}
 
 This ends the proof.
