@@ -932,7 +932,7 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 \end{proof}
 
 \begin{lemma}\label{lem: epi right-inverse}
-	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$.
+	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$, and every function which has a right-inverse is an epimorphism.
 \end{lemma}
 \begin{proof}
 	Let $f:A\to B$ be an epimorphism, and consider $f(A)$ its image. By \cref{thm: epi is surj}, we know that $g$ is a surjection. Since $g$ is a surjection, then, for every $b\in B$ the set $f^{-1}(b)$ is well defined (by definition of surjection).
@@ -941,6 +941,13 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	
 	This is clearly a function (check!), and so we can do, for evrey $b\in B$:
 	\[(f\circ g)(b)=f(g(b))=f(a_b)=b=\id_B(b)\]and therefore $f\circ g$ and $\id_B$ are equal in every point - which means that they're equal, and $g$ is a right-inverse for $f$, as stated.
+	
+	\bigskip
+	Take now $f:A\to B$ a function with a right-inverse $g:B\to A$ - that is, $f\circ g=\id_B$. Now take two functions $h,j:B\to C$ such that $h\circ f=j\circ f$. We want to show that $h=j$ (and, therefore, $f$ is epic).
+	
+	Since $h\circ f=j\circ f$, we can compose $g$ on the right on both sides of the equation to obtain $(h\circ f)\circ g=(j\circ f)\circ g$, which, by \cref{prop: composition is associative}, is the same as $h\circ(f\circ g)=j\circ(f\circ g)$, and since $g$ is a right-inverse to $f$, we can further affirm that this is the same as $h\circ\id_B=j\circ\id_B$. Finally, by the definition of $\id_B$, we see that this implies $h=j$ - and therefore $f$ is epic, as stated.
+	
+	This finishes the proof.
 \end{proof}
 
 \begin{lemma}\label{lem:left- = right-inverse}
@@ -966,8 +973,11 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 And now, finally, to end this section, some technical results that appear all the time in mathematics.
 
 \begin{lemma}
-	Let $A\arrow{f}B\arrow{g}C$ be two functions such that $g\circ f$ is injective (resp. surjective). Then $f$ is also injective (resp. $g$ is also surjective).
+	Let $A\arrow{f}B\arrow{g}C$ be two functions such that $g\circ f$ is monic (resp. epic). Then $f$ is also monic (resp. $g$ is also epic).
 \end{lemma}
 \begin{proof}
-	If $g\circ f$ is injective, by \cref{lem: mono left-inverse}, we see that there is some function $h:C\to A$ that is a left-inverse to $g\circ f$ - that is, $\id_A=h\circ(g\circ f)$. But now, by \cref{prop: composition is associative}, we see that $h\circ(g\circ f)=(h\circ g)\circ f$ and, therefore, $\id_A=(h\circ g)\circ f$ and we see that $h\circ g$ is a left-inverse for $f$. 
+	If $g\circ f$ is monic, by \cref{lem: mono left-inverse}, we see that there is some function $h:C\to A$ that is a left-inverse to $g\circ f$ - that is, $\id_A=h\circ(g\circ f)$. But now, by \cref{prop: composition is associative}, we see that $h\circ(g\circ f)=(h\circ g)\circ f$ and, therefore, $\id_A=(h\circ g)\circ f$ and we see that $h\circ g$ is a left-inverse for $f$. Now the converse of \cref{lem: mono left-inverse} tells is that since $f$ has a left-inverse, it must be monic.
+	
+	\bigskip
+	Anaolgously, if $g\circ f$ is epic, by \cref{lem: epi right-inverse}, we see that there is some function $h:B\to C$ that is a right-inverse to $g\circ f$ - that is, $\id_B=(g\circ f)\circ h$. But now, by \cref{prop: composition is associative}, we see that $(g\circ f)\circ h=g\circ(f\circ h)$ and, therefore, $\id_B=g\circ(f\circ h)$ and we see that $f\circ h$ is a right-inverse to $g$.
 \end{proof}
