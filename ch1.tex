@@ -876,7 +876,12 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$.
 \end{lemma}
 \begin{proof}
-	Let $f:A\to B$ be an epimorphism, and consider $f(A)$ its image. By \cref{thm: epi is surj}, we know that $g$ is a surjection.
+	Let $f:A\to B$ be an epimorphism, and consider $f(A)$ its image. By \cref{thm: epi is surj}, we know that $g$ is a surjection. Since $g$ is a surjection, then, for every $b\in B$ the set $f^{-1}(b)$ is well defined (by definition of surjection).
+	
+	Now, choose $a_b\in f^{-1}(b)$ for each $b\in B$ (here the index is simply so we know where it came from), and consider the function $g:B\to A$ taking each $b$ to the $a_b$ we chose above.
+	
+	This is clearly a function (check!), and so we can do, for evrey $b\in B$:
+	\[(f\circ g)(b)=f(g(b))=f(a_b)=b=\id_B(b)\]and therefore $f\circ g$ and $\id_B$ are equal in every point - which means that they're equal, and $g$ is a right-inverse for $f$, as stated.
 \end{proof}
 
 \begin{lemma}\label{lem:left- = right-inverse}
