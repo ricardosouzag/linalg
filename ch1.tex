@@ -796,7 +796,7 @@ The reader is encouraged to \textbf{not} skip this section, although I don't own
 	Given a function $f:A\to B$, we say that \textbf{$f$ is an isomorphism} if there is some function $g:B\to A$ such that $f\circ g=\id_B$ and $g\circ f=\id_A$. In this case, we say that $g$ is an \textbf{inverse} for $f$.
 \end{df}
 
-\begin{prop}
+\begin{prop}\label{prop: composition is associative}
 	Function composition is associative - that is, if $A\arrow{f}B\arrow{g}C\arrow{h}D$, then $h\circ(g\circ f)=(h\circ g)\circ f$.
 \end{prop}
 \begin{proof}
@@ -909,7 +909,7 @@ A function is a monomorphism if, and only if, it is an injection.
 Clearly, by what we've already shown, bijections and bimorphisms are the same thing. However, we can do one better than that:
 
 \begin{lemma}\label{lem: mono left-inverse}
-	Every monomorphism $f:A\to B$ has a left-inverse, that is, a function $g:B\to A$ such that $\id_A=g\circ f$.
+	Every monomorphism $f:A\to B$ has a left-inverse, that is, a function $g:B\to A$ such that $\id_A=g\circ f$, and every function which has a left-inverse is a monomorphism.
 \end{lemma}
 \begin{proof}
 	Let $f:A\to B$ be a monomorphism and consider $f(A)$. Since $f$ is monic, by \cref{thm:mono is inj} we see that $f$ is injective, which means that for all $b\in f(A)$ we have that $f^{-1}(b)$ is a single point in $A$.
@@ -922,6 +922,11 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	
 	We claim that this $g$ is a left-inverse for $f$. Indeed, for any $x\in A$ we have
 	\[(g\circ f)(x)=g(f(x))=f^{-1}(f(x))=x=\id_A(x)\]since $f(x)\in f(A)$ for all $x\in A$. Therefore, we have shown that for all $x$ we have $(g\circ f)(x)=x=\id_A(x)$ - which implies, by the definition of function equality, that $g\circ f=\id_A$.
+	
+	\bigskip
+	Take now $f:A\to B$ a function that has a left-inverse $g:B\to A$ - that is, $\id_A=g\circ f$. Now take two functions $h,j:C\to A$ such that $f\circ h=f\circ j$. We want to show that $h=j$ (and therefore, $f$ is monic).
+	
+	Since $f\circ h=f\circ j$, we can compose $g$ on the left on both sides of the equation to obtain $g\circ (f\circ h)=g\circ(f\circ j)$, which, by \cref{prop: composition is associative}, is the same as $(g\circ f)\circ h=(g\circ f)\circ j$, and since $g$ is a left-inverse to $f$, we can further affirm that this is the same as $\id_A\circ h=\id_A\circ j$. Finally, by the definition of $\id_A$, we see that this implies $h=j$ - and therefore $f$ is monic, as stated.
 	
 	This finishes the proof.
 \end{proof}
@@ -954,14 +959,15 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	
 	Conversely, by \cref{lem: mono left-inverse,lem: epi right-inverse} we see that any bimorphism has both a left- and a right-inverse. But now, \cref{lem:left- = right-inverse} shows us that since every bimorphism has a left- and a right-inverse, it must be an isomorphism, which ends the proof.
 \end{proof}
+\begin{cor}
+	Every bijection has a unique inverse.
+\end{cor}
 
-%\subsection{Operating on sets}
-%
-%We've defined unions and intersections as operations on sets, but they might not be what you expect. 
-%\subsection{Relations are hard, and often leave us broken inside}
-%
-%Now that we have the power (set) we can start working with relations.
-%
-%\begin{df}
-%	Given a set $X$
-%\end{df}
+And now, finally, to end this section, some technical results that appear all the time in mathematics.
+
+\begin{lemma}
+	Let $A\arrow{f}B\arrow{g}C$ be two functions such that $g\circ f$ is injective (resp. surjective). Then $f$ is also injective (resp. $g$ is also surjective).
+\end{lemma}
+\begin{proof}
+	If $g\circ f$ is injective, by \cref{lem: mono left-inverse}, we see that there is some function $h:C\to A$ that is a left-inverse to $g\circ f$ - that is, $\id_A=h\circ(g\circ f)$. But now, by \cref{prop: composition is associative}, we see that $h\circ(g\circ f)=(h\circ g)\circ f$ and, therefore, $\id_A=(h\circ g)\circ f$ and we see that $h\circ g$ is a left-inverse for $f$. 
+\end{proof}
