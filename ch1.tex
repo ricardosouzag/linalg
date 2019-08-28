@@ -876,6 +876,14 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$.
 \end{lemma}
 
+\begin{lemma}
+	If a function $f:A\to B$ is such that $g,h:B\to A$ are a left- and a right-inverse, respectively, then $g=h$, $f$ is an isomorphism and $g$ is its inverse.
+\end{lemma}
+\begin{proof}
+	It follows trivially by the following computation:
+	\[g=g\circ\id_B=g\circ(f\circ h)=(g\circ f)\circ h=\id_A\circ h=h,\]which shows at once that $g=h$. This means that $\id_A=g\circ f$ and $\id_B=f\circ g$ - and therefore $g$ is an inverse to $f$, which shows that $f$ is an isomorphism, as stated.
+\end{proof}
+
 \begin{theorem}
 	A function $f$ is an isomorphism if, and only if, it is a bimorphism.
 \end{theorem}
