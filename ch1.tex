@@ -824,7 +824,7 @@ A function is a monomorphism if, and only if, it is an injection.
 	\[g(x)=g(f(y))=(g\circ f)(y)=(h\circ f)(y)=h(f(y))=h(x)\]and therefore we see that $g=h$, which proves that $f$ is indeed an epimorphism.
 \end{ex}
 
-\begin{theorem}
+\begin{theorem}\label{thm: epi is surj}
 	A function $f:A\to B$ is an epimorphism if, and only if, it is a surjection.
 \end{theorem}
 \begin{proof}
@@ -875,6 +875,9 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 \begin{lemma}\label{lem: epi right-inverse}
 	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$.
 \end{lemma}
+\begin{proof}
+	Let $f:A\to B$ be an epimorphism, and consider $f(A)$ its image. By \cref{thm: epi is surj}, we know that $g$ is a surjection.
+\end{proof}
 
 \begin{lemma}\label{lem:left- = right-inverse}
 	If a function $f:A\to B$ is such that $g,h:B\to A$ are a left- and a right-inverse, respectively, then $g=h$, $f$ is an isomorphism and $g$ is its inverse.
