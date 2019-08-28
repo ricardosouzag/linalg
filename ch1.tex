@@ -717,6 +717,7 @@ We can use this lemma to easily determine whether a function is, or isn't, an in
 	
 	Well, $f$ takes two different points ($a$ and $c$) to the same point ($1$), so it can't be injective.
 	
+	\bigskip
 	Actually - is it possible for there to be an injective function from $\{a,b,c\}$ to $\{1,2\}$?
 	
 	Let's try making one: First, we choose an image for $a$ - it can be either $1$ or $2$ - doesn't matter which. Now, to choose an image for $b$ we can't choose the same point as we chose for $a$ - otherwise $f$ won't be injective. So $b$'s image is now uniquely determined: the only point left in $\{1,2\}$ after we take out $f(a)$. Finally, when we try to choose an image for $c$, it can't be $f(a)$, nor can in be $f(b)$ (otherwise, $f$ wouldn't be injective). But $\{1,2\}=\{f(a),f(b)\}$ - that is, if $f(c)$ can't be $f(a)$ and it can't be $f(b)$, then there's \textbf{nothing} that it can be!
@@ -743,6 +744,19 @@ We can use this lemma to easily determine whether a function is, or isn't, an in
 
 Since $g$ is both injective and surjective, it is, by definition, a bijection, which ends the proof.
 \end{proof}
+
+Analogously to injections, this lemma gives us a clear cut method for distinguishing surjections:
+
+\begin{ex}
+	Let $f:\{1,2\}\to\{a,b,c\}$ be given by $f(1)=a$ and $f(2)=b$. Clearly, then, $f$ isn't surjective, because there is one point in its codomain ($c$) which is not the image of any point of the domain under $f$.
+	
+	\bigskip
+	And then we ask: Can there ever be a surjective function from $\{1,2\}$ to $\{a,b,c\}$?
+	
+	Once again, let's try building one: First, we choose $f(1)$. It can be anything, so choose anything. Now to choose $f(2)$, there's also no restrictions, but remember that we're trying to make a function that ``covers'' $\{a,b,c\}$ with guys from $\{1,2\}$, so even though we could put $f(2):=f(1)$, it makes sense to choose $f(2)$ to be anything aside from $f(1)$... And we're done. 
+	
+	Notice, however, that no matter \textbf{how} we do that coice, there'll always be some point left in $\{a,b,c\}$. Therefore, there can be no surjections from $\{1,2\}$ to $\{a,b,c\}$.
+\end{ex}
 
 Now that that's out of the way, we need to start working towards more interesting results. For that, we'll need some definitions first.
 
