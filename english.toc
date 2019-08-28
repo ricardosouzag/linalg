@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {1.2.2}United we stand, intersected we... Fall?}{9}{subsection.1.2.2}
 \contentsline {section}{\numberline {1.3}Time to do some actual set theory, none of this introductory bullshit}{16}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}How does this function}{16}{subsection.1.3.1}
+\contentsline {subsubsection}{Bijection is the new equality}{21}{section*.2}
