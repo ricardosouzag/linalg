@@ -603,6 +603,32 @@ Since this is a naive introduction to set theory, we're not gonna bother with ce
 	\end{align*}	
 \end{ex}
 
+Before we move forward, a couple of important definitions:
+
+\begin{df}
+	Given any function $f:A\to B$, the set of all elements of $B$ which are image of some element of $A$ under $f$ will be called the \textbf{image of $A$ under $f$} (or just the image of $f$) and denoted by $f(A)$ (or $\im(f)$).
+	
+	Analogously, given any $X\subseteq A$, we denote the set of all elements of $B$ which are image of some element of $X$ under $f$ by \textbf{image of $f$ when restricted to $X$}, and denote it by $f(X)$.
+\end{df}
+\begin{prop}
+	For any function $f:A\to B$, and any $X\subseteq A$, $f(X)\subseteq B$.
+\end{prop}
+\begin{proof}
+	Trivial, by the definition of image of a function.
+\end{proof}
+
+\begin{df}
+	Given any function $f:A\to B$ and any point $b\in f(A)$, we define the \textbf{inverse image of $b$ under $f$} to be the set $f^{-1}(b):=\{a\in A\mid f(a)=b\}$ of all points in $A$ whose image under $f$ is precisely $b$.
+	
+	Analogously, given any $Y\subseteq f(A)$, we define the \textbf{inverse image of $Y$ under $f$} to be the set $f^{-1}(X):=\{a\in A\mid f(a)\in Y\}$ of all points in $A$ whose image under $f$ is in $Y$.
+\end{df}
+\begin{prop}
+	For any function $f:A\to B$, and any $Y\in f(A)$, $f^{-1}(Y)\subseteq A$.
+\end{prop}
+\begin{proof}
+	Trivial, by the definition of inverse image of a function.
+\end{proof}
+
 Finally we can start working with some very important classes of functions: Injections, surjections and bijections.
 
 \begin{df}
