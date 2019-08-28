@@ -994,44 +994,44 @@ And now, finally, to end this section, some technical results that appear all th
 		\item If $g\circ f$ and $g$ are iso, then so is $f$.
 	\end{enumerate}
 \end{lemma}
-\begin{proof}
-	\begin{enumerate}[(a)]
-		\item Assume both $f$ and $g$ are monic, and let $f':B\to A$ and $g':C\to B$ be their respective left-inverses. We claim that $f'\circ g'$ is a left-inverse to $g\circ f$. Indeed:
-		\[(f'\circ g')\circ(g\circ f)=f'\circ(g'\circ g)\circ f=f'\circ\id_B\circ f=f'\circ f=\id_A\]so $g\circ f$ is monic.
-		\item Assume both $f$ and $g$ are epic, and let $f':B\to A$ and $g':C\to B$ be their respective right-inverses. We claim that $f'\circ g'$ is a right-inverse to $g\circ f$. Indeed:
-		\[(g\circ f)\circ(f'\circ g')=g\circ(f\circ f')\circ g'=g\circ\id_B\circ g'=g\circ g'=\id_C\]so $g\circ f$ is epic.
-		\item Follows immediately from (a) and (b). In this case, since $f$ and $g$ are iso, we have inverses $f^{-1}$ and $g^{-1}$, and we can readily see that $f^{-1}\circ g^{-1}$ is an inverse for $g\circ f$.
-		\item Since $f$ and $g\circ f$ are iso, there are inverses $f^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_A=(g\circ f)^{-1}\circ(g\circ f),$$ and composing by $f^{-1}$ on the right on both sides of this equation gives us $$f^{-1}=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}.$$ Now we see that
-		\begin{align*}
-			f^{-1}&=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}\\&=(g\circ f)^{-1}\circ((g\circ f)\circ f^{-1})\\&=(g\circ f)^{-1}\circ(g\circ (f\circ f^{-1}))\\&=(g\circ f)^{-1}\circ(g\circ \id_B)=(g\circ f)^{-1}\circ g.
-		\end{align*}
-		
-		Finally, by composing $f$ on the left on both sides of the equation we get $$\id_B=(f\circ (g\circ f)^{-1})\circ g,$$ and so $f\circ(g\circ f)^{-1}$ is a left-inverse for $g$.
-		
-		But it is also clearly a right-inverse: 
-		\[g\circ(f\circ(g\circ f)^{-1})=(g\circ f)\circ(g\circ f)^{-1}=\id_C\]so $g$ has an inverse and is, therefore, an isomorphism.
-		\item Since $g$ and $g\circ f$ are iso, there are inverses $g^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_C=(g\circ f)\circ(g\circ f)^{-1},$$ and composing by $g^{-1}$ on the left on both sides of this equation gives us $$g^{-1}=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1}).$$ Now we see that
-		\begin{align*}
-		g^{-1}&=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1})\\
-		&=(g^{-1}\circ(g\circ f))\circ(g\circ f)^{-1}\\
-		&=((g^{-1}\circ g)\circ f)\circ(g\circ f)^{-1}\\
-		&=((\id_B)\circ f)\circ(g\circ f)^{-1}
-		=f\circ(g\circ f)^{-1}
-		\end{align*}
-		
-		Finally, by composing $g$ on the right on both sides of the equation we get $$\id_B=f\circ ((g\circ f)^{-1}\circ g),$$ and so $(g\circ f)^{-1}\circ g$ is a right-inverse for $f$.
-		
-		But it is also clearly a left-inverse: 
-		\[((g\circ f)^{-1}\circ g)\circ f=(g\circ f)^{-1}\circ (g\circ f)=\id_A\]so $f$ has an inverse and is, therefore, an isomorphism.
-	\end{enumerate}
-\end{proof}
+%\begin{proof}
+%	\begin{enumerate}[(a)]
+%		\item Assume both $f$ and $g$ are monic, and let $f':B\to A$ and $g':C\to B$ be their respective left-inverses. We claim that $f'\circ g'$ is a left-inverse to $g\circ f$. Indeed:
+%		\[(f'\circ g')\circ(g\circ f)=f'\circ(g'\circ g)\circ f=f'\circ\id_B\circ f=f'\circ f=\id_A\]so $g\circ f$ is monic.
+%		\item Assume both $f$ and $g$ are epic, and let $f':B\to A$ and $g':C\to B$ be their respective right-inverses. We claim that $f'\circ g'$ is a right-inverse to $g\circ f$. Indeed:
+%		\[(g\circ f)\circ(f'\circ g')=g\circ(f\circ f')\circ g'=g\circ\id_B\circ g'=g\circ g'=\id_C\]so $g\circ f$ is epic.
+%		\item Follows immediately from (a) and (b). In this case, since $f$ and $g$ are iso, we have inverses $f^{-1}$ and $g^{-1}$, and we can readily see that $f^{-1}\circ g^{-1}$ is an inverse for $g\circ f$.
+%		\item Since $f$ and $g\circ f$ are iso, there are inverses $f^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_A=(g\circ f)^{-1}\circ(g\circ f),$$ and composing by $f^{-1}$ on the right on both sides of this equation gives us $$f^{-1}=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}.$$ Now we see that
+%		\begin{align*}
+%			f^{-1}&=((g\circ f)^{-1}\circ(g\circ f))\circ f^{-1}\\&=(g\circ f)^{-1}\circ((g\circ f)\circ f^{-1})\\&=(g\circ f)^{-1}\circ(g\circ (f\circ f^{-1}))\\&=(g\circ f)^{-1}\circ(g\circ \id_B)=(g\circ f)^{-1}\circ g.
+%		\end{align*}
+%		
+%		Finally, by composing $f$ on the left on both sides of the equation we get $$\id_B=(f\circ (g\circ f)^{-1})\circ g,$$ and so $f\circ(g\circ f)^{-1}$ is a left-inverse for $g$.
+%		
+%		But it is also clearly a right-inverse: 
+%		\[g\circ(f\circ(g\circ f)^{-1})=(g\circ f)\circ(g\circ f)^{-1}=\id_C\]so $g$ has an inverse and is, therefore, an isomorphism.
+%		\item Since $g$ and $g\circ f$ are iso, there are inverses $g^{-1}$ and $(g\circ f)^{-1}$. From this, we have that $$\id_C=(g\circ f)\circ(g\circ f)^{-1},$$ and composing by $g^{-1}$ on the left on both sides of this equation gives us $$g^{-1}=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1}).$$ Now we see that
+%		\begin{align*}
+%		g^{-1}&=g^{-1}\circ((g\circ f)\circ(g\circ f)^{-1})\\
+%		&=(g^{-1}\circ(g\circ f))\circ(g\circ f)^{-1}\\
+%		&=((g^{-1}\circ g)\circ f)\circ(g\circ f)^{-1}\\
+%		&=((\id_B)\circ f)\circ(g\circ f)^{-1}
+%		=f\circ(g\circ f)^{-1}
+%		\end{align*}
+%		
+%		Finally, by composing $g$ on the right on both sides of the equation we get $$\id_B=f\circ ((g\circ f)^{-1}\circ g),$$ and so $(g\circ f)^{-1}\circ g$ is a right-inverse for $f$.
+%		
+%		But it is also clearly a left-inverse: 
+%		\[((g\circ f)^{-1}\circ g)\circ f=(g\circ f)^{-1}\circ (g\circ f)=\id_A\]so $f$ has an inverse and is, therefore, an isomorphism.
+%	\end{enumerate}
+%\end{proof}
+%
+And finally we end this section with a definition.
 
-%And finally we end this section with a definition.
-%
-%\begin{df}
-%	Two sets are said to have \textbf{the same cardinality} if they are isomorphic - that is, if there is an isomorphism between them. If $A$ and $B$ have the same cardinality, we will represent that in symbols by $\#A=\#B$.
-%\end{df}
-%
-%\begin{rmk}
-%	Notice that for finite sets, $\#A$ is precisely the formalization of the intuitive notion of ``number of elements of $A$''.
-%\end{rmk}
+\begin{df}
+	Two sets are said to have \textbf{the same cardinality} if they are isomorphic - that is, if there is an isomorphism between them. If $A$ and $B$ have the same cardinality, we will represent that in symbols by $\#A=\#B$.
+\end{df}
+
+\begin{rmk}
+	Notice that for finite sets, $\#A$ is precisely the formalization of the intuitive notion of ``number of elements of $A$''.
+\end{rmk}
