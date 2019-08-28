@@ -854,7 +854,7 @@ A function is a monomorphism if, and only if, it is an injection.
 
 Clearly, by what we've already shown, bijections and bimorphisms are the same thing. However, we can do one better than that:
 
-\begin{lemma}
+\begin{lemma}\label{lem: mono left-inverse}
 	Every monomorphism $f:A\to B$ has a left-inverse, that is, a function $g:B\to A$ such that $\id_A=g\circ f$.
 \end{lemma}
 \begin{proof}
@@ -872,11 +872,11 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	This finishes the proof.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lem: epi right-inverse}
 	Every epimorphism $f:A\to B$ has a right-inverse, that is, a function $g:B\to A$ such that $\id_B=f\circ g$.
 \end{lemma}
 
-\begin{lemma}
+\begin{lemma}\label{lem:left- = right-inverse}
 	If a function $f:A\to B$ is such that $g,h:B\to A$ are a left- and a right-inverse, respectively, then $g=h$, $f$ is an isomorphism and $g$ is its inverse.
 \end{lemma}
 \begin{proof}
@@ -890,7 +890,7 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 \begin{proof}
 	In light of \cref{lem:iso is epi,lem:iso is mono}, we see that every isomorphism is monic and epic and, therefore, a bimorphism.
 	
-	Take now any bimorphism $f:A\to B$.
+	Take now any bimorphism $f:A\to B$. By \cref{lem: mono left-inverse,lem: epi right-inverse} we see that $f$ has both a left- and a right-inverse. But now, \cref{lem:left- = right-inverse} shows us that $f$ is an isomorphism, which ends the proof.
 \end{proof}
 
 %\subsection{Operating on sets}
