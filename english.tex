@@ -144,12 +144,12 @@
 \newcounter{rmk}
 \numberwithin{rmk}{section}
 \renewcommand*{\thermk}{\arabic{chapter}.\arabic{section}.\arabic{df}}
-\newenvironment{rmk}{\stepcounter{df}\begin{tcolorbox}[breakable,colback=red!5!white,colframe=red!40!white,title=\normalsize {\sc\textbf{remark} \thermk},coltitle=black]}{\end{tcolorbox}}
+\newenvironment{rmk}{\stepcounter{df}\begin{tcolorbox}[breakable,colback=red!5!white,colframe=red!40!white,title=\normalsize {\textbf{Remark} \thermk},coltitle=black]}{\end{tcolorbox}}
 
 \newcounter{exerc}
 \numberwithin{exerc}{section}
 \renewcommand*{\theexerc}{(\arabic{chapter}.\arabic{section}.\arabic{exerc})}
-\newenvironment{exerc}{\stepcounter{exerc}\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=blue!40!white,title=\normalsize {\sc\textbf{exercise} \theexerc},coltitle=black]}{\end{tcolorbox}}
+\newenvironment{exerc}{\stepcounter{exerc}\begin{tcolorbox}[breakable,colback=blue!5!white,colframe=blue!40!white,title=\normalsize {\textbf{Exercise} \theexerc},coltitle=black]}{\end{tcolorbox}}
 
 \newenvironment{cdiag}{\begin{displaymath}\begin{tikzcd}}{\end{tikzcd}\end{displaymath}}
 \newenvironment{multicdiag}{\begin{equation*}\begin{tikzcd}
@@ -164,7 +164,7 @@
 
 \renewcommand{\setminus}{\mathbin{\mathchoice{\mysetminusD}{\mysetminusT}{\mysetminusS}{\mysetminusSS}}}
 
-\renewenvironment{proof}{\begin{tcolorbox}[breakable,colback=green!5!white,colframe=green!40!white,title=\normalsize {\textbf{\textsc{proof}}},coltitle=black]}{\qed\end{tcolorbox}}
+\renewenvironment{proof}{\begin{tcolorbox}[breakable,colback=green!5!white,colframe=green!40!white,title=\normalsize {\textbf{Proof}},coltitle=black]}{\qed\end{tcolorbox}}
 
 
 
