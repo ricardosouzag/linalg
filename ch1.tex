@@ -690,7 +690,7 @@ Finally, we can define:
 	Notice that bijections don't have to abide by our expectations (such is life).
 \end{ex}
 
-\begin{lemma}
+\begin{lemma}\label{lem: inj bij im}
 	If $f:A\to B$ is injective, then there is a bijection $g:A\to f(A)$.
 \end{lemma}
 \begin{proof}
@@ -710,7 +710,7 @@ Finally, we can define:
 Since $g$ is both injective and surjective, it is, by definition, a bijection, which ends the proof.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lem: surj iso im}
 	If $f:A\to B$ is surjective, then there is a bijection $g:f(A)\to B$.
 \end{lemma}
 \begin{proof}
@@ -858,13 +858,18 @@ Clearly, by what we've already shown, bijections and bimorphisms are the same th
 	Every monomorphism $f:A\to B$ has a left-inverse, that is, a function $g:B\to A$ such that $\id_A=g\circ f$.
 \end{lemma}
 \begin{proof}
-	Let $f:A\to B$ be a monomorphism and let $\im(f)$ be the set of all elements of $B$ which are image of some element of $A$ under $f$. Since $f$ is monic, by \cref{thm:mono is inj}, we see that $f$ is injective. This means that if we take two different points $a\neq a'\in A$ then their images under $f$ will also be different - $f(a)\neq f(a')\in\im(f)$.
+	Let $f:A\to B$ be a monomorphism and consider $f(A)$. Since $f$ is monic, by \cref{thm:mono is inj}, we see that $f$ is injective, which means that for all $b\in f(A)$ we have that $f^{-1}(b)$ is a single point in $A$.
 	
 	We then define $g:B\to A$ by
 	$$g(b)=\begin{cases}
-	\mbox{the unique }a\in A \mbox{ such that } f(a)=b, \mbox{ if }b\in\im(f)\\
-	\mbox{anything, otherwise.}
-	\end{cases}$$
+	f^{-1}(b), \mbox{ if }b\in f(A)\\
+	\mbox{a, otherwise,}
+	\end{cases}$$where $a\in A$ is any (literally any) element of $A$.
+	
+	We claim that this $g$ is a left-inverse for $f$. Indeed, for any $x\in A$ we have
+	\[(g\circ f)(x)=g(f(x))=f^{-1}(f(x))=x\]since $f(x)\in f(A)$ for all $x\in A$. Therefore, we have shown that for all $x$ we have $(g\circ f)(x)=x=\id_A(x)$ - which implies, by the definition of function equality, that $g\circ f=\id_A$.
+	
+	This finishes the proof.
 \end{proof}
 
 \begin{theorem}
