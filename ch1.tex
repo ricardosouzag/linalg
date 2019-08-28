@@ -776,6 +776,14 @@ A function is a monomorphism if, and only if, it is an injection.
 	 We have just proven that given any $b\in B$ there is some $a\in A$ such that $f(a)=b$ - that is, $f$ is surjective, which finishes the proof.
 \end{proof}
 
+\begin{lemma}
+	Every isomorphism is an epimorphism.
+\end{lemma}
+\begin{proof}
+	Let $f:A\to B$ be an isomorphism and $g,h:B\to C$ two functions such that $g\circ f=h\circ f$. Since $f$ is an isomorphism, it has an inverse $f^{-1}:B\to A$. Therefore:
+	\[g=g\circ\id_B=g\circ(f\circ f^{-1})=(g\circ f)\circ f^{-1}=(h\circ f)\circ f^{-1}=h\circ(f\circ f^{-1})=h\circ\id_B=h\]and we see that $g=h$, which proves that $f$ is an epimorphism.
+\end{proof}
+
 %\subsection{Operating on sets}
 %
 %We've defined unions and intersections as operations on sets, but they might not be what you expect. 
