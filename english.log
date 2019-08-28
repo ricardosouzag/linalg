@@ -1021,17 +1021,17 @@ Package rerunfilecheck Warning: File `english.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `english.out':
-(rerunfilecheck)             Before: DE583851CC345389C39C6C856034CDFC;765
-(rerunfilecheck)             After:  B7D1CCB9C27E5DFF041CD730CF7095BE;683.
+(rerunfilecheck)             Before: B7D1CCB9C27E5DFF041CD730CF7095BE;683
+(rerunfilecheck)             After:  4B5B174F47EF448D522271E2F307F9DC;766.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 32017 strings out of 492646
- 768421 string characters out of 6133325
+ 32016 strings out of 492646
+ 768415 string characters out of 6133325
  965926 words of memory out of 5000000
- 35183 multiletter control sequences out of 15000+600000
+ 35182 multiletter control sequences out of 15000+600000
  15006 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,691s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1047,10 +1047,10 @@ mr17.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c
 /2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (27 pages, 247784 bytes).
+Output written on english.pdf (27 pages, 247621 bytes).
 PDF statistics:
- 406 PDF objects out of 1000 (max. 8388607)
- 360 compressed objects within 4 object streams
+ 402 PDF objects out of 1000 (max. 8388607)
+ 356 compressed objects within 4 object streams
  172 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
