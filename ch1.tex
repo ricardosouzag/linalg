@@ -1114,3 +1114,10 @@ Now that this is done, let us define new sets using universal properties:
 		\item If $Z$ is some set with functions $p_X:Z\to X$ and $p_Y:Z\to Y$, then there is a unique function $p:Z\to X\prod Y$ such that $p_X=\pi_X\circ p$ and $p_Y=\pi_Y\circ p$.
 	\end{enumerate}
 \end{df}
+
+We usually denote this using the following diagram:
+\[\begin{tikzcd}
+& Z \arrow[ldd, "p_X"', bend right] \arrow[rdd, "p_Y", bend left] \arrow[d, "\exists!p", dashed] &   \\
+& X\prod Y \arrow[ld, "\pi_X"] \arrow[rd, "\pi_Y"]                                               &   \\
+X &                                                                                                & Y
+\end{tikzcd}\]
