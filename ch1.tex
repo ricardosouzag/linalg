@@ -1100,3 +1100,17 @@ Finally, before defining new sets using universal properties, let us prove a cou
 	
 	But since the image is a singleton ($\im f=\{f(a)\}$), we have that $T$ is a singleton as well, which ends the proof.
 \end{proof}
+
+\begin{rmk}
+	For reasons that will become clearer further ahead, for here onwards we're gonna denote the unique initial set by $0$ and the unique terminal set by $1$ (sometimes by $*$ to avoid misconceptions and misunderstandings).
+\end{rmk}
+
+Now that this is done, let us define new sets using universal properties:
+
+\begin{df}
+	Let $X$ and $Y$ be two sets. We define the \textbf{product of $X$ and $Y$} to be the set $X\prod Y$ which is terminal in the class of sets with functions to both $X$ and $Y$ - this means that:
+	\begin{enumerate}[i.]
+		\item There are functions $\pi_X:X\prod Y\to X$ and $\pi_Y:X\prod Y\to Y$;
+		\item If $Z$ is some set with functions $p_X:Z\to X$ and $p_Y:Z\to Y$, then there is a unique function $p:Z\to X\prod Y$ such that $p_X=\pi_X\circ p$ and $p_Y=\pi_Y\circ p$.
+	\end{enumerate}
+\end{df}
