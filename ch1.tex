@@ -1123,11 +1123,24 @@ X &                                                                             
 \end{tikzcd}\]
 This means that no matter which path we take on the diagram, the end result should be the same.
 
-Now, this may seem very abstract and weird at first. But I assure you you already know what that is.
+Now, this may seem very abstract and weird at first. But I assure you that you already know what that is.
 
 \begin{df}
 	Let $X$ and $Y$ be two sets. We define the \textbf{cartesian product of $X$ and $Y$} to be the set $X\times Y$ of all ordered pairs $(x,y)$ such that $x\in X$ and $y\in Y$.
 \end{df}
+
+This is a well-known definition.
+
+\begin{ex}
+	Let $A=\{a,b,c\}$ and $B=\{1,2\}$. Then $A\times B=\{(a,1),(a,2),(b,1),(b,2),(c,1),(c,2)\}$ is the cartesian product of $A$ and $B$.
+	
+	Let $C=\{$yellow pants, brown pants, shorts$\}$ and $D=\{$crop top, black shirt, sweater, jacket$\}$. Then $C\times D$ is the set of all possible combinations of pants types ($C$) and shirt types ($D$) in your closet.
+\end{ex}
+
+Now, since the two previous definitions have such similar names they must be related in some way, right? Well...
 \begin{prop}
 	For any two sets $X$ and $Y$, their cartesian product $X\times Y$ is the product $X\prod Y$.
 \end{prop}
+\begin{proof}
+	We have to show two things: (i.) There are functions $\pi_X:X\times Y\to X$ and $\pi_Y:X\times Y \to Y$ and; (ii.) It is terminal with that property.
+\end{proof}
