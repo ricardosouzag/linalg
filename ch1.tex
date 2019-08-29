@@ -1166,3 +1166,25 @@ Now, since the two previous definitions have such similar names they must be rel
 	
 	It follows then that the $p$ we've defined is the unique function with that property, so $X\times Y$ is indeed the product of $X$ and $Y$, which ends the proof.
 \end{proof}
+
+What's the advantage of defining via universal property instead of just outright using the classical definition? Well...
+
+It's easy to prove that, using the classical definition, we can take any finite number of sets $\{A_i\}_{i\leq n}$ and take their product $A_1\times A_2\times\cdots\times A_n$ to be the iterated product:
+
+$A_1$ and $A_2$ are well-defined, so $A_1\times A_2$ is well-defined.
+
+But now, $A_1\times A_2$ and $A_3$ are well-defined, so $(A_1\times A_2)\times A_3$ is well-defined. And so on, up to $A_n$.
+
+But try doing that for infinitely many sets. Heck, try doing that for an uncountable amount of sets. 
+
+It's not easy to see how to even \textit{define} such an operation.
+
+However, using the universal property, we can define the product of \textit{any} amount of sets:
+
+\begin{df}
+	Let $\{A_i\}_{i\in I}$ be a collection of sets indexed by another set $I$ (which can be infinite, finite, countable, uncountable, doesn't matter, as long as it's a set). We define $\prod_{i\in I}A_i$ to be the set given by:
+	\begin{enumerate}[i.]
+		\item There is a set $\{\pi_n:\prod_{i\in I}A_i\to A_n\}_{n\in I}$ of functions from $\prod_{i\in I}A_i$ to $A_n$, for each $n\in I$;
+		\item If $Z$ is a set with a set of functions $\{p_n:Z\to A_n\}_{n\in I}$ from $Z$ to $A_n$, for each $n\in I$, then there's a unique function $p:Z\to\prod_{i\in I}A_i$ such that we have a set of equalities $\{p_n=\pi_n\circ p\}_{n\in I}$.
+	\end{enumerate}
+\end{df}
