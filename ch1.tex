@@ -1182,7 +1182,7 @@ It's not easy to see how to even \textit{define} such an operation.
 However, using the universal property, we can define the product of \textit{any} amount of sets:
 
 \begin{df}
-	Let $\{A_i\}_{i\in I}$ be a collection of sets indexed by another set $I$ (which can be infinite, finite, countable, uncountable, doesn't matter, as long as it's a set). We define $\prod_{i\in I}A_i$ to be the set given by:
+	Let $\{A_i\}_{i\in I}$ be a collection of sets indexed by another set $I$ (which can be infinite or finite, countable or uncountable, doesn't matter, as long as it's a set). We define $\prod_{i\in I}A_i$ to be the set given by:
 	\begin{enumerate}[i.]
 		\item There is a set $\{\pi_n:\prod_{i\in I}A_i\to A_n\}_{n\in I}$ of functions from $\prod_{i\in I}A_i$ to $A_n$, for each $n\in I$;
 		\item If $Z$ is a set with a set of functions $\{p_n:Z\to A_n\}_{n\in I}$ from $Z$ to $A_n$, for each $n\in I$, then there's a unique function $p:Z\to\prod_{i\in I}A_i$ such that we have a set of equalities $\{p_n=\pi_n\circ p\}_{n\in I}$.
