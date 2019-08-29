@@ -1150,5 +1150,17 @@ Now, since the two previous definitions have such similar names they must be rel
 	
 	Well, take $z\in Z$ and follow it around: If we apply $p_X$ to $z$ we get $p_X(z)\in X$, and, similarly, applying $p_Y$ we get $p_Y(z)\in Y$. Since $p_X(z)$ is in $X$ and $p_Y(z)$ is in $Y$, by definition of cartesian product we have that $(p_X(z),p_Y(z))$ is in $X\times Y$.
 	
-	Now, clearly we have that $\pi_X(p_X(z),p_Y(z))=p_X(z)$ and $\pi_Y(p_X(z),p_Y(z))=p_Y(z)$ (this is precisely how we defined $\pi_X$ and $\pi_Y$ above).
+	Now, clearly we have that $\pi_X(p_X(z),p_Y(z))=p_X(z)$ and $\pi_Y(p_X(z),p_Y(z))=p_Y(z)$ (this is precisely how we defined $\pi_X$ and $\pi_Y$ above). So it is obvious what we must define $p:Z\to X\times Y$ to be:
+	
+	\[p(z):=(p_X(z),p_Y(z))\]for all $z\in Z$.
+	
+	This is clearly a function from $Z$ to $X\times Y$ and, by definition, $p_X=\pi_X\circ p$ and $p_Y=\pi_Y\circ p$.
+	
+	
+	\bigskip
+	To finish this, we need to show that this $p$ is unique. Well, suppose there is another function, $q:Z\to X\times Y$ such that $p_X=\pi_X\circ q$ and $p_Y=\pi_Y\circ q$. But then, for every $z\in Z$ we'd have that $p_X(z)=\pi_X(q(z))$ and $p_Y(z)=\pi_Y(q(z))$.
+	
+	This means that $q(z)$ is a point in $X\times Y$ whose $X$-coordinate is $p_X(z)$ (this is what the equation $p_X(z)=\pi_X(q(z))$ tells us), and whose $Y$-coordinate is $p_Y$ (this is what the equation \(p_Y(z)=\pi_Y(q(z))\) tells us). Therefore, $q(z)=(p_X(z),p_Y(z))$ and the RHS is just $p(z)$, by definition. So we have $q(z)=p(z)$ for all $z\in Z$ - which implies, by the definition of function equality, that $q=p$.
+	
+	It follows then that the $p$ we've defined is the unique function with that property, so $X\times Y$ is indeed the product of $X$ and $Y$, which ends the proof.
 \end{proof}
