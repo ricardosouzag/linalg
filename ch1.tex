@@ -1024,15 +1024,35 @@ Before that, though, let's have a quick talk about \textit{universal properties}
 
 A \textit{universal property} is a way of defining something by saying it's somewhat singular in the universe. For instance, when defining the union and intersection of two sets, we didn't use the classical definition, but, instead, used a universal property to define those sets.
 
-Similarly, as we've seen above, inverses are also universal properties.
-
 Here's the advantage of working with universal properties:
 
-\begin{blockenv}{Definition}
-	We say that a set $X$ is \textbf{initial} with regards to the property $p$ if
-	\begin{enumerate}[i.]
-		\item $p(X)$;
-		\item If there is some $Y$ such that $p(Y)$, then there is a function $f_{p}:X\to Y$;
-		\item If any $Z$ satisfies the two above conditions, then there is a function $g:Z\to X$ such that all the functions $g_{p}:Z\to Y$ (that exist, since $Z$ satisfies (ii.)) are of the form $g_{p}=f_{p}\circ g$.
-	\end{enumerate}
+\begin{df}
+	We say that a set $X$ is \textbf{initial} if there is a unique function from $X$ to any other set.
+	
+	Similarly, we say that $X$ is \textbf{terminal} if there is a unique function from any other set to $X$.
+\end{df}
+\begin{blockenv}{Meta-theorem}
+	All universal properties can be coded in terms of initial/terminal objects on a specific class of sets.
 \end{blockenv}
+
+For instance, the union of $A$ and $B$ is the \textit{initial} set in the class of all sets containing $A$ and $B$. Analogously, the intersection of $A$ and $B$ is the \textit{terminal} set in the class of all sets containing $A$ and $B$.
+
+\begin{blockenv}{Meta-theorem}
+	All sets defined by universal properties are uniquely defined (up to isomorphism).
+\end{blockenv}
+
+This means that if $X$ is initial/terminal regarding a certain class of sets, then it is the unique set in that class that is initial/terminal (not counting sets that are isomorphic to $X$).
+
+\begin{proof}
+	Let $X$ and $Y$ be two sets which are initial regarding a certain class of sets. Since $X$ is initial, there's a unique function $!_Y:X\to Y$. Since $Y$ is initial, there's a unique function $!_X:X\to Y$. This gives us, by composition, a function $!_X\circ!_Y:X\to X$ and a function $!_Y\circ!_X:Y\to Y$.
+	
+	Now remember that for any set, there's always its identity map. So we have $\id_X:X\to X$ and $\id_Y:Y\to Y$.
+	
+	But since $X$ is initial, there's a unique function from $X$ to itself. Since there's always an identity function, that function must be the unique map. But we've just shown that $!_X\circ!_Y$ is also a map from $X$ to itself. It follows then that $\id_X=!_X\circ!_Y$.
+	
+	Arguing similarly for $Y$ we can show that $\id_Y=!_Y\circ!_X$, and, therefore, $!_Y$ is an inverse for $!_X$, and hence they are isomorphisms.
+	
+	\bigskip
+	The proof for the terminal case is identical and left as an exercise for the reader.
+\end{proof}
+
