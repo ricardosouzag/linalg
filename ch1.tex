@@ -1241,55 +1241,56 @@ Let us then prove some nice properties of products:
 		
 		Hence, $\phi$ and $\psi$ are inverses and, therefore, isomorphisms.
 		
-		\item Let
-		\[\begin{tikzcd}
-		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
-		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"] &                                                                          &                                                   &   \\
-		A &                                                      & B                                                                        &                                                   & C \\
-		&                                                      &                                                                          & B\times C \arrow[lu, "\pi_B"] \arrow[ru, "\pi_C"] &   \\
-		&                                                      & A\times(B\times C) \arrow[lluu, "\pi_A"] \arrow[ru, "\pi_{B\times C}"']  &                                                   &  
-		\end{tikzcd}\]		
-		be the functions given by the definition of all products involved.
-		
-		First, notice that the functions $\pi_A:A\times(B\times C)\to A$ and $\pi_B\circ\pi_{B\times C}:A\times(B\times C)\to B$ induce (by definition of $A\times B$) a unique function $\phi_{A\times B}:A\times(B\times C)\to A\times B$ such that the following diagram commutes:
-		\[\begin{tikzcd}
-		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{A\times B}"] &   \\
-		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"]                                                                                   &   \\
-		A &                                                                                                                                        & B
-		\end{tikzcd}\](that is, $\pi_A=\pi'_A\circ\phi_{A\times B}$ and $\pi_B\circ\pi_{B\times C}=\pi'_B\circ\phi_{A\times B}$).
-		
-		But now, we have a map $\phi_{A\times B}:A\times(B\times C)\to A\times B$ and a map $\pi_C\circ\pi_{B\times C}:A\times(B\times C)\to C$, so, once again by definition of product, there's a unique function $\phi_{(A\times B)\times C}:A\times(B\times C)\to(A\times B)\times C$ such that the following diagram commutes:
-		\[\begin{tikzcd}
-		& A\times(B\times C) \arrow[ldd, "\phi_{A\times B}"', bend right] \arrow[rdd, "\pi_C\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{(A\times B)\times C}"] &   \\
-		& (A\times B)\times C \arrow[ld, "\pi_{A\times B}"'] \arrow[rd, "\pi'_C"]                                                                                     &   \\
-		A\times B &                                                                                                                                                             & C
-		\end{tikzcd}\](that is, $\phi_{A\times B}=\pi_{A\times B}\circ\phi_{(A\times B)\times C}$ and $\pi_C\circ\pi_{B\times C}=\pi'_C\circ\phi_{(A\times B)\times C}$).
-		
-		\bigskip
-		Conversely, notice that $\pi'_B\circ\pi_{A\times B}:(A\times B)\times C\to B$ and $\pi'_C:(A\times B)\times C\to C$ induce, by definition of product, a unique function $\phi_{B\times C}:(A\times B)\times C\to B\times C$ such that the following diagram commutes:
-		\[\begin{tikzcd}
-		& (A\times B)\times C \arrow[ldd, "\pi'_B\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\pi'_C", bend left] \arrow[d, "\phi_{B\times C}"] &   \\
-		& B\times C \arrow[ld, "\pi_B"] \arrow[rd, "\pi_C"']                                                                                        &   \\
-		B &                                                                                                                                           & C
-		\end{tikzcd}\](that is, $\pi'_B\circ\pi_{A\times B}=\pi_B\circ\phi_{B\times C}$ and $\pi'_C=\pi_C\circ\phi_{B\times C}$).
-		
-		And now we have a map $\pi'_A\circ\pi_{A\times B}:(A\times B)\times C\to A$ and a map $\phi_{B\times C}:(A\times B)\times C\to B\times C$, so, once more by definition of product, we have a unique map $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$ such that the following diagram commutes:
-		\[\begin{tikzcd}
-		& (A\times B)\times C \arrow[ldd, "\pi'_A\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\phi_{B\times C}", bend left] \arrow[d, "\phi_{A\times(B\times C)}"] &           \\
-		& A\times(B\times C) \arrow[ld, "\pi_A"] \arrow[rd, "\pi_{B\times C}"']                                                                                        &           \\
-		A &                                                                                                                                                              & B\times C
-		\end{tikzcd}\](that is, $\pi'_A\circ\pi_{A\times B}=\pi_A\circ\phi_{A\times(B\times C)}$ and $\phi_{B\times C}=\pi_{B\times C}\circ\phi_{A\times(B\times C)}$).
-		
-		So now we have functions $\phi_{(A\times B)\times C}:A\times(B\times C)\to (A\times B)\times C$ and $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$, so we can can consider their respective compositions: $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}$ and $\phi_{A\times(B\times C)}\circ\phi_{(A\times B)\times C}$. We claim that these compositions are the respective identities and, therefore, that each of those maps are isomorphisms.
-		
-		\bigskip
-		Let's show one of them, the other one will be left to the reader.
-		
-		Consider the composition $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}:(A\times B)\times C\to (A\times B)\times C$. So using all the information from the diagrams above we get:
-		\begin{align*}
-			\pi_{A\times B}\circ(\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)})&=(\pi_{A\times B}\circ\phi_{(A\times B)\times C})\circ\phi_{A\times(B\times C)}\\
-			&=\phi_{A\times B}\circ\phi_{A\times(B\times C)}
-		\end{align*}
+		\item
+%		Let
+%		\[\begin{tikzcd}
+%		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
+%		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"] &                                                                          &                                                   &   \\
+%		A &                                                      & B                                                                        &                                                   & C \\
+%		&                                                      &                                                                          & B\times C \arrow[lu, "\pi_B"] \arrow[ru, "\pi_C"] &   \\
+%		&                                                      & A\times(B\times C) \arrow[lluu, "\pi_A"] \arrow[ru, "\pi_{B\times C}"']  &                                                   &  
+%		\end{tikzcd}\]		
+%		be the functions given by the definition of all products involved.
+%		
+%		First, notice that the functions $\pi_A:A\times(B\times C)\to A$ and $\pi_B\circ\pi_{B\times C}:A\times(B\times C)\to B$ induce (by definition of $A\times B$) a unique function $\phi_{A\times B}:A\times(B\times C)\to A\times B$ such that the following diagram commutes:
+%		\[\begin{tikzcd}
+%		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{A\times B}"] &   \\
+%		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"]                                                                                   &   \\
+%		A &                                                                                                                                        & B
+%		\end{tikzcd}\](that is, $\pi_A=\pi'_A\circ\phi_{A\times B}$ and $\pi_B\circ\pi_{B\times C}=\pi'_B\circ\phi_{A\times B}$).
+%		
+%		But now, we have a map $\phi_{A\times B}:A\times(B\times C)\to A\times B$ and a map $\pi_C\circ\pi_{B\times C}:A\times(B\times C)\to C$, so, once again by definition of product, there's a unique function $\phi_{(A\times B)\times C}:A\times(B\times C)\to(A\times B)\times C$ such that the following diagram commutes:
+%		\[\begin{tikzcd}
+%		& A\times(B\times C) \arrow[ldd, "\phi_{A\times B}"', bend right] \arrow[rdd, "\pi_C\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{(A\times B)\times C}"] &   \\
+%		& (A\times B)\times C \arrow[ld, "\pi_{A\times B}"'] \arrow[rd, "\pi'_C"]                                                                                     &   \\
+%		A\times B &                                                                                                                                                             & C
+%		\end{tikzcd}\](that is, $\phi_{A\times B}=\pi_{A\times B}\circ\phi_{(A\times B)\times C}$ and $\pi_C\circ\pi_{B\times C}=\pi'_C\circ\phi_{(A\times B)\times C}$).
+%		
+%		\bigskip
+%		Conversely, notice that $\pi'_B\circ\pi_{A\times B}:(A\times B)\times C\to B$ and $\pi'_C:(A\times B)\times C\to C$ induce, by definition of product, a unique function $\phi_{B\times C}:(A\times B)\times C\to B\times C$ such that the following diagram commutes:
+%		\[\begin{tikzcd}
+%		& (A\times B)\times C \arrow[ldd, "\pi'_B\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\pi'_C", bend left] \arrow[d, "\phi_{B\times C}"] &   \\
+%		& B\times C \arrow[ld, "\pi_B"] \arrow[rd, "\pi_C"']                                                                                        &   \\
+%		B &                                                                                                                                           & C
+%		\end{tikzcd}\](that is, $\pi'_B\circ\pi_{A\times B}=\pi_B\circ\phi_{B\times C}$ and $\pi'_C=\pi_C\circ\phi_{B\times C}$).
+%		
+%		And now we have a map $\pi'_A\circ\pi_{A\times B}:(A\times B)\times C\to A$ and a map $\phi_{B\times C}:(A\times B)\times C\to B\times C$, so, once more by definition of product, we have a unique map $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$ such that the following diagram commutes:
+%		\[\begin{tikzcd}
+%		& (A\times B)\times C \arrow[ldd, "\pi'_A\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\phi_{B\times C}", bend left] \arrow[d, "\phi_{A\times(B\times C)}"] &           \\
+%		& A\times(B\times C) \arrow[ld, "\pi_A"] \arrow[rd, "\pi_{B\times C}"']                                                                                        &           \\
+%		A &                                                                                                                                                              & B\times C
+%		\end{tikzcd}\](that is, $\pi'_A\circ\pi_{A\times B}=\pi_A\circ\phi_{A\times(B\times C)}$ and $\phi_{B\times C}=\pi_{B\times C}\circ\phi_{A\times(B\times C)}$).
+%		
+%		So now we have functions $\phi_{(A\times B)\times C}:A\times(B\times C)\to (A\times B)\times C$ and $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$, so we can can consider their respective compositions: $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}$ and $\phi_{A\times(B\times C)}\circ\phi_{(A\times B)\times C}$. We claim that these compositions are the respective identities and, therefore, that each of those maps are isomorphisms.
+%		
+%		\bigskip
+%		Let's show one of them, the other one will be left to the reader.
+%		
+%		Consider the composition $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}:(A\times B)\times C\to (A\times B)\times C$. So using all the information from the diagrams above we get:
+%		\begin{align*}
+%			\pi_{A\times B}\circ(\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)})&=(\pi_{A\times B}\circ\phi_{(A\times B)\times C})\circ\phi_{A\times(B\times C)}\\
+%			&=\phi_{A\times B}\circ\phi_{A\times(B\times C)}
+%		\end{align*}
 	\end{enumerate}
 \end{proof}
 
