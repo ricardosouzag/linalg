@@ -1394,3 +1394,30 @@ X \arrow[rd, "\iota_X"'] \arrow[rdd, "i_Z"', bend right] &                      
 & X\coprod Y \arrow[d, "\exists!i", dashed] &                                                       \\
 & Z                                         &                                                      
 \end{tikzcd}\]
+
+Once again, this all sounds too abstract. What's this so called ``coproduct''? Well, it might not seem obvious at first...
+
+\begin{df}
+	Let $A$ and $B$ be two sets. We define the \textbf{disjoin union} of $A$ and $B$ to be the set $A\sqcup B$ of all elements in either $A$ or $B$, but disregarding equalities.
+\end{df}
+
+This is till too abstract, so lets give an example:
+
+\begin{ex}
+	Consider the sets $A=\{a,b,\}$ and $B=\{1,2,3\}$. Now, since $A\cap B=\varnothing$, we see that the set $A\cup B$ is just taking all elements of $A$ and $B$, and putting them all in the same box: $A\cup B=\{a,b,1,2,3\}$.
+	
+	If, however, we take the sets $C=\{a,b,c,d,e\}$ and $D=\{a,e,i,o,u\}$, we see that $C\cup D=\{a,b,c,d,e,i,o,u\}$ which is \textbf{not} the same as just taking every element in $C$ and $D$ and putting them all in the same box. That happens because, contrary to the first case where $A\cap B=\varnothing$, in this case we have $C\cap D=\{a,e\}\neq\varnothing$.
+	
+	In other words, there is at least one $x\in C$ and one $y\in D$ such that $x=y$.
+	
+	We can, however, fix that problem by ``coloring'' the elements.
+	
+	\bigskip
+	Imagine that $C$ was a large blue paint can, and $D$ was a giant red paint can. Now, putting the elements from $C$ and $D$ together, we can see that the $a$ and the $e$ that came from $C$ are blue, whereas the corresponding elements from $D$ re red.
+	
+	This is the idea behind disjoint unions:
+	
+	$C$, as a set, is clearly isomorphic to the set $C_C:=\{a_C,b_C,c_C,d_C,e_C\}$, which has ``the same elements, but painted in the color $C$''. Similarly, the set $D$ is clearly isomorphic to the set $D_D:=\{a_D,e_D,i_D,o_D,u_D\}$, which has ``the same elements, but painted in the color $D$''.
+	
+	Now, instead of computing $C\cup D$, we compute $C_C\cup D_D=\{a_C,b_C,c_C,d_C,e_C,a_D,e_D,i_D,o_D,u_D\}$, which is precisely what we would get by taking all elements of $C$ and $D$ and putting them in a box, disregarding equalities.
+\end{ex}
