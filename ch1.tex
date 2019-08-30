@@ -1561,3 +1561,40 @@ g(x),& \mbox{ if }x\in B.
 	
 	It is, in some sense, folding $x_0$ and $x_1$ on top of eachother - gluing them together. Hence why it's called the \textit{fold} map.
 \end{ex}
+
+Now, finally, we'll state similar results to the ones in the product section:
+
+\begin{lemma}
+	For any three sets $A,B$ and $C$ the following hold:
+	\begin{enumerate}[(a)]
+		\item $A\sqcup B\iso B\sqcup A$ (but not equal);
+		\item $A\sqcup(B\sqcup C)\iso (A\sqcup B)\sqcup C$ (but not equal);
+		\item $A\sqcup 0\iso A$ (but not equal).
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	\begin{enumerate}[(a)]
+		\item It is basically the same proof as in the case of products, so we'll leave it to the reader.
+		
+		\item This follows from the fact that union is associative, from $X\sqcup Y\iso X_0\cup Y_1$ and from the fact that all sigletons are isomorphic.
+		
+		Specifically, write $A\sqcup(B\sqcup C)$ as $A_0\cup(B\sqcup C)_1$, and writing $B\sqcup C\iso B_0\cup C_1$, we can further rewrite $A\sqcup(B\sqcup C)$ as $A_0\cup B_{0,1}\cup C_{1,1}$ - which, upon closer inspection, is just $A_0\cup B_1\cup C_2$.
+		
+		Similarly, we can write $(A\sqcup B)\sqcup C$ as $(A\sqcup B)_0\cup C_1$, and writing $A\sqcup B\iso A_0\cup B_1$, we can further rewrite $(A\sqcup B)\sqcup C$ as $A_{0,0}\cup B_{1,0}\cup C_1$ - which, upon closer inspection, is just $A_0\cup B_1\cup C_2$.
+		
+		The result now follows trivially.
+		
+		\item This is proven by showing that $A$ satisfies the universal property defining $A\sqcup 0$ - and is, therefore, isomorphic to it.
+		
+		First, notice that there are functions $\id_A:A\to A$ and $!_A:0\to A$.
+		
+		Now, let $B$ be a set with functions $f:A\to B$ and $g:0\to B$. Since $0$ is initial, $g=!_B$ the unique function from $0$ to $B$. So it's easy to see that $f:A\to B$ makes it so that the following diagram commutes
+		\[\begin{tikzcd}
+		A \arrow[rdd, "f"', bend right] \arrow[rd, "\id_A"'] &                  & 0 \arrow[ldd, "!_B", bend left] \arrow[ld, "!_A"] \\
+		& A \arrow[d, "f"] &                                                   \\
+		& B                &                                                  
+		\end{tikzcd}\]so $A$ satisfies the universal property defining $A\sqcup 0$ and is, therefore, isomorphic to it, just as stated.
+	\end{enumerate}
+
+This proves the result.
+\end{proof}
