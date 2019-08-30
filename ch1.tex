@@ -1495,6 +1495,14 @@ Now, an important question at this point is \textit{WHY?}. I mean, why do we nee
 		\[(i\circ\iota_Y)(y)=i(y_1)=i_Y(y),\]so our $i$ satisfies the equalities.
 		
 		\bigskip
-		Now to prove that it is unique: Suppose there's some $j:X\sqcup Y\to Z$ that also satisfies the equalities. In particular, we have that $(j\circ \iota_X)(x)=(i\circ\iota_X)(x)$ and $(j\circ \iota_Y)(y)=(i\circ\iota_Y)(y)$. But the RHS of the first equation evaluates to $i(x_0)$, by definition, and the RHS of the second equation evaluates to $i(y_1)$, also by definition.
+		Now to prove that it is unique: Suppose there's some $j:X\sqcup Y\to Z$ that also satisfies the equalities. In particular, we have that $(j\circ \iota_X)(x)=(i\circ\iota_X)(x)$ and $(j\circ \iota_Y)(y)=(i\circ\iota_Y)(y)$.
+		
+		But the RHS of the first equation evaluates to $i(x_0)$, by definition, and the RHS of the second equation evaluates to $i(y_1)$, also by definition.
+		
+		But, on the other hand, the LHS evaluates to $j(x_0)$ and $j(y_1)$, respectively, again by definition.
+		
+		Finally, since every element of $X\sqcup Y$ is either in $X_0$ or in $Y_1$, it follows that the functions $j$ and $i$ are equal for all elements of $X_0$ and $Y_1$ - and, therefore, equal for all of $X\sqcup Y$ - which implies, by definition of equality, $j=i$. This shows that there's a unique function satisfying the equalities
 	\end{enumerate}
+
+	Finally, (i.) and (ii.) together show that $X\sqcup Y$ satisfies the universal property defining the coproduct of $X$ and $Y$. This finishes the proof.
 \end{proof}
