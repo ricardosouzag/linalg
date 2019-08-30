@@ -1242,8 +1242,13 @@ Let us then prove some nice properties of products:
 		Hence, $\phi$ and $\psi$ are inverses and, therefore, isomorphisms.
 		
 		\item Let
-		\begin{multicols}{2}$$\pi_A:A\times(B\times C)\to A$$ $$\pi_{B\times C}:A\times(B\times C)\to B\times C$$ $$\pi_B:B\times C\to B$$ $$\pi_C:B\times C\to C$$ $$\pi_{A\times B}:(A\times B)\times C\to A\times B$$ $$\pi'_A:A\times B\to A$$ $$\pi'_B:A\times B\to B$$ $$\pi'_C:(A\times B)\times C\to C$$
-		\end{multicols}		
+		\[\begin{tikzcd}
+		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
+		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"] &                                                                          &                                                   &   \\
+		A &                                                      & B                                                                        &                                                   & C \\
+		&                                                      &                                                                          & B\times C \arrow[lu, "\pi_B"] \arrow[ru, "\pi_C"] &   \\
+		&                                                      & A\times(B\times C) \arrow[lluu, "\pi_A"] \arrow[ru, "\pi_{B\times C}"']  &                                                   &  
+		\end{tikzcd}\]		
 		be the functions given by the definition of all products involved.
 	\end{enumerate}
 \end{proof}
