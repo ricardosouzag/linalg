@@ -1350,3 +1350,22 @@ Let us then prove some nice properties of products:
 \begin{rmk}
 	From here onwards, whenever we multiply a set by itself, we'll take inspiration on numbers and denote the product of $n$ copies of any set $A$ by $A^n$. Note that this makes sense because of the item (b) above.
 \end{rmk}
+
+If you think about it, there's no immediate reason why these four statements should be true. Yet, the fact that they are true makes it way more reasonable for our naming it the ``product'' of two sets: Because it looks just like number multiplication.
+
+Well, now that we have multiplication, you know what to do next, right?
+
+\begin{df}
+	Let $X$ and $Y$ be two sets. We define the \textbf{coproduct of $X$ and $Y$} to be the set $X\coprod Y$ which is initial in the class of sets with functions from both $X$ and $Y$ - this means that:
+	\begin{enumerate}[i.]
+		\item There are functions $\iota_X:X\to X\coprod Y$ and $\iota_Y:Y\to X\coprod Y$;
+		\item If $Z$ is some set with functions $i_X:X\to Z$ and $i_Y:Y\to Z$, then there is a unique function $i:X\coprod Y\to Z$ such that $i_X=i\circ\iota_X$ and $i_Y=i\circ\iota_Y$.
+	\end{enumerate}
+\end{df}
+
+We usually denote this saying that the following diagram commutes:
+\[\begin{tikzcd}
+X \arrow[rd, "\iota_X"'] \arrow[rdd, "i_Z"', bend right] &                                           & Y \arrow[ld, "\iota_Y"] \arrow[ldd, "i_Y", bend left] \\
+& X\coprod Y \arrow[d, "\exists!i", dashed] &                                                       \\
+& Z                                         &                                                      
+\end{tikzcd}\]
