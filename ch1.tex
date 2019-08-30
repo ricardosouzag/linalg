@@ -1250,6 +1250,13 @@ Let us then prove some nice properties of products:
 		&                                                      & A\times(B\times C) \arrow[lluu, "\pi_A"] \arrow[ru, "\pi_{B\times C}"']  &                                                   &  
 		\end{tikzcd}\]		
 		be the functions given by the definition of all products involved.
+		
+		First, notice that the functions $\pi_A:A\times(B\times C)\to A$ and $\pi_B\circ\pi_{B\times C}:A\times(B\times C)\to B$ induce (by definition of $A\times B$) a unique function $\phi_{A\times B}:A\times(B\times C)\to A\times B$ such that the following diagram commutes:
+		\[\begin{tikzcd}
+		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{A\times B}"] &   \\
+		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"]                                                                                   &   \\
+		A &                                                                                                                                        & B
+		\end{tikzcd}\](that is, $\pi'_A=\phi_{A\times B}\circ\pi_A$ and $\pi'_B=\phi_{A\times B}\circ(\pi_B\circ\pi_{B\times C})$).
 	\end{enumerate}
 \end{proof}
 
