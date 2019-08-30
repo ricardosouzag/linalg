@@ -1251,6 +1251,14 @@ Let us then prove some nice properties of products:
 		&  &                                                                     & B\times C \arrow[rd, "\pi_C"'] \arrow[ld, "\pi_B"] &   \\
 		A &  & B                                                                   &                                                    & C
 		\end{tikzcd}\]be the functions from $A\times(B\times C)$ to each one of $A$, $B$ and $C$ (which exist by definition of all the products involved).
+		
+		Similarly, let
+		\[\begin{tikzcd}
+		& A\times B\times C \arrow[ld, "\pi'_A"] \arrow[d, "\pi'_B"] \arrow[rd, "\pi'_C"] &   \\
+		A & B                                                                               & C
+		\end{tikzcd}\]be the functions from $A\times B\times C$ to each one of $A$, $B$ and $C$ (which exist by definition of product).
+		
+		Now, by definition of $A\times B\times C$, there's a unique $\phi:A\times(B\times C)\to A\times B\times C$ such that
 %		Let
 %		\[\begin{tikzcd}
 %		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
