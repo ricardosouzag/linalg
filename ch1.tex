@@ -1424,8 +1424,23 @@ This is till too abstract, so lets give an example:
 	So we put $C\sqcup D:=C_C\cup D_D$, and call it the \textbf{disjoint union of $C$ and $D$}.
 \end{ex}
 
+\begin{lemma}
+	For any two sets $X$ and $Y$ we have that $X\sqcup Y\iso X\times\{X\}\cup Y\times{Y}$.
+\end{lemma}
+\begin{proof}
+	It follows directly from the example above and from the fact that we can denote any element in $X\times\{X\}$ (which is of the form $(x,X)$, by definition) as $x_X$, just as a shorthand notation (and similarly for $Y\times\{Y\}$).
+\end{proof}
+
 Now, an important question at this point is \textit{WHY?}. I mean, why do we need this new notion of union, when the old one suited us just fine? Well, let me present you some results to convince you on that:
 
 \begin{prop}
 	For any two sets $X$ and $Y$, their disjoint union $X\sqcup Y$ is the coproduct $X\coprod Y$.
 \end{prop}
+\begin{proof}
+	We have to show two things:
+	\begin{enumerate}[(i.)]
+		\item There are functions $\iota_X:X\to X\sqcup Y$ and $\iota Y:Y\to x\sqcup Y$.
+		
+		This
+	\end{enumerate}
+\end{proof}
