@@ -1487,8 +1487,14 @@ Now, an important question at this point is \textit{WHY?}. I mean, why do we nee
 		This is easy: Define $i:X\sqcup Y\to Z$ by putting
 		\[i(a):=\begin{cases}
 		i_X(x),&\mbox{ if }a=x_0\\
-		i_Y(y),&\mbox{ if }a=y_1.
-		
+		i_Y(y),&\mbox{ if }a=y_1.		
 		\end{cases}\]
+		
+		Clearly then we have:
+		\[(i\circ\iota_X)(x)=i(x_0)=i_X(x)\]and
+		\[(i\circ\iota_Y)(y)=i(y_1)=i_Y(y),\]so our $i$ satisfies the equalities.
+		
+		\bigskip
+		Now to prove that it is unique: Suppose there's some $j:X\sqcup Y\to Z$ that also satisfies the equalities.
 	\end{enumerate}
 \end{proof}
