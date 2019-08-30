@@ -1518,3 +1518,43 @@ Just like with products, we can use coproducts to generalize disjoint unions to 
 		\item If $Z$ is a set with a function $i_n:A_n\to Z$ for each $n\in I$, then there's a unique function $i:\coprod_{i\in I}A_i\to Z$ such that $i_n=i\circ\iota_n$ for each $n\in I$.
 	\end{enumerate}
 \end{df}
+
+And we can also get a similar concept to the diagonal map:
+
+\begin{df}
+	Given three sets $A$, $B$ and $C$ with functions $f:A\to C$ and $g:B\to C$, the unique function from $A\sqcup B$ to $C$ induced by the definition of coproduct will be called the \textbf{coproduct map of $f$ and $g$} and denoted by $f\sqcup g:A\sqcup B\to C$.
+\end{df}
+
+By definition, $(f\sqcup g)(x):=\begin{cases}
+f(x),& \mbox{ if }x\in A\\
+g(x),& \mbox{ if }x\in B.
+\end{cases}$
+
+\begin{ex}
+	Let $\R$ be the set of real numbers, $f,g:\R\to \R$ be defined by $f:=\id_\R$ and $g(x):=x^2$ for any $x\in\R$. Then the product map $f\times g:\R\to\R\times \R$ is the map $x\mapsto(x,x^2)$ for any $x\in \R$.
+\end{ex}
+
+\begin{df}
+	The product map of $\id_X$ and $\id_X$, for any set $X$ will be called the \textbf{diagonal map of $X$} and denoted by $\Delta_X:X\to X\times X$.
+	
+	It is, as in the above definition, the unique map commuting the diagram
+	\[\begin{tikzcd}
+	& X \arrow[ldd, "\id_X"', bend right] \arrow[rdd, "\id_X", bend left] \arrow[d, "\exists!\Delta_X"] &   \\
+	& X\times X \arrow[ld, "\pi^1_X"] \arrow[rd, "\pi^2_X"']                                            &   \\
+	X &                                                                                                   & X.
+	\end{tikzcd}\]
+\end{df}
+
+\begin{ex}
+	Let $A=\{a,b,c\}$. Let's calculate $\Delta_A$.
+	
+	By definition, we must have $\id_A=\pi^1_A\circ\Delta_X$ and $\id_A=\pi^1_A\circ\Delta_X$. So take any $a\in A$.
+	
+	We know that, from the first equation, we must have $a=(\pi^1_A\circ\Delta_A)(a)=\pi_A^1(\Delta_A(a))$, so the first coordinate of $\Delta_A(a)$ must be $a$.
+	
+	Similarly, the second equation gives us $a=(\pi^2_A\circ\Delta_A)(a)=\pi^2_A(\Delta_A(a))$ and so, the second coordinate of $\Delta_A(a)$ must also be $a$.
+	
+	Since $\Delta_A(a)=(\pi_A^1(\Delta_A(a)),\pi_A^2(\Delta_A(a)))$, we get that $\Delta_A(a)=(a,a)$ for any $a\in A$.
+	
+	This is why it's called the \textit{diagonal} map.
+\end{ex}
