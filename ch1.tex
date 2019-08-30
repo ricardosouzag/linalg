@@ -1508,3 +1508,13 @@ Now, an important question at this point is \textit{WHY?}. I mean, why do we nee
 
 	Finally, (i.) and (ii.) together show that $X\sqcup Y$ satisfies the universal property defining the coproduct of $X$ and $Y$. This finishes the proof.
 \end{proof}
+
+Just like with products, we can use coproducts to generalize disjoint unions to infinitely many sets:
+
+\begin{df}
+	Let $\{A_i\}_{i\in I}$ be a collection of sets indexed by another set $I$ (which can be infinite or finite, countable or uncountable, doesn't matter, as long as it's a set). We define $\coprod_{i\in I}A_i$ to be the set given by:
+	\begin{enumerate}[i.]
+		\item There is a function $\iota_n:A_n\to \coprod_{i\in I}A_i$ for each $n\in I$;
+		\item If $Z$ is a set with a function $i_n:A_n\to Z$ for each $n\in I$, then there's a unique function $i:\coprod_{i\in I}A_i\to Z$ such that $i_n=i\circ\iota_n$ for each $n\in I$.
+	\end{enumerate}
+\end{df}
