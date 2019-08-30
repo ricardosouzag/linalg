@@ -1278,7 +1278,12 @@ Let us then prove some nice properties of products:
 		& (A\times B)\times C \arrow[ldd, "\pi'_A\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\phi_{B\times C}", bend left] \arrow[d, "\phi_{A\times(B\times C)}"] &           \\
 		& A\times(B\times C) \arrow[ld, "\pi_A"] \arrow[rd, "\pi_{B\times C}"']                                                                                        &           \\
 		A &                                                                                                                                                              & B\times C
-		\end{tikzcd}\](that is,)
+		\end{tikzcd}\](that is, $\pi'_A\circ\pi_{A\times B}=\pi_A\circ\phi_{A\times(B\times C)}$ and $\phi_{B\times C}=\pi_{B\times C}\circ\phi_{A\times(B\times C)}$).
+		
+		So now we have functions $\phi_{(A\times B)\times C}:A\times(B\times C)\to (A\times B)\times C$ and $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$, so we can can consider their respective compositions: $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}$ and $\phi_{A\times(B\times C)}\circ\phi_{(A\times B)\times C}$. We claim that these compositions are the respective identities and, therefore, that each of those maps are isomorphisms.
+		
+		\bigskip
+		Let's show one of them, the other one will be left to the reader.
 	\end{enumerate}
 \end{proof}
 
