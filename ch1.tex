@@ -1277,6 +1277,24 @@ Let us then prove some nice properties of products:
 		\pi'_C\circ(\phi\circ\psi)&=(\pi'_C\circ\phi)\circ\psi\\
 		&=(\pi_C\circ\pi_{B,C})\circ\psi\\
 		&=\pi_C\circ(\pi_{B,C}\circ\psi)=\pi_C\circ\psi_{B,C}=\pi'_C
+		\end{align*}and, like before, this shows that $\phi\circ\psi=\id_{A\times B\times C}$ - since $\id_{A\times B\times C}$ is the unique function satisfying those three equalities.
+		
+		Similarly:
+		\begin{align*}
+			\pi_A\circ(\psi\circ\phi)&=(\pi_A\circ\psi)\circ\phi\\
+			&=\pi'_A\circ\phi=\pi_A
+		\end{align*}
+		\begin{align*}
+			(\pi_B\circ\pi_{B,C})\circ(\psi\circ\phi)&=\pi_B\circ(\pi_{B,C}\circ\psi)\circ\phi\\
+			&=\pi_B(\psi_{B,C}\circ\phi)\\
+			&=(\pi_B\psi_{B,C})\circ\phi\\
+			&=\pi'_B\circ\phi=\pi_B
+		\end{align*}
+		\begin{align*}
+		(\pi_C\circ\pi_{B,C})\circ(\psi\circ\phi)&=\pi_C\circ(\pi_{B,C}\circ\psi)\circ\phi\\
+		&=\pi_C(\psi_{B,C}\circ\phi)\\
+		&=(\pi_C\psi_{B,C})\circ\phi\\
+		&=\pi'_C\circ\phi=\pi_C
 		\end{align*}
 %		Let
 %		\[\begin{tikzcd}
