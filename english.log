@@ -1027,14 +1027,14 @@ line 307.
 [37] [38] [39] [40] [41] [42] [43] [44]
 
 LaTeX Warning: Reference `difference properties' on page 1 undefined on input l
-ine 1599.
+ine 1601.
 
 
-LaTeX Warning: Reference `intersection' on page 1 undefined on input line 1599.
+LaTeX Warning: Reference `intersection' on page 1 undefined on input line 1601.
 
 
 
-LaTeX Warning: Reference `prop:union' on page 1 undefined on input line 1599.
+LaTeX Warning: Reference `prop:union' on page 1 undefined on input line 1601.
 
 [45]) [46]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 276.
@@ -1071,7 +1071,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (47 pages, 338488 bytes).
+Output written on english.pdf (47 pages, 338504 bytes).
 PDF statistics:
  632 PDF objects out of 1000 (max. 8388607)
  562 compressed objects within 6 object streams
