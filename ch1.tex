@@ -1310,55 +1310,38 @@ Let us then prove some nice properties of products:
 		\end{tikzcd}\]which, once again, implies that $\psi\circ\phi=\id_{A\times(B\times C)}$, by definition of product.
 		
 		This shows that $\psi$ and $\phi$ are mutually inverse and, therefore, isomorphisms.
-%		Let
-%		\[\begin{tikzcd}
-%		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
-%		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"] &                                                                          &                                                   &   \\
-%		A &                                                      & B                                                                        &                                                   & C \\
-%		&                                                      &                                                                          & B\times C \arrow[lu, "\pi_B"] \arrow[ru, "\pi_C"] &   \\
-%		&                                                      & A\times(B\times C) \arrow[lluu, "\pi_A"] \arrow[ru, "\pi_{B\times C}"']  &                                                   &  
-%		\end{tikzcd}\]		
-%		be the functions given by the definition of all products involved.
-%		
-%		First, notice that the functions $\pi_A:A\times(B\times C)\to A$ and $\pi_B\circ\pi_{B\times C}:A\times(B\times C)\to B$ induce (by definition of $A\times B$) a unique function $\phi_{A\times B}:A\times(B\times C)\to A\times B$ such that the following diagram commutes:
-%		\[\begin{tikzcd}
-%		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{A\times B}"] &   \\
-%		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"]                                                                                   &   \\
-%		A &                                                                                                                                        & B
-%		\end{tikzcd}\](that is, $\pi_A=\pi'_A\circ\phi_{A\times B}$ and $\pi_B\circ\pi_{B\times C}=\pi'_B\circ\phi_{A\times B}$).
-%		
-%		But now, we have a map $\phi_{A\times B}:A\times(B\times C)\to A\times B$ and a map $\pi_C\circ\pi_{B\times C}:A\times(B\times C)\to C$, so, once again by definition of product, there's a unique function $\phi_{(A\times B)\times C}:A\times(B\times C)\to(A\times B)\times C$ such that the following diagram commutes:
-%		\[\begin{tikzcd}
-%		& A\times(B\times C) \arrow[ldd, "\phi_{A\times B}"', bend right] \arrow[rdd, "\pi_C\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{(A\times B)\times C}"] &   \\
-%		& (A\times B)\times C \arrow[ld, "\pi_{A\times B}"'] \arrow[rd, "\pi'_C"]                                                                                     &   \\
-%		A\times B &                                                                                                                                                             & C
-%		\end{tikzcd}\](that is, $\phi_{A\times B}=\pi_{A\times B}\circ\phi_{(A\times B)\times C}$ and $\pi_C\circ\pi_{B\times C}=\pi'_C\circ\phi_{(A\times B)\times C}$).
-%		
-%		\bigskip
-%		Conversely, notice that $\pi'_B\circ\pi_{A\times B}:(A\times B)\times C\to B$ and $\pi'_C:(A\times B)\times C\to C$ induce, by definition of product, a unique function $\phi_{B\times C}:(A\times B)\times C\to B\times C$ such that the following diagram commutes:
-%		\[\begin{tikzcd}
-%		& (A\times B)\times C \arrow[ldd, "\pi'_B\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\pi'_C", bend left] \arrow[d, "\phi_{B\times C}"] &   \\
-%		& B\times C \arrow[ld, "\pi_B"] \arrow[rd, "\pi_C"']                                                                                        &   \\
-%		B &                                                                                                                                           & C
-%		\end{tikzcd}\](that is, $\pi'_B\circ\pi_{A\times B}=\pi_B\circ\phi_{B\times C}$ and $\pi'_C=\pi_C\circ\phi_{B\times C}$).
-%		
-%		And now we have a map $\pi'_A\circ\pi_{A\times B}:(A\times B)\times C\to A$ and a map $\phi_{B\times C}:(A\times B)\times C\to B\times C$, so, once more by definition of product, we have a unique map $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$ such that the following diagram commutes:
-%		\[\begin{tikzcd}
-%		& (A\times B)\times C \arrow[ldd, "\pi'_A\circ\pi_{A\times B}"', bend right] \arrow[rdd, "\phi_{B\times C}", bend left] \arrow[d, "\phi_{A\times(B\times C)}"] &           \\
-%		& A\times(B\times C) \arrow[ld, "\pi_A"] \arrow[rd, "\pi_{B\times C}"']                                                                                        &           \\
-%		A &                                                                                                                                                              & B\times C
-%		\end{tikzcd}\](that is, $\pi'_A\circ\pi_{A\times B}=\pi_A\circ\phi_{A\times(B\times C)}$ and $\phi_{B\times C}=\pi_{B\times C}\circ\phi_{A\times(B\times C)}$).
-%		
-%		So now we have functions $\phi_{(A\times B)\times C}:A\times(B\times C)\to (A\times B)\times C$ and $\phi_{A\times(B\times C)}:(A\times B)\times C\to A\times(B\times C)$, so we can can consider their respective compositions: $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}$ and $\phi_{A\times(B\times C)}\circ\phi_{(A\times B)\times C}$. We claim that these compositions are the respective identities and, therefore, that each of those maps are isomorphisms.
-%		
-%		\bigskip
-%		Let's show one of them, the other one will be left to the reader.
-%		
-%		Consider the composition $\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)}:(A\times B)\times C\to (A\times B)\times C$. So using all the information from the diagrams above we get:
-%		\begin{align*}
-%			\pi_{A\times B}\circ(\phi_{(A\times B)\times C}\circ\phi_{A\times(B\times C)})&=(\pi_{A\times B}\circ\phi_{(A\times B)\times C})\circ\phi_{A\times(B\times C)}\\
-%			&=\phi_{A\times B}\circ\phi_{A\times(B\times C)}
-%		\end{align*}
+		
+		\item This is equivalent to proving that if there is a function between some set $Z$ and $0$, then $Z=0$.
+		
+		To see this, consider such a function $f:Z\to 0$. If $Z\neq 0$, then there's at least one point $z\in Z$ - and, therefore, $f(z)\in \im(f)\subseteq 0$. But $0$ is empty, so it has no elements, which is a contradiction. It follows that $Z=0$.
+		
+		Now, we're going to prove that $0$ is the product of $A$ and $0$ using the definition:
+		
+		First, see that since $0$ is initial, there's a unique function $!_A:0\to A$ and a unique function $!_0:0\to 0$, but since $\id_0$ always exists, we must have $!_0=\id_0$.
+		
+		Now let $B$ be a set with functions $f:B\to A$ and $g:B\to 0$. Then $B=0$ (since $g$ is a function to $0$). It follows, then, that $f=!_A$ and $g=!_0$. Clearly, then, there's a unique map $\phi:B\to 0$ which commutes the diagram
+		\[\begin{tikzcd}
+		& B \arrow[d, "\phi"] \arrow[ldd, "f"', bend right] \arrow[rdd, "g", bend left] &   \\
+		& 0 \arrow[ld, "!_A"] \arrow[rd, "!_0"']                                        &   \\
+		A &                                                                               & 0
+		\end{tikzcd}\]and that map is precisely $\phi:=!_0=\id_0$. 
+		
+		We have just proven that $0$ satisfies the universal property defining $A\times 0$, so it must be the product.
+		
+		\item Similarly, to prove this result we'll use that $A$ satisfies the definition of product of $A$ and $1$:
+		
+		First, notice that there's a function $\id_A:A\to A$ and a unique function $!^A:A\to 1$ (since $1$ is terminal).
+		
+		Now, suppose $B$ is a set with functions $f:B\to A$ and $g:B\to 1$. Since $1$ is terminal, $g:=!^B$ the unique function from $B$ to $1$. 
+		
+		It is now easy to see that $f:B\to A$ commutes the diagram
+		\[\begin{tikzcd}
+		& B \arrow[d, "f"] \arrow[ldd, "f"', bend right] \arrow[rdd, "!^B", bend left] &   \\
+		& A \arrow[ld, "\id_A"] \arrow[rd, "!^A"']                                     &   \\
+		A &                                                                              & 1
+		\end{tikzcd}\]for $f=\id_A\circ f$, trivially, and $!^B$ and $!^A\circ f$ are two functions from $B$ to $1$, so they must be equal (since $1$ is terminal).
+		
+		We've just shown that $A$ satisfies the universal property which defines $A\times 1$, so, since universal properties define unique sets up to isomorphism, we get $A\iso A\times 1$.
 	\end{enumerate}
 \end{proof}
 
