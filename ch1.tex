@@ -1230,7 +1230,12 @@ Let us then prove some nice properties of products:
 		
 		Now, $A\times B$ has a function to $B$ and a function to $A$, so, by definition of product, there's a unique function $\phi:A\times B\to B\times A$ such that $\pi_A=\pi'_A\circ\phi$ and $\pi_B=\pi'_B\circ\phi$. Analogously, since $B\times A$ has functions to $A$ and $B$, there's a unique function $\psi:B\times A\to A\times B$ such that $\pi'_A=\pi_A\circ\psi$ and $\pi'_B=\pi_B\circ \psi$.
 		
-		As done previously, we can consider the functions $\id_{A\times B}$ and $\psi\circ\phi$, both from $A\times B$ to itself. Notice also that $\pi_A=\pi_A\circ\id_{A\times B}$ and $\pi_B=\pi_B\circ\id_{A\times B}$. But by definition of product, there's a unique function from any set (including $A\times B$ itself) to $A\times B$ for which that holds. Hence, these two functions must be the same - that is, $\psi\circ\phi=\id_{A\times B}$.
+		As done previously, we can consider the functions $\id_{A\times B}$ and $\psi\circ\phi$, both from $A\times B$ to itself. Notice that $\pi_A=\pi_A\circ\id_{A\times B}$ and $\pi_B=\pi_B\circ\id_{A\times B}$. Notice also that $$\pi_A=\pi'_A\circ\phi=(\pi_A\circ\psi)\circ\phi=\pi_A\circ(\psi\circ\phi)$$and$$\pi_B=\pi'_B\circ\phi=(\pi_B\circ\psi)\circ\phi=\pi_B\circ(\psi\circ\phi),$$so both $\id_{A\times B}$ and $\psi\circ\phi$ commute the diagram
+		\[\begin{tikzcd}
+		& A\times B \arrow[d, "\id_{A\times B}",shift left] \arrow[d, "\psi\circ\phi"',shift right] \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B", bend left] &   \\
+		& A\times B \arrow[ld, "\pi_A"] \arrow[rd, "\pi_B"]                                                                                    &   \\
+		A &                                                                                                                                      & B
+		\end{tikzcd}\] But by definition of product, there's a unique function from any set (including $A\times B$ itself) to $A\times B$ for which that holds. Hence, these two functions must be the same - that is, $\psi\circ\phi=\id_{A\times B}$.
 		
 		Arguing analogously, we can prove that $\id_{B\times A}$ and $\phi\circ\psi$ are two functions from $B\times A$ to itself which have the desired property and, once again, by definition of product, they must be the same - that is, $\phi\circ\psi=\id_{B\times A}$.
 		
