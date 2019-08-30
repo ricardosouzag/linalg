@@ -227,8 +227,8 @@
 %-------- NUMERAÇÃO DE DEFINIÇÕES, TEOREMAS, ETC...  ---------------------------------------------
 
 \declaretheorem[name=Definition,refname={definição,definições},Refname={Definição,Definições}]{df}
-\numberwithin{df}{section}
-\renewcommand*{\thedf}{\arabic{chapter}.\arabic{section}.\arabic{df}}
+\numberwithin{df}{subsection}
+\renewcommand*{\thedf}{\arabic{chapter}.\arabic{section}.\arabic{subsection}.\arabic{df}}
 \declaretheorem[numberlike=df,name=Theorem,refname={theorem,theorems},
 Refname={Theorem,Theorems}]{theorem}
 \declaretheorem[sibling=df,name=Corolary,refname={corolário,corolários},
