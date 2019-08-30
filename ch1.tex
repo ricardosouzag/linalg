@@ -1434,8 +1434,36 @@ This is till too abstract, so lets give an example:
 	Define $f:X\sqcup Y\to (X\times\{X\})\cup (Y\times{Y})$ by putting
 	\[f(a):=\begin{cases}
 	a_X,&\mbox{ if }a\in X\\
-	a_Y,&\mbox{ otherwise.}
+	a_Y,&\mbox{ if }a\in Y.
 	\end{cases}\]
+	
+	\begin{itemize}
+		\item \textbf{$f$ is injective:}
+		
+		Take $a,b\in X\sqcup Y$ such that $f(a)=f(b)$.
+		
+		If $a\in X$ and $b\in X$, we see that $a_X=f(a)=f(b)=b_X$ and hence $a=b$.
+		
+		If $a\in X$ and $b\in Y$, we see that $a_X=f(a)=f(b)=b_Y$, which is absurd because the second coordinate of $b_Y$ is $Y$, and the second coordinate of $a_X$ is $X$, and $X\neq Y$, so $b_Y\neq a_X$. So this case cannot happen.
+		
+		Similarly, if $a\in Y$ and $b\in X$ we'd get that same contradiction, so this case also cannot happen.
+		
+		Finally, if $a\in Y$ and $b\in Y$, just like the first case we can see that $a_Y=b_Y$, and hence $a=b$.
+		
+		Since in all cases, the only possible situation which doesn't lead to a contradiction is $a=b$, we see that $f$ is injective.
+		
+		\item \textbf{$f$ is surjective:}
+		
+		Take $c\in (X\times\{X\})\cup (Y\times{Y})$. We want to show that there's some $a\in X\sqcup Y$ such that $f(a)=c$.
+		
+		Since $(X\times\{X\})\cap (Y\times{Y})=\varnothing$, $c$ must lie in either $X\times\{X\}$ or $Y\times{Y}$ - that is, either $c=x_X$ for some $a\in X$ or $c=y_Y$ for some $y\in Y$. But this means that $c$ is either $f(x)$, for some $x\in X$ or $f(y)$, for some $y\in Y$.
+		
+		No matter which one of these hold, there's always one $a\in X\sqcup Y$ such that $f(a)=c$, for any $c\in (X\times\{X\})\cup (Y\times{Y})$. This proves that $f$ is surjective.
+	\end{itemize}
+
+Since $f$ is both injective and surjective, it is a bijection and, therefore, an isomorphism.
+
+This ends the proof.
 \end{proof}
 
 Now, an important question at this point is \textit{WHY?}. I mean, why do we need this new notion of union, when the old one suited us just fine? Well, let me present you some results to convince you on that:
