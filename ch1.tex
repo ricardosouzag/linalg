@@ -505,7 +505,7 @@ And finally, just before wrapping up this section, let us give one final definit
 
 To really wrap up this section, then, we're gonna make a list of properties for the things we've just described. You're welcome to try to prove them, although most of them are really trivial (that is, they follow immediately from the definitions or a quick observation).
 
-\begin{prop}
+\begin{prop}\label{prop:union,intersection,difference properties}
 	Let $A,B,C$ be any three subsets of a given, fixed, set $X$. Then the following properties always hold:
 	\begin{multicols}{2}
 		\begin{enumerate}[(1)]
@@ -1240,7 +1240,7 @@ By definition, $(f\times g)(a):=(f(a),g(a))$ for any $a\in A$.
 
 Let us then prove some nice properties of products:
 
-\begin{lemma}
+\begin{lemma}\label{lem:product properties}
 		For any three sets $A,B$ and $C$ the following hold:
 	\begin{enumerate}[(a)]
 		\item $A\times B\iso B\times A$ (but not equal);
@@ -1594,6 +1594,9 @@ Now, finally, we'll state similar results to the ones in the product section:
 		& A \arrow[d, "f"] &                                                   \\
 		& B                &                                                  
 		\end{tikzcd}\]so $A$ satisfies the universal property defining $A\sqcup 0$ and is, therefore, isomorphic to it, just as stated.
+		
+		\bigskip
+		An alternative proof could be given: Since $A\sqcup 0\iso A_0\cup 0_1$, we can use \cref{lem:product properties}(c) to see that $0_1$, which is just fancy notation for $0\times\{1\}$, is just $0$ (since it is 0 times a set). So $A\sqcup0\iso A_0\cup 0$, and we can now use \cref{prop:union,intersection,difference properties}(3) and see that $A_0\cup0=A_0$, which is clearly isomorphic to $A$. This shows that $A\sqcup 0\iso A$, as stated.
 	\end{enumerate}
 
 This proves the result.
