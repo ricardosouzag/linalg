@@ -1428,10 +1428,10 @@ This is till too abstract, so lets give an example:
 	For any two sets $X$ and $Y$ we have that $X\sqcup Y\iso (X\times\{0\})\cup (Y\times\{1\})$.
 \end{lemma}
 \begin{proof}
-	It follows directly from the example above and from the fact that we can denote any element in $X\times\{0\}$ (which is of the form $(x,0)$, by definition) as $x_0$, just as a shorthand notation (and similarly for $Y\times\{1\}$).
+	It follows directly from the example above and from the fact that we can denote any element in $X\times\{0\}$ (which is of the form $(x,0)$, by definition) as $x_0$, just as a shorthand notation (and similarly for $Y\times\{1\}$), so we can just write $X_0:=X\times\{0\}$ and $Y_1:=Y\times\{1\}$..
 	
 	\bigskip
-	Define $f:X\sqcup Y\to (X\times\{0\})\cup (Y\times\{1\})$ by putting
+	Define $f:X\sqcup Y\to X_0\cup Y_1$ by putting
 	\[f(a):=\begin{cases}
 	a_0,&\mbox{ if }a\in X\\
 	a_1,&\mbox{ if }a\in Y.
@@ -1458,11 +1458,11 @@ This is till too abstract, so lets give an example:
 		
 		\item \textbf{$f$ is surjective:}
 		
-		Take $c\in (X\times\{0\})\cup (Y\times\{1\})$. We want to show that there's some $a\in X\sqcup Y$ such that $f(a)=c$.
+		Take $c\in X_0\cup Y_1$. We want to show that there's some $a\in X\sqcup Y$ such that $f(a)=c$.
 		
-		Since $(X\times\{0\})\cap (Y\times\{1\})=\varnothing$, $c$ must lie in either $X\times\{0\}$ or $Y\times\{1\}$ - that is, either $c=x_0$ for some $a\in X$ or $c=y_1$ for some $y\in Y$. But this means that $c$ is either $f(x)$, for some $x\in X$ or $f(y)$, for some $y\in Y$.
+		Since $X_0\cap Y_1=\varnothing$, $c$ must lie in either $X_0$ or $Y_1$ - that is, either $c=x_0$ for some $a\in X$ or $c=y_1$ for some $y\in Y$. But this means that $c$ is either $f(x)$, for some $x\in X$ or $f(y)$, for some $y\in Y$.
 		
-		No matter which one of these hold, there's always one $a\in X\sqcup Y$ such that $f(a)=c$, for any $c\in (X\times\{0\})\cup (Y\times\{1\})$. This proves that $f$ is surjective.
+		No matter which one of these hold, there's always one $a\in X\sqcup Y$ such that $f(a)=c$, for any $c\in X_0\cup Y_1$. This proves that $f$ is surjective.
 	\end{itemize}
 
 Since $f$ is both injective and surjective, it is a bijection and, therefore, an isomorphism.
