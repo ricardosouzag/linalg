@@ -1301,6 +1301,13 @@ Let us then prove some nice properties of products:
 		& B\times C \arrow[ld, "\pi_B"] \arrow[rd, "\pi_C"']                                                                                                                                       &   \\
 		B &                                                                                                                                                                                          & C
 		\end{tikzcd}\]and since, by definition of product, that map must be unique, it follows that $\pi_{B,C}=\pi_{B,C}\circ\psi\circ\phi$.
+		
+		But this, on the other hand, shows that both $\id_{A\times(B\times C)}$ and $\psi\circ\psi$ commute the diagram
+		\[\begin{tikzcd}
+		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[d, "{\id_{A\times(B\times C)}}",shift left] \arrow[rdd, "{\pi_{B,C}}", bend left] \arrow[d, "\psi\circ\psi"',shift right] &           \\
+		& A\times(B\times C) \arrow[ld, "\pi_A"] \arrow[rd, "{\pi_{B,C}}"']                                                                               &           \\
+		A &                                                                                                                                                 & B\times C
+		\end{tikzcd}\]
 %		Let
 %		\[\begin{tikzcd}
 %		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
