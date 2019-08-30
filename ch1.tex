@@ -1256,7 +1256,7 @@ Let us then prove some nice properties of products:
 		& A\times(B\times C) \arrow[ldd, "\pi_A"', bend right] \arrow[rdd, "\pi_B\circ\pi_{B\times C}", bend left] \arrow[d, "\phi_{A\times B}"] &   \\
 		& A\times B \arrow[ld, "\pi'_A"'] \arrow[rd, "\pi'_B"]                                                                                   &   \\
 		A &                                                                                                                                        & B
-		\end{tikzcd}\](that is, $\pi_A=\phi_{A\times B}\circ\pi'_A$ and $\pi_B\circ\pi_{B\times C}=\phi_{A\times B}\circ\pi'_B$).
+		\end{tikzcd}\](that is, $\pi_A=\pi'_A\circ\phi_{A\times B}$ and $\pi_B\circ\pi_{B\times C}=\pi'_B\circ\phi_{A\times B}$).
 		
 		But now, we have a map $\phi_{A\times B}:A\times(B\times C)\to A\times B$ and a map $\pi_C\circ\pi_{B\times C}:A\times(B\times C)\to C$, so, once again by definition of product, there's a unique function $\phi_{(A\times B)\times C}:A\times(B\times C)\to(A\times B)\times C$ such that the following diagram commutes:
 		\[\begin{tikzcd}
