@@ -1429,6 +1429,13 @@ This is till too abstract, so lets give an example:
 \end{lemma}
 \begin{proof}
 	It follows directly from the example above and from the fact that we can denote any element in $X\times\{X\}$ (which is of the form $(x,X)$, by definition) as $x_X$, just as a shorthand notation (and similarly for $Y\times\{Y\}$).
+	
+	\bigskip
+	Define $f:X\sqcup Y\to (X\times\{X\})\cup (Y\times{Y})$ by putting
+	\[f(a):=\begin{cases}
+	a_X,&\mbox{ if }a\in X\\
+	a_Y,&\mbox{ otherwise.}
+	\end{cases}\]
 \end{proof}
 
 Now, an important question at this point is \textit{WHY?}. I mean, why do we need this new notion of union, when the old one suited us just fine? Well, let me present you some results to convince you on that:
