@@ -1428,27 +1428,31 @@ This is till too abstract, so lets give an example:
 	For any two sets $X$ and $Y$ we have that $X\sqcup Y\iso (X\times\{X\})\cup (Y\times{Y})$.
 \end{lemma}
 \begin{proof}
-	It follows directly from the example above and from the fact that we can denote any element in $X\times\{0\}$ (which is of the form $(x,X)$, by definition) as $x_X$, just as a shorthand notation (and similarly for $Y\times\{1\}$).
+	It follows directly from the example above and from the fact that we can denote any element in $X\times\{0\}$ (which is of the form $(x,0)$, by definition) as $x_0$, just as a shorthand notation (and similarly for $Y\times\{1\}$).
 	
 	\bigskip
 	Define $f:X\sqcup Y\to (X\times\{0\})\cup (Y\times{Y})$ by putting
 	\[f(a):=\begin{cases}
-	a_X,&\mbox{ if }a\in X\\
-	a_Y,&\mbox{ if }a\in Y.
+	a_0,&\mbox{ if }a\in X\\
+	a_1,&\mbox{ if }a\in Y.
 	\end{cases}\]
 	
 	\begin{itemize}
 		\item \textbf{$f$ is injective:}
 		
-		Take $a,b\in X\sqcup Y$ such that $f(a)=f(b)$.
+		Take $a,b\in X\sqcup Y$ such that $f(a)=f(b)$. We have four different possibilities:
 		
-		If $a\in X$ and $b\in X$, we see that $a_X=f(a)=f(b)=b_X$ and hence $a=b$.
+		\begin{enumerate}
+			\item If $a\in X$ and $b\in X$, we see that $a_0=f(a)=f(b)=b_0$ and hence $a=b$.
+			
+			\item If $a\in X$ and $b\in Y$, we see that $a_0=f(a)=f(b)=b_1$, which is absurd because the second coordinate of $b_Y$ is $1$, and the second coordinate of $a_X$ is $0$, and $0\neq 1$, so $b_1\neq a_0$. So this case cannot happen.
+			
+			\item Similarly, if $a\in Y$ and $b\in X$ we'd get that same contradiction, so this case also cannot happen.
+			
+			\item Finally, if $a\in Y$ and $b\in Y$, just like the first case we can see that $a_1=b_1$, and hence $a=b$.			
+		\end{enumerate}
 		
-		If $a\in X$ and $b\in Y$, we see that $a_X=f(a)=f(b)=b_Y$, which is absurd because the second coordinate of $b_Y$ is $Y$, and the second coordinate of $a_X$ is $X$, and $X\neq Y$, so $b_Y\neq a_X$. So this case cannot happen.
 		
-		Similarly, if $a\in Y$ and $b\in X$ we'd get that same contradiction, so this case also cannot happen.
-		
-		Finally, if $a\in Y$ and $b\in Y$, just like the first case we can see that $a_Y=b_Y$, and hence $a=b$.
 		
 		Since in all cases, the only possible situation which doesn't lead to a contradiction is $a=b$, we see that $f$ is injective.
 		
@@ -1456,7 +1460,7 @@ This is till too abstract, so lets give an example:
 		
 		Take $c\in (X\times\{0\})\cup (Y\times\{1\})$. We want to show that there's some $a\in X\sqcup Y$ such that $f(a)=c$.
 		
-		Since $(X\times\{0\})\cap (Y\times\{1\})=\varnothing$, $c$ must lie in either $X\times\{0\}$ or $Y\times\{1\}$ - that is, either $c=x_X$ for some $a\in X$ or $c=y_Y$ for some $y\in Y$. But this means that $c$ is either $f(x)$, for some $x\in X$ or $f(y)$, for some $y\in Y$.
+		Since $(X\times\{0\})\cap (Y\times\{1\})=\varnothing$, $c$ must lie in either $X\times\{0\}$ or $Y\times\{1\}$ - that is, either $c=x_0$ for some $a\in X$ or $c=y_1$ for some $y\in Y$. But this means that $c$ is either $f(x)$, for some $x\in X$ or $f(y)$, for some $y\in Y$.
 		
 		No matter which one of these hold, there's always one $a\in X\sqcup Y$ such that $f(a)=c$, for any $c\in (X\times\{0\})\cup (Y\times\{1\})$. This proves that $f$ is surjective.
 	\end{itemize}
