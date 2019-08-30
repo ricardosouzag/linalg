@@ -1198,3 +1198,13 @@ However, using the universal property, we can define the product of \textit{any}
 Which is just the \textit{same} definition we used for the product of two sets, but generalized for \textit{any} amount of sets.
 
 This is another great reason to prefer definitions via universal properties instead of explicit ones.
+
+\begin{df}
+	Given three sets $A$, $B$ and $C$ with functions $f:A\to B$ and $g:A\to C$, the unique function from $A$ to $B\times C$ induced by the definition of product will be called the \textbf{product map of $f$ and $g$} and denoted by $f\times g:A\to B\times C$.
+\end{df}
+
+By definition, $(f\times g)(a):=(f(a),g(a))$ for any $a\in A$.
+
+\begin{ex}
+	Let $\R$ be the set of real numbers, $f,g:\R\to \R$ be defined by $f:=\id_\R$ and $g(x):=x^2$ for any $x\in\R$. Then the product map $f\times g:\R\to\R\times \R$ is the map $x\mapsto(x,x^2)$ for any $x\in \R$.
+\end{ex}
