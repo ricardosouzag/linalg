@@ -1295,7 +1295,12 @@ Let us then prove some nice properties of products:
 		&=\pi_C\circ(\psi_{B,C}\circ\phi)\\
 		&=(\pi_C\circ\psi_{B,C})\circ\phi\\
 		&=\pi'_C\circ\phi=\pi_C\circ\pi_{B,C}
-		\end{align*}
+		\end{align*}and now the last two equalities show that since $\pi_{B,C}$ and $\pi_{B,C}\circ\psi\circ\phi$ are two maps from $A\times(B\times C)$ to $B\times C$ commuting the diagram
+		\[\begin{tikzcd}
+		& A\times(B\times C) \arrow[ldd, "{\pi_B\circ\pi_{B,C}}"', bend right] \arrow[d, "{\pi_{B,C}}"',shift left] \arrow[rdd, "{\pi_C\circ\pi_{B,C}}", bend left] \arrow[d, "{\pi_{B,C}\circ\psi\circ\psi}",shift right] &   \\
+		& B\times C \arrow[ld, "\pi_B"] \arrow[rd, "\pi_C"']                                                                                                                                       &   \\
+		B &                                                                                                                                                                                          & C
+		\end{tikzcd}\]
 %		Let
 %		\[\begin{tikzcd}
 %		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
