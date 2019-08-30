@@ -1484,6 +1484,11 @@ Now, an important question at this point is \textit{WHY?}. I mean, why do we nee
 		
 		\item Let $Z$ be any set with functions $i_X:X\to Z$ and $i_Y:Y\to Z$. We want to show that there's a unique function $i:X\sqcup Y\to Z$ such that $i_X=i\circ\iota_X$ and $i_Y=i\circ\iota_Y$.
 		
+		This is easy: Define $i:X\sqcup Y\to Z$ by putting
+		\[i(a):=\begin{cases}
+		i_X(x),&\mbox{ if }a=x_0\\
+		i_Y(y),&\mbox{ if }a=y_1.
 		
+		\end{cases}\]
 	\end{enumerate}
 \end{proof}
