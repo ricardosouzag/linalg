@@ -1538,18 +1538,18 @@ g(x),& \mbox{ if }x\in B.
 \end{ex}
 
 \begin{df}
-	The product map of $\id_X$ and $\id_X$, for any set $X$ will be called the \textbf{diagonal map of $X$} and denoted by $\Delta_X:X\to X\times X$.
+	The coproduct map of $\id_X$ and $\id_X$, for any set $X$ will be called the \textbf{fold map of $X$} and denoted by $\nabla_X:X\sqcup\to X$.
 	
 	It is, as in the above definition, the unique map commuting the diagram
 	\[\begin{tikzcd}
-	& X \arrow[ldd, "\id_X"', bend right] \arrow[rdd, "\id_X", bend left] \arrow[d, "\exists!\Delta_X"] &   \\
-	& X\times X \arrow[ld, "\pi^1_X"] \arrow[rd, "\pi^2_X"']                                            &   \\
-	X &                                                                                                   & X.
+	X \arrow[rdd, "\id_X"', bend right] \arrow[rd, "\iota_0"'] &                                         & X \arrow[ldd, "\id_X", bend left] \arrow[ld, "\iota_1"] \\
+	& X\sqcup X \arrow[d, "\exists!\nabla_X"] &                                                         \\
+	& X                                       &                                                        
 	\end{tikzcd}\]
 \end{df}
 
 \begin{ex}
-	Let $A=\{a,b,c\}$. Let's calculate $\Delta_A$.
+	Let $A=\{a,b,c\}$. Let's calculate $\nabla_A$.
 	
 	By definition, we must have $\id_A=\pi^1_A\circ\Delta_X$ and $\id_A=\pi^1_A\circ\Delta_X$. So take any $a\in A$.
 	
