@@ -1424,7 +1424,7 @@ This is till too abstract, so lets give an example:
 	So we put $C\sqcup D:=C_C\cup D_D$, and call it the \textbf{disjoint union of $C$ and $D$}.
 \end{ex}
 
-\begin{lemma}
+\begin{lemma}\label{lem:sqcup is indexed union}
 	For any two sets $X$ and $Y$ we have that $X\sqcup Y\iso (X\times\{0\})\cup (Y\times\{1\})$.
 \end{lemma}
 \begin{proof}
@@ -1478,8 +1478,10 @@ Now, an important question at this point is \textit{WHY?}. I mean, why do we nee
 \begin{proof}
 	We have to show two things:
 	\begin{enumerate}[(i.)]
-		\item There are functions $\iota_X:X\to X\sqcup Y$ and $\iota Y:Y\to x\sqcup Y$.
+		\item There are functions $\iota_X:X\to X\sqcup Y$ and $\iota Y:Y\to X\sqcup Y$.
 		
-		This
+		This can easily be seen by considering the \cref{lem:sqcup is indexed union}, and so we can put $\iota_X(x):=x_0$ and $\iota_Y(y):=y_1$ for any $x\in X$ and any $y\in Y$.
+		
+		\item 
 	\end{enumerate}
 \end{proof}
