@@ -1224,6 +1224,19 @@ Let us then prove some nice properties of products:
 		\item $A\times 1\iso A$ (but not equal).
 	\end{enumerate}
 \end{lemma}
+\begin{proof}
+	\begin{enumerate}[(a)]
+		\item Since $A\times B$ is the product of $A$ and $B$, there are functions $\pi_A:A\times B\to A$ and $\pi_B:A\times B\to B$. Similarly, since $B\times A$ is the product of $B$ and $A$, there are functions $\pi'_B:B\times A\to B$ and $\pi'_A:B\times A\to A$.
+		
+		Now, $A\times B$ has a function to $B$ and a function to $A$, so, by definition of product, there's a unique function $\phi:A\times B\to B\times A$ such that $\pi_A=\pi'_A\circ\phi$ and $\pi_B=\pi'_B\circ\phi$. Analogously, since $B\times A$ has functions to $A$ and $B$, there's a unique function $\psi:B\times A\to A\times B$ such that $\pi'_A=\pi_A\circ\psi$ and $\pi'_B=\pi_B\circ \psi$.
+		
+		As done previously, we can consider the functions $\id_{A\times B}$ and $\psi\circ\phi$, both from $A\times B$ to itself. Notice also that $\pi_A=\pi_A\circ\id_{A\times B}$ and $\pi_B=\pi_B\circ\id_{A\times B}$. But by definition of product, there's a unique function from any set (including $A\times B$ itself) to $A\times B$ for which that holds. Hence, these two functions must be the same - that is, $\psi\circ\phi=\id_{A\times B}$.
+		
+		Arguing analogously, we can prove that $\id_{B\times A}$ and $\phi\circ\psi$ are two functions from $B\times A$ to itself which have the desired property and, once again, by definition of product, they must be the same - that is, $\phi\circ\psi=\id_{B\times A}$.
+		
+		Hence, $\phi$ and $\psi$ are inverses and, therefore, isomorphisms.
+	\end{enumerate}
+\end{proof}
 
 \begin{rmk}
 	From here onwards, whenever we multiply a set by itself, we'll take inspiration on numbers and denote the product of $n$ copies of any set $A$ by $A^n$.
