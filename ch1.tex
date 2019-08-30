@@ -1259,6 +1259,10 @@ Let us then prove some nice properties of products:
 		\end{tikzcd}\]be the functions from $A\times B\times C$ to each one of $A$, $B$ and $C$ (which exist by definition of product).
 		
 		Now, by definition of $A\times B\times C$, there's a unique $\phi:A\times(B\times C)\to A\times B\times C$ such that $\pi_A=\pi'_A\circ\phi$,$\pi_B\circ\pi_{B,C}=\pi'_B\circ\phi$ and $\pi_C\circ\pi_{B,C}=\pi'_C\circ\phi$.
+		
+		But, by definition of $B\times C$, there's a unique $\psi_{B,C}:A\times B\times C\to B\times C$ such that $\pi'_B=\pi_B\circ\psi_{B,C}$ and $\pi'_C=\pi_C\circ\psi_{B,C}$.
+		
+		Finally, by definition of $A\times (B\times C)$, the above $\psi_{B,C}$ together with $\pi'_A$ show that there's a unique $\psi:A\times B\times C\to A\times(B\times C)$ such that $\pi'_A=\pi_A\circ\psi$ and $\psi_{B,C}=\pi_{B,C}\circ\psi$.
 %		Let
 %		\[\begin{tikzcd}
 %		&                                                      & (A\times B)\times C \arrow[ld, "\pi_{A\times B}"] \arrow[rrdd, "\pi'_C"] &                                                   &   \\
