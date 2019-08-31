@@ -1835,5 +1835,16 @@ Since $f$ is injective and surjective, it is bijective, as we wished to show.
 		\item Assume the result is true for some $n\in \N$ - that is, there's no surjection from $n$ to $\N$. We're gonna prove the result for $n+1$.
 		
 		Let $f:n+1\to \N$ be a surjection. In that case, we get a surjection $f':n\to \N\setminus\{f(n)\}$ by putting $f'(x):=f(x)$ for all $x\in n$.
+		
+		But the preceding lemma tells us that $\N\iso \N\setminus\{f(n)\}$, so $f'$ is a surjection from $n$ to $\N$ - which is absurd, by hypothesis.
+		
+		It follows then that $f$ cannot be a surjection, just as we wished to show.
 	\end{itemize}
+
+We have just shown that ``the set of all $n\in \N$ for which there's no surjection to $\N$'' contains 0 and is closed by successors, so, by (AP3), it must be $\N$ itself.
+
+\bigskip
+Conversely, suppose $X$ is such that there's no surjection from $X$ to $\N$. Take any such function $f:X\to \N$ and consider its image $\im(f)$.
+
+Now, we can induce a new function $f':X\to\im(f)$ by putting $f'(x):=f(x)$ for all $x\in X$. It is clear that $f'$ is surjective, by definition. So it has a right-inverse, $g:\im(f)\to X$ such that $\id_{\im(f)}=f\circ g$.
 \end{proof}
