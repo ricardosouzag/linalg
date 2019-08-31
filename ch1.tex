@@ -1659,3 +1659,23 @@ Without further ado, then, here we go.
 
 Then $N$ is called the \textbf{set of natural numbers}.
 \end{df}
+
+Now, there is no way, at first glance, to tell if these axioms do, or do not, induce a paradox.
+
+The best way to do that is to produce a model for it - for if a list of axioms can be modelled, then it is consistent (i.e., it has no paradoxes).
+
+So, we're going to do just that: Produce a model for it.
+
+\begin{df}[Zero]
+	We'll call the set $\varnothing$ the \textbf{zero set} and denote it as $0$.
+\end{df}
+
+\begin{df}[Successor]
+	For any set $X$ we define it's \textbf{successor} to be the set $s(X):=X\cup\{X\}$.
+\end{df}
+
+Now, let's see what is this successor all about.
+
+\begin{ex}
+	Let $A\{a,b\}$. What is $s(A)$? Well, by definition, $s(A)=A\cup\{A\}=\{a,b,\{a,b\}\}$.
+\end{ex}
