@@ -1802,6 +1802,26 @@ So we've shown that the set of all $n$ such that the proposition holds is a subs
 	x,&\mbox{ if }x\in n\\
 	x+1,&\mbox{otherwise}.
 	\end{cases}\]
+	
+	\begin{itemize}
+		\item $f$ is surjective:
+		
+		Take any $x\in \N\setminus\{n\}$. If $x\in n$, then clearly $x=f(x)$. If $x\notin x$, then $x$ is the successor of some $y$, and, clearly, $x=f(y)$.
+		
+		Either way, we see that $x\in\im(f)$, so $f$ is surjective.
+		
+		\item $f$ is injective:
+		
+		Take $x,y\in\N$ such that $f(x)=f(y)$.
+		
+		If $f(x)\in n$, then, by definition, $x\in n$ and, therefore, $x=f(x)=f(y)=y$.
+		
+		If $f(x)\notin n$, then, by definition, $x\notin n$ and, therefore, $x+1=f(x)=f(y)=y+1$ and since $s$ is injective, by (PA2), we have that $s(x)=x+1=y+1=s(y)$ implies $x=y$.
+		
+		These two together show that $f$ is indeed injective.		
+	\end{itemize}
+
+Since $f$ is injective and surjective, it is bijective, as we wished to show.
 \end{proof}
 
 \begin{prop}
