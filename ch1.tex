@@ -1764,8 +1764,10 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 		
 		This means that $f(n)\notin n$ and, therefore, $f(n)$ must be the only element left in $n+1$ - that is $n$, from which it follows that $f$ is surjective.
 		
-		\item If, however, there is some $x\in n$ such that $f(x)=n$, then we know that this $x$ is unique since $f$ is injective. This allows us, then, to define a new function $g:n+1\to n+1$ as such: $g(x):=f(n)$, $g(n):=f(x)$, $g(m):f(m)$ where $x$ is the one we fixed above, and $m\in n$.
+		\item If, however, there is some $x\in n$ such that $f(x)=n$, then we know that this $x$ is unique since $f$ is injective. Let's call this element $k$, so $f(k)=n$. This allows us, then, to define a new function $g:n+1\to n+1$ as such: $g(k):=f(n)$, $g(n):=f(k)$, $g(m):=f(m)$ for all $m\in n$.
+		
+		Now $g$ is an injection for which there's no $x\in n$ such that $g(x)=n$ (by construction). But now $g$ is just as in the previous case, so it must be surjective. But then, $f$ must also be surjective, since they have the same images.
 	\end{itemize}
-	
-	
+
+So we've shown that the set of all $n$ such that the proposition holds is a subset of $\N$ which contains 0 and is closed under taking successors. It follows from (PA3) that this set is the whole $\N$, so the proposition follows.
 \end{proof}
