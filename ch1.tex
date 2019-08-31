@@ -1760,7 +1760,9 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 		
 		Now, we have that $f':n\to n$ is injective and, therefore, by our assumption that the result holds for any injection from $n$ to $n$, we see that $f'$ is surjective.
 		
-		This means that $f(n)\notin n$ since, otherwise, $f'$ wouldn't be surjective, and, therefore, $f(n)$ must be $n$, from which it follows that $f$ is surjective.
+		Now we ask: Can $f(n)$ be in $n$? Well, if it was, there'd be some $m\in n$ such that $f'(m)=f(n)$, since $f'$ is injective. But $f'(m)=f(m)$, by definition of $f'$. So we would have $f(m)=f'(m)=f(n)$ which would imply, since $f$ is injective by hypothesis, that $m=n$ - which is absurd, because $m\in n$ and we've shown many times before that $X\notin X$ for any set $X$.
+		
+		This means that $f(n)\notin n$ and, therefore, $f(n)$ must be the only element left in $n+1$ - that is $n$, from which it follows that $f$ is surjective.
 	\end{itemize}
 	
 	
