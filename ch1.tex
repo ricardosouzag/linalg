@@ -1645,7 +1645,7 @@ Basically, what that means is: Suppose I give you a list of axioms. What guarant
 
 Hence the name model - it's a way of \textit{modelling} your list of conditions - taking it from something abstract and \textit{modelling} it as something concrete.
 
-Now, it's a known fact in mathematical logic that the Peano's Axioms (which we're going to present) do admit a model (which we're going to construct), and that it is the \textit{only} model (up to set isomorphism) for those axioms.
+Now, it's a known fact in mathematical logic that Peano's Axioms (which we're going to present) do admit a model (which we're going to construct), and that it is the \textit{only} model (up to set isomorphism) for those axioms.
 
 Without further ado, then, here we go.
 
@@ -1702,7 +1702,7 @@ Now, let's see what is this successor all about.
 
 In some sense, $\N$, as defined above, is ``the smallest set containing zero and all its successors''.
 
-We can finally model the Peano's Axioms:
+We can finally model Peano's Axioms:
 \begin{theorem}
 	The set $\N$ satisfies all of (PA1), (PA2) and (PA3).
 \end{theorem}
@@ -1713,10 +1713,10 @@ We can finally model the Peano's Axioms:
 	
 	Since we have both $X\subseteq \N$ and $\N\subseteq X$, we can conclude that $X=\N$, and so (PA3) holds.
 	
-	This shows that $\N$ is a model for the Peano's Axioms, as we wanted.
+	This shows that $\N$ is a model for Peano's Axioms, as we wanted.
 \end{proof}
 
-With this, we see that the Peano's Axioms are consistent (i.e., don't derive any logical contradictions) and, therefore, we can work with them.
+With this, we see that Peano's Axioms are consistent (i.e., don't derive any logical contradictions) and, therefore, we can work with them.
 
 So, from now on, every natural number $n$ should be thought of as the set $\{0,1,2,3,\cdots,n-1\}$.
 
@@ -1733,4 +1733,12 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 
 \begin{ex}
 	Consider $A=\{a,b\}$. Then $A$ is finite, because $A\iso 2$. To see that, consider the function $f:A\to 2$ taking $a\mapsto 0$ and $b\mapsto 1$. It clearly is bijective, by definition, so it is an isomorphism.
+	
+	Conversely, the set $\N$ isn't finite. To see that, suppose it was - that is, there is some $n\in \N$ such that $n\iso \N$. This would imply that $n$ satisfies Peano's Axioms - in particular, $n$ would be closed by successors.
+	
+	But $n=\{0,1,2,3,\cdots,n-1\}$, and, clearly, for all $x\in n$, aside from $x=n-1$, we see that $s(x)\in n$. But if $n\iso \N$, we would have to have that $s(n-1)\in n$. But $s(n-1)=n$. So we would be saying that $n\in n$, which, by our previous discussion on Russell's Paradox, \textbf{cannot} happen.
+	
+	Therefore, if $\N\iso n$, for some $n\in \N$, we would get a paradox akin to Russell's Paradox. Since we don't want that, we can't have $\N\iso n$, no matter which $n\in \N$ we choose.
+	
+	It follows that $\N$ is not finite.
 \end{ex}
