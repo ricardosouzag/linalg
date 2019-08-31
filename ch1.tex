@@ -1792,6 +1792,18 @@ So we've shown that the set of all $n$ such that the proposition holds is a subs
 	\end{enumerate}
 \end{cor}
 
+\begin{lemma}
+	For any $n\in\N$, we have that $\N\iso \N\setminus\{n\}$.
+\end{lemma}
+\begin{proof}
+	Consider the function:
+	\[f:\N\to \N\setminus\{n\}\]
+	\[f(x):=\begin{cases}
+	x,&\mbox{ if }x\in n\\
+	x+1,&\mbox{otherwise}.
+	\end{cases}\]
+\end{proof}
+
 \begin{prop}
 	A set is finite if, and only if, there's no surjection from it to $\N$.
 \end{prop}
@@ -1802,6 +1814,6 @@ So we've shown that the set of all $n$ such that the proposition holds is a subs
 		\item If $n=0$, there's clearly no surjection from $n$ to $\N$.
 		\item Assume the result is true for some $n\in \N$ - that is, there's no surjection from $n$ to $\N$. We're gonna prove the result for $n+1$.
 		
-		Let $f:n+1\to \N$ be a function.
+		Let $f:n+1\to \N$ be a surjection.
 	\end{itemize}
 \end{proof}
