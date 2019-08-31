@@ -1757,4 +1757,8 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 	Now, since $f$ is injective, we have that $f(s(X))\iso s(X)$, and since $X\iso n$, we have that $s(X)\iso n+1$, and, therefore, $f(s(X))\iso n+1$ - and hence it is also finite.
 	
 	If $f(s(X))=s(X)$, we're done. Otherwise, there's some $x\in s(X)$ such that $x\in s(X)\setminus f(s(X))$ - that is, $x$ is in $s(X)$, but not in $f(s(X))$.
+	
+	Consider then the set $X':=s(X)\setminus\{x\}$. Clearly, $X'\iso X\iso n$.
+	
+	This allows us to define $f':X'\to X'$ by putting $f'(x'):=f(x')$, for all $x'\in X'$.
 \end{proof}
