@@ -1734,6 +1734,7 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 \begin{ex}
 	Consider $A=\{a,b\}$. Then $A$ is finite, because $A\iso 2$. To see that, consider the function $f:A\to 2$ taking $a\mapsto 0$ and $b\mapsto 1$. It clearly is bijective, by definition, so it is an isomorphism.
 	
+	\bigskip
 	Conversely, the set $\N$ isn't finite. To see that, suppose it was - that is, there is some $n\in \N$ such that $n\iso \N$. This would imply that $n$ satisfies Peano's Axioms - in particular, $n$ would be closed by successors.
 	
 	But $n=\{0,1,2,3,\cdots,n-1\}$, and, clearly, for all $x\in n$, aside from $x=n-1$, we see that $s(x)\in n$. But if $n\iso \N$, we would have to have that $s(n-1)\in n$. But $s(n-1)=n$. So we would be saying that $n\in n$, which, by our previous discussion on Russell's Paradox, \textbf{cannot} happen.
@@ -1742,3 +1743,12 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 	
 	It follows that $\N$ is not finite.
 \end{ex}
+
+\begin{lemma}
+	A set $X$ is finite if, and only if, there is no surjection from $X$ to $\N$.
+\end{lemma}
+\begin{proof}
+	Suppose there is a surjection $f:X\to \N$ and that $X$ is finite - that is, for all purposes, we can consider $X=n$ for some $n\in \N$.
+	
+	Since $f$ is a surjection, we know that it has a right-inverse $g:\N\to X$ such that $\id_\N=f\circ g$.
+\end{proof}
