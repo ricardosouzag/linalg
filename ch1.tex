@@ -1614,3 +1614,48 @@ The next subsection will be all about that: How to deal with sets as numbers, an
 
 \newpage
 \subsection{Everything is a set!}
+
+The motivation for this section couldn't be simpler and more direct: We want to give a proper, formal definition of \textit{numbers}.
+
+The reasoning for this is simple: What is a number? What is the number 2, for instance, and why does it not equal, say, 4?
+
+Through the history of mathematics, this has been tried to solve in many ways. For instance, Bertrand Russell (the same one from Russell's Paradox) proposed that the number 2, for instance, should be defined as being the collection of all collections with two elements. Of course, the way I put it here isn't very proper, or formal, but the general ideal is there: You take all collections in the universe, and group them together into mini-collections following a simple rule: Two collections belong in the same mini-collection if, and only if, they have the same amount of elements. And then you say that a \textit{number} is each one of those mini-collections.
+
+Now, we can agree or disagree that this is a good definition, but it sure as hell is a very interesting definition, at least. Think about it - if you go to any dictionary, it'll say that a number is a descriptive of quantity, and a quantity is the number of elements - which is a circular definition. Russell managed to sidestep that problem using the clever idea of grouping all collections with the same amount of elements together.
+
+But then, we can ask: How can you count elements in a set without using numbers? Or, maybe a simpler problem: How to know if two sets have the same amount of elements without using numbers?
+
+What Russell proposed as a solution to that problem is precisely what we're going to use: Bijections.
+
+For Russell, two sets would be said to have the same amount of elements if you could make pairings of elements on both sets such that every element on the first set had a unique match on the second set, and that there was no elements left on either set after this process.
+
+This idea is so simple, yet so brilliant, that even though it's not what we usually think of as numbers today, as mathematicians, it's still a very rich idea on the concept of numbers - so much so that it has been used as an alternative to the classic teaching method for introducing the concept of numbers to small children.
+
+\bigskip
+What we're going to do, however, is a tad different. We're going to use the so called \textbf{Peano's Axioms}, which is a list of axioms (which will be three in this text) that is widely accepted in mathematics as being the ``best formalization of the set of natural numbers''.
+
+One of the reasons, and I could argue the \textit{best} reason, why it is considered as such, comes from the fact that it is \textit{categorical}, that is, it admits a unique model (up to isomorphisms, of course).
+
+Basically, what that means is: Suppose I give you a list of axioms. What guarantee is there that there is something that is able to satisfy all those axioms at the same time? For instance, the list
+\begin{itemize}
+	\item All of its elements are sets;
+	\item Every set is in there;
+	\item There are no sets in there.
+\end{itemize} admits no \textit{model} - that is, there's nothing in the universe that satisfies all these three properties at the same time (you can actually take any two of these and it would work, but with all three at once, it's impossible).
+
+Hence the name model - it's a way of \textit{modelling} your list of conditions - taking it from something abstract and \textit{modelling} it as something concrete.
+
+Now, it's a known fact in mathematical logic that the Peano's Axioms (which we're going to present) do admit a model (which we're going to construct), and that it is the \textit{only} model (up to set isomorphism) for those axioms.
+
+Without further ado, then, here we go.
+
+\begin{df}[Peano's Axioms]
+	Let $N$ be a set satisfying
+	\begin{enumerate}
+		\item[PA1] There is a point $0\in N$ called \textit{zero}.
+		\item[PA2] There is an injective function $s:N\to N$ called \textit{successor} such that $0\notin \im(s)$;
+		\item[PA3] If $X$ is a set containing $0$ such that for every $x\in X$ we have that $s(x)\in X$, then $X\iso N$. 
+	\end{enumerate}
+
+Then $N$ is called the \textbf{set of natural numbers}.
+\end{df}
