@@ -1654,7 +1654,7 @@ Without further ado, then, here we go.
 	\begin{enumerate}
 		\item[(PA1)] There is a point $0\in N$ called \emph{zero}.
 		\item[(PA2)] There is an injective function $s:N\to N$ called \emph{successor} such that $0\notin \im(s)$;
-		\item[(PA3)] If $X$ is a set containing $0$ such that for every $x\in X$ we have that $s(x)\in X$, then $X\iso N$. 
+		\item[(PA3)] If $X\subseteq N$ is a set containing $0$ such that for every $x\in X$ we have that $s(x)\in X$, then $X=N$. 
 	\end{enumerate}
 
 Then $N$ is called the \textbf{set of natural numbers}.
@@ -1694,3 +1694,24 @@ Now, let's see what is this successor all about.
 	
 	You can see where we're going with this, right?
 \end{ex}
+
+\begin{df}
+	Let $S$ denote any set containing $0$ and closed under taking successors (that is, $x\in S$ implies $s(x)\in S$). We define $\N$ to be the set given by
+	\[\N:=\bigcap_{N\in \mc N} N\]where $\mc N:=\{X\in \mc P(S)\mid x\in X\implies s(x)\in X\}$.
+\end{df}
+
+In some sense, $\N$, as defined above, is ``the smallest set containing zero and all its successors''.
+
+We can finally model the Peano's Axioms:
+\begin{theorem}
+	The set $\N$ satisfies all of (PA1), (PA2) and (PA3).
+\end{theorem}
+\begin{proof}
+	By definition, $\N$ satisfies (PA1) and (PA2).
+	
+	To prove (PA3), first notice that if we take $X\subseteq\N$ containing $0$ and closed by successors, then, by definition of $\N$, we see that $\N\subseteq X$ (since $\N$ is the smallest set with those properties).
+	
+	Since we have both $X\subseteq \N$ and $\N\subseteq X$, we can conclude that $X=\N$, and so (PA3) holds.
+	
+	This shows that $\N$ is a model for the Peano's Axioms, as we wanted.
+\end{proof}
