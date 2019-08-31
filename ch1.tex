@@ -1752,9 +1752,16 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 	
 	Suppose it is true for some $n\in \N$. We will prove that it holds true also for $n+1$.
 	
-	Let $f:n+1\to n+1$ be an injective function, and consider $f(n)$. 
-	
-	If $f(n)=m\in n+1$, we consider the function $f':n\to n+1\setminus\{m\}$ defined by $f'(x):=f(x)$. Since $f$ is injective, $f'$ also is, and, therefore, $\im(f')\iso n$. But $n+1\setminus{m}\iso n$, so $f'$ can be thought of as an injection from $n$ to itself. By assumption, we see that $f'$ is surjective.
+	Let $f:n+1\to n+1$ be an injective function, and consider $f^{-1}(n)$.
+	\begin{itemize}
+		\item If there is no $x\in n$ such that $f(x)=n$, we can define $f':n\to n$ by putting $f'(x):=f(x)$ and see that $f'$ is injective:
+		
+		If $f'(x)=f'(y)$ for some $x,y\in n$, then, by definition, $f(x)=f'(x)=f'(y)=f(y)$ and therefore $f(x)=f(y)$, but since $f$ is injective, we have that this implies $x=y$.
+		
+		Now, we have that $f':n\to n$ is injective and, therefore, by our assumption that the result holds for any injection from $n$ to $n$, we see that $f'$ is surjective.
+		
+		This means that $f(n)\notin n$ since, otherwise, $f'$ wouldn't be surjective, and, therefore, $f(n)$ must be $n$, from which it follows that $f$ is surjective.
+	\end{itemize}
 	
 	
 \end{proof}
