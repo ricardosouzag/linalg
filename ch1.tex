@@ -1745,7 +1745,7 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 \end{ex}
 
 \begin{prop}
-	For all $n\in\N$, If $f:n\to n$ is injective, then $f$ is automatically surjective.
+	For all $n\in\N$, if $f:n\to n$ is injective, then it is automatically surjective.
 \end{prop}
 \begin{proof}
 	If $n=0$, it is true (since the only function between 0 and 0 is the identity, which is a bijection).
@@ -1770,4 +1770,16 @@ Now that we have numbers, we can finally begin our study on cardinality, which w
 	\end{itemize}
 
 So we've shown that the set of all $n$ such that the proposition holds is a subset of $\N$ which contains 0 and is closed under taking successors. It follows from (PA3) that this set is the whole $\N$, so the proposition follows.
+\end{proof}
+\begin{prop}
+	For all $n\in\N$, if $f:n\to n$ is surjective, then it is automatically injective.
+\end{prop}
+\begin{proof}
+	Once again, we'll proceed by using (PA3):
+	\begin{itemize}
+		\item It is trivially true for $n=0$;
+		\item Suppose it's true for $n$. We'll show that it's also true for $n+1$.
+		
+		Let $f:n+1\to n+1$ be a surjection. Take $x,y\in n+1$ such that $f(x)=f(y)$. In that case, define $g:n+1\setminus\{x\}\to n+1$ by putting $g(m):=f(m)$ for all $m\in n+1\setminus\{x\}$. Now, since we only removed $x$ from the domain and $f(x)=f(y)=g(y)$, we see that $\im(f)=\im(g)$. But $f$ is surjective, so $\im(f)=n+1$. Hence, $\im(g)=n+1$ and $g$ is surjective as well.
+	\end{itemize}
 \end{proof}
