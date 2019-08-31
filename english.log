@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  31 AUG 2019 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  31 AUG 2019 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,7 +1048,7 @@ Package rerunfilecheck Info: File `english.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  33793 strings out of 492646
- 816762 string characters out of 6133325
+ 816761 string characters out of 6133325
  1004763 words of memory out of 5000000
  36809 multiletter control sequences out of 15000+600000
  14705 words of font info for 58 fonts, out of 8000000 for 9000
@@ -1068,7 +1068,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (52 pages, 355813 bytes).
+Output written on english.pdf (52 pages, 356043 bytes).
 PDF statistics:
  688 PDF objects out of 1000 (max. 8388607)
  612 compressed objects within 7 object streams
