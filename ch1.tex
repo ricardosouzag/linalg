@@ -1844,7 +1844,20 @@ Since $f$ is injective and surjective, it is bijective, as we wished to show.
 We have just shown that ``the set of all $n\in \N$ for which there's no surjection to $\N$'' contains 0 and is closed by successors, so, by (AP3), it must be $\N$ itself.
 
 \bigskip
-Conversely, suppose $X$ is such that there's no surjection from $X$ to $\N$. Take any such function $f:X\to \N$ and consider its image $\im(f)$.
+Conversely, suppose $X$ is not finite, that is, for all $n\in\N$ we have $X\not\iso n$.
 
-Since $f$ is not surjective, $\im(f)\neq \N$.
+Now, for each $Y\subseteq X$, choose an element $x_Y\in Y$.
+
+We define $f:\N\to X$ by putting
+\[f(n):=\begin{cases}
+x_X,&\mbox{ if }n=0;\\
+x_{X\setminus\{f(0),f(1),\cdots,f(n-1)\}},&\mbox{ otherwise.}
+\end{cases}\]
+
+This function is clearly injective by definition (since, for each $n\in \N$, $f(n)$ is chosen from a set that doesn't contain any of $f(0)$ up to $f(n-1)$). Therefore, it has a left-inverse $g:X\to\N$ such that $\id_{\N}=g\circ f$.
+
+But $\id_{\N}$ is clearly a bijection - and hence a surjection. It follows that $g$ is also a surjection from $X$ to $\N$, just as we wanted.
+
+\bigskip
+This ends the proof.
 \end{proof}
