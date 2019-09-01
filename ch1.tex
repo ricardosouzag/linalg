@@ -2285,6 +2285,20 @@ Note that for each $x\in A\sqcup B$ we know nothing about $s_n^x$ being well-def
 
 Now, it's easy to see that every element of $A\sqcup B$ is in some $S^x$ - so we get
 \[A\sqcup B=\bigcup_{x\in A\sqcup B}S^x\](we're not claiming that this union is disjoint, there could be $x\neq y$ but such that $S^x=S^y$. We're not excluding that possibility).
+
+Indeed, assume that's the case - that there's some $x\neq y$ such that $s^x_n=s^y_m$, for some $n,m\in\Z$. Then, clearly, $s^x_{n+l}=s^y_{m+l}$ for all $l\in\Z$, so $S^y=S^x$.
+
+So now the proof consists of showing not that $A\iso B$, but that for each $x\in A\sqcup B$, we have $(S^x\cap A)\iso(S^x\cap B)$ - that is, the parts of $A$ and $B$ inside each of $S^x$ are isomorphic. This suffices, because we can then extend this isomorphism to the whole $A$ and $B$.
+
+\begin{itemize}
+	\item If $s^x_n$ is well-defined for all $n\in\Z$, then this means that $f':S^x\cap A\to S^x\cap B$ is surjective, and therefore a bijection (since it's already injective).
+	
+	\item If $s^x_n\in A$ is the smallest well-defined, then, once again, $f':S^x\cap A\to S^x\cap B$ is surjective, and therefore a bijection (since it's already injective).
+	
+	\item If $s^x_n\in B$ is the smallest well-defined, then $g':S^x\cap B\to S^x\cap A$ is surjective, and, therefore, a bijection (since it's already injective).
+\end{itemize}
+
+Either way, we see that for all $x\in A\sqcup B$ we have $(S^x\cap A)\iso(S^x\cap B)$, so $A\iso B$, and the result follows.
 \end{proof}
 
 \begin{theorem}
