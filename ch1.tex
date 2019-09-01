@@ -2080,6 +2080,23 @@ So contrary to the order $\leq$ in $\N$, the order $\subseteq$ in $\mc P(X)$ doe
 	\end{itemize}
 \end{df}
 
+\begin{ex}
+	Let $X$ be as in the previous example, and consider $\mc P(X)$ ordered by set inclusion.
+	
+	Then $\mc P(X)$ has a maximum: $X$; and a minimum: $\varnothing$.
+	
+	Notice that they are also respectively maximal and minimal elements.
+	
+	Consider however $\mc P(X)\setminus{\varnothing, X}$, that is, $\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\}\}$. 
+	
+	Does this set have a minimum or a maximum? Well, suppose $\{a\}$ was a minimum. Then it'd have to be smaller than everyone - including $\{b,c\}$. But $\{a\}\not\subseteq \{b,c\}$, so $\{a\}$ cannot be a minimum (and $\{b,c\}$ cannot be a maximum). Similarly, we can show that this set doesn't have a minimum or a maximum.
+	
+	However, it \textit{does} have minimals and maximals: For instance, $\{a\}$ is minimal - since there's no element that's smaller than $\{a\}$. Similarly, $\{b,c\}$ is maximal, since there's no element that's greater than it.
+\end{ex}
+
 \begin{lemma}
-	Let $(A,\leq)$ be a poset. If $X\subseteq A$ is totally ordered, then the concepts of maximum and maximal coincide in $X$, as do the concepts of minimum and minimal.
+	If $X$ is a poset with maximum (resp. minimum), then that maximum (resp. minimum) is also maximal (resp. minimal).
 \end{lemma}
+\begin{proof}
+	Let $x=\max X$. Then for all other $y\in X$ we have $y\leq x$. In particular, if $y\neq x$ we have that $x\not\leq y$, so $x$ is a maximal element of $X$.
+\end{proof}
