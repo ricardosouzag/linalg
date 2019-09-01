@@ -2127,3 +2127,68 @@ But then $B'$ is a subset of $\N$ which contains $0$ and all its successors - th
 
 But $B'=\N\setminus B$. So $B=\N\setminus B'=\N\setminus\N=\varnothing$ and, therefore, the only subset of $\N$ which doesn't have a minimum is $\varnothing$ - this proves that $\N$ is well-ordered, as we wished to show.
 \end{proof}
+
+Let us now present a new kind of relation:
+
+\begin{prop}
+	For any set $X$, ``$x\sim y$ if, and only if, $x=y$'' is a relation.
+\end{prop}
+
+\begin{ex}
+	Take $X$ any set, and consider the relation above: $x\sim y$ if, and only if, $x=y$.
+	
+	\begin{itemize}
+		\item First, we see that $x\sim x$ for all $x\in X$, since every element equals itself.
+		
+		\item Now, assume that $x\sim y$ for some $x,y\in X$. But this means that $x=y$, and therefore $y=x$, so $y\sim x$.
+		
+		\item Finally, if $x\sim y$ and $y\sim z$ for some $x,y,z\in X$, then this means that $x=y$ and $y=z$, so $x=y=z$ implies $x=z$. This means that $x\sim z$.
+	\end{itemize}
+
+	The first and the last items above say that $\sim$ is reflexive and transitive, respectively. The second one, however, is a new property - one that orders, in general, don't satisfy. It's called \textit{symmetry}.
+\end{ex}
+
+\begin{df}
+	Given a set $X$ with a relation $R$, we say that \textbf{$R$ is symmetric} if $x\rel{R}y$ if, and only if, $y\rel{R}x$.
+\end{df}
+
+So, in other words, a relation is symmetric if it doesn't care about order.
+
+\begin{ex}
+	The relation ``$a$ is a son of $b$'' is \textbf{not} symmetric: $a$ being $b$'s son doesn't imply that $b$ is $a$'s son.
+	
+	However, the relation ``$a$ is in the same class as $b$'' is symmetric: $a$ being in the same class as $b$ is the same as $b$ being in the same class as $a$.
+	
+	Similarly, the relation ``$X$ has the same amount of elements as $Y$'' is symmetric.
+\end{ex}
+
+\begin{df}
+	Given a set $X$, a relation $\sim$ is said to be an \textbf{equivalence} if it is reflexive, symmetric and transitive.
+\end{df}
+
+\begin{lemma}
+	In any set $X$, element equality is an equivalence relation on $X$.
+\end{lemma}
+
+\begin{lemma}
+	Given any set $X$, the relation ``$Y\sim Z$ if, and only if, $Y\iso Z$'' is an equivalence relation on $\mc P(X)$.
+\end{lemma}
+\begin{proof}
+	\begin{itemize}
+		\item $\sim$ is reflexive:
+		
+		Clearly, any $Y\in \mc P(X)$ is isomorphic to itself via the identity function $\id_Y:Y\to Y$;
+		
+		\item $\sim$ is symmetric:
+		
+		Let $Y\sim Z$ - that is, there is a bijection $f:Y\to Z$. But we know that bijections are isomorphisms, so there is an inverse $f^{-1}:Z\to Y$ which is also an isomorphism - and hence a bijection. So there is a bijection from $Z$ to $Y$, and so $Z\sim Y$;
+		
+		\item $\sim$ is transitive:
+		
+		This follows trivially from the fact that composition of isomorphisms is, again, an isomorphism.
+	\end{itemize}
+
+Since $\sim$ is reflexive, symmetric and transitive it is, by definition, an equivalence.
+
+This ends the proof.
+\end{proof}
