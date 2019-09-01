@@ -2111,5 +2111,19 @@ So contrary to the order $\leq$ in $\N$, the order $\subseteq$ in $\mc P(X)$ doe
 	The set $\N$ with the usual order is well-ordered.
 \end{theorem}
 \begin{proof}
-	Assume it isn't. Then, by definition, there is some set $B\subset\N$ which doesn't have a minimum.
+	Assume there is some set $B\subset\N$ which doesn't have a minimum. Consider $B':=\N\setminus B$.
+	
+	\begin{itemize}
+		\item $0\in B'$.
+		
+		This is trivial, cause, otherwise $0\in B$, but then $0=\min B$. Since we're assuming $B$ doesn't have a minimum, then $0\notin B$ and therefore $0\in B'$.
+		
+		\item Assume $m\in B'$ for all $m\leq n$. We're going to show that $n+1\in B'$.
+		
+		If $n+1$ was in $B$, then, since every $m\leq n$ is not in $B$, by assumption, we'd have that $n+1$ is a minimum of $B$. But $B$ doesn't have a minimum, so $n+1\notin B$ and, therefore, $n+1\in B'$.
+	\end{itemize}
+
+But then $B'$ is a subset of $\N$ which contains $0$ and all its successors - therefore it must be $\N$ (by (PA3)).
+
+But $B'=\N\setminus B$. So $B=\varnothing$ and, therefore, the only subset of $\N$ which doesn't have a minimum is $\varnothing$ - this proves that $\N$ is well-ordered, as we wished to prove.
 \end{proof}
