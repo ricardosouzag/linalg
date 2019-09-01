@@ -2271,6 +2271,14 @@ To finish this section, we'll prove two important results.
 \begin{theorem}[Cantor-Bernstein-Schroeder]
 	If $f:A\to B$ and $g:B\to A$ are both injective, then there's an isomorphism $\phi:A\to B$.
 \end{theorem}
+\begin{proof}
+	For each $x\in A\sqcup B$ define:
+	\begin{itemize}
+		\item $s_0^x:=x$;
+		\item $s_{n+1}^x:=(f\sqcup g)(s_n^x)$;
+		\item $s_{-(n+1)}^x:=(f\sqcup g)^{-1}(s_{-n}^x)$, if $s_{-n}^x$ is well-defined.
+	\end{itemize}
+\end{proof}
 
 \begin{theorem}
 	Let $X$ be a set. Then the relation ``$Y\leq Z$ if, and only if, there is an injection $f:Y\to Z$'' is an order in $\mc P(X)/\iso$.
