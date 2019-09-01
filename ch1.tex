@@ -2021,3 +2021,43 @@ Let's check:
 	In each of the four cases, the only logical conclusion is $n\leq l$, so we have that $\leq $ is transitive.
 \end{itemize}
 \end{ex}
+
+\begin{df}
+	Let $A$ be any set with a relation $R\subseteq A\times A$. We say that $R$ is a \textbf{partial order} if $R$ is reflexive, antisymmetric and transitive.
+\end{df}
+
+Now we will justify the terminology \textit{partial}:
+
+\begin{ex}
+	Let $X$ be any set, and consider $\mc P(X)$ its power set.
+	
+	We claim that the relation $Y\subseteq Z$ is a partial order on $\mc P(X)$.
+	
+	\begin{itemize}
+		\item Clearly, for all $Y\in \mc P(X)$ we have that $Y\subseteq Y$, since $Y$ is a set, so $\subseteq$ is reflexive;
+		
+		\item Assume that for some $Y,Z\in\mc P(X)$ we have both $Y\subseteq Z$ and $Z\subseteq Y$. Then, by definition of set equality, $Y=Z$, so $\subseteq$ is antisymmetric;
+		
+		\item Assume that for some $Y,Z,W\in\mc PP(X)$ we have both $Y\subseteq Z$ and $Z\subseteq W$. Then every element of $Y$ is an element of $Z$ (by the first part) and every element of $Z$ is an element of $W$ (by the second part). This implies that every element of $Y$ is an element of $W$, and, therefore, $Y\subseteq W$, and we see that $\subseteq$ is transitive.
+	\end{itemize}
+
+This is all pretty standard.
+
+Consider, then, $X=\{a,b,c\}$. Then $\mc P(X)=\{\varnothing, \{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\},X\}$.
+
+We ask: is $\{b\}$ related to $\{a,b\}$ via $\subseteq$? It clearly is!
+
+Now, is $\{b\}$ related to $\{a,c\}$ via $\subseteq$? It clearly \textbf{isn't}.
+
+So contrary to the order $\leq$ in $\N$, the order $\subseteq$ in $\mc P(X)$ doesn't allow us to compare any two elements. This is why it's called a \textit{partial} order.
+\end{ex}
+
+\begin{df}
+	Let $A$ be a set with a partial order $\leq$. We call the ordered pair $(A,\leq)$ a \textbf{poset} (\textbf{p}artiially-\textbf{o}rdered \textbf{set}).
+	
+	Sometimes, we consider the order to be implicit and simply say that $A$ is a poset.
+\end{df}
+
+\begin{df}
+	Let $(A,\leq)$ be a poset. We say that $\leq$ is a \textbf{total order} or a \textbf{linear order} if for all $a,b\in A$ we have that either or both of $a\leq b$ and $b\leq a$ hold.
+\end{df}
