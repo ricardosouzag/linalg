@@ -2199,5 +2199,25 @@ This is the final, and best reason why we should think of isomorphisms as being 
 Finally, to end this section we will use relations to build new sets.
 
 \begin{ex}
-	Let $\Z$ be the set of integers, and define the following relation:\[x\tilde y\iff \exists k\in\Z \mbox{ such that }x-y=2k.\]
+	Let $\Z$ be the set of integers, and define the following relation:\[x\sim y\iff \exists k\in\Z \mbox{ such that }x-y=2k.\]Let us show that this is an equivalence:
+	
+	\begin{itemize}
+		\item $\sim$ is reflexive:
+		
+		For all $x\in\Z$, $x-x=0=2\cdot 0$, so $x\sim x$ and $\sim$ is reflexive.
+		
+		\item $\sim$ is symmetric:
+		
+		Let $x\sim y$ for some $x,y\in \Z$. Then there exists some $k\in\Z$ such that $x-y=2k$, by definition of $\sim$. But then,
+		\[y-x=-(x-y)=-(2k)=2(-k),\]and since $k\in\Z$ we get that $-k\in\Z$, so $y\sim x$ and $\sim$ is symmetric.
+		
+		\item $\sim$ is transitive:
+		
+		Let $x\sim y$ and $y\sim z$, for some $x,y,z\in \Z$. Then, by definition of $\sim$, there exist some $k,l\in\Z$ such that $x-y=2k$ and $y-z=2l$.
+		
+		But then,
+		\[x-z=x-y+y-z=2k-2l=2(k-l)\]and since $k,l\in\Z$, we see that $k-l\in\Z$, so $x-z=2(k-l)$ tells us that $x\sim z$, so $\sim$ is transitive.
+	\end{itemize}
+
+So we see that $\sim$ is indeed an equivalence relation on $\Z$.
 \end{ex}
