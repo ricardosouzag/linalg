@@ -1917,7 +1917,19 @@ It would be great to have a way to describe when two sets are related in mathema
 \end{ex}
 
 \begin{df}
-	Let $A$ and $B$ be sets. We define the \textbf{set of relations between $A$ and $B$} to be the set $\mc P(A\times B)$.
+	Let $A$ and $B$ be sets. We define the \textbf{set of (binary) relations between $A$ and $B$} to be the set $\mc P(A\times B)$.
 	
-	In other words, a \textbf{relation between $A$ and $B$} is just a subset of $A\times B$.
+	In other words, a \textbf{(binary) relation between $A$ and $B$} is just a subset of $A\times B$.
 \end{df}
+
+\begin{ex}
+	Continuing the example above, we have the following relations, in order:
+	\begin{itemize}
+		\item $R_1:=\{(1,2),(2,4)\}\subseteq A\times B$;
+		\item $R_2:=\{(2,2)\}\subseteq A\times B$;
+		\item $R_3:=\{(1,4)\}\subseteq A\times B$;
+		\item $R_4:=\{(1,4)\}\subseteq A\times B$.
+	\end{itemize}
+
+And we can see that relations $R_3$ and $R_4$ are the same relation, but phrased differently.
+\end{ex}
