@@ -1794,12 +1794,23 @@ So we've shown that the set of all $n$ such that the proposition holds is a subs
 
 
 \begin{cor}
-	Let $f:n\to m$ be an injection that is not a surjection. Then $n\in m$.
-	
-	Analogously, if $f$ is a surjection that is not an injection, then $m\in n$.
+	For all $n,m\in \N$, we have that $n\in m$ if, and only if, there's an injection $f:n\to m$ which is not a surjection.
 \end{cor}
 \begin{proof}
-	If $f:n\to m$ is injective, then $\im(f)\iso n$.
+	If $n\in m$, the function $i_n:n\to m$ defined by $i_n(x):=x$ for all $x\in n$ is clearly injective (by definition), but it is not surjective: $n\in m$, but $n\notin\im(f)$.
+		
+	\bigskip
+	Conversly, assume that $n\notin m$. Then either $m\in n$ or $n=m$ (by definition of $\N$).
+	
+	\begin{itemize}
+		\item If $m\in n$, then, by the first case, we see that there's an injection $g:m\to n$ that is not surjective.
+		
+		Now, if there was an injection $f:n\to m$, then their composite $g\circ f:n\to n$ would be an injection too and so, by the preceding lemma, $g\circ f$ would be a bijection, which, by \cref{lem:mono epi iso properties}, implies that $g$ would be a surjection, contradicting the fact that we have proven that $g$ cannot be a surjection.
+		
+		This shows that there cannot be such an $f$.
+		
+		\item If $m=n$,
+	\end{itemize}
 \end{proof}
 
 \begin{lemma}
