@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {1.3.4}Multiplying sets}{34}{subsection.1.3.4}
 \contentsline {subsection}{\numberline {1.3.5}Adding sets?}{42}{subsection.1.3.5}
 \contentsline {subsection}{\numberline {1.3.6}Everything is a set!}{48}{subsection.1.3.6}
+\contentsline {subsection}{\numberline {1.3.7}Relations are hard, sometimes they leave you broken up inside}{55}{subsection.1.3.7}
