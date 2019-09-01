@@ -2229,4 +2229,39 @@ Conversely, if $x=2l+1$ for some $l\in\Z$ is an odd number, we see that $x-1=(2l
 
 So if we denote by $[1]$ the \textbf{class of every element in $\Z$ which is $\sim$-equivalent to 1}, we see that 
 \[[1]=\{x\in\Z\mid x\mbox{ is odd}\}.\]
+
+But since we've proven that $\sim$ is an equivalence, if we take any other odd number - say, 3, we see that $[3]=[1]$, for the following reasoning:
+\begin{itemize}
+	\item 3 is odd, so $3\sim 1$.
+	\item If $x\sim 3$, for some $x$, then since $\sim$ is transitive this implies $x\sim 1$.
+	\item This, in turn, implies that $x$ is odd.
+\end{itemize}
+
+Conversely - if $x$ is odd, then $x\sim 1$, and since $3\sim 1$ and $\sim$ is transitive, we get $x\sim 3$.
+
+So everyone who is $\sim$-equivalent to $3$ is also $\sim$-equivalent to $1$, and vice-versa.
+
+This means that we don't need to check any more odd numbers to fully understand $\sim$.
+
+\bigskip
+Let us check then the even numbers. For instance, 0. What's $[0]$ - that is, who is $\sim$-equivalent to $0$?
+
+Well, if $x\sim 0$, then $x-0=2k$ for some $k\in\Z$, but $x-0=x$, so we get that $x=2k$. This means that $x$ is even.
+
+Conversely, if $x$ is even, then $x=2l$ for some $l\in\Z$ (this is the definition of an even number: it is a multiple of 2). So $x-0$ is just $2l-0$ which is simply $2l$, so all even numbers are $\sim$-equivalent to $0$.
+
+This means that
+\[[0]=\{x\in\Z\mid x\mbox{ is even}\}.\]
+
+And doing the same reasoning we did above, we can see that $[2k]=[0]$ for any $l\in\Z$.
+
+Therefore, under this new sense of ``equality'', there are only two different elements in $\Z$: 0 and 1. Everyone else is either $\sim$-equal to 0 or 1.
+\end{ex}
+
+\begin{df}
+	Given any set $X$ with an equivalence $\sim$, we define the \textbf{quotient set of $X$ over $\sim$} to be the set $X/\sim$ of all equivalence classes of elements of $X$ under the equivalence $\sim$.
+\end{df}
+
+\begin{ex}
+	Continuing the previous example, $\Z/\sim$ is just the set $\{[0],[1]\}$.
 \end{ex}
