@@ -2266,6 +2266,23 @@ Therefore, under this new sense of ``equality'', there are only two different el
 	Continuing the previous example, $\Z/\sim$ is just the set $\{[0],[1]\}$.
 \end{ex}
 
+To finish this section, we'll prove two important results.
+
+\begin{theorem}[Cantor-Bernstein-Schroeder]
+	If $f:A\to B$ and $g:B\to A$ are both injective, then there's an isomorphism $\phi:A\to B$.
+\end{theorem}
+
 \begin{theorem}
 	Let $X$ be a set. Then the relation ``$Y\leq Z$ if, and only if, there is an injection $f:Y\to Z$'' is an order in $\mc P(X)/\iso$.
 \end{theorem}
+\begin{proof}
+	\begin{itemize}
+		\item $\leq$ is reflexive:
+		
+		Let $Y\in\mc P(X)$. Then the identity map is injective, so $Y\leq Y$, and $\leq$ is reflexive.
+		
+		\item $\leq$ is antisymmetric:
+		
+		Let $Y\leq Z$ and $Z\leq Y$, for some $Y,Z\in\mc P(X)$. Then, by definition of $\leq$, there are injections $f:Y\to Z$ and $g:Z\to Y$. Now, since composition of injections is, again, an injection, we see that $f\circ g:Z\to Z$ and $g\circ f:Y\to Y$ are injections.
+	\end{itemize}
+\end{proof}
