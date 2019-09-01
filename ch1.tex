@@ -2301,7 +2301,7 @@ So now the proof consists of showing not that $A\iso B$, but that for each $x\in
 Either way, we see that for all $x\in A\sqcup B$ we have $(S^x\cap A)\iso(S^x\cap B)$, so $A\iso B$, and the result follows.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{thm:cantor bernstein schroeder}
 	Let $X$ be a set. Then the relation ``$Y\leq Z$ if, and only if, there is an injection $f:Y\to Z$'' is an order in $\mc P(X)/\iso$.
 \end{theorem}
 \begin{proof}
@@ -2312,6 +2312,12 @@ Either way, we see that for all $x\in A\sqcup B$ we have $(S^x\cap A)\iso(S^x\ca
 		
 		\item $\leq$ is antisymmetric:
 		
-		Let $Y\leq Z$ and $Z\leq Y$, for some $Y,Z\in\mc P(X)$. Then, by definition of $\leq$, there are injections $f:Y\to Z$ and $g:Z\to Y$. Now, since composition of injections is, again, an injection, we see that $f\circ g:Z\to Z$ and $g\circ f:Y\to Y$ are injections.
+		Let $Y\leq Z$ and $Z\leq Y$, for some $Y,Z\in\mc P(X)$. Then, by definition of $\leq$, there are injections $f:Y\to Z$ and $g:Z\to Y$. Now, by \cref{thm:cantor bernstein schroeder}, we see that $Y\iso Z$, and so $\leq$ is antisymmetric.
+		
+		\item $\leq$ is transitive:
+		
+		If $Y\leq Z$ and $Z\leq W$, for some $Y,Z,W\in\mc P(X)$, then there are injections $f:Y\to Z$ and $g:Z\to W$. But since composition of injections is, again, an injection, we see that $g\circ f:Y\to W$ is injective, and, therefore, $Y\leq W$, so $\leq $ is transitive.
 	\end{itemize}
+
+Since $\leq$ is reflexive, antisymmetric and transitive, it is an order, by definition. This ends the proof.
 \end{proof}
