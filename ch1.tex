@@ -1972,4 +1972,52 @@ These two propositions follow trivially from the definition of function and rela
 		\item (Anti-symmetry) If both of $n\leq m$ and $m\leq n$ hold, for some $n,m\in \N$, then $n=m$;
 		\item (Transitivity) If $n\leq m$ and $m\leq l$, for some $n,m,l\in \N$, then $n\leq l$.
 	\end{itemize}
+
+Let's check:
+
+\begin{itemize}
+	\item It is clearly reflexive, since, by definition, $n\leq m$ includes the case $n=m$;
+	
+	\item Assume $n\leq m$ and $m\leq n$ both hold at once, for some $n,m\in \N$. Now, we have four cases to consider:
+	\begin{enumerate}
+		\item $n\in m$ and $m\in n$.
+		
+		This case cannot happen, because we would have injections $f:n\to m$ and $g:m\to n$, whose compositions $f\circ g:m\to m$ and $g\circ f:n\to n$ would be injections from $m$ to itself, and from $n$ to itself, but we've already seen that those are always bijective. 
+		
+		Hence, we'd get that both $g$ and $f$ are also bijective, which is absurd, because we'd be able to show that $n=m$ while $n\in m$, and we know this cannot be true;
+		
+		\item $n\in m$ and $n=m$.
+		
+		This case also cannot happen, by what we've just said;
+		
+		\item $n=m$ and $m\in n$.
+		
+		Same as the previous case;
+		
+		\item $n=m$ and $m=n$.
+	\end{enumerate}
+
+	Since the only case that doesn't let to a contradiction is (4), we have that the only possible way that we can have both of $n\leq m$ and $m\leq n$ at once is if $n=m$. This shows that $\leq$ is anti-symmetric.
+	
+	\item If $n\leq m$ and $m\leq l$, for some $n,m,l\in \N$, we have, once again, four cases to consider:
+	\begin{enumerate}
+		\item $n\in m$ and $m\in l$.
+		
+		This is fine, since $m\in l$ implies $m\subseteq l$, by definition. This, coupled with $n\in m$ shows us that $n\in m\subseteq l$ and hence $n\in l$, so $n\leq l$;
+		
+		\item $n\in m$ and $m=l$.
+		
+		Again this is fine, since $n\in m=l$ implies $n\in l$, and hence $n\leq l$;
+		
+		\item $n=m$ and $m\in l$.
+		
+		Once again, fine: $n=m\in l$ implies $n\in l$, and thus $n\leq l$;
+		
+		\item $n=m$ and $m=l$.
+		
+		The simplest one: $n=m=l$, so $n=l$, and thus $n\leq l$
+	\end{enumerate}
+
+	In each of the four cases, the only logical conclusion is $n\leq l$, so we have that $\leq $ is transitive.
+\end{itemize}
 \end{ex}
