@@ -2278,6 +2278,13 @@ To finish this section, we'll prove two important results.
 		\item $s_{n+1}^x:=(f\sqcup g)(s_n^x)$;
 		\item $s_{-(n+1)}^x:=(f\sqcup g)^{-1}(s_{-n}^x)$, if $s_{-n}^x$ is well-defined.
 	\end{itemize}
+
+Note that for each $x\in A\sqcup B$ we know nothing about $s_n^x$ being well-defined for negative $n$. So, for each $x\in A\sqcup B$, we can create a new set:
+
+\[S^x:=\{y\in A\sqcup B\mid y=s_n^x\mbox{for some }n\in\Z\}\]that is, $S^x$ is the collection of all $s^x_n$ that are well-defined.
+
+Now, it's easy to see that every element of $A\sqcup B$ is in some $S^x$ - so we get
+\[A\sqcup B=\bigcup_{x\in A\sqcup B}S^x.\]
 \end{proof}
 
 \begin{theorem}
