@@ -2591,11 +2591,11 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 		
 		Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
 		
-		Assume that $\hom(f,Y)\circ\phi=\varphi\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$. So if we take $f:Y\to X$ any function, by applying the equality above to $\id_X$ we see that
-		\[(\hom(f,Y)\circ\phi)(\id_X)=\hom(f,Y)(\phi_A(\id_X))=(\phi_A(\id_X))\circ f\]and
-		\[(\varphi\circ\hom(f,X))(\id_X)=\phi_B(\hom(f,X)(\id_X))=\phi_B(\id_X\circ f)=\phi_B(f)\]must be equal - in other words, $\phi_A(\id_X)\circ f=\phi_B(f)$.
+		Assume that $\hom(f,Y)\circ\phi=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$. So if we take $f:Y\to X$ any function, by applying the equality above to $\id_X$ we see that
+		\[(\hom(f,Y)\circ\phi_X)(\id_X)=\hom(f,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ f\]and
+		\[(\phi_Y\circ\hom(f,X))(\id_X)=\phi_Y(\hom(f,X)(\id_X))=\phi_Y(\id_X\circ f)=\phi_Y(f)\]must be equal - in other words, $\phi_A(\id_X)\circ f=\phi_B(f)$.
 		
-		But this shows us that $\phi_B:\hom(B,X)\to\hom(B,Y)$ is uniquely defined by $\phi_A(\id_A)$.
+		But this shows us that $\phi_B:\hom(B,X)\to\hom(B,Y)$ is uniquely defined by $\phi_X(\id_X)$.
 	\end{itemize}
 \end{proof}
 
