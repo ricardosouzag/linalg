@@ -2340,7 +2340,7 @@ Now, to finish up our brief talk on set theory, we're gonna talk about sets of f
 \end{df}
 
 \begin{ex}
-	Let $A=\{1,2\}$ and $B=\{a,b,c\}$. Then, the only possible functions are:
+	Let $A=\{1,2\}$ and $B=\{a,b,c\}$. Then, the only possible functions $A\to B$ are:
 	\begin{multicols}{3}
 	\begin{itemize}
 		\item $f_1=\{(1,a),(2,a)\}$
@@ -2353,5 +2353,25 @@ Now, to finish up our brief talk on set theory, we're gonna talk about sets of f
 		\item $f_8=\{(1,c),(2,b)\}$
 		\item $f_9=\{(1,c),(2,c)\}$
 	\end{itemize}
-\end{multicols}
+\end{multicols}so $\hom(A,B)\iso 9$.
+
+Notice that $A\iso 2$ and $B\iso 3$.
+
+\bigskip
+Analogously, the only possible functions $B\to A$ are:
+
+\begin{multicols}{2}
+	\begin{itemize}
+		\item $g_1=\{(a,1),(b,1),(c,1)\}$
+		\item $g_2=\{(a,1),(b,1),(c,2)\}$
+		\item $g_3=\{(a,1),(b,2),(c,1)\}$
+		\item $g_4=\{(a,1),(b,2),(c,2)\}$
+		\item $g_5=\{(a,2),(b,1),(c,1)\}$
+		\item $g_6=\{(a,2),(b,1),(c,2)\}$
+		\item $g_7=\{(a,2),(b,2),(c,1)\}$
+		\item $g_8=\{(a,2),(b,2),(c,2)\}$
+	\end{itemize}
+\end{multicols}so $\hom(B,A)\iso 8$.
+
+We can readily see that $\hom(A,B)\iso \#B^{\#A}$ and $\hom(B,A)\iso \#A^{\#B}$.
 \end{ex}
