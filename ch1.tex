@@ -2516,6 +2516,22 @@ Finally, the last result of this section - the Yoneda Lemma:
 	Let $\hom(A,X)\iso \hom(A,Y)$ for all sets $A$. In particular, $\hom(1,X)\iso\hom(1,Y)$, but $\hom(1,X)\iso X$ and $\hom(1,Y)\iso Y$, so it follows that $X\iso Y$.
 	
 	\bigskip
+	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:\hom(A,X)\to\hom(A,Y)$ and $f':\hom(A,Y)\to\hom(A,X)$ given by, respectively,
+	\[f(g):=\phi\circ g\]
+	\[f'(h):=\phi^{-1}\circ h\]for all $g:A\to X$ and $h:A\to Y$.
 	
+	Now,
+	\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
+	\[f(f'(h))=f(\phi^{-1}\circ h)=\phi\circ(\phi^{-1}\circ h)=\id_Y\circ h=h\]for all $g:A\to X$ and $h:A\to Y$ imply that $f'\circ f=\id_X$ and $f\circ f'=\id_Y$, and so $f$ and $f'$ are mutually inverse - and hence, isomorphisms.
 	
+	\bigskip
+	Finally, let's give another proof that $\hom(A,X)\iso \hom(A,Y)$ for all $A$ implies $X\iso Y$.
+	
+	Since $\hom(A,X)\iso\hom(A,Y)$ for all $A$, in particular, $\hom(X,X)\iso\hom(X,Y)$. Let $\phi:\hom(X,X)\to\hom(X,Y)$ be one such isomorphism. Now consider the map $f:=\phi(\id_X):X\to Y$. We claim that $f$ is an isomorphism.
+	
+	\begin{itemize}
+		\item $f$ is injective:
+		
+		Take any $x,x'\in X$ such that $f(x)=f(x')$.
+	\end{itemize}
 \end{proof}
