@@ -2524,21 +2524,5 @@ Finally, the last result of this section - the Yoneda Lemma:
 	\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
 	\[f(f'(h))=f(\phi^{-1}\circ h)=\phi\circ(\phi^{-1}\circ h)=\id_Y\circ h=h\]for all $g:A\to X$ and $h:A\to Y$ imply that $f'\circ f=\id_X$ and $f\circ f'=\id_Y$, and so $f$ and $f'$ are mutually inverse - and hence, isomorphisms.
 	
-	\bigskip
-	Finally, let's give another proof that $\hom(A,X)\iso \hom(A,Y)$ for all $A$ implies $X\iso Y$.
-	
-	Since $\hom(A,X)\iso\hom(A,Y)$ for all $A$, in particular $\hom(X,X)\iso\hom(X,Y)$. Let $\psi:\hom(X,X)\to\hom(X,Y)$ be one such isomorphism.
-	
-	Take then any set $A$ and consider $\phi:\hom(A,X)\to\hom(A,Y)$ an isomorphism.
-	
-	Finally, given any $f\in \hom(X,A)$ there's a unique $f':\hom(A,X)\to\hom(X,X)$ induced by it, given by $f'(g):=g\circ f$ for all $g\in\hom(A,X)$, and a unique $f'':\hom(A,Y)\to \hom(X,Y)$ induced by it, given by $f''(h):=h\circ f$ for all $h\in\hom(A,Y)$.
-	
-	We claim that $\psi\circ f'=f''\circ \phi$, no matter which $f\in\hom(X,A)$ we choose.
-	
-	\begin{align*}
-		(\psi\circ f')(g)&=\psi(g\circ f)\\
-		&=\phi(g)\circ f\\
-		&=f''(\phi(g))\\
-		&=(f''\circ\phi)(g)
-	\end{align*}
+	This ends the proof.
 \end{proof}
