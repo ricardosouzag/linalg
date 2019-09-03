@@ -2527,11 +2527,7 @@ Finally, the last result of this section - the Yoneda Lemma:
 	\bigskip
 	Finally, let's give another proof that $\hom(A,X)\iso \hom(A,Y)$ for all $A$ implies $X\iso Y$.
 	
-	Since $\hom(A,X)\iso\hom(A,Y)$ for all $A$, in particular $\hom(X,X)\iso\hom(X,Y)$. Let $\phi:\hom(X,X)\to\hom(X,Y)$ be one such isomorphism. Now consider the map $f:=\phi(\id_X):X\to Y$. We claim that $f$ is an isomorphism.
+	Since $\hom(A,X)\iso\hom(A,Y)$ for all $A$, in particular $\hom(X,X)\iso\hom(X,Y)$. Let $\psi:\hom(X,X)\to\hom(X,Y)$ be one such isomorphism.
 	
-	\begin{itemize}
-		\item $f$ is injective:
-		
-		Take any $x,x'\in X$ such that $f(x)=f(x')$.
-	\end{itemize}
+	Take then any set $A$ and look at $f\in\hom(X,A)$ and $g\in\hom(Y,A)$, and consider the maps $\phi:\hom(X,X)\to\hom(X,A)$ and $\varphi:\hom(X,Y)\to\hom(Y,A)$ given, respectively, by $\phi(f'):=f\circ f'$ and $\varphi(g'):=g\circ g'$.
 \end{proof}
