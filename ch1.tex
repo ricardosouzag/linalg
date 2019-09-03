@@ -2509,9 +2509,9 @@ We will show, at some point, that an equivalent result also holds for linear tra
 
 Finally, the last result of this section - the Yoneda Lemma:
 
-\begin{theorem}[Yoneda's Lemma]
+\begin{restatable}{theorem}{yoneda}\label{thm:yoneda1}[Yoneda's Lemma 1]
 	Let $X,Y$ be two sets. Then $\hom(A,X)\iso\hom(A,Y)$ for every $A$ if, and only if, $X\iso Y$.
-\end{theorem}
+\end{restatable}
 \begin{proof}
 	Let $\hom(A,X)\iso \hom(A,Y)$ for every set $A$. In particular, $\hom(1,X)\iso\hom(1,Y)$, but $\hom(1,X)\iso X$ and $\hom(1,Y)\iso Y$, so it follows that $X\iso Y$.
 	
@@ -2526,6 +2526,8 @@ Finally, the last result of this section - the Yoneda Lemma:
 	
 	This ends the proof.
 \end{proof}
+
+
 
 With this, we have proven most of the stuff that we'll need to study Linear Algebra.
 
