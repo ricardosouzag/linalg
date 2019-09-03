@@ -2464,3 +2464,23 @@ Now we can do arithmetic with finite sets:
 		\item $\hom(m,n)\iso n^m$.
 	\end{itemize}
 \end{lemma}
+
+\begin{theorem}[Sets are cartesian-closed]
+	Let $X,Y,Z$ be sets. Then we have the following set isomorphism:
+	\[\hom(X\times Y,Z)\iso\hom(X,\hom(Y,Z)).\]
+\end{theorem}
+\begin{proof}
+	Fix, first and foremost, $X,Y,Z$ to be any sets.
+	
+	Now we define $f:\hom(X\times Y,Z)\to\hom(X,\hom(Y,Z))$ as such: For any function $g:X\times Y\to Z$ we define $f(g)$ to be the function that takes any $x\in X$ to the function $f(g)(x)$ that takes any $y\in Y$ to $f(g)(x)(y):=g(x,y)$.
+	
+	Define, now, $f':\hom(X,\hom(Y,Z))\to\hom(X\times Y,Z)$ as such: For any function $g:X\to \hom(Y,Z)$, we define $f'(g)$ to be the function that takes any $(x,y)\in X\times Y$ to $f'(g)(x,y):=g(x)(y)$.
+	
+	We claim that $f'=f^{-1}$ and, thus, that $f$ is an isomorphism.
+	
+	\begin{alignat}{3}
+		((f\circ f')(g))(x)(y)&=f(f'(g))(x)(y)\\
+		&=(f'(g))(x,y)\quad&&\mbox{by definition of }f\\
+		&=
+	\end{alignat}
+\end{proof}
