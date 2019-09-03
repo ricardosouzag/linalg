@@ -2521,13 +2521,24 @@ We will show, at some point, that an equivalent result also holds for linear tra
 \end{df}
 
 \begin{lemma}
-	If $X\arrow{f}Y\arrow{g}Z$, then, for any $A$ we have that $\hom(A,g)\circ\hom(A,f)=\hom(A,g\circ f)$ and $\hom(f,A)\circ\hom(g,A)=\hom(f\circ g,A)$.
+	If $X\arrow{f}Y\arrow{g}Z$, then, for any $A$ we have that $\hom(g\circ f,A)=\hom(f,A)\circ\hom(g,A)$ and $\hom(g\circ f,A)=\hom(f,A)\circ\hom(g,A)$.
 \end{lemma}
 \begin{proof}
 	Take any $h\in\hom(A,X)$. Then:
 	\begin{align*}
-		\hom(A,g\circ f)(h)&=
-	\end{align*}
+		\hom(A,g\circ f)(h)&=(g\circ f)\circ h\\
+		&=g\circ(f\circ h)\\
+		&=\hom(A,g)(f\circ h)\\
+		&=\hom(A,g)(\hom(A,f)(h))=(\hom(A,g)\circ\hom(A,f))(h),
+	\end{align*}and so $\hom(A,g\circ f)=\hom(A,g)\circ\hom(A,f)$.
+	
+	Similarly, given any $h\in\hom(Z,A)$ we have:
+	\begin{align*}
+		\hom(g\circ f,A)(h)&=h\circ(g\circ f)\\
+		&=(h\circ g)\circ f\\
+		&=\hom(f,A)(h\circ g)\\
+		&=\hom(f,A)(\hom(g,A)(h))=(\hom(f,A)\circ\hom(g,A))(h),
+	\end{align*}and so $\hom(g\circ f,A)=\hom(f,A)\circ\hom(g,A)$.
 \end{proof}
 
 Finally, the last result of this section - the Yoneda Lemma:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  3 SEP 2019 19:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  3 SEP 2019 19:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1043,7 +1043,7 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 
  [58] [59] [60]
 [61] [62] [63] [64] [65] [66] [67] [68]
-Overfull \hbox (3.28165pt too wide) in paragraph at lines 2537--2537
+Overfull \hbox (3.28165pt too wide) in paragraph at lines 2548--2548
 []\OT1/cmr/bx/n/12 Theorem 1.3.8.13 \OT1/cmr/m/n/12 (Weak Yoneda's Lemma)\OT1/c
 mr/bx/n/12 . []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/12 X; Y$ \OT1/cmr/m/it/12 be
  two sets. Then $[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 A; X\OT1/cmr/m/n/12 ) [] [
@@ -1060,10 +1060,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 5760A5487331978BF22BC23CBF9CCF8A;1241.
  ) 
 Here is how much of TeX's memory you used:
- 33973 strings out of 492646
- 819676 string characters out of 6133325
+ 33972 strings out of 492646
+ 819659 string characters out of 6133325
  1004257 words of memory out of 5000000
- 36872 multiletter control sequences out of 15000+600000
+ 36871 multiletter control sequences out of 15000+600000
  14705 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1081,7 +1081,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (71 pages, 426967 bytes).
+Output written on english.pdf (71 pages, 427406 bytes).
 PDF statistics:
  901 PDF objects out of 1000 (max. 8388607)
  804 compressed objects within 9 object streams
