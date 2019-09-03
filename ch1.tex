@@ -2576,16 +2576,24 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	\end{enumerate}
 \end{theorem}
 \begin{proof}
-	We'll keep the previous proof that (i.) implies (ii.).
-	
 	\begin{itemize}
+		\item (i.) implies (iii.):
+		
+		Already done.
+		
 		\item (i.) implies (iii.):
 		
 		Let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $\hom(\phi,A):\hom(Y,A)\to\hom(X,A)$ and $\hom(\phi^{-1},A):\hom(X,A)\to\hom(Y,A)$.
 		
 		Now, by the previous lemmas, we see that $$\hom(\phi,A)\circ\hom(\phi^{-1},A)=\hom(\id_X,A)=\id_{\hom(X,A)}$$ $$\hom(\phi^{-1},A)\circ\hom(\phi,A)=\hom(\id_Y,A)=\id_{\hom(Y,A)}$$and hence, $\hom(\phi,A)$ and $\hom(\phi^{-1},A)$ are isomorphisms.
 		
-		\item (ii.) implies (iii.):
+		\item (ii.) implies (i.):
+		
+		Take $f:B\to A$ any function, and look at $\phi:\hom(A,X)\to\hom(A,Y)$ and $\varphi:\hom(B,X)\to\hom(B,Y)$, isomorphisms.
+		
+		Assume that $\hom(f,Y)\circ\phi=\varphi\circ\hom(f,X)$ hold for any choice of $A$, $B$ and $f$. So if we take $f:Y\to X$ any function, by applying the equality above to $\id_X$ we see that
+		\[(\hom(f,Y)\circ\phi)(\id_X)=\hom(f,Y)(\phi(\id_X))=(\phi(\id_X))\circ f\]and
+		\[(\varphi\circ\hom(f,X))(\id_X)=\varphi(\hom(f,X)(\id_X))=\varphi(\id_X\circ f)=\varphi(f)\]must be equal.
 	\end{itemize}
 \end{proof}
 
