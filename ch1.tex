@@ -2507,6 +2507,29 @@ Now we can do arithmetic with finite sets:
 
 We will show, at some point, that an equivalent result also holds for linear transformations - and that will be of much use for us further ahead.
 
+\begin{prop}
+	Any function $f:X\to Y$ induces unique functions from $\hom(A,X)$ to $\hom(A,Y)$ and from $\hom(Y,A)$ to $\hom(X,A)$ for any set $A$.
+\end{prop}
+\begin{proof}
+	Define $\phi_f:\hom(A,X)\to\hom(A,Y)$ by putting $\phi_f(g):=f\circ g$ for any $g\in\hom(A,X)$ and $\psi^f:\hom(Y,A)\to\hom(X,A)$ by putting $\psi^f(h):=h\circ f$.
+	
+	Clearly $\phi$ and $\psi$ are functions, so the result follows.
+\end{proof}
+
+\begin{df}
+	Given any set $A$ and any function $f:X\to Y$, the unique functions induced by $f$ will be denoted by $\hom(A,f):\hom(A,X)\to\hom(A,Y)$ and $\hom(f,A):\hom(Y,A)\to\hom(X,A)$.
+\end{df}
+
+\begin{lemma}
+	If $X\arrow{f}Y\arrow{g}Z$, then, for any $A$ we have that $\hom(A,g)\circ\hom(A,f)=\hom(A,g\circ f)$ and $\hom(f,A)\circ\hom(g,A)=\hom(f\circ g,A)$.
+\end{lemma}
+\begin{proof}
+	Take any $h\in\hom(A,X)$. Then:
+	\begin{align*}
+		\hom(A,g\circ f)(h)&=
+	\end{align*}
+\end{proof}
+
 Finally, the last result of this section - the Yoneda Lemma:
 
 \begin{restatable}[Weak Yoneda's Lemma]{theorem}{yoneda}\label{thm:yoneda1}
@@ -2516,9 +2539,7 @@ Finally, the last result of this section - the Yoneda Lemma:
 	Let $\hom(A,X)\iso \hom(A,Y)$ for every set $A$. In particular, $\hom(1,X)\iso\hom(1,Y)$, but $\hom(1,X)\iso X$ and $\hom(1,Y)\iso Y$, so it follows that $X\iso Y$.
 	
 	\bigskip
-	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:\hom(A,X)\to\hom(A,Y)$ and $f':\hom(A,Y)\to\hom(A,X)$ given by, respectively,
-	\[f(g):=\phi\circ g\]
-	\[f'(h):=\phi^{-1}\circ h\]for all $g:A\to X$ and $h:A\to Y$.
+	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:=\hom(A,\phi):\hom(A,X)\to\hom(A,Y)$ and $f':=\hom(A,\phi^{-1}):\hom(A,Y)\to\hom(A,X)$.
 	
 	Now,
 	\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
@@ -2541,7 +2562,15 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	We'll keep the previous proof that (i.) implies (ii.).
 	
 	\begin{itemize}
-		\item[(i.) implies (ii.)]
+		\item ((i.) implies (ii.)):
+		
+		let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:\hom(X,A)\to\hom(Y,A)$ and $f':\hom(Y,A)\to\hom(X,A)$ given by, respectively,
+		\[f(g):=g\circ\phi\]
+		\[f'(h):=\phi^{-1}\circ h\]for all $g:A\to X$ and $h:A\to Y$.
+		
+		Now,
+		\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
+		\[f(f'(h))=f(\phi^{-1}\circ h)=\phi\circ(\phi^{-1}\circ h)=\id_Y\circ h=h\]for all $g:A\to X$ and $h:A\to Y$ imply that $f'\circ f=\id_X$ and $f\circ f'=\id_Y$, and so $f$ and $f'$ are mutually inverse - and hence, isomorphisms.
 	\end{itemize}
 \end{proof}
 
