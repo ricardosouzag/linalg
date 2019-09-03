@@ -2540,6 +2540,14 @@ We will show, at some point, that an equivalent result also holds for linear tra
 		&=\hom(f,A)(\hom(g,A)(h))=(\hom(f,A)\circ\hom(g,A))(h),
 	\end{align*}and so $\hom(g\circ f,A)=\hom(f,A)\circ\hom(g,A)$.
 \end{proof}
+\begin{lemma}
+	For any sets $A,B$, we have that $\hom(A,\id_B)=\id_{\hom(A,B)}=\hom(\id_A,B)$.
+\end{lemma}
+\begin{proof}
+	This follows trivially by inspection:
+	
+	\[\hom(A,id_B)(g)=\id_B\circ g=g\circ\id_A=\hom(\id_A,B)(g)\]for all $g\in\hom(A,B)$.
+\end{proof}
 
 Finally, the last result of this section - the Yoneda Lemma:
 
@@ -2550,11 +2558,9 @@ Finally, the last result of this section - the Yoneda Lemma:
 	Let $\hom(A,X)\iso \hom(A,Y)$ for every set $A$. In particular, $\hom(1,X)\iso\hom(1,Y)$, but $\hom(1,X)\iso X$ and $\hom(1,Y)\iso Y$, so it follows that $X\iso Y$.
 	
 	\bigskip
-	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:=\hom(A,\phi):\hom(A,X)\to\hom(A,Y)$ and $f':=\hom(A,\phi^{-1}):\hom(A,Y)\to\hom(A,X)$.
+	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $\hom(A,\phi):\hom(A,X)\to\hom(A,Y)$ and $\hom(A,\phi^{-1}):\hom(A,Y)\to\hom(A,X)$.
 	
-	Now,
-	\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
-	\[f(f'(h))=f(\phi^{-1}\circ h)=\phi\circ(\phi^{-1}\circ h)=\id_Y\circ h=h\]for all $g:A\to X$ and $h:A\to Y$ imply that $f'\circ f=\id_X$ and $f\circ f'=\id_Y$, and so $f$ and $f'$ are mutually inverse - and hence, isomorphisms.
+	Now, by the previous lemmas, we see that $$\hom(A,\phi)\circ\hom(A,\phi^{-1})=\hom(A,\id_Y)=\id_{\hom(A,Y)}$$ $$\hom(A,\phi^{-1})\circ\hom(A,\phi)=\hom(A,\id_X)=\id_{\hom(A,X)}$$  - and hence, $\hom(A,\phi)$ and $\hom(A,\phi^{-1})$ are isomorphisms.
 	
 	This ends the proof.
 \end{proof}
