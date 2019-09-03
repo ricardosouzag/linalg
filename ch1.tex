@@ -2579,15 +2579,13 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	We'll keep the previous proof that (i.) implies (ii.).
 	
 	\begin{itemize}
-		\item ((i.) implies (ii.)):
+		\item (i.) implies (iii.):
 		
-		let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $f:\hom(X,A)\to\hom(Y,A)$ and $f':\hom(Y,A)\to\hom(X,A)$ given by, respectively,
-		\[f(g):=g\circ\phi\]
-		\[f'(h):=\phi^{-1}\circ h\]for all $g:A\to X$ and $h:A\to Y$.
+		Let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $\hom(\phi,A):\hom(Y,A)\to\hom(X,A)$ and $\hom(\phi^{-1},A):\hom(X,A)\to\hom(Y,A)$.
 		
-		Now,
-		\[f'(f(g))=f'(\phi\circ g)=\phi^{-1}\circ( \phi\circ g)=\id_X\circ g=g\]
-		\[f(f'(h))=f(\phi^{-1}\circ h)=\phi\circ(\phi^{-1}\circ h)=\id_Y\circ h=h\]for all $g:A\to X$ and $h:A\to Y$ imply that $f'\circ f=\id_X$ and $f\circ f'=\id_Y$, and so $f$ and $f'$ are mutually inverse - and hence, isomorphisms.
+		Now, by the previous lemmas, we see that $$\hom(\phi,A)\circ\hom(\phi^{-1},A)=\hom(\id_X,A)=\id_{\hom(X,A)}$$ $$\hom(\phi^{-1},A)\circ\hom(\phi,A)=\hom(\id_Y,A)=\id_{\hom(Y,A)}$$and hence, $\hom(\phi,A)$ and $\hom(\phi^{-1},A)$ are isomorphisms.
+		
+		\item (ii.) implies (iii.):
 	\end{itemize}
 \end{proof}
 
