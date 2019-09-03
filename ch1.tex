@@ -2472,15 +2472,24 @@ Now we can do arithmetic with finite sets:
 \begin{proof}
 	Fix, first and foremost, $X,Y,Z$ to be any sets.
 	
-	Now we define $f:\hom(X\times Y,Z)\to\hom(X,\hom(Y,Z))$ as such: For any function $g:X\times Y\to Z$ we define $f(g)$ to be the function that takes any $x\in X$ to the function $f(g)(x)$ that takes any $y\in Y$ to $f(g)(x)(y):=g(x,y)$.
+	Now we define $f:\hom(X\times Y,Z)\to\hom(X,\hom(Y,Z))$ as such: For any function $g:X\times Y\to Z$ we define $f(g)$ to be the function that takes any $x\in X$ to the function $(f(g))(x)$ that takes any $y\in Y$ to $((f(g))(x))(y):=g(x,y)$.
 	
-	Define, now, $f':\hom(X,\hom(Y,Z))\to\hom(X\times Y,Z)$ as such: For any function $g:X\to \hom(Y,Z)$, we define $f'(g)$ to be the function that takes any $(x,y)\in X\times Y$ to $f'(g)(x,y):=g(x)(y)$.
+	Define, now, $f':\hom(X,\hom(Y,Z))\to\hom(X\times Y,Z)$ as such: For any function $g:X\to \hom(Y,Z)$, we define $f'(g)$ to be the function that takes any $(x,y)\in X\times Y$ to $f'(g)(x,y):=(g(x))(y)$.
 	
 	We claim that $f'=f^{-1}$ and, thus, that $f$ is an isomorphism.
 	
+	Take any $g:X\to \hom(Y,Z)$, any $x\in X$ and any $y\in Y$. We can see that
+	
 	\[\begin{array}{rlr}
-		((f\circ f')(g))(x)(y)&=f(f'(g))(x)(y)\\
+		(((f\circ f')(g))(x))(y)&=(f(f'(g))(x))(y)\\
 		&=(f'(g))(x,y)\quad&\quad\mbox{(by definition of }f)\\
-		&=g(x)(y)\quad&\quad\mbox{(by definition of }f')
+		&=g(x)(y)\quad&\quad\mbox{(by definition of }f'),
 	\end{array}\]so, as functions, $((f\circ f')(g))(x)=g(x)$ (since they are equal for every $y\in Y$), and so $(f\circ f')(g)=g$ (since they are equal for every $x\in X$), and so $f\circ f'=\id_{\hom(X,\hom(Y,Z))}$ (since they are equal for every $g\in\hom(X,\hom(Y,Z))$).
+	
+	\bigskip
+	Conversely, we have, for any $g:X\times Y\to Z$ and any $(x,y)\in X\times Y$ that
+	
+	\[\begin{array}{rlr}
+	((f'\circ f)(g))(x,y)&=f'(f(g))(x,y)
+	\end{array}\]
 \end{proof}
