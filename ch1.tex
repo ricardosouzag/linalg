@@ -2530,4 +2530,8 @@ Finally, the last result of this section - the Yoneda Lemma:
 	Since $\hom(A,X)\iso\hom(A,Y)$ for all $A$, in particular $\hom(X,X)\iso\hom(X,Y)$. Let $\psi:\hom(X,X)\to\hom(X,Y)$ be one such isomorphism.
 	
 	Take then any set $A$ and consider $\phi:\hom(A,X)\to\hom(A,Y)$ an isomorphism.
+	
+	Finally, given any $f\in \hom(X,A)$ there's a unique $f':\hom(A,X)\to\hom(X,X)$ induced by it, given by $f'(g):=g\circ f$ for all $g\in\hom(A,X)$, and a unique $f'':\hom(A,Y)\to \hom(X,Y)$ induced by it, given by $f''(h):=h\circ f$ for all $h\in\hom(A,Y)$.
+	
+	We claim that $\psi\circ f'=f''\circ phi$, no matter which $f\in\hom(X,A)$ we choose.
 \end{proof}
