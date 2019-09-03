@@ -2429,5 +2429,28 @@ This ends the proof.
 \end{rmk}
 
 \begin{theorem}
-	content...
+	For any set $X$ there is a bijection $\hom(1,X)\iso X$.
 \end{theorem}
+\begin{proof}
+	Define $f:\hom(1,X)\to X$ like this: Given any $g:1\to X$, since 1 is a singleton, $g(0)\in X$ is also a singleton. So we define $f(g):=g(0)\in X$.
+	
+	\begin{itemize}
+		\item $f$ is injective:
+		
+		Take two functions $g,h:1\to X$ such that $f(g)=f(h)$. But this means, by definition of $f$ that $g(0)=h(0)$, and since $1=\{0\}$ this means that $g$ and $h$ are equal for all elements of $1$ - the definition of function equality.
+		
+		This shows that $g=h$ and so $f$ is injective.
+		
+		\item $f$ is surjective:
+		
+		Take any element $x\in X$. Define the function $g_x:1\to X$ by putting $g_x(0):=x$. Then clearly, $f(g_x)=x$, by definition of both $f$ and $g_x$.
+		
+		This shows that $f$ is surjective.
+	\end{itemize}
+
+Since $f$ is both injective and surjective, it is a bijection, which ends the proof.
+\end{proof}
+
+\begin{rmk}
+	This is one remarkable result: It tells us that if, somehow, we could define functions without knowing what elements are, we would be able to completely recover the elements of any set simply by looking at functions from 1 to that set.
+\end{rmk}
