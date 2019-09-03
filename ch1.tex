@@ -2474,7 +2474,7 @@ Now we can do arithmetic with finite sets:
 	
 	Now we define $f:\hom(X\times Y,Z)\to\hom(X,\hom(Y,Z))$ as such: For any function $g:X\times Y\to Z$ we define $f(g)$ to be the function that takes any $x\in X$ to the function $(f(g))(x)$ that takes any $y\in Y$ to $((f(g))(x))(y):=g(x,y)$.
 	
-	Define, now, $f':\hom(X,\hom(Y,Z))\to\hom(X\times Y,Z)$ as such: For any function $g:X\to \hom(Y,Z)$, we define $f'(g)$ to be the function that takes any $(x,y)\in X\times Y$ to $f'(g)(x,y):=(g(x))(y)$.
+	Define, now, $f':\hom(X,\hom(Y,Z))\to\hom(X\times Y,Z)$ as such: For any function $g:X\to \hom(Y,Z)$, we define $f'(g)$ to be the function that takes any $(x,y)\in X\times Y$ to $(f'(g))(x,y):=(g(x))(y)$.
 	
 	We claim that $f'=f^{-1}$ and, thus, that $f$ is an isomorphism.
 	
@@ -2490,6 +2490,17 @@ Now we can do arithmetic with finite sets:
 	Conversely, we have, for any $g:X\times Y\to Z$ and any $(x,y)\in X\times Y$ that
 	
 	\[\begin{array}{rlr}
-	((f'\circ f)(g))(x,y)&=f'(f(g))(x,y)
-	\end{array}\]
+	((f'\circ f)(g))(x,y)&=(f'(f(g)))(x,y)\\
+	&=((f(g))(x))(y)\quad&\quad\mbox{ (by definition of }f')\\
+	&=g(x,y)\quad&\quad\mbox{ (by definition of }f)
+	\end{array}\]so, as functions, $(f'\circ f)(g)=g$ (since they are equal for every $(x,y)\in X\times Y$), and so $f'\circ f=\id_{\hom(X\times Y, Z)}$ (since they are equal for every $g\in\hom(X\times Y\to Z)$).
+	
+	\bigskip
+	This shows that $f'=f^{-1}$ and hence $f$ is an isomorphism.
+	
+	The proves the result.
 \end{proof}
+
+\begin{rmk}
+	This result is basically saying that there's a one-to-one correspondence between functions with two inputs and functions with one input whose input is another function with one input.
+\end{rmk}
