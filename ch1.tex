@@ -2376,10 +2376,50 @@ Analogously, the only possible functions $B\to A$ are:
 We can readily see that $\hom(A,B)\iso \#B^{\#A}$ and $\hom(B,A)\iso \#A^{\#B}$.
 \end{ex}
 
-\begin{df}
-	Given $A$ and $B$, we're going to denote the set $\hom(A,B)$ by $B^A$ and call it the \textbf{exponential set}.
-\end{df}
-
 \begin{lemma}
 	For any set $X$, $\mc P(X)\iso \hom(X,2)$.
 \end{lemma}
+\begin{proof}
+	Let $Y\in \mc P(X)$ and consider the function $f_Y:X\to 2$ defined by 
+	\[f_Y(x):=\begin{cases}
+	1&\mbox{ if }x\in Y\\
+	0,&\mbox{ otherwise.}
+	\end{cases}\]
+	
+	This defines a unique function $f:\mc P(X)\to \hom(X,2)$ given by $f(Y):=f_Y$.
+	
+	\begin{itemize}
+		\item $f$ is injective:
+		
+		Let $Y,Z\in \mc P(X)$ be such that $f(Y)=f(Z)$. But this means that the functions $f_Y,f_Z:X\to 2$ are the same. But by definition of function equality, this means that $f_Y(x)=f_Z(x)$ for all $x\in X$.
+		
+		In particular, $1=f_Y(y)$. But this implies $1=f_Y(y)=f_Z(y)$, so $y\in Z$ (by definition of $f_Z$). This shows that every element of $Y$ is also an element of $Z$ - that is, $Y\subseteq Z$.
+		
+		Analogously, for all $z\in Z$ we have $f_Z(z)=1$ and so $f_Y(z)=f_Z(z)=1$ which implies that $z\in Y$ (by definition of $f_Y$), and hence every element of $Z$ is also an element of $Y$ - $Z\subseteq Y$.
+		
+		These two together imply that $Y=Z$ and so $f$ is injective.
+		
+		\item $f$ is surjective:
+		
+		Let $g:X\to 2$ be a function. Then, $g^{-1}(1)\subset X$. Call it $X'$. We claim that $f(X')=g$.
+		
+		Indeed, given any $x\in X$ we want to show that $f_{X'}(x)=g(x)$.
+		
+		If $x\in X'$, then:
+		\[f_{X'}(x)=1=g(x)\]where the first equality holds by definition of $f_{X'}$ and the second equality holds by definition of $X'$ (i.e., it's the inverse image of $1$ under $g$ - which means that if we apply $g$ to $X'$ we always get $1$).
+		
+		If $x\notin X'$, the:
+		\[f_{X'}(x)=0=g(x)\]where the two equalities hold by exactly the same reason as above.
+		
+		This shows that $f_{X'}=g$, and so $g\in \im(f)$, which means that $f$ is surjective.
+	\end{itemize}
+
+Since $f$ is both injective and surjective, we see that it is bijective - and hence an isomorphism.
+
+This ends the proof.
+\end{proof}
+
+
+\begin{df}
+	Given $A$ and $B$, we're going to denote the set $\hom(A,B)$ by $B^A$ and call it the \textbf{exponential set}.
+\end{df}
