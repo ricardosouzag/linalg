@@ -2377,7 +2377,7 @@ We can readily see that $\hom(A,B)\iso \#B^{\#A}$ and $\hom(B,A)\iso \#A^{\#B}$.
 \end{ex}
 
 \begin{lemma}
-	For any set $X$, $\mc P(X)\iso \hom(X,2)$.
+	For any set $X$, we have that $\mc P(X)\iso \hom(X,2)$.
 \end{lemma}
 \begin{proof}
 	Let $Y\in \mc P(X)$ and consider the function $f_Y:X\to 2$ defined by 
@@ -2423,3 +2423,7 @@ This ends the proof.
 \begin{df}
 	Given $A$ and $B$, we're going to denote the set $\hom(A,B)$ by $B^A$ and call it the \textbf{exponential set}.
 \end{df}
+
+\begin{rmk}
+	This finally justifies the notation $2^X$ for the power set of $X$. It is, as we've shown, a set of functions: Any subset of $X$ can be seen as a function which takes all its elements to 1, and everyone else to 0.
+\end{rmk}
