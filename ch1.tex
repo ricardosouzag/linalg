@@ -2551,22 +2551,6 @@ We will show, at some point, that an equivalent result also holds for linear tra
 
 Finally, the last result of this section - the Yoneda Lemma:
 
-\begin{restatable}[Weak Yoneda's Lemma]{theorem}{yoneda}
-	Let $X,Y$ be two sets. Then $\hom(A,X)\iso\hom(A,Y)$ for every $A$ if, and only if, $X\iso Y$.
-\end{restatable}
-\begin{proof}
-	Let $\hom(A,X)\iso \hom(A,Y)$ for every set $A$. In particular, $\hom(1,X)\iso\hom(1,Y)$, but $\hom(1,X)\iso X$ and $\hom(1,Y)\iso Y$, so it follows that $X\iso Y$.
-	
-	\bigskip
-	Conversely, let $\phi:X\to Y$ be an isomorphism. Now, for any $A$, consider the maps $\hom(A,\phi):\hom(A,X)\to\hom(A,Y)$ and $\hom(A,\phi^{-1}):\hom(A,Y)\to\hom(A,X)$.
-	
-	Now, by the previous lemmas, we see that $$\hom(A,\phi)\circ\hom(A,\phi^{-1})=\hom(A,\id_Y)=\id_{\hom(A,Y)}$$ $$\hom(A,\phi^{-1})\circ\hom(A,\phi)=\hom(A,\id_X)=\id_{\hom(A,X)}$$and hence, $\hom(A,\phi)$ and $\hom(A,\phi^{-1})$ are isomorphisms.
-	
-	This ends the proof.
-\end{proof}
-
-This is actually a pretty weak proof. We would actually like to prove the following result:
-
 \begin{theorem}[Yoneda's Lemma]\label{thm:yoneda}
 	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, such that 
 	\[\begin{tikzcd}
@@ -2592,7 +2576,10 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	This finishes the proof.
 \end{proof}
 \begin{cor}[Yoneda's Lemma]
-	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(X,A)\to \hom(Y,A)\}_A$, where $A$ ranges over all sets, and functions $f:Y\to X$.
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(X,A)\to \hom(Y,A)\}_A$, where $A$ ranges over all sets, such that \[\begin{tikzcd}
+	{\hom(X,A)} \arrow[r, "\phi_A"] \arrow[d, "{\hom(X,g)}"'] & {\hom(Y,A)} \arrow[d, "{\hom(Y,g)}"] \\
+	{\hom(X,B)} \arrow[r, "\phi_B"']                          & {\hom(Y,B)}                         
+	\end{tikzcd}\]commutes for all $g:A\to B$, and functions $f:Y\to X$.
 \end{cor}
 \begin{proof}
 	It's essentially the same proof as the theorem's, so it'll be left as an exercise to the reader.
