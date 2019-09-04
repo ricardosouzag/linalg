@@ -74,4 +74,18 @@ To start working with vector spaces we first need to understand that the perspec
 	Similarly for $g$, we see that $g(n,m)=nm=mn=g(m,n)$.
 	
 	But, once again, $h(2,3)=8\neq 9=h(3,2)$, so $h$ is not commutative.
+	
+	\bigskip
+	These are the most common operations in $\N$ and some of their properties. Now, let us show something that is \textbf{not} an operation:
+	
+	Consider the functions $$f',g':\N\times\N\to\N$$\[(n,m)\mapsto f'(n,m):=n-m\]
+	\[(n,m)\mapsto g'(n,m):=n/m.\]
+	
+	Notice that I've just lied to you - these are \textbf{not} functions. To see that, take $f'$ and apply it on $(3,1)$. By definition of function, $f'(3,1)$ should lie on $\N$, the codomain of $f'$. But, by definition of $f'$, we see that $f'(3,1)=3-1=-2$, which is \textbf{not} in $\N$.
+	
+	Similarly, $g'$ isn't a function for the same reason: It should take, for instance, $(1,2)$ to a natural number - but it doesn't. It takes $(1,2)$ to $g'(1,2)=1/2$ which, once more, is not a natural number.
+	
+	However, for \textit{some} specific values of the input, $f'$ and $g'$ really have outputs in $\N$. For that reason, they are called \textbf{partial operations} and, sadly, won't be studied in this text, since we're mostly concerned with proper operations.
+	
+	If, however, you'd like to learn more about partial operations, you should Google for ``groupoid'' - which is precisely the mathematical notion of a set with an associative partial operation.
 \end{ex}
