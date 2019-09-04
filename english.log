@@ -1042,9 +1042,9 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 2073.
 
  [58] [59] [60]
-[61] [62] [63] [64] [65] [66] [67] [68] [69] [70] [71]) (./ch2.tex [72]
+[61] [62] [63] [64] [65] [66] [67] [68] [69]) (./ch2.tex [70]
 Chapter 2.
-) [73
+) [71
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
@@ -1056,10 +1056,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 7E28E295CC3779114F0DF7E2C4E9EE5D;1439.
  ) 
 Here is how much of TeX's memory you used:
- 34059 strings out of 492646
- 821675 string characters out of 6133325
+ 34051 strings out of 492646
+ 821588 string characters out of 6133325
  1005020 words of memory out of 5000000
- 36945 multiletter control sequences out of 15000+600000
+ 36944 multiletter control sequences out of 15000+600000
  14705 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1077,10 +1077,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (74 pages, 434143 bytes).
+Output written on english.pdf (72 pages, 429849 bytes).
 PDF statistics:
- 936 PDF objects out of 1000 (max. 8388607)
- 836 compressed objects within 9 object streams
- 432 named destinations out of 1000 (max. 500000)
+ 919 PDF objects out of 1000 (max. 8388607)
+ 821 compressed objects within 9 object streams
+ 425 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
