@@ -89,3 +89,17 @@ To start working with vector spaces we first need to understand that the perspec
 	
 	If, however, you'd like to learn more about partial operations, you should click \href{https://ncatlab.org/nlab/show/groupoid}{here} or Google for ``groupoid'' - which is precisely the mathematical notion of a set with an associative partial operation.
 \end{ex}
+
+\begin{df}
+	Given an operation $\phi:X\times X\to X$ we will say that
+	\begin{itemize}
+		\item (Identity element) $\phi$ admits an \textbf{identity element} if there is some $e\in X$ such that $\phi(x,e)=x=\phi(e,x)$ for all $x\in X$. In this case, $e$ is called an \textbf{identity element};
+		\item (Associativity) $\phi$ is \textbf{associative} if $\phi(x,\phi(y,z))=\phi(\phi(x,y),z)$ for all $x,y,z\in X$;
+		\item (Commutative) $\phi$ is \textbf{commutative} if $\phi(x,y)=\phi(y,x)$ for all $x,y\in X$;
+		\item (Inverse element) $\phi$ admits \textbf{inverse elements} if for all $x\in X$ there is some $y\in X$ such that $\phi(x,y)=e=\phi(y,x)$ for some identity element $e\in X$.
+	\end{itemize}
+\end{df}
+
+\begin{df}
+	Let $X$ be a set with two operations, $f,g:X\times X\to X$. We say that \textbf{$f$ distributes over $g$ on the left} (resp. \textbf{on the right}) if $f(x,g(y,z))=g(f(x,y),f(x,z))$ (resp. $f(g(x,y),z)=g(f(x,z),f(y,z))$) for all $x,y,z\in X$.
+\end{df}
