@@ -2568,12 +2568,16 @@ Finally, the last result of this section - the Yoneda Lemma:
 This is actually a pretty weak proof. We would actually like to prove the following result:
 
 \begin{theorem}[Yoneda's Lemma]\label{thm:yoneda}
-	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, and functions $f:X\to Y$.
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, such that 
+	\[\begin{tikzcd}
+	{\hom(B,X)} \arrow[r, "\phi_B"] \arrow[d, "{\hom(g,X)}"'] & {\hom(B,Y)} \arrow[d, "{\hom(g,Y)}"] \\
+	{\hom(A,X)} \arrow[r, "\phi_A"']                          & {\hom(A,Y)}                         
+	\end{tikzcd}\]commutes for all $g:A\to B$, and functions $f:X\to Y$.
 \end{theorem}
 \begin{proof}
 	Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
 	
-	Assume that $\hom(f,Y)\circ\phi_A=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$.
+	Since the diagram commutes, by hypothesis, $\hom(f,Y)\circ\phi_A=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$.
 	
 	So if we take $f:A\to X$, by applying the equality above to $\id_X$ we see that
 	\[(\hom(f,Y)\circ\phi_X)(\id_X)=\hom(f,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ f\]and
@@ -2644,17 +2648,6 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 
 This ends the proof.
 \end{proof}
-
-Finally, we finish the proof of \hyperref[thm:yoneda]{Yoneda's Lemma}:
-
-\begin{lemma}
-	Let $\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of functions ranging over all sets. Then for any $f:A\to B$ we have that
-	\[\hom(f,Y)\circ\phi_B=\phi_A\circ\hom(f,X)\]in other words, the following diagram commutes:
-	\[\begin{tikzcd}
-	{\hom(B,X)} \arrow[r, "\phi_B"] \arrow[d, "{\hom(f,X)}"'] & {\hom(B,Y)} \arrow[d, "{\hom(f,Y)}"] \\
-	{\hom(A,X)} \arrow[r, "\phi_A"']                          & {\hom(A,Y)}                         
-	\end{tikzcd}\] 
-\end{lemma}
 
 With this, we have proven most of the stuff that we'll need to study Linear Algebra.
 
