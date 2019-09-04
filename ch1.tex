@@ -2618,15 +2618,9 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 		
 		Let $\mc F:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of bijections indexed over all sets. Analogously, let $\mc F^{-1}:=\{\psi_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the family of all inverses of the previous family (i.e. $\psi_A:=\phi_A^{-1}$ for each set $A$).
 		
-		In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\mc F$ and $\mc F^{-1}$ determine unique functions $f_\mc F:X\to Y$ and $f_{\mc F^{-1}}:Y\to X$, respectively.
-	
-		Finally, if we take $\phi_A$ as an isomorphism, for every $A$, we see that $\hom(A,\phi_X(\id_X))$ is an isomorphism for every $A$ - which means that there's some function $h=\phi_A^{-1}:\hom(A,Y)\to\hom(A,X)$ such that $h\circ\hom(A,\phi_X(\id_X))=\id_{\hom(A,X)}$ and $\hom(A,\phi_X(\id_X))\circ h=\id_{\hom(A,Y)}$.
+		In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\mc F$ and $\mc F^{-1}$ determine unique functions $f_\mc F:X\to Y$ and $f_{\mc F^{-1}}:Y\to X$ given by $f_\mc F:=\phi_X(\id_X)$ and $f_{\mc F^{-1}}:=\psi_Y(\id_Y)$, respectively. We claim that they are mutually inverse and, therefore, $X\iso Y$.
 		
-		But we've just shown that every function from $\hom(A,Y)$ to $\hom(A,X)$ is uniquely determined by $\phi_Y(\id_Y)$. So $h=\hom(A,\phi_Y(\id_Y))$, and so $h\circ\hom(A,\phi_X(\id_X))$ becomes $\hom(A,\phi_Y(\id_Y))\circ\hom(A,\phi_X(\id_X))=\hom(A,\phi_Y(\id_Y)\circ\phi_X(\id_X))$, and so $\phi_Y(\id_Y)\circ\phi_X(\id_X)=\id_X$.
-		
-		Analogously, $\hom(A,\phi_X(\id_X))\circ h$ becomes $\hom(A,\phi_X(\id_X))\circ \hom(A,\phi_Y(\id_Y))=\hom(A,\phi_X(\id_X)\circ\phi_Y(\id_Y))$, and so $\phi_X(\id_X)\circ\phi_Y(\id_Y)=\id_Y$.
-		
-		It follows that $X\iso Y$, as we wished to show.
+		To see this, let us call $f:=f_{\mc F}$ and $g:=f_{\mc F^{-1}}$. Then, $f\circ g:Y\to Y$ and $g\circ f:X\to X$ also define, once again via \hyperref[thm:yoneda]{Yoneda's Lemma}, unique families of functions $\{\rho_A:\hom(A,Y)\to \hom(A,Y)\}_A$ and $\{\lambda_A:\hom(A,X)\to\hom(A,X)\}_A$ defined by $\rho_A=\hom(A,f\circ g)$ and $\lambda_A=\hom(A,g\circ f)$, respectively, for every set $A$.
 		
 		\item (iii.) implies (i.):
 		
