@@ -2609,19 +2609,19 @@ Finally, the last result of this section - the Yoneda Lemma:
 	\bigskip
 	Let $\phi:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a natural isomorphism. Analogously, let $\phi^{-1}:=\{\phi^{-1}_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the inverse natural isomorphism.
 	
-	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\phi$ and $\phi^{-1}$ determine unique functions $f_\phi:X\to Y$ and $f_{\phi^{-1}}:Y\to X$ given by $f_\phi:=\phi_X(\id_X)$ and $f_{\phi^{-1}}:=\psi_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\phi})$ and $\psi_A=\hom(A,f_{\phi^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
+	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\phi$ and $\phi^{-1}$ determine unique functions $f_\phi:X\to Y$ and $f_{\phi^{-1}}:Y\to X$ given by $f_\phi:=\phi_X(\id_X)$ and $f_{\phi^{-1}}:=\phi^{-1}_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\phi})$ and $\phi^{-1}_A=\hom(A,f_{\phi^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
 	
 	To see this, let us compute:
 	\begin{align*}
 	\hom(X,\id_X)&=\id_{\hom(X,X)}\\
-	&=\psi_X\circ\phi_X\\
+	&=\phi^{-1}_X\circ\phi_X\\
 	&=\hom(X,f_{\phi^{-1}})\circ\hom(X,f_{\phi})\\
 	&=\hom(X,f_{\phi^{-1}}\circ f_{\phi})
 	\end{align*}
 	and
 	\begin{align*}
 	\hom(Y,\id_Y)&=\id_{\hom(Y,Y)}\\
-	&=\phi_Y\circ\psi_Y\\
+	&=\phi_Y\circ\phi^{-1}_Y\\
 	&=\hom(Y,f_{\phi})\circ\hom(Y,f_{\phi^{-1}})\\
 	&=\hom(Y,f_{\phi}\circ f_{\phi^{-1}})
 	\end{align*}together tells us that $f_{\phi}$ and $f_{\phi^{-1}}$ are mutually inverse and, therefore, isomorphisms.
