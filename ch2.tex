@@ -20,7 +20,7 @@ To start working with vector spaces we first need to understand that the perspec
 	For instance, all three functions satisfy the following property:
 	
 	\begin{itemize}
-		\item Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n,n_e)=n$ for all $n\in \N$.
+		\item Let $\phi$ be an operation on $X$. There is some $n_e\in X$ such that $\phi(n,n_e)=n$ for all $n\in X$.
 	\end{itemize}
 
 	In the case of $f$, if we choose $n_e:=0$, we see that $f(n,0)=n+0=n$, no matter which $n\in \N$ we chose, so $f$ satisfies the property above.
@@ -33,7 +33,7 @@ To start working with vector spaces we first need to understand that the perspec
 	Next up is the property:
 	
 	\begin{itemize}
-		\item Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n_e,n)=n$ for all $n\in \N$.
+		\item Let $\phi$ be an operation on $X$. There is some $n_e\in X$ such that $\phi(n_e,n)=n$ for all $n\in X$.
 	\end{itemize}
 
 	What can we say about $f,g,h$ in this case? Well, it's easy to see that for $f$ and $g$ it still holds true - and it does so for the same value of $n_e$ as before.
@@ -43,14 +43,14 @@ To start working with vector spaces we first need to understand that the perspec
 	\bigskip
 	Summing up all of these together, we get the following property:
 	\begin{itemize}
-		\item (Identity element) Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n,n_e)=n=\phi(n_e,n)$ for all $n\in \N$.
+		\item (Identity element) Let $\phi$ be an operation on $X$. There is some $n_e\in X$ such that $\phi(n,n_e)=n=\phi(n_e,n)$ for all $n\in X$.
 	\end{itemize}
 	And we see that $f$ and $g$ have what's called an \textit{identity element} - it's an element $n_e$ such that if you fix it in any input of your operation, then your operation is just the identity function.
 	
 	\bigskip
 	Consider now the following property:
 	\begin{itemize}
-		\item (Associativity) Let $\phi$ be an operation on $\N$. Then, for all $n,m,l\in\N$ we have that $\phi(\phi(n,m),l)=\phi(n,\phi(m,l))$.
+		\item (Associativity) Let $\phi$ be an operation on $X$. Then, for all $n,m,l\in X$ we have that $\phi(\phi(n,m),l)=\phi(n,\phi(m,l))$.
 	\end{itemize}
 
 	In the case of $f$ we can check
@@ -62,4 +62,16 @@ To start working with vector spaces we first need to understand that the perspec
 	However, for $h$, once again, this property fails: For instance, let us compare $h(h(2,2),3)$ and $h(2,h(2,3))$:
 	\[h(h(2,2),3)=h(2^2,3)=(2^2)^3=4^3=64\]
 	\[h(2,h(2,3))=h(2,2^3)=2^{(2^3)}=2^8=256\]so they are clearly different, and $h$ is not associative.
+	
+	\bigskip
+	One more:
+	\begin{itemize}
+		\item (Commutativity) Let $\phi$ be an operation on $X$. Then, for all $n,m\in X$ we have that $\phi(n,m)=\phi(m,n)$.
+	\end{itemize}
+
+	In the case of $f$ we can easily see that $f(n,m)=n+m=m+n=f(m,n)$.
+	
+	Similarly for $g$, we see that $g(n,m)=nm=mn=g(m,n)$.
+	
+	But, once again, $h(2,3)=8\neq 9=h(3,2)$, so $h$ is not commutative.
 \end{ex}
