@@ -2622,8 +2622,17 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 		
 		To see this, let us compute:
 		\begin{align*}
-			\id_{\hom(X,X)}&=\psi_X\circ\phi_X\\
-			&=\hom(X,f_{\mc F^{-1}})\circ\hom(X,f_{\mc F})\\&=\hom(X,f_{\mc F^{-1}}\circ f_{\mc F})
+			\hom(X,\id_X)&=\id_{\hom(X,X)}\\
+			&=\psi_X\circ\phi_X\\
+			&=\hom(X,f_{\mc F^{-1}})\circ\hom(X,f_{\mc F})\\
+			&=\hom(X,f_{\mc F^{-1}}\circ f_{\mc F})
+		\end{align*}
+		and
+		\begin{align*}
+		\hom(Y,\id_Y)&=\id_{\hom(Y,Y)}\\
+		&=\phi_Y\circ\psi_Y\\
+		&=\hom(Y,f_{\mc F})\circ\hom(Y,f_{\mc F^{-1}})\\
+		&=\hom(Y,f_{\mc F}\circ f_{\mc F^{-1}})
 		\end{align*}
 		
 		\item (iii.) implies (i.):
