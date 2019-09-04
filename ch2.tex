@@ -131,3 +131,21 @@ All this talk now brings us to a very specific definition:
 
 In this case, we call $A$ and $M$, respectively, the field's \textbf{addition} and \textbf{multiplication} operations, and denote them simply by $x+y:=A(x,y)$ and $xy:=M(x,y)$ for all $(x,y)\in X\times X$.
 \end{df}
+
+\begin{prop}
+	The set $\R$ of real numbers with the usual addition and multiplication is a field.
+\end{prop}
+\begin{proof}
+	This is immediate since for every $x,y,z\in\R$ we have:
+	\begin{enumerate}[(1)]
+		\item $x+(y+z)=(x+y)+z$;
+		\item $x+y=y+x$;
+		\item $x+0=0+x=x$;
+		\item $x+(-x)=(-x)+x=0$;
+		\item $x(yz)=(xy)z$;
+		\item $xy=yx$;
+		\item $x\cdot 1=1\cdot x=x$;
+		\item $xx^{-1}=x^{-1}x=1$;
+		\item $x(y+z)=xy+xz$ and $(x+y)z=xz+yz$.
+	\end{enumerate}
+\end{proof}
