@@ -2568,7 +2568,7 @@ Finally, the last result of this section - the Yoneda Lemma:
 This is actually a pretty weak proof. We would actually like to prove the following result:
 
 \begin{theorem}[Yoneda's Lemma]
-	Let $X$ and $Y$ be any sets. Then any family of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, determines a unique function $f:X\to Y$, and vice-versa.
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, and functions $f:X\to Y$.
 \end{theorem}
 \begin{proof}
 	Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
@@ -2581,7 +2581,9 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	
 	But this shows us that $\phi_A:\hom(A,X)\to\hom(A,Y)$ is uniquely defined by $\phi_A=\hom(A,\phi_X(\id_X))$. 
 	
-	In other words, giving a family of functions $\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A,$ indexed over all sets, is the same as choosing a function $f:X\to Y$ and putting every other $\phi_A:=\hom(A,f)$.
+	In other words, the correspondence
+	\[\{\phi_A:\hom(A,X)\to\hom(A,Y)\}\mapsto (\phi_X(\id_X):X\to Y)\]
+	\[(f:X\to Y)\mapsto\{\hom(A,f):\hom(A,X)\to\hom(A,Y)\}\]is bijective.
 	
 	This finishes the proof.
 \end{proof}
