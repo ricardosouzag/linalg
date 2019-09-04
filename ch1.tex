@@ -2607,24 +2607,24 @@ Finally, the last result of this section - the Yoneda Lemma:
 	We will only prove (i.) implies (iii.). (ii.) implies (iii.) is similar, and (iii.) implies both (i.) and (ii.) is trivial. Those are left as an exercise to the reader.
 	
 	\bigskip
-	Let $\mc F:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of bijections indexed over all sets commuting the relevant diagrams. Analogously, let $\mc F^{-1}:=\{\psi_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the family of all inverses of the previous family (i.e. $\psi_A:=\phi_A^{-1}$ for each set $A$).
+	Let $\phi:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a natural isomorphism. Analogously, let $\phi^{-1}:=\{\phi^{-1}_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the inverse natural isomorphism.
 	
-	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\mc F$ and $\mc F^{-1}$ determine unique functions $f_\mc F:X\to Y$ and $f_{\mc F^{-1}}:Y\to X$ given by $f_\mc F:=\phi_X(\id_X)$ and $f_{\mc F^{-1}}:=\psi_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\mc F})$ and $\psi_A=\hom(A,f_{\mc F^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
+	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\phi$ and $\phi^{-1}$ determine unique functions $f_\phi:X\to Y$ and $f_{\phi^{-1}}:Y\to X$ given by $f_\phi:=\phi_X(\id_X)$ and $f_{\phi^{-1}}:=\psi_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\phi})$ and $\psi_A=\hom(A,f_{\phi^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
 	
 	To see this, let us compute:
 	\begin{align*}
 	\hom(X,\id_X)&=\id_{\hom(X,X)}\\
 	&=\psi_X\circ\phi_X\\
-	&=\hom(X,f_{\mc F^{-1}})\circ\hom(X,f_{\mc F})\\
-	&=\hom(X,f_{\mc F^{-1}}\circ f_{\mc F})
+	&=\hom(X,f_{\phi^{-1}})\circ\hom(X,f_{\phi})\\
+	&=\hom(X,f_{\phi^{-1}}\circ f_{\phi})
 	\end{align*}
 	and
 	\begin{align*}
 	\hom(Y,\id_Y)&=\id_{\hom(Y,Y)}\\
 	&=\phi_Y\circ\psi_Y\\
-	&=\hom(Y,f_{\mc F})\circ\hom(Y,f_{\mc F^{-1}})\\
-	&=\hom(Y,f_{\mc F}\circ f_{\mc F^{-1}})
-	\end{align*}together tells us that $f_{\mc F}$ and $f_{\mc F^{-1}}$ are mutually inverse and, therefore, isomorphisms.
+	&=\hom(Y,f_{\phi})\circ\hom(Y,f_{\phi^{-1}})\\
+	&=\hom(Y,f_{\phi}\circ f_{\phi^{-1}})
+	\end{align*}together tells us that $f_{\phi}$ and $f_{\phi^{-1}}$ are mutually inverse and, therefore, isomorphisms.
 	
 	This proves $X\iso Y$.
 	
