@@ -2552,17 +2552,17 @@ We will show, at some point, that an equivalent result also holds for linear tra
 Finally, the last result of this section - the Yoneda Lemma:
 
 \begin{df}
-	Let $X,Y$ be sets. A \textbf{natural transformation $\alpha:\hom(-,X)\to\hom(-,Y)$} is a family of functions $\alpha:=\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, such that 
+	Let $X,Y$ be sets. A \textbf{natural transformation $\phi:\hom(-,X)\to\hom(-,Y)$} is a family of functions $\phi:=\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, such that 
 	\[\begin{tikzcd}
 	{\hom(B,X)} \arrow[r, "\phi_B"] \arrow[d, "{\hom(g,X)}"'] & {\hom(B,Y)} \arrow[d, "{\hom(g,Y)}"] \\
 	{\hom(A,X)} \arrow[r, "\phi_A"']                          & {\hom(A,Y)}                         
 	\end{tikzcd}\]commutes for all $g:A\to B$.
 	
-	If each $\phi_A$ in the family is an isomorphism, then we say that $\alpha$ is a \textbf{natural isomorphism}.
+	If each $\phi_A$ in the family is an isomorphism, then we say that $\phi$ is a \textbf{natural isomorphism}.
 \end{df}
 
 \begin{theorem}[Yoneda's Lemma]\label{thm:yoneda}
-	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between natural transformations $\alpha:\hom(-,X)\to\hom(-,Y)$, and functions $f:X\to Y$.
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between natural transformations $\phi:\hom(-,X)\to\hom(-,Y)$, and functions $f:X\to Y$.
 \end{theorem}
 \begin{proof}
 	Take $g:A\to B$ any function.
@@ -2582,12 +2582,12 @@ Finally, the last result of this section - the Yoneda Lemma:
 	This finishes the proof.
 \end{proof}
 \begin{df}
-	Let $X,Y$ be sets. A \textbf{natural transformation $\alpha:\hom(X,-)\to\hom(Y,-)$} is a family of functions $\alpha:=\{\phi_A:\hom(X,A)\to \hom(Y,A)\}_A$, where $A$ ranges over all sets, such that \[\begin{tikzcd}
+	Let $X,Y$ be sets. A \textbf{natural transformation $\phi:\hom(X,-)\to\hom(Y,-)$} is a family of functions $\phi:=\{\phi_A:\hom(X,A)\to \hom(Y,A)\}_A$, where $A$ ranges over all sets, such that \[\begin{tikzcd}
 	{\hom(X,A)} \arrow[r, "\phi_A"] \arrow[d, "{\hom(X,g)}"'] & {\hom(Y,A)} \arrow[d, "{\hom(Y,g)}"] \\
 	{\hom(X,B)} \arrow[r, "\phi_B"']                          & {\hom(Y,B)}                         
 	\end{tikzcd}\]commutes for all $g:A\to B$.
 	
-	If each $\phi_A$ in the family is an isomorphism, then we say that $\alpha$ is a \textbf{natural isomorphism}.
+	If each $\phi_A$ in the family is an isomorphism, then we say that $\phi$ is a \textbf{natural isomorphism}.
 \end{df}
 \begin{cor}[Yoneda's Lemma]
 	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between natural transformations $\alpha:\hom(X,-)\to\hom(Y,-)$, and functions $f:Y\to X$.
