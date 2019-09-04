@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  3 SEP 2019 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  3 SEP 2019 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1051,9 +1051,9 @@ on $\OML/cmm/m/it/12 ^^^ \OT1/cmr/m/n/12 : [](\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it
  ^^@\OML/cmm/m/it/12 ; Y\OT1/cmr/m/n/12 )$
  []
 
-[69] [70]) (./ch2.tex [71]
+[69] [70] [71]) (./ch2.tex [72]
 Chapter 2.
-) [72
+) [73
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
@@ -1065,10 +1065,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 7E28E295CC3779114F0DF7E2C4E9EE5D;1439.
  ) 
 Here is how much of TeX's memory you used:
- 34064 strings out of 492646
- 821770 string characters out of 6133325
- 1005018 words of memory out of 5000000
- 36945 multiletter control sequences out of 15000+600000
+ 34069 strings out of 492646
+ 821853 string characters out of 6133325
+ 1005117 words of memory out of 5000000
+ 36947 multiletter control sequences out of 15000+600000
  14705 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1086,10 +1086,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (73 pages, 434463 bytes).
+Output written on english.pdf (74 pages, 435627 bytes).
 PDF statistics:
- 941 PDF objects out of 1000 (max. 8388607)
- 842 compressed objects within 9 object streams
- 437 named destinations out of 1000 (max. 500000)
+ 949 PDF objects out of 1000 (max. 8388607)
+ 849 compressed objects within 9 object streams
+ 440 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

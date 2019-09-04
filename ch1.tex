@@ -2465,7 +2465,7 @@ Now we can do arithmetic with finite sets:
 	\end{itemize}
 \end{lemma}
 
-\begin{theorem}[Sets are cartesian-closed]
+\begin{theorem}[Sets are cartesian-closed]\label{thm:tensor-hom}
 	Let $X,Y,Z$ be sets. Then we have the following set isomorphism:
 	\[\hom(X\times Y,Z)\iso\hom(X,\hom(Y,Z)).\]
 \end{theorem}
@@ -2639,6 +2639,15 @@ Finally, the last result of this section - the Yoneda Lemma:
 Summing it all up, what Yoneda's Lemma tells us is that the only possible natural transformations are of the form $\hom(-,f):\hom(-,X)\to\hom(-,Y)$ for some $f:X\to Y$.
 
 This is very useful in Linear Algebra where we use that two vector spaces are isomorphic if, and only if, there is a natural isomorphism of sets of linear transformations - basically the preceding corollary, but applied to vector spaces.
+
+\begin{theorem}
+	The isomorphism in \Cref{thm:tensor-hom} is natural for all three entries - that is, we have three natural isomorphisms:
+	\[\phi_{X,Z}:\hom(X\times-,Z)\to\hom(X,\hom(-,Z))\]
+	\[\phi_X^Y:\hom(X\times Y,-)\to\hom(X,\hom(Y,-))\]
+	\[\phi_Z^Y:\hom(-\times Y,Z)\to\hom(-,\hom(Y,Z))\]
+\end{theorem}
+
+We will not prove this result, since it follows trivially by inspection.
 
 With this, we have proven most of the stuff that we'll need to study Linear Algebra.
 
