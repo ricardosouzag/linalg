@@ -1067,7 +1067,7 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 Here is how much of TeX's memory you used:
  34064 strings out of 492646
  821770 string characters out of 6133325
- 1005020 words of memory out of 5000000
+ 1005018 words of memory out of 5000000
  36945 multiletter control sequences out of 15000+600000
  14705 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1086,7 +1086,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2018/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msbm10.pfb>
-Output written on english.pdf (73 pages, 434433 bytes).
+Output written on english.pdf (73 pages, 434463 bytes).
 PDF statistics:
  941 PDF objects out of 1000 (max. 8388607)
  842 compressed objects within 9 object streams
