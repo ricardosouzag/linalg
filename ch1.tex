@@ -2559,13 +2559,13 @@ Finally, the last result of this section - the Yoneda Lemma:
 	\end{tikzcd}\]commutes for all $g:A\to B$, and functions $f:X\to Y$.
 \end{theorem}
 \begin{proof}
-	Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
+	Take $g:A\to B$ any function.
 	
-	Since the diagram commutes, by hypothesis, $\hom(f,Y)\circ\phi_A=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$.
+	Since the diagram commutes, by hypothesis, $\hom(g,Y)\circ\phi_B=\phi_A\circ\hom(g,X)$ holds for any choice of $A$, $B$ and $g$.
 	
-	So if we take $f:A\to X$, by applying the equality above to $\id_X$ we see that
-	\[(\hom(f,Y)\circ\phi_X)(\id_X)=\hom(f,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ f\]and
-	\[(\phi_A\circ\hom(f,X))(\id_X)=\phi_A(\hom(f,X)(\id_X))=\phi_A(\id_X\circ f)=\phi_A(f)\]must be equal - in other words, $\phi_X(\id_X)\circ f=\phi_A(f)$.
+	So if we take $g:A\to X$, by applying the equality above to $\id_X$ we see that
+	\[(\hom(g,Y)\circ\phi_X)(\id_X)=\hom(g,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ g\]and
+	\[(\phi_A\circ\hom(g,X))(\id_X)=\phi_A(\hom(g,X)(\id_X))=\phi_A(\id_X\circ g)=\phi_A(g)\]must be equal - in other words, $\phi_X(\id_X)\circ g=\phi_A(g)$.
 	
 	But this shows us that $\phi_A:\hom(A,X)\to\hom(A,Y)$ is uniquely defined by $\phi_A=\hom(A,\phi_X(\id_X))$. 
 	
