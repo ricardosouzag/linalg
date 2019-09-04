@@ -2645,6 +2645,17 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 This ends the proof.
 \end{proof}
 
+Finally, we finish the proof of \hyperref[thm:yoneda]{Yoneda's Lemma}:
+
+\begin{lemma}
+	Let $\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of functions ranging over all sets. Then for any $f:A\to B$ we have that
+	\[\hom(f,X)\circ\phi_B=\phi_A\circ\hom(f,Y)\]in other words, the following diagram commutes:
+	\[\begin{tikzcd}
+	{\hom(B,X)} \arrow[r, "\phi_B"] \arrow[d, "{\hom(f,X)}"'] & {\hom(B,Y)} \arrow[d, "{\hom(f,Y)}"] \\
+	{\hom(A,X)} \arrow[r, "\phi_A"']                          & {\hom(A,Y)}                         
+	\end{tikzcd}\] 
+\end{lemma}
+
 With this, we have proven most of the stuff that we'll need to study Linear Algebra.
 
 So, without further ado, let us begin.
