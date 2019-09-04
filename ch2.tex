@@ -1,7 +1,67 @@
-\chapter{Basic Linear Algebra}
+\chapter{Real Linear Algebra}
 \section{Introduction}
 \subsection{First notions and definitions}
 
-\begin{cor}
-	All of the functions in either of the families $\{\phi_A\}_A$ above are bijections if, and only if, $X\iso Y$.
-\end{cor}
+To start working with vector spaces we first need to understand that the perspective is going to change a bit from the previous chapter. We're leaving the domain of \textbf{set theory} and jumping right in the domain of \textbf{algebra}.
+
+\textit{Algebra }is the domain of mathematics that deals with operations and their properties.
+
+\begin{df}
+	Given any set $X$, a \textbf{(binary) operation} on $X$ is a function $f:X\times X \to X$.
+\end{df}
+
+\begin{ex}
+	Let $\N$ be the set of natural numbers, as before. We have a few operations here:
+	\[f,g,h:\N\times\N \to \N\]
+	\[(n,m)\mapsto f(n,m):=n+m\]
+	\[(n,m)\mapsto g(n,m):=nm\]
+	\[(n,m)\mapsto h(n,m):=n^m\]and some of these operations have some properties that the others don't.
+	
+	For instance, all three functions satisfy the following property:
+	
+	\begin{itemize}
+		\item Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n,n_e)=n$ for all $n\in \N$.
+	\end{itemize}
+
+	In the case of $f$, if we choose $n_e:=0$, we see that $f(n,0)=n+0=n$, no matter which $n\in \N$ we chose, so $f$ satisfies the property above.
+	
+	In the case of $g$, if we choose $n_e:=1$, we see that $g(n,1)=n\cdot1=n$, no matter which $n\in\N$ we chose, so $g$ satisfies the property above.
+	
+	Finally, in the case of $h$, if we choose $n_e:=1$, we see that $h(n,1)=n^1=n$, no matter which $n\in\N$ we chose, so $h$ satisfies the property above.
+	
+	\bigskip
+	Next up is the property:
+	
+	\begin{itemize}
+		\item Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n_e,n)=n$ for all $n\in \N$.
+	\end{itemize}
+
+	What can we say about $f,g,h$ in this case? Well, it's easy to see that for $f$ and $g$ it still holds true - and it does so for the same value of $n_e$ as before.
+	
+	However, for $h$ it fails. For instance, is there some number $x\in\N$ such that $h(x,2)=2$? Well, by definition of $h$ we would need to have $x^2=2$ and so $x=\sqrt{2}$ which is not in $\N$ - this tells us that there's no such $x\in\N$. It follows that this property fails for $h$.
+	
+	\bigskip
+	Summing up all of these together, we get the following property:
+	\begin{itemize}
+		\item (Identity element) Let $\phi$ be an operation on $\N$. There is some $n_e\in \N$ such that $\phi(n,n_e)=n=\phi(n_e,n)$ for all $n\in \N$.
+	\end{itemize}
+	And we see that $f$ and $g$ have what's called an \textit{identity element} - it's an element $n_e$ such that if you fix it in any input of your operation, then your operation is just the identity function.
+	
+	\bigskip
+	Consider now the following property:
+	\begin{itemize}
+		\item (Associativity) Let $\phi$ be an operation on $\N$. We have that $\phi\circ(\phi\times\id)=\phi\circ(\id\times\phi)$.
+		
+		In other words, for all $n,m,l\in\N$ we have that $\phi(\phi(n,m),l)=\phi(n,\phi(m,l))$.
+	\end{itemize}
+
+	In the case of $f$ we can check
+	\[f(f(n,m),l)=f(n+m,l)=(n+m)+l=n+(m+l)=f(n,m+l)=f(n,f(m,l))\]and see that $f$ is associative.
+	
+	In the case of $g$ we can check
+	\[g(g(n,m),l)=g(nm,l)=(nm)l=n(ml)=g(n,ml)=g(n,g(m,l))\]and see that $g$ is associative.
+	
+	However, for $h$, once again, this property fails: For instance, let us compare $h(h(2,2),3)$ and $h(2,h(2,3))$:
+	\[h(h(2,2),3)=h(2^2,3)=(2^2)^3=4^3=64\]
+	\[h(2,h(2,3))=h(2,2^3)=2^{(2^3)}=2^8=256\]so they are clearly different, and $h$ is not associative.
+\end{ex}
