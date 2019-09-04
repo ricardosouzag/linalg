@@ -2551,7 +2551,7 @@ We will show, at some point, that an equivalent result also holds for linear tra
 
 Finally, the last result of this section - the Yoneda Lemma:
 
-\begin{restatable}[Weak Yoneda's Lemma]{theorem}{yoneda}\label{thm:yoneda1}
+\begin{restatable}[Weak Yoneda's Lemma]{theorem}{yoneda}
 	Let $X,Y$ be two sets. Then $\hom(A,X)\iso\hom(A,Y)$ for every $A$ if, and only if, $X\iso Y$.
 \end{restatable}
 \begin{proof}
@@ -2567,7 +2567,7 @@ Finally, the last result of this section - the Yoneda Lemma:
 
 This is actually a pretty weak proof. We would actually like to prove the following result:
 
-\begin{theorem}[Yoneda's Lemma]
+\begin{theorem}[Yoneda's Lemma]\label{thm:yoneda}
 	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, and functions $f:X\to Y$.
 \end{theorem}
 \begin{proof}
@@ -2587,15 +2587,21 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 	
 	This finishes the proof.
 \end{proof}
+\begin{cor}[Yoneda's Lemma]
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between families of functions $\{\phi_A:\hom(X,A)\to \hom(Y,A)\}_A$, where $A$ ranges over all sets, and functions $f:Y\to X$.
+\end{cor}
+\begin{proof}
+	It's essentially the same proof as the theorem's, so it'll be left as an exercise to the reader.
+\end{proof}
 
-\begin{theorem}[Yoneda's Lemma]
+\begin{cor}
 	Let $X,Y$ be any sets. Then the following are equivalent:
 	\begin{enumerate}[(i.)]
 		\item $X\iso Y$;
 		\item $\hom(A,X)\iso\hom(A,Y)$ for all $A$;
 		\item $\hom(X,A)\iso\hom(Y,A)$ for all $A$.
 	\end{enumerate}
-\end{theorem}
+\end{cor}
 \begin{proof}
 	\begin{itemize}
 		\item (i.) implies (iii.):
@@ -2610,7 +2616,9 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 		
 		\item (ii.) implies (i.):
 		
+		Let $\mc F:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of bijections indexed over all sets. Analogously, let $\mc F^{-1}:=\{\psi_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the family of all inverses of the previous family (i.e. $\psi_A:=\phi_A^{-1}$ for each set $A$).
 		
+		In light of \nameCref{thm:yoneda}, 
 	
 		Finally, if we take $\phi_A$ as an isomorphism, for every $A$, we see that $\hom(A,\phi_X(\id_X))$ is an isomorphism for every $A$ - which means that there's some function $h=\phi_A^{-1}:\hom(A,Y)\to\hom(A,X)$ such that $h\circ\hom(A,\phi_X(\id_X))=\id_{\hom(A,X)}$ and $\hom(A,\phi_X(\id_X))\circ h=\id_{\hom(A,Y)}$.
 		
