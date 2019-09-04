@@ -2568,6 +2568,25 @@ Finally, the last result of this section - the Yoneda Lemma:
 This is actually a pretty weak proof. We would actually like to prove the following result:
 
 \begin{theorem}[Yoneda's Lemma]
+	Let $X$ and $Y$ be any sets. Then any family of functions $\{\phi_A:\hom(A,X)\to \hom(A,Y)\}_A$, where $A$ ranges over all sets, determines a unique function $f:X\to Y$.
+\end{theorem}
+\begin{proof}
+	Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
+	
+	Assume that $\hom(f,Y)\circ\phi_A=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$.
+	
+	So if we take $f:A\to X$, by applying the equality above to $\id_X$ we see that
+	\[(\hom(f,Y)\circ\phi_X)(\id_X)=\hom(f,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ f\]and
+	\[(\phi_A\circ\hom(f,X))(\id_X)=\phi_A(\hom(f,X)(\id_X))=\phi_A(\id_X\circ f)=\phi_A(f)\]must be equal - in other words, $\phi_X(\id_X)\circ f=\phi_A(f)$.
+	
+	But this shows us that $\phi_A:\hom(A,X)\to\hom(A,Y)$ is uniquely defined by $\phi_A=\hom(A,\phi_X(\id_X))$. 
+	
+	In other words, giving a family of functions $\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A,$ indexed over all sets, is the same as choosing a function $f:X\to Y$ and putting every other $\phi_A:=\hom(A,f)$.
+	
+	This finishes the proof.
+\end{proof}
+
+\begin{theorem}[Yoneda's Lemma]
 	Let $X,Y$ be any sets. Then the following are equivalent:
 	\begin{enumerate}[(i.)]
 		\item $X\iso Y$;
@@ -2589,27 +2608,7 @@ This is actually a pretty weak proof. We would actually like to prove the follow
 		
 		\item (ii.) implies (i.):
 		
-		Take $f:B\to A$ any function, and look at $\phi_A:\hom(A,X)\to\hom(A,Y)$ and $\phi_B:\hom(B,X)\to\hom(B,Y)$.
 		
-		Assume that $\hom(f,Y)\circ\phi_A=\phi_B\circ\hom(f,X)$ holds for any choice of $A$, $B$ and $f$.
-		
-		So if we take $f:A\to X$ any function, by applying the equality above to $\id_X$ we see that
-		\[(\hom(f,Y)\circ\phi_X)(\id_X)=\hom(f,Y)(\phi_X(\id_X))=(\phi_X(\id_X))\circ f\]and
-		\[(\phi_A\circ\hom(f,X))(\id_X)=\phi_A(\hom(f,X)(\id_X))=\phi_A(\id_X\circ f)=\phi_A(f)\]must be equal - in other words, $\phi_X(\id_X)\circ f=\phi_A(f)$.
-		
-		But this shows us that $\phi_A:\hom(A,X)\to\hom(A,Y)$ is uniquely defined by $\phi_X(\id_X):X\to Y$.
-		
-		In other words, for each $\phi_A:\hom(A,X)\to\hom(A,Y)$ we can define a unique $\phi_X(\id_X):X\to Y$ such that $\phi_A(f)=\phi_X(\id_X)\circ f$, and for each $\varphi:X\to Y$ we can get a unique $\hom(A,\varphi):\hom(A,X)\to\hom(A,Y)$.
-		
-		Clearly these correspondences are mutually inverse:
-		
-		\begin{itemize}
-			\item Take $\varphi:X\to Y$ to $\hom(A,\varphi)$, and then take that to $\hom(A,\varphi)(\id_X)$. We claim that $\hom(A,\varphi)(\id_X)=\varphi$. But this follows trivially:	
-			\[\hom(A,\varphi)(\id_X)=\varphi\circ\id_X=\varphi.\]
-			
-			\item Take $\phi_A:\hom(A,X)\to\hom(A,Y)$ to the unique $\phi_X(\id_X)$ such that $\phi_A(f)=\phi_X(\id_X)\circ f$ for all $f\in\hom(A,X)$. Now take $\phi_X(\id_X)$ to $\hom(A,\phi_X(\id_X))$. We claim that $\phi_A=\hom(A,\phi_X(\id_X))$. But this follows trivially:
-			\[\phi_A(f)=\phi_X(\id_X)\circ f=\hom(A,\phi_X(\id_X))(f)\]for every $f\in\hom(A,X)$, and so $\phi_A=\hom(A,\phi_X(\id_X))$.
-		\end{itemize}
 	
 		Finally, if we take $\phi_A$ as an isomorphism, for every $A$, we see that $\hom(A,\phi_X(\id_X))$ is an isomorphism for every $A$ - which means that there's some function $h=\phi_A^{-1}:\hom(A,Y)\to\hom(A,X)$ such that $h\circ\hom(A,\phi_X(\id_X))=\id_{\hom(A,X)}$ and $\hom(A,\phi_X(\id_X))\circ h=\id_{\hom(A,Y)}$.
 		
