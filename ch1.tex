@@ -2584,6 +2584,31 @@ Finally, the last result of this section - the Yoneda Lemma:
 \begin{proof}
 	It's essentially the same proof as the theorem's, so it'll be left as an exercise to the reader.
 \end{proof}
+\begin{cor}
+	All of the functions in either of the families $\{\phi_A\}_A$ above are bijections if, and only if, $X\iso Y$.
+\end{cor}
+\begin{proof}
+	Let $\mc F:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of bijections indexed over all sets commuting the relevant diagrams. Analogously, let $\mc F^{-1}:=\{\psi_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the family of all inverses of the previous family (i.e. $\psi_A:=\phi_A^{-1}$ for each set $A$).
+	
+	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\mc F$ and $\mc F^{-1}$ determine unique functions $f_\mc F:X\to Y$ and $f_{\mc F^{-1}}:Y\to X$ given by $f_\mc F:=\phi_X(\id_X)$ and $f_{\mc F^{-1}}:=\psi_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\mc F})$ and $\psi_A=\hom(A,f_{\mc F^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
+	
+	To see this, let us compute:
+	\begin{align*}
+	\hom(X,\id_X)&=\id_{\hom(X,X)}\\
+	&=\psi_X\circ\phi_X\\
+	&=\hom(X,f_{\mc F^{-1}})\circ\hom(X,f_{\mc F})\\
+	&=\hom(X,f_{\mc F^{-1}}\circ f_{\mc F})
+	\end{align*}
+	and
+	\begin{align*}
+	\hom(Y,\id_Y)&=\id_{\hom(Y,Y)}\\
+	&=\phi_Y\circ\psi_Y\\
+	&=\hom(Y,f_{\mc F})\circ\hom(Y,f_{\mc F^{-1}})\\
+	&=\hom(Y,f_{\mc F}\circ f_{\mc F^{-1}})
+	\end{align*}together tells us that $f_{\mc F}$ and $f_{\mc F^{-1}}$ are mutually inverse and, therefore, isomorphisms.
+	
+	This proves $X\iso Y$.
+\end{proof}
 
 With this, we have proven most of the stuff that we'll need to study Linear Algebra.
 
