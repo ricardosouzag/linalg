@@ -2590,15 +2590,22 @@ Finally, the last result of this section - the Yoneda Lemma:
 	If each $\phi_A$ in the family is an isomorphism, then we say that $\phi$ is a \textbf{natural isomorphism}.
 \end{df}
 \begin{cor}[Yoneda's Lemma]
-	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between natural transformations $\alpha:\hom(X,-)\to\hom(Y,-)$, and functions $f:Y\to X$.
+	Let $X$ and $Y$ be any sets. Then there is a bijective correspondence between natural transformations $\psi:\hom(X,-)\to\hom(Y,-)$, and functions $f:Y\to X$.
 \end{cor}
 \begin{proof}
 	It's essentially the same proof as the theorem's, so it'll be left as an exercise to the reader.
 \end{proof}
 \begin{cor}
-	All of the functions in either of the families $\{\phi_A\}_A$ above are bijections if, and only if, $X\iso Y$.
+	For any pair of sets $X,Y$ the following are equivalent:
+	\begin{enumerate}
+		\item There is a natural isomorphism $\phi:\hom(X,-)\to\hom(Y,-)$;
+		\item There is a natural isomorphism $\psi:\hom(Y,-)\to\hom(X,-)$;
+		\item $X\iso Y$.
+	\end{enumerate}
 \end{cor}
 \begin{proof}
+	We will only prove (i.) implies (iii.). (ii.) implies (iii.) is similar, and (iii.) implies both (i.) and (ii.) is trivial. Those are left as an exercise to the reader.
+	
 	Let $\mc F:=\{\phi_A:\hom(A,X)\to\hom(A,Y)\}_A$ be a family of bijections indexed over all sets commuting the relevant diagrams. Analogously, let $\mc F^{-1}:=\{\psi_A:\hom(A,Y)\to\hom(A,X)\}_A$ be the family of all inverses of the previous family (i.e. $\psi_A:=\phi_A^{-1}$ for each set $A$).
 	
 	In light of \hyperref[thm:yoneda]{Yoneda's Lemma}, we see that $\mc F$ and $\mc F^{-1}$ determine unique functions $f_\mc F:X\to Y$ and $f_{\mc F^{-1}}:Y\to X$ given by $f_\mc F:=\phi_X(\id_X)$ and $f_{\mc F^{-1}}:=\psi_Y(\id_Y)$, respectively, such that $\phi_A=\hom(A,f_{\mc F})$ and $\psi_A=\hom(A,f_{\mc F^{-1}})$ for every set $A$. We claim that they are mutually inverse and, therefore, $X\iso Y$.
