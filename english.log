@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  5 SEP 2019 12:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  5 SEP 2019 12:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1080,7 +1080,7 @@ on $\OML/cmm/m/it/12 ^^^ \OT1/cmr/m/n/12 : [](\OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it
 Chapter 2.
 [73
 
-] [74] [75] [76] [77]) [78]
+] [74] [75] [76] [77] [78]) [79]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (./english.aux)
@@ -1090,10 +1090,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 9364A30BCF3CAEAAE722A1FBBC081940;1438.
  ) 
 Here is how much of TeX's memory you used:
- 34194 strings out of 492646
- 823458 string characters out of 6133325
+ 34196 strings out of 492646
+ 823482 string characters out of 6133325
  1005926 words of memory out of 5000000
- 37016 multiletter control sequences out of 15000+600000
+ 37017 multiletter control sequences out of 15000+600000
  15281 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1113,10 +1113,10 @@ ic/amsfonts/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/double
 stroke/dsrom12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/
 dsrom8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
 10.pfb>
-Output written on english.pdf (79 pages, 461127 bytes).
+Output written on english.pdf (80 pages, 461746 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 920 compressed objects within 10 object streams
- 485 named destinations out of 1000 (max. 500000)
+ 1032 PDF objects out of 1200 (max. 8388607)
+ 923 compressed objects within 10 object streams
+ 486 named destinations out of 1000 (max. 500000)
  165 words of extra memory for PDF output out of 10000 (max. 10000000)
 
