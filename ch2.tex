@@ -202,3 +202,19 @@ Let us show some properties of fields:
 		But $0x=0$ and $1x=x$, so this is just $0=x+(-1)x$. Since additive inverses are unique, we see that $(-1)x=-x$.
 	\end{enumerate}
 \end{proof}
+
+This result basically tells us that every field is ``similar'' to $\R$, in some sense.
+
+Finally, to end this section, let us give some examples of fields that aren't $\Q$, $\R$ or $\C$.
+
+\begin{ex}
+	Let $p\in \N$ be a prime number (that is, there are only two ways to write $p=nm$: $n=p, m=1$ and $n=1, m=p$). Consider the set $p\in\N$ - that is, $p=\{0,1,2,\cdots,p-1\}$. We will give a field structure to $p$ as follows:
+	
+	For any $x,y\in p$, define:
+	\begin{itemize}
+		\item $x+y$ is the remainder of the division of $x+y$ in $\N$ by $p$;
+		\item $xy$ is the remainder of the division of $xy$ in $\N$ by $p$.
+	\end{itemize}
+
+	We claim that $p$ with those two operations is a field, which will be denoted by either $\Z_p$, $\Z/p\Z$ or $\mathds F_p$.
+\end{ex}
