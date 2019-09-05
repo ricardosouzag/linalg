@@ -320,7 +320,15 @@ By definition, $\R^2=\R\times \R$ is the set of ordered pairs of real numbers.
 			A\left(A\left((a,b),(c,d)\right),(e,f)\right)&=A((a+c,b+d),(e,f))\\
 			&=((a+c)+e,(b+d)+f)\\
 			&=(a+(c+e),b+(d+f))\\
-			&=A((a,b),(c+e,d+f))=A((a,b),A((c,d),(e,f))).
-		\end{align*}
+			&=A((a,b),(c+e,d+f))=A((a,b),A((c,d),(e,f))),
+		\end{align*}so $A$ is associative;
+		
+		\item \begin{align*}
+		A((a,b),(c,d))&=(a+c,b+d)=(c+a,d+b)=A((c,d),(a,b))
+		\end{align*}so $A$ is commutative;
+		
+		\item $A((a,b),(0,0))=(a+0,b+0)=(a,b)=(0+a,0+b)=A((0,0),(a,b))$ so $A$ has identity $(0,0)$;
+		
+		\item $A((a,b),(-a,-b))=(a-a,b-b)=(0,0)=(-a+a,-b+b)=A((-a,-b),(a,b))$ so $A$ has inverses.
 	\end{enumerate}
 \end{proof}
