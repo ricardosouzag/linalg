@@ -126,7 +126,7 @@ All this talk now brings us to a very specific definition:
 			\item $M$ is associative;
 			\item $M$ is commutative;
 			\item $M$ has an identity element;
-			\item $M$ has inverses;
+			\item $M$ has inverses (excluding the additive identities);
 			\item $M$ distributes over $A$.
 		\end{enumerate}
 	\end{multicols}
@@ -149,7 +149,7 @@ In this case, we call $A$ and $M$, respectively, the field's \textbf{addition} a
 			\item $x(yz)=(xy)z$;
 			\item $xy=yx$;
 			\item $x\cdot 1=1\cdot x=x$;
-			\item $xx^{-1}=x^{-1}x=1$;
+			\item $xx^{-1}=x^{-1}x=1$ if $x\neq 0$;
 			\item $x(y+z)=xy+xz$ and $(x+y)z=xz+yz$.
 		\end{enumerate}
 	\end{multicols}	
@@ -205,6 +205,21 @@ Let us show some properties of fields:
 
 This result basically tells us that every field is ``similar'' to $\R$, in some sense.
 
+\begin{rmk}
+	The reason why we require that the multiplication has inverses for all elements \textit{except for 0} is precisely because of item (e) above. Since $0x=0$ for all $x$, if we could have some $0^{-1}$, then $0=00^{-1}=1$ so we would have $0=1$.
+	
+	But since $1x=x$ for all $x$, this would imply that $x=1x=0x=0$, so \textbf{every element of the field would have to be 0 for it to be consistent}.
+	
+	In other words, the only set that satisfies all the properties of a field and also has a multiplicative inverse to 0 is the set $\{0\}$.
+	
+	In fact:
+\end{rmk}
+
+\begin{prop}
+	The set $1=\{0\}$ with addition and multiplication being equal and given by $0+0=0\cdot 0=0$ is a field. Its multiplicative and additive identities are $0$, who is also the inverse of $0$.
+\end{prop}
+
+
 Finally, to end this section, let us give some examples of fields that aren't $\Q$, $\R$ or $\C$.
 
 \begin{ex}
@@ -220,7 +235,7 @@ Finally, to end this section, let us give some examples of fields that aren't $\
 	
 	For instance, let us do some computations with $p=3$.
 	
-	In this case, $p={0,1,2}$, and so we have the following tables of operations:
+	In this case, $p=\{0,1,2\}$, and so we have the following tables of operations:
 	
 	\begin{center}
 		\begin{tabu}{|c|[2pt]c|c|c|}
@@ -238,4 +253,7 @@ Finally, to end this section, let us give some examples of fields that aren't $\
 		\end{tabu}
 	\end{center}
 	
+	It is, then, readily seen that $0$ and $1$ are, respectively, the additive and multiplicative identities of $\mathds{F}_3$.
+	
+	We can also see that $1+2=0$ so 1 and 2 are additive inverses to each other. Similarly, we see that $1\cdot 1=1=2\cdot 2$ so both 1 and 2 are multiplicative inverses to themselves.
 \end{ex}
