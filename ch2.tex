@@ -164,3 +164,35 @@ In this case, we call $A$ and $M$, respectively, the field's \textbf{addition} a
 	
 	\[zz^{-1}=(x+iy)(\frac{x-iy}{x^2+y^2})=\frac{x^2+y^2}{x^2+y^2}=1\]so it is indeed an inverse for $z$.
 \end{ex}
+
+Let us show some properties of fields:
+
+\begin{lemma}
+	Let $(k,+,\cdot)$ be a field. Then the following hold:
+	\begin{enumerate}[(a)]
+		\item There's a unique additive identity;
+		\item For each $x\in k$, there's a unique additive inverse;
+		\item There's a unique multiplicative identity;
+		\item For each $x\in k$, there's a unique multiplicative inverse;
+		\item Let $0$ be an additive identity of $k$. Then $0x=0$ for all $x\in k$.
+		\item Let $1$ be a multiplicative identity of $k$. Then $-x=(-1)x$, where $-1$ is the additive inverse of $1$.
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	\begin{enumerate}[(a)]
+		\item Let $0$ and $0'$ be two additive identities of $k$. Then
+		\[0=0+0'=0'\]where the leftmost equality holds since $0'$ is additive identity, and the rightmost equality holds since $0$ is additive identity, and so $0=0'$.
+		
+		\item Given $x\in k$, let $x'$ and $x''$ be two additive inverses to $x$. Then
+		\[x'=x'+0=x'+(x+x'')=(x'+x)+x''=0+x''=x''\]and so $x'=x''$.
+		
+		\item Let $1$ and $1'$ be two multiplicative identities of $k$. Then
+		\[1=1\cdot1'=1'\]where the leftmost equality holds since $1'$ is a multiplicative identity, and the rightmost equality holds since $1$ is a multiplicative identity, so $1=1'$.
+		
+		\item Given $x\in k$, let $x''$ and $x''$ be two multiplicative inverses to $x$. Then
+		\[x'=x'\cdot1=x'(xx'')=(x'x)x''=1\cdot x''=x''\]and so $x'=x''$.
+		
+		\item Given $x\in k$, we have that
+		\[0x=(0+0)x=0x+0x\]since $k$ is a field and $0$ is the additive identity. Let 
+	\end{enumerate}
+\end{proof}
