@@ -258,4 +258,31 @@ Finally, to end this section, let us give some examples of fields that aren't $1
 	It is, then, readily seen that $0$ and $1$ are, respectively, the additive and multiplicative identities of $\mathds{F}_3$.
 	
 	We can also see that $1+2=0$ so 1 and 2 are additive inverses to each other. Similarly, we see that $1\cdot 1=1=2\cdot 2$ so both 1 and 2 are multiplicative inverses to themselves.
+	
+	This shows that $\mathds{F}_3$ is a field.
+	
+	Building similar tables of operations we can prove that any $\mathds{F}_p$ is a field.
+	
+	Let us now show the necessity of $p$ being a prime.
+	
+	\bigskip
+	Let $4=\{0,1,2,3\}$. Let's try building the same operations:
+	
+	\begin{center}
+		\begin{tabu}{|c|[2pt]c|c|c|c|}
+			\hline
+			+&0&1&2&3\\\tabucline[2pt]{-}
+			0&0&1&2&3\\\hline
+			1&1&2&3&0\\\hline
+			2&2&3&0&1\\\hline
+			3&3&0&5&2\\\hline 
+		\end{tabu} and \begin{tabu}{|c|[2pt]c|c|c|c|}
+			\hline
+			$\times$&0&1&2&3\\\tabucline[2pt]{-}
+			0&0&0&0&0\\\hline
+			1&0&1&2&3\\\hline
+			2&0&2&0&2\\\hline
+			3&0&3&2&1\\\hline
+		\end{tabu}
+	\end{center}
 \end{ex}
