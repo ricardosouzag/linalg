@@ -175,7 +175,7 @@ Let us show some properties of fields:
 		\item There's a unique multiplicative identity;
 		\item For each $x\in k$, there's a unique multiplicative inverse;
 		\item Let $0$ be an additive identity of $k$. Then $0x=0$ for all $x\in k$.
-		\item Let $1$ be a multiplicative identity of $k$. Then $-x=(-1)x$, where $-1$ is the additive inverse of $1$.
+		\item Let $1$ be a multiplicative identity of $k$. Then $-x=(-1)x$, where $(-1)+1=0$.
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -193,6 +193,12 @@ Let us show some properties of fields:
 		\[x'=x'\cdot1=x'(xx'')=(x'x)x''=1\cdot x''=x''\]and so $x'=x''$.
 		
 		\item Given $x\in k$, we have that
-		\[0x=(0+0)x=0x+0x\]since $k$ is a field and $0$ is the additive identity. Let 
+		\[0x=(0+0)x=0x+0x\]since $k$ is a field and $0$ is the additive identity. Let $y\in k$ be the additive inverse of $0x$.
+		
+		Then, since the above is true, we can see that $(0x)+y=(0x+0x)+y$ is also true. But the LHS is just 0, since $y$ is the additive inverse of $0x$, and the RHS is just $(0x+0x)+y=0x+(0x+y)=0x+0=0x$, so the above equation evaluates to $0=0x$.
+		
+		\item Given $x\in k$, we have that $0x=(1+(-1))x$ since $1+(-1)=0$. But now, by the distributive property of fields we see that $0x=(1+(-1))x=(1)x+(-1)x$.
+		
+		But $0x=0$ and $1x=x$, so this is just $0=x+(-1)x$. Since additive inverses are unique, we see that $(-1)x=-x$.
 	\end{enumerate}
 \end{proof}
