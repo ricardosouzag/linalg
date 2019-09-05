@@ -292,3 +292,35 @@ Finally, to end this section, let us give some examples of fields that aren't $1
 	
 	Since this isn't supposed to be a course on field theory, we won't go into much detail on how to prove that $\Z/n\Z$ is a field if, and only if, $n$ is prime.
 \end{ex}
+
+\newpage
+\subsection{Real vector fields}
+
+Let us start this section with the set that will be the focus of most, if not all, of this chapter: $\R^2$.
+
+By definition, $\R^2=\R\times \R$ is the set of ordered pairs of real numbers.
+
+\begin{df}
+	We're going to define the \textbf{addition} $A:\R^2\times \R^2\to \R^2$ to be given by $A((x,y),(z,w)):=(x+z,y+w)$ for any $(x,y),(z,w)\in\R^2$.
+\end{df}
+
+\begin{prop}
+	The addition $A$ we've just defined satisfies the following properties:
+	\begin{enumerate}[(i.)]
+		\item $A$ is associative;
+		\item $A$ is commutative;
+		\item $A$ admits an identity element;
+		\item $A$ admits inverses.
+	\end{enumerate}
+\end{prop}
+\begin{proof}
+	Choose any three elements $(a,b),(c,d),(e,f)\in\R^2$. Then:
+	\begin{enumerate}[(i.)]
+		\item \begin{align*}
+			A(A((a,b),(c,d)),(e,f))&=A((a+c,b+d),(e,f))\\
+			&=((a+c)+e,(b+d)+f)\\
+			&=(a+(c+e),b+(d+f))\\
+			&=A((a,b),(c+e,d+f))=A((a,b),A((c,d),(e,f))).
+		\end{align*}
+	\end{enumerate}
+\end{proof}
