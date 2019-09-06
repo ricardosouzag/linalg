@@ -417,6 +417,10 @@ To proceed with our studies, then, we're gonna need a new approach.
 		Let $P\in E_A$ be a point. Consider the directed segment $\overrightarrow{AP}$. It is, by definition, a vector in $V_A$ whose endpoint is $P$, and, hence, $t(\overrightarrow{AP})=P$, and so $t$ is surjective.
 	\end{itemize}
 
+\begin{df}
+	Given any vector $v\in V_A$, we define its \textbf{magnitude} or \textbf{size} or \textbf{norm} to be $\lVert v\rVert:=\lvert AP\rvert$, where $v=\overrightarrow{AP}$.
+\end{df}
+
 Since $t$ is both injective and surjective, it is a bijection. This proves the result.
 \end{proof}
 
@@ -493,5 +497,13 @@ Finally, we can prove the result we've all been waiting for:
 	Let $E_A$ be a pointed Euclidean plane. Then $V^{r,s}_A\iso \R^2$.
 \end{theorem}
 \begin{proof}
+	Take any two points $R\in r$ and $P\in p$, respectively, both different from $A$.
 	
+	Now, given any $v\in r$ a vector lying entirely in $r$, we say that $v$ is \textbf{positive} if the endpoint of $v$ lies in the same side of the semiplane defined by $s$ as $R$, \textbf{zero} if $v=\overrightarrow{AA}$ the null vector, and \textbf{negative} otherwise.
+	
+	Similarly, given $u\in s$ a vector lying entirely in $s$, we say that $u$ is \textbf{positive} if the endpoint of $u$ lies in the same side of the samiplane defined by $r$ as $S$, \textbf{zero} if $u=\overrightarrow{AA}$ the null vector, and \textbf{negative} otherwise.
+	
+	This can be seen as a function $\mathrm{sgn}:V^{r,s}_A\to\{0,1,-1\}$.
+	
+	That said, we're gonna define a function $f:V^{r,s}_A\to \R^2$ by putting $f(v,u):=(\mathrm{sgn}(v)\lVert v\rVert,\mathrm{sgn}(u)\lVert u\rVert)$. We claim that $f$ is the bijection we're looking for.
 \end{proof}
