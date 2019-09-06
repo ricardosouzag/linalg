@@ -359,3 +359,38 @@ To proceed with our studies, then, we're gonna need a new approach.
 	\end{scriptsize}
 	\end{tikzpicture}\] we can think of the set $E_A$ (whose elements are all points in the plane, including $A$ and $B$, but distinguishing $A$) and the set $E_B$ (whose elements are all points in the plane, including $A$ and $B$, but distinguishing $B$).
 \end{ex}
+
+\begin{df}
+	Given a pointed Euclidean plane $E_*$, we define a \textit{vector in $E_*$} to be any directed segment starting in $*$.
+\end{df}
+
+\begin{ex}
+	Continuing the above example,
+	\[
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\clip(-3.18,-2.52) rectangle (6.,4.75);
+	\draw [->,line width=2.pt] (0.94,0.96) -- (2.2,3.56);
+	\draw [->,line width=2.pt] (0.94,0.96) -- (-2.32,1.66);
+	\draw [->,line width=2.pt] (0.94,0.96) -- (-0.06,-1.7);
+	\draw [->,line width=2.pt] (0.94,0.96) -- (5.5,0.1);
+	\draw [->,line width=2.pt] (0.94,0.96) -- (4.34,2.82);
+	\begin{scriptsize}
+	\draw [fill=ududff] (0.94,0.96) circle (2.5pt);
+	\draw[color=ududff] (0.72,1.43) node {$A$};
+	\draw [fill=ududff] (4.34,2.82) circle (2.5pt);
+	\draw [fill=ududff] (5.5,0.1) circle (2.5pt);
+	\draw [fill=ududff] (-0.06,-1.7) circle (2.5pt);
+	\draw [fill=ududff] (-2.32,1.66) circle (2.5pt);
+	\draw [fill=ududff] (2.2,3.56) circle (2.5pt);
+	\draw[color=black] (1.46,2.47) node {$s$};
+	\draw[color=black] (-0.66,1.17) node {$v$};
+	\draw[color=black] (0.62,-0.23) node {$w$};
+	\draw[color=black] (3.28,0.79) node {$u$};
+	\draw[color=black] (2.64,2.15) node {$t$};	
+	\draw [fill=ududff] (5.06,2.92) circle (2.5pt);
+	\draw[color=ududff] (5.2,3.29) node {$B$};
+	\end{scriptsize}
+	\end{tikzpicture}
+	\]we see that $s,t,u,v,w$ are vectors in $E_A$, but not in $E_B$.
+\end{ex}
