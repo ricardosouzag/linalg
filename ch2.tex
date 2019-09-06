@@ -344,3 +344,17 @@ To proceed with our studies, then, we're gonna need a new approach.
 \begin{df}
 	We'll denote $E_*$ the \textbf{pointed Euclidean plane}. That is, $E$ is the set of all points in the Euclidean plane, and $*$ is a distinguished point.
 \end{df}
+
+\begin{ex}
+	For instance,
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\clip(-0.5,-2.) rectangle (7.,6.);
+	\begin{scriptsize}
+	\draw [fill=ududff] (0.94,0.96) circle (2.5pt);
+	\draw[color=ududff] (1.08,1.33) node {$A$};
+	\draw [fill=ududff] (5.06,2.92) circle (2.5pt);
+	\draw[color=ududff] (5.2,3.29) node {$B$};
+	\end{scriptsize}
+	\end{tikzpicture} we can think of the set $E_A$ (whose elements are all points in the plane, including $A$ and $B$, but distinguishing $A$) and the set $E_B$ (whose elements are all points in the plane, including $A$ and $B$, but distinguishing $B$).
+\end{ex}
