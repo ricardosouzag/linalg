@@ -470,5 +470,17 @@ Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $
 		But $f(v)=f(u)$ implies $\overrightarrow{AP_r}=\overrightarrow{AQ_r}$ and $\overrightarrow{AP_s}=\overrightarrow{AQ_s}$, by definition of set product.
 		
 		But then this means that $P_r=Q_r$ and $P_s=Q_s$.
+		
+		This means that both $P$ and $Q$ belong to both of $r_P$ and $s_P$. But $r_P$ and $s_P$ are lines, so their intersection has, at most, one point. This means that $P=Q$, and so $f$ is injective.
+		
+		\item $f$ is surjective:
+		
+		Take any $(v,u)\in V^2_A$. Then, there are uniquely determined $P,Q\in E_A$ such that $v=\overrightarrow{AP}$ and $u=\overrightarrow{AQ}$.
+		
+		Now, consider the lines $r_Q$ and $s_P$ defined, respectively, to be the lines parallel to $r$ through $Q$, and parallel to $s$ through $P$.
+		
+		Since $s_P\parallel s\nparallel r\parallel r_Q$, we see that $s_P\nparallel r_Q$ and so $s_P\cap r_Q$ is a single point - T.
+		
+		We claim that $f(\overrightarrow{AT})=(v,u)$.
 	\end{itemize}
 \end{proof}
