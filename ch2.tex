@@ -361,7 +361,7 @@ To proceed with our studies, then, we're gonna need a new approach.
 \end{ex}
 
 \begin{df}
-	Given a pointed Euclidean plane $E_*$, we define a \textit{vector in $E_*$} to be any directed segment starting in $*$.
+	Given a pointed Euclidean plane $E_*$, we define a \textbf{vector in $E_*$} to be any directed segment starting in $*$.
 \end{df}
 
 \begin{ex}
@@ -400,3 +400,22 @@ To proceed with our studies, then, we're gonna need a new approach.
 	\end{tikzpicture}
 	\]we see that $s,t,u,v,w$ are vectors in $E_A$, but not in $E_B$, whereas $x,y,z$ are vectors in $E_B$, but not in $E_A$.
 \end{ex}
+
+\begin{lemma}
+	Let $V_A$ denote the set of all vectors in $E_A$. Then $E_A\iso V_A$.
+\end{lemma}
+\begin{proof}
+	Consider the function $t:V_A\to E_A$ that takes any vector $v\in V_A$ to its endpoint $t(v)$.
+	
+	\begin{itemize}
+		\item $t$ is injective:
+		
+		If $t(v)=t(u)$ for some $v,u\in V_A$, then $v$ and $u$ have the same endpoints. Since they also have the same starting points (by definition), they are equal - hence, $v=u$ and $t$ is injective.
+		
+		\item $t$ is surjective:
+		
+		Let $P\in E_A$ be a point. Consider the directer segment $\overleftarrow{AP}$. It is, by definition, a vector in $V_A$ whose endpoint is $P$, and, hence, $t(\overleftarrow{AP})=P$, and so $t$ is surjective.
+	\end{itemize}
+
+Since $t$ is both injective and surjective, it is a bijection. This proves the result.
+\end{proof}
