@@ -532,7 +532,9 @@ Finally, we can prove the result we've all been waiting for:
 Finally, we can conclude that $f$ is the bijection we were looking for. This ends the proof of the theorem.
 \end{proof}
 \begin{cor}
-	The elements of $\R^2$ can be thought of as vectors in the pointed Euclidean plane $E_{(0,0)}$.
+	By composition of isomorphisms we have:
+	
+	\[E_A\iso V_A\iso V^{r,s}_A\iso\R^2,\]so the elements of $\R^2$ can be thought of as vectors in the pointed Euclidean plane $E_A$.
 \end{cor}
 
 \begin{lemma}
@@ -566,5 +568,10 @@ Finally, we can conclude that $f$ is the bijection we were looking for. This end
 Finally, to end this section, one last result:
 
 \begin{lemma}
-	Take $t\in E_A$ any line through $A$. Then there is some point $(x_t,y_t)\in \R^2$ such that $f(t):=\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
+	Take $t\in E_A$ any line through $A$. Then there is some point $(x_t,y_t)\in \R^2$ such that $f(t)=\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
 \end{lemma}
+\begin{proof}
+	Draw $\mc C(A,1)$ the circle of radius $1$ centered at $A$. Since $t$ contains a point in the inside of the circle, $t\cap \mc C(A,1)=2$. Choose any of those two points and call it $P$.
+	
+	Now, $f(\overrightarrow{AP_r},\overrightarrow{AP_s})$
+\end{proof}
