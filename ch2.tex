@@ -510,7 +510,7 @@ Finally, we can prove the result we've all been waiting for:
 	\begin{itemize}
 		\item $f$ is injective:
 		
-		Let $(v,u),(v',u')\in V^{r,s}_A$ be two elements such that $f(v,u)=f(v',u')$. This means that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$. Since $\norm-$ is always a positive number, we see that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ if, and only if, $\mathrm{sgn}(v)=\mathrm{sgn}(v')$, and similarly for $\mathrm{sgn}(u)=\mathrm{sgn}(u')$.
+		Let $(v,u),(v',u')\in V^{r,s}_A$ be two elements such that $f(v,u)=f(v',u')$. This means that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$. Since $\norm-$ is always a non-negative number, we see that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ if, and only if, $\mathrm{sgn}(v)=\mathrm{sgn}(v')$, and similarly for $\mathrm{sgn}(u)=\mathrm{sgn}(u')$.
 		
 		Now this implies, together with the equations $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$, that $\norm{v}=\norm{v'}$ and $\norm{u}=\norm{u'}$. But since the norm is entirely determined by the endpoint (since the starting point is fixed, being $A$), we see that $\norm{v}=\norm{v'}$ if, and only if, $v$ and $v'$ have the same endpoints. Similarly, we see that $u$ and $u'$ have the same endpoints.
 		
@@ -520,6 +520,14 @@ Finally, we can prove the result we've all been waiting for:
 		
 		\item $f$ is surjective:
 		
+		Take any $(x,y)\in \R^2$. Now draw two circles centered in $A$: one with radius $\abs{x}$ and one with radius $\abs{y}$. Call these circles $C_x$ and $C_y$, resp.
 		
+		Since $C_x$ is a circle and $r$ is a line which contains a point inside the circle, we know that $C_x\cap r$ is precisely two points - $R_1,R_2$. Similarly, we know that $C_y\cap s$ is precisely two points - $S_1,S_2$.
+		
+		Now, we take $\overrightarrow{x}$ to be the vector ending at either $R_1$ or $R_2$ such that $\mathrm{sgn}(\overrightarrow{x})=\mathrm{sgn}(x)$. Similarly, we define $\overrightarrow{y}$ to be the vector ending at either $S_1$ or $S_2$ such that $\mathrm{sgn}(\overrightarrow{y})=\mathrm{sgn}(y)$.
+		
+		Now, by construction, $(\overrightarrow{x},\overrightarrow{y})\in V^{r,s}_A$ is such that $\mathrm{sgn}(\overrightarrow{x})\norm{\overrightarrow{x}}=x$ and $\mathrm{sgn}(\overrightarrow{y})\norm{\overrightarrow{y}}=y$, so $f(\overrightarrow{x},\overrightarrow{y})=(x,y)$ and we see that $f$ is surjective.
 	\end{itemize}
+
+Finally, we can conclude that $f$ is the bijection we were looking for. This ends the proof of the theorem.
 \end{proof}
