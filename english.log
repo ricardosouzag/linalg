@@ -1113,10 +1113,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 61AC6A8CE07C1874810BFE76C9A7111A;1510.
  ) 
 Here is how much of TeX's memory you used:
- 34961 strings out of 492646
- 834423 string characters out of 6133325
+ 34962 strings out of 492646
+ 834438 string characters out of 6133325
  1020786 words of memory out of 5000000
- 37752 multiletter control sequences out of 15000+600000
+ 37753 multiletter control sequences out of 15000+600000
  16186 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,16n,119p,830b,1230s stack positions out of 5000i,500n,10000p,200000b,80000s
