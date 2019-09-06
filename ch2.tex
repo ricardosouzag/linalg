@@ -510,6 +510,16 @@ Finally, we can prove the result we've all been waiting for:
 	\begin{itemize}
 		\item $f$ is injective:
 		
-		Let $(v,u),(v',u')\in V^{r,s}_A$ be two elements such that $f(v,u)=f(v',u')$. This means that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$.
+		Let $(v,u),(v',u')\in V^{r,s}_A$ be two elements such that $f(v,u)=f(v',u')$. This means that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$. Since $\norm-$ is always a positive number, we see that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ if, and only if, $\mathrm{sgn}(v)=\mathrm{sgn}(v')$, and similarly for $\mathrm{sgn}(u)=\mathrm{sgn}(u')$.
+		
+		Now this implies, together with the equations $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$, that $\norm{v}=\norm{v'}$ and $\norm{u}=\norm{u'}$. But since the norm is entirely determined by the endpoint (since the starting point is fixed, being $A$), we see that $\norm{v}=\norm{v'}$ if, and only if, $v$ and $v'$ have the same endpoints. Similarly, we see that $u$ and $u'$ have the same endpoints.
+		
+		Finally, since $v$ and $v'$ have the same endpoints they must be equal, and the same goes for $u$ and $u'$.
+		
+		It follows that $(v,u)=(v',u')$ and so $f$ is indeed injective.
+		
+		\item $f$ is surjective:
+		
+		
 	\end{itemize}
 \end{proof}
