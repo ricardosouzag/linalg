@@ -421,3 +421,14 @@ Since $t$ is both injective and surjective, it is a bijection. This proves the r
 \end{proof}
 
 Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $s$ through $A$. Then, $V^2_A$ will be the set $(V_A\cap r)\times (V_A\cap s)$ - that is, the set of all pairs vectors of $E_A$ such that the first vector lies entirely in $r$ and the second vector lies entirely in $s$.
+
+\begin{lemma}
+	For any $E_A$, we have that $V_A\iso V_A^2$.
+\end{lemma}
+\begin{proof}
+	Let $f:V_A\to V_A^2$ be the following function: For any vector $\overrightarrow{AP}$ in $V_A$, we can consider the parallel to $r$ through $P$, $r_P$ and the parallel to $s$ through $P$, $s_P$.
+	
+	Since $r\parallel r_P$, we have that $r\cap r_P=\varnothing$, and similarly we have that $s\cap s_P=\varnothing$.
+	
+	But since $r\not\parallel s_P$ and they are both lines, we have that $r\cap s_P$ is a single point - let's call it $P_r$.
+\end{proof}
