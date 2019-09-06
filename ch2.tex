@@ -505,5 +505,11 @@ Finally, we can prove the result we've all been waiting for:
 	
 	This can be seen as a function $\mathrm{sgn}:V^{r,s}_A\to\{0,1,-1\}$.
 	
-	That said, we're gonna define a function $f:V^{r,s}_A\to \R^2$ by putting $f(v,u):=(\mathrm{sgn}(v)\lVert v\rVert,\mathrm{sgn}(u)\lVert u\rVert)$. We claim that $f$ is the bijection we're looking for.
+	That said, we're gonna define a function $f:V^{r,s}_A\to \R^2$ by putting $$f(v,u):=(\mathrm{sgn}(v)\lVert v\rVert,\mathrm{sgn}(u)\lVert u\rVert).$$ We claim that $f$ is the bijection we're looking for.
+	
+	\begin{itemize}
+		\item $f$ is injective:
+		
+		Let $(v,u),(v',u')\in V^{r,s}_A$ be two elements such that $f(v,u)=f(v',u')$. This means that $\mathrm{sgn}(v)\norm{v}=\mathrm{sgn}(v')\norm{v'}$ and $\mathrm{sgn}(u)\norm{u}=\mathrm{sgn}(u')\norm{u'}$.
+	\end{itemize}
 \end{proof}
