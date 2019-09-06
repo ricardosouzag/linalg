@@ -571,6 +571,8 @@ Finally, to end this section, one last result:
 	Take $t\in E_A$ any line through $A$. Then there is some point $(x_t,y_t)\in \R^2$ such that $f(t)=\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
 \end{lemma}
 \begin{proof}
+	Let $\R(x_t,y_t)$ denote the set $\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
+	
 	Draw $\mc C(A,1)$ the circle of radius $1$ centered at $A$. Since $t$ contains a point in the inside of the circle, $t\cap \mc C(A,1)=2$. Choose any of those two points and call it $P$.
 	
 	Now, let us define $(x_t,y_t):=f(\overrightarrow{AP_r},\overrightarrow{AP_s})$.
@@ -627,8 +629,8 @@ Finally, to end this section, one last result:
 	
 	Clearly, then, by definition of $\lambda_T$, we have that $$f(\overrightarrow{AT_r},\overrightarrow{AT_s})=(\mathrm{sgn}(\overrightarrow{AT_r})\norm{AT_r},\mathrm{sgn}(\overrightarrow{AT_s})\norm{AT_s})=(\lambda_Tx_t,\lambda_Ty_t).$$
 	
-	Since this holds true for any $T\in t$, we have that $f(t)\subseteq \{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
+	Since this holds true for any $T\in t$, we have that $f(t)\subseteq \R(x_t,y_t)$.
 	
 	\bigskip
-	Conversely, take any $(x,y)\in \{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
+	Conversely, take any $(x,y)\in \R(x_t,y_t)$ for some $(x_t,y_t)\in\R^2$ fixed.
 \end{proof}
