@@ -577,4 +577,47 @@ Finally, to end this section, one last result:
 	
 	Now take any point $T\in t$, and look at the vectors $\overrightarrow{AT_r}$ and $\overrightarrow{AT_s}$. Now, by using similar triangles we see that 
 	\[\dfrac{\mathrm{sgn}(\overrightarrow{AT_r})\norm{\overrightarrow{AT_r}}}{x_t}=\dfrac{\mathrm{sgn}(\overrightarrow{AT_s})\norm{\overrightarrow{AT_s}}}{y_t}=\frac{\mathrm{sgn(\overrightarrow{AT})\norm{\overrightarrow{AT}}}}{\mathrm{sgn}(\overrightarrow{AP})\norm{\overrightarrow{AP}}}\]
+	\[\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\begin{axis}[
+	x=1.0cm,y=1.0cm,
+	axis lines=middle,
+	xmin=-1.2799999999999998,
+	xmax=6.560000000000002,
+	ymin=-1.3500000000000016,
+	ymax=4.3500000000000005,
+	xtick={-1.0,0.0,...,6.0},
+	ytick={-1.0,0.0,...,4.0},]
+	\clip(-1.28,-1.35) rectangle (6.56,4.35);
+	\draw [domain=-1.28:6.56] plot(\x,{(-0.--1.67*\x)/3.04});
+	\draw [dotted] (5.261710485848469,-1.35) -- (5.261710485848469,4.35);
+	\draw [dotted] (3.04,-1.35) -- (3.04,4.35);
+	\draw [dotted,domain=-1.28:6.56] plot(\x,{(-1.67-0.*\x)/-1.});
+	\draw [dotted,domain=-1.28:6.56] plot(\x,{(-2.890479115581231-0.*\x)/-1.});
+	\draw [->] (0.,0.) -- (3.04,0.);
+	\draw [->] (0.,0.) -- (5.261710485848469,0.);
+	\draw [->] (0.,0.) -- (0.,1.67);
+	\draw [->] (0.,0.) -- (0.,2.890479115581231);
+	\draw [->] (0.,0.) -- (3.04,1.67);
+	\draw [->] (0.,0.) -- (5.261710485848469,2.890479115581231);
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+	\draw[color=uuuuuu] (0.22,-0.28) node {$A$};
+	\draw [fill=ududff] (3.04,1.67) circle (2.5pt);
+	\draw[color=ududff] (3.24,1.48) node {$P$};
+	\draw [fill=xdxdff] (5.261710485848469,2.890479115581231) circle (2.5pt);
+	\draw[color=xdxdff] (5.54,2.66) node {$T$};
+	\draw [fill=uuuuuu] (3.04,0.) circle (2.0pt);
+	\draw[color=uuuuuu] (3.27,-0.09) node {$P_r$};
+	\draw [fill=uuuuuu] (0.,1.67) circle (2.0pt);
+	\draw[color=uuuuuu] (-0.35,1.55) node {$P_s$};
+	\draw [fill=uuuuuu] (0.,2.890479115581231) circle (2.0pt);
+	\draw[color=uuuuuu] (-0.33,2.83) node {$T_s$};
+	\draw [fill=uuuuuu] (5.261710485848469,0.) circle (2.0pt);
+	\draw[color=uuuuuu] (5.51,-0.13) node {$T_r$};
+	\end{scriptsize}
+	\end{axis}
+	\end{tikzpicture}\]
 \end{proof}
