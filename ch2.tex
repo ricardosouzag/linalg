@@ -632,5 +632,14 @@ Finally, to end this section, one last result:
 	Since this holds true for any $T\in t$, we have that $f(t)\subseteq \R(x_t,y_t)$.
 	
 	\bigskip
-	Conversely, take any $(x,y)\in \R(x_t,y_t)$ for some $(x_t,y_t)\in\R^2$ fixed.
+	Conversely, take some $(x_t,y_t)\in\R^2$ fixed.
+	
+	Now, let $P$ be the inverse image of $(x_t,y_t)$ under $f$ (it can be done uniquely since $f$ is bijective), and let $t$ be the line through $A$ that also passes through $P$ (it is also unique, since a line is uniquely determined by two distinct points).
+	
+	By the same reasoning as before, if we now take the inverse image of $(\lambda x_t,\lambda y_t)$ for any real $\lambda\in \R$ to be some $P^\lambda$, we see that the triangles $AP_rP_s$ and $AP^\lambda_rP^\lambda_s$ are similar, since 
+	\[\frac{\overline{AP_r}}{\overline{AP^\lambda_r}}=\frac{\overline{AP_s}}{\overline{AP^\lambda_s}}=\frac{\overline{P_sP_r}}{\overline{P^\lambda_sP^\lambda_r}}=\lambda,\]so $P^\lambda$ lies in $t$.
+	
+	This shows that $\R(x_t,y_t)\subseteq f(t)$.
+	
+	Finally, we can conclude that $f(t)=\R(x_t,y_t)$, which ends the proof.
 \end{proof}
