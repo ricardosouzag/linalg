@@ -405,7 +405,7 @@ To proceed with our studies, then, we're gonna need a new approach.
 	Let $V_A$ denote the set of all vectors in $E_A$. Then $E_A\iso V_A$.
 \end{lemma}
 \begin{proof}
-	Consider the function $t:V_A\to E_A$ that takes any vector $v\in V_A$ to its endpoint $t(v)$.
+	Consider the function $t:V_A\to E_A$ that takes any vector $v\in V_A$ to its endpoint $t(v)$, and takes the null vector to $A$.
 	
 	\begin{itemize}
 		\item $t$ is injective:
@@ -418,4 +418,43 @@ To proceed with our studies, then, we're gonna need a new approach.
 	\end{itemize}
 
 Since $t$ is both injective and surjective, it is a bijection. This proves the result.
+\end{proof}
+
+Finally, we can prove the result that we've all been waiting for:
+
+\begin{theorem}
+	Let $E_*$ be any pointed Euclidean plane. Then $E_*\iso \R^2$.
+\end{theorem}
+\begin{proof}	
+	Let $f:E_*\to \R^2$ be the function defined as follows:
+	
+	First, draw two perpendicular lines through $*$ - let them be $r$ and $s$. Now, for any point $P\in E_*$, you can consider its perpendicular shadow in both $r$ and $s$ - the points $P_r$ and $P_s$. Finally, we can measure the distances $d(*,P_r)$ and $d(*,P_s)$.
+	
+	Then we put $f(P):=(d(*,P_r),d(*,P_s))$ for every $P\in E_*$.
+	
+	First thing to notice that this is indeed a function: Every step of the construction is well-defined, and given a point $P\in E_*$ and the two fixed lines $r$ and $s$, the values of $d(*,P_r)$ and $d(*,P_s)$ are uniquely defined.
+	
+	Now, let us prove that this function is the bijection we're looking for.
+	
+	\[\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\clip(-0.2,0.5) rectangle (9.,7.);
+	\draw [line width=2.pt,domain=-0.2:9.] plot(\x,{(--28.1568-2.08*\x)/8.92});
+	\draw [line width=2.pt,domain=-0.2:9.] plot(\x,{(--1.8632--8.92*\x)/2.08});
+	\draw [line width=2.pt,dotted,domain=-0.2:9.] plot(\x,{(-58.4136--8.92*\x)/2.08});
+	\draw [line width=2.pt,dotted,domain=-0.2:9.] plot(\x,{(-51.9936--2.08*\x)/-8.92});
+	\begin{scriptsize}
+	\draw [fill=ududff] (0.5,3.04) circle (2.5pt);
+	\draw[color=ududff] (0.76,2.71) node {$A$};
+	\draw[color=black] (-5.62,4.33) node {$r$};
+	\draw[color=black] (2.16,9.29) node {$s$};
+	\draw [fill=ududff] (7.5,4.08) circle (2.5pt);
+	\draw[color=ududff] (7.76,4.37) node {$P$};
+	\draw [fill=uuuuuu] (1.0909987984666145,5.574475616501058) circle (2.0pt);
+	\draw[color=uuuuuu] (1.39,5.92) node {$P_s$};
+	\draw [fill=uuuuuu] (6.909001201533385,1.5455243834989414) circle (2.0pt);
+	\draw[color=uuuuuu] (7.29,1.94) node {$P_r$};
+	\end{scriptsize}
+	\end{tikzpicture}\]
 \end{proof}
