@@ -683,7 +683,44 @@ And to wrap things up, some properties of scalar multiplication:
 			(\mu\lambda)v&=(\mu\lambda)(v_1,v_2)\\
 			&=((\mu\lambda)v_1,(\mu\lambda)v_2)\\
 			&=(\mu(\lambda v_1),\mu(\lambda v_2))\\
-			&=\mu(\lambda v_1,\lambda v_2)=\mu(\lambda v)
-		\end{align*}
+			&=\mu(\lambda v_1,\lambda v_2)\\
+			&=\mu(\lambda (v_1,v_2))=\mu(\lambda v)
+		\end{align*}which holds true since $\mu,\lambda,v_1,v_2$ are real numbers.
+		
+		\item This follows directly from the fact that real number multiplication is commutative:
+		\begin{align*}
+			\lambda v&=\lambda(v_1,v_2)\\
+			&=(\lambda v_1,\lambda v_2)\\
+			&=(v_1\lambda,v_2\lambda)\\
+			&=(v_1,v_2)\lambda=v\lambda
+		\end{align*}which holds true since $\lambda,v_1,v_2$ are real numbers.
+		
+		\item This follows from the fact that real number multiplication has an identity:
+		\[1v=1(v_1,v_2)=(1v_1,1v_2)=(v_1,v_2)=v.\]
+		
+		\item This follows from the fact that real number multiplication distributes over real number sums:
+		
+		\begin{align*}
+			\lambda(v+u)&=\lambda((v_1,v_2)+(u_1,u_2))\\
+			&=\lambda(v_1+u_1,v_2+u_2)\\
+			&=(\lambda(v_1+u_1),\lambda(v_2+u_2))\\
+			&=(\lambda v_1+\lambda u_1,\lambda v_2+\lambda u_2)\\
+			&=(\lambda v_1,\lambda v_2)+(\lambda u_1+\lambda u2)\\
+			&=\lambda (v_1,v_2)+\lambda(u_1,u_2)=\lambda v+\lambda u
+		\end{align*}which holds true since $\lambda, v_1,v_2,u_1,u_2$ are real numbers.
+		
+		Distribution on the right-side holds since we've already proven (2), so $\lambda(v+u)=(v+u)\lambda$ and $\lambda v+\lambda u=v\lambda+u\lambda$.
+		
+		\item Similar to (4):
+		
+		\begin{align*}
+			(\mu+\lambda)v&=(\mu+\lambda)(v_1,v_2)\\
+			&=((\mu+\lambda)v_1,(\mu+\lambda v_2))\\
+			&=(\mu v_1+\lambda v_1,\mu v_2+\lambda v_2)\\
+			&=(\mu v_1,\mu v_2)+(\lambda v_1,\lambda v_2)\\
+			&=\mu(v_1,v_2)+\lambda(v_1,v_2)=\mu v+\lambda v
+		\end{align*}which holds true since $\mu,\lambda,v_1,v_2$ are real numbers.
+		
+		Distribution on the right follows, again, from (2).
 	\end{enumerate}
 \end{proof}
