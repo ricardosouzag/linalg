@@ -541,6 +541,18 @@ Finally, we can conclude that $f$ is the bijection we were looking for. This end
 	\[\{0\}\times \R:=\{(x,y)\in\R^2\mid x=0\}.\]
 \end{lemma}
 \begin{proof}
-	Take $(v,\overrightarrow{AA})\in V^{r,s}_A$. Then, by definition,
+	Take $(v,\overrightarrow{AA})\in V^{r,s}_A$ any vector lying entirely on $r$. Then, by definition,
 	\[f(v,\overrightarrow{AA})=(\mathrm{sgn}(v)\norm{v},\mathrm{sgn}(\overrightarrow{AA})\norm{\overrightarrow{AA}}),\]but both $\mathrm{sgn}(\overrightarrow{AA})$ and $\norm{\overrightarrow{AA}}$ equal 0. So $f(v,\overrightarrow{AA})=(\mathrm{sgn}(v)\norm{v},0)$.
+	
+	This shows that $f(r)\subseteq \R\times\{0\}$.
+	
+	Conversely, take any $(x,0)\in \R\times\{0\}$. It is clearly the image of some vector pair $(\overrightarrow{x},\overrightarrow{AA})$, and so $\R\times\{0\}\subseteq f(r)$.
+	
+	We can argue analogously and show that $f(s)=\{0\}\times\R$.
+	
+	This ends the proof.
 \end{proof}
+
+\begin{df}
+	We will denote the sets $\R\times\{0\}$ and $\{0\}\times \R$ the \textbf{$X$-axis} and the \textbf{$Y$-axis}, respectively.
+\end{df}
