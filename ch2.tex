@@ -1,6 +1,6 @@
 \chapter{Real Linear Algebra}
 \section{Introduction}
-\subsection{First notions and definitions}
+\subsection{Operations and other fun things to do with your friends and family}
 
 To start working with vector spaces we first need to understand that the perspective is going to change a bit from the previous chapter. We're leaving the domain of \textbf{set theory} and jumping right in the domain of \textbf{algebra}.
 
@@ -294,7 +294,7 @@ Finally, to end this section, let us give some examples of fields that aren't $1
 \end{ex}
 
 \newpage
-\subsection{Real vector spaces}
+\subsection{$\R^2$D2}
 
 Let us start this section with the set that will be the focus of most, if not all, of this chapter: $\R^2$.
 
@@ -643,3 +643,16 @@ Finally, to end this section, one last result:
 	
 	Finally, we can conclude that $f(t)=\R(x_t,y_t)$, which ends the proof.
 \end{proof}
+
+This shows that the subsets of $\R^2$ where each element is obtained simply by multiplying both coordinates of a fixed vector by a fixed number are \textbf{lines}.
+
+With this we can finally define:
+
+\begin{df}
+	We're gonna define the \textbf{multiplication of a point in $\R^2$ by a real number} to be as such:
+	\[\lambda(x,y):=(\lambda x,\lambda y)\]for any $\lambda\in \R$ and $(x,y)\in\R^2$.
+\end{df}
+
+\begin{rmk}
+	By the preceding theorem, this multiplication is simply scaling the vector $(x,y)\in\R^2$ in a straight line to the center to become the same size as $\lambda$.
+\end{rmk}
