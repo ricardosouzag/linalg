@@ -420,13 +420,13 @@ To proceed with our studies, then, we're gonna need a new approach.
 Since $t$ is both injective and surjective, it is a bijection. This proves the result.
 \end{proof}
 
-Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $s$ through $A$. Then, $V^2_A$ will be the set $(V_A\cap r)\times (V_A\cap s)$ - that is, the set of all pairs vectors of $E_A$ such that the first vector lies entirely in $r$ and the second vector lies entirely in $s$.
+Let now $V^{r,s}_A$ be the following set: Take any two perpendicular lines $r$ and $s$ through $A$. Then, $V^{r,s}_A$ will be the set $(V_A\cap r)\times (V_A\cap s)$ - that is, the set of all pairs vectors of $E_A$ such that the first vector lies entirely in $r$ and the second vector lies entirely in $s$.
 
 \begin{lemma}
-	For any $E_A$, we have that $V_A\iso V_A^2$.
+	For any $E_A$, we have that $V_A\iso V^{r,s}_A$.
 \end{lemma}
 \begin{proof}
-	Let $f:V_A\to V_A^2$ be the following function: For any vector $\overrightarrow{AP}$ in $V_A$, we can consider the parallel to $r$ through $P$, $r_P$ and the parallel to $s$ through $P$, $s_P$.
+	Let $f:V_A\to V^{r,s}_A$ be the following function: For any vector $\overrightarrow{AP}$ in $V_A$, we can consider the parallel to $r$ through $P$, $r_P$ and the parallel to $s$ through $P$, $s_P$.
 	
 	Since $r\parallel r_P$, we have that $r\cap r_P=\varnothing$, and similarly we have that $s\cap s_P=\varnothing$.
 	
@@ -475,7 +475,7 @@ Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $
 		
 		\item $f$ is surjective:
 		
-		Take any $(v,u)\in V^2_A$. Then, there are uniquely determined $P,Q\in E_A$ such that $v=\overrightarrow{AP}$ and $u=\overrightarrow{AQ}$.
+		Take any $(v,u)\in V^{r,s}_A$. Then, there are uniquely determined $P,Q\in E_A$ such that $v=\overrightarrow{AP}$ and $u=\overrightarrow{AQ}$.
 		
 		Now, consider the lines $r_Q$ and $s_P$ defined, respectively, to be the lines parallel to $r$ through $Q$, and parallel to $s$ through $P$.
 		
@@ -485,4 +485,13 @@ Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $
 	\end{itemize}
 
 It follows then that $f$ is indeed a bijection, which ends the proof.
+\end{proof}
+
+Finally, we can prove the result we've all been waiting for:
+
+\begin{theorem}
+	Let $E_A$ be a pointed Euclidean plane. Then $V^{r,s}_A\iso \R^2$.
+\end{theorem}
+\begin{proof}
+	
 \end{proof}
