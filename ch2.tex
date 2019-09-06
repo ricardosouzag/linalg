@@ -439,10 +439,10 @@ Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $
 	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
 	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 	\clip(-0.86,0.62) rectangle (8.56,7.02);
-	\draw [line width=2.pt,domain=-0.86:8.56] plot(\x,{(--28.1568-2.08*\x)/8.92});
-	\draw [line width=2.pt,domain=-0.86:8.56] plot(\x,{(--1.8632--8.92*\x)/2.08});
-	\draw [line width=2.pt,dotted,domain=-0.86:8.56] plot(\x,{(-58.4136--8.92*\x)/2.08});
-	\draw [line width=2.pt,dotted,domain=-0.86:8.56] plot(\x,{(-51.9936--2.08*\x)/-8.92});
+	\draw [domain=-0.86:8.56] plot(\x,{(--28.1568-2.08*\x)/8.92});
+	\draw [domain=-0.86:8.56] plot(\x,{(--1.8632--8.92*\x)/2.08});
+	\draw [dotted,domain=-0.86:8.56] plot(\x,{(-58.4136--8.92*\x)/2.08});
+	\draw [dotted,domain=-0.86:8.56] plot(\x,{(-51.9936--2.08*\x)/-8.92});
 	\begin{scriptsize}
 	\draw [fill=ududff] (0.5,3.04) circle (2.5pt);
 	\draw[color=ududff] (0.76,2.71) node {$A$};
