@@ -435,4 +435,25 @@ Let now $V^2_A$ be the following set: Take any two perpendicular lines $r$ and $
 	But now, $P_r\in r$, by definition. So $\overrightarrow{AP_r}$ is a vector which lies entirely in $r$. Similarly, $P_s\in s$ so $\overrightarrow{AP_s}$ is a vector which lies entirely in $s$.
 	
 	We then define $f(\overrightarrow{AP}):=(\overrightarrow{AP_r},\overrightarrow{AP_s})$.
+	\[\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\clip(-0.86,0.62) rectangle (8.56,7.02);
+	\draw [line width=2.pt,domain=-0.86:8.56] plot(\x,{(--28.1568-2.08*\x)/8.92});
+	\draw [line width=2.pt,domain=-0.86:8.56] plot(\x,{(--1.8632--8.92*\x)/2.08});
+	\draw [line width=2.pt,dotted,domain=-0.86:8.56] plot(\x,{(-58.4136--8.92*\x)/2.08});
+	\draw [line width=2.pt,dotted,domain=-0.86:8.56] plot(\x,{(-51.9936--2.08*\x)/-8.92});
+	\begin{scriptsize}
+	\draw [fill=ududff] (0.5,3.04) circle (2.5pt);
+	\draw[color=ududff] (0.76,2.71) node {$A$};
+	\draw[color=black] (-5.62,4.33) node {$r$};
+	\draw[color=black] (2.16,9.29) node {$s$};
+	\draw [fill=ududff] (7.5,4.08) circle (2.5pt);
+	\draw[color=ududff] (7.76,4.37) node {$P$};
+	\draw [fill=uuuuuu] (1.0909987984666145,5.574475616501058) circle (2.0pt);
+	\draw[color=uuuuuu] (1.39,5.92) node {$P_s$};
+	\draw [fill=uuuuuu] (6.909001201533385,1.5455243834989414) circle (2.0pt);
+	\draw[color=uuuuuu] (7.29,1.94) node {$P_r$};
+	\end{scriptsize}
+	\end{tikzpicture}\]
 \end{proof}
