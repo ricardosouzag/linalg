@@ -2087,7 +2087,7 @@ So contrary to the order $\leq$ in $\N$, the order $\subseteq$ in $\mc P(X)$ doe
 	
 	Notice that they are also respectively maximal and minimal elements.
 	
-	Consider however $\mc P(X)\setminus{\varnothing, X}$, that is, $\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\}\}$. 
+	Consider however $\mc P(X)\setminus\{\varnothing, X\}$, that is, $\{\{a\},\{b\},\{c\},\{a,b\},\{a,c\},\{b,c\}\}$. 
 	
 	Does this set have a minimum or a maximum? Well, suppose $\{a\}$ was a minimum. Then it'd have to be smaller than everyone - including $\{b,c\}$. But $\{a\}\not\subseteq \{b,c\}$, so $\{a\}$ cannot be a minimum (and $\{b,c\}$ cannot be a maximum). Similarly, we can show that this set doesn't have a minimum or a maximum.
 	
@@ -2268,7 +2268,7 @@ Therefore, under this new sense of ``equality'', there are only two different el
 
 To finish this section, we'll prove two important results.
 
-\begin{theorem}[Cantor-Bernstein-Schroeder]
+\begin{theorem}[Cantor-Bernstein-Schroeder]\label{thm:cantor bernstein schroeder}
 	If $f:A\to B$ and $g:B\to A$ are both injective, then there's an isomorphism $\phi:A\to B$.
 \end{theorem}
 \begin{proof}
@@ -2301,7 +2301,7 @@ So now the proof consists of showing not that $A\iso B$, but that for each $x\in
 Either way, we see that for all $x\in A\sqcup B$ we have $(S^x\cap A)\iso(S^x\cap B)$, so $A\iso B$, and the result follows.
 \end{proof}
 
-\begin{theorem}\label{thm:cantor bernstein schroeder}
+\begin{theorem}
 	Let $X$ be a set. Then the relation ``$Y\leq Z$ if, and only if, there is an injection $f:Y\to Z$'' is an order in $\mc P(X)/\iso$.
 \end{theorem}
 \begin{proof}
