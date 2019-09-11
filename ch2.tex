@@ -772,6 +772,13 @@ So, now that we know what $\R^2$ is, we're gonna study how functions interact wi
 	\[h(\lambda(x,y))=h(\lambda x,\lambda y)=(\lambda y,\lambda y)=\lambda(y,y)=\lambda h(x,y)\]and so $h$ preserves scalar multiplication - and hence preserves lines. However, as we'll see further ahead, this function is still not good enough - for one simple reason: It might preserve lines, but it doesn't preserve parallelograms.
 \end{ex}
 
+\begin{lemma}
+	Any line $r\subseteq \R^2$ is of the following form:
+	\[r=\{w\in \R^2\mid w=\lambda v+u, \lambda \in \R\}\]for some fixed $v,u\in \R^2$. 
+	
+	Equivalently, any line in $\R^2$ is just a a line through 0 added to another vector.
+\end{lemma}
+
 \begin{prop}
 	Given any two vectors $v,u\in \R^2$, consider the following construction:
 	\begin{enumerate}
@@ -822,4 +829,6 @@ xticklabels={},]
 	Second, since $r_v$ and $r_u$ are lines, they have, at most, a single meet point. Since we already know they have a non-empty intersection, then we know that they meet at a single point.
 	
 	Call this point $P\in \R^2$.
+	
+	Now let $v=(v_1,v_2)$, $u=(u_1,u_2)$ and $P=(P_1,P_2)$.
 \end{proof}
