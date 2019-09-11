@@ -798,8 +798,8 @@ xticklabels={},]
 \clip(-0.92,-1.06) rectangle (9.04,5.98);
 \draw [->] (0.,0.) -- (2.,4.);
 \draw [->] (0.,0.) -- (6.,1.);
-\draw [line width=1.2pt,dotted,domain=-0.92:9.04] plot(\x,{(-22.--4.*\x)/2.});
-\draw [line width=1.2pt,dotted,domain=-0.92:9.04] plot(\x,{(--22.--1.*\x)/6.});
+\draw [dotted,domain=-0.92:9.04] plot(\x,{(-22.--4.*\x)/2.});
+\draw [dotted,domain=-0.92:9.04] plot(\x,{(--22.--1.*\x)/6.});
 \draw [->,dash pattern=on 3pt off 3pt] (0.,0.) -- (8.,5.);
 \begin{scriptsize}
 \draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
