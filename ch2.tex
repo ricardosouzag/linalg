@@ -850,8 +850,8 @@ ymax=5.960000000000001,
 yticklabels={},	
 xticklabels={},]
 \clip(-2.,-0.94) rectangle (9.02,5.96);
-\draw [->,line width=1.2pt] (0.,0.) -- (2.,4.);
-\draw [->,line width=1.2pt] (0.,0.) -- (6.,1.);
+\draw [->] (0.,0.) -- (2.,4.);
+\draw [->] (0.,0.) -- (6.,1.);
 \draw [dotted,domain=-2.:9.02] plot(\x,{(-22.--4.*\x)/2.});
 \draw [dotted,domain=-2.:9.02] plot(\x,{(--22.--1.*\x)/6.});
 \draw [->,dash pattern=on 3pt off 3pt] (0.,0.) -- (8.,5.);
@@ -869,7 +869,6 @@ xticklabels={},]
 \draw[color=black] (7.5,2.81) node {$r_v$};
 \draw [fill=uuuuuu] (8.,5.) circle (2.0pt);
 \draw[color=uuuuuu] (8.36,5.33) node {$P$};
-\draw[color=black] (3.86,2.81) node {$w$};
 \draw [fill=uuuuuu] (-0.5945945945945946,3.5675675675675675) circle (2.0pt);
 \draw[color=uuuuuu] (-0.88,3.89) node {$P''$};
 \draw [fill=uuuuuu] (5.405405405405405,4.5675675675675675) circle (2.0pt);
