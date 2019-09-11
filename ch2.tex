@@ -977,14 +977,14 @@ This shows that every point in $r$ can be written as $v+r'$, which ends the proo
 	yticklabels={},	
 	xticklabels={},]
 	\clip(-0.9177598207939823,-0.9650502335857208) rectangle (4.01551855273497,5.001090829717888);
-	\draw [->] (0.,0.) -- (1.,3.) node [midway, above, sloped] {$v$};
-	\draw [->] (0.,0.) -- (2.,1.) node [midway, above, sloped] {$u$};
+	\draw [->] (0.,0.) -- (1.,3.) node [midway, above, sloped] {$u$};
+	\draw [->] (0.,0.) -- (2.,1.) node [midway, above, sloped] {$v$};
 	\draw [color=green,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-0.--1.*\x)/2.});
-%	\draw [color=ffdxqq,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-0.--3.*\x)/1.});
-	\draw [color=ffqqqq,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(--5.--1.*\x)/2.});
-	\draw [color=qqqqff,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-5.--3.*\x)/1.});
+	\draw [color=yellow,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-0.--3.*\x)/1.});
+	\draw [color=red,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(--5.--1.*\x)/2.});
+	\draw [color=blue,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-5.--3.*\x)/1.});
 	\draw [->] (0.,0.) -- (3.,4.) node [midway, above, sloped] {$v+u$};
-	\draw [color=yqqqyq,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-0.--4.*\x)/3.});
+	\draw [color=purple,domain=-0.9177598207939823:4.01551855273497] plot(\x,{(-0.--4.*\x)/3.});
 	\begin{scriptsize}
 	\draw [fill=xdxdff] (0.,0.) circle (2.5pt);
 	\draw [fill=ududff] (2.,1.) circle (2.5pt);
@@ -992,5 +992,5 @@ This shows that every point in $r$ can be written as $v+r'$, which ends the proo
 	\draw [fill=uuuuuu] (3.,4.) circle (2.0pt);	
 	\end{scriptsize}
 	\end{axis}
-	\end{tikzpicture}\]with the following coloring: \color{green}{$\R v$}, 
+	\end{tikzpicture}\]with the following coloring: \color{green}{$\R v$}, \color{yellow}{$\R u$}, \color{red}{$\R v+u$}, \color{blue}{$v+\R u$} and \color{purple}{$\R(v+u)$}.
 \end{ex}
