@@ -772,13 +772,6 @@ So, now that we know what $\R^2$ is, we're gonna study how functions interact wi
 	\[h(\lambda(x,y))=h(\lambda x,\lambda y)=(\lambda y,\lambda y)=\lambda(y,y)=\lambda h(x,y)\]and so $h$ preserves scalar multiplication - and hence preserves lines. However, as we'll see further ahead, this function is still not good enough - for one simple reason: It might preserve lines, but it doesn't preserve parallelograms.
 \end{ex}
 
-\begin{lemma}
-	Any line $r\subseteq \R^2$ is of the following form:
-	\[r=\{w\in \R^2\mid w=\lambda v+u, \lambda \in \R\}\]for some fixed $v,u\in \R^2$. 
-	
-	Equivalently, any line in $\R^2$ is just a a line through 0 added to another vector.
-\end{lemma}
-
 \begin{prop}
 	Given any two vectors $v,u\in \R^2$, consider the following construction:
 	\begin{enumerate}
@@ -900,3 +893,7 @@ So the length of $0P_1$ - which is just $P_1$ - is the sum of $u_1$ and $v_1$ - 
 \bigskip
 We can proceed analogously on the $Y$-axis and show that $P_2=u_2+v_2$, which finally shows that $P=v+u$, just as stated.
 \end{proof}
+
+\begin{cor}
+	Any line $r\subseteq \R^2$ is of the form $r=v+r'$ where $v$ is a fixed vector and $r'$ is a line through zero.
+\end{cor}
