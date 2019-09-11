@@ -763,4 +763,11 @@ So, now that we know what $\R^2$ is, we're gonna study how functions interact wi
 		&=(\lambda(2x-y),\lambda(x+y))\\
 		&=\lambda(2x-y,x+y)=\lambda g(x,y)
 	\end{align*}and so we see that $g$ preserves scalar multiplication - and, therefore, preserves any line through the origin.
+	
+	\bigskip
+	There's only one slight issue: Indeed, for a function to preserve lines it suffices for it to preserve scalar multiplication, but there's no telling what happens to the origin during this process. Think about it: Just because every line becomes another line after applying a certain function, that doesn't mean that every point must stand still.
+	
+	For instance, consider the function $h:\R^2\to\R^2$ defined by $h(x,y):=(x,x)$ if $y=0$ and $h(x,y):=(y,y)$ otherwise. Then:
+	\[h(\lambda(x,0))=h(\lambda x,\lambda\cdot0)=(\lambda x,\lambda x)=\lambda(x,x)=\lambda h(x,0)\]
+	\[h(\lambda(x,y))=h(\lambda x,\lambda y)=(\lambda y,\lambda y)=\lambda(y,y)=\lambda h(x,y)\]and so $h$ preserves scalar multiplication - and hence preserves lines.
 \end{ex}
