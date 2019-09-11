@@ -741,4 +741,26 @@ To end this section, then, let us define:
 	\[0v=(0+0)v=0v+0v\]and so, by subtracting $0v$ on both sides, we get $0v=0$, just as we wanted.
 \end{proof}
 
+\newpage
 \subsection{Linearity}
+
+So, now that we know what $\R^2$ is, we're gonna study how functions interact with it.
+
+\begin{ex}
+	Consider the two following functions $f,g:\R^2\to\R^2$ given by $f(x,y):=(x,x^2)$ and $g(x,y):=(2x-y,x+y)$ respectively.
+	
+	It's not hard to see that the first function takes the line $y=0$ (that is, the $X$-axis) into the parabola $y=x^2$. In particular, notice that this function doesn't preserve \textit{any} lines through zero.
+	
+	Conversely, we claim that $g$ does preserve \textit{every} line through zero. To see this, we will show that $g$ preserves scalar multiplication. That suffices, by definition of lines through zero:
+	
+	Indeed, of $r$ is the line of all scalar multiples of a vector $v$, then any vector $w\in r$ is of the form $\lambda v$ for some $\lambda \in \R$. Let $g(v)=v'\in\R^2$ be the image of $v$ under $g$. If we can prove that $g$ preserves scalar multiplication, then $g(w)=g(\lambda v)=\lambda g(v)=\lambda v'$, and so every point in the line of the multiples of $v$ goes to the line of the multiples of $v'$.
+	
+	So it remains to show that $g$ preserves scalar multiplication. But that's easy: Take any $(x,y)\in \R^2$ and any $\lambda\in\R$. Then:
+	\begin{align*}
+		g(\lambda(x,y))&=g(\lambda x,\lambda y)\\
+		&=(2(\lambda x)-(\lambda y),(\lambda x)+(\lambda y))\\
+		&=(2\lambda x-\lambda y,\lambda x+\lambda y)\\
+		&=(\lambda(2x-y),\lambda(x+y))\\
+		&=\lambda(2x-y,x+y)=\lambda g(x,y)
+	\end{align*}and so we see that $g$ preserves scalar multiplication - and, therefore, preserves any line through the origin.
+\end{ex}
