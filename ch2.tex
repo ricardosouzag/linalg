@@ -994,3 +994,47 @@ This shows that every point in $r$ can be written as $v+r'$, which ends the proo
 	\end{axis}
 	\end{tikzpicture}\]with the following coloring: {\color{green}{$\R v$}}, {\color{yellow}{$\R u$}}, {\color{red}{$\R v+u$}}, {\color{blue}{$v+\R u$}} and {\color{purple}{$\R(v+u)$}}.
 \end{ex}
+
+\begin{ex}
+	Now let's resume the discussion from the previous example: Just to refresh, we're considering the function $h:\R^2\to \R^2$ defined by
+	\[h(x,y):=\begin{cases}
+	(x,x),&\mbox{ if }y=0\\
+	(y,y),&\mbox{ otherwise}
+	\end{cases}\]and we've seen that this function does preserve lines through 0. But what does it do with parallelograms?
+	
+	For instance, take the line points $v=(2,4)$ and $u=(2,-4)$. Then, by what we've already shown, the point $v+u=(4,0)$ is precisely the remaining vertex of the parallelogram determined by $v$ and $u$. But look what happens if we try applying the same rule to $h$:
+	\[h(v+u)=h(4,0)=(4,4)\]but
+	\[h(v)+h(u)=h(2,4)+h(2,-4)=(4,4)+(-4,-4)=(0,0)\]so $h$ didn't preserve our parallelogram!
+	
+	\[\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\begin{axis}[
+	x=1.0cm,y=1.0cm,
+	axis lines=middle,
+	xmin=-4.948163022910453,
+	xmax=4.998779844455295,
+	ymin=-4.9803933515895045,
+	ymax=4.949458548650205,
+	xtick={-4.0,-3.0,...,4.0},
+	ytick={-4.0,-3.0,...,4.0},]
+	\clip(-4.948163022910453,-4.9803933515895045) rectangle (4.998779844455295,4.949458548650205);
+	\draw [->] (0.,0.) -- (2.,-4.) node[midway, above, sloped] {$u$};
+	\draw [->] (0.,0.) -- (2.,4.) node[midway, above, sloped] {$v$};
+	\draw [->] (0.,0.) -- (4.,0.) node[midway, above, sloped] {$v+u$};
+	\draw [line width=0.8pt,dotted,domain=-4.948163022910453:4.998779844455295] plot(\x,{(-16.--4.*\x)/2.});
+	\draw [line width=0.8pt,dotted,domain=-4.948163022910453:4.998779844455295] plot(\x,{(--16.-4.*\x)/2.});
+	\draw [->] (0.,0.) -- (4.,4.) node[midway, above, sloped] {$h(v)=h(v+u)$};
+	\draw [->] (0.,0.) -- (-4.,-4.) node[midway, above, sloped] {$h(u)$};
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+	\draw [fill=ududff] (2.,-4.) circle (2.5pt);
+	\draw [fill=ududff] (2.,4.) circle (2.5pt);
+	\draw [fill=xdxdff] (4.,0.) circle (2.5pt);
+	\draw [fill=ududff] (4.,4.) circle (2.5pt);
+	\draw [fill=ududff] (-4.,-4.) circle (2.5pt);
+	\end{scriptsize}
+	\end{axis}
+	\end{tikzpicture}\]
+\end{ex}
