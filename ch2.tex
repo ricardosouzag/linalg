@@ -884,4 +884,19 @@ xticklabels={},]
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}\]
+
+First, notice that segments $u_1P_1$ and $uu'$ are congruent (since $uu'P_1u_1$ is a rectangle, by construction).
+
+Now we prove that the segments $0v_1$ and $uu'$ are congruent. To do that, we use the triangles $0v_1v$ and $uu'P$. We claim they are congruent: Indeed, both are right triangles (on $v_1$ and $u'$, respectively), the angles $v0v_1$ and $Puu'$ are the same (since the segment $Pu$ is parallel to $v0$, by construction) and the segments $0v$ and $Pu$ are congruent (once again, by construction).
+
+This implies that the triangles are congruent and, therefore, $vv_1$ is congruent to $Pu'$, and $0v_1$ is congruent to $uu'$.
+
+Now, it's easy to see that the segment $0P_1$ is just the concatenation of the segments $0u_1$ and $u_1P_1$, so the length of $0P_1$ is the sum of the lengths of $0u_1$ and $u_1P_1$.
+
+But the length of $0u_1$ is, by definition, $u_1$, and the length of $u_1P_1$ is the length of $uu'$, which, as we've shown, is the length of $0v_1$ - which, once again by definition, is just $v_1$.
+
+So the length of $0P_1$ - which is just $P_1$ is the sum of $u_1$ and $v_1$ - that is, $P_1=u_1+v_1$.
+
+\bigskip
+We can proceed analogously on the $Y$-axis and show that $P_2=u_2+v_2$, which finally shows that $P=v+u$, just as stated.
 \end{proof}
