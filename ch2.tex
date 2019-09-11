@@ -1017,15 +1017,15 @@ This shows that every point in $r$ can be written as $v+r'$, which ends the proo
 	xmax=4.998779844455295,
 	ymin=-4.9803933515895045,
 	ymax=4.949458548650205,
-	xtick={-4.0,-3.0,...,4.0},
-	ytick={-4.0,-3.0,...,4.0},]
+	yticklabels={},	
+	xticklabels={},]
 	\clip(-4.948163022910453,-4.9803933515895045) rectangle (4.998779844455295,4.949458548650205);
 	\draw [->] (0.,0.) -- (2.,-4.) node[midway, above, sloped] {$u$};
 	\draw [->] (0.,0.) -- (2.,4.) node[midway, above, sloped] {$v$};
-	\draw [->] (0.,0.) -- (4.,0.) node[midway, below, sloped] {$v+u$};
+	\draw [->] (0.,0.) -- (4.,0.) node[midway, above, sloped] {$v+u$};
 	\draw [line width=0.8pt,dotted,domain=-4.948163022910453:4.998779844455295] plot(\x,{(-16.--4.*\x)/2.});
 	\draw [line width=0.8pt,dotted,domain=-4.948163022910453:4.998779844455295] plot(\x,{(--16.-4.*\x)/2.});
-	\draw [->] (0.,0.) -- (4.,4.) node[midway, above, sloped] {$h(v)=h(v+u)$};
+	\draw [->] (0.,0.) -- (4.,4.) node[midway, below, sloped] {$h(v)=h(v+u)$};
 	\draw [->] (0.,0.) -- (-4.,-4.) node[midway, above, sloped] {$h(u)$};
 	\begin{scriptsize}
 	\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
