@@ -897,3 +897,43 @@ We can proceed analogously on the $Y$-axis and show that $P_2=u_2+v_2$, which fi
 \begin{cor}
 	Any line $r\subseteq \R^2$ is of the form $r=v+r'$ where $v$ is a fixed vector and $r'$ is a line through zero which is parallel to $r$.
 \end{cor}
+\begin{proof}
+	There are two possible cases:
+	\begin{enumerate}
+		\item $r\cap Y\neq\varnothing$.
+		
+		In this case, take $v:=r\cap Y$ and draw $r'\parallel r$ through $0$.
+		
+		Now given any $w\in r$, we can take a line parallel to $v$ through $w$, and since $v$ cuts $r'$, this new line will also cut $r'$. Call this new point $u$.
+		
+		\[\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+		\begin{axis}[
+		x=1.0cm,y=1.0cm,
+		axis lines=middle,
+		xmin=-0.8999999999999992,
+		xmax=7.0000000000000036,
+		ymin=-1.0000000000000016,
+		ymax=7.000000000000002,
+		yticklabels={},	
+		xticklabels={},]
+		\clip(-0.9,-1.) rectangle (7.,7.);
+		\draw [domain=-0.9:7.] plot(\x,{(--34.2344--3.*\x)/8.84});
+		\draw [domain=-0.9:7.] plot(\x,{(-0.--3.*\x)/8.84});
+		\draw [->] (0.,0.) -- (0.,3.872669683257919);
+		\draw [->] (0.,0.) -- (6.272729409172696,6.001424007637792);
+		\draw [dash pattern=on 2pt off 2pt] (6.272729409172696,-1.) -- (6.272729409172696,7.);
+		\draw [->] (0.,0.) -- (6.272729409172696,2.1287543243798743);
+		\begin{scriptsize}
+		\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+		\draw [fill=uuuuuu] (0.,3.872669683257919) circle (2.0pt);
+		\draw[color=black] (-0.32,1.81) node {$v$};
+		\draw [fill=xdxdff] (6.272729409172696,6.001424007637792) circle (2.5pt);
+		\draw[color=black] (3.02,3.25) node {$w$};
+		\draw [fill=uuuuuu] (6.272729409172696,2.1287543243798743) circle (2.0pt);
+		\end{scriptsize}
+		\end{axis}
+		\end{tikzpicture}\]
+	\end{enumerate}
+\end{proof}
