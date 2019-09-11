@@ -830,52 +830,58 @@ xticklabels={},]
 	
 	Call this point $P\in \R^2$.
 	
-	Let us make a new construction, on top of the previous one:
-	\begin{enumerate}
-		\item Take $t_u$ the line perpendicular to $u$ through the endpoint of $u$;
-		\item Mark $P':=t_u\cap r_u$;
-		\item Take $t_v$ the line parallel to $t_u$ through the origin;
-		\item Mark $P'':=t_v\cap r_u$.
-	\end{enumerate}
-\[\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+Consider now the following triangles:
+
+\[\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
 \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \begin{axis}[
 x=1.0cm,y=1.0cm,
 axis lines=middle,
-xmin=-1.9999999999999996,
+xmin=-0.9399999999999992,
 xmax=9.020000000000005,
 ymin=-0.9400000000000015,
-ymax=5.960000000000001,
-yticklabels={},	
-xticklabels={},]
-\clip(-2.,-0.94) rectangle (9.02,5.96);
-\draw [->] (0.,0.) -- (2.,4.);
-\draw [->] (0.,0.) -- (6.,1.);
-\draw [dotted,domain=-2.:9.02] plot(\x,{(-22.--4.*\x)/2.});
-\draw [dotted,domain=-2.:9.02] plot(\x,{(--22.--1.*\x)/6.});
+ymax=5.980000000000001,
+xtick={-0.0,1.0,...,9.0},
+ytick={-0.0,1.0,...,5.0},]
+\clip(-0.94,-0.94) rectangle (9.02,5.98);
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (0.,0.) -- (2.,0.) -- (2.,4.) -- cycle;
+\fill[color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (6.,1.) -- (8.,1.) -- (8.,5.) -- cycle;
+\draw [->,line width=1.2pt] (0.,0.) -- (2.,4.);
+\draw [->,line width=1.2pt] (0.,0.) -- (6.,1.);
+\draw [line width=0.4pt,dotted,domain=-0.94:9.02] plot(\x,{(-22.--4.*\x)/2.});
+\draw [line width=0.4pt,dotted,domain=-0.94:9.02] plot(\x,{(--22.--1.*\x)/6.});
 \draw [->,dash pattern=on 3pt off 3pt] (0.,0.) -- (8.,5.);
-\draw [dotted,domain=-2.:9.02] plot(\x,{(-37.--6.*\x)/-1.});
-\draw [dotted,domain=-2.:9.02] plot(\x,{(-0.--6.*\x)/-1.});
+\draw  (6.,-0.94) -- (6.,5.98);
+\draw  (8.,-0.94) -- (8.,5.98);
+\draw  (2.,-0.94) -- (2.,5.98);
+\draw [color=zzttqq] (0.,0.)-- (2.,0.);
+\draw [color=zzttqq] (2.,0.)-- (2.,4.);
+\draw [color=zzttqq] (2.,4.)-- (0.,0.);
+\draw [line width=0.4pt,domain=-0.94:9.02] plot(\x,{(-1.-0.*\x)/-1.});
+\draw [color=zzttqq] (6.,1.)-- (8.,1.);
+\draw [color=zzttqq] (8.,1.)-- (8.,5.);
+\draw [color=zzttqq] (8.,5.)-- (6.,1.);
 \begin{scriptsize}
-
 \draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
 \draw [fill=ududff] (2.,4.) circle (2.5pt);
 \draw[color=black] (0.86,2.37) node {$v$};
 \draw [fill=ududff] (6.,1.) circle (2.5pt);
-\draw[color=black] (3.5,0.4) node {$u$};
+\draw[color=black] (3.5,0.49) node {$u$};
+\draw[color=black] (9.39,8.32) node {$r_v$};
+\draw[color=black] (-3.51,2.98) node {$r_u$};
 \draw [fill=uuuuuu] (8.,5.) circle (2.0pt);
-\draw[color=black] (3.86,4.8) node {$r_u$};
-\draw[color=black] (7.5,2.81) node {$r_v$};
-\draw [fill=uuuuuu] (8.,5.) circle (2.0pt);
-\draw[color=uuuuuu] (8.36,5.33) node {$P$};
-\draw [fill=uuuuuu] (-0.5945945945945946,3.5675675675675675) circle (2.0pt);
-\draw[color=uuuuuu] (-0.88,3.89) node {$P''$};
-\draw [fill=uuuuuu] (5.405405405405405,4.5675675675675675) circle (2.0pt);
-\draw[color=uuuuuu] (5.6,4.89) node {$P'$};
+\draw[color=uuuuuu] (8.26,5.29) node {$P$};
+\draw [fill=uuuuuu] (2.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (2.25,-0.14) node {$v_1$};
+\draw [fill=uuuuuu] (8.,1.) circle (2.0pt);
+\draw[color=uuuuuu] (8.2,1.33) node {$u'$};
+\draw [fill=uuuuuu] (6.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (6.23,-0.22) node {$u_1$};
+\draw [fill=uuuuuu] (8.,0.) circle (2.0pt);
+\draw[color=uuuuuu] (8.27,-0.28) node {$P_1$};
 \end{scriptsize}
 \end{axis}
 \end{tikzpicture}\]
-
-By construction, then, we see that the triangles $0P''v$ and $uP'P$ are similar.
 \end{proof}
