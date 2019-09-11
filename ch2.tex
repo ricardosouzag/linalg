@@ -1037,4 +1037,30 @@ This shows that every point in $r$ can be written as $v+r'$, which ends the proo
 	\end{scriptsize}
 	\end{axis}
 	\end{tikzpicture}\]
+	
+	This is why $h$ is bad - it is distorting our drawings. We want our functions not only to preserve lines, but also to preserve \textit{parallelograms}. This is the motivation for the following definition, which, I might add, is the single most important definition in this whole chapter.
+\end{ex}
+
+\begin{df}
+	A function $f:\R^2\to\R^2$ is said to be \textbf{linear} if for every $v,u\in \R^2$ and $\lambda\in \R$ we have:
+	\begin{itemize}
+		\item $f(v+u)=f(v)+f(u)$;
+		\item $f(\lambda v)=\lambda f(v)$.
+	\end{itemize}
+\end{df}
+
+This is precisely the concept we've just built in the example: The first item tells us that a linear function preserves parallelograms, and the second item tells us that a linear function preserves lines.
+
+\begin{ex}
+	Finishing up the motivating example, we claim that the function $g:\R^2\to R^2$ we defined before as being $g(x,y)=(2x-y,x+y)$ is a linear function.
+	
+	We've already proven, when we first introduced it, that it preserves scalar multiplication. Let us then prove that it preserves summation:
+	
+	\begin{align*}
+		g((a,b)+(c,d))&=g(a+c,b+d)\\
+		&=(2(a+c)-(b+d),(a+c)+(b+d))\\
+		&=(2a+2c-b-d,a+c+b+d)\\
+		&=((2a-b)+(2c-d),(a+b)+(c+d))\\
+		&=(2a-b,a+b)+(2c-d,c+d)=g(a,b)+g(c,d)
+	\end{align*}for any $(a,b),(c,d)\in \R^2$, and so $g$ preserves summation - and is, therefore, a linear transformation.
 \end{ex}
