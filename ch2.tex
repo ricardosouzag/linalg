@@ -1064,3 +1064,16 @@ This is precisely the concept we've just built in the example: The first item te
 		&=(2a-b,a+b)+(2c-d,c+d)=g(a,b)+g(c,d)
 	\end{align*}for any $(a,b),(c,d)\in \R^2$, and so $g$ preserves summation and scalar multiplication - and is, therefore, a linear transformation.
 \end{ex}
+
+\begin{ex}
+	Let us give some more examples of functions. Let $f,g,h:\R^2\to\R^2$ be given by $f(x,y)=(x,y)$, $g(x,y)=(y,x)$ and $h(x,y)=(x+y-4,y)$. Which ones of these are linear? Well, let's test: For this, fix, once and for all, $(a,b),(c,d)\in \R^2$ and $\lambda\in \R$. Then:
+	\begin{align*}
+		f((a,b)+(c,d))&=f((a+c,b+d))=(a+c,b+d)=(a,b)+(c,d)=f(a,b)+f(b,d)
+	\end{align*}and
+	\[f(\lambda (a,b))=f(\lambda a,\lambda b)=(\lambda a, \lambda b)=\lambda (a,b)=\lambda f(a,b)\]so $f$ is indeed linear.
+	
+	\begin{align*}
+		g((a,b)+(c,d))&=g(a+c,b+d)=(b+d,a+c)=(b,a)+(d,c)=g(a,b)+g(c,d)
+	\end{align*}and
+	\[g(\lambda (a,b))=g(\lambda a,\lambda b)=(\lambda b,\lambda a)=\lambda (b,a)=\lambda g(a,b)\]so $g$ is indeed linear.
+\end{ex}
