@@ -1180,3 +1180,37 @@ In order to get to those results, however, we'll need to keep on advancing.
 
 \newpage
 \subsection{You span my head right round, right round}
+
+\begin{ex}
+	Let $r\subseteq \R^2$ be the line $\R(2,3)$. That is, $v\in r$ if, and only if, $v=\lambda (2,3)$ for some $\lambda\in \R$.
+	
+	Take then $v,u\in r$. Then, by what we've just said, there are some $\lambda,\mu\in \R$ such that $v=\lambda(2,3)$ and $u=\mu(2,3)$.
+	
+	We can then ask the question: Is $v+u$ also in $r$? Well, $v+u=\lambda(2,3)+\mu(2,3)=(\lambda+\mu)(2,3)$, and since both $\lambda,\mu$ are real numbers, so is $\lambda+\mu$. This shows that if $v,u\in r$ then so is $v+u\in r$..
+	
+	Similarly we can ask: Is $\alpha v\in r$ for any $\alpha\in \R$? Once again, $\alpha v=\alpha(\lambda (2,3))=(\alpha\lambda)(2,3)$ and since both $\alpha$ and $\lambda$ are real numbers, so is $\alpha\lambda$. This shows that if $v\in r$, then so is $\alpha v\in r$ for any $\alpha\in \R$.
+	
+	What this tells us is that lines are \textbf{closed} under addition and scaling - that is, if we add two points on the same line, then they remain on that line, and if we scale any point on a line, it also remains there.
+\end{ex}
+
+\begin{prop}
+	Let $v\in \R^2$ be any vector, and consider the line $r:=\R v$. Take now any $u\in r$. Then $r=\R u$.
+\end{prop}
+\begin{proof}
+	Let $u\in \R v$ - that is, $u=\mu v$ for some $\mu\in \R$.
+	
+	Take now $w\in \R v$ - that is, $w=\omega v$ for some $\omega in \R$. We want to show that $w=\omega' u$, for some $\omega'\in \R$, and therefore $w\in \R u$.
+	
+	\bigskip
+	This is simple: Take $\omega':=\frac{\omega}{\mu}\in \R$, which we know is a real number, since both $\omega$ and $\mu$ are real numbers.
+	
+	Now \[\omega'u=\omega'\left(\mu v\right)=(\omega'\mu)v=\left(\frac{\omega}{\mu}\mu\right)v=\omega v=w\]shows that $w\in \R u$.
+	
+	We've just shown that every point in $\R v$ is also in $\R u$. We can proceed analogously and prove that every point in $\R u$ is also in $\R v$.
+	
+	By definition of set equality, it follows that $\R v=\R u$, which ends the proof.
+\end{proof}
+
+\begin{df}
+	If $v,u\in \R^2$ are such that $\R v=\R u$ then we say that \textbf{$v$ and $u$ are parallel vectors}, which shall be denoted as $v\parallel u$.
+\end{df}
