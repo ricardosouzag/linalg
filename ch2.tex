@@ -1135,3 +1135,12 @@ Re-analyze the proof above. Where did the $a,b,c,d$ come from? They are precisel
 	
 	The result now follows.
 \end{proof}
+
+This has the following interesting consequence:
+\begin{cor}
+	Let $f:\{(1,0),(0,1)\}\to\R^2$ be any function. Then there is a unique linear function $\phi:\R^2\to\R^2$ such that $\phi(x,y):=xf(1,0)+yf(0,1)$.
+\end{cor}
+\begin{proof}
+	All that remains is to show that $\phi$ is indeed linear, but even that is pointless: Since $f$ takes both $(1,0)$ and $(0,1)$ into $\R^2$, let $(a,c)=f(1,0)$ and $(b,d)=f(0,1)$. Then we readily see that $\phi(x,y)$ simply becomes
+	\[\phi(x,y)=(ax+cy,bx+dy)\]which we've just shown is a linear function.
+\end{proof}
