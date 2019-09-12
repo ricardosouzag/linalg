@@ -1082,4 +1082,42 @@ This is precisely the concept we've just built in the example: The first item te
 	In particular, $h(3(1,1))=h(3,3)=(3+3-4,3)=(2,3)$, while $3h(1,1)=3(1+1-4,1)=3(-2,1)=(-6,3)$ and clearly $2\neq -6$ so they can't be equal.
 	
 	Similarly, $h((1,1)+(1,1))=h(2,2)=(2+2-4,2)=(0,2)$, while $h(1,1)+h(1,1)=(1+1-4,1)+(1+1-4,1)=(-4,2)$ and clearly $0\neq -4$ so they can't be equal.
+	
+	\bigskip
+	It would be great then if we could tell at a glance whether a function is linear or not.
 \end{ex}
+
+\begin{lemma}
+	Let $f:\R^2\to\R^2$ be a function. Then $f$ is linear if, and only if, there are real numbers $a,b,c,d\in \R$ such that $f(x,y)=(ax+cy,bx+dy)$ for all $(x,y)\in \R^2$.
+\end{lemma}
+\begin{proof}
+	Let $f$ be linear. We want to show that there exists some real numbers $a,b,c,d\in\R$ such that $f(x,y)=(ax+cy,bx+dy)$.
+	
+	We can start off by seeing that $(x,y)=x(1,0)+y(0,1)$ and so, since $f$ is linear, we get $$f(x,y)=f(x(1,0)+y(0,1))=f(x(1,0))+f(y(0,1))=xf(1,0)+yf(0,1).$$
+	
+	But now, $f(1,0),f(0,1)\in\R^2$ and so there exist some real numbers $a,b,c,d\in \R$ such that $f(1,0)=(a,b)$ and $f(0,1)=(c,d)$. This allows us to go back and proceed with calculations:
+	\[xf(1,0)+yf(0,1)=x(a,b)+y(c,d)=(xa,xb)+(yc,yd)=(xa+yc,xb+yd)\]and finally we see that, since real number multiplication is commutative, we can conclude that $f(x,y)=(ax+cy,bx+dy)$, as previously stated.
+	
+	\bigskip
+	Conversely, let $f:\R^2\to\R^2$ be a function defined by $f(x,y)=(ax+cy,bx+dy)$ for all $(x,y)\in \R^2$, for some $a,b,c,d\in\R$ fixed. We claim that such an $f$ is linear.
+	
+	\begin{itemize}
+		\item \begin{align*}
+			f((x,y)+(x',y'))&=f(x+x',y+y')\\
+			&=(a(x+x')+c(y+y'),b(x+x')+d(y+y'))\\
+			&=(ax+ax'+cy+cy',bx+bx'+dy+dy')\\
+			&=((ax+cy)+(ax'+cy'),(bx+dy)+(bx'+dy'))\\
+			&=(ax+cy,bx+dy)+(ax'+cy',bx'+dy')=f(x,y)+f(x',y')
+		\end{align*}so $f$ preserves sums.
+		
+		\item \begin{align*}
+			f(\lambda (x,y))&=f(\lambda x,\lambda y)\\
+			&=(a(\lambda x)+c(\lambda y),b(\lambda x)+d(\lambda y))\\
+			&=(a\lambda x+c\lambda y,b\lambda x+d\lambda y)\\
+			&=(\lambda (ax+by),\lambda(bx+dy))\\
+			&=\lambda(ax+cy,bx+dy)=\lambda f(x,y)
+		\end{align*}so $f$ preserves scalar multiplication.
+	\end{itemize}
+
+It follows that $f$ is linear, by definition, which ends the proof.
+\end{proof}
