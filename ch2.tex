@@ -1121,3 +1121,17 @@ This is precisely the concept we've just built in the example: The first item te
 
 It follows that $f$ is linear, by definition, which ends the proof.
 \end{proof}
+
+This proof, however, far from only telling us that all linear functions are of such-and-such form, give us a very powerful tool for dealing with linear functions and vector spaces as a whole.
+
+Re-analyze the proof above. Where did the $a,b,c,d$ come from? They are precisely the images of $(1,0)$ and $(0,1)$ under $f$. What we've shown, then, to some extent, is that the image of any point under a linear function is entirely determined by the images of $(1,0)$ and $(0,1)$.
+
+\begin{theorem}
+	Let $f:\R^2\to\R^2$ be a linear function. Then $f$ is uniquely determined by $f(1,0)$ and $f(0,1)$.
+\end{theorem}
+\begin{proof}
+	Basically the same as above: Let's compute the image of $(x,y)$:
+	\[f(x,y)=f(x(1,0)+y(0,1))=xf(1,0)+yf(0,1)\]and so if we call $f(1,0)=v$ and $f(0,1)=u$, we see that for any $(x,y)\in\R^2$, we have that $f(x,y)=xv+yu$.
+	
+	The result now follows.
+\end{proof}
