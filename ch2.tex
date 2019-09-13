@@ -1514,3 +1514,17 @@ This kind of situation gives rise to an awful and useless definition, but very h
 	\bigskip
 	Analogously, we say that the collection is \textbf{linearly independent} if it's not linearly dependent.
 \end{df}
+
+See what I said about this area being useless? This mostly appears when doing linear algebra the \textbf{wrong way} - that is, by being focused on finding solutions to linear systems and doing matrix stuffs.
+
+Why is it stupid? Well, because we already have a better language to describe the same things!
+
+\begin{lemma}
+	Take $v,u\in \R^2$ any two vectors. Then $\spen\{v,u\}=\R v+\R u$.
+\end{lemma}
+\begin{proof}
+	There's literally nothing to be proven here. They are equal by definition.
+\end{proof}
+\begin{cor}
+	Let $\{v_1,v_2,\cdots,v_n\}\subseteq\R^2$ be any collection of vectors. Then $\spen\{v_1,v_2,\cdots,v_n\}=\R v_1+\R v_2+\cdots+\R v_n$.
+\end{cor}
