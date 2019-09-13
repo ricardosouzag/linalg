@@ -1482,3 +1482,23 @@ Two of them are trivial:
 	
 	Conversely, if $v\neq 0$, then $\spen\{v\}=\R v$, by definition. So it is a line.
 \end{proof}
+
+There are still some cases left to classify, however:
+\begin{itemize}
+	\item Is there some collection $\{v_1,v_2,\cdots,v_n\}$ which spans 0?
+	\item Is there some collection $\{v_1,v_2,\cdots,v_n\}$ which spans a line?
+	\item Is there some collection $\{v_1,v_2,\cdots,v_n\}$ which spans $\R^2$?
+\end{itemize}
+
+And you might be tempted to say that any collection of two non-null vectors spans $\R^2$. But that's not the case:
+
+\begin{ex}
+	Let $v=(1,1)$, $u=(-3,-3)$. We claim that $\spen\{v,u\}=\spen\{v\}=\R v$.
+	
+	To see that, take any $w\in \spen\{v,u\}$ - that is, there are two real numbers $\lambda,\mu\in \R$ such that $w=\lambda v+\mu u$. In other words,
+	\[w=\lambda(1,1)+\mu(-3,-3)=(\lambda,\lambda)+(-3\mu,-3\mu)=(\lambda-3\mu,\lambda-3\mu)\]and we see that $w=(\lambda-3\mu)v$, and so $w\in \spen\{v\}$. This shows $\spen\{v,u\}\subseteq\spen\{v\}$.
+	
+	Conversely, take $w\in \spen\{v\}$ - that is, there is some $\lambda\in \R$ such that $w=\lambda v$. But that, $w=\lambda v+0u$ shows that $w\in\spen\{v,w\}$. Therefore, $\spen\{v\}\subseteq\spen\{v,u\}$.
+	
+	We have shown that $\spen\{v\}=\spen\{v,u\}$, even though $v\neq u$.
+\end{ex}
