@@ -1327,3 +1327,24 @@ Well...
 	
 	This shows that, in general, union of subspaces is \textbf{not} a subspace.
 \end{ex}
+
+With this we see that the set-theoretical notion of union is \textit{just not good enough} for vector spaces. We need a ``vectorial'' notion of union:
+
+\begin{df}
+	Let $X,Y\subseteq \R^2$ be two subspaces. We define the \textbf{sum of $X$ and $Y$} to be the subspace $X+Y$ given by:
+	\begin{itemize}
+		\item $X+Y$ contains both $X$ and $Y$;
+		\item Any other subspace $Z$ that contains both $X$ and $Y$ also contains $X+Y$.
+	\end{itemize}
+\end{df}
+
+\begin{prop}
+	Given any two subspaces $X,Y\subseteq \R^2$, then their sum can be uniquely expressed as
+	\[X+Y:=\{v\in \R^2\mid \exists x\in X,\exists y\in Y: v=x+y\},\]that is, $X+Y$ is the set of all sums of all elements in both $X$ and $Y$.
+\end{prop}
+\begin{proof}
+	This proof consists of two parts: First, we need to show that this set, let's call it $S$, is indeed a subspace, and then, second, we need to prove that it satisfies the two defining properties of the sum of $X$ and $Y$.
+	
+	So, just like we said, define
+	\[S:=\{v\in \R^2\mid \exists x\in X,\exists y\in Y: v=x+y\}.\] Let us show that $S\leq \R^2$.
+\end{proof}
