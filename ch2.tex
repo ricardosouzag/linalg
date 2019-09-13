@@ -1591,6 +1591,10 @@ Finally, let us prove that (a) is equivalent to the other three:
 	
 	On the other hand, assume $x_i\parallel x_j$ for some $i\neq j$. Then, $x_j=\mu_{i,j} x_j$, by definition. But, $x_i=1x_i$, so there's two ways of writing $x_i$ as a linear combination of the base $X$. This cannot happen, by definition of base. So $x_i\nparallel x_j$, no matter which $i\neq j$ we start with.
 	
+	 This means that we can take any two (say, $x_1,x_2$) and the others will be spanned by those two. But if $n> 2$ that's also a problem: For instance, take $x_3$. Since it is spanned by $x_1,x_2$, there are $\lambda_1,\lambda_2\in \R$ such that $x_3=\lambda_1x_1+\lambda_2x_2$. But we already know that the only possible way to write $x_3$ in terms of the base is $x_3=1x_3$ (by the same reasoning as above). So if there were more than two elements in $X$ we'd have a contradiction.
+	 
+	 This allows us to finally conclude that $X=\{x_1,x_2\}$ and so it is linearly independent and spans.
+	
 	\item \underline{(c) implies (a)}:
 	
 	Let $X=\{x_1,x_2\}$ be a linearly independent spanning set for $\R^2$ (we already know it has 2 elements) and any linear function $f:\R^2\to\R^2$. Then, since $X$ spans $\R^2$ and is linearly independent, we see that any vector $v\in \R^2$ is of the form $v=\lambda_1 x_1+\lambda_2x_2$ for some $\lambda_1,\lambda_2\in \R$.
