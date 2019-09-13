@@ -1274,7 +1274,7 @@ Then $X$ will be called a \textbf{subspace of $\R^2$} which will be denoted as $
 \begin{lemma}
 	If $X,Y\subseteq \R^2$ are two subspaces, then $X\cap Y$ is also a subspace.
 \end{lemma}
-\begin{df}
+\begin{proof}
 	This is easy to see:
 	\begin{itemize}
 		\item Take $v,u\in X\cap Y$. This means that $v,u\in X$ and $v,u\in Y$, by definition of intersection. But since $v,u\in X$ and $X$ is a subspace, then $v+u\in X$. Similarly, since $v,u\in Y$ and $Y$ is a subspace, then $v+u\in Y$.
@@ -1286,4 +1286,12 @@ Then $X$ will be called a \textbf{subspace of $\R^2$} which will be denoted as $
 		Finally, using once more the definition of intersection, we see that $\lambda v\in X$ and $\lambda v\in Y$ implies $\lambda v\in X\cap Y$, and so $X\cap Y$ is closed under scalar multiplication.
 	\end{itemize}
 This shows that $X\cap Y$ is a subspace, which ends the proof.
-\end{df}
+\end{proof}
+
+With this we can already infer an important result:
+
+\begin{cor}
+	The set containing only the origin (called the \textbf{zero} set $0:=\{(0,0)\}$) is a subspace.
+\end{cor}
+
+We could check this directly, but that would imply that we even considered it a possible candidate for subspace before. Following this result, however, since lines through zero are subspaces, and since any two of those lines meet precisely at zero, we know, for free, that zero is also a subspace.
