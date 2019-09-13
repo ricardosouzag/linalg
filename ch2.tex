@@ -1555,8 +1555,25 @@ Finally, there's one last thing to prove here:
 	Take $X\subseteq \R^2$ any subset. Then the following conditions are equivalent:
 	\begin{enumerate}[(a)]
 		\item $X$ is a base;
-		\item $X$ spans $\R^2$ and has $2$ elements;
+		\item $X$ spans $\R^2$ and has 2 elements;
 		\item $X$ spans $\R^2$ and is linearly independent;
-		\item $X$ has $2$ elements and is linearly independent.
+		\item $X$ has 2 elements and is linearly independent.
 	\end{enumerate}
 \end{theorem}
+\begin{proof}
+	The two preceding propositions give us, for free, that (c) implies both (b) and (d): If $X$ is linearly independent it has at most 2 elements, and if it spans it has at least 2 elements. Since it satisfies both, it must have precisely 2 elements.
+	
+	\begin{itemize}
+		\item \underline{(b) implies (c)}:
+		
+		Let $X=\{x_1,x_2\}$ since it only has two elements. Assume they're not linearly independent. Then, $x_1=\lambda x_2$ for some real number $\lambda$, and so $\R x_1+\R x_2=\R x_1$, so the sum is a line.
+		
+		However, we're assuming that $X$ spans $\R^2$ - that is, $\R^2=\R X=\R x_1+\R x_2$. So we would have that $\R^2=\R x_1$ - in other words, that the whole plane is just a line, which is clearly absurd.
+		
+		Therefore, $X$ has to be linearly independent.
+		
+		\item \underline{(d) implies (c)}:
+		
+		Let $X=\{x_1,x_2\}$ since it has only two elements. Since they're linearly independent, we see that $x_1\nparallel x_2$ and so $\R x_1+\R x_2=\R^2$, so $\spen X=\R^2$, so $X$ spans $\R^2$.
+	\end{itemize}
+\end{proof}
