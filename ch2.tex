@@ -1502,3 +1502,15 @@ And you might be tempted to say that any collection of two non-null vectors span
 	
 	We have shown that $\spen\{v\}=\spen\{v,u\}$, even though $v\neq u$.
 \end{ex}
+
+This kind of situation gives rise to an awful and useless definition, but very helpful when dealing with real-life applications of linear algebra:
+
+\begin{df}
+	Let $\{v_1,v_2,\cdots,v_n\}\subseteq\R^2$ be a collection of vectors in $\R^2$. We say that this collection is \textbf{linearly dependent} if one of the vectors in the collection is spanned by the other vectors.
+	
+	In symbols, there's some $i\leq n$ and some real numbers $\lambda_1,\lambda_2,\cdots,\lambda_{i-1},\lambda_{i+1},\cdots,\lambda_n$ such that
+	\[v_i=\lambda_1v_1+\lambda_2v_2+\cdots+\lambda_{i-1}v_{i-1}+\lambda_{i+1}v_{i+1}+\cdots+\lambda_nv_n.\]
+	
+	\bigskip
+	Analogously, we say that the collection is \textbf{linearly independent} if it's not linearly dependent.
+\end{df}
