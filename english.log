@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  13 SEP 2019 19:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  13 SEP 2019 19:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,10 +1135,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 3E42A9F99BABF7B81F1E02FEE66AFCAA;1828.
  ) 
 Here is how much of TeX's memory you used:
- 35851 strings out of 492646
- 854865 string characters out of 6133325
- 1042705 words of memory out of 5000000
- 38501 multiletter control sequences out of 15000+600000
+ 35852 strings out of 492646
+ 854870 string characters out of 6133325
+ 1042711 words of memory out of 5000000
+ 38502 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,119p,830b,2498s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1158,7 +1158,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (110 pages, 592498 bytes).
+Output written on english.pdf (110 pages, 592473 bytes).
 PDF statistics:
  1348 PDF objects out of 1440 (max. 8388607)
  1205 compressed objects within 13 object streams
