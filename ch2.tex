@@ -1161,8 +1161,12 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 \end{df}
 
 \begin{df}
-	A set $X\subseteq \R^2$ such that any function $f:X\to \R^2$ extends uniquely to a linear function will be called a \textbf{base} or a \textbf{basic set} for $\R^2$.
+	A set $X\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $\hom(X,\R^2)\iso\hom_\R(\R^2,\R^2)$ - that is, every function $f:X\to \R^2$ extends uniquely to a linear function $f':\R^2\to\R^2$, and vice-versa.
 \end{df}
+
+\begin{rmk}
+	Note that $\hom_\R(\R^2,\R^2)\subseteq\hom(X,\R^2)$ for any set $X\subseteq \R^2$, even if it's not a base: Indeed, any linear function $f:\R^2\to \R^2$ induces a function $f':X\to \R^2$ simply by only applying $f$ to the elements of $X$: $f'(x):=f(x)$ for all $x\in X$.
+\end{rmk}
 
 The corollary above is telling us that the set $\{e_1,e_2\}$ is a base of $\R^2$.
 
