@@ -1287,7 +1287,7 @@ This example gives us a very nice idea for how to approach subspaces:
 Now let's try building new subspaces from existing ones:
 
 \begin{lemma}
-	If $X,Y\subseteq \R^2$ are two subspaces, then $X\cap Y$ is also a subspace.
+	If $X,Y\subseteq \R^2$ are two subspaces, then $X\cap Y\subseteq \R^2$ is also a subspace.
 \end{lemma}
 \begin{proof}
 	This is easy to see:
@@ -1310,3 +1310,20 @@ With this we can already infer an important result:
 \end{cor}
 
 We could check this directly, but that would imply that we even considered it a possible candidate for subspace before. Following this result, however, since lines through zero are subspaces, and since any two of those lines meet precisely at zero, we know, for free, that zero is also a subspace.
+
+\bigskip
+Now, I know what you're thinking: If intersection of subspaces is a subspace, then surely the union of subspaces is as well, right?
+
+Wel...
+
+\begin{ex}
+	Consider the lines $X$ (that is, $\R e_1$) and $Y$ (that is, $\R e_2$). Then $X\cup Y$ is just the two axis together.
+	
+	It clearly is closed under scalar multiplication, but, sadly, it is not closed under addition. This is very easy to see:
+	
+	For instance, $e_1\in X$ and $e_2\in Y$, so $e_1,e_2\in X\cup Y$, by definition of set union.
+	
+	If $X\cup Y$ was a subspace, then $e_1+e_2\in X\cup Y$, but $e_1+e_2=(1,1)$ and we know that $(1,1)\notin X$  and $(1,1)\notin Y$ and, therefore, $(1,1)\notin X\cup Y$.
+	
+	This shows that, in general, union of subspaces is \textbf{not} a subspace.
+\end{ex}
