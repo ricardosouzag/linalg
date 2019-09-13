@@ -1382,7 +1382,7 @@ This proves that $S$ satisfies the definition of sum and, therefore, $S=X+Y$, ju
 	
 	To see this, take any $v\in \R^2$. Then $v=(x,y)$, for some $x,y\in \R$, and we can rewrite this as $xe_1+ye_2$. But since $\mb X$ and $\mb Y$ are subspaces, $xe_1\in \mb X$ and $ye_2\in \mb Y$, so $v\in \mb X+\mb Y$.
 	
-	This shows that $\mb X+\mb Y\subseteq \R^2\subseteq \mb X+\mb Y$. That can only mean one thing: $\mb X+\mb Y=\R^2$.
+	This shows that $\mb X+\mb Y\subseteq \R^2\subseteq \mb X+\mb Y $. That can only mean one thing: $\mb X+\mb Y=\R^2$.
 \end{ex}
 
 What this example shows us is another weird behavior of subspaces: They grow in huge steps at a time:
@@ -1415,4 +1415,27 @@ What this example shows us is another weird behavior of subspaces: They grow in 
 	Finally, this shows that $r+s$ contains both $\mb X$ and $\mb Y$, and so, by, definition of sum, it contains $\mb X+\mb Y$. But we already know $\mb X+\mb Y=\R^2$. So we get $r+s\subseteq\R^2\subseteq r+s$, which finally shows that $r+s=\R^2$.
 	
 	This finishes the proof.
+\end{proof}
+
+Finally, we can prove:
+
+\begin{theorem}
+	Let $X\subseteq \R^2$ be a subspace. Then $X$ is either 0, a line through zero, or $\R^2$.
+\end{theorem}
+\begin{proof}
+	We already know that every subspace contains 0.
+	
+	If $X\setminus\{0\}=\varnothing$, then $X=0$.
+	
+	If not, then there's some $x\in X$ with $x\neq 0$. But since $X$ is a subspace, every multiple of $x$ is also in $X$. In particular, $\R x\subseteq X$. This shows that $X$ contains a line through zero.
+	
+	If $X\setminus\R x=\varnothing$, then $X=\R x$ and $X$ is a line through zero.
+	
+	If not, then there's some $y\in X\setminus\R x$ with $y\neq 0$. But since $X$ is a subspace, every multiple of $y$ is also in $X$. In particular, $\R y\subseteq X$. Also, the fact that we chose $y$ outside of the line $\R x$ implies that $y\nparallel x$. This means that $\R x\neq\R y$.
+	
+	But this means that $X$ contains both $\R x$ and $\R y$, and so, by definition of sum, contains $\R x+\R y$. But we know that $\R x+\R y=\R^2$.
+	
+	This shows that $X\subseteq \R^2\subseteq X$, and thus $X=\R^2$.
+	
+	This ends the proof.
 \end{proof}
