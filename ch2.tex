@@ -1270,6 +1270,19 @@ Then $X$ will be called a \textbf{subspace of $\R^2$} which will be denoted as $
 	\bigskip
 	What else then can be a subspace?
 \end{ex}
+This example gives us a very nice idea for how to approach subspaces:
+\begin{prop}
+	Let $X\subseteq \R^2$ be a subspace. Then $0\in X$.
+\end{prop}
+\begin{proof}
+	This can be seen in many ways.
+	
+	Take $x\in X$. Since $X$ is subspace it is closed under scalar multiplication, so $-x\in X$.
+	
+	But since $X$ is a subspace it is also closed under addition, so $x+(-x)\in X$.
+	
+	But $x+(-x)=0$ so $0\in X$, as claimed.
+\end{proof}
 
 \begin{lemma}
 	If $X,Y\subseteq \R^2$ are two subspaces, then $X\cap Y$ is also a subspace.
