@@ -1586,5 +1586,18 @@ Finally, let us prove that (a) is equivalent to the other three:
 	Let $X=\{x_1,x_2\}$ be a linearly independent spanning set for $\R^2$ (we already know it has 2 elements) and any linear function $f:\R^2\to\R^2$. Then, since $X$ spans $\R^2$ and is linearly independent, we see that any vector $v\in \R^2$ is of the form $v=\lambda_1 x_1+\lambda_2x_2$ for some $\lambda_1,\lambda_2\in \R$.
 	
 	 But this tells us that $f(v)=f(\lambda_1 x_1+\lambda_2x_2)$ and since $f$ is linear, this is simply $f(v)=\lambda_1 f(x_1)+\lambda_2 f(x_2)$.
+	 
+	 This tells us that $X$ is a base, since any linear function is completely determined by $X$.
+	 
+	 \item \underline{(a) implies (c)}:
+	 
+	 Let $X=\{x_1,x_2\}$ be a base, and take the linear function $\id_{\R^2}:\R^2\to \R^2$. Since $X$ is a base, we know that for all $v\in \R^2$, $\id_{\R^2}(v)=\lambda_1\id_{\R^2}(x_1)+\lambda_2\id_{\R^2}(x_2)$.
+	 
+	  But $\id_{\R^2}$ is the identity function, so this becomes
+	  \[v=\lambda_1x_1+\lambda_2x_2\]which tells us that any $v\in \R^2$ is spanned by $X$ - in other words, $X$ spans $\R^2$. Therefore, since it is a spanning set with two elements, they must be linearly independent.
 \end{itemize}
+
+This shows that (a) and (c) are equivalent, and since (c) is already equivalent to (b) and (d) this suffices.
+
+This ends the proof.
 \end{proof}
