@@ -1161,11 +1161,13 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 \end{df}
 
 \begin{df}
-	A finite set $X=\{x_1,x_2,\cdots, x_n\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $$\hom(X,\R^2)\iso\hom_\R(\R^2,\R^2)$$ that is, every linear function $f:\R^2\to\R^2$ is of the form $f(a,b)=\lambda_1f(x_1)+\lambda_2f(x_2)+\cdots+\lambda_n f(x_n)$ for some $\lambda_1,\lambda_2,\cdots,\lambda_n\in R$ which are uniquely defined for each $(a,b)\in \R^2$.
+	A finite set $X=\{x_1,x_2,\cdots, x_n\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $$\hom(X,\R^2)\iso\hom_\R(\R^2,\R^2)$$ that is, given any linear function $f:\R^2\to\R^2$ then for each $(a,b)\in \R^2$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in R$ such that $f(a,b)=\lambda_1f(x_1)+\lambda_2f(x_2)+\cdots+\lambda_n f(x_n)$.
 \end{df}
 
 \begin{rmk}
-	Note that $\hom_\R(\R^2,\R^2)\subseteq\hom(X,\R^2)$ for any set $X\subseteq \R^2$, even if it's not a base: Indeed, any linear function $f:\R^2\to \R^2$ induces a function $f':X\to \R^2$ simply by only applying $f$ to the elements of $X$: $f'(x):=f(x)$ for all $x\in X$.
+	It follows trivially from this definition, taking the linear function $\id_{\R^2}:\R^2\to\R^2$, that given a base $X=\{x_1,x_2,\cdots,x_n\}$, then for any point $v\in\R^2$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in\R$ such that $v=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_nx_n$. 
+	
+	In other words, every vector can be written uniquely as a linear combination of a fixed base.
 \end{rmk}
 
 The corollary above is telling us that the set $\{e_1,e_2\}$ is a base of $\R^2$.
