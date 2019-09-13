@@ -1456,3 +1456,29 @@ This new section that we're starting right now doesn't really make sense for $\R
 	Analogously, given any finite collection of vectors $\{v_1,v_2,\cdots,v_n\}\subseteq \R^2$ we define the \textbf{subspace spanned by $v_1,v_2,\cdots,v_n$} to be the subspace $\spen\{v_1,v_2,\cdots,v_n\}$ (sometimes $\langle v_1,v_2,\cdots,v_n\rangle$) defined by
 	\[\spen\{v_1,v_2,\cdots,v_n\}:=\{u\in \R^2\mid \exists\{\lambda_1,\lambda_2,\cdots,\lambda_n\}\subseteq\R \mbox{ such that }u=\lambda_1v_1+\lambda_2v_2+\cdots+\lambda_nv_n\}.\]
 \end{df}
+
+Why is this a stupid definition at this point? Well...
+
+As we've already seen, $\R^2$ only has three kinds of subspaces: zero, lines through zero and $\R^2$ itself. Since the subspace spanned by a vector (or a collection of vectors) is a subspace (duh) it has to be one of those three.
+
+This means that the whole study of spanning and subspaces comes down to classifying what kinds of collections of vectors span each kind of subspace.
+
+Two of them are trivial:
+
+\begin{prop}
+	Take $v\in \R^2$. Then $\spen\{v\}=0$ if, and only if, $v=0$.
+\end{prop}
+\begin{proof}
+	If $v=0$ then clearly, $\lambda v=0$ for all $\lambda \in \R$, so $\spen\{v\}=0$.
+	
+	Conversely, if $\spen\{v\}=0$, since $v\in\spen\{v\}$ (by taking $\lambda=1$) we can conclude that $v=0$.
+\end{proof}
+
+\begin{prop}
+	Take $v\in \R^2$. Then $\spen\{v\}$ is a line if, and only if, $v\neq 0$.
+\end{prop}
+\begin{proof}
+	If $\spen\{v\}$ is a line, it means $v\neq 0$ (by the preceding proposition).
+	
+	Conversely, if $v\neq 0$, then $\spen\{v\}=\R v$, by definition. So it is a line.
+\end{proof}
