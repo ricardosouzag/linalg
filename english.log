@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  13 SEP 2019 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  13 SEP 2019 19:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,7 +1117,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 297.
 
 [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
-[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]
+[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
 Overfull \hbox (16.02257pt too wide) in paragraph at lines 1529--1530
 []\OT1/cmr/bx/n/12 Corollary 2.2.3.6. []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 
 f\OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g ^^R \U/dsrom/m/n/12 R[]
@@ -1125,7 +1125,7 @@ $ \OT1/cmr/m/it/12 be any col-lec-tion of vec-tors. Then $[]\OMS/cmsy/m/n/12 f\
 OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
  []
 
-[107] [108]) [109]
+[108] [109]) [110]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (./english.aux)
@@ -1135,8 +1135,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 3E42A9F99BABF7B81F1E02FEE66AFCAA;1828.
  ) 
 Here is how much of TeX's memory you used:
- 35852 strings out of 492646
- 854870 string characters out of 6133325
+ 35853 strings out of 492646
+ 854878 string characters out of 6133325
  1042711 words of memory out of 5000000
  38502 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
@@ -1158,10 +1158,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (110 pages, 594527 bytes).
+Output written on english.pdf (111 pages, 594791 bytes).
 PDF statistics:
- 1348 PDF objects out of 1440 (max. 8388607)
- 1205 compressed objects within 13 object streams
- 648 named destinations out of 1000 (max. 500000)
+ 1355 PDF objects out of 1440 (max. 8388607)
+ 1211 compressed objects within 13 object streams
+ 649 named destinations out of 1000 (max. 500000)
  205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
