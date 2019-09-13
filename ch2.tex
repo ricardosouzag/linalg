@@ -1363,6 +1363,12 @@ With this we see that the set-theoretical notion of union is \textit{just not go
 		
 		Similarly, for every $y\in Y$, $0+y\in S$, by definition of $S$. But $0+y=y\in Y$, so $Y\subseteq S$.
 		
-		\item Let $Z$ be another subspace that contains both $X$ and $Y$.
+		\item Let $Z$ be another subspace that contains both $X$ and $Y$. 
+		
+		Take $v\in S$. By definition of $S$, there are some $x\in X$ and 	some $y\in Y$ such that $v=x+y$. But since $Z$ is a subspace that contains $X$ and $Y$, this means that $x\in Z$ and $y\in Z$ - and so $v=x+y\in Z$.
+		
+		We have just shown that any element $v\in S$ is also in $Z$, which means that $S\subseteq Z$.
 	\end{itemize}
+
+This proves that $S$ satisfies the definition of sum and, therefore, $S=X+Y$, as we wanted to show.
 \end{proof}
