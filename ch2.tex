@@ -1161,7 +1161,7 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 \end{df}
 
 \begin{df}
-	A set $\{x_1,x_2\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $$\hom(\{x_1,x_2\},\R^2)\iso\hom_\R(\R^2,\R^2)$$ that is, every function $f:\{x_1,x_2\}\to \R^2$ extends uniquely to a linear function $f':\R^2\to\R^2$ given by $f'(a,b):=af(x_1)+bf(x_2)$.
+	A set $\{x_1,x_2\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $$\hom(\{x_1,x_2\},\R^2)\iso\hom_\R(\R^2,\R^2)$$ that is, every linear function $f:\R^2\to\R^2$ is of the form $f(a,b)=a'f(x_1)+b'f(x_2)$ for some $a',b'\in R$.
 \end{df}
 
 \begin{rmk}
@@ -1583,6 +1583,8 @@ Finally, let us prove that (a) is equivalent to the other three:
 \begin{itemize}
 	\item \underline{(c) implies (a)}:
 	
-	Let $X=\{x_1,x_2\}$ be a linearly independent spanning set for $\R^2$ (we already know it has 2 elements).
+	Let $X=\{x_1,x_2\}$ be a linearly independent spanning set for $\R^2$ (we already know it has 2 elements) and any linear function $f:\R^2\to\R^2$. Then, since $X$ spans $\R^2$ and is linearly independent, we see that any vector $v\in \R^2$ is of the form $v=\lambda_1 x_1+\lambda_2x_2$ for some $\lambda_1,\lambda_2\in \R$.
+	
+	 But this tells us that $f(v)=f(\lambda_1 x_1+\lambda_2x_2)$ and since $f$ is linear, this is simply $f(v)=\lambda_1 f(x_1)+\lambda_2 f(x_2)$.
 \end{itemize}
 \end{proof}
