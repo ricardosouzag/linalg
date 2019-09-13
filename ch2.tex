@@ -1590,7 +1590,9 @@ Finally, let us prove that (a) is equivalent to the other three:
 	\[v=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_n x_n\]which tells us that any $v\in \R^2$ is spanned by $X$ - in other words, $X$ spans $\R^2$.
 	
 	On the other hand, applying $\id_{\R^2}$ to any $x_i\in X$ gives us
-	\[x_i=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_ix_i+\cdots+\lambda_nx_n.\] But $\id_{\R^2}(x_i)=1\id_{\R^2}(x_1)$, and by definition of base, there's only one possible choice of $\lambda_j$'s. This shows that the only possible choice of $\lambda_i$ to make that true is taking $\lambda_i=1$ and every other $\lambda_j=0$ if $j\neq i$.
+	\[x_i=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_ix_i+\cdots+\lambda_nx_n.\] But $\id_{\R^2}(x_i)=1\cdot\id_{\R^2}(x_1)$, and by definition of base, there's only one possible choice of $\lambda_j$'s. This shows that the only possible choice of $\lambda_i$ to make that true is taking $\lambda_i=1$ and every other $\lambda_j=0$ if $j\neq i$.
+	
+	This tells us that $x_i$ is not spanned by the other $x_j$'s, no matter which $x_i\in X$ you choose to start with.
 	
 	\item \underline{(c) implies (a)}:
 	
