@@ -1254,3 +1254,36 @@ Let us give a name to that property, because it's a mouthful:
 
 Then $X$ will be called a \textbf{subspace of $\R^2$} which will be denoted as $X\leq \R^2$.
 \end{df}
+
+\begin{ex}
+	Clearly, since lines through zero are the motivating example for this definition, we know that for every vector $v\in \R^2$, the line $\R v$ is a subspace of $\R^2$ - that is, $\R v\leq \R^2$.
+	
+	But, if you think about it, $\R^2\subseteq \R^2$ is a subset of $\R^2$ which is also closed under additions and scalar multiplications (duh). So $\R^2\leq \R^2$.
+	
+	\bigskip
+	Conversely, \textbf{any} line which doesn't contain zero cannot be a subspace: To see this, take any two vectors $v,u\in \R^2$ and consider the line $\R v+u$, which does not contain zero.
+	
+	Take now $w\in \R v+u$ and any other real number - for instance, 0.
+	
+	If $\R v+u$ was a subspace, it would be closed under scalar multiplication, but $0w=0\notin\R v+u$, so it cannot be a subspace.
+	
+	\bigskip
+	What else then can be a subspace?
+\end{ex}
+
+\begin{lemma}
+	If $X,Y\subseteq \R^2$ are two subspaces, then $X\cap Y$ is also a subspace.
+\end{lemma}
+\begin{df}
+	This is easy to see:
+	\begin{itemize}
+		\item Take $v,u\in X\cap Y$. This means that $v,u\in X$ and $v,u\in Y$, by definition of intersection. But since $v,u\in X$ and $X$ is a subspace, then $v+u\in X$. Similarly, since $v,u\in Y$ and $Y$ is a subspace, then $v+u\in Y$.
+		
+		Finally, using once more the definition of intersection, we see that $v+u\in X$ and $v+u\in Y$ implies $v+u\in X\cap Y$, and so $X\cap Y$ is closed under addition.
+		
+		\item Take $v\in X\cap Y$ and $\lambda\in \R$. Once again, $v\in X\cap Y$ implies $v\in X$ and $v\in Y$, and since both are subspaces, this implies $\lambda v\in X$ and $\lambda v\in Y$.
+		
+		Finally, using once more the definition of intersection, we see that $\lambda v\in X$ and $\lambda v\in Y$ implies $\lambda v\in X\cap Y$, and so $X\cap Y$ is closed under scalar multiplication.
+	\end{itemize}
+This shows that $X\cap Y$ is a subspace, which ends the proof.
+\end{df}
