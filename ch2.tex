@@ -1370,5 +1370,23 @@ With this we see that the set-theoretical notion of union is \textit{just not go
 		We have just shown that any element $v\in S$ is also in $Z$, which means that $S\subseteq Z$.
 	\end{itemize}
 
-This proves that $S$ satisfies the definition of sum and, therefore, $S=X+Y$, as we wanted to show.
+This proves that $S$ satisfies the definition of sum and, therefore, $S=X+Y$, just as we wanted to show.
 \end{proof}
+
+\begin{ex}
+	Let's use this to build new subspaces!
+	
+	Take the line $X$ and the line $Y$, once again. What is $X+Y$? Well, by what we just did, it's the set of all sums of points in $X$ and $Y$...
+	
+	But this is the whole $\R^2$!
+	
+	To see this, take any $v\in \R^2$. Then $v=(x,y)$, for some $x,y\in \R$, and we can rewrite this as $xe_1+ye_2$. But since $X$ and $Y$ are subspaces, $xe_1\in X$ and $ye_2\in Y$, so $v\in X+Y$.
+	
+	This shows that $X+Y\subseteq \R^2\subseteq \R^2$. That can only mean one thing: $X+Y=\R^2$.
+\end{ex}
+
+What this example shows us is another weird behavior of subspaces: They grow in huge steps at a time:
+
+\begin{lemma}
+	For any two different lines through zero $r,s\subseteq \R^2$, we have that $r+s=\R^2$.
+\end{lemma}
