@@ -1405,5 +1405,14 @@ What this example shows us is another weird behavior of subspaces: They grow in 
 	\bigskip
 	Let us now show that $e_2\in r+s$: It's essentially the same construction:
 	
-	Define $\lambda_1:=\dfrac{u_1}{v_1}\in \R$, which allows us to do $\lambda_1v=\left(u_1,\dfrac{u_1}{v_1}v_2\right)$ and so $\lambda_1v-u=\left(0,\dfrac{u_1}{v_1}v_2-u_2\right)$.
+	Define $\lambda_1:=\dfrac{u_1}{v_1}\in \R$, which allows us to do $\lambda_1v=\left(u_1,\dfrac{u_1}{v_1}v_2\right)$ and so $\lambda_1v-u=\left(0,\dfrac{u_1}{v_1}v_2-u_2\right)$. 
+	
+	Now we rewrite that as $\lambda_1v-u=\left(0,\dfrac{u_1v_2-u_2v_1}{v_1}\right)$to see that by taking $\lambda_2:=\dfrac{v_1}{u_1v_2-u_2v_1}$ we can do $\lambda_2(\lambda_1v-u)=e_2$.
+	
+	Now, since $\lambda_1v\in r$ and $u\in s$, we see that $\lambda_1v-u\in r+s$, and so, since it is a subspace, $\lambda_2(\lambda_1v-u)\in r+s$. This shows that $e_2$ (and all its scalar multiples) is also in $r+s$.
+	
+	\bigskip
+	Finally, this shows that $r+s$ contains both of the $X$- and the $Y$-axis, and, therefore, by what we did in the preceding example, it must be the whole plane.
+	
+	This finishes the proof.
 \end{proof}
