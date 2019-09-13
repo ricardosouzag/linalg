@@ -1540,8 +1540,11 @@ Why is it stupid? Well, because we already have a better language to describe th
 	Two vectors $v,u\in \R^2$ are linearly independent if, and only if, $v\nparallel u$.
 \end{cor}
 
-But we've already proven that if we take any two non-parallel vectors then they span the whole $\R^2$. That means that if we take any three non-parallel vectors, then any one of them is already spanned by the other two.
+But we've already proven that if we take any two non-parallel vectors then they span the whole $\R^2$. That means that if we take any three non-parallel vectors, then any one of them is already spanned by the other two. From this we can conclude two results:
 
+\begin{prop}
+	Let $\{v_1,v_2,\cdots,v_n\}\subseteq\R^2$ be any collection of vectors. If it spans $\R^2$, then $n\geq 2$.
+\end{prop}
 \begin{prop}
 	Let $\{v_1,v_2,\cdots,v_n\}\subseteq\R^2$ be any collection of vectors. If it is linearly independent, then $n\leq 2$.
 \end{prop}
