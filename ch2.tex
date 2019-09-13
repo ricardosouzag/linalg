@@ -1340,11 +1340,29 @@ With this we see that the set-theoretical notion of union is \textit{just not go
 
 \begin{prop}
 	Given any two subspaces $X,Y\subseteq \R^2$, then their sum can be uniquely expressed as
-	\[X+Y:=\{v\in \R^2\mid \exists x\in X,\exists y\in Y: v=x+y\},\]that is, $X+Y$ is the set of all sums of all elements in both $X$ and $Y$.
+	\[X+Y:=\{v\in \R^2\mid \exists x\in X,\exists y\in Y\mbox{ such that } v=x+y\},\]that is, $X+Y$ is the set of all sums of all elements in both $X$ and $Y$.
 \end{prop}
 \begin{proof}
 	This proof consists of two parts: First, we need to show that this set, let's call it $S$, is indeed a subspace, and then, second, we need to prove that it satisfies the two defining properties of the sum of $X$ and $Y$.
 	
 	So, just like we said, define
 	\[S:=\{v\in \R^2\mid \exists x\in X,\exists y\in Y: v=x+y\}.\] Let us show that $S\leq \R^2$.
+	
+	To do that, take any $v,v'\in S$ and $\lambda \in \R$. Then, by definition, there are some $x,x'\in X$ and some $y,y'\in Y$ such that $v=x+y$ and $v'=x'+y'$. With this, we can compute:
+	\[v+v'=(x+y)+(x'+y')=(x+x')+(y+y')\]and since both $X$ and $Y$ are subspaces, $x+x'\in X$ and $y+y'\in Y$. This shows that $v+v'$ is the sum of $x+x'\in X$ and $y+y'\in Y$, and hence $v+v'\in S$.
+	
+	Similarly,
+	\[\lambda v=\lambda(x+y)=\lambda x+\lambda y\]and, once more, since $X$ and $Y$ are subspaces, $\lambda x\in X$ and $\lambda y\in Y$, and, so, $\lambda v$ is the sum of $\lambda x\in X$ and $\lambda y\in Y$. This shows that $\lambda v\in S$.
+	
+	This shows that $S$ is indeed a subspace.
+	
+	\bigskip
+	Finally, let us show that it satisfies the definition of sum:
+	\begin{itemize}
+		\item First, it is easy to see that it contains both $X$ and $Y$: Since $X$ and $Y$ are subspaces, they contain 0. So for every $x\in X$, $x+0\in S$, by definition of $S$. But $x+0=x\in X$. So $X\subseteq S$.
+		
+		Similarly, for every $y\in Y$, $0+y\in S$, by definition of $S$. But $0+y=y\in Y$, so $Y\subseteq S$.
+		
+		\item Let $Z$ be another subspace that contains both $X$ and $Y$.
+	\end{itemize}
 \end{proof}
