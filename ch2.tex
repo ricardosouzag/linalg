@@ -1393,10 +1393,10 @@ What this example shows us is another weird behavior of subspaces: They grow in 
 \begin{proof}
 	It's similar to the example's: Let $r=\R v$ and $s=\R u$ for any two non-parallel vectors $v,u\in \R^2$ (if they were parallel, by our previous discussions, $r=s$ and we don't want that).
 	
-	We'll show that $r+s$ contains both $e_1$ and $e_2$. This suffices, because we've already shown that $X+Y=\R^2$.
+	We'll show that $r+s$ contains both $e_1$ and $e_2$. This suffices, because we've already shown that $\R e_1+\R e_2=\R^2$.
 	
 	To do that, write $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Now, defining $\mu_1:=\dfrac{v_2}{u_2}\in\R$ we see that $$\mu_1 u=\dfrac{v_2}{u_2}(u_1,u_2)=\left(\frac{v_2}{u_2}u_1,\frac{v_2}{u_2}u_2\right)=\left(\frac{v_2}{u_2}u_1,v_2\right)$$and so
-	\[v-\mu_1u=(v_1,v_2)-\left(\frac{v_2}{u_2}u_1,v_2\right)=\left(v_1-\frac{v_2}{u_2}u_1,0\right),\]that is, $v-\mu_1u\in X$. So we can just scale it up or down to obtain $e_1$. To do that, let us rewrite it a little bit:
+	\[v-\mu_1u=(v_1,v_2)-\left(\frac{v_2}{u_2}u_1,v_2\right)=\left(v_1-\frac{v_2}{u_2}u_1,0\right),\]that is, $v-\mu_1u\in \R e_1$. So we can just scale it up or down to obtain $e_1$. To do that, let us rewrite it a little bit:
 	\[v-\mu_1u=\left(v_1-\frac{v_2}{u_2}u_1,0\right)=\left(\frac{v_1u_2-v_2u_1}{u_2},0\right)\]and see that if we multiply it by $\mu_2:=\dfrac{u_2}{v_1u_2-v_2u_1}$ we get
 	\[\mu_2(v-\mu_1u)=\dfrac{u_2}{v_1u_2-v_2u_1}\left(\frac{v_1u_2-v_2u_1}{u_2},0\right)=(1,0)=e_1.\]
 	
