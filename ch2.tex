@@ -1696,3 +1696,21 @@ In other words, the kernel of a linear function is the set of points that is kil
 \begin{cor}
 	For any linear function $f:\R^2\to\R^2$, we have that $\Ker f$ is either zero, a line through zero or the whole plane $\R^2$.
 \end{cor}
+
+Now we're gonna present one of the main reasons why kernels are important: They tell us when functions are injective:
+
+\begin{prop}
+	Let $f:\R^2\to\R^2$ be a linear function. Then $f$ is injective if, and only if, $\Ker f=0$.
+\end{prop}
+\begin{proof}
+	Assume $f$ is injective and take $v\in \Ker f$. This means that $f(v)=0$. But linear functions always take 0 to 0 - that is, $f(0)=0$.
+	
+	Since $f$ is injective, we can't have two different points in the domain with the same image under $f$. This means that $v=0$. With this, we can prove that any point in the kernel is just 0, so $\Ker f=0$.
+	
+	\bigskip
+	Conversely, assume $\Ker f=0$ and take two points $v,u\in \R^2$ such that $f(v)=f(u)$. We want to show that $v=u$.
+	
+	But $f$ is linear, so $f(v)=f(u)$ implies $f(v)-f(u)=0$ - that is, $f(v-u)=0$. This shows that $v-u\in\Ker f$.
+	
+	But we're assuming that $\Ker f=0$. This means that $v-u=0$, and therefore $v=u$ and $f$ is injective.
+\end{proof}
