@@ -1776,8 +1776,22 @@ And finally, a surprising result:
 	Clearly (a) implies both (b) and (c), by definition.
 	
 	\begin{itemize}
-		\item \textit{(b) implies (a)}:
+		\item \underline{(b) implies (a)}:
 		
-		Let $f:\R^2\to\R^2$ be a linear injection.
+		Let $f:\R^2\to\R^2$ be a linear injection and choose $X=\{x_1,x_2\}\subseteq \R^2$  base. Since $f$ is injective, $f(x_1)\neq f(x_2)$.
+		
+		We claim that $f(x_1)\nparallel f(x_2)$. This would suffice, because then we'd have to non-parallel vectors in the image and, therefore, by the previous section, this is sufficient to span any other vector - that is, $f$ would be surjective (and since it's already injective, it would be a bijection).
+		
+		To see then that $f(x_1)\nparallel f(x_2)$, assume they \textbf{are} parallel - that is, $f(x_1)=\lambda f(x_2)$ for some $\lambda\in\R$. But $f(\lambda x_2)=\lambda f(x_2)$ as well. Since $f$ is injective, $f(x_1)=f(\lambda x_2)$ must then imply $x_1=\lambda x_2$ - that is, $x_1\parallel x_2$. But we've already proven that no two vectors in a base can be parallel.
+		
+		This is a contradiction! Therefore, we \textbf{cannot} have that $f(x_1)\parallel f(x_2)$, and the result follows by our previous discussion.
+		
+		\item \underline{(c) implies (a)}:
+		
+		Let $f:\R^2\to \R^2$ be a linear surjection and choose $v\in \Ker f$.
+		
+		If $v\neq 0$, then $\R v\subseteq \Ker f$, since $\Ker f$ is a subspace. 
+		
+		Choose now a base $X=\{x_1,x_2\}\subseteq \R^2$. By definition of base, we know that for any $u\in \R^2$ there exists some uniquely determined $\lambda_1,\lambda_2$ such that $f(u)=\lambda_1 f(x_1)+\lambda_2f(x_2)$.
 	\end{itemize}
 \end{proof}
