@@ -22,3 +22,4 @@
 \contentsline {subsection}{\numberline {2.2.1}Getting into shape}{90}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Subspace emissary}{100}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}You span me right round}{107}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Back to linearity}{111}{subsection.2.2.4}

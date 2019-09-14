@@ -1608,3 +1608,24 @@ Finally, let us prove that (a) is equivalent to the other three:
 
 This shows that (a) and (c) are equivalent, and since (c) is already equivalent to (b) and (d) this suffices and ends the proof.
 \end{proof}
+
+\newpage
+\subsection{Back to linearity}
+
+Now that we have the very needed tools of subspaces and spanning sets, let's move forward with our discussions on linear functions.
+
+\begin{prop}
+	For any linear function $f:\R^2\to\R^2$, $\im f$ is a subspace.
+\end{prop}
+\begin{proof}
+	Take $v,u\in \im f$. That means that $v=f(v')$ and $u=f(u')$ for some $v',u'\in\R^2$. Then
+	\[f(u'+v')=f(u')+f(v')=u+v\]and therefore $u+v$ is also in the image of $f$ (since it is the image of $u'+v'$ under $f$).
+	
+	Similarly, given any scalar $\lambda\in \R$ we have that
+	\[f(\lambda v')=\lambda f(v')=\lambda v\]and so $\lambda v$ is also in the image of $f$ (since it is the image of $\lambda v'$ under $f$).
+	
+	Since $\im f$ is closed under sums and scalar multiplications, it must be a subspace.
+\end{proof}
+\begin{cor}
+	For any linear function $f:\R^2\to\R^2$ its image is either zero, a line through zero or the whole set.
+\end{cor}
