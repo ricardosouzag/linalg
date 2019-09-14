@@ -1656,3 +1656,27 @@ Now that we have the very needed tools of subspaces and spanning sets, let's mov
 	
 	That is, the image is \textbf{not} the whole set $\R^2$, but only the line $\R(1,1)$.
 \end{ex}
+
+We'll now make a somewhat arbitrary definition, but one that's going to make a \textbf{lot} of sense the more of you think about it.
+
+\begin{df}
+	Let $f:\R^2\to\R^2$ be any linear function. We define its \textbf{kernel} to be the set $\Ker f$ given by
+	\[\Ker f:=\{v\in \R^2\mid f(v)=0\}.\]
+\end{df}
+
+In other words, the kernel of a linear function is the set of points that is killed by it.
+
+\begin{ex}
+	Expanding on the example above, let's compute $\Ker f$ and $\Ker g$:
+	
+	Take $(a,b)\in \R^2$ and assume $f(a,b)=0$. What can we say about $a$ and $b$? Well, by definition of $f$, $f(a,b)=(2a-b,5b)$ so if that equals 0 we must have $2a-b=0$ and $5b=0$.
+	
+	The second equation alone tells us that $b=0$. Now armed with that, the first equation becomes $2a=0$ and so $a=0$ too.
+	
+	This means that for a point $(a,b)$ to go to 0 under $f$, we must have $a=b=0$. That means that $\Ker f=0$.
+	
+	\bigskip
+	Analogously, take $(a,b)\in \R^2$ and assume that $g(a,b)=0$. But this is just $(a-b,a-b)=0$, which is a single equation: $a=b$.
+	
+	Therefore, the only way for a point $(a,b)\in\R^2$ to be taken to 0 by $g$ is for $a$ and $b$ to be equal - for instance, $(1,1)$ or $(-3,-3)$. This means that $\Ker g=\R(1,1)$.
+\end{ex}
