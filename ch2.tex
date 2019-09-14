@@ -1788,10 +1788,6 @@ And finally, a surprising result:
 		
 		\item \underline{(c) implies (a)}:
 		
-		Let $f:\R^2\to \R^2$ be a linear surjection and choose $v\in \Ker f$.
-		
-		If $v\neq 0$, then $\R v\subseteq \Ker f$, since $\Ker f$ is a subspace. 
-		
-		Choose now a base $X=\{x_1,x_2\}\subseteq \R^2$. By definition of base, we know that for any $u\in \R^2$ there exists some uniquely determined $\lambda_1,\lambda_2$ such that $f(u)=\lambda_1 f(x_1)+\lambda_2f(x_2)$.
+		Let $f:\R^2\to \R^2$ be a linear surjection and choose $v,u\in \R^2$ such that $v\nparallel u$. Since $f$ is surjective, there's some $v',u'\in \R^2$ such that $f(v')=v$ and $f(u')=u$. Notice that this implies $v'\nparallel u'$ (cause otherwise $v'=\lambda u'$ would imply $v=\lambda u$, which cannot happen since we're taking $v\nparallel u$).
 	\end{itemize}
 \end{proof}
