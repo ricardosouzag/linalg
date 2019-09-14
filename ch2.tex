@@ -1680,3 +1680,16 @@ In other words, the kernel of a linear function is the set of points that is kil
 	
 	Therefore, the only way for a point $(a,b)\in\R^2$ to be taken to 0 by $g$ is for $a$ and $b$ to be equal - for instance, $(1,1)$ or $(-3,-3)$. This means that $\Ker g=\R(1,1)$.
 \end{ex}
+
+\begin{lemma}
+	For any linear function $f:\R^2\to\R^2$, we have that $\Ker f$ is a subspace.
+\end{lemma}
+\begin{proof}
+	Take $v,u\in \Ker f$. This means that $f(v)=f(u)=0$, by definition of kernel. But then, since $f$ is linear, we have:
+	\[f(v+u)=f(v)+f(u)=0+0=0\]and so $v+u\in\Ker f$ since its image under $f$ is 0.
+	
+	Similarly, given any $\lambda\in \R$ we can easily see that
+	\[f(\lambda v)=\lambda f(v)=\lambda\cdot 0=0\]and so $\lambda v\in\Ker f$ since its image under $f$ is 0.
+	
+	This shows that $\Ker f$ is closed under addition and scalar multiplication, and is, therefore, a subspace.
+\end{proof}
