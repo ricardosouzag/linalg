@@ -1726,3 +1726,14 @@ Finally, we're ready to prove one of the most beautiful theorems in all of mathe
 \begin{df}
 	Let $f:\R^2\to\R^2$ be a function. We'll say that \textbf{$f$ is a linear isomorphism} (or just an isomorphism) if it is a set isomorphism (that is, a bijection) which is also linear.
 \end{df}
+\begin{lemma}
+	Let $f:\R^2\to\R^2$ be a linear isomorphism. Then $f^{-1}:\R^2\to\R^2$ is also a linear isomorphism.
+\end{lemma}
+\begin{proof}
+	We already know that if $f$ is an isomorphism, then $f^{-1}$ is also an isomorphism, since they're mutually inverse to each other.
+	
+	It suffices to prove, then, that $f^{-1}$ is linear when $f$ is linear.
+	
+	Take $v,u\in \R^2$. Since $f$ is an isomorphism, it is also a surjection. This means that $v=f(v')$ and $u=f(u')$ for some $v',u'\in\R^2$. Then:
+	\[f^{-1}(v+u)=f^{-1}(f(v')+f(u'))=f^{-1}(f(v'+u'))=(f^{-1}\circ f)(v'+u')=v'+u'=f^{-1}(v)+f^{-1}(u)\]so $f^{-1}$ preserves sums.
+\end{proof}
