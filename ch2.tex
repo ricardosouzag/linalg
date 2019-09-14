@@ -1629,3 +1629,30 @@ Now that we have the very needed tools of subspaces and spanning sets, let's mov
 \begin{cor}
 	For any linear function $f:\R^2\to\R^2$ its image is either zero, a line through zero or the whole set.
 \end{cor}
+
+\begin{ex}
+	Let $f:\R^2\to\R^2$ be a function given by $f(x,y)=(2x-y,5y)$. What is, then, $\im f$?
+	
+	Well, it cannot be zero, since $f(0,1)=(2\cdot0-1,5\cdot 1)=(-1,5)\neq 0$.
+	
+	So it can only be the line $\R (-1,5)$ (since we already know $(-1,5)$ is in the image) or the whole set $\R^2$.
+	
+	But it's easy to see that $f(1,1)=(2\cdot 1-1,5\cdot 1)=(1,5)$ and $(1,5)\notin\R(-1,5)$ so there are two non-parallel vectors in the image. It follows that the image of $f$ has the be the whole set $\R^2$.
+	
+	\bigskip
+	Consider now the linear function $g:\R^2\to\R^2$ given by $g(x,y)=(x-y,x-y)$. What is the image of $g$?
+	
+	Once again, it can't be zero: $g(1,0)=(1-0,1-0)=(1,1)\neq 0$.
+	
+	Therefore $\im g$ is either the line $\R (1,1)$ or $\R^2$.
+	
+	Now suppose $\im g =\R^2$. That means that, for instance, $(1,0)\in \im g$. But this would mean that there's some $(a,b)\in \R^2$ such that $g(a,b)=(1,0)$, by definition of $g$.
+	
+	But doing computations it's easy to convince ourselves that is impossible: If it were possible, we'd have $g(a,b)=(a-b,a-b)=(1,0)$ and so $a-b=1$ and $a-b=0$, which is a contradiction. A number can't equal both $1$ and $0$ at the same time!
+	
+	Therefore, $(1,0)\notin \R^2$. This already tells us that $\im g$ is a line (because it's either a line or the whole plane).
+	
+	Taking one step further, it's not hard to convince yourself that a point $(x,y)$ lies in the image of $g$ if, and only if, $x=y$.
+	
+	That is, the image is \textbf{not} the whole set $\R^2$, but only the line $\R(1,1)$.
+\end{ex}
