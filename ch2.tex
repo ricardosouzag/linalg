@@ -1736,4 +1736,9 @@ Finally, we're ready to prove one of the most beautiful theorems in all of mathe
 	
 	Take $v,u\in \R^2$. Since $f$ is an isomorphism, it is also a surjection. This means that $v=f(v')$ and $u=f(u')$ for some $v',u'\in\R^2$. Then:
 	\[f^{-1}(v+u)=f^{-1}(f(v')+f(u'))=f^{-1}(f(v'+u'))=(f^{-1}\circ f)(v'+u')=v'+u'=f^{-1}(v)+f^{-1}(u)\]so $f^{-1}$ preserves sums.
+	
+	Analogously, for any scalar $\lambda \in\R^2$ we have
+	\[f^{-1}(\lambda v)=f^{-1}(\lambda f(v'))=f^{-1}(f(\lambda v'))=(f^{-1}\circ f)(\lambda v')=\lambda v'=\lambda f^{-1}(v)\]and so $f^{-1}$ preserves scalar multiplication.
+	
+	It follows that $f^{-1}$ is indeed linear, just as we stated, which finishes the proof.
 \end{proof}
