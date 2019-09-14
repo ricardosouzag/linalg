@@ -1721,7 +1721,7 @@ So from now on, instead of checking directly whether or not a function is inject
 	One final word about the preceding examples: We've already shown that $\Ker f=0$ and $\Ker g=\R(1,1)$. This shows, then, that $f$ is injective and $g$ is not injective.
 \end{ex}
 
-Finally, we're ready to prove one of the most beautiful theorems in all of mathematics: The First Isomorphism Theorem.
+Finally, we're ready to work with isomorphisms.
 
 \begin{df}
 	Let $f:\R^2\to\R^2$ be a function. We'll say that \textbf{$f$ is a linear isomorphism} (or just an isomorphism) if it is a set isomorphism (that is, a bijection) which is also linear.
@@ -1741,4 +1741,20 @@ Finally, we're ready to prove one of the most beautiful theorems in all of mathe
 	\[f^{-1}(\lambda v)=f^{-1}(\lambda f(v'))=f^{-1}(f(\lambda v'))=(f^{-1}\circ f)(\lambda v')=\lambda v'=\lambda f^{-1}(v)\]and so $f^{-1}$ preserves scalar multiplication.
 	
 	It follows that $f^{-1}$ is indeed linear, just as we stated, which finishes the proof.
+\end{proof}
+
+\begin{prop}
+	Let $f,g:\R^2\to\R^2$ be linear functions. Then both of $f\circ g$ and $g\circ f$ are also linear functions.
+\end{prop}
+\begin{proof}
+	We'll only show one of them, the other is identical.
+	
+	Take $v,u\in\R^2$. Then:
+	
+	\[(f\circ g)(v+u)=f(g(v+u))=f(g(v)+g(u))=f(g(v))+f(g(u))=(f\circ g)(v)+(f\circ g)(u)\]so $f\circ g$ preserves sums.
+	
+	Analogously, taking $\lambda\in \R$:
+	\[(f\circ g)(\lambda v)=f(g(\lambda v))=f(\lambda g(v))=\lambda f(g(v))=\lambda(f\circ g)(v)\]so $f\circ g$ preserves scalar multiplication.
+	
+	It follows then that $f\circ g$ is linear, which ends the proof.
 \end{proof}
