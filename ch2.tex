@@ -1176,7 +1176,10 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 	To see this, take any linear function $f:\R^2\to\R^2$. We want to write $f(x,y)=\lambda_1 f(1,1)+\lambda_2 f(1,-1)$ for some $\lambda_1,\lambda_2\in\R$. We claim that $\lambda_1:=\dfrac{x+y}{2}$ and $\lambda_2:=\dfrac{x-y}{2}$ are the ones we're looking for.
 	
 	Indeed:
-	\[\lambda_1 f(1,1)+\lambda_2 f(1,-1)=\frac{x+y}{2}f(1,1)+\frac{x-y}{2}f(1,-1)=f(\frac{x+y}{2},\frac{x+y}{2})+f(\frac{x-y}{2},\frac{y-x}{2})\]
+	\begin{align*}
+		\lambda_1 f(1,1)+\lambda_2 f(1,-1)&=\frac{x+y}{2}f(1,1)+\frac{x-y}{2}f(1,-1)\\
+		&=f\left(\frac{x+y}{2},\frac{x+y}{2}\right)+f\left(\frac{x-y}{2},\frac{y-x}{2}\right)
+	\end{align*}
 \end{ex}
 
 The corollary above is telling us that the set $\{e_1,e_2\}$ is a base of $\R^2$.
