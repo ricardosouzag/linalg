@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 SEP 2019 23:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 SEP 2019 23:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1118,7 +1118,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
 [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
-Overfull \hbox (16.02257pt too wide) in paragraph at lines 1543--1544
+Overfull \hbox (16.02257pt too wide) in paragraph at lines 1544--1545
 []\OT1/cmr/bx/n/12 Corollary 2.2.3.6. []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 
 f\OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g ^^R \U/dsrom/m/n/12 R[]
 $ \OT1/cmr/m/it/12 be any col-lec-tion of vec-tors. Then $[]\OMS/cmsy/m/n/12 f\
@@ -1158,7 +1158,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (117 pages, 616765 bytes).
+Output written on english.pdf (117 pages, 616910 bytes).
 PDF statistics:
  1415 PDF objects out of 1440 (max. 8388607)
  1265 compressed objects within 13 object streams
