@@ -2026,3 +2026,53 @@ Now that we can think of vectors as matrices, it's no surprise to also be able t
 
 This shows that $\phi$ is bijective for each base $B$, and so we have proven the result.
 \end{proof}
+
+So we can think of $2\times 2$ matrices as linear transformations, and vice-versa.
+
+Since we used a result like this to introduce addition and scalar multiplication to $2\times 1$ matrices, you can guess what's coming next, right?
+
+\begin{prop}
+	Let $f,g:\R^2\to\R^2$ be two linear functions and $\lambda\in \R$  be any scalar. Then the functions $f+g,f\circ g,\lambda f:\R^2\to\R^2$ defined, respectively, as $(f+g)(v):=f(v)+g(v)$, $(f\circ g)(v):=f(g(v))$ and $(\lambda f)(v):=f(\lambda v)$ are linear functions.
+\end{prop}
+\begin{proof}
+	Choose, once and for all, $v,u\in \R^2$ and $\mu\in \R$. Then:
+	\begin{itemize}
+		\item \underline{$f+g$ is linear:}		
+		\begin{align*}
+			(f+g)(v+u)&=f(v+u)+g(v+u)\\
+			&=f(v)+f(u)+g(v)+g(u)\\
+			&=f(v)+g(v)+f(u)+g(u)=(f+g)(v)+(f+g)(u)
+		\end{align*}and
+		\begin{align*}
+			(f+g)(\mu v)&=f(\mu v)+g(\mu v)\\
+			&=\mu f(v)+\mu g(v)\\
+			&=\mu(f(v)+g(v))=\mu(f+g)(v)
+		\end{align*}so $f+g$ is linear.
+		
+		\item \underline{$f\circ g$ is linear:}		
+		\begin{align*}
+			(f\circ g)(v+u)&=f(g(v+u))\\
+			&=f(g(v)+g(u))\\
+			&=f(g(v))+f(g(u))=(f\circ g)(v)+(f\circ g)(u)
+		\end{align*}and
+		\begin{align*}
+			(f\circ g)(\mu v)&=f(g(\mu v))\\
+			&=f(\mu g(v))\\
+			&=\mu f(g(v))=\mu(f\circ g)(v)
+		\end{align*}so $f\circ g$ is linear.
+		
+		\item \underline{$\lambda f$ is linear:}
+		\begin{align*}
+			(\lambda f)(v+u)&=\lambda f(v+u)\\
+			&=\lambda (f(v)+f(u))\\
+			&=\lambda f(v)+\lambda f(u)=(\lambda f)(v)+(\lambda f)(u)
+		\end{align*}and
+		\begin{align*}
+			(\lambda f)(\mu v)&=\lambda f(\mu v)\\
+			&=\lambda \mu f(v)\\]
+			&=\mu\lambda f(v)=\mu(\lambda f)(v)
+		\end{align*}so $\lambda f$ is linear.
+	\end{itemize}
+
+This ends the proof.
+\end{proof}
