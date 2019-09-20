@@ -23,3 +23,5 @@
 \contentsline {subsection}{\numberline {2.2.2}Subspace emissary}{101}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}You span me right round}{108}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Back to linearity}{112}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Closing the distance}{118}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}A systematic approach}{118}{subsection.2.3.1}
