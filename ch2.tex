@@ -2078,7 +2078,7 @@ This ends the proof.
 \end{proof}
 
 \begin{df}
-	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_Y=\phi^{-1}(Y)$.
+	Given a base $B\subseteq \R^2$, the bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_Y=\phi^{-1}(Y)$.
 \end{df}
 
 Now, it would be great to be able to calculate each of those matrices. Well, it turns out to be easier than it seems:
@@ -2088,7 +2088,7 @@ Now, it would be great to be able to calculate each of those matrices. Well, it 
 	x_1&x_3\\x_2&x_4
 	\end{pmatrix}$ and $Y=\begin{pmatrix}
 	y_1&y_3\\y_2&y_4
-	\end{pmatrix}$ then, the following equalities hold:
+	\end{pmatrix}$ then the following equalities hold:
 	\[X+Y=\begin{pmatrix}
 	x_1+y_1&x_3+y_3\\
 	x_2+y_2&x_4+y_4
@@ -2100,3 +2100,30 @@ Now, it would be great to be able to calculate each of those matrices. Well, it 
 	\lambda x_2&\lambda x_4
 	\end{pmatrix}.\]
 \end{prop}
+\begin{proof}
+	Let $E=\{e_1,e_2\}$ be the canonical base for $\R^2$. Then $f_X(b_1)=(x_1,x_2)$, $f_X(b_2)=(x_3,x_4)$, $f_y(b_1)=(y_1,y_2)$ and $f_Y(b_2)=(y_3,y_4)$.
+	
+	It follows then that 
+	\[(f_X+f_Y)(e_1)=f_X(e_1)+f_Y(e_1)=(x_1,x_2)+(y_1,y_2)=(x_1+y_1,x_2+y_2)\]
+	\[(f_X+f_Y)(e_2)=f_X(e_2)+f_Y(e_2)=(x_3,x_4)+(y_3,y_4)=(x_3+y_3,x_4+y_4)\]
+	so \[X+Y=\begin{pmatrix}
+	x_1+y_1&x_3+y_3\\
+	x_2+y_2&x_4+y_4
+	\end{pmatrix}.\]
+	
+	Similarly, 
+	\begin{align*}
+		f_X(f_Y(e_1))&=f_X(y_1,y_2)\\
+		&=f_X(y_1e_1+y_2e_2)\\
+		&=y_1f_X(e_1)+y_2 f_X(e_2)\\
+		&=y_1(x_1,x_2)+y_2(x_3,x_4)\\
+		&=(x_1y_1,x_2y_1)+(x_3y_2,x_4y_2)=(x_1y_1+x_3y_2,x_2y_1+x_4y_2)		
+	\end{align*}
+	\begin{align*}
+	f_X(f_Y(e_2))&=f_X(y_3,y_4)\\
+	&=f_X(y_3e_1+y_4e_2)\\
+	&=y_3f_X(e_1)+y_4 f_X(e_2)\\
+	&=y_3(x_1,x_2)+y_4(x_3,x_4)\\
+	&=(x_1y_3,x_2y_3)+(x_3y_4,x_4y_4)=(x_1y_3+x_3y_4,x_2y_3+x_4y_4)		
+	\end{align*}
+\end{proof}
