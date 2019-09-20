@@ -1924,15 +1924,9 @@ In this section our aim is to study some more geometrical properties that vector
 			&=f^{-1}(f(Y)+f(X))=A(Y,X)
 		\end{align*}so $A$ is commutative;
 		
-		\item Let $0:=\begin{pmatrix}
-		0\\0
-		\end{pmatrix}$. Then $f(0)=0$, so\[A(X,0)=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of $A$;
+		\item Let $0:=f^{-1}(0,0)$. Then $f(0)=(0,0)$, so\[A(X,0)=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of $A$;
 		
-		\item If $X=\begin{pmatrix}
-		x_1\\x_2
-		\end{pmatrix}$, let $-X:=\begin{pmatrix}
-		-x_1\\-x_2
-		\end{pmatrix}$. Then $f(X)+f(-X)=(x_1,x_2)+(-x_1,-x_2)=0=f(0)$, so $A(X,-X)=f^{-1}(f(X)+f(-X))=f^{-1}(f(0))=0$ so $-X$ is the additive inverse of $X$;
+		\item Let $-X:=f^{-1}(-f(X))$. Then $f(X)+f(-X)=f(X)+f(f^{-1}(-f(X)))=f(X)-f(X)=(0,0)=f(0)$, so $A(X,-X)=f^{-1}(f(X)+f(-X))=f^{-1}(f(0))=0$ so $-X$ is the additive inverse of $X$;
 		
 		\item \begin{align*}
 			M(\lambda,M(\mu,X))&=M(\lambda,f^{-1}(\mu f(X)))\\
