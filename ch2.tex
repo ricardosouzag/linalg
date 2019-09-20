@@ -2011,4 +2011,18 @@ Now that we can think of vectors as matrices, it's no surprise to also be able t
 	a_1&a_3\\
 	a_2&a_4
 	\end{pmatrix}$.
+	
+	\begin{itemize}
+		\item \underline{$\phi$ is injective:}
+		
+		Assume that $f,g:\R^2\to\R^2$ are two linear functions such that $\phi(f)=\phi(g)$. But then this means that $f(b_1)=g(b_1)$ and $f(b_2)=g(b_2)$. But since linear functions are entirely determined by how they act on a base, this implies that $f=g$, and so $\phi$ is injective.
+		
+		\item \underline{$\phi$ is surjective:}
+		
+		Take any $2\times 2$ matrix $A=\begin{pmatrix}
+		a&c\\b&d
+		\end{pmatrix}$. We then define $f':\R^2\to\R^2$ by putting $f'(b_1):=(a,b)$ and $f'(b_2):=(c,d)$. This defines a unique linear function, by definition of base. Now, clearly, $\phi(f')=A$, so $A\in\im(\phi)$ and $\phi$ is surjective.
+	\end{itemize}
+
+This shows that $\phi$ is bijective for each base $B$, and so we have proven the result.
 \end{proof}
