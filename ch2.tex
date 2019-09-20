@@ -2078,5 +2078,25 @@ This ends the proof.
 \end{proof}
 
 \begin{df}
-	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_X=\phi^{-1}(Y)$.
+	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_Y=\phi^{-1}(Y)$.
 \end{df}
+
+Now, it would be great to be able to calculate each of those matrices. Well, it turns out to be easier than it seems:
+
+\begin{prop}
+	Let $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$. If we write $X=\begin{pmatrix}
+	x_1&x_3\\x_2&x_4
+	\end{pmatrix}$ and $Y=\begin{pmatrix}
+	y_1&y_3\\y_2&y_4
+	\end{pmatrix}$ then, the following equalities hold:
+	\[X+Y=\begin{pmatrix}
+	x_1+y_1&x_3+y_3\\
+	x_2+y_2&x_4+y_4
+	\end{pmatrix}\]\[XY=\begin{pmatrix}
+	x_1y_1+x_3y_2&x_1y_3+x_3y_4\\
+	x_2y_1+x_4y_2&x_2y_3+x_4y_4
+	\end{pmatrix}\]\[\lambda X=\begin{pmatrix}
+	\lambda x_1&\lambda x_3\\
+	\lambda x_2&\lambda x_4
+	\end{pmatrix}.\]
+\end{prop}
