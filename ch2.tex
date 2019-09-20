@@ -1899,45 +1899,57 @@ In this section our aim is to study some more geometrical properties that vector
 			\item $M$ is associative;
 			\item $M$ is commutative;
 			\item $M$ has an identity element;
-			\item $M$ has inverses;
 			\item $M$ distributes over $A$;
 			\item $M$ distributes over real number addition.
 		\end{itemize}
 	\end{multicols}
 \end{lemma}
 \begin{proof}
-	It suffices to define $A\left(X,Y\right):=f^{-1}(f(X)+f(Y))$ and $M(\lambda, X):=f^{-1}(\lambda f(X))$, for all $X,Y\in M_{2\times 1}(\R)$ and $\lambda\in \R$.
+	It suffices to define $X+Y:=f^{-1}(f(X)+f(Y))$ and $\lambda X:=f^{-1}(\lambda f(X))$, for all $X,Y\in M_{2\times 1}(\R)$ and $\lambda\in \R$.
 	
 	Indeed, for all $X,Y,Z\in M_{2\times 1}(\R)$ and all $\lambda,\mu\in \R$ we have:
 	\begin{itemize}
 		\item \begin{align*}
-			A(A(X,Y),Z)&=A(f^{-1}(f(X)+f(Y)),Z)\\
+			(X+Y)+Z&=f^{-1}(f(X)+f(Y))+Z\\
 			&=f^{-1}(f(f^{-1}(f(X)+f(Y)))+f(Z))\\
 			&=f^{-1}((f(X)+f(Y))+f(Z))\\
 			&=f^{-1}(f(X)+(f(Y)+f(Z)))\\
 			&=f^{-1}(f(X)+f(f^{-1}(f(Y)+f(Z))))\\
-			&=A(X,f^{-1}(f(Y)+f(Z)))=A(X,A(Y,Z))
-		\end{align*} so $A$ is associative;
+			&=X+f^{-1}(f(Y)+f(Z))=X+(Y+Z)
+		\end{align*} so addition is associative;
 		
 		\item \begin{align*}
-			A(X,Y)&=f^{-1}(f(X)+f(Y))\\
-			&=f^{-1}(f(Y)+f(X))=A(Y,X)
-		\end{align*}so $A$ is commutative;
+			X+T&=f^{-1}(f(X)+f(Y))\\
+			&=f^{-1}(f(Y)+f(X))=Y+X
+		\end{align*}so addition is commutative;
 		
-		\item Let $0:=f^{-1}(0,0)$. Then $f(0)=(0,0)$, so\[A(X,0)=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of $A$;
+		\item Let $0:=f^{-1}(0,0)$. Then $f(0)=(0,0)$, so\[X+0=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of the addition;
 		
 		\item Let $-X:=f^{-1}(-f(X))$. Then \begin{align*}
 			f(X)+f(-X)&=f(X)+f(f^{-1}(-f(X)))\\
 			&=f(X)-f(X)=(0,0)=f(0),
 		\end{align*}so \begin{align*}
-			A(X,-X)&=f^{-1}(f(X)+f(-X))\\&=f^{-1}(f(0))=0
+			X+(-X)&=f^{-1}(f(X)+f(-X))\\&=f^{-1}(f(0))=0
 		\end{align*}and $-X$ is the additive inverse of $X$;
 		
 		\item \begin{align*}
-			M(\lambda,M(\mu,X))&=M(\lambda,f^{-1}(\mu f(X)))\\
+			\lambda(\mu X)&=\lambda(f^{-1}(\mu f(X)))\\
 			&=f^{-1}(\lambda f(f^{-1}(\mu f(X))))\\
 			&=f^{-1}(\lambda (\mu f(X)))\\
-			&=f^{-1}((\lambda\mu)f(X))=M(\lambda\mu, X)
-		\end{align*}so $M$ is associative;
+			&=f^{-1}((\lambda\mu)f(X))=(\lambda\mu) X
+		\end{align*}so scalar multiplication is associative;
+		
+		\item $\lambda X=f^{-1}(\lambda f(X))=f^{-1}(f(X)\lambda)=X\lambda$ so scalar multiplication is commutative;
+		
+		\item $1X=f^{-1}(1f(X))=f^{-1}(f(X))=X$ so $1$ is the identity of the scalar multiplication;
+		
+		\item \begin{align*}
+			\lambda(X+Y)&=\lambda f^{-1}(f(X)+f(Y))\\
+			&=f^{-1}(\lambda f(f^{-1}(f(X)+f(Y))))
+			&=f^{-1}(\lambda (f(X)+f(Y)))\\
+			&=f^{-1}(\lambda f(X)+\lambda f(Y))\\
+			&=f^{-1}(f(\lambda X)+f(\lambda Y))\\
+			&=\lambda X+\lambda Y
+		\end{align*}
 	\end{itemize}
 \end{proof}
