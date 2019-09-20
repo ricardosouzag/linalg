@@ -1908,12 +1908,37 @@ In this section our aim is to study some more geometrical properties that vector
 \begin{proof}
 	It suffices to define $A\left(X,Y\right):=f^{-1}(f(X)+f(Y))$ and $M(\lambda, X):=f^{-1}(\lambda f(X))$, for all $X,Y\in M_{2\times 1}(\R)$ and $\lambda\in \R$.
 	
-	Indeed:
+	Indeed, for all $X,Y,Z\in M_{2\times 1}(\R)$ and all $\lambda,\mu\in \R$ we have:
 	\begin{itemize}
 		\item \begin{align*}
 			A(A(X,Y),Z)&=A(f^{-1}(f(X)+f(Y)),Z)\\
 			&=f^{-1}(f(f^{-1}(f(X)+f(Y)))+f(Z))\\
-			&=f^{-1}((f(X)+f(Y))+f(Z))
-		\end{align*}
+			&=f^{-1}((f(X)+f(Y))+f(Z))\\
+			&=f^{-1}(f(X)+(f(Y)+f(Z)))\\
+			&=f^{-1}(f(X)+f(f^{-1}(f(Y)+f(Z))))\\
+			&=A(X,f^{-1}(f(Y)+f(Z)))=A(X,A(Y,Z))
+		\end{align*} so $A$ is associative;
+		
+		\item \begin{align*}
+			A(X,Y)&=f^{-1}(f(X)+f(Y))\\
+			&=f^{-1}(f(Y)+f(X))=A(Y,X)
+		\end{align*}so $A$ is commutative;
+		
+		\item Let $0:=\begin{pmatrix}
+		0\\0
+		\end{pmatrix}$. Then $f(0)=0$, so\[A(X,0)=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of $A$;
+		
+		\item If $X=\begin{pmatrix}
+		x_1\\x_2
+		\end{pmatrix}$, let $-X:=\begin{pmatrix}
+		-x_1\\-x_2
+		\end{pmatrix}$. Then $f(X)+f(-X)=(x_1,x_2)+(-x_1,-x_2)=0=f(0)$, so $A(X,-X)=f^{-1}(f(X)+f(-X))=f^{-1}(f(0))=0$ so $-X$ is the additive inverse of $X$;
+		
+		\item \begin{align*}
+			M(\lambda,M(\mu,X))&=M(\lambda,f^{-1}(\mu f(X)))\\
+			&=f^{-1}(\lambda f(f^{-1}(\mu f(X))))\\
+			&=f^{-1}(\lambda (\mu f(X)))\\
+			&=f^{-1}((\lambda\mu)f(X))=M(\lambda\mu, X)
+		\end{align*}so $M$ is associative;
 	\end{itemize}
 \end{proof}
