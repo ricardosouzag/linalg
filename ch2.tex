@@ -2032,7 +2032,7 @@ So we can think of $2\times 2$ matrices as linear transformations, and vice-vers
 Since we used a result like this to introduce addition and scalar multiplication to $2\times 1$ matrices, you can guess what's coming next, right?
 
 \begin{prop}
-	Let $f,g:\R^2\to\R^2$ be two linear functions and $\lambda\in \R$  be any scalar. Then the functions $f+g,f\circ g,\lambda f:\R^2\to\R^2$ defined, respectively, as $(f+g)(v):=f(v)+g(v)$, $(f\circ g)(v):=f(g(v))$ and $(\lambda f)(v):=f(\lambda v)$ are linear functions.
+	Let $f,g:\R^2\to\R^2$ be two linear functions and $\lambda\in \R$  be any scalar. Then the functions $f+g,f\circ g,\lambda f:\R^2\to\R^2$ defined, respectively, as $(f+g)(v):=f(v)+g(v)$, $(f\circ g)(v):=f(g(v))$ and $(\lambda f)(v):=\lambda f(v)$ are linear functions.
 \end{prop}
 \begin{proof}
 	Choose, once and for all, $v,u\in \R^2$ and $\mu\in \R$. Then:
@@ -2063,7 +2063,7 @@ Since we used a result like this to introduce addition and scalar multiplication
 		
 		\item \underline{$\lambda f$ is linear:}
 		\begin{align*}
-			(\lambda f)(v+u)&=\lambda f(v+u)\\
+			(\lambda f)(v+u)&=f\lambda(v+u)\\
 			&=\lambda (f(v)+f(u))\\
 			&=\lambda f(v)+\lambda f(u)=(\lambda f)(v)+(\lambda f)(u)
 		\end{align*}and
