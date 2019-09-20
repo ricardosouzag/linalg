@@ -1994,3 +1994,19 @@ a\\b
 \end{pmatrix}.\]
 
 For this very reason, we can think of the elements of $\R^2$ not only as pairs of real numbers, not only as points in a plane, not only as vectors, but also as $2\times 1$ matrices.
+
+\bigskip
+Now that we can think of vectors as matrices, it's no surprise to also be able to think of linear maps as matrices.
+
+\begin{prop}
+	For each fixed base $B\subseteq \R^2$ of $\R^2$, there is a bijection $M_{2\times 2}(\R)\iso\hom_\R(\R^2,\R^2)$.
+\end{prop}
+\begin{proof}
+	Let $B=\{b_1,b_2\}$ be a base of $\R^2$. Define $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ by putting
+	\[\phi(f):=\begin{pmatrix}
+	f(b_1)&f(b_2)
+	\end{pmatrix}\]where $f(b_1)$ and $f(b_2)$ are written as $2\times 1$ matrices. That is, if $f(b_1)=(a_1,a_2)$ and $f(b_2)=(a_3,a_4)$ then we put $\phi(f)=\begin{pmatrix}
+	a_1&a_3\\
+	a_2&a_4
+	\end{pmatrix}$.
+\end{proof}
