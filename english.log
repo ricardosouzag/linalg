@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  20 SEP 2019 18:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  20 SEP 2019 18:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1126,20 +1126,21 @@ $ \OT1/cmr/m/it/12 be any col-lec-tion of vec-tors. Then $[]\OMS/cmsy/m/n/12 f\
 OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
  []
 
-[109] [110] [111] [112] [113] [114] [115] [116] [117]) [118]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118]) [119]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
- (./english.aux)
+
+(./english.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
 Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: E084BC93DECFC9DA842DCC9A4A34DD72;2041.
  ) 
 Here is how much of TeX's memory you used:
- 35916 strings out of 492646
- 855853 string characters out of 6133325
+ 35918 strings out of 492646
+ 855878 string characters out of 6133325
  1042714 words of memory out of 5000000
- 38523 multiletter control sequences out of 15000+600000
+ 38524 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,16n,119p,830b,2498s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1159,10 +1160,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (119 pages, 623053 bytes).
+Output written on english.pdf (120 pages, 624217 bytes).
 PDF statistics:
- 1442 PDF objects out of 1728 (max. 8388607)
- 1290 compressed objects within 13 object streams
- 691 named destinations out of 1000 (max. 500000)
+ 1446 PDF objects out of 1728 (max. 8388607)
+ 1293 compressed objects within 13 object streams
+ 692 named destinations out of 1000 (max. 500000)
  229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
