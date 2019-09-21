@@ -2025,7 +2025,7 @@ Now that we can think of vectors as matrices, it's no surprise to also be able t
 		\end{pmatrix}$. We then define $f':\R^2\to\R^2$ by putting $f'(e_1):=(a,b)$ and $f'(e_2):=(c,d)$. This defines a unique linear function, by definition of base. Now, clearly, $\phi(f')=A$, so $A\in\im(\phi)$ and $\phi$ is surjective.
 	\end{itemize}
 
-This shows that $\phi$ is bijective for each base $B$, and so we have proven the result.
+This shows that $\phi$ is bijective, and so we have proven the result.
 \end{proof}
 
 So we can think of $2\times 2$ matrices as linear transformations, and vice-versa.
@@ -2079,7 +2079,7 @@ This ends the proof.
 \end{proof}
 
 \begin{df}
-	Given a base $B\subseteq \R^2$, the bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_Y=\phi^{-1}(Y)$.
+	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(f_X+f_Y)$$ $$XY:=\phi(f_X\circ f_Y)$$ $$\lambda X:=\phi(\lambda f_X),$$ where $f_X=\phi^{-1}(X)$ and $f_Y=\phi^{-1}(Y)$.
 \end{df}
 
 Now, it would be great to be able to calculate each of those matrices. Well, it turns out to be easier than it seems:
@@ -2196,4 +2196,33 @@ To finally and this section, we'll now introduce the $1\times 2$ matrices.
 	\end{pmatrix}=(x,y)$.
 	
 	This is clearly a bijection.
+\end{proof}
+
+Since we already see matrices as linear transformations we would like to teach matrices how to act on $1\times 2$ matrices then.
+
+To do that, however, we need to create matrices in a new way:
+
+\begin{prop}
+	The function $\tau:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ given by $$\tau(f):=\begin{pmatrix}
+	f(e_1)\\f(e_2)
+	\end{pmatrix}$$where $f(e_1)$ and $f(e_2)$ are written as $1\times 2$ matrices is a bijection.
+\end{prop}
+\begin{proof}
+	Just to make it clear, we're defining $$\tau(f)=\begin{pmatrix}
+	a_1&a_2\\a_3&a_4
+	\end{pmatrix}$$where $f(e_1)=(a_1,a_2)$ and $f(e_2)=(a_3,a_4)$ as usual.
+	
+	\begin{itemize}
+		\item \underline{$\tau$ is injective:}
+		
+		Assume that $f,g:\R^2\to\R^2$ are two linear functions such that $\tau(f)=\tau(g)$. But then this means that $f(e_1)=g(e_1)$ and $f(e_2)=g(e_2)$. But since linear functions are entirely determined by how they act on a base, this implies that $f=g$ so $\tau$ is injective.
+		
+		\item \underline{$\tau$ is surjective:}
+		
+		Take any $2\times 2$ matrix $A=\begin{pmatrix}
+		a&b\\c&d
+		\end{pmatrix}$. We then define $f':\R^2\to\R^2$ by putting $f'(e_1):=(a,b)$ and $f'(e_2)=(c,d)$. This defines a unique linear function, by definition of base. Now, clearly, $\tau(f')=A$, so $A\in\im(\tau)$ and $\tau$ is surjective.
+	\end{itemize}
+
+This shows that $\tau$ is bijective, and so we have proven the result.
 \end{proof}
