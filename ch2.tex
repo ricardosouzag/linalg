@@ -2205,23 +2205,23 @@ To do that, however, we need to create matrices in a new way:
 	\end{pmatrix}$ is a bijection.
 \end{prop}
 \begin{proof}
-	Just to make it clear, we're defining $$\tau(f)=\begin{pmatrix}
-	a_1&a_2\\a_3&a_4
-	\end{pmatrix}$$where $f(e_1)=(a_1,a_2)$ and $f(e_2)=(a_3,a_4)$ as usual.
+	Let us put $\tau(A)=\tau_A$ just to simplify our notation. Then, if $r_1$ and $r_2$ are, respectively, the first and second rows of $A$, then $\tau_A(e_1)=\varphi(r_1)$ and $\tau_A(e_2)=\varphi(r_2)$.
+	
+	
 	
 	\begin{itemize}
 		\item \underline{$\tau$ is injective:}
 		
-		Assume that $f,g:\R^2\to\R^2$ are two linear functions such that $\tau(f)=\tau(g)$. But then this means that $f(e_1)=g(e_1)$ and $f(e_2)=g(e_2)$. But since linear functions are entirely determined by how they act on a base, this implies that $f=g$ so $\tau$ is injective.
+		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\tau_A=\tau_B$. This means, in particular, that $\tau_A(e_1)=\tau_B(e_1)$ and $\tau_A(e_2)=\tau_B(e_2)$. But this implies that the first and second columns of $A$ and $B$ are equal. Since they only have two columns, this implies $A=B$, and so $\varphi$ is injective.
 		
 		\item \underline{$\tau$ is surjective:}
 		
-		Take any $2\times 2$ matrix $A=\begin{pmatrix}
-		a&b\\c&d
-		\end{pmatrix}$. We then define $f':\R^2\to\R^2$ by putting $f'(e_1):=(a,b)$ and $f'(e_2)=(c,d)$. This defines a unique linear function, by definition of base. Now, clearly, $\tau(f')=A$, so $A\in\im(\tau)$ and $\tau$ is surjective.
+		Take any linear function $f:\R^2\to \R^2$. Then by computing $f(e_1)=(a,b)$ and $f(e_2)=(c,d)$ we can then define $A^f:=\begin{pmatrix}
+		a&c\\b&d
+		\end{pmatrix}$. Clearly, then, $\tau_{A^f}=f$, so $f\in\im(\tau)$ and so $\tau$ is surjective.
 	\end{itemize}
-
-This shows that $\tau$ is bijective, and so we have proven the result.
+	
+	This shows that $\tau$ is bijective, and so we have proven the result.
 \end{proof}
 
 With this, we can finally define how to act on $1\times 2$ matrices:
