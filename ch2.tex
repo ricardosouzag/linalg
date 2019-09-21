@@ -2003,26 +2003,22 @@ Now that we can think of vectors as matrices, it's no surprise to also be able t
 	There is a bijection $M_{2\times 2}(\R)\iso\hom_\R(\R^2,\R^2)$.
 \end{prop}
 \begin{proof}
-	Let $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Define $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ by putting
-	\[\phi(f):=\begin{pmatrix}
-	f(e_1)&f(e_2)
-	\end{pmatrix}\]where $f(e_1)$ and $f(e_2)$ are written as $2\times 1$ matrices.
+	Let $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Define $\phi:M_{2\times 2}(\R)\to \hom_\R(\R^2,\R^2)$ by putting, for each $A=\begin{pmatrix}
+	a_1&a_3\\a_2&a_4
+	\end{pmatrix}$, $\phi(A)(e_1):=(a_1,a_2)$ and $\phi(A)(e_2):=(a_3,a_4)$.
 	
-	That is, if $f(e_1)=(a_1,a_2)$ and $f(e_2)=(a_3,a_4)$ then we put $\phi(f)=\begin{pmatrix}
-	a_1&a_3\\
-	a_2&a_4
-	\end{pmatrix}$.
+	We'll denote $\phi(A)$ simply by $\phi_A$. Then the above equalities become $\phi_A(e_1)=(a_1,a_2)$ and $\phi_A(e_2)=(a_3,a_4)$ -  that is, if $c_1$ and $c_2$ are, respectively, the first and second columns of $A$, then $\phi_A(e_1)=\psi(c_1)$ and $\phi_A(e_2)=\psi(c_2)$.
 	
 	\begin{itemize}
 		\item \underline{$\phi$ is injective:}
 		
-		Assume that $f,g:\R^2\to\R^2$ are two linear functions such that $\phi(f)=\phi(g)$. But then this means that $f(e_1)=g(e_1)$ and $f(e_2)=g(e_2)$. But since linear functions are entirely determined by how they act on a base, this implies that $f=g$, and so $\phi$ is injective.
+		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\phi_A=\phi_B$. This means, in particular, that $\phi_A(e_1)=\phi_B(e_1)$ and $\phi_A(e_2)=\phi_B(e_2)$. But this implies that the first and second columns of $A$ and $B$ are equal. Since they only have two columns, this implies $A=B$, and so $\psi$ is injective.
 		
 		\item \underline{$\phi$ is surjective:}
 		
-		Take any $2\times 2$ matrix $A=\begin{pmatrix}
+		Take any linear function $f:\R^2\to \R^2$. Then by computing $f(e_1)=(a,b)$ and $f(e_2)=(c,d)$ we can then define $A^f:=\begin{pmatrix}
 		a&c\\b&d
-		\end{pmatrix}$. We then define $f':\R^2\to\R^2$ by putting $f'(e_1):=(a,b)$ and $f'(e_2):=(c,d)$. This defines a unique linear function, by definition of base. Now, clearly, $\phi(f')=A$, so $A\in\im(\phi)$ and $\phi$ is surjective.
+		\end{pmatrix}$. Clearly, then, $\psi_{A^f}=f$, so $f\in\im(\psi)$ and so $\psi$ is surjective.
 	\end{itemize}
 
 This shows that $\phi$ is bijective, and so we have proven the result.
