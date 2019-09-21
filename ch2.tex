@@ -2302,13 +2302,13 @@ Now, let's do the same for $2\times 2$ matrices:
 	
 	Take any $A=\begin{pmatrix}
 	a&b\\c&d
-	\end{pmatrix}$. Then $\phi_A(e_1)=(a,c)$ and $\phi_A(e_2)=(b,d)$. Therefore, $A^t=\tau^{-1}(\phi_A)=\begin{pmatrix}
+	\end{pmatrix}$. Then $\phi_A(e_1)=(a,c)$ and $\phi_A(e_2)=(b,d)$. Therefore, $$A^t=\tau^{-1}(\phi_A)=\begin{pmatrix}
 	a&c\\b&d
-	\end{pmatrix}$.
+	\end{pmatrix}.$$
 	
-	But now $\phi_{A^t}(e_1)=(a,b)$ and $\phi_{A^t}(e_2)=(c,d)$. Therefore, $(A^t)^t=\tau^{-1}(\phi_{A^t})=\begin{pmatrix}
+	But now $\phi_{A^t}(e_1)=(a,b)$ and $\phi_{A^t}(e_2)=(c,d)$. Therefore, $$(A^t)^t=\tau^{-1}(\phi_{A^t})=\begin{pmatrix}
 	a&b\\c&d
-	\end{pmatrix}=A$.
+	\end{pmatrix}=A.$$
 	
 	Combining all of this together, we see that $(\tau^{-1}\circ \phi\circ\tau^{-1}\circ\phi)(A)=(A^t)^t=A=\id_{M_{2\times 2}(\R)}(A)$ and so the result follows.
 \end{proof}
