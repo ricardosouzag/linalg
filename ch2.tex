@@ -2012,7 +2012,7 @@ Now that we can think of vectors as matrices, it's no surprise to also be able t
 	\begin{itemize}
 		\item \underline{$\phi$ is injective:}
 		
-		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\phi_A=\phi_B$. This means, in particular, that $\phi_A(e_1)=\phi_B(e_1)$ and $\phi_A(e_2)=\phi_B(e_2)$. But this implies that the first and second columns of $A$ and $B$ are equal. Since they only have two columns, this implies $A=B$, and so $\psi$ is injective.
+		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\phi_A=\phi_B$. This means, in particular, that $\phi_A(e_1)=\phi_B(e_1)$ and $\phi_A(e_2)=\phi_B(e_2)$. But this implies that the first and second columns of $A$ and $B$ are equal. Since they only have two columns, this implies $A=B$, and so $\phi$ is injective.
 		
 		\item \underline{$\phi$ is surjective:}
 		
@@ -2212,12 +2212,12 @@ To do that, however, we need to create matrices in a new way:
 	\begin{itemize}
 		\item \underline{$\tau$ is injective:}
 		
-		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\tau_A=\tau_B$. This means, in particular, that $\tau_A(e_1)=\tau_B(e_1)$ and $\tau_A(e_2)=\tau_B(e_2)$. But this implies that the first and second columns of $A$ and $B$ are equal. Since they only have two columns, this implies $A=B$, and so $\varphi$ is injective.
+		Assume that $A,B\in M_{2\times 2}(\R)$ are two matrices such that $\tau_A=\tau_B$. This means, in particular, that $\tau_A(e_1)=\tau_B(e_1)$ and $\tau_A(e_2)=\tau_B(e_2)$. But this implies that the first and second rows of $A$ and $B$ are equal. Since they only have two rows, this implies $A=B$, and so $\tau$ is injective.
 		
 		\item \underline{$\tau$ is surjective:}
 		
 		Take any linear function $f:\R^2\to \R^2$. Then by computing $f(e_1)=(a,b)$ and $f(e_2)=(c,d)$ we can then define $A^f:=\begin{pmatrix}
-		a&c\\b&d
+		a&b\\c&d
 		\end{pmatrix}$. Clearly, then, $\tau_{A^f}=f$, so $f\in\im(\tau)$ and so $\tau$ is surjective.
 	\end{itemize}
 	
