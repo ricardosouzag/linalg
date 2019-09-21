@@ -1127,7 +1127,7 @@ OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
  []
 
 [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
-[121] [122] [123] [124] [125]) [126]
+[121] [122] [123] [124] [125]) [126] [127]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (./english.aux)
@@ -1137,8 +1137,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: E084BC93DECFC9DA842DCC9A4A34DD72;2041.
  ) 
 Here is how much of TeX's memory you used:
- 35968 strings out of 492646
- 856676 string characters out of 6133325
+ 35969 strings out of 492646
+ 856684 string characters out of 6133325
  1042714 words of memory out of 5000000
  38535 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
@@ -1160,10 +1160,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (127 pages, 646670 bytes).
+Output written on english.pdf (128 pages, 647139 bytes).
 PDF statistics:
- 1516 PDF objects out of 1728 (max. 8388607)
- 1355 compressed objects within 14 object streams
- 731 named destinations out of 1000 (max. 500000)
+ 1520 PDF objects out of 1728 (max. 8388607)
+ 1358 compressed objects within 14 object streams
+ 732 named destinations out of 1000 (max. 500000)
  229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
