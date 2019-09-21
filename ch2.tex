@@ -2228,6 +2228,13 @@ To do that, however, we need to create matrices in a new way:
 This shows that $\tau$ is bijective, and so we have proven the result.
 \end{proof}
 
+With this, we can finally define how to act on $1\times 2$ matrices:
+
+\begin{df}
+	The evaluation map $ev:\hom_\R(\R^2,\R^2)\times\R^2\to \R^2$ induces a unique evaluation map $M_{1\times 2}(\R)\times M_{2\times 2}(\R)\to M_{1\times 2}(\R)$ given by
+	\[XA:=\varphi^{-1}(\tau_A(\varphi_X)).\]
+\end{df}
+
 \begin{df}
 	We define the \textbf{transpose map} $(-)^t:M_{2\times 1}(\R)\to M_{1\times 2}(\R)$ to be the map given by $X^t:=\varphi^{-1}(\psi_X)$.
 	
