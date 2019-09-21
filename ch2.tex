@@ -2155,7 +2155,7 @@ Finally, we can prove one last result.
 
 \begin{df}
 	The evaluation map induces another evaluation map $M_{2\times 2}(\R)\times M_{2\times 1}(\R)\to M_{2\times 1}(\R)$ given by 
-	\[AX:=\psi^{-1}(f_A(\psi_X)).\]
+	\[AX:=\psi^{-1}(\phi_A(\psi_X)).\]
 \end{df}
 
 \begin{lemma}
@@ -2170,13 +2170,13 @@ Finally, we can prove one last result.
 	\end{pmatrix}$.
 \end{lemma}
 \begin{proof}
-	Let, once more, $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Then $f_A(e_1)=(a_1,a_2)$ and $f_A(e_2)=(a_3,a_4)$.
+	Let, once more, $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Then $\phi_A(e_1)=(a_1,a_2)$ and $\phi_A(e_2)=(a_3,a_4)$.
 	
 	Therefore,
 	\begin{align*}
-		f_A(\psi_X)&=f_A(x_1,x_2)\\
-		&=f_A(x_1e_1+x_2e_2)\\
-		&=x_1f_A(e_1)+x_2f_A(e_2)\\
+		\phi_A(\psi_X)&=\phi_A(x_1,x_2)\\
+		&=\phi_A(x_1e_1+x_2e_2)\\
+		&=x_1\phi_A(e_1)+x_2\phi_A(e_2)\\
 		&=x_1(a_1,a_2)+x_2(a_3,a_4)\\
 		&=(a_1x_1,a_2x_1)+(a_3x_2,a_4x_2)=(a_1x_1+a_3x_2,a_2x_1+a_4x_2)
 	\end{align*}and we see that \[AX=\begin{pmatrix}
