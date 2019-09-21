@@ -2237,7 +2237,7 @@ This shows that $\tau$ is bijective, and so we have proven the result.
 	\end{pmatrix}$.
 \end{df}
 \begin{prop}
-	The transpose map is a bijection.
+	The transpose map is a bijection between $M_{2\times 1}(\R)$ and $M_{1\times 2}(\R)$
 \end{prop}
 \begin{proof}
 	This is immediate from the definition of the transpose map: Since $(-)^t=\varphi^{-1}\circ \psi$ and both $\varphi^{-1}$ and $\psi$ are bijections, the result follows.
@@ -2247,5 +2247,17 @@ This shows that $\tau$ is bijective, and so we have proven the result.
 \end{df}
 
 \begin{df}
-	We define the \textbf{transpose map} (once again, by abuse of notation) $(-)^t:M_{2\times 2}(\R)\to M_{2\times 2}$ to be the map given by $A^t=\tau(\phi_A)$.
+	We define the \textbf{transpose map} (once again, by abuse of notation) $(-)^t:M_{2\times 2}(\R)\to M_{2\times 2}(\R)$ to be the map given by $A^t=\tau(\phi_A)$.
+	
+	In other words, if we write $A=\begin{pmatrix}
+	a&c\\b&d
+	\end{pmatrix}$ then its transpose is $A^t=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}$.
 \end{df}
+\begin{prop}
+	The transpose map is a bijection between $M_{2\times2}(\R)$ and itself.
+\end{prop}
+\begin{proof}
+	This is immediate from the definition of the transpose map: Since $(-)^t=\tau\circ \phi^{-1}$ and both $\tau$ and $\phi^{-1}$ are bijections, the result follows.
+\end{proof}
