@@ -1883,81 +1883,82 @@ In this section our aim is to study some more geometrical properties that vector
 	The set of $2\times 1$ real matrices is in bijection with $\R^2$ - that is, $M_{2\times 1}(\R)\iso\R^2$.
 \end{prop}
 \begin{proof}
-	Let $f:M_{2\times 1}(\R)\to\R^2$ be given by $f\begin{pmatrix}
+	Let $\psi:M_{2\times 1}(\R)\to\R^2$ be given by $\psi\begin{pmatrix}
 	x\\y
-	\end{pmatrix}:=(x,y)$. Then $f$ is clearly a bijection.
+	\end{pmatrix}:=(x,y)$. Then $\psi$ is clearly a bijection.
 \end{proof}
 
+\begin{df}
+	For any $X,Y\in M_{2\times 1}(\R)$ and any $\lambda \in \R$ we define $X+Y$ and $\lambda X$ by putting
+	\[X+Y:=\psi^{-1}(\psi_X+\psi_Y)\]
+	\[\lambda X:=\psi^{-1}(\lambda\psi_X)\]where $\psi_X=\psi(X)$ and $\psi_Y=\psi(Y)$.
+\end{df}
+
 \begin{lemma}
-	The set $M_{2\times 1}(\R)$ of all $2\times 1$ has an addition $A:M_{2\times 1}(\R)\times M_{2\times 1}(\R)\to M_{2\times 1}(\R)$ and a scalar multiplication $M:\R\times M_{2\times 1}(\R)$ satisfying:
-	\begin{multicols}{2}
+	Let $X,Y,Z\in M_{2,1}(\R)$ and $\lambda,\mu\in R$. Then:
 		\begin{itemize}
-			\item $A$ is associative;
-			\item $A$ is commutative;
-			\item $A$ has an identity element;
-			\item $A$ has inverses;
-			\item $M$ is associative;
-			\item $M$ is commutative;
-			\item $M$ has an identity element;
-			\item $M$ distributes over $A$;
-			\item $M$ distributes over real number addition.
+			\item $(X+Y)+Z=X+(Y+Z)$
+			\item $X+Y=Y+X$;
+			\item There exists a matrix $0\in M_{2\times 1}(\R)$ such that $X+0=0+X=X$;
+			\item There exists a matrix $-X\in M_{2\times 1}(\R)$ such that $X+(-X)=(-X)+X=0$
+			\item $\lambda(\mu X)=(\lambda \mu)X$;
+			\item $\lambda X=X\lambda$;
+			\item There exists a scalar $1\in \R$ such that $1X=X1=X$;
+			\item $\lambda(X+Y)=\lambda X+\lambda Y$;
+			\item $(\lambda+\mu)X=\lambda X+\mu X$
 		\end{itemize}
-	\end{multicols}
 \end{lemma}
 \begin{proof}
-	It suffices to define $X+Y:=f^{-1}(f(X)+f(Y))$ and $\lambda X:=f^{-1}(\lambda f(X))$, for all $X,Y\in M_{2\times 1}(\R)$ and $\lambda\in \R$.
-	
-	Indeed, for all $X,Y,Z\in M_{2\times 1}(\R)$ and all $\lambda,\mu\in \R$ we have:
 	\begin{itemize}
 		\item \begin{align*}
-			(X+Y)+Z&=f^{-1}(f(X)+f(Y))+Z\\
-			&=f^{-1}(f(f^{-1}(f(X)+f(Y)))+f(Z))\\
-			&=f^{-1}((f(X)+f(Y))+f(Z))\\
-			&=f^{-1}(f(X)+(f(Y)+f(Z)))\\
-			&=f^{-1}(f(X)+f(f^{-1}(f(Y)+f(Z))))\\
-			&=X+f^{-1}(f(Y)+f(Z))=X+(Y+Z)
+			(X+Y)+Z&=\psi^{-1}(\psi_X+\psi_Y)+Z\\
+			&=\psi^{-1}(\psi(\psi^{-1}(\psi_X+\psi_Y))+\psi(Z))\\
+			&=\psi^{-1}((\psi_X+\psi_Y)+\psi(Z))\\
+			&=\psi^{-1}(\psi_X+(\psi_Y+\psi(Z)))\\
+			&=\psi^{-1}(\psi_X+\psi(\psi^{-1}(\psi_Y+\psi(Z))))\\
+			&=X+\psi^{-1}(\psi_Y+\psi(Z))=X+(Y+Z)
 		\end{align*} so addition is associative;
 		
 		\item \begin{align*}
-			X+T&=f^{-1}(f(X)+f(Y))\\
-			&=f^{-1}(f(Y)+f(X))=Y+X
+			X+T&=\psi^{-1}(\psi_X+\psi_Y)\\
+			&=\psi^{-1}(\psi_Y+\psi_X)=Y+X
 		\end{align*}so addition is commutative;
 		
-		\item Let $0:=f^{-1}(0,0)$. Then $f(0)=(0,0)$, so\[X+0=f^{-1}(f(X)+f(0))=f^{-1}(f(X))=X\]so $0$ is the identity element of the addition;
+		\item Let $0:=\psi^{-1}(0,0)$. Then $\psi(0)=(0,0)$, so\[X+0=\psi^{-1}(\psi_X+\psi(0))=\psi^{-1}(\psi_X)=X\]so $0$ is the identity element of the addition;
 		
-		\item Let $-X:=f^{-1}(-f(X))$. Then \begin{align*}
-			f(X)+f(-X)&=f(X)+f(f^{-1}(-f(X)))\\
-			&=f(X)-f(X)=(0,0)=f(0),
+		\item Let $-X:=\psi^{-1}(-\psi_X)$. Then \begin{align*}
+			\psi_X+\psi(-X)&=\psi_X+\psi(\psi^{-1}(-\psi_X))\\
+			&=\psi_X-\psi_X=(0,0)=\psi(0),
 		\end{align*}so \begin{align*}
-			X+(-X)&=f^{-1}(f(X)+f(-X))\\&=f^{-1}(f(0))=0
+			X+(-X)&=\psi^{-1}(\psi_X+\psi(-X))\\&=\psi^{-1}(\psi(0))=0
 		\end{align*}and $-X$ is the additive inverse of $X$;
 		
 		\item \begin{align*}
-			\lambda(\mu X)&=\lambda(f^{-1}(\mu f(X)))\\
-			&=f^{-1}(\lambda f(f^{-1}(\mu f(X))))\\
-			&=f^{-1}(\lambda (\mu f(X)))\\
-			&=f^{-1}((\lambda\mu)f(X))=(\lambda\mu) X
+			\lambda(\mu X)&=\lambda(\psi^{-1}(\mu \psi_X))\\
+			&=\psi^{-1}(\lambda \psi(\psi^{-1}(\mu \psi_X)))\\
+			&=\psi^{-1}(\lambda (\mu \psi_X))\\
+			&=\psi^{-1}((\lambda\mu)\psi_X)=(\lambda\mu) X
 		\end{align*}so scalar multiplication is associative;
 		
-		\item $\lambda X=f^{-1}(\lambda f(X))=f^{-1}(f(X)\lambda)=X\lambda$ so scalar multiplication is commutative;
+		\item $\lambda X=\psi^{-1}(\lambda \psi_X)=\psi^{-1}(\psi_X\lambda)=X\lambda$ so scalar multiplication is commutative;
 		
-		\item $1X=f^{-1}(1f(X))=f^{-1}(f(X))=X$ so $1$ is the identity of the scalar multiplication;
+		\item $1X=\psi^{-1}(1\psi_X)=\psi^{-1}(\psi_X)=X$ so $1$ is the identity of the scalar multiplication;
 		
 		\item \begin{align*}
-			\lambda(X+Y)&=\lambda f^{-1}(f(X)+f(Y))\\
-			&=f^{-1}(\lambda f(f^{-1}(f(X)+f(Y))))\\
-			&=f^{-1}(\lambda (f(X)+f(Y)))\\
-			&=f^{-1}(\lambda f(X)+\lambda f(Y))\\
-			&=f^{-1}(f(f^{-1}(\lambda f(X))+f(f^{-1}(\lambda f(Y)))))\\
-			&=f^{-1}(\lambda f(X))+f^{-1}(\lambda f(Y))\\
+			\lambda(X+Y)&=\lambda \psi^{-1}(\psi_X+\psi_Y)\\
+			&=\psi^{-1}(\lambda \psi(\psi^{-1}(\psi_X+\psi_Y)))\\
+			&=\psi^{-1}(\lambda (\psi_X+\psi_Y))\\
+			&=\psi^{-1}(\lambda \psi_X+\lambda \psi_Y)\\
+			&=\psi^{-1}(\psi(\psi^{-1}(\lambda \psi_X)+\psi(\psi^{-1}(\lambda \psi_Y))))\\
+			&=\psi^{-1}(\lambda \psi_X)+\psi^{-1}(\lambda \psi_Y)\\
 			&=\lambda X+\lambda Y
 		\end{align*}so scalar multiplication distributes over addition;
 		
 		\item \begin{align*}
-			(\lambda+\mu)(X)&=f^{-1}((\lambda+\mu)f(X))\\
-			&=f^{-1}(\lambda f(X)+\mu f(X))\\
-			&=f^{-1}(f(f^{-1}(\lambda f(X)))+f(f^{-1}(\mu f(X))))\\
-			&=f^{-1}(\lambda f(X))+f^{-1}(\mu f(X))\\
+			(\lambda+\mu)(X)&=\psi^{-1}((\lambda+\mu)\psi_X)\\
+			&=\psi^{-1}(\lambda \psi_X+\mu \psi_X)\\
+			&=\psi^{-1}(\psi(\psi^{-1}(\lambda \psi_X))+\psi(\psi^{-1}(\mu \psi_X)))\\
+			&=\psi^{-1}(\lambda \psi_X)+\psi^{-1}(\mu \psi_X)\\
 			&=\lambda X+\mu X
 		\end{align*}so scalar multiplication distributes over real number addition.
 	\end{itemize}
@@ -2143,3 +2144,16 @@ Now, it would be great to be able to calculate each of those matrices. Well, it 
 	
 	This ends the proof.
 \end{proof}
+
+This is the best explanation why matrix multiplication is so weird. Simply put, it's because it's the worst possible way to write function composition. But, all in all, it's just that - function composition.
+
+Finally, we can prove one last result.
+
+\begin{df}
+	We define the \textbf{evaluation map} $ev:\hom_\R(\R^2,\R^2)\times \R^2\to \R^2$ to be the map given by $ev(f,v):=f(v)$.
+\end{df}
+
+\begin{df}
+	The evaluation map induces a map $M_{2\times 2}(\R)\times M_{2\times 1}(\R)\to M_{2\times 1}(\R)$ given by 
+	\[AX:=f^{-1}()\]
+\end{df}
