@@ -2247,13 +2247,13 @@ With this, we can finally define how to act on $1\times 2$ matrices:
 	\end{pmatrix}$.
 \end{lemma}
 \begin{proof}
-	Let, once more, $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Then $\phi_A(e_1)=(a_1,a_2)$ and $\phi_A(e_2)=(a_3,a_4)$.
+	Let, once more, $E=\{e_1,e_2\}$ be the canonical base of $\R^2$. Then $\tau_A(e_1)=(a_1,a_2)$ and $\tau_A(e_2)=(a_3,a_4)$.
 	
 	Therefore,
 	\begin{align*}
-	\phi_A(\psi_X)&=\phi_A(x_1,x_2)\\
-	&=\phi_A(x_1e_1+x_2e_2)\\
-	&=x_1\phi_A(e_1)+x_2\phi_A(e_2)\\
+	\tau_A(\varphi_X)&=\tau_A(x_1,x_2)\\
+	&=\tau_A(x_1e_1+x_2e_2)\\
+	&=x_1\tau_A(e_1)+x_2\tau_A(e_2)\\
 	&=x_1(a_1,a_2)+x_2(a_3,a_4)\\
 	&=(a_1x_1,a_2x_1)+(a_3x_2,a_4x_2)=(a_1x_1+a_3x_2,a_2x_1+a_4x_2)
 	\end{align*}and we see that \[AX=\begin{pmatrix}
