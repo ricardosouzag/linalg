@@ -2378,13 +2378,11 @@ Therefore,
 Finally, to end this section, we'll introduce a new perspective which is better seen from the perspective of matrices:
 
 \begin{df}
-	Let $Y\in M_{1\times 2}(\R)$ and $X\in M_{2\times 1}(\R)$. Inspired by the evaluation maps, we define the \textbf{multiplication of $Y$ and $X$} to be the $1\times 1$ matrix $YX$ given by \[\begin{pmatrix}
+	Let $Y\in M_{1\times 2}(\R)$ and $X\in M_{2\times 1}(\R)$. Inspired by the evaluation maps, we define the \textbf{multiplication of $Y$ and $X$} to be the real number $YX$ given by \[\begin{pmatrix}
 	y_1&y_2
 	\end{pmatrix}\begin{pmatrix}
 	x_1\\x_2
-	\end{pmatrix}:=\begin{pmatrix}
-	x_1y_1+x_2y_2
-	\end{pmatrix}.\]
+	\end{pmatrix}:x_1y_1+x_2y_2.\]
 \end{df}
 
 \begin{lemma}
@@ -2422,6 +2420,8 @@ Finally, to end this section, we'll introduce a new perspective which is better 
 	a'_1&a'_2\\a'_3&a'_4
 	\end{pmatrix}.\]
 	
+	We'll only show (a), (b), (d), (f), (h) and (i), as the others are similar.
+	
 	\begin{enumerate}[a)]
 		\item \begin{align*}
 			Y(AX)&=\begin{pmatrix}
@@ -2451,6 +2451,33 @@ Finally, to end this section, we'll introduce a new perspective which is better 
 			\end{pmatrix}\right)\begin{pmatrix}
 			x_1\\x_2
 			\end{pmatrix}=(YA)X
+		\end{align*}
+		
+		\item[b)] \begin{align*}
+			(Y+Y')X&=\left(\begin{pmatrix}
+			y_1&y_2
+			\end{pmatrix}+\begin{pmatrix}
+			y_1'&y_2'
+			\end{pmatrix}\right)\begin{pmatrix}
+			x_1\\x_2
+			\end{pmatrix}\\
+			&=\begin{pmatrix}
+			y_1+y_1'&y_2+y_2'
+			\end{pmatrix}\begin{pmatrix}
+			x_1\\x_2
+			\end{pmatrix}\\
+			&=(y_1+y_1')x_1+(y_2+y_2')x_2\\
+			&=x_1y_1+x_1y'_1+x_2y_2+x_2y_2'\\
+			&=(x_1y_1+x_2y_2)+(x_1y_1'+x_2y_2')\\
+			&=\left(\begin{pmatrix}
+			y_1&y_2
+			\end{pmatrix}\begin{pmatrix}
+			x_1\\x_2
+			\end{pmatrix}\right)+\left(\begin{pmatrix}
+			y_1'&y_2'
+			\end{pmatrix}\begin{pmatrix}
+			x_1\\x_2
+			\end{pmatrix}\right)=YX+Y'X
 		\end{align*}
 	\end{enumerate}
 \end{proof}
