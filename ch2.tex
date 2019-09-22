@@ -2195,6 +2195,27 @@ Finally, we can prove one last result.
 	This is clearly a bijection.
 \end{proof}
 
+\begin{df}
+	For any $X,Y\in M_{1\times 2}(\R)$ and any $\lambda \in \R$ we define $X+Y$ and $\lambda X$ by putting
+	\[X+Y:=\varphi^{-1}(\varphi_X+\varphi_Y)\]
+	\[\lambda X:=\varphi^{-1}(\lambda\varphi_X)\]where $\varphi_X=\varphi(X)$ and $\varphi_Y=\varphi(Y)$.
+\end{df}
+
+\begin{lemma}
+	Let $X,Y,Z\in M_{2,1}(\R)$ and $\lambda,\mu\in R$. Then:
+	\begin{itemize}
+		\item $(X+Y)+Z=X+(Y+Z)$
+		\item $X+Y=Y+X$;
+		\item There exists a matrix $0\in M_{2\times 1}(\R)$ such that $X+0=0+X=X$;
+		\item There exists a matrix $-X\in M_{2\times 1}(\R)$ such that $X+(-X)=(-X)+X=0$
+		\item $\lambda(\mu X)=(\lambda \mu)X$;
+		\item $\lambda X=X\lambda$;
+		\item $1\in \R$ is such that $1X=X1=X$;
+		\item $\lambda(X+Y)=\lambda X+\lambda Y$;
+		\item $(\lambda+\mu)X=\lambda X+\mu X$
+	\end{itemize}
+\end{lemma}
+
 Since we already see matrices as linear transformations we would like to teach matrices how to act on $1\times 2$ matrices then.
 
 To do that, however, we need to create matrices in a new way:
