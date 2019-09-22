@@ -2486,4 +2486,10 @@ To end this section, then, we'll provide a list of good properties of all matric
 	\end{pmatrix}=v_1u_2+v_2u_2\]which ends the proof.
 \end{proof}
 
-In other words, the inner product of two vectors $v,u\in \R^2$ is just the multiplication of $v$, written as a $1\times 2$ matrix, and $u$, written as a $2\times 1$ matrix. 
+In other words, the inner product of two vectors $v,u\in \R^2$ is just the multiplication of $v$, written as a $1\times 2$ matrix, and $u$, written as a $2\times 1$ matrix.
+
+The reason we didn't simply define it using vectors, but instead went all the way around, passing through matrices, to define the inner product is twofold.
+
+First, because it makes way more sense to multiply matrices than it does to multiply vectors.
+
+Second, because further ahead we're gonna need to define what's called the \textbf{algebraic dual} of a vector space, and then we'll see that inner products arise naturally from algebraic dualization. However, in the case of $\R^2$, we'll see that the algebraic dual of $M_{2\times 1}(\R)$ is simply $M_{1\times 2}(\R)$ - so this mindset is a particular case of a more general approach we're gonna use later on.
