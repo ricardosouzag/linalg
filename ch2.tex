@@ -2202,12 +2202,12 @@ Finally, we can prove one last result.
 \end{df}
 
 \begin{lemma}
-	Let $X,Y,Z\in M_{1\times2}(\R)$ and $\lambda,\mu\in R$. Then:
+	Let $X,Y,Z\in M_{1\times2}(\R)$ and $\lambda,\mu\in \R$. Then:
 	\begin{itemize}
 		\item $(X+Y)+Z=X+(Y+Z)$
 		\item $X+Y=Y+X$;
-		\item There exists a matrix $0\in M_{2\times 1}(\R)$ such that $X+0=0+X=X$;
-		\item There exists a matrix $-X\in M_{2\times 1}(\R)$ such that $X+(-X)=(-X)+X=0$
+		\item There exists a matrix $0\in M_{1\times 2}(\R)$ such that $X+0=0+X=X$;
+		\item There exists a matrix $-X\in M_{1\times 2}(\R)$ such that $X+(-X)=(-X)+X=0$
 		\item $\lambda(\mu X)=(\lambda \mu)X$;
 		\item $\lambda X=X\lambda$;
 		\item $1\in \R$ is such that $1X=X1=X$;
@@ -2216,6 +2216,9 @@ Finally, we can prove one last result.
 	\end{itemize}
 \end{lemma}
 
+We'll refrain from doing this proof since it is essentially the same proof as in the case for $2\times 1$ matrices.
+
+\bigskip
 Since we already see matrices as linear transformations we would like to teach matrices how to act on $1\times 2$ matrices then.
 
 To do that, however, we need to create matrices in a new way:
@@ -2371,3 +2374,15 @@ Therefore,
 &=\psi^{-1}(\phi_{A^t}(\psi_{Y^t}))=A^tY^t
 \end{align*}so the result follows.
 \end{proof}
+
+Finally, to end this section, we'll introduce a new perspective which is better seen from the perspective of matrices:
+
+\begin{df}
+	Let $Y\in M_{1\times 2}(\R)$ and $X\in M_{2\times 1}(\R)$. ]Inspired by the evaluation maps, we define the \textbf{multiplication of $Y$ and $X$} to be the $1\times 1$ matrix $YX$ given by \[\begin{pmatrix}
+	y_1&y_2
+	\end{pmatrix}\begin{pmatrix}
+	x_1\\x_2
+	\end{pmatrix}:=\begin{pmatrix}
+	x_1y_1+x_2y_2
+	\end{pmatrix}.\]
+\end{df}
