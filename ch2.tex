@@ -2418,29 +2418,6 @@ Finally, to end this section, we'll introduce a new perspective which is better 
 	This follows trivially by definition of $\sigma$.
 \end{proof}
 
-\begin{df}
-	Let $v,u\in \R^2$. We define the \textbf{inner product} of $v$ and $u$ to be the real number $\gen{v,u}$ given by
-	\[\gen{v,u}:=\sigma(\varphi^{-1}(v)\psi^{-1}(u))\].
-\end{df}
-
-\begin{prop}
-	For any two vectors $v=(v_1,v_2)$ and $u=(u_1,u_2)$ in $\R^2$, we have that $\gen{v,u}=v_1u_1+v_2u_2$.
-\end{prop}
-\begin{proof}
-	If $v=(v_1,v_2)$ and $u=(u_1,u_2)$, then $\varphi^{-1}(v)=\begin{pmatrix}
-	v_1&v_2
-	\end{pmatrix}$ and $\psi^{-1}(u)=\begin{pmatrix}
-	u_1\\u_2
-	\end{pmatrix}$.
-	
-	From this, we can see that $\varphi^{-1}(v)\psi^{-1}(u)=\begin{pmatrix}
-	v_1u_1+v_2u_2
-	\end{pmatrix}$ and, therefore,
-	\[\gen{v,u}=\sigma(\varphi^{-1}(v)\psi^{-1}(u))=\sigma\begin{pmatrix}
-	v_1u_1+v_2u_2
-	\end{pmatrix}=v_1u_2+v_2u_2\]which ends the proof.
-\end{proof}
-
 To end this section, then, we'll provide a list of good properties of all matrices additions and multiplications we've done so far.
 
 \begin{lemma}
@@ -2481,4 +2458,30 @@ To end this section, then, we'll provide a list of good properties of all matric
 	\end{pmatrix}.\]
 	
 	all the proofs follow by simple computation and will be left as an exercise to the reader.
+\end{proof}
+
+\newpage
+\subsection{The distance between us}
+
+\begin{df}
+	Let $v,u\in \R^2$. We define the \textbf{inner product} of $v$ and $u$ to be the real number $\gen{v,u}$ given by
+	\[\gen{v,u}:=\sigma(\varphi^{-1}(v)\psi^{-1}(u))\].
+\end{df}
+
+\begin{prop}
+	For any two vectors $v=(v_1,v_2)$ and $u=(u_1,u_2)$ in $\R^2$, we have that $\gen{v,u}=v_1u_1+v_2u_2$.
+\end{prop}
+\begin{proof}
+	If $v=(v_1,v_2)$ and $u=(u_1,u_2)$, then $\varphi^{-1}(v)=\begin{pmatrix}
+	v_1&v_2
+	\end{pmatrix}$ and $\psi^{-1}(u)=\begin{pmatrix}
+	u_1\\u_2
+	\end{pmatrix}$.
+	
+	From this, we can see that $\varphi^{-1}(v)\psi^{-1}(u)=\begin{pmatrix}
+	v_1u_1+v_2u_2
+	\end{pmatrix}$ and, therefore,
+	\[\gen{v,u}=\sigma(\varphi^{-1}(v)\psi^{-1}(u))=\sigma\begin{pmatrix}
+	v_1u_1+v_2u_2
+	\end{pmatrix}=v_1u_2+v_2u_2\]which ends the proof.
 \end{proof}
