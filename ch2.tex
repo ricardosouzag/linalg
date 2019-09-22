@@ -2378,11 +2378,29 @@ Therefore,
 Finally, to end this section, we'll introduce a new perspective which is better seen from the perspective of matrices:
 
 \begin{df}
-	Let $Y\in M_{1\times 2}(\R)$ and $X\in M_{2\times 1}(\R)$. Inspired by the evaluation maps, we define the \textbf{multiplication of $Y$ and $X$} to be the real number $YX$ given by \[\begin{pmatrix}
+	Let $Y\in M_{1\times 2}(\R)$ and $X\in M_{2\times 1}(\R)$. Inspired by the evaluation maps, we define the \textbf{multiplication of $Y$ and $X$} to be the $1\times 1$ matrix $YX$ given by \[\begin{pmatrix}
 	y_1&y_2
 	\end{pmatrix}\begin{pmatrix}
 	x_1\\x_2
-	\end{pmatrix}:x_1y_1+x_2y_2.\]
+	\end{pmatrix}:\begin{pmatrix}
+	x_1y_1+x_2y_2
+	\end{pmatrix}.\]
+\end{df}
+
+\begin{prop}
+	There is a bijection $M_{1\times 1}(\R)\iso \R$.
+\end{prop}
+\begin{proof}
+	Let $\sigma:M_{1\times 1}(\R)\to \R$ be given by $\sigma\begin{pmatrix}
+	a
+	\end{pmatrix}:=a$. Then it clearly is a bijection, which ends the proof.
+\end{proof}
+
+\begin{df}
+	The bijection $\sigma: M_{1\times 1}(\R)\to \R$ induces operations $X+Y$ and $\lambda X$ for all $X,Y\in M_{1\times 1}(\R)$ and $\lambda \in \R$ given, respectively, by
+	
+	\[X+Y:=\sigma^{-1}(\sigma_X+\sigma_Y)\] 
+	\[\lambda X:=\sigma^{-1}(\lambda \sigma_X)\]where $\sigma_X:=\sigma(X)$ and $\sigma_Y:=\sigma(Y)$.
 \end{df}
 
 \begin{lemma}
