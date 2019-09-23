@@ -2569,6 +2569,32 @@ You might be asking why we left all this for now, instead of doing it back when 
 	
 	We claim that $\overline{vu}=\norm{v-u}$.
 	
+	\[\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\begin{axis}[
+	x=1.0cm,y=1.0cm,
+	axis lines=middle,
+	xmin=-0.9199999999999992,
+	xmax=9.040000000000004,
+	ymin=-1.0600000000000016,
+	ymax=5.980000000000001,
+	yticklabels={},	
+	xticklabels={},]
+	\clip(-0.92,-1.06) rectangle (9.04,5.98);
+	\draw [->] (0.,0.) -- (2.,4.);
+	\draw [->] (0.,0.) -- (6.,1.);
+	\draw [->,dash pattern=on 3pt off 3pt] (6,1) -- (2,4) node [midway,above] {"$v-u$"};
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (0.,0.) circle (2.0pt);
+	\draw [fill=ududff] (2.,4.) circle (2.5pt);
+	\draw[color=black] (0.86,2.37) node {$v$};
+	\draw [fill=ududff] (6.,1.) circle (2.5pt);
+	\draw[color=black] (3.5,0.4) node {$u$};
+	\end{scriptsize}
+	\end{axis}
+	\end{tikzpicture}\]
+	
 	This is easy to see, because $(v-u)+u=v$ so if we overlay the vector $v-u$ at the end of the vector $u$ we get the vector $v$ (by definition of vector sum).
 	
 	Now that that's taken care of, we can use the previous lemma to see that 
