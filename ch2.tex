@@ -2526,11 +2526,12 @@ This gives us intuition about our next result:
 	\[\gen{u,w}=2\cdot (-6)+(-3)\cdot 9=-12-27=-39\]and once again we have an intuition about a new result:
 \end{ex}
 \begin{prop}
-	The inner product preserves scalar multiplication - that is, for any two vectors $v,u\in \R^2$ and $\lambda\in \R$ we have $\gen{v,\lambda u}=\lambda\gen{v,u}$.
+	The inner product preserves addition and scalar multiplication - that is, for any three vectors $v,u,w\in \R^2$ and $\lambda\in \R$ we have $\gen{v,u+w}=\gen{v,u}+\gen{v,w}$ and $\gen{v,\lambda u}=\lambda\gen{v,u}$.
 \end{prop}
 \begin{proof}
-	Let, once again, $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then $\lambda u=(\lambda u_1,\lambda u_2)$ and so:
-	\[\gen{v,\lambda u}=v_1(\lambda u_1)+v_2(\lambda u_2)=\lambda(v_1u_1)+\lambda (v_2u_2)=\lambda(v_1u_1+v_2u_2)=\lambda\gen{v,u}\]so the inner product preserves scalar multiplication, which proves the result.
+	Let, once again, $v=(v_1,v_2)$, $u=(u_1,u_2)$ and $w=(w_1,w_2)$. Then $u+w=(u_1+w_1,u_2+w_2)$ and $\lambda u=(\lambda u_1,\lambda u_2)$, and so:
+	\[\gen{v,u+w}=v_1(u_1+w_1)+v_2(u_2+w_2)=v_1u_1+v_1w_1+v_2u_2+v_2w_2=(v_1u_1+v_2u_2)+(v_1w_1+v_2w_2)=\gen{v,u}+\gen{v,w}\]
+	\[\gen{v,\lambda u}=v_1(\lambda u_1)+v_2(\lambda u_2)=\lambda(v_1u_1)+\lambda (v_2u_2)=\lambda(v_1u_1+v_2u_2)=\lambda\gen{v,u}\]so the inner product preserves addition scalar multiplication, which proves the result.
 \end{proof}
 
 Now let's quickly go back to thinking about vectors geometrically. If we take any vector $v=(v_1,v_2)\in \R^2$, we know that $v$ can be written as $(v_1,0)+(0,v_2)$ and that the vectors $(v_1,0)$ and $(0,v_2)$ are perpendicular (since they lie on different axis - $(v_1,0)$ lies on the $X$-axis and $(0,v_2)$ lies on the $Y$-axis).
@@ -2557,6 +2558,15 @@ You might be asking why we left all this for now, instead of doing it back when 
 	Let $v,u\in \R^2$ be any two vectors and $\theta\in[0,2\pi)$ be the angle between them. Then $\cos\theta = \dfrac{\gen{v,u}}{\norm{v}\norm{u}}$.
 \end{cor}
 \begin{proof}
-	Remember, from geometry, that if $ABC$ is a triangle with sides $a,b,c\in\R$ and angle $\theta\in[0,2\pi)$ between $a$ and $b$, then the Cosine Law tells us that
+	Remember, from geometry, that if $ABC$ is a triangle with sides $a,b,c\in\R$ and angle $\theta\in[0,2\pi)$ between $a$ and $b$, then the Law of Cosines tells us that
 	\[c^2=a^2+b^2-2\abs{a}\abs{b}\cos\theta.\]
+	
+	Take now any two vectors $v,u\in \R^2$. They determine a unique triangle $0vu$, whose sides measure $\overline{0v}=\norm{v}$, $\overline{0u}=\norm{u}$ and $\overline{vu}$. Let us first compute $\overline{vu}$.
+	
+	We claim that $\overline{vu}=\norm{v-u}$.
+	
+	This is easy to see, because $(v-u)+u=v$ so if we overlay the vector $v-u$ at the end of the vector $u$ we get the vector $v$ (by definition of vector sum).
+	
+	Now that that's taken care of, we can use the previous lemma to see that 
+	\[\norm{v-u}^2=\gen{v-u,v-u}\]and since we already know that the inner product
 \end{proof}
