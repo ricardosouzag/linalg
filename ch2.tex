@@ -2530,7 +2530,10 @@ This gives us intuition about our next result:
 \end{prop}
 \begin{proof}
 	Let, once again, $v=(v_1,v_2)$, $u=(u_1,u_2)$ and $w=(w_1,w_2)$. Then $u+w=(u_1+w_1,u_2+w_2)$ and $\lambda u=(\lambda u_1,\lambda u_2)$, and so:
-	\[\gen{v,u+w}=v_1(u_1+w_1)+v_2(u_2+w_2)=v_1u_1+v_1w_1+v_2u_2+v_2w_2=(v_1u_1+v_2u_2)+(v_1w_1+v_2w_2)=\gen{v,u}+\gen{v,w}\]
+	\begin{align*}
+		\gen{v,u+w}&=v_1(u_1+w_1)+v_2(u_2+w_2)\\
+		=v_1u_1+v_1w_1+v_2u_2+v_2w_2=(v_1u_1+v_2u_2)+(v_1w_1+v_2w_2)=\gen{v,u}+\gen{v,w}
+	\end{align*}
 	\[\gen{v,\lambda u}=v_1(\lambda u_1)+v_2(\lambda u_2)=\lambda(v_1u_1)+\lambda (v_2u_2)=\lambda(v_1u_1+v_2u_2)=\lambda\gen{v,u}\]so the inner product preserves addition scalar multiplication, which proves the result.
 \end{proof}
 

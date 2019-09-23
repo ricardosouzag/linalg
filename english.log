@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  22 SEP 2019 23:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  22 SEP 2019 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1128,18 +1128,8 @@ OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
 
 [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
 [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
-Overfull \hbox (72.55997pt too wide) detected at line 2533
-\OMS/cmsy/m/n/12 h\OML/cmm/m/it/12 v; u \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 w\OM
-S/cmsy/m/n/12 i \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 v[]\OT1/cmr/m/n/12 (\OML/cmm
-/m/it/12 u[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 w[]\OT1/cmr/m/n/12 ) + \OML/cmm
-/m/it/12 v[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 u[] \OT1/cmr/m/n/12 + \OML/cmm/m/
-it/12 w[]\OT1/cmr/m/n/12 ) = \OML/cmm/m/it/12 v[]u[] \OT1/cmr/m/n/12 + \OML/cmm
-/m/it/12 v[]w[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 v[]u[] \OT1/cmr/m/n/12 + \OM
-L/cmm/m/it/12 v[]w[] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 v[]u[] \OT1/cmr/m/n/12
- + \OML/cmm/m/it/12 v[]u[]\OT1/cmr/m/n/12 ) + (\OML/cmm/m/it/12 v[]w[] \OT1/cmr
-/m/n/12 + \OML/cmm/m/it/12 v[]w[]\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 h\OML/cmm
-/m/it/12 v; u\OMS/cmsy/m/n/12 i \OT1/cmr/m/n/12 + \OMS/cmsy/m/n/12 h\OML/cmm/m/
-it/12 v; w\OMS/cmsy/m/n/12 i
+Overfull \hbox (77.30266pt too wide) detected at line 2536
+[]
  []
 
 [133]) [134]
@@ -1175,7 +1165,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (135 pages, 672781 bytes).
+Output written on english.pdf (135 pages, 672839 bytes).
 PDF statistics:
  1617 PDF objects out of 1728 (max. 8388607)
  1447 compressed objects within 15 object streams
