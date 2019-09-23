@@ -2660,8 +2660,10 @@ You might be asking why we left all this for now, instead of doing it back when 
 			\norm{v+u}^2&=\gen{v+u,v+u}\\
 			&=\gen{v,v}+\gen{v,u}+\gen{u,v}+\gen{u,u}\\
 			&=\gen{v,v}+2\gen{v,u}+\gen{u,u}\\
-			&\le
-		\end{align*}
+			&\leq \norm{v}^2+2\abs{\gen{v,u}}+\norm{u}^2\\
+			&\le \norm{v}^2+2\norm{v}\norm{u}+\norm{u}^2\\
+			&=(\norm{v}+\norm{u})^2			
+		\end{align*}so $\norm{v+u}\leq \norm{v}+\norm{u}$, as we had claimed.
 	\end{enumerate}
 \end{proof}
 
