@@ -2626,6 +2626,14 @@ You might be asking why we left all this for now, instead of doing it back when 
 	This finishes the proof.
 \end{proof}
 
+\begin{cor}
+	For any two vectors $v,u\in \R^2$, $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$.
+\end{cor}
+\begin{proof}
+	Since $\gen{v,u}=\norm{v}\norm{u}\cos\theta$ and $-1\leq \cos\theta\leq 1$, we see that 
+	\[-\norm{v}\norm{u}\leq \gen{v,u}\leq \norm{v}\norm u\]so $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$, as we had claimed.
+\end{proof}
+
 \begin{prop}
 	Let $v,u\in \R^2$ be any two vectors, and $\lambda \in \R$. Then the following hold:
 	\begin{enumerate}
@@ -2655,13 +2663,6 @@ You might be asking why we left all this for now, instead of doing it back when 
 			&\le
 		\end{align*}
 	\end{enumerate}
-\end{proof}
-\begin{cor}
-	For any two vectors $v,u\in \R^2$, $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$.
-\end{cor}
-\begin{proof}
-	Since $\gen{v,u}=\norm{v}\norm{u}\cos\theta$ and $-1\leq \cos\theta\leq 1$, we see that 
-	\[-\norm{v}\norm{u}\leq \gen{v,u}\leq \norm{v}\norm u\]so $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$, as we had claimed.
 \end{proof}
 
 \begin{cor}
