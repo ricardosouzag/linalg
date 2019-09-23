@@ -2499,12 +2499,12 @@ Second, because further ahead we're gonna need to define what's called the \text
 	Let $v=(1,2)$, $u=(-1,-5)$ and $w=(\pi,0)$. Then we can compute:
 	\begin{multicols}{2}
 		\begin{itemize}
-			\item \(\gen{v,u}=1\cdot(-1)+2\cdot (-5)=-1-10=-11\)
-			\item \(\gen{v,w}=1\cdot\pi+2\cdot 0=\pi+0=\pi\)
-			\item \(\gen{u,w}=(-1)\cdot\pi+(-5)\cdot 0=-\pi+0=-\pi\)
-			\item \(\gen{u,v}=(-1)\cdot 1+(-5)\cdot 2=-1-10=-11\)
-			\item \(\gen{v,w}=\pi\cdot 1+0\cdot2=\pi+0=\pi\)
-			\item \(\gen{u,w}=\pi\cdot(-1)+0\cdot (-5)=-\pi+0=-\pi\)
+			\item[] \(\gen{v,u}=1\cdot(-1)+2\cdot (-5)=-1-10=-11\)
+			\item[] \(\gen{v,w}=1\cdot\pi+2\cdot 0=\pi+0=\pi\)
+			\item[] \(\gen{u,w}=(-1)\cdot\pi+(-5)\cdot 0=-\pi+0=-\pi\)
+			\item[] \(\gen{u,v}=(-1)\cdot 1+(-5)\cdot 2=-1-10=-11\)
+			\item[] \(\gen{v,w}=\pi\cdot 1+0\cdot2=\pi+0=\pi\)
+			\item[] \(\gen{u,w}=\pi\cdot(-1)+0\cdot (-5)=-\pi+0=-\pi\)
 		\end{itemize}
 	\end{multicols}
 
@@ -2517,4 +2517,18 @@ This gives us intuition about our next result:
 \begin{proof}
 	Let $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then:
 	\[\gen{v,u}=v_1u_1+v_2u_2=u_1v_1+u_2v_2=\gen{u,v}\]so the inner product is commutative and the result follows.
+\end{proof}
+
+\begin{ex}
+	Let $v=(2,7)$, $u=(2,-3)$ and $w=(-6,9)$. Then we can compute:
+	\[\gen{v,u}=2\cdot 2+7\cdot(-3)=4-21=-17\]
+	\[\gen{v,w}=2\cdot(-6)+7\cdot 9=-12+63=51\]
+	\[\gen{u,w}=2\cdot (-6)+(-3)\cdot 9=-12-27=-39\]and once again we have an intuition about a new result:
+\end{ex}
+\begin{prop}
+	Let $v,u\in \R^2$ and $\lambda\in \R$. Then $\gen{v,\lambda u}=\lambda\gen{v,u}$.
+\end{prop}
+\begin{proof}
+	Let, once again, $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then $\lambda u=(\lambda u_1,\lambda u_2)$ and so:
+	\[\gen{v,\lambda u}=v_1(\lambda u_1)+v_2(\lambda u_2)=\lambda(v_1u_1)+\lambda (v_2u_2)=\lambda(v_1u_1+v_2u_2)=\lambda\gen{v,u}\]so the inner product preserves scalar multiplication, which proves the result.
 \end{proof}
