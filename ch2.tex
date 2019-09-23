@@ -2534,7 +2534,7 @@ This gives us intuition about our next result:
 		\gen{v,u+w}&=v_1(u_1+w_1)+v_2(u_2+w_2)\\
 		&=v_1u_1+v_1w_1+v_2u_2+v_2w_2\\
 		&=(v_1u_1+v_2u_2)+(v_1w_1+v_2w_2)=\gen{v,u}+\gen{v,w}
-	\end{align*}
+	\end{align*}and
 	\[\gen{v,\lambda u}=v_1(\lambda u_1)+v_2(\lambda u_2)=\lambda(v_1u_1)+\lambda (v_2u_2)=\lambda(v_1u_1+v_2u_2)=\lambda\gen{v,u}\]so the inner product preserves addition scalar multiplication, which proves the result.
 \end{proof}
 
@@ -2572,5 +2572,7 @@ You might be asking why we left all this for now, instead of doing it back when 
 	This is easy to see, because $(v-u)+u=v$ so if we overlay the vector $v-u$ at the end of the vector $u$ we get the vector $v$ (by definition of vector sum).
 	
 	Now that that's taken care of, we can use the previous lemma to see that 
-	\[\norm{v-u}^2=\gen{v-u,v-u}\]and since we already know that the inner product
+	\[\norm{v-u}^2=\gen{v-u,v-u}\]and since we already know that the inner product preserves addition and scalar multiplication, that is simply
+	\[\gen{v-u,v-u}=\gen{v,v}-\gen{u,v}-\gen{v,u}+\gen{u,u}\]which, since we already know the inner product is commutative, is simply
+	\[\gen{v-u,v-u}=\gen{v,v}-2\gen{v,u}+\gen{u,u}\]
 \end{proof}
