@@ -2625,18 +2625,6 @@ You might be asking why we left all this for now, instead of doing it back when 
 	
 	This finishes the proof.
 \end{proof}
-\begin{cor}
-	For any vector $v\in \R^2$ we have that $\gen{v,v}\geq 0$. In particular, $\gen{v,v}=0$ if, and only if, $v=0$.
-\end{cor}
-\begin{proof}
-	This follows trivially from the fact that $\gen{v,v}=\norm{v}^2$.
-\end{proof}
-
-It may not seem much, but this allows us to define:
-
-\begin{df}
-	Let $v,u\in R^2$ be any two vectors. We define the \textbf{distance between $v$ and $u$} to be $\norm{v-u}$.
-\end{df}
 
 \begin{prop}
 	Let $v,u\in \R^2$ be any two vectors, and $\lambda \in \R$. Then the following hold:
@@ -2646,3 +2634,45 @@ It may not seem much, but this allows us to define:
 		\item $\norm{v+u}\leq \norm{v}+\norm{u}$.
 	\end{enumerate}
 \end{prop}
+\begin{proof}
+	\begin{enumerate}
+		\item \begin{align*}
+			\norm{\lambda v}&=\gen{\lambda v,\lambda v}^{\frac{1}{2}}\\
+			&=\lambda^\frac{1}{2}\gen(v,\lambda v)^{\frac{1}{2}}\\
+			&=\lambda^\frac{1}{2}\lambda^\frac{1}{2}\gen{v,v}^\frac{1}{2}=\abs{\lambda}\norm{v}
+		\end{align*}
+		
+		\item $\norm{v}=\gen{v,v}^\frac{1}{2}=\sqrt{v_1^2+v_2^2}\geq 0$.
+		
+		If $\norm{v}=0$, then $v_1^2+v_2^2=0$, so $v_1^2=-v_2^2$, but they're both non-negative, so $v_1^2=v_2^2=0$. This implies $v=0$.
+		
+		Clearly, if $v=0$ then $\norm{v}=0$.
+		
+		\item \begin{align*}
+			\norm{v+u}^2&=\gen{v+u,v+u}\\
+			&=\gen{v,v}+\gen{v,u}+\gen{u,v}+\gen{u,u}\\
+			&=\gen{v,v}+2\gen{v,u}+\gen{u,u}\\
+			&\le
+		\end{align*}
+	\end{enumerate}
+\end{proof}
+\begin{cor}
+	For any two vectors $v,u\in \R^2$, $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$.
+\end{cor}
+\begin{proof}
+	Since $\gen{v,u}=\norm{v}\norm{u}\cos\theta$ and $-1\leq \cos\theta\leq 1$, we see that 
+	\[-\norm{v}\norm{u}\leq \gen{v,u}\leq \norm{v}\norm u\]so $\abs{\gen{v,u}}\leq \norm{v}\norm{u}$, as we had claimed.
+\end{proof}
+
+\begin{cor}
+	For any vector $v\in \R^2$ we have that $\gen{v,v}\geq 0$. In particular, $\gen{v,v}=0$ if, and only if, $v=0$.
+\end{cor}
+\begin{proof}
+	This follows trivially from the previous proposition and the fact that $\gen{v,v}=\norm{v}^2$.
+\end{proof}
+
+It may not seem much, but this allows us to define:
+
+\begin{df}
+	Let $v,u\in R^2$ be any two vectors. We define the \textbf{distance between $v$ and $u$} to be $\norm{v-u}$.
+\end{df}
