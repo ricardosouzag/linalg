@@ -2494,3 +2494,17 @@ The reason why we didn't simply define it using vectors, but instead went all th
 First, because it makes way more sense to multiply matrices than it does to multiply vectors.
 
 Second, because further ahead we're gonna need to define what's called the \textbf{algebraic dual} of a vector space, and then we'll see that inner products arise naturally from algebraic dualization. However, in the case of $\R^2$, we'll see that the algebraic dual of $M_{2\times 1}(\R)$ is simply $M_{1\times 2}(\R)$ - so this mindset is a particular case of a more general approach we're gonna use later on and, as such, provides great insight on how to approach the general case.
+
+\begin{ex}
+	Let $v=(1,2)$, $u=(-1,-5)$ and $w=(\pi,0)$. Then we can compute:
+	\begin{multicols}{2}
+		\begin{itemize}
+			\item \(\gen{v,u}=1\cdot(-1)+2\cdot (-5)=-1-10=-11\)
+			\item \(\gen{v,w}=1\cdot\pi+2\cdot 0=\pi+0=\pi\)
+			\item \(\gen{u,w}=(-1)\cdot\pi+(-5)\cdot 0=-\pi+0=\pi\)
+			\item \(\gen{u,v}=(-1)\cdot 1+(-5)\cdot 2=-1-10=-11\)
+			\item \(\gen{v,w}=\pi\cdot 1+0\cdot2=\pi+0=\pi\)
+			\item \(\gen{u,w}=\pi\cdot(-1)+0\cdot (-5)=-\pi+0=\pi\)
+		\end{itemize}
+	\end{multicols}
+\end{ex}
