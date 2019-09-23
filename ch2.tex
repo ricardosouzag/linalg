@@ -2573,6 +2573,9 @@ You might be asking why we left all this for now, instead of doing it back when 
 	
 	Now that that's taken care of, we can use the previous lemma to see that 
 	\[\norm{v-u}^2=\gen{v-u,v-u}\]and since we already know that the inner product preserves addition and scalar multiplication, that is simply
-	\[\gen{v-u,v-u}=\gen{v,v}-\gen{u,v}-\gen{v,u}+\gen{u,u}\]which, since we already know the inner product is commutative, is simply
-	\[\gen{v-u,v-u}=\gen{v,v}-2\gen{v,u}+\gen{u,u}\]
+	\[\norm{v-u}^2=\gen{v-u,v-u}=\gen{v,v}-\gen{u,v}-\gen{v,u}+\gen{u,u}\]which, since we already know the inner product is commutative, is simply
+	\[\norm{v-u}^2=\gen{v-u,v-u}=\gen{v,v}-2\gen{v,u}+\gen{u,u}.\]
+	
+	Now we use that $\gen{v,v}=\norm{v}^2$ and $\gen{u,u}=\norm{u}^2$ to see that
+	\[\norm{v-u}^2=\norm{v}^2+\norm{u}^2-2\gen{v,u}.\]
 \end{proof}
