@@ -2578,4 +2578,10 @@ You might be asking why we left all this for now, instead of doing it back when 
 	
 	Now we use that $\gen{v,v}=\norm{v}^2$ and $\gen{u,u}=\norm{u}^2$ to see that
 	\[\norm{v-u}^2=\norm{v}^2+\norm{u}^2-2\gen{v,u}.\]
+	
+	But, since $0vu$ is a triangle with sides $\norm{v}$, $\norm{u}$ and $\norm{v-u}$, we have that the Law of Cosines tells us that
+	\[\norm{v-u}^2=\norm{v}^2+\norm{u}^2-2\norm{v}\norm{u}\cos\theta,\]where $\theta$ is the angle between $v$ and $u$.
+	
+	Finally, by comparing the two equalities we see that\[\gen{v,u}=\norm{v}\norm{u}\cos\theta\]so
+	\[\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}\]and the result follows.
 \end{proof}
