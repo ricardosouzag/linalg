@@ -2611,3 +2611,15 @@ You might be asking why we left all this for now, instead of doing it back when 
 	Finally, by comparing the two equalities we see that\[\gen{v,u}=\norm{v}\norm{u}\cos\theta\]so
 	\[\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}\]and the result follows.
 \end{proof}
+\begin{cor}
+	Two non-null vectors $v,u\in\R^2$ are perpendicular if, and only if, $\gen{v,u}=0$.
+\end{cor}
+\begin{proof}
+	Assume $v\perp u$. Then if $\theta\in[0,2\pi)$ is the angle between $v$ and $u$, we know that $\theta=\frac{\pi}{2}$. But then $\cos\theta=0$, so
+	\[\gen{v,u}=\norm{v}\norm{u}\cos\theta=\norm{v}\norm{u}\cdot0=0\]and we see that $\gen{v,u}=0$.
+	
+	Conversely, if $v,u\in \R^2$ are non-null vectors such that $\gen{v,u}=0$, then
+	\[\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}=\frac{0}{\norm{v}\norm{u}}=0\]so $cos\theta=0$. But this implies $\theta\in\{\frac{\pi}{2},\frac{3\pi}{2}\}$, but since we're only measuring internal angles, $\theta\leq\frac{\pi}{2}$. This implies that $\theta=\frac{\pi}{2}$ and so $v\perp u$.
+	
+	This finishes the proof.
+\end{proof}
