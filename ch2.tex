@@ -2537,5 +2537,8 @@ Now let's quickly go back to thinking about vectors geometrically. If we take an
 
 Therefore, we know that $0v_1v$ is a right triangle - as is $0v_2v$. In particular, we know that the angle $0\hat{v_1}v$ is a right angle. So, by applying the Pythagorean Theorem, we see that $\overline{0v_1}^2+\overline{v_1v}^2=\overline{0v}^2$.
 
-But $\overline{0v_1}$ is just $\norm{v_1}$, and $\overline{v_1v}$ is just $\norm{v_2}$ (since they are perpendicular). Not only that, but $\overline{0v}$ is just $\norm{v}$, by definition. So the above equation becomes
-\[\norm{v}^2=\norm{v_1}^2+\norm{v_2}^2\]
+But $\overline{0v_1}$ is just $\abs{v_1}$, and $\overline{v_1v}$ is just $\abs{v_2}$ (since they are perpendicular). Not only that, but $\overline{0v}$ is just $\norm{v}$, by definition. So the above equation becomes
+\[\norm{v}^2=\abs{v_1}^2+\abs{v_2}^2.\]
+
+Finally, since $\abs{x}\geq0$ and $x^2\geq0$ for all $x\in \R$, we can finally get our final equation
+\[\norm{v}^2=v_1^2+v_2^2.\]
