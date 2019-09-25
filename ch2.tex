@@ -2687,8 +2687,21 @@ It may not seem much, but this allows us to define:
 	The distance we defined above satisfies the following properties for all $v,u,w\in \R^2$:
 	\begin{enumerate}[a)]
 		\item $d(v,u)=d(u,v)$;
-		\item $d(v,v)=0$;
-		\item $d(v,u)\leq d(v,w)+d(w,u)$.
-		
+		\item $d(v,u)\geq0$, with the equality happening precisely when $v=u$;
+		\item $d(v,u)\leq d(v,w)+d(w,u)$.		
 	\end{enumerate}
 \end{prop}
+\begin{proof}
+	\begin{enumerate}[a)]
+		\item \[d(v,u)=\norm{v-u}=\norm{-(u-v)}=\norm{u-v}=d(u,v).\]
+		
+		\item This is obvious from the definition.
+		
+		\item \begin{align*}
+			d(v,u)&=\norm{v-u}\\
+			&=\norm{v-w+w-u}\\
+			&=\norm{(v-w)+(w-u)}\\
+			&\leq \norm{v-w}+\norm{w-u}=d(v,w)+d(w,u).
+		\end{align*}
+	\end{enumerate}
+\end{proof}
