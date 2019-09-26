@@ -2756,5 +2756,36 @@ For instance, we've already proven that any two lines $r,s\subseteq \R^2$ can be
 	
 	This means that we can use the proposition to conclude that $\R v_1\cap \R u_1=\{0\}$. But we've just shown that $x-y\in \R v_1\cap \R u_1$. It follows that $x-y=0$, and so $x=y$.
 	
-	This shows that if we have two points in $r\cap s$, then they are in fact the same point. So $r\cap s$ has, at most, one point, which ends the proof.
+	This shows that if we have two points in $r\cap s$, then they are in fact the same point.
+	
+	So $r\cap s$ has, at most, one point, which ends the proof.
+\end{proof}
+
+This allows us to prove some very useful results:
+
+\begin{df}
+	A \textbf{rhombus} is a set of four points $A,B,C,D$ in the Euclidean plane such that $\overline{AB}=\overline{BC}=\overline{CD}=\overline{DA}$.
+	
+	In other words, a rhombus is a quadrilateral which has four congruent sides.
+\end{df}
+
+\begin{lemma}
+	The diagonals of a rhombus are perpendicular to each other.
+\end{lemma}
+\begin{proof}
+	First, notice that any rhombus can be considered as having vertices $0v(v+u)u$ where $\norm v=\norm u$.
+	
+	Take now the lines $\R(v+u)$ and $\R(v-u)+v$, which contain the diagonals of the rhombus. To show that the diagonals are perpendicular, it suffices to show that these two lines are perpendicular.
+	
+	But notice that since $\R(v-u)+v\parallel\R(v-u)$, it suffices to show that $\R(v+u)\perp\R(v-u)$.
+	
+	Finally, notice that showing $\R(v+u)\perp\R(v-u)$ is the same as showing that $(v+u)\perp (v-u)$.
+	
+	This can be done by a simple computation:
+	\begin{align*}
+		\gen{v+u,v-u}&=\gen{v,v}-\gen{v,u}+\gen{u,v}-\gen{u,u}\\
+		&=\norm{v}^2-\gen{v,u}+\gen{v,u}-\norm{u}^2=0
+	\end{align*}since $\norm{v}=\norm{u}$.
+	
+	This shows that $(v+u)\perp(v-u)$, which, by the preceding observations, ends the proof.
 \end{proof}
