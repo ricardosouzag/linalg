@@ -2905,10 +2905,22 @@ This allows us to prove some very useful results:
 	
 	This shows that $d(v,u)\leq d(v,w)$ for all $w\in r$, and so $d(v,u)=\min_{w\in r}\{d(v,w)\}$, which ends the proof.
 \end{proof}
+\begin{cor}
+	Let $v\in \R^2$ and $r\subseteq \R^2$ be any line. Let also $u\in r$ be such that $d(v,u)=d(v,r)$. Then $v-u\perp r$.
+\end{cor}
+\begin{proof}
+	By the same argument as before: Assume $w\in r$ is the point obtained by the construction of the preceding proof. So $v-w\perp r$, by construction.
+	
+	It follows that $vuw$ is a right-triangle at $w$. Once again, by using Pythagoras' Theorem, we see that $d(v,w)^2=d(v,u)^2+d(u,w)^2$.
+	
+	But $d(v,u)=d(v,w)$ implies $d(u,w)^2=0$, which is simply $d(u,w)=0$. Now, by the properties of distance, this happens if, and only if, $u=w$.
+	
+	Since $v-w\perp r$ by construction, this implies $v-u\perp r$, which ends the proof.
+\end{proof}
 
 \begin{lemma}
 	Let $r=\R v+u\subseteq \R^2$ be any line, and $R\in \R$ any non-negative number. Then the set 
-	\[\mc D(R,r):=\{w\in \R^2\mid \exists z\in r\mbox{ such that }d(w,z)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
+	\[\mc D(R,r):=\{w\in \R^2\mid d(w,r)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
 \end{lemma}
 \begin{proof}
 	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$. Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$. We claim that $\overrightarrow{R}\perp r$.
