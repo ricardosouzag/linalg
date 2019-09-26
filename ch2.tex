@@ -2881,5 +2881,7 @@ This allows us to prove some very useful results:
 	\[\mc D(R,r):=\{w\in \R^2\mid \exists z\in r\mbox{ such that }d(w,z)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
 \end{lemma}
 \begin{proof}
-	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$.
+	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$. Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$.
+	
+	Since $y\in r=\R v+u$, it follows that $y=\lambda v+u$ for some $\lambda \in \R$.
 \end{proof}
