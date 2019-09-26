@@ -2971,9 +2971,9 @@ This allows us to prove some very useful results:
 		x+v'&=(\lambda v+u)+\left(\frac{r}{\norm v}v\right)=\left(\lambda + \frac{r}{\norm v}\right)v+u\in \R v+u
 	\end{align*}and so $x+v'$ is a point in $\R v+u$ that is at distance $r$ from $x$ - this means that $x+v'\in r\cap \mc C(x,r)$ and, so, the proof is done.
 \end{proof}
-\begin{cor}
+\begin{lemma}
 	If a line contains a point in the inside of a circle, then it crosses the circle.
-\end{cor}
+\end{lemma}
 \begin{proof}
 	Consider the line $s':=\R v$, the point $x':=x-u$ and the circle $\mc C':=\mc C(x',r)$. Then for all $y'\in s'$ we have
 	\begin{align*}
@@ -3044,6 +3044,11 @@ This allows us to prove some very useful results:
 		
 		\item \underline{$D>R$}:
 		
+		Take, once more, $r=\R(x-y)+x$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
 		
+		Now, since $D>R$, we can write $D=R+\delta$ for some positive $\delta\in \R$. Notice that we can rewrite this as
+		\[d_1+d_2=r_2+r_2+\delta\]so
+		\[d(x,y)=d(x,v)+d(y,u)+\delta,\]but we also know that
+		\[d(x,y)=d(x,v)+d(y,u)+d(v,u),\]since $x,y,v,u$ are colinear. So $0<\delta=d(v,u)$.
 	\end{itemize}
 \end{proof}
