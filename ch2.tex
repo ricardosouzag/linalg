@@ -2946,6 +2946,23 @@ This allows us to prove some very useful results:
 	
 	This shows that $s\cup t\subseteq\mc D(R,r)$, and, therefore, $\mc D(R,r)=s\cup t$, which ends the proof.
 \end{proof}
+
+\begin{lemma}
+	If a line passes through the center of a circle, then it crosses the circle.
+\end{lemma}
+\begin{proof}
+	Let $\mc C(x,r)$ be a circle for some $x\in \R^2$ and some non-negative $r\in \R$, as well as $s:=\R v+u$ be a line for some $v,u\in \R^2$.
+	
+	If $x\in s$ this means that $x=\lambda v+u$ for some $\lambda \in \R$.
+	
+	We claim that $x+v'\in \mc C(x,r)$, for $v':=\frac{v}{\norm v}r$.
+	
+	Indeed, 
+	\begin{align*}
+		d(x+v,x)&=\norm{(x+v)-x}
+	\end{align*}
+\end{proof}
+
 \begin{cor}
 	Let $x,y\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(x,r_1)\cap\mc C(y,r_2)$ is either empty, a single point or two points.
 \end{cor}
@@ -2962,5 +2979,9 @@ This allows us to prove some very useful results:
 		But $v\in I$ implies $d(v,x)=r_1$ and $d(v,y)=r_2$, so $d(x,v)+d(y,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
+		
+		\item \underline{$D=R$}:
+		
+		Take the line through both centers, $r:=\R(x-y)+x$.
 	\end{itemize}
 \end{proof}
