@@ -2994,13 +2994,13 @@ This allows us to prove some very useful results:
 		d(y,y')\leq d(y,x)+d(y',x)\leq r+r=2r
 	\end{align*}so we're saying that no matter which point $y'\in s$ we pick, its distance from $y$ can never exceed $2r$.
 	
-	But that's absurd - take, for instance, $y'=y+\frac{3r}{\norm{v}}v=\left(1+\frac{3r}{\norm v}\right)v\in s$. Then
+	But that's absurd - take, for instance, $y'=y+\frac{3r}{\norm{y}}y=\left(1+\frac{3r}{\norm y}\right)y\in s$. Then
 	\begin{align*}
 		d(y,y')&=\norm{y-y'}\\
-		&=\Norm{y-\left(1+\frac{3r}{\norm v}\right)v}\\
-		&=\Norm{\left(-\frac{3r}{\norm v}\right)y}\\
-		&\abs{-\frac{3r}{\norm v}}\norm{v}\\
-		&=\frac{3r}{\norm v}\norm v=3r
+		&=\Norm{y-\left(1+\frac{3r}{\norm y}\right)y}\\
+		&=\Norm{\left(-\frac{3r}{\norm y}\right)y}\\
+		&\abs{-\frac{3r}{\norm y}}\norm{y}\\
+		&=\frac{3r}{\norm y}\norm y=3r
 	\end{align*}
 \end{proof}
 
