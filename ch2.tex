@@ -2883,7 +2883,7 @@ This allows us to prove some very useful results:
 \begin{lemma}
 	Let $r\subseteq \R^2$ be a line and $v\in \R^2$ be any point. Then the distance between $r$ and $v$ is well-defined.
 \end{lemma}
-\begin{df}
+\begin{proof}
 	We need to prove that no matter which $r$ and which $v$ we choose, $d(v,r)$ always exists.
 	
 	To do this, consider the following construction:
@@ -2904,7 +2904,7 @@ This allows us to prove some very useful results:
 	In particular, $d(v,w)^2\geq d(v,u)^2$, which implies (since distances are always non-negative) that $d(v,w)\geq d(v,u)$.
 	
 	This shows that $d(v,u)\leq d(v,w)$ for all $w\in r$, and so $d(v,u)=\min_{w\in r}\{d(v,w)\}$, which ends the proof.
-\end{df}
+\end{proof}
 
 \begin{lemma}
 	Let $r=\R v+u\subseteq \R^2$ be any line, and $R\in \R$ any non-negative number. Then the set 
