@@ -2991,6 +2991,12 @@ This allows us to prove some very useful results:
 		
 		\item \underline{$D=R$}:
 		
-		Take the line through both centers, $r:=\R(x-y)+x$.
+		Take the line through both centers, $r:=\R(x-y)+x$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
+		
+		Now, for each of those points we have that $d(v,x)+d(v,y)=D=d(u,x)+d(u,y)$, or, in other words, since $v\in \mc C(x,r_1)$ and $u\in \mc C(y,r_2)$, this is
+		\[r_1+d(v,y)=D=d(u,x)+r_2\]but $D=R$ implies
+		\[r_1+d(v,y)=r_1+r_2=d(u,x)+r_2\]and so the LHS yields $d(v,y)=r_2$, and the RHS yields $d(u,x)=r_1$. This shows that $v\in \mc C(y,r_2)$ and $u\in \mc C(x,r_1)$.
+		
+		So $v$ and $u$ lie, at once, both in $r$ and in both circles.
 	\end{itemize}
 \end{proof}
