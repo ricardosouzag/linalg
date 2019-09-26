@@ -2727,8 +2727,18 @@ In this section we're gonna prove some results about the geometry of $\R^2$.
 For instance, we've already proven that any two lines $r,s\subseteq \R^2$ can be described, uniquely, by two pairs a vectors $v_1,v_2,u_1,u_2$ such that $r=\R v_1+v_2$ and $s=\R u_1+u_2$. Let us now prove that this is indeed a good description of lines:
 
 \begin{prop}
-	Let $r,s\subseteq \R^2$ be two different lines in $\R^2$. Then $\#(r\cap s)\in\{0,1\}$.
+	Let $r,s\subseteq \R^2$ be two different lines through zero in $\R^2$. Then $r\cap s\iso 1$.
 \end{prop}
+\begin{proof}
+	Let $r=\R v$ and $s=\R u$ for some $v,u\in \R^2$. We already know that $0\in r\cap s$.
+	
+	Assume there is some $x\in r\cap s$ such that $x\neq 0$. This means that $r=\lambda v=\mu u$, for some $\lambda,\mu\in\R$, both different from $0$. But since $\lambda$ is real, $\lambda v=\mu u$ implies $v=\frac{\mu}{\lambda }u$ and therefore $r=\R v=\R u=s$ (since $v\parallel u$).
+	
+	But, by hypothesis, we're assuming that $ r\neq s$, so this cannot happen. This means that we cannot assume that there's some $x\neq 0$ in $r\cap s$. It follows that $r\cap s=\{0\}$, which proves the result.
+\end{proof}
+\begin{cor}
+	Let $r,s\subseteq \R^2$ be two different lines in $\R^2$. Then $\#(r\cap s)\in\{0,1\}$.
+\end{cor}
 \begin{proof}
 	Let $r=\R v_1+v_2$ and $s=\R u_1+u_2$ for some $v_1,v_2,u_1,u_2\in \R^2$.
 	
@@ -2741,4 +2751,10 @@ For instance, we've already proven that any two lines $r,s\subseteq \R^2$ can be
 	\[y=\lambda_2v_1+v_2=\mu_2u_1+u_2.\]
 	
 	But then, $x-y=(\lambda_1-\lambda_2)v_1=(\mu_1-\mu_2)u_1$ and, therefore, $x-y\in\R v_1\cap \R u_1$.
+	
+	If $\R v_1=\R u_1$, then, by definition, $r\parallel s$ and therefore $r\cap s=\varnothing$. But this contradicts our assumption that there are $x,y\in r\cap s$. Therefore, $\R v_1\neq \R u_1$.
+	
+	This means that we can use the proposition to conclude that $\R v_1\cap \R u_1=\{0\}$. But we've just shown that $x-y\in \R v_1\cap \R u_1$. It follows that $x-y=0$, and so $x=y$.
+	
+	This shows that if we have two points in $r\cap s$, then they are in fact the same point. So $r\cap s$ has, at most, one point, which ends the proof.
 \end{proof}
