@@ -2770,8 +2770,24 @@ This allows us to prove some very useful results:
 \end{df}
 
 \begin{lemma}
-	The diagonals of a rhombus are perpendicular to each other.
+	Let $\R v,\R u$ be two lines through zero. Then $\R v\perp \R u$ if, and only if, $v\perp u$.
 \end{lemma}
+\begin{proof}
+	Assume $\R v\perp \R u$. This means that any two vectors $v'\in \R v$ and $u'\in \R u$ are perpendicular. In particular, $v\in \R v$ and $u\in \R u$ implies that $v\perp u$.
+	
+	\bigskip
+	Conversely, assume that $v\perp u$. Take now $v'\in \R v$ and $u'\in \R u$. We want to show that $v'\perp u'$.
+	
+	Since $v'\in \R v$ and $u'\in \R u$, there are real numbers $\lambda,\mu\in \R$ such that $v'=\lambda v$ and $u'=\mu u$, by definition.
+	
+	But then:
+	\[\gen{v',u'}=\gen{\lambda v,\mu u}=\lambda\mu\gen{v,u}=0\] since $v\perp u$. This shows that $v'\perp u'$.
+	
+	The result follows.
+\end{proof}
+\begin{cor}
+	The diagonals of a rhombus are perpendicular to each other.
+\end{cor}
 \begin{proof}
 	First, notice that any rhombus can be considered as having vertices $0,v,v+u,u$ where $\norm v=\norm u$.
 	
@@ -2779,7 +2795,7 @@ This allows us to prove some very useful results:
 	
 	But notice that since $\R(v-u)+v\parallel\R(v-u)$, it suffices to show that $\R(v+u)\perp\R(v-u)$.
 	
-	Finally, notice that showing $\R(v+u)\perp\R(v-u)$ is the same as showing that $(v+u)\perp (v-u)$.
+	Finally, notice that, by the preceding lemma, showing $\R(v+u)\perp\R(v-u)$ is the same as showing that $(v+u)\perp (v-u)$.
 	
 	This can be done by a simple computation:
 	\begin{align*}
@@ -2788,4 +2804,17 @@ This allows us to prove some very useful results:
 	\end{align*}since $\norm{v}=\norm{u}$.
 	
 	This shows that $(v+u)\perp(v-u)$, which, by the preceding observations, ends the proof.
+\end{proof}
+
+\begin{df}
+	A \textbf{rectangle} is a set of four points $A,B,C,D$ in the Euclidean plane such that $A\hat{B}C$, $B\hat{C}D$, $C\hat{D}A$ and $D\hat{A}B$ are right angles.
+	
+	In other words, a rectangle is a quadrilateral which has four congruent angles (which are, therefore, right angles).
+\end{df}
+
+\begin{prop}
+	The diagonals of a rectangle meet at their midpoint.
+\end{prop}
+\begin{proof}
+	First, notice that any rectangle can be considered as having vertices $0,v,v+u,u$ where $v\in\mb X$ and $u\in\mathds{Y}$.
 \end{proof}
