@@ -2959,7 +2959,11 @@ This allows us to prove some very useful results:
 	
 	Indeed, 
 	\begin{align*}
-		d(x+v,x)&=\norm{(x+v)-x}
+		d(x+v',x)&=\norm{(x+v')-x}\\
+		&=\norm{v'}\\
+		&=\Norm{\frac{v}{\norm v}r}\\
+		&=\abs{\frac{r}{\norm v}}\norm{v}\\
+		&=\frac{r}{\norm v}\norm{v}=r
 	\end{align*}
 \end{proof}
 
