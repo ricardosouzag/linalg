@@ -2975,8 +2975,6 @@ This allows us to prove some very useful results:
 	If a line contains a point in the inside of a circle, then it crosses the circle.
 \end{cor}
 \begin{proof}
-	Let $\mc C:=\mc C(x,r)$ be a circle of center $x$ and radius $r\geq0$, $s=\R v+u$ be a line and $y\in\R^2$ be a point such that $d(x,y)<r$ (this is what it means to say that $y$ is in the inside of a circle).
-	
 	Consider the line $s':=\R v$, the point $x':=x-u$ and the circle $\mc C':=\mc C(x',r)$. Then for all $y'\in s'$ we have
 	\begin{align*}
 		d(y',x')&=\norm{y'-x'}\\
@@ -2984,6 +2982,24 @@ This allows us to prove some very useful results:
 		&=\norm{\lambda v+u-x}\\
 		&=\norm{y-x}=d(y,x)
 	\end{align*}where $y=\lambda v+u\in s$. This shows that $d(\lambda v+u,x)=d(\lambda v,x-u)$ for all $\lambda\in \R$.
+	
+	This means that we can rephrase the problem to work only with lines through zero.
+	
+	So, assume $u=0$, that is, $s$ is a line through zero.
+	
+	Take now any $y\in s$ such that $d(y,x)<r$ (that is, $y$ is inside the circle $\mc C(x,r)$). Since $s$ is a line through zero, every scalar multiple of $y$ also belongs to $s$.
+	
+	Assume that $d(y',x)<r$ for all $y'\in s$. Then:
+	\begin{align*}
+		d(y,y')\leq d(y,x)+d(y',x)\leq r+r=2r
+	\end{align*}so we're saying that no matter which point $y'\in s$ we pick, its distance from $y$ can never exceed $2r$.
+	
+	But that's absurd - take, for instance, $y'=y+\frac{3r}{\norm{v}}v=\left(1+\frac{3r}{\norm v}\right)v\in s$. Then
+	\begin{align*}
+		d(y,y')&=\norm{y-y'}\\
+		&=\Norm{y-\left(1+\frac{3r}{\norm v}\right)v}\\
+		&=\norm{\left(-\frac{3r}{\norm v}\right)y}
+	\end{align*}
 \end{proof}
 
 \begin{cor}
