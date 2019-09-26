@@ -2829,11 +2829,23 @@ This allows us to prove some very useful results:
 	Conversely, if $v\parallel u$, this means that $\R v=\R u$, and so, since lines through zero are closed under addition, this means that both $v+u$ and $v-u$ lie in $\R v=\R u$. Therefore $v+u\parallel v-u$, which ends the proof.
 \end{proof}
 
-\begin{prop}
+\begin{cor}
 	The diagonals of a rectangle meet at their midpoint.
-\end{prop}
+\end{cor}
 \begin{proof}
 	First, notice that any rectangle can be considered as having vertices $0,v,v+u,u$ where $v\in\mb X$ and $u\in\mb{Y}$.
 	
-	Then, the midpoint of the diagonal $0(v+u)$ is just $\frac{1}{2}(v+u)$.
+	Since $v\nparallel u$, by hypothesis, the preceding lemma tells us that $(v+u)\nparallel(v-u)$.
+	
+	In particular, since $\R(v-u)+v\parallel\R (v-u)$ this implies that the line $\R(v-u)+v$ crosses the line $\R(v+u)$, since they're not parallel.
+	
+	Now take the midpoint of the line segment $0v+u$ - that is, $\frac{1}{2}(v+u)$. We claim that $\frac{1}{2}(v+u)\in \R(v-u)+v$.
+	
+	Indeed, 
+	\begin{align*}
+		\frac{1}{2}(v+u)&=\frac{1}{2}v+\frac{1}{2}u\\
+		&=\frac{1}{2}v+\frac{1}{2}u-v+v\\
+		&=-\frac{1}{2}v+\frac{1}{2}u+v\\
+		&=-\left(\frac{1}{2}v-\frac{1}{2}u\right)+v&=-\frac{1}{2}(v-u)+v
+	\end{align*}
 \end{proof}
