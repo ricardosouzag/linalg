@@ -2875,9 +2875,25 @@ This allows us to prove some very useful results:
 
 \begin{df}
 	Given a line $r\subseteq \R^2$ and a point $v\in \R^2$ we define the \textbf{distance between $v$ and $r$} to be the real number $d(v,r)\in\R$ given by
-	\[d(v,r):=\min_{u\in r}\{d(x,y)\}.\]
+	\[d(v,r):=\min_{u\in r}\{d(v,u)\}.\]
 	
 	That is, the distance between a point and a line is the length of the smallest line segment connecting the point to the line.
+\end{df}
+
+\begin{lemma}
+	Let $r\subseteq \R^2$ be a line and $v\in \R^2$ be any point. Then the distance between $r$ and $v$ is well-defined.
+\end{lemma}
+\begin{df}
+	We need to prove that no matter which $r$ and which $v$ we choose, $d(v,r)$ always exists.
+	
+	To do this, consider the following construction:
+	
+	\begin{enumerate}[(i.)]
+		\item Take $t$ the line perpendicular to $r$ through $v$;
+		\item Mark $u\in r\cap t$.
+	\end{enumerate}
+
+	We claim that $d(v,u)=\min_{w\in r}\{d(v,w)\}$.
 \end{df}
 
 \begin{lemma}
