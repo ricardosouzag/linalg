@@ -2731,4 +2731,11 @@ For instance, we've already proven that any two lines $r,s\subseteq \R^2$ can be
 \end{prop}
 \begin{proof}
 	Let $r=\R v_1+v_2$ and $s=\R u_1+u_2$ for some $v_1,v_2,u_1,u_2\in \R^2$.
+	
+	If $r\cap s=\varnothing$, there's nothing to do (since $\#r\cap s=0$ and we're done).
+	
+	Otherwise, there's some point $x\in r\cap s$.
+	
+	This means that there are real numbers $\lambda,\mu\in \R$ such that 
+	\[x=\lambda v_1+v_2=\mu u_1+u_2.\]
 \end{proof}
