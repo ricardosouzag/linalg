@@ -2873,12 +2873,23 @@ This allows us to prove some very useful results:
 	In other words, a circle is the set of all points that are a fixed distance from a fixed point.
 \end{df}
 
+\begin{df}
+	Given a line $r\subseteq \R^2$ and a point $v\in \R^2$ we define the \textbf{distance between $v$ and $r$} to be the real number $d(v,r)\in\R$ given by
+	\[d(v,r):=\min_{u\in r}\{d(x,y)\}.\]
+	
+	That is, the distance between a point and a line is the length of the smallest line segment connecting the point to the line.
+\end{df}
+
 \begin{lemma}
 	Let $r=\R v+u\subseteq \R^2$ be any line, and $R\in \R$ any non-negative number. Then the set 
 	\[\mc D(R,r):=\{w\in \R^2\mid \exists z\in r\mbox{ such that }d(w,z)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
 \end{lemma}
 \begin{proof}
-	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$. Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$.
+	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$. Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$. We claim that $\overrightarrow{R}\perp r$.
 	
-	Since $y\in r=\R v+u$, it follows that $y=\lambda v+u$ for some $\lambda \in \R$.
+	Indeed:
+	\begin{align*}
+		\gen{\overrightarrow{R},y}&=\gen{x-y,y}\\
+		&=\gen{x,y}-\gen{y,y}
+	\end{align*}
 \end{proof}
