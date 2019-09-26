@@ -2975,9 +2975,16 @@ This allows us to prove some very useful results:
 	If a line contains a point in the inside of a circle, then it crosses the circle.
 \end{cor}
 \begin{proof}
-	Let $\mc C(x,r)$ be a circle of center $x$ and radius $r\geq0$, $s=\R v+u$ be a line and $y\in\R^2$ be a point such that $d(x,y)<r$ (this is what it means to say that $y$ is in the inside of a circle).
+	Let $\mc C:=\mc C(x,r)$ be a circle of center $x$ and radius $r\geq0$, $s=\R v+u$ be a line and $y\in\R^2$ be a point such that $d(x,y)<r$ (this is what it means to say that $y$ is in the inside of a circle).
 	
-	If $y\in s$ then, by definition, $y=\lambda v+u$ for some $\lambda\in \R$. Assume that $d(\lambda' v+u,x)< r$ for all $\lambda_1\in \R$.
+	Assume that $d(y,x)< r$ for all $y\in s$. This means that if we consider the line $s':=\R v$, the point $x':=x-u$ the circle $\mc C':=\mc C(x',r)$, then for all $y'\in s'$ we have
+	\begin{align*}
+		d(y',x')&=\norm{y'-x'}\\
+		&=\norm{\lambda v-(x-u)}\\
+		&=\norm{\lambda v+u-x}\\
+		&=\norm{y-x}\\
+		&=d(y,x)<r
+	\end{align*}since $y=\lambda v+u\in s$, and we're assuming that $d(y,x)< r$ for all $y\in s$.
 \end{proof}
 
 \begin{cor}
