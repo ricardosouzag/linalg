@@ -2870,8 +2870,13 @@ This allows us to prove some very useful results:
 \end{proof}
 
 \begin{df}
-	Given $x\in \R^2$ and $r\in \R$, a \textbf{circle of radius $r$ and center $x$} is the set $\mc C(x,r)$ given by
+	Given $x\in \R^2$ any vector and $r\in \R$ a non-negative real number, a \textbf{circle of radius $r$ and center $x$} is the set $\mc C(x,r)$ given by
 	\[\mc C(x,r):=\{v\in \R^2\mid d(v,x)=r\}.\]
 	
 	In other words, a circle is the set of all points that are a fixed distance from a fixed point.
 \end{df}
+
+\begin{lemma}
+	Let $r=\R v+u\subseteq \R^2$ be any line, and $R\in \R$ any non-negative number. Then the set 
+	\[\mc D(R,r):=\{w\in \R^2\mid \exists z\in r\mbox{ such that }d(w,z)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
+\end{lemma}
