@@ -3079,3 +3079,21 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	This finishes the proof.
 \end{proof}
+
+\begin{prop}
+	Let $r\in \R$ be any non-negative number. Then
+	\[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\}.\]
+\end{prop}
+\begin{proof}
+	Take any $v\in \mc C(0,r)$. Then 
+	\begin{align*}
+		r&=d(v,0)\\
+		&=\norm{v-0}
+		&=\norm{v}=\sqrt{v_1^2+v_2^2}
+	\end{align*}therefore $v_1^2+v_2^2=r^2$ and $v\in\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$. This shows $\mc C(0,r)subseteq\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$.
+	
+	Conversely, take $v\in \{(x,y)\in \R^2\mid x^2+y^2=r^2\}$. So
+	\[d(v,0)=\norm{v-0}=\norm{v}=\sqrt{v_1^2+v_2^2}=\sqrt{r^2}=r\]which implies $v\in \mc C(0,r)$ and, therefore, $\{(x,y)\in \R^2\mid x^2+y^2=r^2\}\subseteq \mc C(0,r)$.
+	
+	This shows \[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\},\]which ends the proof.
+\end{proof}
