@@ -2955,20 +2955,20 @@ This allows us to prove some very useful results:
 	
 	If $x\in s$ this means that $x=\lambda v+u$ for some $\lambda \in \R$.
 	
-	We claim that $x+v'\in \mc C(x,r)$, for $v':=\frac{v}{\norm v}r$.
+	We claim that $x+v'\in \mc C(x,r)$, for $v':=\frac{r}{\norm v}v$.
 	
 	Indeed, 
 	\begin{align*}
 		d(x+v',x)&=\norm{(x+v')-x}\\
 		&=\norm{v'}\\
-		&=\Norm{\frac{v}{\norm v}r}\\
+		&=\Norm{\frac{r}{\norm v}v}\\
 		&=\abs{\frac{r}{\norm v}}\norm{v}\\
 		&=\frac{r}{\norm v}\norm{v}=r
 	\end{align*}
 	
 	Now,
 	\begin{align*}
-		x+v'&=(\lambda v+u)+\left(\frac{v}{\norm v}r\right)=\left(\lambda + \frac{r}{\norm v}\right)v+u\in \R v+u
+		x+v'&=(\lambda v+u)+\left(\frac{r}{\norm v}v\right)=\left(\lambda + \frac{r}{\norm v}\right)v+u\in \R v+u
 	\end{align*}and so $x+v'$ is a point in $\R v+u$ that is at distance $r$ from $x$ - this means that $x+v'\in r\cap \mc C(x,r)$ and, so, the proof is done.
 \end{proof}
 
