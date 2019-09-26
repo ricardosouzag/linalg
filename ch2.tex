@@ -2923,11 +2923,9 @@ This allows us to prove some very useful results:
 	\[\mc D(R,r):=\{w\in \R^2\mid d(w,r)=R\}\]is just the set $s\cup t$ where $s=\R v+\overrightarrow{R}$ and $t=\R v-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
 \end{lemma}
 \begin{proof}
-	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$. Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$. We claim that $\overrightarrow{R}\perp r$.
+	Take $x\in \mc D(R,r)$. This means that there's some $y\in r$ such that $d(x,y)=R$.
 	
-	Indeed:
-	\begin{align*}
-		\gen{\overrightarrow{R},y}&=\gen{x-y,y}\\
-		&=\gen{x,y}-\gen{y,y}
-	\end{align*}
+	Define then $\overrightarrow{R}:=x-y$. By definition, $\norm{\overrightarrow{R}}=R$ and, by the preceding corollary, $\overrightarrow{R}\perp r$.
+	
+	
 \end{proof}
