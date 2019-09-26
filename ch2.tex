@@ -2811,10 +2811,29 @@ This allows us to prove some very useful results:
 	
 	In other words, a rectangle is a quadrilateral which has four congruent angles (which are, therefore, right angles).
 \end{df}
+\begin{lemma}
+	Let $v,u\in \R^2$ be two non-null vectors. Then $(v+u)\parallel(v-u)$ if, and only if, $v\parallel u$.
+\end{lemma}
+\begin{proof}
+	Assume $(v+u)\parallel(v-u)$. Since they are lines through zero, this means they are equal, $\R(v+u)=\R(v-u)$. Let's call $r=\R (v+u)=\R(v-u)$.
+	
+	We've already shown that lines through zero are closed under addition, so $(v+u)+(v-u)\in r$.
+	
+	But $(v+u)+(v-u)=2v\in \R v$, and $v\neq 0$ implies, since two lines through zero meet only at zero, that $\R v=r$
+	
+	Similarly, $(v+u)-(v-u)$ must lie in $r$, but $(v+u)-(v-u)=2u\in \R u$, and, once again, since $u\neq 0$ and two lines through zero meet only at zero, this implies that $\R u=r$.
+	
+	Combining these two, we see that $\R v=r=\R u$, and so $v\parallel u$.
+	
+	\bigskip
+	Conversely, if $v\parallel u$, this means that $\R v=\R u$, and so, since lines through zero are closed under addition, this means that both $v+u$ and $v-u$ lie in $\R v=\R u$. Therefore $v+u\parallel v-u$, which ends the proof.
+\end{proof}
 
 \begin{prop}
 	The diagonals of a rectangle meet at their midpoint.
 \end{prop}
 \begin{proof}
 	First, notice that any rectangle can be considered as having vertices $0,v,v+u,u$ where $v\in\mb X$ and $u\in\mb{Y}$.
+	
+	Then, the midpoint of the diagonal $0(v+u)$ is just $\frac{1}{2}(v+u)$.
 \end{proof}
