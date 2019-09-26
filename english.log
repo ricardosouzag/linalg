@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  26 SEP 2019 01:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  26 SEP 2019 01:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,20 +954,20 @@ orations.markings.code.tex))
  (./english.aux)
 \openout1 = `english.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 268.
-LaTeX Font Info:    ... okay on input line 268.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 269.
+LaTeX Font Info:    ... okay on input line 269.
 
 (c:/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1001,10 +1001,10 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box88
-Package hyperref Info: Link coloring ON on input line 268.
-LaTeX Info: Redefining \ref on input line 268.
-LaTeX Info: Redefining \pageref on input line 268.
-LaTeX Info: Redefining \nameref on input line 268.
+Package hyperref Info: Link coloring ON on input line 269.
+LaTeX Info: Redefining \ref on input line 269.
+LaTeX Info: Redefining \pageref on input line 269.
+LaTeX Info: Redefining \nameref on input line 269.
  (./english.out) (./english.out)
 \@outlinefile=\write6
 \openout6 = `english.out'.
@@ -1013,16 +1013,16 @@ LaTeX Info: Redefining \nameref on input line 268.
 Package pgfplots notification 'compat/show suggested version=true': you might b
 enefit from \pgfplotsset{compat=1.16} (current compat level: 1.15).
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 270.
+LaTeX Font Info:    Try loading font information for U+msa on input line 271.
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 270.
+LaTeX Font Info:    Try loading font information for U+msb on input line 271.
 
 (c:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 270.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 271.
 
 (c:/texlive/2018/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1116,15 +1116,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 297.
 
-[80] [81] [82] [83]
-Underfull \hbox (badness 1418) in paragraph at lines 515--516
-[]\OT1/cmr/m/n/12 Now this im-plies, to-gether with the equa-tions $[](\OML/cmm
-/m/it/12 v\OT1/cmr/m/n/12 ) [] = [](\OML/cmm/m/it/12 v[]\OT1/cmr/m/n/12 ) []$ a
-nd
- []
-
-[84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]
-[99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92] [93] [94]
+[95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
+[108]
 Overfull \hbox (16.02257pt too wide) in paragraph at lines 1570--1571
 []\OT1/cmr/bx/n/12 Corollary 2.2.3.6. []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 
 f\OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g ^^R \U/dsrom/m/n/12 R[]
@@ -1135,22 +1129,22 @@ OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
 [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
 [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
 [133] [134] [135] [136] [137] [138] [139] [140] [141]) [142]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./english.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 279.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 279.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 280.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 280.
 Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: DF09D7E2DED44E0DCDDFB62DAA618B38;2247.
  ) 
 Here is how much of TeX's memory you used:
- 36122 strings out of 492646
- 858986 string characters out of 6133325
- 1042717 words of memory out of 5000000
- 38580 multiletter control sequences out of 15000+600000
+ 36123 strings out of 492646
+ 858990 string characters out of 6133325
+ 1042723 words of memory out of 5000000
+ 38581 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,17n,119p,830b,2498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,16n,119p,830b,2498s stack positions out of 5000i,500n,10000p,200000b,80000s
 <c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><c:/texlive/20
 18/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2018/texmf-
@@ -1167,7 +1161,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (143 pages, 700191 bytes).
+Output written on english.pdf (143 pages, 699944 bytes).
 PDF statistics:
  1710 PDF objects out of 1728 (max. 8388607)
  1531 compressed objects within 16 object streams
