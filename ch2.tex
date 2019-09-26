@@ -2949,3 +2949,18 @@ This allows us to prove some very useful results:
 \begin{cor}
 	Let $x,y\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(x,r_1)\cap\mc C(y,r_2)$ is either empty, a single point or two points.
 \end{cor}
+\begin{proof}
+	Let $D:=d(x,y)$ and $R=r_1+r_2$. Let also $I=\mc C(x,r_1)\cap \mc C(y,r_2)$.
+	
+	Then, we have three cases:
+	\begin{itemize}
+		\item \underline{$D>R$}:
+		
+		If there is a point $v\in I$, then $vxy$ is a triangle, so 
+		\[d(x,y)\leq d(x,v)+d(y,v).\]
+		
+		But $v\in I$ implies $d(v,x)=r_1$ and $d(v,y)=r_2$, so $d(x,v)+d(y,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
+		
+		Therefore, if $D>R$ then $I=\varnothing$.
+	\end{itemize}
+\end{proof}
