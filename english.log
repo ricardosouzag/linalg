@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  26 SEP 2019 00:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  26 SEP 2019 00:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1134,7 +1134,7 @@ OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
 
 [109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
 [121] [122] [123] [124] [125] [126] [127] [128] [129] [130] [131] [132]
-[133] [134] [135] [136] [137] [138] [139] [140]) [141]
+[133] [134] [135] [136] [137] [138] [139] [140] [141]) [142]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 279.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 279.
  (./english.aux)
@@ -1144,8 +1144,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: DF09D7E2DED44E0DCDDFB62DAA618B38;2247.
  ) 
 Here is how much of TeX's memory you used:
- 36116 strings out of 492646
- 858891 string characters out of 6133325
+ 36119 strings out of 492646
+ 858932 string characters out of 6133325
  1042717 words of memory out of 5000000
  38579 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
@@ -1167,10 +1167,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (142 pages, 697891 bytes).
+Output written on english.pdf (143 pages, 698654 bytes).
 PDF statistics:
- 1702 PDF objects out of 1728 (max. 8388607)
- 1524 compressed objects within 16 object streams
- 835 named destinations out of 1000 (max. 500000)
+ 1708 PDF objects out of 1728 (max. 8388607)
+ 1529 compressed objects within 16 object streams
+ 838 named destinations out of 1000 (max. 500000)
  253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
