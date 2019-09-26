@@ -3029,7 +3029,8 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	Now, since $r$ is non-vertical if, and only if, $v_1\neq 0$, we see that if $r$ is non-vertical, then
 	\begin{align*}
-		y&=\frac{\lambda v_1}{\lambda v_1}\lambda v_2\\
+		y&=\lambda v_2\\
+		&=\frac{\lambda v_1}{\lambda v_1}\lambda v_2\\
 		&=\frac{x}{\lambda v_1}\lambda v_2\\
 		&=\frac{\lambda v_2}{\lambda v_1}x=\frac{v_2}{v_1}x
 	\end{align*}so if we define $a=\frac{v_2}{v_1}$ we can conclude that $(x,y)$ satisfies $y=ax$.
@@ -3058,5 +3059,11 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	Then $r'$ is also a non-vertical line, so, by the previous proposition, we know that there's a uniquely determined $a\in \R$ such that
 	\[r'=\{(x,y)\in \R^2\mid y=ax\}.\]
 	
-	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$.
+	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$. 
+	
+	It follows that
+	\begin{align*}
+		w_2&=ax+u_2\\
+		&=aw_1+
+	\end{align*}
 \end{proof}
