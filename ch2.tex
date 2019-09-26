@@ -3073,5 +3073,9 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	Analogously, if $r$ was vertical, this would mean that $v\parallel e_2$, so $v=(0,v_2)$. Since every point in $r$ is of the form $\lambda v+u$ this becomes $\lambda(0,v_2)+(u_1,u_2)=(u_1,\lambda v_2+u_2)$. We see then that the $X$-coordinate of such points is always $u_1$. So if we put $c=u_1$, we see that $(x,y)\in r$ implies $x=c$, so $r\subseteq\{(x,y)\in \R^2\mid x=c\}$.
 	
 	\bigskip
-	Conversely, take $w\in \{(x,y)\in \R^2\mid y=ax+b\}$. This means that $w=(w_1,aw_1+b)$, so $w=w_1(1,a)+(0,b)\in \R (1,a)+(0,b)$.
+	Conversely, take $w\in \{(x,y)\in \R^2\mid y=ax+b\}$. This means that $w=(w_1,aw_1+b)$, so $w=w_1(1,a)+(0,b)\in \R (1,a)+(0,b)$, which is a non-vertical line since it's not parallel to $e_2$.
+	
+	Analogously, if $w\in \{(x,y)\in \R^2\mid x=c\}$ then $w=(c,w_2)=w_2e_2+(c,0)\in\R e_2+(c,0)$, so $w$ is in line which is parallel to $e_2$, and, so, it is vertical.
+	
+	This finishes the proof.
 \end{proof}
