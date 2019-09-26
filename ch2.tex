@@ -2971,6 +2971,14 @@ This allows us to prove some very useful results:
 		x+v'&=(\lambda v+u)+\left(\frac{r}{\norm v}v\right)=\left(\lambda + \frac{r}{\norm v}\right)v+u\in \R v+u
 	\end{align*}and so $x+v'$ is a point in $\R v+u$ that is at distance $r$ from $x$ - this means that $x+v'\in r\cap \mc C(x,r)$ and, so, the proof is done.
 \end{proof}
+\begin{cor}
+	If a line contains a point in the inside of a circle, then it crosses the circle.
+\end{cor}
+\begin{proof}
+	Let $\mc C(x,r)$ be a circle of center $x$ and radius $r$, $s=\R v+u$ be a line and $y\in\R^2$ be a point such that $d(x,y)<r$ (this is what it means to say that $y$ is in the inside of a circle).
+	
+	If $y\in s$ then, by definition, $y=\lambda v+u$ for some $\lambda\in \R$.
+\end{proof}
 
 \begin{cor}
 	Let $x,y\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(x,r_1)\cap\mc C(y,r_2)$ is either empty, a single point or two points.
@@ -3001,5 +3009,9 @@ This allows us to prove some very useful results:
 		
 		But then, 
 		\[d(v,x)= d(v,u)+d(u,x)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
+		
+		\item \underline{$D>R$}:
+		
+		
 	\end{itemize}
 \end{proof}
