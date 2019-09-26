@@ -2856,5 +2856,15 @@ This allows us to prove some very useful results:
 	
 	\begin{align*}
 		d\left(\frac{1}{2}(v+u),v\right)&=\norm{\frac{1}{2}(v+u)-v}
+	\end{align*}but since we know that $\frac{1}{2}(v+u)=-\frac{1}{2}(v-u)+v$ this becomes
+	\begin{align*}
+		d\left(\frac{1}{2}(v+u),v\right)&=\norm{\left(\frac{1}{2}(v+u)\right)-v}\\
+		&=\norm{\left(-\frac{1}{2}(v-u)+v\right)-v}\\
+		&=\norm{-\frac{1}{2}(v-u)+v-v}\\
+		&=\norm{-\frac{1}{2}(v-u)}\\
+		&=\abs{-\frac{1}{2}}\norm{v-u}\\
+		&=\frac{1}{2}d(v,u)=\frac{1}{2}\overline{vu}.
 	\end{align*}
+	
+	It follows that $\frac{1}{2}(v+u)$ is indeed the midpoint of $vu$, which ends the proof.
 \end{proof}
