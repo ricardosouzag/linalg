@@ -2897,7 +2897,13 @@ This allows us to prove some very useful results:
 	
 	Notice that $\R$ is totally ordered, so it suffices to show that there's no one smaller than $d(v,u)$.
 	
-	Assume there is some $w\in r$ such that $d(v,w)\leq d(v,u)$ and consider the triangle $vuw$.
+	Take any $w\in r$ and consider the triangle $vuw$.
+	
+	Since, by construction $vu\perp r$, it follows that $vuw$ is a right-triangle with hypotenuse $vw$. But, by Pythagoras' Theorem, we know that $d(v,w)^2=d(v,u)^2+d(u,w)^2$.
+	
+	In particular, $d(v,w)^2\geq d(v,u)^2$, which implies (since distances are always non-negative) that $d(v,w)\geq d(v,u)$.
+	
+	This shows that $d(v,u)\leq d(v,w)$ for all $w\in r$, and so $d(v,u)=\min_{w\in r}\{d(v,w)\}$, which ends the proof.
 \end{df}
 
 \begin{lemma}
