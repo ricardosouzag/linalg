@@ -3045,3 +3045,18 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	This ends the proof.
 \end{proof}
+\begin{cor}
+	Let $r=\R v+u$ be a non-vertical line. Then there are some uniquely determined $a,b\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid y=ax+b\}.\]
+	
+	If $r$ is a vertical line, then there's a uniquely determined $c\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid x=c\}.\]
+\end{cor}
+\begin{proof}
+	Let $r=\R v+u$ be a non-vertical line, $u=(u_1,u_2)$ and $r'=\R v$.
+	
+	Then $r'$ is also a non-vertical line, so, by the previous proposition, we know that there's a uniquely determined $a\in \R$ such that
+	\[r'=\{(x,y)\in \R^2\mid y=ax\}.\]
+	
+	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$.
+\end{proof}
