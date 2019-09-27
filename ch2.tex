@@ -3333,6 +3333,22 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	It follows that $v'\in I$ as well, and $v\neq v'$ (since $v'-v=2(w-v)\neq0$ because $v\notin \R c$, and hence $v\neq w$).
 	
-	It remains to show that there's no other point in $I$.
+	It remains to show that there's no other point in $I$. But this is easy:
+	
+	Take $u\in I$. Then, as we've shown, $d(u,\mc R)=d(v,\mc R)=d(v',\mc R)$. But we've already proven that the locus of points at a fixed distance from a given line is two lines. This means that either $u\in \mc R c+v$ or $u\in \mc R c+v'$.
+	
+	In either case there's a point $w'\in \mc R c$ such that $d(u,\mc R c)=d(u,w')$ So if $u\in \mc R c+v$ we get
+	\begin{gather}
+		d(u,c)^2=d(u,w')^2+d(w',c)^2\\
+		d(v,c)^2=d(v,w)^2+d(w',c)^2\\
+		d(w',c)^2=d(v,c)^2-d(v,w)^2\\
+		d(w',c)^2=d(w,c)^2
+	\end{gather}so $d(w,c)=d(w',c)$, and since $w,w'\in \mc Rc$ this implies $w'=w$, which, in turn, implies $u=v$.
+	
+	Doing a similar computation in the case $u\in \mc R c+v'$ shows us that $u=v'$.
+	
+	This shows that any point $u\in I$ is either $v$ or $v'$ - and so $I=\{v,v'\}$.
 	\end{itemize}
+
+This finishes the proof.
 \end{proof}
