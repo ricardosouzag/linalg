@@ -3086,13 +3086,24 @@ Now, let's introduce a new tool to allow us to prove even more results:
 \begin{proof}
 	Call $\mc C=\mc C(0,r)$ and $\mc C'= \mc C(c,r)$. We want to show that $\mc C+c=\mc C'$. Fix, then, $c=(c_1,c_2)$.
 	
-	Take then $v=(v_1,v_2)\in \mc C$, so $v_1^2+v_2^2=r^2$, that is, $\norm v=r$. Therefore, $v+c=(v_1+c_1,v_2+c_2)$. Then:
+	Take then $v=(v_1,v_2)\in \mc C$, so $d(v,0)=r$. Therefore, $v+c=(v_1+c_1,v_2+c_2)\in \mc C+c$. Then:
 	
 	\begin{align*}
-		d(v+c,c)&=\norm{(v+c)-c}=\norm{v}=r
+		d(v+c,c)&=\norm{(v+c)-c}=\norm{v}=\norm{v-0}=d(v,0)=r
 	\end{align*}and so $v+c\in \mc C'$, by definition.
 	
 	This shows that $\mc C+c\subseteq \mc C'$.
+	
+	\bigskip
+	Conversely, take $v\in \mc C'$, that is, $d(v,c)=r$. We claim that $v-c\in \mc C$. Indeed:
+	
+	\begin{align*}
+		d(v-c,0)&=\norm{(v-c)-0}=\norm{v-c}=d(v,c)=r
+	\end{align*}so $v-c\in \mc C$.
+	
+	Clearly, then, $v=(v-c)+c\in \mc C+c$ so $\mc C'\subseteq \mc C+c$.
+	
+	These two together show that $\mc C'=\mc C+c$ and the result follows.
 \end{proof}
 
 \begin{prop}
