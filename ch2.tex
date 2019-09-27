@@ -3177,7 +3177,7 @@ Now, let's introduce a new tool to allow us to prove even more results:
 \end{proof}
 
 \begin{cor}
-	Let $c_1,c_2\in \R^2$ be any two distinct points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
+	Let $c_1,c_2\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
 \end{cor}
 \begin{proof}
 	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$, $\mc C_1=\mc C(c_1,r_1)$ and $\mc C_2=\mc C(c_2,r_2)$.
@@ -3194,77 +3194,18 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		But $v\in I$ implies $d(v,0)=r_1$ and $d(v,c)=r_2$, so $d(0,v)+d(c,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
-	\end{itemize}
-
-	This first case is easy. To prove the other two cases, let us first do a little bit of reasoning:
-	
-	We know that $v=(v_1,v_2)\in \mc C_1$ if, and only if, $v_1^2+v_2^2=r_1^2$, and that $u=(u_1,u_2)\in \mc C_2$ if, and only if, $(u_1-c_1)^2+(u_2-c_2)^2=r_2^2$, where $c=(c_1,c_2)$.
-	
-	Therefore, a point $w=(x,y)$ lies in $I$ if, and only if, $x^2+y^2=r_1^2$ and $(x-c_1)^2+(y-c_2)^2=r_2^2$ both hold at once.
-	
-	This gives us a system of two equations and two variables:
-	\[\begin{cases}
-	x^2+y^2=r_1^2\\
-	(x-c_1)^2+(y-c_2)^2=r_2^2
-	\end{cases}\]which we can then solve:
-	
-	First, let us expand the LHS of $(x-c_1)^2+(y-c_2)^2=r_2$:
-	
-	\begin{align*}
-		(x-c_1)^2+(y-c_2)^2&=x^2-2xc_1+c_1^2+y^2-2yc_2+c_2^2\\
-		&=(x^2+y^2)+c_1(c_1-2x)+c_2(c_2-2y)
-	\end{align*}therefore $(x-c_1)^2+(y-c_2)^2=r_2$ becomes
-	\[(x^2+y^2)+c_1(c_1-2x)+c_2(c_2-2y)=r_2^2,\]which we can simplify into
-	\[x^2+y^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y).\]
-	
-	Now our system becomes
-	\[\begin{cases}
-	x^2+y^2=r_1^2\\
-	x^2+y^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y)
-	\end{cases}\]which yields \[r_1^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y).\]
-	
-	We can then rewrite this as
-	\[c_1(c_1-2x)+c_2(c_2-2y)=r_2^2-r_1^2\]and do some quick computations:
-	\begin{gather*}
-		c_1(c_1-2x)+c_2(c_2-2y)=r_2^2-r_1^2\\
-		c_1^2-2c_1x+c_2^2-2c_2y=r_2^2-r_1^2\\
-		-2(c_1x+c_2y)=(r_2^2-r_1^2)-(c_1^2+c_2^2)\\
-		c_1x+c_2y=\frac{(c_1^2+c_2^2)-(r_2^2-r_1^2)}{2}\\
-		c_1x=\frac{(c_1^2+c_2^2)-(r_2^2-r_1^2)}{2}-{c_2}y\\
-		c_1x=\frac{\norm{c}^2-(r_2+r_1)(r_2-r_2)}{2}-{c_2}y\\
-		c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y.
-	\end{gather*}
-	
-	Now we can proceed with the cases:
-	
-	\begin{itemize}
-		\item \underline{$D=R$}:
 		
-		We've shown that $(x,y)\in I$ if, and only if
-		\[c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y\]holds. But if $D=R$ we can simplify this expression:
-		\begin{gather*}
-			c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y\\
-			c_1x=\frac{R^2-R(r_2-r_1)}{2}-{c_2}y\\
-			c_1x=R\left(\frac{R-(r_2-r_1)}{2}\right)-{c_2}y\\
-			c_1x=R\left(\frac{(r_2+r_1)-(r_2-r_1)}{2}\right)-{c_2}y\\
-			c_1x=R\left(\frac{2r_1}{2}\right)-{c_2}y\\
-			c_1x=Rr_1-{c_2}y\\
-		\end{gather*}which we can break into two further cases:
+		\item \underline{$D\geq R$}:
 		
-		\begin{itemize}
-			\item \underline{$c_1=0$}:
-			
-			In this case, $c_1x=Rr_1-{c_2}y$ becomes $0=Rr_1-{c_2}y$, that is, 	$c_2y=Rr_1$, and since we're assuming that that the circles don't have a common center, we see that $c_2\neq 0$ and so $y=\frac{Rr_1}{c_2}$.
-			
-			This allows us to compute the corresponding $x$ value:
-			\begin{gather*}
-				x^2+y^2=r_1^2\\
-				x^2+\left(\frac{Rr_1}{c_2}\right)^2=r_1^2\\
-				x=\pm\sqrt{r_1^2-\frac{R^2r_1^2}{c_2^2}}\\
-				x=\pm\sqrt{\frac{c_2^2r_1^2-R^2r_1^2}{c_2^2}}\\
-				x=\pm\sqrt{\frac{r_1^2}{c_2^2}\left(c_2^2-R^2\right)}\\
-				x=\pm \frac{r_1}{c_2}\sqrt{c_2^2-R^2}\\
-			\end{gather*}
-		\end{itemize}
+		We've already shown
+		
+		\item \underline{$D>R$}:
+		
+		Take, once more, $r=\R(c_1-c_2)+c_1$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
+		
+		Now, since $D>R$, we can write $D=R+\delta$ for some positive $\delta\in \R$. Notice that we can rewrite this as
+		\[d_1+d_2=r_1+r_2+\delta\]so
+		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+\delta,\]but we also know that
+		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+d(v,u),\]since $c_1,c_2,v,u$ are colinear. So $\delta=d(v,u)$.
 	\end{itemize}
 \end{proof}
