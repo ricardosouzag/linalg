@@ -2746,7 +2746,11 @@ It may not seem much, but this allows us to define:
 		\norm{v-u}=\norm{u}-\norm{v}\\
 		\norm{v-u}^2=\left(\norm{u}-\norm{v}\right)^2\\
 		\norm{v-u}^2=\norm{u}^2-2\norm{u}\norm{v}+\norm{v}^2
-	\end{gather*}
+	\end{gather*}and by comparing the two expressions for $\norm{v-u}^2$ we see that $\gen{v,u}=\norm{v}\norm{u}$.
+	
+	But we've also shown that, for any two vectors (in particular for $v,u$), $\gen{v,u}=\norm{v}\norm{u}\cos\theta$, where $\theta$ is the angle between $v,u$. Therefore, once again by comparing the two expressions for $\gen{v,u}$ we see that $\cos\theta=1$, so $\theta=0$.
+	
+	This tells us that $v\parallel u$ and finishes the proof.
 \end{proof}
 
 \begin{ex}
