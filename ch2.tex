@@ -3156,6 +3156,23 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	\end{align*} and a similar equation holds for $c_2$ (that is, $r_2=d(x,c_2+v)=d(x-v,c_2)$) we see that $x-v\in I$, so $x\in I+v$.
 	
 	This shows $(\mc C_1+v)\cap (\mc C_2+v)\subseteq I+v$.
+	
+%	\bigskip
+%	Conversely, given any $x\in I+v$, this means that $x-v\in I$, and so 
+%	\begin{align*}
+%		r_1&=d(x-v,c_1)\\
+%		&=\norm{(x-v)-c_1}\\
+%		&=\norm{x-(c_1+v)=d(x,c_1+v)
+%	\end{align*}and a similar equation holds for $c_2$ (that is, $r_2=d(x-v,c_2)=d(x,c_2+v)$). But this implies that $x\in (\mc C_1+v)\cap (\mc C_2+v)$, and so $I+v\subseteq (\mc C_1+v)\cap (\mc C_2+v)$.
+%	
+%	This proves that $I+v=(\mc C_1+v)\cap (\mc C_2+v)$.
+	
+	\bigskip
+	Finally, consider the function $f:I\to I+v$ given by $x\mapsto x+v$, as well as the function $g:I+v\to I$ given by $y\mapsto y-v$.
+	
+	Clearly, $f\circ g=\id_{I+v}$ and $g\circ f=\id_I$, so $g=f^{-1}$ and $f$ is an isomorphism.
+	
+	This finishes the proof.
 \end{proof}
 
 \begin{cor}
