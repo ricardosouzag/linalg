@@ -3180,7 +3180,7 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	Let $c_1,c_2\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
 \end{cor}
 \begin{proof}
-	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$.
+	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$, $\mc C_1=\mc C(c_1,r_1)$ and $\mc C_2=\mc C(c_2,r_2)$.
 	
 	Finally, using the preceding lemma, it suffices to prove this result for $c_1=0$, and $c_2=c$, because every other case is just a translation of this case by some $v\in \R^2$. This tells us that $D=\norm{c}$.
 	
@@ -3194,27 +3194,17 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		But $v\in I$ implies $d(v,0)=r_1$ and $d(v,c)=r_2$, so $d(0,v)+d(c,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
-		
-		\item \underline{$D=R$}:
-		
-		Take the line through both centers, $r:=\R(c)$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
-		
-		Now, for each of those points we have that $d(v,)+d(v,c)=D=d(u,0)+d(u,c)$, or, in other words, since $v\in \mc C(0,r_1)$ and $u\in \mc C(c,r_2)$, this is
-		\[r_1+d(v,c)=D=d(u,0)+r_2\]but $D=R$ implies
-		\[r_1+d(v,c)=r_1+r_2=d(u,0)+r_2\]and so the LHS yields $d(v,c)=r_2$, and the RHS yields $d(u,0)=r_1$. This shows that $v\in \mc C(c,r_2)$ and $u\in \mc C(0,r_1)$.
-		
-		So $v$ and $u$ lie, at once, both in $r$ and in both circles.
-		
-		But then, 
-		\[d(v,0)= d(v,u)+d(u,0)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
-		
-		\item \underline{$D>R$}:
-		
-		Take, once more, $r=\R(c_1-c_2)+c_1$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
-		
-		Now, since $D>R$, we can write $D=R+\delta$ for some positive $\delta\in \R$. Notice that we can rewrite this as
-		\[d_1+d_2=r_1+r_2+\delta\]so
-		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+\delta,\]but we also know that
-		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+d(v,u),\]since $c_1,c_2,v,u$ are colinear. So $\delta=d(v,u)$.
 	\end{itemize}
+
+	This first case is easy. To prove the other two cases, let us first do a little bit of reasoning:
+	
+	We know that $v=(v_1,v_2)\in \mc C_1$ if, and only if, $v_1^2+v_2^2=r_1$, and that $u=(u_1,u_2)\in \mc C_2$ if, and only if, $(u_1-c_1)^2+(u_2-c_2)^2=r_2$, where $c=(c_1,c_2)$.
+	
+	Therefore, a point $w=(w_1,w_2)$ lies in $I$ if, and only if, $w_1^2+w_2^2=r_1$ and $(w_1-c_1)^2+(w_2-c_2)^2=r_2$ both hold at once.
+	
+	This gives us a system of two equations and two variables:
+	\[\begin{cases}
+	w_1^2+w_2^2=r_1\\
+	(w_1-c_1)^2+(w_2-c_2)^2=r_2
+	\end{cases}\]which we can then solve:
 \end{proof}
