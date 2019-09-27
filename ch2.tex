@@ -3244,13 +3244,26 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
 		
+		\item \underline{$D=R$}:
+		
+		Take the line through both centers, $r:=\R c$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
+		
+		Now, for each of those points we have that $d(v,0)+d(v,c)=D=d(u,0)+d(u,c)$, or, in other words, since $v\in \mc C(0,r_1)$ and $u\in \mc C(c,r_2)$, this is
+		\[r_1+d(v,c)=D=d(u,0)+r_2\]but $D=R$ implies
+		\[r_1+d(v,c)=r_1+r_2=d(u,0)+r_2\]and so the LHS yields $d(v,c)=r_2$, and the RHS yields $d(u,0)=r_1$. This shows that $v\in \mc C(c,r_2)$ and $u\in \mc C(0,r_1)$.
+		
+		So $v$ and $u$ lie, at once, both in $r$ and in both circles.
+		
+		But then, 
+		\[d(v,0)= d(v,u)+d(u,0)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
+		
 		\item \underline{$D>R$}:
 		
-		Take, once more, $r=\R(c_1-c_2)+c_1$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
+		Take, once more, $r=\R c$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
 		
 		Now, since $D>R$, we can write $D=R+\delta$ for some positive $\delta\in \R$. Notice that we can rewrite this as
 		\[d_1+d_2=r_1+r_2+\delta\]so
-		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+\delta,\]but we also know that
-		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+d(v,u),\]since $c_1,c_2,v,u$ are colinear. So $\delta=d(v,u)$.
+		\[d(0,c)=d(0,v)+d(c,u)+\delta,\]but we also know that
+		\[d(0,c)=d(0,v)+d(c,u)+d(v,u),\]since $0,c,v,u$ are colinear. So $\delta=d(v,u)$.
 	\end{itemize}
 \end{proof}
