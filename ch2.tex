@@ -3215,5 +3215,14 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		&=(x^2+y^2)+c_1(c_1-2x)+c_2(c_2-2y)
 	\end{align*}therefore $(x-c_1)^2+(y-c_2)^2=r_2$ becomes
 	\[(x^2+y^2)+c_1(c_1-2x)+c_2(c_2-2y)=r_2^2,\]which we can simplify into
-	\[x^2+y^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y)\]
+	\[x^2+y^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y).\]
+	
+	Now our system becomes
+	\[\begin{cases}
+	x^2+y^2=r_1^2\\
+	x^2+y^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y)
+	\end{cases}\]which yields \[r_1^2=r_2^2-c_1(c_1-2x)-c_2(c_2-2y).\]
+	
+	We can then rewrite this as
+	\[c_1(c_1-2x)+c_2(c_2-2y)=r_2^2-r_1^2\]
 \end{proof}
