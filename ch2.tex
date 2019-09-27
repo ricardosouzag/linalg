@@ -3177,7 +3177,7 @@ Now, let's introduce a new tool to allow us to prove even more results:
 \end{proof}
 
 \begin{cor}
-	Let $c_1,c_2\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
+	Let $c_1,c_2\in \R^2$ be any two distinct points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
 \end{cor}
 \begin{proof}
 	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$, $\mc C_1=\mc C(c_1,r_1)$ and $\mc C_2=\mc C(c_2,r_2)$.
@@ -3249,6 +3249,22 @@ Now, let's introduce a new tool to allow us to prove even more results:
 			c_1x=R\left(\frac{(r_2+r_1)-(r_2-r_1)}{2}\right)-{c_2}y\\
 			c_1x=R\left(\frac{2r_1}{2}\right)-{c_2}y\\
 			c_1x=Rr_1-{c_2}y\\
-		\end{gather*}
+		\end{gather*}which we can break into two further cases:
+		
+		\begin{itemize}
+			\item \underline{$c_1=0$}:
+			
+			In this case, $c_1x=Rr_1-{c_2}y$ becomes $0=Rr_1-{c_2}y$, that is, 	$c_2y=Rr_1$, and since we're assuming that that the circles don't have a common center, we see that $c_2\neq 0$ and so $y=\frac{Rr_1}{c_2}$.
+			
+			This allows us to compute the corresponding $x$ value:
+			\begin{gather*}
+				x^2+y^2=r_1^2\\
+				x^2+\left(\frac{Rr_1}{c_2}\right)^2=r_1^2\\
+				x=\pm\sqrt{r_1^2-\frac{R^2r_1^2}{c_2^2}}\\
+				x=\pm\sqrt{\frac{c_2^2r_1^2-R^2r_1^2}{c_2^2}}\\
+				x=\pm\sqrt{r_1^2\left(\frac{c_2^2-R^2}{c_2^2}\right)}\\
+				x=\pm r_1\sqrt{\frac{c_2^2-R^2}{c_2^2}}\\
+			\end{gather*}
+		\end{itemize}
 	\end{itemize}
 \end{proof}
