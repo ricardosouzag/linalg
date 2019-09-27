@@ -2738,13 +2738,15 @@ It may not seem much, but this allows us to define:
 	
 	So we can assume all of these distances are non-zero, which means that $u$ and $v$ are non-zero vectors. 
 	
-	If $v\nparallel u$, then $\cos\theta\neq 1$, where $\theta$ is the angle between $v$ and $u$.
-	
-	But $\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}$, so $\cos\theta\neq 1$ if, and only if, $\norm{v}\norm{u}\neq\gen{v,u}$.
-	
-	But $\norm{u}=\norm{v}+\norm{v-u}$, by hypothesis, so the LHS becomes
-	
-	\[\norm{v}\norm{u}=\norm{v}(\norm{v}+\norm{v-u})=\norm{v}^2-\norm{v}\norm{v-u}\]
+	But we've already shown that
+	\[\norm{v-u}^2=\gen{v-u,v-u}=\gen{v,v}-2\gen{v,u}+\gen{u,u},\]but the equality\[d(0,u)=d(v,0)+d(u,v)\]can be rewritten as
+	\[d(u,v)=d(0,u)-d(0,v)\]which gives us
+	\begin{gather*}
+		d(u,v)=d(0,u)-d(0,v)\\
+		\norm{v-u}=\norm{u}-\norm{v}\\
+		\norm{v-u}^2=\left(\norm{u}-\norm{v}\right)^2\\
+		\norm{v-u}^2=\norm{u}^2-2\norm{u}\norm{v}+\norm{v}^2
+	\end{gather*}
 \end{proof}
 
 \begin{ex}
