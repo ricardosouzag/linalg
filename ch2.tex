@@ -3200,11 +3200,18 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	We know that $v=(v_1,v_2)\in \mc C_1$ if, and only if, $v_1^2+v_2^2=r_1$, and that $u=(u_1,u_2)\in \mc C_2$ if, and only if, $(u_1-c_1)^2+(u_2-c_2)^2=r_2$, where $c=(c_1,c_2)$.
 	
-	Therefore, a point $w=(w_1,w_2)$ lies in $I$ if, and only if, $w_1^2+w_2^2=r_1$ and $(w_1-c_1)^2+(w_2-c_2)^2=r_2$ both hold at once.
+	Therefore, a point $w=(x,y)$ lies in $I$ if, and only if, $x^2+y^2=r_1$ and $(x-c_1)^2+(y-c_2)^2=r_2$ both hold at once.
 	
 	This gives us a system of two equations and two variables:
 	\[\begin{cases}
-	w_1^2+w_2^2=r_1\\
-	(w_1-c_1)^2+(w_2-c_2)^2=r_2
+	x^2+y^2=r_1\\
+	(x-c_1)^2+(y-c_2)^2=r_2
 	\end{cases}\]which we can then solve:
+	
+	First, let us expand the LHS of $(x-c_1)^2+(y-c_2)^2=r_2$:
+	
+	\begin{align*}
+		(x-c_1)^2+(y-c_2)^2&=x^2-2xc_1+c_1^2+y^2-2yc_2+c_2^2\\
+		&=(x^2+y^2)+c_1(c_1-2x)+c_2(c_2-2y)
+	\end{align*}
 \end{proof}
