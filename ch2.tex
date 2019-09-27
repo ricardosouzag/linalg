@@ -2712,7 +2712,9 @@ It may not seem much, but this allows us to define:
 \begin{proof}
 	We'll prove this for lines through zero. The proof for an arbitrary line follows directly and is left as an exercise to the reader.
 	
-	Let $r=\R v$ be a line through zero, such that $u,w\in r$. Then $u=\mu v$ and $w=\omega v$ for some $\mu,\omega\in \R$. Then
+	Let $r=\R v$ be a line through zero, such that $u,w\in r$. Then $u=\mu v$ and $w=\omega v$ for some $\mu,\omega\in \R$. Notice that we can assume that all three points are different, cause, otherwise, the result is trivially true. This implies $\mu\neq \omega$ and both different from $1$.
+	
+	Then
 	\begin{align*}
 		d(v,u)&=\norm{v-u}\\
 		&=\norm{v-\mu v}\\
@@ -2722,7 +2724,7 @@ It may not seem much, but this allows us to define:
 	Therefore, if $w$ is between $v$ and $u$, it means that $1<\omega<\mu$, so
 	\begin{align*}
 		d(v,u)&=\abs{1-\mu}\norm{v}\\
-		&=(\mu-1)\norm{v}
+		&=(\mu-1)\norm{v}\\
 		&=(\mu-\omega+\omega-1)\norm{v}\\
 		&=(\mu-\omega)\norm{v}+(\omega-1)\norm v\\
 		&=\abs{\mu-\omega}\norm{v}+\abs{1-\omega}\norm{v}=d(w,u)+d(w,v)
@@ -2731,6 +2733,8 @@ It may not seem much, but this allows us to define:
 	\bigskip
 	Conversely, assume $v,u,w\in \R^2$ are such that the equality holds, that is, 
 	\[d(v,u)=d(v,w)+d(u,w).\]
+	
+	This means that if we call $d_1=d(v,u)$, $d_2=d(v,w)$ and $d_3=d(u,w)$, then $d_1\geq d_2$ and 
 \end{proof}
 
 \begin{ex}
