@@ -2741,6 +2741,10 @@ It may not seem much, but this allows us to define:
 	If $v\nparallel u$, then $\cos\theta\neq 1$, where $\theta$ is the angle between $v$ and $u$.
 	
 	But $\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}$, so $\cos\theta\neq 1$ if, and only if, $\norm{v}\norm{u}\neq\gen{v,u}$.
+	
+	But $\norm{u}=\norm{v}+\norm{v-u}$, by hypothesis, so the LHS becomes
+	
+	\[\norm{v}\norm{u}=\norm{v}(\norm{v}+\norm{v-u})=\norm{v}^2-\norm{v}\norm{v-u}\]
 \end{proof}
 
 \begin{ex}
