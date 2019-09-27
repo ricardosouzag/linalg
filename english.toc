@@ -27,4 +27,4 @@
 \contentsline {subsection}{\numberline {2.3.1}A systematic approach}{118}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Rotato potato}{126}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}The distance between us}{132}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Geomancy}{138}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Geomancy}{139}{subsection.2.3.4}

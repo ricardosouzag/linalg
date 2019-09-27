@@ -2707,8 +2707,31 @@ It may not seem much, but this allows us to define:
 \end{proof}
 
 \begin{cor}
-	The letter (c) above is an equality if, and only if, $v,u,w$ lie on the same line.
+	The letter (c) above is an equality if, and only if, $v,u,w$ lie on the same line and $w$ is between $v$ and $u$.
 \end{cor}
+\begin{proof}
+	We'll prove this for lines through zero. The proof for an arbitrary line follows directly and is left as an exercise to the reader.
+	
+	Let $r=\R v$ be a line through zero, such that $u,w\in r$. Then $u=\mu v$ and $w=\omega v$ for some $\mu,\omega\in \R$. Then
+	\begin{align*}
+		d(v,u)&=\norm{v-u}\\
+		&=\norm{v-\mu v}\\
+		&=\norm{(1-\mu)v}=\abs{1-\mu}\norm{v}
+	\end{align*}and similarly $d(v,w)=\abs{1-\omega}\norm{v}$ and $d(u,w)=\abs{\mu-\omega}\norm{v}$.
+	
+	Therefore, if $w$ is between $v$ and $u$, it means that $1<\omega<\mu$, so
+	\begin{align*}
+		d(v,u)&=\abs{1-\mu}\norm{v}\\
+		&=(\mu-1)\norm{v}
+		&=(\mu-\omega+\omega-1)\norm{v}\\
+		&=(\mu-\omega)\norm{v}+(\omega-1)\norm v\\
+		&=\abs{\mu-\omega}\norm{v}+\abs{1-\omega}\norm{v}=d(w,u)+d(w,v)
+	\end{align*}and we see the equality holds.
+	
+	\bigskip
+	Conversely, assume $v,u,w\in \R^2$ are such that the equality holds, that is, 
+	\[d(v,u)=d(v,w)+d(u,w).\]
+\end{proof}
 
 \begin{ex}
 	Let $v=(2,3)$, $u=(4,-1)$. Then $d(v,u)=\norm{v-u}=\norm{(-2,4)}=\sqrt{(-2)^2+4^2}=\sqrt{4+16}=\sqrt{20}=2\sqrt 5$.
