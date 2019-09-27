@@ -3137,42 +3137,42 @@ Now, let's introduce a new tool to allow us to prove even more results:
 \end{proof}
 
 \begin{cor}
-	Let $x,y\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(x,r_1)\cap\mc C(y,r_2)$ is either empty, a single point or two points.
+	Let $c_1,c_2\in \R^2$ be any two points and $r_1,r_2\in \R$ be any two non-negative real numbers. Then $\mc C(c_1,r_1)\cap\mc C(c_2,r_2)$ is either empty, a single point or two points.
 \end{cor}
 \begin{proof}
-	Let $D:=d(x,y)$ and $R=r_1+r_2$. Let also $I=\mc C(x,r_1)\cap \mc C(y,r_2)$.
+	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$.
 	
 	Then, we have three cases:
 	\begin{itemize}
 		\item \underline{$D>R$}:
 		
-		If there is a point $v\in I$, then $vxy$ is a triangle, so 
-		\[d(x,y)\leq d(x,v)+d(y,v).\]
+		If there is a point $v\in I$, then $vc_1c_2$ is a triangle, so 
+		\[d(c_1,c_2)\leq d(c_1,v)+d(c_2,v).\]
 		
-		But $v\in I$ implies $d(v,x)=r_1$ and $d(v,y)=r_2$, so $d(x,v)+d(y,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
+		But $v\in I$ implies $d(v,c_1)=r_1$ and $d(v,c_2)=r_2$, so $d(c_1,v)+d(c_2,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
 		
 		\item \underline{$D=R$}:
 		
-		Take the line through both centers, $r:=\R(x-y)+x$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
+		Take the line through both centers, $r:=\R(c_1-c_2)+c_1$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
 		
-		Now, for each of those points we have that $d(v,x)+d(v,y)=D=d(u,x)+d(u,y)$, or, in other words, since $v\in \mc C(x,r_1)$ and $u\in \mc C(y,r_2)$, this is
-		\[r_1+d(v,y)=D=d(u,x)+r_2\]but $D=R$ implies
-		\[r_1+d(v,y)=r_1+r_2=d(u,x)+r_2\]and so the LHS yields $d(v,y)=r_2$, and the RHS yields $d(u,x)=r_1$. This shows that $v\in \mc C(y,r_2)$ and $u\in \mc C(x,r_1)$.
+		Now, for each of those points we have that $d(v,c_1)+d(v,c_2)=D=d(u,c_1)+d(u,c_2)$, or, in other words, since $v\in \mc C(c_1,r_1)$ and $u\in \mc C(c_2,r_2)$, this is
+		\[r_1+d(v,c_2)=D=d(u,c_1)+r_2\]but $D=R$ implies
+		\[r_1+d(v,c_2)=r_1+r_2=d(u,c_1)+r_2\]and so the LHS yields $d(v,c_2)=r_2$, and the RHS yields $d(u,c_1)=r_1$. This shows that $v\in \mc C(c_2,r_2)$ and $u\in \mc C(c_1,r_1)$.
 		
 		So $v$ and $u$ lie, at once, both in $r$ and in both circles.
 		
 		But then, 
-		\[d(v,x)= d(v,u)+d(u,x)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
+		\[d(v,c_1)= d(v,u)+d(u,c_1)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
 		
 		\item \underline{$D>R$}:
 		
-		Take, once more, $r=\R(x-y)+x$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
+		Take, once more, $r=\R(c_1-c_2)+c_1$ the line through both centers. Then, once again, we know this line crosses both circles at points $v,u$, respectively.
 		
 		Now, since $D>R$, we can write $D=R+\delta$ for some positive $\delta\in \R$. Notice that we can rewrite this as
 		\[d_1+d_2=r_1+r_2+\delta\]so
-		\[d(x,y)=d(x,v)+d(y,u)+\delta,\]but we also know that
-		\[d(x,y)=d(x,v)+d(y,u)+d(v,u),\]since $x,y,v,u$ are colinear. So $\delta=d(v,u)$.
+		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+\delta,\]but we also know that
+		\[d(c_1,c_2)=d(c_1,v)+d(c_2,u)+d(v,u),\]since $c_1,c_2,v,u$ are colinear. So $\delta=d(v,u)$.
 	\end{itemize}
 \end{proof}
