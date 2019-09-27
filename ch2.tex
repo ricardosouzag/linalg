@@ -3232,6 +3232,23 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		c_1x+c_2y=\frac{(c_1^2+c_2^2)-(r_2^2-r_1^2)}{2}\\
 		c_1x=\frac{(c_1^2+c_2^2)-(r_2^2-r_1^2)}{2}-{c_2}y\\
 		c_1x=\frac{\norm{c}^2-(r_2+r_1)(r_2-r_2)}{2}-{c_2}y\\
-		c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y\\
+		c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y.
 	\end{gather*}
+	
+	Now we can proceed with the cases:
+	
+	\begin{itemize}
+		\item \underline{$D=R$}:
+		
+		We've shown that $(x,y)\in I$ if, and only if
+		\[c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y\]holds. But if $D=R$ we can simplify this expression:
+		\begin{gather*}
+			c_1x=\frac{D^2-R(r_2-r_1)}{2}-{c_2}y\\
+			c_1x=\frac{R^2-R(r_2-r_1)}{2}-{c_2}y\\
+			c_1x=R\frac{R-(r_2-r_1)}{2}-{c_2}y\\
+			c_1x=R\frac{(r_2+r_1)-(r_2-r_1)}{2}-{c_2}y\\
+			c_1x=R\frac{2r_1}{2}-{c_2}y\\
+			c_1x=R(r_1)-{c_2}y\\
+		\end{gather*}
+	\end{itemize}
 \end{proof}
