@@ -3182,29 +3182,31 @@ Now, let's introduce a new tool to allow us to prove even more results:
 \begin{proof}
 	Let $D:=d(c_1,c_2)$ and $R=r_1+r_2$. Let also $I=\mc C(c_1,r_1)\cap \mc C(c_2,r_2)$.
 	
+	Finally, using the preceding lemma, it suffices to prove this result for $c_1=0$, and $c_2=c$, because every other case is just a translation of this case by some $v\in \R^2$. This tells us that $D=\norm{c}$.
+	
 	Then, we have three cases:
 	\begin{itemize}
 		\item \underline{$D>R$}:
 		
-		If there is a point $v\in I$, then $vc_1c_2$ is a triangle, so 
-		\[d(c_1,c_2)\leq d(c_1,v)+d(c_2,v).\]
+		If there is a point $v\in I$, then $v0c$ is a triangle, so 
+		\[d(0,c)\leq d(0,v)+d(c,v).\]
 		
-		But $v\in I$ implies $d(v,c_1)=r_1$ and $d(v,c_2)=r_2$, so $d(c_1,v)+d(c_2,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
+		But $v\in I$ implies $d(v,0)=r_1$ and $d(v,c)=r_2$, so $d(0,v)+d(c,v)=R$. Then the above inequality becomes $D\leq R$, which contradicts our assumption that $D>R$.
 		
 		Therefore, if $D>R$ then $I=\varnothing$.
 		
 		\item \underline{$D=R$}:
 		
-		Take the line through both centers, $r:=\R(c_1-c_2)+c_1$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
+		Take the line through both centers, $r:=\R(c)$. Then, the preceding lemma tells us that this line meets both circles. Call these points $v,u$, resp.
 		
-		Now, for each of those points we have that $d(v,c_1)+d(v,c_2)=D=d(u,c_1)+d(u,c_2)$, or, in other words, since $v\in \mc C(c_1,r_1)$ and $u\in \mc C(c_2,r_2)$, this is
-		\[r_1+d(v,c_2)=D=d(u,c_1)+r_2\]but $D=R$ implies
-		\[r_1+d(v,c_2)=r_1+r_2=d(u,c_1)+r_2\]and so the LHS yields $d(v,c_2)=r_2$, and the RHS yields $d(u,c_1)=r_1$. This shows that $v\in \mc C(c_2,r_2)$ and $u\in \mc C(c_1,r_1)$.
+		Now, for each of those points we have that $d(v,)+d(v,c)=D=d(u,0)+d(u,c)$, or, in other words, since $v\in \mc C(0,r_1)$ and $u\in \mc C(c,r_2)$, this is
+		\[r_1+d(v,c)=D=d(u,0)+r_2\]but $D=R$ implies
+		\[r_1+d(v,c)=r_1+r_2=d(u,0)+r_2\]and so the LHS yields $d(v,c)=r_2$, and the RHS yields $d(u,0)=r_1$. This shows that $v\in \mc C(c,r_2)$ and $u\in \mc C(0,r_1)$.
 		
 		So $v$ and $u$ lie, at once, both in $r$ and in both circles.
 		
 		But then, 
-		\[d(v,c_1)= d(v,u)+d(u,c_1)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
+		\[d(v,0)= d(v,u)+d(u,0)\]tells us that $d(v,u)=0$, so $v=u$ and we see that $I$ is a single point.
 		
 		\item \underline{$D>R$}:
 		
