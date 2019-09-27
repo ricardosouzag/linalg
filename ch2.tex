@@ -3080,6 +3080,21 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	This finishes the proof.
 \end{proof}
 
+\begin{lemma}
+	Let $c\in \R^2$ and $r\in \R$ any non-negative real number. Then $\mc C(c,r)=\mc C(0,r)+c$, that is, any point in $\mc C(c,r)$ is just a point in $\mc C(0,r)$ added to $c$.
+\end{lemma}
+\begin{proof}
+	Call $\mc C=\mc C(0,r)$ and $\mc C'= \mc C(c,r)$. We want to show that $\mc C+c=\mc C'$. Fix, then, $c=(c_1,c_2)$.
+	
+	Take then $v=(v_1,v_2)\in \mc C$, so $v_1^2+v_2^2=r^2$, that is, $\norm v=r$. Therefore, $v+c=(v_1+c_1,v_2+c_2)$. Then:
+	
+	\begin{align*}
+		d(v+c,c)&=\norm{(v+c)-c}=\norm{v}=r
+	\end{align*}and so $v+c\in \mc C'$, by definition.
+	
+	This shows that $\mc C+c\subseteq \mc C'$.
+\end{proof}
+
 \begin{prop}
 	Let $r\in \R$ be any non-negative number. Then
 	\[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\}.\]
