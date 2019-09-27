@@ -3271,6 +3271,50 @@ Now, let's introduce a new tool to allow us to prove even more results:
 		
 		Take $v\in \mc C_1\cap r$. Then either $v$ is between $0,c$ (yay!), $c$ is between $0,v$ (yay!!) or $0$ is between $v,c$ (nay).
 		
+		If $0$ is between $v,c$, we claim that $0$ is not between $-v,c$.
+		
+		Indeed, if $0$ is between $v,c$ then
+		\[d(v,c)=d(v,0)+d(c,0)=\norm{v}+\norm{c}.\]Assume that $0$ is also between $-v,c$. Then
+		\[d(-v,c)=d(-v,0)+d(c,0)=\norm{-v}\norm{c}=r_1\norm{c}=d(v,c),\]but $v\in \R c$ implies $v=\lambda c$, so $-v=-\lambda c$.
+		
+		Therefore
+		\[d(v,c)=\norm{v-c}=\abs{\lambda-1}\norm{c}\]and
+		\[d(-v,c)=\norm{-v-c}=\abs{-1}\norm{v+c}=\abs{\lambda+1}\norm{c},\]so they're equal if, and only if, $\abs{\lambda-1}=\abs{\lambda+1}$.
+		
+		But then:
+		\begin{gather*}
+			\abs{\lambda-1}=\abs{\lambda+1}\\
+			(\lambda-1)^2=(\lambda+1)^2\\
+			\lambda^2-2\lambda+1=\lambda^2+2\lambda^1\\
+			-2\lambda=2\lambda\\
+			-\lambda=\lambda\\
+			\lambda=0
+		\end{gather*}which would imply (since $d(v,0)=r_1$, by definition) that $r_1=0$. But this contradicts our taking $r_1>0$. Therefore, $0$ cannot be both between $v,c$ and $-v,c$. This means that either one of these hold:
+		\begin{itemize}
+			\item $v$ is between $0,c$;
+			\item $c$ is between $0,v$;
+			\item $-v$ is between $0,c$;
+			\item $c$ is between $0,-1$.
+		\end{itemize}
+	
+	But no matter which one of these holds, this shows that either $v$ or $-v$ is in $I$.
+	
+	Finally, this reasoning also proves that $v$ (or $-v$) is the unique point in $I$.
+	
+	Indeed, assume $v,u\in I$ and that they're both between $0,c$. Then the equation
+	\[d(0,c)=d(0,v)+d(v,c)=d(0,u)+d(u,c)\]holds. But since $v,u\in I$, this implies $v,u\in \mc C_1$, so $d(0,v)=d(0,u)$. Since $d(0,c)$ is fixed, it follows that $d(v,c)=d(u,c)$, and since we've already shown that they must lie in the line $\R c$, this implies $v=u$.
+	
+	If, on the other hand, one of them (say, $v$) is between $0,c$ and $c$ is between the other ($u$) and $0$, then both
+	\[d(0,c)=d(0,v)+d(v,c)\]and
+	\[d(0,u)=d(0,c)+d(c,u)\]hold. So we can replace the expression for $d(0,c)$ given by the first equation in the second equation to derive
+	\[d(0,u)=(d(0,v)+d(v,c))+d(c,u).\]
+	
+	But $v,u\in I$ implies $v,u\in \mc C_1$, so $d(v,0)=d(u,0)=r_1$. Therefore, the above equality becomes $d(v,c)+d(c,u)=0$, which is a contradiction, since both $d(v,c)$ and $d(c,u)$ are positive.
+	
+	Therefore, the only possible case for $v,u\in I$ is $v=u$.
+	
+	This shows that, in the case of $D=R$ or $D=R'$, we can conclude that $I$ is a single point.
+		
 		\item \underline{$D=R$}:
 		
 		Take the line through both centers, $r:=\R c$. Then, one of the preceding lemmas tells us that this line meets both circles. Call these points $v,u$, resp.
