@@ -2712,37 +2712,37 @@ It may not seem much, but this allows us to define:
 \begin{proof}
 	We'll prove this for lines through zero. The proof for an arbitrary line follows directly and is left as an exercise to the reader.
 	
-	Let $r=\R v$ be a line through zero, such that $u,w\in r$. Then $u=\mu v$ and $w=\omega v$ for some $\mu,\omega\in \R$. Notice that we can assume that all three points are different, cause, otherwise, the result is trivially true. This implies $\mu\neq \omega$ and both different from $1$.
+	Let $r=\R v$ be a line through zero, such that $u\in r$. Then $u=\mu v$ for some $\mu\in \R$. Notice that we can assume that all three of $0,v,u$ are different, cause, otherwise, the result is trivially true. This implies $\mu\neq 1$ and both different from $0$.
 	
 	Then
 	\begin{align*}
 		d(v,u)&=\norm{v-u}\\
 		&=\norm{v-\mu v}\\
 		&=\norm{(1-\mu)v}=\abs{1-\mu}\norm{v}
-	\end{align*}and similarly $d(v,w)=\abs{1-\omega}\norm{v}$ and $d(u,w)=\abs{\mu-\omega}\norm{v}$.
+	\end{align*}and similarly $d(v,0)=\norm{v}$ and $d(u,0)=\norm{u}=\abs{\mu}\norm{v}$.
 	
-	Therefore, if $w$ is between $v$ and $u$, it means that $1<\omega<\mu$, so
+	Therefore, if $v$ is between $0$ and $u$, it means that $0<1<\mu$, so
 	\begin{align*}
-		d(v,u)&=\abs{1-\mu}\norm{v}\\
-		&=(\mu-1)\norm{v}\\
-		&=(\mu-\omega+\omega-1)\norm{v}\\
-		&=(\mu-\omega)\norm{v}+(\omega-1)\norm v\\
-		&=\abs{\mu-\omega}\norm{v}+\abs{1-\omega}\norm{v}=d(w,u)+d(w,v)
+		d(0,u)&=\abs{\mu}\norm{v}\\
+		&=(\mu)\norm{v}\\
+		&=(\mu-1+1)\norm{v}\\
+		&=(\mu-1)\norm{v}+\norm v\\
+		&=\abs{\mu-1}\norm{v}+\norm{v}=d(v,u)+d(0,v)
 	\end{align*}and we see the equality holds.
 	
 	\bigskip
-	Conversely, assume $v,u,w\in \R^2$ are such that the equality holds, that is, 
-	\[d(v,u)=d(v,w)+d(u,w).\]
+	Conversely, assume $v,u,0\in \R^2$ are such that the equality holds, that is, 
+	\[d(0,u)=d(v,0)+d(u,v).\]
 	
-	Let us call $d_1=d(v,u)$, $d_2=d(v,w)$ and $d_3=d(u,w)$.
+	Then if either of these is zero, the result follows - for instance, $d(v,0)=\norm{v}$ implies $v=0$ (so they lie in the same line), and since between any two points there's always a line, this implies that $u$ is also in a line with $v$ and $0$.
 	
-	Then if either of these is zero, the result follows - for instance, $d_2=0$ implies $v=w$ (so they lie in the same line), and since between any two points there's always a line, this implies that $u$ is also in a line with $v$ and $w$.
+	So we can assume all of these distances are non-zero.
 	
-	So we can assume all of these are non-zero.
+	This means that $v-u$ and $v$ are non-zero vectors. 
 	
-	This means that $v-u,v-w$ and $u-w$ are non-zero vectors. 
+	Assume that $v,u,w$ do not lie in the same line. Therefore, $v-u\nparallel v-w$ and so $V=\{v-u,v-w\}$ is a base for $\R^2$ (since it is a set with two non-parallel vectors). This means that there are some $\lambda_1,\lambda_2\in \R$ such that $v=\lambda_1(v-u)+\lambda_2(v-w)$.
 	
-	Assume that $v,u,w$ do not lie in the same line. Therefore, $v-u\nparallel v-w$ and so $V=\{v-u,v-w\}$ is a base for $\R^2$ (since it is a set with two non-parallel vectors).
+	Rearranging this we get $\lambda_1u+\lambda_2w=(\lambda_1+\lambda_2-1)v$.
 \end{proof}
 
 \begin{ex}
