@@ -2736,13 +2736,11 @@ It may not seem much, but this allows us to define:
 	
 	Then if either of these is zero, the result follows - for instance, $d(v,0)=\norm{v}$ implies $v=0$ (so they lie in the same line), and since between any two points there's always a line, this implies that $u$ is also in a line with $v$ and $0$.
 	
-	So we can assume all of these distances are non-zero.
+	So we can assume all of these distances are non-zero, which means that $u$ and $v$ are non-zero vectors. 
 	
-	This means that $v-u$ and $v$ are non-zero vectors. 
+	If $v\nparallel u$, then $\cos\theta\neq 1$, where $\theta$ is the angle between $v$ and $u$.
 	
-	Assume that $v,u,w$ do not lie in the same line. Therefore, $v-u\nparallel v-w$ and so $V=\{v-u,v-w\}$ is a base for $\R^2$ (since it is a set with two non-parallel vectors). This means that there are some $\lambda_1,\lambda_2\in \R$ such that $v=\lambda_1(v-u)+\lambda_2(v-w)$.
-	
-	Rearranging this we get $\lambda_1u+\lambda_2w=(\lambda_1+\lambda_2-1)v$.
+	But $\cos\theta=\frac{\gen{v,u}}{\norm{v}\norm{u}}$, so $\cos\theta\neq 1$ if, and only if, $\norm{v}\norm{u}\neq\gen{v,u}$.
 \end{proof}
 
 \begin{ex}
