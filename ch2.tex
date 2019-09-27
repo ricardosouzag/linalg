@@ -2734,7 +2734,9 @@ It may not seem much, but this allows us to define:
 	Conversely, assume $v,u,w\in \R^2$ are such that the equality holds, that is, 
 	\[d(v,u)=d(v,w)+d(u,w).\]
 	
-	This means that if we call $d_1=d(v,u)$, $d_2=d(v,w)$ and $d_3=d(u,w)$, then $d_1\geq d_2$ and 
+	Let us call $d_1=d(v,u)$, $d_2=d(v,w)$ and $d_3=d(u,w)$. Then if either of these is zero, the result follows. For instance, $d_2=0$ implies $v=w$ (so they lie in the same line), and since between any two points there's always a line, this implies that $u$ is also in a line with $v$ and $w$.
+	
+	So we can assume all of these are non-zero.
 \end{proof}
 
 \begin{ex}
