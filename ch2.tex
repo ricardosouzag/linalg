@@ -3335,17 +3335,17 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	It remains to show that there's no other point in $I$. But this is easy:
 	
-	Take $u\in I$. Then, as we've shown, $d(u,\R c)=d(v,\R c)=d(v',\R c)$. But we've already proven that the locus of points at a fixed distance from a given line is two lines. This means that either $u\in \R c c+v$ or $u\in \R c c+v'$.
+	Take $u\in I$. Then, as we've shown, $d(u,\R c)=d(v,\R c)=d(v',\R c)$. But we've already proven that the locus of points at a fixed distance from a given line is two lines. This means that either $u\in \R c +v$ or $u\in \R  c+v'$.
 	
-	In either case there's a point $w'\in \R c c$ such that $d(u,\R c c)=d(u,w')$ So if $u\in \R c c+v$ we get
+	In either case there's a point $w'\in \R c c$ such that $d(u,\R c )=d(u,w')$ So if $u\in \R c c+v$ we get
 	\begin{gather*}
 		d(u,c)^2=d(u,w')^2+d(w',c)^2\\
 		d(v,c)^2=d(v,w)^2+d(w',c)^2\\
 		d(w',c)^2=d(v,c)^2-d(v,w)^2\\
 		d(w',c)^2=d(w,c)^2
-	\end{gather*}so $d(w,c)=d(w',c)$, and since $w,w'\in \R$ this implies $w'=w$, which, in turn, implies $u=v$ (since $v$ is the point where the line perpendicular to $\R$ through $w$ meets $\R+v$, and $u$ is the point what the line perpendicular to $\R$ through $w'$ meets $\R+v$).
+	\end{gather*}so $d(w,c)=d(w',c)$, and since $w,w'\in \R c$ this implies $w'=w$, which, in turn, implies $u=v$ (since $v$ is the point where the line perpendicular to $\R c$ through $w$ meets $\R c+v$, and $u$ is the point what the line perpendicular to $\R c$ through $w'$ meets $\R c+v$).
 	
-	Doing a similar computation in the case $u\in \R c c+v'$ shows us that $u=v'$.
+	Doing a similar computation in the case $u\in \R c +v'$ shows us that $u=v'$.
 	
 	This shows that any point $u\in I$ is either $v$ or $v'$ - and so $I=\{v,v'\}$.
 	\end{itemize}
