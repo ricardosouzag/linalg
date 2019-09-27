@@ -3315,6 +3315,19 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	
 	This shows that, in the case of $D=R$ or $D=R'$, we can conclude that $I$ is a single point.
 		
-	\item \underline{$R'<D<R$}
+	\item \underline{$R'<D<R$}:
+	
+	In this case, by definition, we can construct a triangle whose sides measure $r_1,r_2$ and $D$. Indeed:
+	\[r_1+r_2=R>D\]
+	\[r_1+D>r_2\]
+	\[r_2+D>r_2+R'=r_2+(r_1-r_2)=r_1\]where the first inequality follows by our assumption that $R>D$, the second inequality follows from $r_1>r_2$ and the third inequality follows from $D>R'$.
+	
+	In particular, we can construct this triangles as having vertices $0,c$ since $d(0,c)=D$. This gives us a third point $v$ such that $d(0,v)=r_1$ (and so $v\in \mc C_1$) and $d(v,c)=r_2$ (and so $v\in \mc C_2$). This shows us that $v\in I$.
+	
+	Take now $v'\in \R^2$ such that $d(v,\R c)=d(v',\R c)$ and $d(v',0)=d(v,0)$. This is done by taking the perpendicular to $\R c$ through $v$, marking its intersection point with $\R c$ (say, $w$), and then defining $v'=w-(v-w)$. Now it's easy to see that both $v,v'\in \R(v-w)+w$, that 
+	\[d(v',\R c)=d(v',w)=\norm{v'-w}=\norm{v-w}=d(v,w)=d(v,\R c)\]and that
+	\[d(v',0)^2=d(v',w)^2+d(w,0)^2=d(v,w)^2+d(w,0)^2=d(v,0)^2\]so $d(v,0)=d(v',0)$.
+	
+	It follows that $v'\in I$ as well, and $v\neq v'$.
 	\end{itemize}
 \end{proof}
