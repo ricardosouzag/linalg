@@ -3155,35 +3155,7 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	These two together show that $\mc C'=\mc C+c$ and the result follows.
 \end{proof}
 
-\begin{prop}
-	Let $r\in \R$ be any non-negative number. Then
-	\[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\}.\]
-\end{prop}
-\begin{proof}
-	Take any $v\in \mc C(0,r)$. Then 
-	\begin{align*}
-		r&=d(v,0)=\norm{v-0}=\norm{v}=\sqrt{v_1^2+v_2^2}
-	\end{align*}therefore $v_1^2+v_2^2=r^2$ and $v\in\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$.
-	
-	This shows $\mc C(0,r)\subseteq\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$.
-	
-	Conversely, take $v\in \{(x,y)\in \R^2\mid x^2+y^2=r^2\}$. So
-	\[d(v,0)=\norm{v-0}=\norm{v}=\sqrt{v_1^2+v_2^2}=\sqrt{r^2}=r\]which implies $v\in \mc C(0,r)$ and, therefore, $\{(x,y)\in \R^2\mid x^2+y^2=r^2\}\subseteq \mc C(0,r)$.
-	
-	This shows \[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\},\]which ends the proof.
-\end{proof}
-\begin{cor}
-	Let $r\in \R$ be any non-negative number and $c=(c_1,c_2)\in \R^2$ any point. Then $$\mc C(c,r)=\{(x,y)\in\R^2\mid (x-c_1)^2+(y-c_2)^2=r^2\}$$
-\end{cor}
-\begin{proof}
-	Let $\mc C'=\mc C(c,r)$ and $\mc C=\mc C(0,r)$.
-	 
-	By the preceding proposition, we know that $\mc C=\{(x,y)\in\R^2\mid x^2+y^2=r^2\}$ and by the one before that we know that $\mc C'=\mc C+c$.
-	
-	Combining these two together we see that for every $v=(v_1,v_2)\in \mc C'$ we have that $v-c\in \mc C$ and so, if we put $c=(c_1,c_2)$, this tells us that $(v_1-c_1)^2+(v_2-c_2)^2=r^2$.
-	
-	This proves the result.
-\end{proof}
+
 
 \begin{lemma}
 	Let $\mc C_1=\mc C(c_1,r_1),\mc C_2=\mc C(c_2,r_2)$ be any two circles, and let $I=\mc C_1\cap \mc C_2$. Then for all $v\in \R^2$ we have that 
@@ -3351,4 +3323,34 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	\end{itemize}
 
 This finishes the proof.
+\end{proof}
+
+\begin{prop}
+	Let $r\in \R$ be any non-negative number. Then
+	\[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\}.\]
+\end{prop}
+\begin{proof}
+	Take any $v\in \mc C(0,r)$. Then 
+	\begin{align*}
+	r&=d(v,0)=\norm{v-0}=\norm{v}=\sqrt{v_1^2+v_2^2}
+	\end{align*}therefore $v_1^2+v_2^2=r^2$ and $v\in\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$.
+	
+	This shows $\mc C(0,r)\subseteq\{(x,y)\in \R^2\mid x^2+y^2=r^2\}$.
+	
+	Conversely, take $v\in \{(x,y)\in \R^2\mid x^2+y^2=r^2\}$. So
+	\[d(v,0)=\norm{v-0}=\norm{v}=\sqrt{v_1^2+v_2^2}=\sqrt{r^2}=r\]which implies $v\in \mc C(0,r)$ and, therefore, $\{(x,y)\in \R^2\mid x^2+y^2=r^2\}\subseteq \mc C(0,r)$.
+	
+	This shows \[\mc C(0,r)=\{(x,y)\in \R^2\mid x^2+y^2=r^2\},\]which ends the proof.
+\end{proof}
+\begin{cor}
+	Let $r\in \R$ be any non-negative number and $c=(c_1,c_2)\in \R^2$ any point. Then $$\mc C(c,r)=\{(x,y)\in\R^2\mid (x-c_1)^2+(y-c_2)^2=r^2\}$$
+\end{cor}
+\begin{proof}
+	Let $\mc C'=\mc C(c,r)$ and $\mc C=\mc C(0,r)$.
+	
+	By the preceding proposition, we know that $\mc C=\{(x,y)\in\R^2\mid x^2+y^2=r^2\}$ and by the one before that we know that $\mc C'=\mc C+c$.
+	
+	Combining these two together we see that for every $v=(v_1,v_2)\in \mc C'$ we have that $v-c\in \mc C$ and so, if we put $c=(c_1,c_2)$, this tells us that $(v_1-c_1)^2+(v_2-c_2)^2=r^2$.
+	
+	This proves the result.
 \end{proof}
