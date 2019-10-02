@@ -3275,6 +3275,14 @@ Finally, to end this section we're gonna give some formulaic presentations to so
 	\[v^\perp:=(-v_2,v_1).\]
 \end{df}
 
+\begin{prop}
+	For any $v\in\R^2$ we have that $\norm{v}=\norm{v^\perp}$.
+\end{prop}
+\begin{proof}
+	This is trivial: If $v=(v_1,v_2)$ then
+	\[\norm{v^\perp}=\sqrt{(-v_2)^2+v_1^2}=\sqrt{v_2^2+v_1^2}=\norm{v}.\]
+\end{proof}
+
 \begin{lemma}
 	For any vector $v\in\R^2$, $\gen{v,v^\perp}=0$, that is, $v\perp v^\perp$.
 \end{lemma}
@@ -3413,3 +3421,12 @@ Furthermore, this gives us a further characterization of parallel vectors:
 		\item $\det(v,u)=0$.
 	\end{enumerate}
 \end{prop}
+
+All of these proofs have already been done at some point, so we won't bother redoing them.
+
+Our next task is to find a geometric interpretation for the determinant of two vectors.
+
+\begin{ex}
+	Consider the following case: $v=(4,1)$ and $u=(2,3)$. Then $\det(v,u)=12-2-10$.
+	But we also know that $\det(v,u)=-\gen{v,u^\perp}$ and that $\gen{v,u^\perp}=\norm{v}\norm{u^\perp}\cos\theta$ where $\theta\in[0,2\pi)$ is the angle between $v$ and $u^\perp$.
+\end{ex}
