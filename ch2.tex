@@ -3424,6 +3424,16 @@ Furthermore, this gives us a further characterization of parallel vectors:
 
 All of these proofs have already been done at some point, so we won't bother redoing them.
 
+Before advancing, let us a prove a quick and useful result:
+
+\begin{prop}
+	Let $v,u\in \R^2$. Then $\det(v,u)=-\det(u,v)$.
+\end{prop}
+\begin{proof}
+	Let $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then:
+	\[\det(v,u)=v_1u_2-v_2u_1=-(u_1v_2-u_2v_1)=-\det(u,v).\]
+\end{proof}
+
 Our next task is to find a geometric interpretation for the determinant of two vectors.
 
 \begin{ex}
@@ -3473,4 +3483,9 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	Looking at this picture, however, it's not hard to see that the dashed line has lenght precisely $\norm u\sin\theta'$.
 	
 	Therefore, $\norm{v}\norm{u}\sin\theta'$ is precisely the area of the parallelogram with vertices $0,v,v+u,u$.
+	
+	But $\norm{v}\norm{u}\sin\theta'=\det(v,u)$. So \textbf{the determinant of $v$ and $u$ tells us the are of the parallelogram defined by $v$ and $u$}.
+	
+	\bigskip
+	However, what about $\det(u,v)$?
 \end{ex}
