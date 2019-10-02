@@ -3440,7 +3440,7 @@ Before advancing, let us a prove a quick and useful result:
 Our next task is to find a geometric interpretation for the determinant of two vectors.
 
 \begin{ex}
-	Consider the following case: $v=(4,1)$ and $u=(2,3)$. Then $\det(v,u)=12-2-10$.
+	Consider the following case: $v=(4,1)$ and $u=(2,3)$. Then $\det(v,u)=12-2=10$.
 	But we also know that $\det(v,u)=-\gen{v,u^\perp}$ and that $\gen{v,u^\perp}=\norm{v}\norm{u^\perp}\cos\theta$ where $\theta\in[0,2\pi)$ is the angle between $v$ and $u^\perp$.
 	
 	But $\norm{u^\perp}=\norm{u}$ and $\theta=\theta'+\frac{\pi}{2}$ where $\theta'$ is the angle between $v$ and $u$.
@@ -3505,4 +3505,13 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	In other words, the sign in the area will just serve as a notation to show us which vector ``comes first in a counter-clockwise rotation'' - if $v$ comes before $u$, then $\det(v,u)\geq 0$; if $u$ comes before $v$, then $\det(v,u)\leq 0$.
 	
 	Notice also that $\det(v,u)=-\det(u,v)$ implies that $\abs{\det(v,u)}=\abs{\det(u,v)}$ so the preceding discussion does indeed make sense: The value of $\det(v,u)$ tells us the area of the parallelogram between $v$ and $u$, and the sign tells us who comes first: $v$ or $u$.
+	
+	\bigskip
+	To finish off this example, try computing, using usual means, the area of the parallelogram determined by $v$ and $u$. I'll even give you the value of $\theta'$ - it's $42.2^\circ$.
+	
+	See how hard that is? What even is the sine of $42.2^\circ$? And then we have to multiply that by $\norm{v}=\sqrt{4^2+1^1}=\sqrt{17}$ and then by $\norm{u}=\sqrt{2^2+3^2}=\sqrt{13}$, all three of which are irrational numbers.
+	
+	So in order to compute this area normally you'd have to use at least three approximations - one for $\sin(42.2^\circ)$, one for $\sqrt{17}$ and one for $\sqrt{13}$. So it seems like the result would be very imprecise, and the more you decrease your uncertainty (by increasing decimal places in the approximation) the closer you get to the actual result.
+	
+	But instead of doing a bunch of hard computations, if you just do $4\cdot 3-1\cdot 2$ you'll get the \textbf{exact} result, without any approximations or hard computations - just simple real addition and multiplication.
 \end{ex}
