@@ -3395,5 +3395,21 @@ So instead of trying to find a scalar $\lambda$ such that $u=\lambda v$ - which 
 This gives us the following equivalent characterization of the determinant as a corollary of the preceding lemma:
 
 \begin{cor}
-	Let $v,u\in \R^2$. Then $v\parallel u$ if, and only if, $\det(v,u)=0$.
+	Let $v,u\in \R^2$. Then $\det(v,u)=-\gen{v,u^\perp}$.
 \end{cor}
+\begin{proof}
+	If $v=(v_1,v_2)$ and $u=(u_1,u_2)$, then $u^\perp=(-u_2,u_1)$, so
+	\[\gen{v,u^\perp}=v_1(-u_2)+v_2u_1=-v_1u_2+v_2u_1=-(v_1u_2-v_2u_1)=-\det(v,u).\]
+\end{proof}
+
+Furthermore, this gives us a further characterization of parallel vectors:
+
+\begin{prop}
+	Let $v,u\in \R^2$. Then the following are equivalent:
+	\begin{enumerate}[a)]
+		\item $v\parallel u$;
+		\item $\R v=\R u$;
+		\item $v\perp u^\perp$;
+		\item $\det(v,u)=0$.
+	\end{enumerate}
+\end{prop}
