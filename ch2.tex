@@ -3313,37 +3313,21 @@ Finally, to end this section we're gonna give some formulaic presentations to so
 	This ends the proof.
 \end{proof}
 \begin{cor}
-	Let $r=\R v+u$ be a non-vertical line. Then there are some uniquely determined $a,b\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid y=ax+b\}.\]
-	
-	If $r$ is a vertical line, then there's a uniquely determined $c\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid x=c\}.\]
+	Let $r=\R v+u$ be a line. Then there are some uniquely determined $a,b,c\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid ax+by=c\}.\]
 \end{cor}
 \begin{proof}
-	Let $r=\R v+u$ be a non-vertical line, $u=(u_1,u_2)$ and $r'=\R v$.
+	Let $v=(v_1,v_2)$ as before and $u=(u_1,u_2)$, and consider the line $r'=r-u$. Then $r'$ is a line parallel to $r$ and through zero, so we know that
+	\[r'=\{(x,y)\in \R^2\mid (-v_2)x+v_1y=0\}\]by the preceding result.
 	
-	Then $r'$ is also a non-vertical line, so, by the previous proposition, we know that there's a uniquely determined $a\in \R$ such that
-	\[r'=\{(x,y)\in \R^2\mid y=ax\}.\]
+	But now, since $r'=r-u$, given any $(x,y)\in r$ we know that $(x,y)-(u_1,u_2)=(x-u_1,y-u_2)\in r'$ so $(-v_2)(x-u_1)+v_1(y-u_2)=0$.
 	
-	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$. 
-	
-	It follows that
-	\begin{align*}
-	w_2&=ax+u_2\\
-	&=ax+(au_1-au_1)+u_2\\
-	&=(ax+au_1)+(u_2-au_1)=aw_1+(u_2-au_1)\\
-	\end{align*}so if we put $b=(u_2-au_1)$ we see that $b$ is uniquely determined by $v$ and $u$ (since $a=\frac{v_2}{v_1}$).
-	
-	Therefore, $w_2=aw_1+b$, so $w\in \{(x,y)\in \R^2\mid y=ax+b\}$.
-	
-	Analogously, if $r$ was vertical, this would mean that $v\parallel e_2$, so $v=(0,v_2)$. Since every point in $r$ is of the form $\lambda v+u$ this becomes $\lambda(0,v_2)+(u_1,u_2)=(u_1,\lambda v_2+u_2)$. We see then that the $X$-coordinate of such points is always $u_1$. So if we put $c=u_1$, we see that $(x,y)\in r$ implies $x=c$, so $r\subseteq\{(x,y)\in \R^2\mid x=c\}$.
-	
-	\bigskip
-	Conversely, take $w\in \{(x,y)\in \R^2\mid y=ax+b\}$. This means that $w=(w_1,aw_1+b)$, so $w=w_1(1,a)+(0,b)\in \R (1,a)+(0,b)$, which is a non-vertical line since it's not parallel to $e_2$.
-	
-	Analogously, if $w\in \{(x,y)\in \R^2\mid x=c\}$ then $w=(c,w_2)=w_2e_2+(c,0)\in\R e_2+(c,0)$, so $w$ is in line which is parallel to $e_2$, and, so, it is vertical.
-	
-	This finishes the proof.
+	Now we can expand this:
+	\begin{gather*}
+		(-v_2)(x-u_1)+v_1(y-u_2)=0\\
+		(-v_2)x+v_2u_1+v_1y-v_1u_2=0\\
+		(-v_2)x+v_1y=v_1u_2-v_2u_1
+	\end{gather*}so we see that $(x,y)\in r$ if, and only if, $(-v_2)x+v_1y=v_1u_2-v_2u_1$. This proves the result.
 \end{proof}
 
 \begin{prop}
