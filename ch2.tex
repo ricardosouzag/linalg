@@ -3437,4 +3437,38 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	So $\gen{v,u^\perp}=\norm{v}\norm{u^\perp}\cos\theta$ can be rewritten as
 	\[\gen{v,u^\perp}=\norm{v}\norm{u}(-\sin\theta')\]and since $\det(v,u)=-\gen{v,u^\perp}$ we can finally conclude that
 	\[\det(v,u)=\norm{v}\norm{u}\sin\theta'.\]
+	
+	\[\definecolor{uququq}{rgb}{0.25098039215686274,0.25098039215686274,0.25098039215686274}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\begin{axis}[
+	x=1.0cm,y=1.0cm,
+	axis lines=middle,
+	xmin=-0.9399999999999992,
+	xmax=7.040000000000004,
+	ymin=-1.0000000000000027,
+	ymax=5.0,
+	xtick={-0.0,1.0,...,7.0},
+	ytick={-1.0,0.0,...,5.0},]
+	\clip(-0.94,-1.) rectangle (7.04,5.);
+	\draw [shift={(0.,0.)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
+	\draw [->,line width=2.pt] (0.,0.) -- (4.,1.);
+	\draw [->,line width=2.pt] (0.,0.) -- (2.,3.);
+	\draw [line width=2.pt,dash pattern=on 1pt off 1pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
+	\draw [line width=2.pt,dotted,domain=-0.94:7.04] plot(\x,{(-10.--3.*\x)/2.});
+	\draw [line width=2.pt,dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
+	\draw [->,line width=2.pt] (0.,0.) -- (6.,4.);
+	\begin{scriptsize}
+	\draw[color=black] (2.02,0.77) node {$v$};
+	\draw[color=black] (0.84,1.77) node {$u$};
+	\draw[color=qqwuqq] (0.96,0.69) node {$\theta'$};
+	\draw [fill=uuuuuu] (2.,3.) circle (2.0pt);
+	\draw [fill=uuuuuu] (2.588235294117647,0.6470588235294117) circle (2.0pt);
+	\draw [fill=uququq] (4.,1.) circle (2.0pt);
+	\draw [fill=uququq] (0.,0.) circle (2.5pt);
+	\draw [fill=uququq] (6.,4.) circle (2.0pt);
+	\end{scriptsize}
+	\end{axis}
+	\end{tikzpicture}\]
 \end{ex}
