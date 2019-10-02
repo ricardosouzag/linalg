@@ -3445,20 +3445,20 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	\begin{axis}[
 	x=1.0cm,y=1.0cm,
 	axis lines=middle,
-	xmin=-0.9399999999999992,
-	xmax=7.040000000000004,
-	ymin=-1.0000000000000027,
+	xmin=-1,
+	xmax=7,
+	ymin=-1,
 	ymax=5.0,
-	xtick={-0.0,1.0,...,7.0},
-	ytick={-1.0,0.0,...,5.0},]
+	xtick={0.0,1.0,...,6.0},
+	ytick={0.0,...,4.0},]
 	\clip(-0.94,-1.) rectangle (7.04,5.);
-	\draw [shift={(0.,0.)},line width=2.pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
-	\draw [->,line width=2.pt] (0.,0.) -- (4.,1.);
-	\draw [->,line width=2.pt] (0.,0.) -- (2.,3.);
-	\draw [line width=2.pt,dash pattern=on 1pt off 1pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
-	\draw [line width=2.pt,dotted,domain=-0.94:7.04] plot(\x,{(-10.--3.*\x)/2.});
-	\draw [line width=2.pt,dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
-	\draw [->,line width=2.pt] (0.,0.) -- (6.,4.);
+	\draw [shift={(0.,0.)},color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
+	\draw [->] (0.,0.) -- (4.,1.);
+	\draw [->] (0.,0.) -- (2.,3.);
+	\draw [dash pattern=on 1pt off 1pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
+	\draw [dotted,domain=-0.94:7.04] plot(\x,{(-10.--3.*\x)/2.});
+	\draw [dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
+	\draw [->] (0.,0.) -- (6.,4.);
 	\begin{scriptsize}
 	\draw[color=black] (2.02,0.77) node {$v$};
 	\draw[color=black] (0.84,1.77) node {$u$};
