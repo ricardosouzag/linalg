@@ -3433,6 +3433,9 @@ Before advancing, let us a prove a quick and useful result:
 	Let $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then:
 	\[\det(v,u)=v_1u_2-v_2u_1=-(u_1v_2-u_2v_1)=-\det(u,v).\]
 \end{proof}
+\begin{cor}
+	For any two vectors $v,u\in \R^2$ we have that $\det(v,u)=\gen{u,v^\perp}$.
+\end{cor}
 
 Our next task is to find a geometric interpretation for the determinant of two vectors.
 
@@ -3487,5 +3490,19 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	But $\norm{v}\norm{u}\sin\theta'=\det(v,u)$. So \textbf{the determinant of $v$ and $u$ tells us the are of the parallelogram defined by $v$ and $u$}.
 	
 	\bigskip
-	However, what about $\det(u,v)$?
+	However, what about $\det(u,v)$? Well, we know that $\det(v,u)=-\det(u,v)$ so if $\det(v,u)$ is positive, we get that $\det(u,v)$ is negative. But area, just like distance, is always a non-negative number.
+	
+	What's going on here?
+	
+	Well, it turns out that just like we can ``extend'' the notion of distances to negative numbers based on an ``orientation'' (that is, the sign means only the direction), we can also do the same for areas.
+	
+	To make that more precise: Think about the real number line.
+	
+	For instance, the numbers $-5$ and $5$. They both have the ``same value'', in some sense, but in ``opposite directions'': $5$ is ``to the right'' while $-5$ is ``to the left''.
+	
+	We will do the same for areas: We will say that the area between two vectors $v$ and $u$ is \textbf{positive} if the angle between $v$ and $u$ is positive (just like in the picture).
+	
+	In other words, the sign in the area will just serve as a notation to show us which vector ``comes first in a counter-clockwise rotation'' - if $v$ comes before $u$, then $\det(v,u)\geq 0$, if $u$ comes before $v$, then $\det(v,u)\leq 0$.
+	
+	Notice also that $\det(v,u)=-\det(u,v)$ implies that $\abs{\det(v,u)}=\abs{\det(u,v)}$ so the preceding discussion does indeed make sense: The sign is just telling us who comes first: $v$ or $u$.
 \end{ex}
