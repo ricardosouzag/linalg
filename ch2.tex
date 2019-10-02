@@ -3063,71 +3063,7 @@ This allows us to prove some very useful results:
 
 Now, let's introduce a new tool to allow us to prove even more results:
 
-\begin{prop}
-	Let $r:=\R v$ be a non-vertical line. Then there is uniquely determined $a\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid y=ax\}.\]
-	
-	If $r$ is a vertical line, then
-	\[r=\{(x,y)\in \R^2\mid x=0\}.\]
-\end{prop}
-\begin{proof}
-	Take $(x,y)\in r$. This means that $(x,y)=\lambda v$ for some $\lambda \in \R$. But writing $v=(v_1,v_2)$ we see that
-	\begin{align*}
-		(x,y)&=\lambda(v_1,v_2)=(\lambda v_1,\lambda v_2),
-	\end{align*}and so $y=\lambda v_2$ and $x=\lambda v_1$. 
-	
-	Now, since $r$ is non-vertical if, and only if, $v_1\neq 0$, we see that if $r$ is non-vertical, then
-	\begin{align*}
-		y&=\lambda v_2\\
-		&=\frac{\lambda v_1}{\lambda v_1}\lambda v_2\\
-		&=\frac{x}{\lambda v_1}\lambda v_2\\
-		&=\frac{\lambda v_2}{\lambda v_1}x=\frac{v_2}{v_1}x
-	\end{align*}so if we define $a=\frac{v_2}{v_1}$ we can conclude that $(x,y)$ satisfies $y=ax$.
-	
-	Conversely, if $r$ is vertical, then $v_1=0$, so $x=0$.
-	
-	This shows that $r\subseteq\{(x,y)\in \R^2\mid y=ax\}$ if it's non-vertical, and $r\subseteq\{(x,y)\in \R^2\mid x=0\}$ if it is vertical.
-	
-	\bigskip
-	On the other hand, take $u\in \{(x,y)\in \R^2\mid y=ax\}$. This means that $u=(u_1,au_1)$ and so $u=u_1(1,a)\in \R(1,a)$, which is a non-vertical line through zero.
-	
-	Similarly, if $u\in\{(x,y)\in \R^2\mid x=0\}$, then $u=(0,u_2)\in \mb Y$, which is a vertical line through zero.
-	
-	This ends the proof.
-\end{proof}
-\begin{cor}
-	Let $r=\R v+u$ be a non-vertical line. Then there are some uniquely determined $a,b\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid y=ax+b\}.\]
-	
-	If $r$ is a vertical line, then there's a uniquely determined $c\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid x=c\}.\]
-\end{cor}
-\begin{proof}
-	Let $r=\R v+u$ be a non-vertical line, $u=(u_1,u_2)$ and $r'=\R v$.
-	
-	Then $r'$ is also a non-vertical line, so, by the previous proposition, we know that there's a uniquely determined $a\in \R$ such that
-	\[r'=\{(x,y)\in \R^2\mid y=ax\}.\]
-	
-	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$. 
-	
-	It follows that
-	\begin{align*}
-		w_2&=ax+u_2\\
-		&=ax+(au_1-au_1)+u_2\\
-		&=(ax+au_1)+(u_2-au_1)=aw_1+(u_2-au_1)\\
-	\end{align*}so if we put $b=(u_2-au_1)$ we see that $b$ is uniquely determined by $v$ and $u$ (since $a=\frac{v_2}{v_1}$).
-	
-	Therefore, $w_2=aw_1+b$, so $w\in \{(x,y)\in \R^2\mid y=ax+b\}$.
-	
-	Analogously, if $r$ was vertical, this would mean that $v\parallel e_2$, so $v=(0,v_2)$. Since every point in $r$ is of the form $\lambda v+u$ this becomes $\lambda(0,v_2)+(u_1,u_2)=(u_1,\lambda v_2+u_2)$. We see then that the $X$-coordinate of such points is always $u_1$. So if we put $c=u_1$, we see that $(x,y)\in r$ implies $x=c$, so $r\subseteq\{(x,y)\in \R^2\mid x=c\}$.
-	
-	\bigskip
-	Conversely, take $w\in \{(x,y)\in \R^2\mid y=ax+b\}$. This means that $w=(w_1,aw_1+b)$, so $w=w_1(1,a)+(0,b)\in \R (1,a)+(0,b)$, which is a non-vertical line since it's not parallel to $e_2$.
-	
-	Analogously, if $w\in \{(x,y)\in \R^2\mid x=c\}$ then $w=(c,w_2)=w_2e_2+(c,0)\in\R e_2+(c,0)$, so $w$ is in line which is parallel to $e_2$, and, so, it is vertical.
-	
-	This finishes the proof.
-\end{proof}
+
 
 \begin{lemma}
 	Let $c\in \R^2$ and $r\in \R$ any non-negative real number. Then $\mc C(c,r)=\mc C(0,r)+c$, that is, any point in $\mc C(c,r)$ is just a point in $\mc C(0,r)$ added to $c$.
@@ -3323,6 +3259,72 @@ Now, let's introduce a new tool to allow us to prove even more results:
 	\end{itemize}
 
 This finishes the proof.
+\end{proof}
+
+\begin{prop}
+	Let $r:=\R v$ be a non-vertical line. Then there is uniquely determined $a\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid y=ax\}.\]
+	
+	If $r$ is a vertical line, then
+	\[r=\{(x,y)\in \R^2\mid x=0\}.\]
+\end{prop}
+\begin{proof}
+	Take $(x,y)\in r$. This means that $(x,y)=\lambda v$ for some $\lambda \in \R$. But writing $v=(v_1,v_2)$ we see that
+	\begin{align*}
+	(x,y)&=\lambda(v_1,v_2)=(\lambda v_1,\lambda v_2),
+	\end{align*}and so $y=\lambda v_2$ and $x=\lambda v_1$. 
+	
+	Now, since $r$ is non-vertical if, and only if, $v_1\neq 0$, we see that if $r$ is non-vertical, then
+	\begin{align*}
+	y&=\lambda v_2\\
+	&=\frac{\lambda v_1}{\lambda v_1}\lambda v_2\\
+	&=\frac{x}{\lambda v_1}\lambda v_2\\
+	&=\frac{\lambda v_2}{\lambda v_1}x=\frac{v_2}{v_1}x
+	\end{align*}so if we define $a=\frac{v_2}{v_1}$ we can conclude that $(x,y)$ satisfies $y=ax$.
+	
+	Conversely, if $r$ is vertical, then $v_1=0$, so $x=0$.
+	
+	This shows that $r\subseteq\{(x,y)\in \R^2\mid y=ax\}$ if it's non-vertical, and $r\subseteq\{(x,y)\in \R^2\mid x=0\}$ if it is vertical.
+	
+	\bigskip
+	On the other hand, take $u\in \{(x,y)\in \R^2\mid y=ax\}$. This means that $u=(u_1,au_1)$ and so $u=u_1(1,a)\in \R(1,a)$, which is a non-vertical line through zero.
+	
+	Similarly, if $u\in\{(x,y)\in \R^2\mid x=0\}$, then $u=(0,u_2)\in \mb Y$, which is a vertical line through zero.
+	
+	This ends the proof.
+\end{proof}
+\begin{cor}
+	Let $r=\R v+u$ be a non-vertical line. Then there are some uniquely determined $a,b\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid y=ax+b\}.\]
+	
+	If $r$ is a vertical line, then there's a uniquely determined $c\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid x=c\}.\]
+\end{cor}
+\begin{proof}
+	Let $r=\R v+u$ be a non-vertical line, $u=(u_1,u_2)$ and $r'=\R v$.
+	
+	Then $r'$ is also a non-vertical line, so, by the previous proposition, we know that there's a uniquely determined $a\in \R$ such that
+	\[r'=\{(x,y)\in \R^2\mid y=ax\}.\]
+	
+	Take then $w\in r$. This means that $w=\lambda v+u$ for some $\lambda \in \R$. But what this tells us is that $w$ is just a vector in $r'$ added by $u$. Since all vectors in $r'$ are of the form $(x,ax)$, we know that $w=(x,ax)+u$, which is simply $(w_1,w_2)=(x+u_1,ax+u_2)$. 
+	
+	It follows that
+	\begin{align*}
+	w_2&=ax+u_2\\
+	&=ax+(au_1-au_1)+u_2\\
+	&=(ax+au_1)+(u_2-au_1)=aw_1+(u_2-au_1)\\
+	\end{align*}so if we put $b=(u_2-au_1)$ we see that $b$ is uniquely determined by $v$ and $u$ (since $a=\frac{v_2}{v_1}$).
+	
+	Therefore, $w_2=aw_1+b$, so $w\in \{(x,y)\in \R^2\mid y=ax+b\}$.
+	
+	Analogously, if $r$ was vertical, this would mean that $v\parallel e_2$, so $v=(0,v_2)$. Since every point in $r$ is of the form $\lambda v+u$ this becomes $\lambda(0,v_2)+(u_1,u_2)=(u_1,\lambda v_2+u_2)$. We see then that the $X$-coordinate of such points is always $u_1$. So if we put $c=u_1$, we see that $(x,y)\in r$ implies $x=c$, so $r\subseteq\{(x,y)\in \R^2\mid x=c\}$.
+	
+	\bigskip
+	Conversely, take $w\in \{(x,y)\in \R^2\mid y=ax+b\}$. This means that $w=(w_1,aw_1+b)$, so $w=w_1(1,a)+(0,b)\in \R (1,a)+(0,b)$, which is a non-vertical line since it's not parallel to $e_2$.
+	
+	Analogously, if $w\in \{(x,y)\in \R^2\mid x=c\}$ then $w=(c,w_2)=w_2e_2+(c,0)\in\R e_2+(c,0)$, so $w$ is in line which is parallel to $e_2$, and, so, it is vertical.
+	
+	This finishes the proof.
 \end{proof}
 
 \begin{prop}
