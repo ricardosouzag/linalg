@@ -3453,19 +3453,19 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	ytick={0.0,...,4.0},]
 	\clip(-0.94,-1.) rectangle (7.04,5.);
 	\draw [color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
-	\draw [->] (0.,0.) -- (4.,1.) node[below,midway] {$v$};
-	\draw [->] (0.,0.) -- (2.,3.) node[above,midway] {$u$};
+	\draw [->] (0.,0.) -- (4.,1.);
+	\draw [->] (0.,0.) -- (2.,3.);
 	\draw [dash pattern=on 2pt off 2pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
 	\draw [dotted,domain=-0.94:7.04] plot(\x,{(-10.--3.*\x)/2.});
 	\draw [dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
-	\draw [->] (0.,0.) -- (6.,4.) node[midway, above,sloped] {$v+u$};
+	\draw [->] (0.,0.) -- (6.,4.);
 	\begin{scriptsize}
 	\draw[color=qqwuqq] (0.76,0.69) node {$\theta'$};
-	\draw [fill=uuuuuu] (2.,3.) circle (2.0pt);
+	\draw [fill=uuuuuu] (2.,3.) circle (2.0pt) node[above] {$u$};
 	\draw [fill=uuuuuu] (2.588235294117647,0.6470588235294117) circle (2.0pt);
 	\draw [fill=uququq] (4.,1.) circle (2.0pt) node[above] {$v$};
 	\draw [fill=uququq] (0.,0.) circle (2.5pt);
-	\draw [fill=uququq] (6.,4.) circle (2.0pt);
+	\draw [fill=uququq] (6.,4.) circle (2.0pt) node[above] {$v+u$};
 	\end{scriptsize}
 	\end{axis}
 	\end{tikzpicture}\]
