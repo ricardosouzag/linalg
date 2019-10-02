@@ -3452,7 +3452,7 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	xtick={0.0,1.0,...,6.0},
 	ytick={0.0,...,4.0},]
 	\clip(-0.94,-1.) rectangle (7.04,5.);
-	\draw [shift={(0.,0.)},color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
+	\draw [color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (0,0) -- (14.036243467926477:0.6) arc (14.036243467926477:56.309932474020215:0.6) -- cycle;
 	\draw [->] (0.,0.) -- (4.,1.);
 	\draw [->] (0.,0.) -- (2.,3.);
 	\draw [dash pattern=on 1pt off 1pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
@@ -3460,8 +3460,6 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	\draw [dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
 	\draw [->] (0.,0.) -- (6.,4.);
 	\begin{scriptsize}
-	\draw[color=black] (2.02,0.77) node {$v$};
-	\draw[color=black] (0.84,1.77) node {$u$};
 	\draw[color=qqwuqq] (0.96,0.69) node {$\theta'$};
 	\draw [fill=uuuuuu] (2.,3.) circle (2.0pt);
 	\draw [fill=uuuuuu] (2.588235294117647,0.6470588235294117) circle (2.0pt);
