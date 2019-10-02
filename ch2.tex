@@ -3263,37 +3263,39 @@ This finishes the proof.
 
 Finally, to end this section we're gonna give some formulaic presentations to some of our geometric entities:
 
-\begin{prop}
-	Let $r:=\R v$ be a non-vertical line. Then there is uniquely determined $a\in \R$ such that
-	\[r=\{(x,y)\in \R^2\mid y=ax\}.\]
+\begin{df}
+	For any vector $v=(v_1,v_2)\in \R^2$ we define $v^\perp\in\R^2$ to be the vector given by
+	\[v^\perp=(-b,a).\]
+\end{df}
+
+\begin{lemma}
+	For any vector $v\in\R^2$, $\gen{v,v^\perp}=0$, that is, $v\perp v^\perp$.
+\end{lemma}
+\begin{proof}
+	This follows from a simple computation:
 	
-	If $r$ is a vertical line, then
-	\[r=\{(x,y)\in \R^2\mid x=0\}.\]
+	\[\gen{v,v^\perp}=a(-b)+ba=-ab+ab=0.\]
+\end{proof}
+\begin{cor}
+	For any non-null vectors $v,u\in \R^2$ we have that $v\perp u$ if, and only if, $u\in\R v^{\perp}$.
+\end{cor}
+\begin{proof}
+	If $u\in \R v^\perp$ then $u=\lambda v^\perp$, for some $\lambda\in \R$. Then
+	\[\gen{v,u}=\gen{v,\lambda v^\perp}=\lambda \gen{v,v^\perp}=\lambda\cdot0=0\]so $v\perp u$.
+	
+	Conversely, if $v\perp u$, then, writing $v=(v_1,v_2)$ and $u=(u_1,u_2)$ we see that $0=\gen{v,u}=v_1u_1+v_2u_2$. Since $v$ is non-null, either $v_1$ or $v_2$ is non-null.
+	
+	If $v_1$ is non-null, then $u_1=\frac{v_2}{v_1}u_2$, so if we define $p=\frac{v_2}{v_1}$ we see that 
+	\[u=(u_1,u_2)=(p u_2,u_2)=u_2(p,1)\]so $u\in \R(p,1)$. But, since $v_1$ is non-null, 
+	\[v^{\perp}=(-v_2,v_1)=\left(-v_1\frac{v_2}{v1},v_1\right)=(-v_1p,v_1)=v_1(-p,1)\]
+\end{proof}
+
+\begin{prop}
+	Let $r:=\R v$ line through zero. Then there are uniquely determined $a,b\in \R$ such that
+	\[r=\{(x,y)\in \R^2\mid ax+by=0\}.\]
 \end{prop}
 \begin{proof}
-	Take $(x,y)\in r$. This means that $(x,y)=\lambda v$ for some $\lambda \in \R$. But writing $v=(v_1,v_2)$ we see that
-	\begin{align*}
-	(x,y)&=\lambda(v_1,v_2)=(\lambda v_1,\lambda v_2),
-	\end{align*}and so $y=\lambda v_2$ and $x=\lambda v_1$. 
-	
-	Now, since $r$ is non-vertical if, and only if, $v_1\neq 0$, we see that if $r$ is non-vertical, then
-	\begin{align*}
-	y&=\lambda v_2\\
-	&=\frac{\lambda v_1}{\lambda v_1}\lambda v_2\\
-	&=\frac{x}{\lambda v_1}\lambda v_2\\
-	&=\frac{\lambda v_2}{\lambda v_1}x=\frac{v_2}{v_1}x
-	\end{align*}so if we define $a=\frac{v_2}{v_1}$ we can conclude that $(x,y)$ satisfies $y=ax$.
-	
-	Conversely, if $r$ is vertical, then $v_1=0$, so $x=0$.
-	
-	This shows that $r\subseteq\{(x,y)\in \R^2\mid y=ax\}$ if it's non-vertical, and $r\subseteq\{(x,y)\in \R^2\mid x=0\}$ if it is vertical.
-	
-	\bigskip
-	On the other hand, take $u\in \{(x,y)\in \R^2\mid y=ax\}$. This means that $u=(u_1,au_1)$ and so $u=u_1(1,a)\in \R(1,a)$, which is a non-vertical line through zero.
-	
-	Similarly, if $u\in\{(x,y)\in \R^2\mid x=0\}$, then $u=(0,u_2)\in \mb Y$, which is a vertical line through zero.
-	
-	This ends the proof.
+	Let $v=(v_1,v_2)$. Then $v^{\perp}$
 \end{proof}
 \begin{cor}
 	Let $r=\R v+u$ be a non-vertical line. Then there are some uniquely determined $a,b\in \R$ such that
