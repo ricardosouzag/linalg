@@ -568,7 +568,7 @@ Finally, we can conclude that $f$ is the bijection we were looking for. This end
 Finally, to end this section, one last result:
 
 \begin{lemma}
-	Take $t\in E_A$ any line through $A$. Then there is some point $(x_t,y_t)\in \R^2$ such that $f(t)=\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
+	Take $t\subseteq E_A$ any line through $A$. Then there is some point $(x_t,y_t)\in \R^2$ such that $f(t)=\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$ where $f$ is the bijection $f:E_A\to \R^2$ defined in the previous lemma.
 \end{lemma}
 \begin{proof}
 	Let $\R(x_t,y_t)$ denote the set $\{(x,y)\in\R^2\mid x=\lambda x_t \mbox{ and }y=\lambda y_t,\mbox{ for some }\lambda\in\R\}$.
@@ -662,6 +662,11 @@ With this we can finally define:
 \begin{cor}
 	Every line through the point $(0,0)$ in $\R^2$ is just the subset of $\R^2$ formed by all scalar multiples of a fixed vector.
 \end{cor}
+
+\begin{df}
+	Given any vector $v\in \R^2$ we're gonna denote the \textbf{line through zero containing $v$} to be the set $\R v$ given by
+	\[\R v:=\{u\in \R^2\mid \exists \lambda\in \R\mbox{ such that }u=\lambda v\}.\]
+\end{df}
 
 And to wrap things up, some properties of scalar multiplication:
 
