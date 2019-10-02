@@ -28,3 +28,5 @@
 \contentsline {subsection}{\numberline {2.3.2}Rotato potato}{126}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}The distance between us}{132}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Geomancy}{140}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Homestretch}{156}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}The sight of linear algebra fills you with DETERMINATION}{156}{subsection.2.4.1}

@@ -3367,3 +3367,33 @@ Finally, to end this section we're gonna give some formulaic presentations to so
 	
 	This proves the result.
 \end{proof}
+
+\newpage
+\section{Homestretch}
+
+\subsection{The sight of linear algebra fills you with DETERMINATION}
+
+Let's retrace a few steps.
+
+In one of the last corollaries of the previous section we showed that the line $\R v+u$ can be described as 
+\[\{(x,y)\in \R^2\mid (-v_2)x+v_1y=v_1u_2-v_2u_1\},\]where $v=(v_1,v_2)$ and $u=(u_1,u_2)$. But we've also seen that this line passes through zero if, and only if, 
+\[\R v+u=\{(x,y)\in\R^2\mid (-v_2)x+v_1y=0\}.\]But this is equivalent to saying that $v_1u_2-v_2u_1=0$.
+
+However, we know, from the general theory, that the line $\R v+u$ passes through zero if, and only if, $u\in \R v$. This allows us to prove the following result:
+
+\begin{lemma}
+	Let $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Then $u\in \R v$ if, and only if, $v_1u_2-v_2u_1=0$.
+\end{lemma}
+
+So instead of trying to find a scalar $\lambda$ such that $u=\lambda v$ - which can be a cumbersome task - we can just do a one-line computation to \underline{determine} whether or not two vectors are parallel. This leads to the following definition:
+
+\begin{df}
+	Let $(a,b),(c,d)\in \R^2$. We define the \textbf{determinant of $((a,b),(c,d))$} to be the number $\det((a,b),(c,d))$ given by
+	\[\det((a,b),(c,d)):=ad-bc.\]
+\end{df}
+
+This gives us the following equivalent characterization of the determinant as a corollary of the preceding lemma:
+
+\begin{cor}
+	Let $v,u\in \R^2$. Then $v\parallel u$ if, and only if, $\det(v,u)=0$.
+\end{cor}
