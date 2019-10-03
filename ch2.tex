@@ -3697,5 +3697,6 @@ One last lemma that could've saved us some time on the previous example and we'r
 	
 	But notice that $A(v_1,v_{i-1},v_i)$ is 
 	\[\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_1)}{2}\]so when we add up $A(v_1,v_{i-1},v_i)+A(v_1,v_i,v_{i+1})$ we get
-	\[\frac{\det(v_1,v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}{2}+\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_1)}{2}\]
+	\[\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_1)}{2}+\frac{\det(v_1,v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}{2}\]and since $\det(v,u)=-\det(u,v)$ the terms in the middle cancel out, so this whole sum becomes just
+	\[\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}{2}\]
 \end{proof}
