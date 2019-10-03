@@ -3557,5 +3557,39 @@ These all follow directly from the fact that determinants are inner products and
 Now, to end this section, we want to use determinants to compute other kinds of areas.
 
 \begin{prop}
-	Let $v,u\in\R^2$. Then the area of the triangle $0vu$ is just $\dfrac{\det(v,u)}{2}$.
+	Let $v,u\in\R^2$. Then the (unsigned) area of the triangle $0vu$ is just $\dfrac{\abs{\det(v,u)}}{2}$.
 \end{prop}
+\begin{proof}
+	This follows trivially from the fact that $\abs{\det(v,u)}$ is the (unsigned) area of the parallelogram determined by $v,u$, and that the diagonals of any parallelogram divide it into two congruent triangles trivially.
+	
+	\[\definecolor{uququq}{rgb}{0.25098039215686274,0.25098039215686274,0.25098039215686274}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\definecolor{qqwuqq}{rgb}{0.,0.39215686274509803,0.}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+	\begin{axis}[
+	x=1.0cm,y=1.0cm,
+	axis lines=middle,
+	xmin=-1,
+	xmax=7,
+	ymin=-1,
+	ymax=5.0,
+	xtick={0.0,1.0,...,6.0},
+	ytick={0.0,...,4.0},]
+	\clip(-0.94,-1.) rectangle (7.04,5.);
+	\draw [->] (0.,0.) -- (4.,1.);
+	\draw [->] (0.,0.) -- (2.,3.);
+	\draw [-] (2,3) -- (4,1);
+	\draw [dash pattern=on 2pt off 2pt] (2.,3.)-- (2.588235294117647,0.6470588235294117);
+	\draw [dotted,domain=-0.94:7.04] plot(\x,{(-10.--3.*\x)/2.});
+	\draw [dotted,domain=-0.94:7.04] plot(\x,{(--10.--1.*\x)/4.});
+	\draw [->] (0.,0.) -- (6.,4.);
+	\begin{scriptsize}
+	\draw [fill=uuuuuu] (2.,3.) circle (2.0pt) node[above] {$u$};
+	\draw [fill=uuuuuu] (2.588235294117647,0.6470588235294117) circle (2.0pt);
+	\draw [fill=uququq] (4.,1.) circle (2.0pt) node[above] {$v$};
+	\draw [fill=uququq] (0.,0.) circle (2.5pt);
+	\draw [fill=uququq] (6.,4.) circle (2.0pt);
+	\end{scriptsize}
+	\end{axis}
+	\end{tikzpicture}\]
+\end{proof}
