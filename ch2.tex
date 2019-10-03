@@ -3704,7 +3704,7 @@ One last lemma that could've saved us some time on the previous example and we'r
 	So we proceed by proving that this holds for all $n\in \N$:
 	
 	\begin{itemize}
-		\item It clearly holds for $n=1$;
+		\item It clearly holds for $n=0$;
 		\item Assume it holds for $n$. Let's show it holds for $n+1$:
 		
 		Take $v_1,v_2,\cdots,v_n,v_{n+1}$ an $(n+1)$-gon. We know that its area can be broken up into
@@ -3714,6 +3714,11 @@ One last lemma that could've saved us some time on the previous example and we'r
 		\end{align*}
 		
 		Finally, since $A(v_1,v_2,\cdots,v_n,v_{n+1})=A(v_1,v_2,\cdots,v_n)+A(v_1,v_n,v_{n+1})$ and 
-		\[A(v_1,v_n,v_{n+1})=\frac{\det(v_1,v_n)+\det(v_n,v_{n+1})+\det(v_{n+1},v_1)}{2}\]
+		\[A(v_1,v_n,v_{n+1})=\frac{\det(v_1,v_n)+\det(v_n,v_{n+1})+\det(v_{n+1},v_1)}{2}\]by the reasoning above, we see that when adding up $A(v_1,v_2,\cdots,v_n)+A(v_1,v_n,v_{n+1})$, the terms $\det(v_1,v_n)$ and $\det(v_n,v_1)$ cancel each other out, so the resulting sum is just
+		\[\frac{\det(v_1,v_2)+\det(v_2,v_3)+\cdots+\det(v_{n-1},v_n)+\det(v_n,v_{n+1})+\det(v_{n+1},1)}{2},\]so the proposition holds for $n+1$.
 	\end{itemize}
+
+Finally, as usual, we have shown that the subset of natural numbers for which the proposition holds contains $0$ and is closed under taking successors - which implies that this subset is actually the whole set of natural numbers.
+
+This finishes the proof.
 \end{proof}
