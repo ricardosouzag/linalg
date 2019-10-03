@@ -3616,13 +3616,32 @@ To start, given an $n$-gon $v_1v_2\cdots v_n$, notice that $v_1v_iv_{i+1}$ is al
 Then we can compute the area of the $n$-gon as the sum of the areas of each of the triangles.
 
 \begin{ex}
-	Let $v_1=(1,1)$, $v_2=(0,2)$, $v_3=(1.5,3)$, $v_4=(3,4)$ and $v_5=(2,1)$ be a pentagon. Then, if $A(v,u,w)$ denotes the area of the triangle $vuw$, we can compute:
+	Let $v_1=(1,1)$, $v_2=(0,2)$, $v_3=(1.5,3)$, $v_4=(3,2)$ and $v_5=(2,1)$ be a pentagon. Then, if $A(v,u,w)$ denotes the area of the triangle $vuw$, we can compute:
 	
-	\begin{itemize}
-		\item \begin{align*}
+	\begin{align*}
 			A(v_1,v_2,v_3)&=\frac{\abs{\det(v_1-v_3,v_2-v_3}}{2}\\
 			&=\frac{\abs{\det((-0.5,-2),(-1.5,-1))}}{2}\\
 			&=\frac{\abs{(-0.5)(-1)-(-2)(-1.5)}}{2}\\
-		\end{align*}
-	\end{itemize}
+			&=\frac{\abs{0.5-3}}{2}\\
+			&=\frac{\abs{-2.5}}{2}\\
+			&=\frac{2.5}{2}=1.25
+	\end{align*}
+	
+	\begin{align*}
+		A(v_1,v_3,v_4)&=\frac{\abs{\det(v_1-v_4,v_3-v_4)}}{2}\\
+		&=\frac{\abs{\det((-2,-1),(-1.5,1))}}{2}\\
+		&=\frac{\abs{-2-1.5}}{2}\\
+		\frac{3.5}{2}=1.75
+	\end{align*}
+	
+	\begin{align*}
+		A(v_1,v_4,v_5)&=\frac{\abs{\det(v_1-v_5,v_4-v_5)}}{2}\\
+		&=\frac{\abs{\det((-1,0),(1,1))}}{2}\\
+		&=\frac{\abs{-1-0}}{2}\\
+		&=\frac{\abs{-1}}{2}\\
+		&=\frac{1}{2}=0.5
+	\end{align*}
+
+So the area $A(v_1,v_2,v_3,v_4,v_5)$ is just $A(v_1,v_2,v_3)+A(v_1,v_3,v_4)+A(v_1,v_4,v_5)$ which we have computed to be each respectively equal to $1.25,1.75$ and $0.5$, so
+\[A(v_1,v_2,v_3,v_4,v_5)=1.25+1.75.0.5=3.5\]is the area of our pentagon.		
 \end{ex}
