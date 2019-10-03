@@ -3601,5 +3601,9 @@ Now, to end this section, we want to use determinants to compute other kinds of 
 	\[\frac{\abs{\det(v,u)+\det(u,w)+\det(w,v)}}{2}.\]
 \end{cor}
 \begin{proof}
-	content...
+	From the preceding corollary we know that the unsigned area between $v,u,w$ is \[\frac{\abs{\det(v-w,u-w)}}{2}.\]But using the properties of the determinant we can expand that numerator:
+	\begin{align*}
+		\det(v-w,u-w)&=\det(v,u)+\det(-w,u)+\det(v,-w)+\det(-w,-w)\\
+		&=\det(v,u)-\det(w,u)-\det(v,w)+0=\det(v,u)+\det(u,w)+\det(w,v)
+	\end{align*}so the result follows.
 \end{proof}
