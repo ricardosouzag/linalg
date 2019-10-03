@@ -3700,5 +3700,13 @@ One last lemma that could've saved us some time on the previous example and we'r
 	\[\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_1)}{2}+\frac{\det(v_1,v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}{2}\]and since $\det(v,u)=-\det(u,v)$ the terms $\det(v_1v_i)$ and $\det(v_i,v_1)$ in the middle cancel each other out, so this whole sum becomes just
 	\[\frac{\det(v_1,v_{i-1})+\det(v_{i-1},v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}{2}.\]
 	
-	If we repeat this reasoning for all $i$ between $2$ and $n-1$ it's easy to see that the result follows.
+	So we proceed by proving that this holds for all $n\in \N$:
+	
+	\begin{itemize}
+		\item It clearly holds for $n=1$;
+		\item Assume it holds for $n$. Let's show it holds for $n+1$:
+		
+		Take $v_1,v_2,\cdots,v_n,v_{n+1}$ an $(n+1)$-gon. We know that its area can be broken up into
+		\[A(v_1,v_2,\cdots,v_n,v_{n+1})=A(v_1,v_2,v_3)+A(v_1,v_3,v_4)+\cdots+A(v_1,v_{n-1},v_n)+A(v_1,v_n,v_{n+1})\]
+	\end{itemize}
 \end{proof}
