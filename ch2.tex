@@ -3689,3 +3689,9 @@ One last lemma that could've saved us some time on the previous example and we'r
 	Let $v_1v_2\cdots v_n$ be an $n$-gon in $\R^2$. Then its (unsigned) area is just
 	\[\frac{\det(v_1,v_2)+\det(v_2,v_3)+\cdots+\det(v_{n-1},v_n)}{2}.\]
 \end{lemma}
+\begin{proof}
+	Follows directly from the reasoning above: We already know that 
+	\[A(v_1,v_2,\cdots,v_n)=A(v_1,v_2,v_3)+A(v_1,v_3,v_4)+\cdots+A(v_1,v_{n-1},v_n)\]and that
+	$$A(v,u,w)=\frac{\abs{v,u}+\det(u,w)+\det(w,v)}{2}$$ for any $v,u,w\in \R^2$. So this huge sum becomes
+	\[\frac{(\det(v_1,v_2)+\det(v_2,v_3)+\det(v_3,v_1))+}{2}\]
+\end{proof}
