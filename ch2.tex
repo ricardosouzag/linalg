@@ -3616,12 +3616,13 @@ To start, given an $n$-gon $v_1v_2\cdots v_n$, notice that $v_1v_iv_{i+1}$ is al
 Then we can compute the area of the $n$-gon as the sum of the areas of each of the triangles.
 
 \begin{ex}
-	Let $v_1=(1,1)$, $v_2=(0,2)$, $v_3=(1.5,3)$, $v_4=(3,4)$ and $v_5=(3,1)$ be a pentagon. Then, if $A(v,u,w)$ denotes the area of the triangle $vuw$, we can compute:
+	Let $v_1=(1,1)$, $v_2=(0,2)$, $v_3=(1.5,3)$, $v_4=(3,4)$ and $v_5=(2,1)$ be a pentagon. Then, if $A(v,u,w)$ denotes the area of the triangle $vuw$, we can compute:
 	
 	\begin{itemize}
 		\item \begin{align*}
 			A(v_1,v_2,v_3)&=\frac{\abs{\det(v_1-v_3,v_2-v_3}}{2}\\
-			&=\frac{\abs{\det((-0.5,-2),(-1.5,-1))}}{2}
+			&=\frac{\abs{\det((-0.5,-2),(-1.5,-1))}}{2}\\
+			&=\frac{\abs{(-0.5)(-1)-(-2)(-1.5)}}{2}\\
 		\end{align*}
 	\end{itemize}
 \end{ex}
