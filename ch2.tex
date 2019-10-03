@@ -3692,6 +3692,6 @@ One last lemma that could've saved us some time on the previous example and we'r
 \begin{proof}
 	Follows directly from the reasoning above: We already know that 
 	\[A(v_1,v_2,\cdots,v_n)=A(v_1,v_2,v_3)+A(v_1,v_3,v_4)+\cdots+A(v_1,v_{n-1},v_n)\]and that
-	$$A(v,u,w)=\frac{\abs{v,u}+\det(u,w)+\det(w,v)}{2}$$ for any $v,u,w\in \R^2$. So $A(v_1,v_i,v_{i+1})$ becomes
-	\[\frac{(\det(v_1,v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1))}{2}\]for all $2\leq i\leq n-1$.
+	$$A(v,u,w)=\frac{\abs{\det(v,u)+\det(u,w)+\det(w,v)}}{2}$$ for any $v,u,w\in \R^2$. So $A(v_1,v_i,v_{i+1})$ becomes
+	\[\frac{\abs{(\det(v_1,v_i)+\det(v_i,v_{i+1})+\det(v_{i+1},v_1)}}{2}\]for all $2\leq i\leq n-1$.
 \end{proof}
