@@ -3276,11 +3276,34 @@ Finally, to end this section we're gonna give some formulaic presentations to so
 \end{df}
 
 \begin{prop}
-	For any $v\in\R^2$ we have that $\norm{v}=\norm{v^\perp}$.
+	For any $v,u\in \R^2$ and $\lambda \in \R$ the following hold:
+	
+	\begin{enumerate}[a)]
+		\item $\norm{v}=\norm{v^\perp}$;
+		\item $(v+u)^\perp=v^\perp+u^\perp$;
+		\item $(\lambda v)^\perp=\lambda v^\perp$.
+	\end{enumerate}
 \end{prop}
 \begin{proof}
-	This is trivial: If $v=(v_1,v_2)$ then
-	\[\norm{v^\perp}=\sqrt{(-v_2)^2+v_1^2}=\sqrt{v_2^2+v_1^2}=\norm{v}.\]
+	Let, once and for all, $v=(v_1,v_2)$ and $u=(u_1,u_2)$. Now all of them follow by simple computations:
+	\begin{enumerate}[a)]
+		\item \[\norm{v^\perp}=\sqrt{(-v_2)^2+v_1^2}=\sqrt{v_2^2+v_1^2}=\norm{v}.\]
+		
+		\item
+		\begin{align*}
+			(v+u)^\perp&=(v_1+u_1,v_2+u_2)^\perp\\
+			&=(-(v_2+u_2),v_1+u_1)\\
+			&=(-v_2-u_2,v_1+u_1)\\
+			&=(-v_2,v_1)+(-u_2,u_1)=v^\perp+u^\perp.
+		\end{align*}
+		
+		\item
+		\begin{align*}
+			(\lambda v)^\perp&=(\lambda v_1,\lambda v_2)^\perp\\
+			&=(-\lambda v_2,\lambda v_1)\\
+			&=\lambda(-v_2,v_1)=\lambda v^\perp.
+		\end{align*}
+	\end{enumerate}
 \end{proof}
 
 \begin{lemma}
@@ -3515,3 +3538,15 @@ Our next task is to find a geometric interpretation for the determinant of two v
 	
 	But instead of doing a bunch of hard computations, if you just do $4\cdot 3-1\cdot 2$ you'll get the \textbf{exact} result, without any approximations or hard computations - just simple real addition and multiplication.
 \end{ex}
+
+
+Now that we know that the determinant is just a inner product, some results follow immediately:
+
+\begin{prop}
+	Let $v,u,w\in \R^2$ and $\lambda\in \R$. Then the following hold:
+	\begin{enumerate}[a)]
+		\item $\det(v+u,w)=\det(v,w)+\det(u,w)$;
+		\item $\det(v,u+w)=\det(v,u)+\det(v,w)$;
+		\item $\det(\lambda v,u)=\lambda \det(v,u)=\det(v,\lambda u)$.
+	\end{enumerate}
+\end{prop}
