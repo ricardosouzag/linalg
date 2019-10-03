@@ -3687,7 +3687,7 @@ ytick={0.0,...,3.0},]
 One last lemma that could've saved us some time on the previous example and we're done:
 
 \begin{lemma}
-	Let $v_1v_2\cdots v_n$ be an $n$-gon in $\R^2$. Then its \boxed{signed} area is just
+	Let $v_1v_2\cdots v_n$ be an $n$-gon in $\R^2$. Then its \underline{signed} area is just
 	\[\frac{\det(v_1,v_2)+\det(v_2,v_3)+\cdots+\det(v_{n-1},v_n)+\det(v_n,v_1)}{2}.\]
 \end{lemma}
 \begin{proof}
@@ -3722,16 +3722,20 @@ Finally, as usual, we have shown that the subset of natural numbers for which th
 
 This finishes the proof.
 \end{proof}
+\begin{cor}
+	For any $n$-gon $v_1,v_2,\cdots,v_n$ its \underline{unsigned} area is just
+	\[\frac{\abs{\det(v_1,v_2)+\det(v_2,v_3)+\cdots+\det(v_{n-1},v_n)+\det(v_n,v_1)}}{2}.\]
+\end{cor}
 
 \begin{ex}
-	Revisiting the example above, then, we now know that the are of the pentagon is just 
-	\[\frac{\det(v_1,v_2)+\det(v_2,v_3)+\det(v_3,v_4)+\det(v_4,v_5)+\det(v_5,v_1)}{2}\]each one of which we can easily compute:
+	Revisiting the example above, then, we now know that the unsigned area of the pentagon is just 
+	\[\frac{\abs{\det(v_1,v_2)+\det(v_2,v_3)+\det(v_3,v_4)+\det(v_4,v_5)+\det(v_5,v_1)}}{2}\]each one of which we can easily compute:
 	\begin{align*}
 		\det(v_1,v_2)&=2\\
 		\det(v_2,v_3)&=-3\\
 		\det(v_3,v_4)&=-6\\
 		\det(v_4,v_5)&=-1\\
 		\det(v_5,v_1)&=1
-	\end{align*}so the signed area of the pentagon is just 
-	\[\frac{2-3-6-1+1}{2}=\frac{-7}{2}=-3.5\]which is precisely the same as we had gotten previously, but in the opposite direction.
+	\end{align*}so the unsigned area of the pentagon is just 
+	\[\frac{\abs{2-3-6-1+1}}{2}=\frac{\abs{-7}}{2}=3.5\]which is precisely the same as we had gotten previously, but in the opposite direction.
 \end{ex}
