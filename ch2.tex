@@ -3758,7 +3758,7 @@ First things first, we'll need to extend the definition of determinant for matri
 	For any two matrices $A,B\in M_2(\R)$ and $\lambda\in \R$ the following hold:
 	\begin{enumerate}[a)]
 		\item $\det(AB)=\det A\cdot\det B$
-		\item $\det(\lambda A)=\lambda^2\det AA$
+		\item $\det(\lambda A)=\lambda^2\det A$
 		\item $\det A^t=\det A$.
 	\end{enumerate}
 \end{lemma}
@@ -3778,7 +3778,8 @@ First things first, we'll need to extend the definition of determinant for matri
 			&=\det\begin{pmatrix}
 			a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
 			a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
-			\end{pmatrix}
+			\end{pmatrix}\\
+			&=(a_{11}b_{11}+a_{12}b_{21})(a_{21}b_{12}+a_{22}b_{22})-(a_{11}b_{12}+a_{12}b_{22})(a_{21}b_{11}+a_{22}b_{21})
 		\end{align*}
 	\end{enumerate}
 \end{proof}
