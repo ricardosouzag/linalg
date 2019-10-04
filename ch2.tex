@@ -3961,5 +3961,16 @@ This finishes the proof.
 	\bigskip
 	Conversely, assume that we are given a linear function $f$ such that for any base $\mc B\subseteq \R^2$ we have that $\det A_f^{\mc B}\neq 0$.
 	
-	In particular, for the canonical base $E=\{e_1,e_2\}$, we see that $\det A_f^E\neq 0$.
+	In particular, for the canonical base $E=\{e_1,e_2\}$, we see that $\det A_f^E\neq 0$. But this means that the columns of $A_f^E$ are non-parallel, and we know, by definition, that the columns of $A_f^E$ are just $f(e_1)$ and $f(e_2)$, respectively. Therefore, $f(E)=\{f(e_1),f(e_2)\}$ is also a base of $\R^2$.
+	
+	Since $E$ is a base, there are some $a,b,c,d\in\R$ such that
+	\begin{gather}
+		f(e_1)=ae_1+ce_2\\f(e_2)=be_1+de_2.
+	\end{gather}
+		
+	Similarly, since $f(E)$ is a base, there are some $a',b',c',d'\in \R$ such that \begin{gather}
+		e_1=a'f(e_1)+c'f(e_2)\\e_2=b'f(e_1)+d'f(e_2).
+	\end{gather}
+	
+	Now we can work with these two pairs of equations:
 \end{proof}
