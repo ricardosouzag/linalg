@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {2.2.4}Back to linearity}{113}{subsection.2.2.4}
 \contentsline {section}{\numberline {2.3}Closing the distance}{119}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}A systematic approach}{119}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Rotato potato}{127}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}The distance between us}{133}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Geomancy}{141}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Homestretch}{158}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}The sight of linear algebra fills you with DETERMINATION}{158}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}The sight of linear transformations fills you with DETERMINATION}{166}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.3.2}Rotato potato}{128}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}The distance between us}{134}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Geomancy}{142}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Homestretch}{159}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}The sight of linear algebra fills you with DETERMINATION}{159}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The sight of linear transformations fills you with DETERMINATION}{167}{subsection.2.4.2}

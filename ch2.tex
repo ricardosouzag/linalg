@@ -2148,6 +2148,45 @@ Now, it would be great to be able to calculate each of those matrices. Well, it 
 
 This is the best explanation why matrix multiplication is so weird. Simply put, it's because it's the worst possible way to write function composition. But, all in all, it's just that - function composition.
 
+From this, the next result now follows:
+
+\begin{lemma}
+	There is a unique matrix $I\in M_{2\times 2}(\R)$ such that for any other matrix $A\in M_{2\times 2}(\R)$ we have that $\mathds{I}A=A\mathds{I}=A$.
+\end{lemma}
+\begin{proof}
+	Take $I:=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}$, and $A=\begin{pmatrix}
+	a&b\\
+	b&c
+	\end{pmatrix}$. Then:
+	
+	\[IA=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}\begin{pmatrix}
+	a&b\\
+	b&c
+	\end{pmatrix}=\begin{pmatrix}
+	1\cdot a+0\cdot c&1\cdot b+0\cdot d\\0\cdot a+1\cdot c&0\cdot b+1\cdot d
+	\end{pmatrix}=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}=A\]and
+	\[AI=\begin{pmatrix}
+	a&b\\
+	b&c
+	\end{pmatrix}\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}=\begin{pmatrix}
+	a\cdot 1+b\cdot 0&a\cdot 0+b\cdot 1\\c\cdot 1+d\cdot 0&c\cdot 0+d\cdot 1
+	\end{pmatrix}=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}=A.\]
+	
+	Finally, to prove uniqueness, assume $I'\in M_{2\times 2}(\R)$ also satisfies $I'A=AI'=A$ for all $A\in M_{2\times 2}(\R)$. Then:
+	
+	\[I=II'=I'I=I'\]so $I=I'$ and we see that $I$ is indeed the unique matrix satisfying that property.
+\end{proof}
+
 Finally, we can prove one last result.
 
 \begin{df}
@@ -3853,6 +3892,37 @@ This shows that if two columns on a matrix are scalar multiples of each other, t
 This finishes the proof.
 \end{proof}
 
+\begin{df}
+	Let $\mc B=\{v_1,v_2\}\subseteq \R^2$ be a base of $\R^2$ and let $f:\R^2\to\R^2$ be any linear function. We define \textbf{the matrix of $f$ in the base $\mc B$} to be the matrix $A_f^{\mc B}$ constructed as follows:
+	
+	By definition of base, there are uniquely determined $a,b,c,d\in \R$ such that $f(v_1)=av_1+cv_2$ and $f(v_2)=bv_1+dv_2$. So we put
+	\[A_f^{\mc B}:=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}\]where $a,c$ are the coefficients of $f(v_1)$ in the base $\mc B$, and $b,d$ are the coefficients of $f(v_2)$ in the base $\mc B$.
+\end{df}
+
+\begin{lemma}
+	For every base $\mc B\subseteq \R^2$, the matrix of $\id_{\R^2}$ in that base is the identity matrix $I=\begin{pmatrix}
+	1&0\\0&1
+	\end{pmatrix}$.
+\end{lemma}
+
+\begin{proof}
+	Let $\mc B={b_1,b_2}$ be a base of $\R^2$. Then, by definition, the matrix of any linear function $f$ in this base is the matrix whose first column is the coefficients of $f(b_1)$ in $\mc B$ and whose second column is the coefficients of $f(b_2)$ in $\mc B$.
+	
+	But if we take $f=\id_{\R^2}$, then $f(b_1)=b_1$ and $f(b_2)=b_2$. Not only that, but the unique way to write $f(b_1)$ and $f(b_2)$ in $\mc B$ is now trivial: $f(b_1)=b_1=1\cdot b_1+0\cdot b_2$ and $f(b_2)=b_2=0\cdot b_1+1\cdot b_2$.
+	
+	Therefore, 
+	\[A_{\id_{\R^2}}^{\mc B}=\begin{pmatrix}
+		1&0\\0&0
+		\end{pmatrix}=I\]is the identity matrix.
+\end{proof}
+
 \begin{theorem}
 	Let $f:\R^2\to\R^2$ be a linear function. Then $f$ is a linear isomorphism if, and only if, for every base $\mc B\subseteq \R^2$ we have that $\det A_f^{\mc B}\neq0$, where $A_f^{\mc B}$ is the matrix of $f$ in the base $\mc B$.
 \end{theorem}
+\begin{proof}
+	Assume that $f$ is a linear isomorphism. This means that there's a unique linear function $f^{-1}:\R^2\to \R^2$ such that $f\circ f^{-1}=f^{-1}\circ f=\id_{\R^2}$.
+	
+	Take now any base 
+\end{proof}
