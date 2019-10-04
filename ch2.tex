@@ -4038,11 +4038,16 @@ This finishes the proof.
 \end{df}
 
 \begin{cor}
-	A matrix is invertible if, and only if, the corresponding linear function is a linear isomorphism.
+	The following are equivalent for any matrix $A\in M_{2\times 2}(\R)$:
+	\begin{enumerate}[a)]
+		\item $A$ is invertible;
+		\item $A=A_f^{\mc B}$ for some base $\mc B\subseteq \R^2$ and some linear isomorphism $f$;
+		\item The columns of $A$ are non-parallel;
+		\item The rows of $A$ are non-parallel;
+		\item $A^t$ is invertible;
+		\item $\det A\neq 0$.
+	\end{enumerate}
 \end{cor}
 \begin{cor}
 	If a matrix is invertible, then its inverse is uniquely determined.
-\end{cor}
-\begin{cor}
-	A matrix is invertible if, and only if, its rows or columns are non-parallel.
 \end{cor}
