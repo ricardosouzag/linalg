@@ -3832,5 +3832,23 @@ And we see that the lemma follows.
 		
 		So
 		\[\left(b,d\right)=\left(\frac{b}{a}a,\frac{b}{a}c\right)=\frac{b}{a}\left(a,c\right)\]and we see that $(b,d)$ is a scalar multiple of $(a,c)$.
+		
+		\item \underline{If $c\neq 0$}:
+		
+		Then the equality $ad=bc$ implies $b=\dfrac{d}{c}a$, and we know that $d=\dfrac{d}{c}c$.
+		
+		So
+		\[\left(b,d\right)=\left(\frac{d}{c}a,\frac{d}{c}c\right)=\frac{d}{c}(a,c)\]and we see that $(b,d)$ is a scalar multiple of $(a,c)$.
 	\end{itemize}
+
+This shows that no matter the value of $(a,c)$, the column $(b,d)$ will always be a scalar multiple of it.
+
+\bigskip
+Conversely, if $(b,d)=\lambda (a,c)$ for some $\lambda \in \R$, then
+\[\det A=ad-bc=a(\lambda c)-(\lambda a)c=\lambda(ac)-\lambda(ac)=0.\]
+
+This shows that if two columns on a matrix are scalar multiples of each other, than the determinant of that matrix is zero.
+
+\bigskip
+This finishes the proof.
 \end{proof}
