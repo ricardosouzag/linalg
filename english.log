@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  4 OCT 2019 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  4 OCT 2019 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1138,7 +1138,7 @@ igned) area of the tri-an-gle $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 vu$ \OT1/cmr/m
 /it/12 is just $[]$. 
  []
 
-[161] [162] [163] [164] [165]) [166]
+[161] [162] [163] [164] [165] [166]) [167]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 280.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 280.
  (./english.aux)
@@ -1148,10 +1148,10 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 6CA41381E2FB2AB643C0BDF47ADD0F27;2533.
  ) 
 Here is how much of TeX's memory you used:
- 36361 strings out of 492646
- 863170 string characters out of 6133325
+ 36365 strings out of 492646
+ 863211 string characters out of 6133325
  1042727 words of memory out of 5000000
- 38708 multiletter control sequences out of 15000+600000
+ 38709 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,21n,119p,830b,2498s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1171,10 +1171,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (167 pages, 776906 bytes).
+Output written on english.pdf (168 pages, 778068 bytes).
 PDF statistics:
- 1935 PDF objects out of 2073 (max. 8388607)
- 1730 compressed objects within 18 object streams
- 951 named destinations out of 1000 (max. 500000)
+ 1941 PDF objects out of 2073 (max. 8388607)
+ 1735 compressed objects within 18 object streams
+ 954 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

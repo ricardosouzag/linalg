@@ -3767,10 +3767,11 @@ First things first, we'll need to extend the definition of determinant for matri
 	a_{11}&a_{12}\\a_{21}&a_{22}
 	\end{pmatrix}$ and $B=\begin{pmatrix}
 	b_{11}&b_{12}\\b_{21}&b_{22}
-	\end{pmatrix}$. Then:
+	\end{pmatrix}$.
+	
+	Then:
 	\begin{enumerate}[a)]
-		\item
-		
+		\item		
 		\[\begin{array}{rcl}
 			\det(AB)&=&\det\left(\begin{pmatrix}
 			a_{11}&a_{12}\\a_{21}&a_{22}
@@ -3787,5 +3788,25 @@ First things first, we'll need to extend the definition of determinant for matri
 			&=&a_{11}a_{22}b_{11}b_{22}-a_{11}a_{22}b_{12}b_{21}-a_{12}a_{21}b_{11}b_{22}+a_{12}a_{21}b_{12}b_{21}\\
 			&=&(a_{11}a_{22}-a_{12}a_{21})(b_{11}b_{22}-b_{12}b_{21})=\det A\cdot\det B
 		\end{array}\]
+		
+		\item 
+		\begin{align*}
+			\det(\lambda A)&=\det\begin{pmatrix}
+			\lambda a_{11}&\lambda a_{12}\\\lambda a_{21}&\lambda a_{22}
+			\end{pmatrix}\\
+			&=(\lambda a_{11})(\lambda a_{22})-(\lambda a_{12})(\lambda a_{21})\\
+			&=\lambda^2(a_{11}a_{22})-\lambda^2(a_{12}a_{21})\\
+			&=\lambda^2(a_{11}a_{22}-a_{12}a_{21})=\lambda^2\det A
+		\end{align*}
+		
+		\item \begin{align*}
+			\det A^t&=\det\begin{pmatrix}
+			a_{11}&a_{21}\\a_{12}&a_{22}
+			\end{pmatrix}\\
+			&=a_{11}a_{22}-a_{21}a_{12}\\
+			&=a_{11}a_{22}-a{12}a_{21}=\det A
+		\end{align*}
 	\end{enumerate}
+
+And we see that the lemma follows.
 \end{proof}
