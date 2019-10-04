@@ -4027,7 +4027,18 @@ This finishes the proof.
 	1&0\\0&1
 	\end{pmatrix}=I.\]
 	
-	Finally, we notice that $A=A_f^{E}$. So $A'$ is the matrix of some linear function $g$ such that $f\circ g=g\circ f=\id_{\R^2}$.
+	Finally, we notice that $A=A_f^{E}$. So $A'$ is the matrix of some linear function $g$ in the base $E$ such that $f\circ g=g\circ f=\id_{\R^2}$.
 	
 	This shows that $f$ is a linear isomorphism, and ends the proof.
 \end{proof}
+
+\begin{df}
+	Let $A\in M_{2\times 2}(\R)$. We say that $A$ is \textbf{invertible} if there is some matrix $B\in M_{2\times 2}(\R)$ such that $AB=I=BA$.
+\end{df}
+
+\begin{cor}
+	A matrix is invertible if, and only if, the corresponding linear function is a linear isomorphism.
+\end{cor}
+\begin{cor}
+	If a matrix is invertible, then its inverse is uniquely determined.
+\end{cor}
