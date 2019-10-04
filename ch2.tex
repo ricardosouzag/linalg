@@ -3973,8 +3973,30 @@ This finishes the proof.
 	\end{gather}
 	
 	Now we can work with these two pairs of equations: For instance, using (3) and (4) we can substitute them in (1) to obtain
-	\[f(e_1)=a(a'f(e_1)+c'f(e_2))+c(b'f(e_1)+d'f(e_2))=(aa'+cb')f(e_1)+(ac'+cd')f(e_2)\]but $f(e_1)=1\cdot f(e_1)+0\cdot f(e_2)$ tells us that $aa'+cb'=1$ and $ac'+cd'=0$.
+	\[f(e_1)=a(a'f(e_1)+c'f(e_2))+c(b'f(e_1)+d'f(e_2))=(aa'+cb')f(e_1)+(ac'+cd')f(e_2)\]but $f(e_1)=1\cdot f(e_1)+0\cdot f(e_2)$ tells us that 
+	\begin{gather}
+		aa'+cb'=1\\ac'+cd'=0.
+	\end{gather}
 	
-	Analogously, using (3) and (4) ans substitute them in (2) we obtain
-	\[f(e_2)=b(a'f(e_1)+c'f(e_2))+d(b'f(e_1)+d'f(e_2))=(ba'+db')f(e_1)+(bc'+dd')f(e_2)\]and, once more, since $f(e_2)=0\cdot f(e_1)+1\cdot f(e_2)$ we can see that $ba'+db'=0$ and $bc'+dd'=1$.
+	Analogously, using (3) and (4) and substitute them in (2) we obtain
+	\[f(e_2)=b(a'f(e_1)+c'f(e_2))+d(b'f(e_1)+d'f(e_2))=(ba'+db')f(e_1)+(bc'+dd')f(e_2)\]and, once more, since $f(e_2)=0\cdot f(e_1)+1\cdot f(e_2)$ we can see that 
+	\begin{gather}
+		ba'+db'=0\\bc'+dd'=1.
+	\end{gather}
+	
+	On the other hand, using (1) and (2) and substituting them on (3) and (4), respectively, gives us that
+	\[e_1=a'(ae_1+ce_2)+c'(be_1+de_2)=(a'a+c'b)e_1+(a'c+c'd)e_2\]
+	\[e_2=b'(ae_1+ce_2)+d'(be_1+de_2)=(b'a+d'b)e_1+(b'c+d'd)e_2\]and since $e_1=1\cdot e_1+0\cdot e_2$ and $e_2=0\cdot e_1+1\cdot e_2$, we can see that
+	\begin{gather}
+		a'a+c'b=1\\
+		a'c+c'd=0\\
+		b'a_d'b=0\\
+		b'c+d'd=1.
+	\end{gather}
+	
+	Let $A=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}$ and $A'=\begin{pmatrix}
+	a'&b'\\c'&d'
+	\end{pmatrix}$.
 \end{proof}
