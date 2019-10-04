@@ -2343,6 +2343,9 @@ With this, we can finally define how to act on $1\times 2$ matrices:
 	a_2y_1+a_4y_2
 	\end{pmatrix}\]which proves the result.
 \end{proof}
+\begin{cor}
+	For any $Y\in M_{1\times 2}(\R)$ we have that $YI=Y$.
+\end{cor}
 
 \begin{df}
 	We define the \textbf{transpose map} $(-)^t:M_{2\times 1}(\R)\to M_{1\times 2}(\R)$ to be the map given by $X^t:=\varphi^{-1}(\psi_X)$.
@@ -3942,5 +3945,5 @@ This finishes the proof.
 \begin{proof}
 	Assume that $f$ is a linear isomorphism. This means that there's a unique linear function $f^{-1}:\R^2\to \R^2$ such that $f\circ f^{-1}=f^{-1}\circ f=\id_{\R^2}$.
 	
-	Take now any base 
+	Take now any base $\mc B\subseteq\R^2$, and let $A,B\in M_{2\times 2}(\R)$ be the matrices of $f$ and $f^{-1}$, respectively, in the base $\mc B$.
 \end{proof}

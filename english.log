@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  4 OCT 2019 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  4 OCT 2019 12:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1131,7 +1131,7 @@ OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
 [134] [135] [136] [137] [138] [139] [140] [141] [142] [143] [144] [145]
 [146] [147] [148] [149] [150] [151] [152] [153] [154] [155] [156] [157]
 [158] [159] [160] [161]
-Overfull \hbox (0.22801pt too wide) in paragraph at lines 3617--3618
+Overfull \hbox (0.22801pt too wide) in paragraph at lines 3620--3621
 []\OT1/cmr/bx/n/12 Proposition 2.4.1.8. []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/1
 2 v; u \OMS/cmsy/m/n/12 2 \U/dsrom/m/n/12 R[]$\OT1/cmr/m/it/12 . Then the (un-s
 igned) area of the tri-an-gle $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 vu$ \OT1/cmr/m
@@ -1148,8 +1148,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 6CA41381E2FB2AB643C0BDF47ADD0F27;2533.
  ) 
 Here is how much of TeX's memory you used:
- 36390 strings out of 492646
- 863621 string characters out of 6133325
+ 36392 strings out of 492646
+ 863656 string characters out of 6133325
  1042727 words of memory out of 5000000
  38715 multiletter control sequences out of 15000+600000
  16538 words of font info for 70 fonts, out of 8000000 for 9000
@@ -1171,10 +1171,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (171 pages, 788717 bytes).
+Output written on english.pdf (171 pages, 789107 bytes).
 PDF statistics:
- 1975 PDF objects out of 2073 (max. 8388607)
- 1766 compressed objects within 18 object streams
- 973 named destinations out of 1000 (max. 500000)
+ 1977 PDF objects out of 2073 (max. 8388607)
+ 1768 compressed objects within 18 object streams
+ 975 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
