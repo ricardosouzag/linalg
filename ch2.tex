@@ -3769,7 +3769,7 @@ First things first, we'll need to extend the definition of determinant for matri
 	b_{11}&b_{12}\\b_{21}&b_{22}
 	\end{pmatrix}$. Then:
 	\begin{enumerate}[a)]
-		\item \begin{align*}
+		\item \begin{alignat*}{3}
 			\det(AB)&=\det\left(\begin{pmatrix}
 			a_{11}&a_{12}\\a_{21}&a_{22}
 			\end{pmatrix}\begin{pmatrix}
@@ -3780,10 +3780,10 @@ First things first, we'll need to extend the definition of determinant for matri
 			a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
 			\end{pmatrix}\\
 			&=(a_{11}b_{11}+a_{12}b_{21})(a_{21}b_{12}+a_{22}b_{22})-(a_{11}b_{12}+a_{12}b_{22})(a_{21}b_{11}+a_{22}b_{21})\\
-			&=a_{11}b_{11}a_{21}b_{12}+a_{11}b_{11}a_{22}b_{22}+a_{12}b_{21}a_{21}b_{12}+a_{12}b_{21}a_{22}b_{22}-\\
-			&-a_{11}b_{12}a_{21}b_{11}-a_{11}b_{12}a_{22}b_{21}-a_{12}b_{22}a_{21}b_{11}-a_{12}b_{22}a_{22}b_{21}\\
+			&=&a_{11}b_{11}a_{21}b_{12}+a_{11}b_{11}a_{22}b_{22}+a_{12}b_{21}a_{21}b_{12}+a_{12}b_{21}a_{22}b_{22}\\
+			&&-a_{11}b_{12}a_{21}b_{11}-a_{11}b_{12}a_{22}b_{21}-a_{12}b_{22}a_{21}b_{11}-a_{12}b_{22}a_{22}b_{21}\\
 			&=a_{11}a_{22}b_{11}b_{22}-a_{11}a_{22}b_{12}b_{21}-a_{12}a_{21}b_{11}b_{22}+a_{12}a_{21}b_{12}b_{21}\\
 			&=(a_{11}a_{22}-a_{12}a_{21})(b_{11}b_{22}-b_{12}b_{21})=\det A\cdot\det B
-		\end{align*}
+		\end{alignat*}
 	\end{enumerate}
 \end{proof}
