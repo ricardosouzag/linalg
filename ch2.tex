@@ -3810,3 +3810,24 @@ First things first, we'll need to extend the definition of determinant for matri
 
 And we see that the lemma follows.
 \end{proof}
+
+\begin{prop}
+	Let $A$ be a $2\times 2$ real matrix. Then $\det A=0$ if, and only if, the columns of $A$ are scalar multiples of each other, which happens if, and only if, the rows of $A$ are scalar multiples of each other.
+\end{prop}
+\begin{proof}
+	By the preceding lemma, $\det A=\det A^t$ so the second equivalence of this statement follows trivially from the first.
+	
+	Assume $\det A=0$ for some real matrix $A=\begin{pmatrix}
+	a&b\\c&d
+	\end{pmatrix}$. This means that $ad-bc=0$ or, in other words, $ad=bc$.
+	
+	\begin{itemize}
+		\item \underline{If $a=c=0$}:
+		
+		Then the result is trivially true, since $(0,0)$ is always a scalar multiple of any vector: Indeed, $(a,c)=(0,0)=0(b,c)$ so the first column is a scalar multiple of the second column and the result follows.
+		
+		\item \underline{If $a\neq 0$}:
+		
+		Then the equality $ad=bc$ implies $d=\dfrac{b}{a}c$.
+	\end{itemize}
+\end{proof}
