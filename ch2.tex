@@ -2151,7 +2151,7 @@ This is the best explanation why matrix multiplication is so weird. Simply put, 
 From this, the next result now follows:
 
 \begin{lemma}
-	There is a unique matrix $I\in M_{2\times 2}(\R)$ such that for any other matrix $A\in M_{2\times 2}(\R)$ we have that $\mathds{I}A=A\mathds{I}=A$.
+	There is a unique matrix $I\in M_{2\times 2}(\R)$ such that for any other matrix $A\in M_{2\times 2}(\R)$ we have that $IA=AI=A$.
 \end{lemma}
 \begin{proof}
 	Take $I:=\begin{pmatrix}
@@ -2192,10 +2192,14 @@ From this, the next result now follows:
 \end{df}
 
 \begin{prop}
-	$I=\phi(\id_{\R^2})$.
+	The identity matrix is just the matrix representation of the identity function. That is, $\phi_I=\id_{\R^2}$.
 \end{prop}
 \begin{proof}
-	This is trivial: By definition, the fist column of $\phi(\id_{\R^2})$ IS 
+	This is trivial: By definition, $\phi_I(e_1)$ is the first column of $I$, and $\phi_I(e_2)$ is the second columns of $I$.
+	
+	But the first column of $I$ is just $(1,0)=e_1$, and the second columns of $I$ is just $(0,1)=e_2$, so $\phi_I(e_1)=e_1$ and $\phi_I(e_2)=e_2$.
+	
+	This shows that $\phi_I=\id_{\R^2}$, which is what we wanted.
 \end{proof}
 
 Finally, we can prove one last result.
