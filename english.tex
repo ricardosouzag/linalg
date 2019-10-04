@@ -249,7 +249,8 @@ Refname={Propriedade,Propriedades}]{pp}
 % \let\c@equation\c@df
 % \let\theequation\thedf
 % \makeatother
-\renewcommand*{\theequation}{E(\arabic{section}.\arabic{equation})}
+\numberwithin{equation}{df}
+\renewcommand*{\theequation}{\arabic{equation}}
 
 
 
