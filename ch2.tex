@@ -3753,3 +3753,32 @@ First things first, we'll need to extend the definition of determinant for matri
 	\end{pmatrix}$ be a $2\times 2$ real matrix. We define its \textbf{determinant} to be the real number $\det A$ given by
 	\[\det A:=ad-bc.\]
 \end{df}
+
+\begin{lemma}
+	For any two matrices $A,B\in M_2(\R)$ and $\lambda\in \R$ the following hold:
+	\begin{enumerate}[a)]
+		\item $\det(AB)=\det A\cdot\det B$
+		\item $\det(\lambda A)=\lambda^2\det AA$
+		\item $\det A^t=\det A$.
+	\end{enumerate}
+\end{lemma}
+\begin{proof}
+	Let, once and for all, $A=\begin{pmatrix}
+	a_{11}&a_{12}\\a_{21}&a_{22}
+	\end{pmatrix}$ and $B=\begin{pmatrix}
+	b_{11}&b_{12}\\b_{21}&b_{22}
+	\end{pmatrix}$. Then:
+	\begin{enumerate}[a)]
+		\item \begin{align*}
+			\det(AB)&=\det\left(\begin{pmatrix}
+			a_{11}&a_{12}\\a_{21}&a_{22}
+			\end{pmatrix}\begin{pmatrix}
+			b_{11}&b_{12}\\b_{21}&b_{22}
+			\end{pmatrix}\right)\\
+			&=\det\begin{pmatrix}
+			a_{11}b_{11}+a_{12}b_{21} & a_{11}b_{12}+a_{12}b_{22}\\
+			a_{21}b_{11}+a_{22}b_{21} & a_{21}b_{12}+a_{22}b_{22}
+			\end{pmatrix}
+		\end{align*}
+	\end{enumerate}
+\end{proof}
