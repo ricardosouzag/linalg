@@ -1152,8 +1152,8 @@ Package rerunfilecheck Warning: File `english.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `english.out':
-(rerunfilecheck)             Before: 6CA41381E2FB2AB643C0BDF47ADD0F27;2533
-(rerunfilecheck)             After:  514214D5E88AF79B242F79F31803EE2F;2527.
+(rerunfilecheck)             Before: 514214D5E88AF79B242F79F31803EE2F;2527
+(rerunfilecheck)             After:  D34A8098BC7DC94F52FD47E98E29FB61;2527.
  ) 
 Here is how much of TeX's memory you used:
  36419 strings out of 492646
@@ -1179,7 +1179,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (173 pages, 796318 bytes).
+Output written on english.pdf (173 pages, 796310 bytes).
 PDF statistics:
  2014 PDF objects out of 2073 (max. 8388607)
  1802 compressed objects within 19 object streams
