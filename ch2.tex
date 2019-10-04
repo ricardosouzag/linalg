@@ -2080,7 +2080,7 @@ This ends the proof.
 \end{proof}
 
 \begin{df}
-	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(\phi_X+\phi_Y)$$ $$XY:=\phi(\phi_X\circ \phi_Y)$$ $$\lambda X:=\phi(\lambda \phi_X),$$ where $\phi_X=\phi(X)$ and $\phi_Y=\phi(Y)$.
+	The bijection $\phi:\hom_\R(\R^2,\R^2)\to M_{2\times 2}(\R)$ induces, for all $X,Y\in M_{2\times 2}(\R)$ and $\lambda\in \R$, $X+Y$, $XY$ and $\lambda X$ by putting $$X+Y:=\phi(\phi_X+\phi_Y)$$ $$XY:=\phi(\phi_X\circ \phi_Y)$$ $$\lambda X:=\phi(\lambda \phi_X),$$ where $\phi_X=\phi^{-1}(X)$ and $\phi_Y=\phi^{-1}(Y)$.
 \end{df}
 
 Now, it would be great to be able to calculate each of those matrices. Well, it turns out to be easier than it seems:
@@ -2186,6 +2186,14 @@ From this, the next result now follows:
 	
 	\[I=II'=I'I=I'\]so $I=I'$ and we see that $I$ is indeed the unique matrix satisfying that property.
 \end{proof}
+
+\begin{df}
+	The matrix $I\in M_{2\times 2}(\R)$ is called the \textbf{identity matrix}.
+\end{df}
+
+\begin{prop}
+	The identity matrix is just 
+\end{prop}
 
 Finally, we can prove one last result.
 
