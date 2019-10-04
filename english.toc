@@ -30,3 +30,4 @@
 \contentsline {subsection}{\numberline {2.3.4}Geomancy}{140}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Homestretch}{157}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}The sight of linear algebra fills you with DETERMINATION}{157}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}The sight of linear transformations fills you with DETERMINATION}{165}{subsection.2.4.2}
