@@ -3973,5 +3973,8 @@ This finishes the proof.
 	\end{gather}
 	
 	Now we can work with these two pairs of equations: For instance, using (3) and (4) we can substitute them in (1) to obtain
-	\[f(e_1)=a(a'f(e_1)+c'f(e_2))+c(b'f(e_1)+d'f(e_2))\]
+	\[f(e_1)=a(a'f(e_1)+c'f(e_2))+c(b'f(e_1)+d'f(e_2))=(aa'+cb')f(e_1)+(ac'+cd')f(e_2)\]but $f(e_1)=1\cdot f(e_1)+0\cdot f(e_2)$ tells us that $aa'+cb'=1$ and $ac'+cd'=0$.
+	
+	Analogously, using (3) and (4) ans substitute them in (2) we obtain
+	\[f(e_2)=b(a'f(e_1)+c'f(e_2))+d(b'f(e_1)+d'f(e_2))=(ba'+db')f(e_1)+(bc'+dd')f(e_2)\]and, once more, since $f(e_2)=0\cdot f(e_1)+1\cdot f(e_2)$ we can see that $ba'+db'=0$ and $bc'+dd'=1$.
 \end{proof}
