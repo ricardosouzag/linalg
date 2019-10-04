@@ -3945,5 +3945,21 @@ This finishes the proof.
 \begin{proof}
 	Assume that $f$ is a linear isomorphism. This means that there's a unique linear function $f^{-1}:\R^2\to \R^2$ such that $f\circ f^{-1}=f^{-1}\circ f=\id_{\R^2}$.
 	
-	Take now any base $\mc B\subseteq\R^2$, and let $A,B\in M_{2\times 2}(\R)$ be the matrices of $f$ and $f^{-1}$, respectively, in the base $\mc B$.
+	Take now any base $\mc B\subseteq\R^2$, and let $A,A'\in M_{2\times 2}(\R)$ be the matrices of $f$ and $f^{-1}$, respectively, in the base $\mc B$.
+	
+	By the preceding lemma, we know that the matrix of $\id_{\R^2}$ in any base (in particular, in the base $\mc B$) is $I$. So we get the equation
+	\[AA'=I,\]by definition of matrix multiplication.
+	
+	But now, since determinants preserve matrix multiplication, we see that
+	\[\det(AA')=\det A\cdot \det A'.\] But on the other hand, the above equality tells us that
+	\[\det(AA')=\det I,\]and we know that $\det I=1$.
+	
+	This tells us that $\det A\cdot \det A'=1$. Therefore, neither $\det A$ nor $\det A'$ can be 0 - otherwise, we'd have $0=1$.
+	
+	So by assuming that $f$ has an inverse, we were able to show that $\det A_f^{\mc B}\neq 0$ for any base $\mc B$.
+	
+	\bigskip
+	Conversely, assume that we are given a linear function $f$ such that for any base $\mc B\subseteq \R^2$ we have that $\det A_f^{\mc B}\neq 0$.
+	
+	In particular, for the canonical base $E={e_1,e_2}$, we see that $\det A_f^E\neq 0$.
 \end{proof}
