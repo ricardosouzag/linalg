@@ -3032,7 +3032,7 @@ This allows us to prove some very useful results:
 	Since $v-w\perp r$ by construction, this implies $v-u\perp r$, which ends the proof.
 \end{proof}
 
-\begin{lemma}
+\begin{lemma}\label{lem:locus fixed distance from a line}
 	Let $r=\R v+u\subseteq \R^2$ be any line, and $R\in \R$ any non-negative number. Then the set 
 	\[\mc D(R,r):=\{w\in \R^2\mid d(w,r)=R\}\]is just the set $s\cup t$ where $s=r+\overrightarrow{R}$ and $t=r-\overrightarrow{R}$, and $\overrightarrow{R}\in \R^2$ is any vector such that $\overrightarrow{R}\perp r$ and $\norm{\overrightarrow{R}}=R$.
 \end{lemma}
@@ -4069,8 +4069,13 @@ In order to even state those, however, we need to remember some things that migh
 	\item Given two subspaces $X,Y\leq \R^2$, their \textbf{intersection} $X\cap Y$ is also a subspace.
 \end{itemize}
 
-With this we can define:
+With this we can make an example:
 
-\begin{df}
-	Let $X\leq \R^2$ be a subspace of $\R^2$. We define the set $\R^2/X$ to be the quotient set of $\R^2$ over the relation \[x\sim y\iff x-y\in X.\]
-\end{df}
+\begin{ex}
+	Let $v\in \R^2$ and consider the line $r=\R v$. We already know that lines through zero in $\R^2$ are subspaces, so $r$ is a subspace.
+	
+	In\ref{lem:locus fixed distance from a line} we showed that the set of all points at a fixed distance from any line is two lines.
+	
+	Not only that, but that for each choice of non-negative real number $D\in \R$, these two lines are completely determined as being $s_D=r+\overrightarrow{D}$ and $t_D=r-\overrightarrow{D}$, where $\overrightarrow{D}$ is defined as
+	\[\overrightarrow{D}:=\frac{v^\perp}{\norm v}D,\]that is, it's a vector which is perpendicular to $v$ and has size $D$.
+\end{ex}
