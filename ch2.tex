@@ -4222,3 +4222,53 @@ And we've already got everything we need to prove the first one:
 	
 	This shows that $\psi=\phi^{-1}$ and hence $\phi$ is an isomorphism, as we wanted to show.
 \end{proof}
+
+This is, in my opinion, the single most important result in all of linear algebra. Let us give some examples:
+
+\begin{ex}
+	Let $f:\R^2\to \R^2$ be the function given by $\begin{pmatrix}
+	1&1\\1&1
+	\end{pmatrix}$ that is, $f(x,y)=(x+y,x+y)$. We can compute the kernel of $f$ to be $\Ker f=\R(1,-1)$.
+	
+	So, by the First Isomorphism Theorem, we know that $\R^2/\Ker f\iso \im f$. Let us compute, then, $\R^2/\Ker f$: $[x]=[y]$ in $\R^2/\Ker f$ if, and only if, $x-y\in \Ker f$.
+	
+	This means that writing $x=(x_1,x_2)$ and $y=(y_1,y_2)$ we see that $[x]=[y]$ if, and only if $(x_1+x_2,x_1+x_2)=(y_1+y_2,y_1+y_2)$. But this happens if, and only if, $x_1+x_2=y_1+y_2$.
+	
+	It follows that each class $[x]$ is uniquely determined by the sum $x_1+x_2$ - since, as we've shown, two elements are in the same class if, and only if, they have the same sum.
+	
+	Consider then all classes of the form $[(\lambda,0)]$ where $\lambda$ ranges over all real numbers. We can easily see that two such classes $[(\lambda,0)]$ and $[(\mu,0)]$ are equal if, and only if, $\lambda=\mu$.
+	
+	Finally, notice that for any other class $[(x_1,x_2)]$, we have that 
+	\[[(x_1,x_2)]=[(x_1+x_2,0)]\]since they both have the same sum. It follows then that the classes $[(\lambda,0)]$ are, in fact, \textbf{all} the possible classes.
+	
+	But we can clearly make a bijection between $\R$ and the set $\mc S$ of all classes of the form $[(\lambda,0)]$ simply by mapping each real number $a$ to the class $[(a,0)]$.
+	
+	Therefore, we have just shown that $\R^2/\Ker f\iso \R$.
+	
+	But the First Isomorphism Theorem tells us that $\R^2/\Ker f\iso \im f$, and we know that $\im f$ is a subspace.
+	
+	Combining these two isomorphisms, we get that $\im f$ is a subspace that is isomorphic to $\R$ - so it must be a \textbf{line through zero}.
+	
+	This is indeed just an instance of a more general case:
+\end{ex}
+
+\begin{lemma}
+	Let $X\leq \R^2$ be any subspace. Then $\R^2/X$ is isomorphic to either $0$, a line through zero or $\R^2$.
+\end{lemma}
+\begin{proof}
+	We know that we have only three kinds of subspaces: $0$, lines through zero and $\R^2$. Lets consider each of those cases:
+	
+	\begin{itemize}
+		\item \underline{$X=0$:}
+		
+		In this case, take $[x],[y]\in \R^2/0$ such that $[x]=[y]$. This means that $x-y\in 0$. But $0=\{(0,0)\}$, so $x-y\in 0$ implies $x=y$.
+		
+		What this tells us is that each class $[x]$ in $\R^2/0$ has a single element - $x$. Therefore, there is a clear bijection between $\R^2/0$ and $\R^2$ taking each class $[x]$ to its unique element $x$.
+		
+		This shows $\R^2/0\iso R^2$.
+		
+		\item \underline{$X$ is a line through zero:}
+		
+		In this case, let $X=\R v$ for some $v\in \R^2$. Then taking $[x],[y]\in \R^2/X$ such that $[x]=[y]$ implies that $x-y\in \R v$. But this means that there's some real number $\lambda\in \R$ such that $x-y=\lambda v$.
+	\end{itemize}
+\end{proof}
