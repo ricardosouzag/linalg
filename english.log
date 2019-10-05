@@ -1139,7 +1139,18 @@ igned) area of the tri-an-gle $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 vu$ \OT1/cmr/m
  []
 
 [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
-[174] [175] [176] [177]) [178]
+[174] [175] [176]
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4271
+[]\OT1/cmr/m/n/12 This shows $\U/dsrom/m/n/12 R[]\OML/cmm/m/it/12 =\OT1/cmr/m/n
+/12 0 [] \OML/cmm/m/it/12 R[]$\OT1/cmr/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4270--4271
+
+ []
+
+[177]) [178]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (./english.aux)
@@ -1172,7 +1183,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (179 pages, 819070 bytes).
+Output written on english.pdf (179 pages, 819088 bytes).
 PDF statistics:
  2065 PDF objects out of 2073 (max. 8388607)
  1847 compressed objects within 19 object streams
