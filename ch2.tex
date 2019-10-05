@@ -4127,12 +4127,43 @@ With this we can make an example:
 	
 	Since $x\in s_D$, we can write it as $x=\lambda v+\overrightarrow{D}$ for some $\lambda\in \R$. But now, taking $y\in[x]$ means that $x-y\in r$, so $x-y=\lambda' v$ for some $\lambda'\in \R$, by definition. But then:
 	
-	\begin{gather}
+	\begin{gather*}
 		x-y=\lambda' v\\
 		\lambda v+\overrightarrow{D}-y=\lambda' v\\
 		\lambda v+\overrightarrow{D}-\lambda'v=y\\
 		y=(\lambda-\lambda')v+\overrightarrow{D}\in s_D
-	\end{gather}which tells us that every $y\in[x]$ is also in $s_D$.
+	\end{gather*}which tells us that every $y\in[x]$ is also in $s_D$.
 	
-	This shows that $\mc S=\R^2/\sim$
+	This shows that $\mc S=\R^2/\sim$.
+	
+	Notice that the only thing that we had any control over to define this quotient was the line $r$. If we had chosen any other line through zero we'd have gotten a different quotient.
+	
+	This gives us a nice intuition about our next result:
 \end{ex}
+
+\begin{prop}
+	Any subspace $X\leq \R^2$ determines a unique equivalence relation by $x\sim y$ if, and only if, $x-y\in X$.
+\end{prop}
+\begin{proof}
+	\begin{itemize}
+		\item \underline{$\sim$ is reflexive:}
+		
+		Since $X$ is a subspace it must contain zero, so $x-x=0\in X$ for all $x\in \R^2$ implies $x\sim x$;
+		
+		\item \underline{$\sim$ is symmetric:}
+		
+		Since $X$ is a subspace, it's closed under scalar multiplication. In particular, for any $v\in X$, $-v$ is also in $X$.
+		
+		Therefore, $x\sim y$ implies $x-y\in X$, so $-(x-y)$ must also be in $X$. But $-(x-y)=y-x$ which shows us that $y\sim x$;
+		
+		\item \underline{$\sim$ is transitive:}
+		
+		Since $X$ is a subspace, it's closed under addition. So if $x\sim y$ and $y\sim z$ this means that $x-y$ and $y-z$ are in $X$. But then their sum is also in $X$. This means that $(x-y)+(y-z)=x-z$ is in $X$, and so $x\sim z$.
+	\end{itemize}
+
+	Since $\sim$ is reflexive, symmetric and transitive, it is, by definition, an equivalence. This ends the proof.
+\end{proof}
+
+\begin{df}
+	Let $X\leq R^2$ be a subspace and $\sim$ the equivalence relation uniquely determined by $X$. We'll denote the set $\R^2/\sim$ simply by $\R^2/X$ and call it the \textbf{quotient space of $\R^2$ over $X$}.
+\end{df}
