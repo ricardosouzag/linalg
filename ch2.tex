@@ -4271,9 +4271,9 @@ This is, in my opinion, the single most important result in all of linear algebr
 		
 		\item \underline{$X$ is a line through zero:}
 		
-		In this case, let $X=\R v$ for some $v\in \R^2$. Then if we take $[x],[y]\in \R^2/\R v$ such that $[x]=[y]$ we get that $x-y\in \R v$. This means that if we denote $D=d(x,\R v)$ then $x$ is in either $s_D$ or $s_{-D}$.
+		In this case, let $X=\R v$ for some $v\in \R^2$. Then if we take $[x],[y]\in \R^2/\R v$ such that $[x]=[y]$ we get that $x-y\in \R v$.
 		
-		It doesn't matter which one it is, though, because whatever it might be, $y$ will also be there.
+		We already know that if we denote $D=d(x,\R v)$ then $x$ is in either $s_D$ or $s_{-D}$. It doesn't matter which one it is, though, because whatever it might be, $y$ will also be there.
 		
 		For instance, if $x\in s_D$ it means that $x=\lambda_x v+\overrightarrow{D}$, and so $x-y=\lambda v$ implies $y=(\lambda_x-\lambda)v+\overrightarrow{D}$ which is also in $s_D$.
 		
@@ -4286,5 +4286,15 @@ This is, in my opinion, the single most important result in all of linear algebr
 		Since the set of all signed distances is just $\R$ we have a clear bijection between $\R^2/\R v$ and $\R$ which takes each class to its signed distance.
 		
 		This shows that $\R^2/\R v\iso \R$, and, finally, since $\R$ is isomorphic to any line (in particular, to lines through zero) it follows that $\R^2/\R v$ is isomorphic to a line through zero.
+		
+		\item \underline{$X=\R^2$:}
+		
+		In this case, two classes $[x],[y]\in \R^2/\R^2$ are equal, if, and only if, $x-y\in \R^2$. But this is true for any pair of vectors $x,y\in \R^2$ - difference of vectors is always a vector.
+		
+		This shows that for any pair of vectors $v,u\in \R^2$, we always have that $[v]=[u]$ - therefore, there's only one class which contains every single vector.
+		
+		It follows that $\R^2/\R^2$ is a singleton and, hence, isomorphic to any other singleton - in particular, to the singleton $0=\{(0,0)\}$.
 	\end{itemize}
+
+Since we have covered all possible cases of subspaces, this finishes the proof.
 \end{proof}
