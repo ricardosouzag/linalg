@@ -4269,6 +4269,20 @@ This is, in my opinion, the single most important result in all of linear algebr
 		
 		\item \underline{$X$ is a line through zero:}
 		
-		In this case, let $X=\R v$ for some $v\in \R^2$. Then taking $[x],[y]\in \R^2/X$ such that $[x]=[y]$ implies that $x-y\in \R v$. But this means that there's some real number $\lambda\in \R$ such that $x-y=\lambda v$.
+		In this case, let $X=\R v$ for some $v\in \R^2$. Then taking $[x],[y]\in \R^2/\R v$ such that $[x]=[y]$ implies that $x-y\in \R v$. This means that if we denote $D=d(x,\R v)$ then $x$ is in either $s_D$ or $s_{-D}$.
+		
+		It doesn't matter which one it is, though, because whatever it might be, $y$ will also be there.
+		
+		For instance, if $x\in s_D$ it means that $x=\lambda_x v+\overrightarrow{D}$, and so $x-y=\lambda v$ implies $y=(\lambda_x-\lambda)v+\overrightarrow{D}$ which is also in $s_D$.
+		
+		Similarly, if $x\in s_{-D}$ it means that $x=\lambda_x-\overrightarrow{D}$, and so $x-y=\lambda v$ implies $y=(\lambda_x-\lambda)v-\overrightarrow{D}$.
+		
+		Either way, we see that $[x]=[y]$ implies that $x$ and $y$ lie at the same signed distance from $\R v$.
+		
+		In other words, each class $[x]$ is uniquely determined by its signed distance from $\R v$ - different classes have different distances, and different distances give us different classes.
+		
+		Since the set of all signed distances is just $\R$ we have a clear bijection between $\R^2/\R v$ and $\R$ which takes each class to its signed distance.
+		
+		This shows that $\R^2/\R v\iso \R$, and, finally, since $\R$ is isomorphic to any line (in particular, to lines through zero) it follows that $\R^2/\R v$ is isomorphic to a line through zero.
 	\end{itemize}
 \end{proof}
