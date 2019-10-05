@@ -4078,4 +4078,12 @@ With this we can make an example:
 	
 	Not only that, but that for each choice of non-negative real number $D\in \R$, these two lines are completely determined as being $s_D=r+\overrightarrow{D}$ and $t_D=r-\overrightarrow{D}$, where $\overrightarrow{D}$ is defined as
 	\[\overrightarrow{D}:=\frac{v^\perp}{\norm v}D,\]that is, it's a vector which is perpendicular to $v$ and has size $D$.
+	
+	From this, it's easy to see that for any non-negative $D\in \R$ we have that
+	\[r=s_D+t_D.\]
+	
+	This means that no matter which elements of $s_D$ and $t_D$ you pick, their sum will always lie in $r$.
+	
+	Indeed: Let $x=\lambda v+\overrightarrow{D}\in s_D$ and $y=\mu v-\overrightarrow{D}\in t_D$. Then
+	\[x+y=(\lambda v+\overrightarrow{D})+(\mu v-\overrightarrow{D})=\lambda v+\mu v=(\lambda+\mu v)\in \R v.\]
 \end{ex}
