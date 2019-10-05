@@ -4082,16 +4082,57 @@ With this we can make an example:
 \begin{ex}
 	Let $v\in \R^2$ and consider the line $r=\R v$. We already know that lines through zero in $\R^2$ are subspaces, so $r$ is a subspace.
 	
-	In\ref{lem:locus fixed distance from a line} we showed that the set of all points at a fixed distance from any line is two lines.
+	In~\cref{lem:locus fixed distance from a line} we showed that the set of all points at a fixed distance from any line is two lines.
 	
 	Not only that, but that for each choice of non-negative real number $D\in \R$, these two lines are completely determined as being $s_D=r+\overrightarrow{D}$ and $t_D=r-\overrightarrow{D}$, where $\overrightarrow{D}$ is defined as
 	\[\overrightarrow{D}:=\frac{D}{\norm v}v^\perp,\]that is, it's a vector which is perpendicular to $v$ and has size $D$.
 	
 	From this, it's easy to see that for any non-negative $D\in \R$ we have that
-	\[r=s_D+t_D.\]
+	\[r=s_D-s_D.\]
 	
-	This means that no matter which elements of $s_D$ and $t_D$ you pick, their sum will always lie in $r$.
+	This means that no matter which elements of $s_D$ you pick, their difference will always lie in $r$.
 	
-	Indeed: Let $x=\lambda v+\overrightarrow{D}\in s_D$ and $y=\mu v-\overrightarrow{D}\in t_D$. Then
-	\[x+y=(\lambda v+\overrightarrow{D})+(\mu v-\overrightarrow{D})=\lambda v+\mu v=(\lambda+\mu)v\in r.\]
+	Indeed: Let $x=\lambda v+\overrightarrow{D}\in s_D$ and $y=\mu v+\overrightarrow{D}\in s_D$. Then
+	\[x-y=(\lambda v+\overrightarrow{D})-(\mu v+\overrightarrow{D})=\lambda v-\mu v=(\lambda-\mu)v\in r.\]
+	
+	We can then extend this construction to include negative $D$: We just put $s_D=t_{-D}$ (so, for instance, $s_{-2}$ is defined to be $t_2$ and $t_{-2}$ is defined to be $s_2$), so it doesn't matter the sign of $D$, $s_D$ and $t_D$ are always well-defined, and they always add up to $r$.
+	
+	This allows us to define the following relation: $x\sim y$ if, and only if, $x-y\in r$.
+	
+	\begin{itemize}
+		\item \underline{$\sim$ is reflexive:}
+		
+		Clearly, for all $x\in \R^2$ we have that $x-x=0\in r$ so $x\sim x$;
+		
+		\item \underline{$\sim$ is symmetric:}
+		
+		If $x\sim y$ it means that $x-y=\lambda v$ for some $\lambda\in \R$. But then
+		\[y-x=-(x-y)=-(\lambda v)=\lambda v\]so $y-x\in r$ and hence $y\sim x$;
+		
+		\item \underline{$\sim$ is transitive:}
+		
+		Let $x\sim y$ and $y\sim z$. This means that $x-y=\lambda v$ and $y-z=\mu v$ for some $\lambda,\mu\in\R$. Then:
+		
+		\[x-z=x-y+y-z=(\lambda v)+(\mu v)=(\lambda+\mu)v\]so $x-z\in r$ so $x\sim z$.
+	\end{itemize}
+
+	Let $\mc S:=\{s_D\mid D\in \R\}$. We claim that $\mc S=\R^2/\sim$.
+	
+	\bigskip
+	We've already shown that $s_D-s_D\in r$, so clearly $\mc S\subseteq \R^2/\sim$.
+	
+	Conversely, take $[x]\in \R^2/\sim$ to be the class of all $y\in \R^2$ such that $x-y\in r$ and let $D=d(x,r)$.
+	
+	Then, clearly, either $x\in s_D$ or $x\in s_{-D}$. It really doesn't matter which, and makes no real difference, so let's assume $x\in s_D$. We will show that every $y\in [x]$ is also in $s_D$, and hence $\R^2/\sim\subseteq \mc S$.
+	
+	Since $x\in s_D$, we can write it as $x=\lambda v+\overrightarrow{D}$ for some $\lambda\in \R$. But now, taking $y\in[x]$ means that $x-y\in r$, so $x-y=\lambda' v$ for some $\lambda'\in \R$, by definition. But then:
+	
+	\begin{gather}
+		x-y=\lambda' v\\
+		\lambda v+\overrightarrow{D}-y=\lambda' v\\
+		\lambda v+\overrightarrow{D}-\lambda'v=y\\
+		y=(\lambda-\lambda')v+\overrightarrow{D}\in s_D
+	\end{gather}which tells us that every $y\in[x]$ is also in $s_D$.
+	
+	This shows that $\mc S=\R^2/\sim$
 \end{ex}
