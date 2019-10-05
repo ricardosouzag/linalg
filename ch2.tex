@@ -4182,3 +4182,43 @@ Now we're ready to state the theorem we're trying to prove.
 		\item $X\subseteq Y$ if, and only if, $\R^2/Y\subseteq \R^2/X$.
 	\end{enumerate}
 \end{theorem}
+
+We're already ready to prove the first one:
+
+\begin{theorem}[First Isomorphism Theorem]\label{thm: first iso theorem}
+	For any linear function $f:\R^2\to\R^2$ we have that $\R^2/\Ker f\iso \im f$.
+\end{theorem}
+\begin{proof}
+	Let $\phi:\R^2/\Ker f\to \im f$ be defined as $\phi([x]):=f(x)$.
+	
+	First, we need to show that this is indeed a function - that is, that if we take the same point in the domain, its image under $\phi$ doesn't change.
+	
+	In our case, this means that we need to show that $[x]=[y]$ implies $\phi([x])=\phi([y])$.
+	
+	Indeed: If $[x]=[y]$ this means that $x-y\in \Ker f$, by definition. Therefore, $f(x-y)=0$, by definition of kernel. Since $f$ is linear, this implies $f(x)=f(y)$, and so
+	\[\phi([x])=f(x)=f(y)=\phi([y])\]and we see that $\phi$ is indeed a function.
+	
+	\bigskip
+	Next, consider $\psi:\im f\to \R^2/\Ker f$ defined by $\psi(x):=[f^{-1}(x)]$. Once again, we need to show that this makes sense to define: $f^{-1}(x)$ is a \textbf{set}, not a vector, so it could happen that $[f^{-1}(x)]$ is not an element of $\R^2/\Ker f$, but, instead, a subset.
+		
+	To show that this doesn't happen, then, we need to show that if there are more than one point - say, $v,u\in f^{-1}(x)$ - then $v-u\in Ker$. This suffices, because then $[f^{-1}(x)]=[v]=[u]$ which is indeed a single element.
+	
+	Take then $v,u\in f^{-1}(x)$. This means that $f(v)=f(u)=x$. But then, $f(v-u)=f(v)-f(u)=x-x=0$ so $v-u\in \Ker f$. This shows that $[f^{-1}(x)]=[v]$ and so $\psi$ is indeed a function.
+	
+	\bigskip
+	We claim that $\phi$ and $\psi$ are mutually inverse.
+	
+	Indeed given any $[x]\in \R^2/\Ker f$ and any $y\in \im f$ we have:
+	\begin{align*}
+		(\psi\circ\phi)([x])&=\psi(\phi([x]))\\
+		&=\psi(f(x))\\
+		&=[f^{-1}(f(x))]=[x]
+	\end{align*}and
+	\begin{align*}
+		(\phi\circ\psi)(y)&=\phi(\psi(y))\\
+		&=\phi([f^{-1}(y)])\\
+		&=f(f^{-1}(y))=y
+	\end{align*}so $\psi\circ\phi=\id_{\R^2/\Ker f}$ and $\phi\circ\psi=\id_{\im f}$.
+	
+	This shows that $\psi=\phi^{-1}$ and hence $\phi$ is an isomorphism, as we wanted to show.
+\end{proof}
