@@ -4313,7 +4313,11 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 	First things first, let $I\subset\R$ be the following set
 	\[I:=\{x\in \R \mid 0< x< 1\},\] that is, the set of all real numbers which are between $0$ and $1$, excluding $0$ and $1$. This is called the \textbf{open unit interval} or just the \textbf{open interval}.
 	
-	We will prove that $I\iso \R_+$ - the set of all non-negative real numbers. To do this, consider the map
+	We will prove that $I$ is isomorphic the set of all non-negative real numbers. To do this, consider the map
 	\[f:I\to \R\]defined by
-	\[f(x)=\frac{1-x}{x}.\]
+	\[f(x)=\frac{1-x}{x}.\]Since $x\in I$ implies $0<x<1$, we have that $1-x$ is always positive and $x$ is always positive, so the ratio $\frac{1-x}{x}$ is also always positive. This shows that $\im f\subseteq \R_+$ - where $\R_+$ is the full subset of all positive real numbers.
+	
+	Consider now the function
+	\[g:\R_+\to \R\]
+	\[g(y)=\frac{y}{y+1}.\] Since $y>0$ implies $y+1>0$, we have that $\frac{y}{y+1}>0$, and since $y+1>y$, we have that $\frac{y}{y+1}<1$, so $\im g\subseteq I$.
 \end{proof}
