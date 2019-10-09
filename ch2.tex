@@ -4179,7 +4179,7 @@ Now we're ready to state the theorem we're trying to prove.
 	\begin{enumerate}[(1.)]
 		\item $\R^2/\Ker f\iso \im f$;
 		\item $(X+Y)/X\iso X/(X\cap Y)$;
-		\item $X\subseteq Y$ if, and only if, $\R^2/Y\subseteq \R^2/X$.
+		\item $Y\subseteq X$ if, and only if, $X/Y\subseteq \R^2/Y$.
 	\end{enumerate}
 \end{theorem}
 
@@ -4428,13 +4428,14 @@ Returning, then, to our goal, we need to define a new object before we proceed a
 
 With this, we can now prove the two remaining theorems:
 
-\begin{theorem}[Second Isomorphism Theorem]
+\begin{theorem}[Second Isomorphism Theorem]\label{thm: second iso theorem}
 	Let $X,Y\leq \R^2$ be any two subspaces of $\R^2$. Then:
 	\[\frac{X+Y}{Y}\iso \frac{X}{X\cap Y}.\]
 \end{theorem}
 \begin{proof}
 	First, notice that since $Y\subseteq X+Y$, $X\cap Y\subseteq X$ and that both $X+Y$ and $X\cap Y$ are subspaces, it makes sense to define the two quotients in the statement of this theorem.
 	
+	\bigskip
 	Before trying to prove this result, then, let us explore these sets a bit more.
 	
 	For instance, take two elements $[v]=[u]\in\dfrac{X+Y}{Y}$. By definition, it is the equivalence class of the vector $v$ in the quotient set $\R^2/Y$, where $v\in X+Y$.
@@ -4445,11 +4446,11 @@ With this, we can now prove the two remaining theorems:
 	
 	This tells us that two vectors $x+y,x'+y'\in X+Y$ have the same class in $\dfrac{X+Y}{Y}$ if, and only if, $x-x'\in Y$. But notice that, by definition, $x-x'\in X$. So we can further affirm that those two vectors are equal in the quotient if, and only if, $x-x'\in X\cap Y$.
 	
+	But this tells us that $[x+0]=[x+y]$ for all $x\in X$, $y\in Y$ since, clearly, $x-x=0\in X\cap Y$.
+	
 	But given two vectors $x,x'\in X$, we have that $x-x'\in X\cap Y$ if, and only if, $[x]=[x']\in \dfrac{x}{X\cap Y}$.
 	
-	Combining all of that, we see that $[x+y]=[x'+y']\in \dfrac{X+Y}{Y}$ if, and only if, $[x]=[x']\in \frac{X}{X\cap Y}$.
-	
-	But this tells us that $[x+0]=[x+y]$ for all $x\in X$, $y\in Y$ since, clearly, $x-x=0\in Y$.
+	Combining all of that, we see that $[x+0]=[x'+0]\in \dfrac{X+Y}{Y}$ if, and only if, $[x]=[x']\in \frac{X}{X\cap Y}$.
 	
 	\bigskip
 	This gives us an obvious correspondence:
@@ -4459,4 +4460,13 @@ With this, we can now prove the two remaining theorems:
 	These functions are trivially inverse to each other, and so they are isomorphisms.
 	
 	This ends the proof.
+\end{proof}
+
+\begin{theorem}[Third Isomorphism Theorem]\label{thm: third iso theorem}
+	Let $X,Y\leq \R^2$ be any two subspaces. Then $Y\subseteq X$ if, and only if, $X/Y\subseteq\R^2/Y$.
+\end{theorem}
+\begin{proof}
+	Assume $Y\subseteq X$. Then $[x]=[x']\in X/Y$ if, and only if, $x-x'\in Y$. But $x,x'\in \R^2$ means that $x-x'\in Y$ if, and only if, $[x]=[x']\in \R^2/Y$.
+	
+	This shows that $[x]\in X/Y$ implies $[x]\in \R^2/Y$ and ends the proof.
 \end{proof}
