@@ -4322,13 +4322,16 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 	\[g(y)=\frac{y}{y+1}.\] Since $y>0$ implies $y+1>0$, we have that $\frac{y}{y+1}>0$, and since $y+1>y$, we have that $\frac{y}{y+1}<1$, so $0<g(y)<1$ for all $y\in \R_+$ and $\im g\subseteq I$.
 	
 	Now:
+	\begingroup
+	\addtolength{\jot}{1em}
 	\begin{align*}
 		g(f(x))&=g\left(\frac{x}{1-x}\right)\\
-		&=\dfrac{\frac{x}{1-x}}{\frac{x}{1-x}+1}\\
-		&=\dfrac{\frac{x}{1-x}}{\frac{x}{1-x}+\frac{1-x}{1-x}}\\
-		&=\dfrac{\frac{x}{1-x}}{\frac{1}{1-x}}\\
+		&=\dfrac{\dfrac{x}{1-x}}{\dfrac{x}{1-x}+1}\\
+		&=\dfrac{\dfrac{x}{1-x}}{\dfrac{x}{1-x}+\dfrac{1-x}{1-x}}\\
+		&=\dfrac{\dfrac{x}{1-x}}{\dfrac{1}{1-x}}\\
 		&=\dfrac{x}{1}\cdot\dfrac{1-x}{1-x}=x
-	\end{align*}and
+	\end{align*}
+	\endgroup and
 	\begin{align*}
 		f(g(y))&=f\left(\frac{y}{y+1}\right)\\
 		&=\dfrac{\frac{y}{y+1}}{1-\frac{y}{y+1}}\\
