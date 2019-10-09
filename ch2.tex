@@ -4437,9 +4437,13 @@ With this, we can now prove the two remaining theorems:
 	
 	Before trying to prove this result, then, let us explore these sets a bit more.
 	
-	For instance, take an element of $[v]\in\dfrac{X+Y}{Y}$. By definition, it is the equivalence class of the vector $v$ in the quotient set $\R^2/Y$, where $v\in X+Y$.
+	For instance, take two elements $[v]=[u]\in\dfrac{X+Y}{Y}$. By definition, it is the equivalence class of the vector $v$ in the quotient set $\R^2/Y$, where $v\in X+Y$.
 	
-	So, if we take $[u]=[v]$ it means that $v-u\in Y$. But since $v\in X+Y$, we can write $v=\lambda_v x_v+\mu_v y_v$ for some $x_v\in X$, $y_v\in Y$ and $\lambda_v,\mu_v\in \R$. Similarly for $u$, we can write it as $u=\lambda_ux_u+\mu_uy_u$, with $x_u\in X$, $y_u\in Y$ and $\lambda_u,\mu_u\in \R$.
+	So $[u]=[v]$ means that $v-u\in Y$. But since $v\in X+Y$, we can write $v=\lambda_v x_v+\mu_v y_v$ for some $x_v\in X$, $y_v\in Y$ and $\lambda_v,\mu_v\in \R$. Similarly for $u$, we can write it as $u=\lambda_ux_u+\mu_uy_u$, with $x_u\in X$, $y_u\in Y$ and $\lambda_u,\mu_u\in \R$.
 	
 	But now $v-u\in Y$ means that $(\lambda_vx_v+\mu_vy_v)-(\lambda_ux_u+\mu_uy_u)\in Y$, which means that $\lambda_vx_v-\lambda_ux_u\in Y$ (since $\mu_vy_v-\mu_uy_u$ already lies in $Y$).
+	
+	This tells us that two vectors $v,u\in X+Y$ have the same class in $\dfrac{X+Y}{Y}$ if, and only if, the difference of their $X$-components lies in $Y$.
+	
+	\bigskip
 \end{proof}
