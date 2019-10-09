@@ -4445,5 +4445,10 @@ With this, we can now prove the two remaining theorems:
 	
 	This tells us that two vectors $x+y,x'+y'\in X+Y$ have the same class in $\dfrac{X+Y}{Y}$ if, and only if, $x-x'\in Y$. But notice that, by definition, $x-x'\in X$. So we can further affirm that those two vectors are equal in the quotient if, and only if, $x-x'\in X\cap Y$.
 	
-	\bigskip
+	But given two vectors $x,x'\in X$, we have that $x-x'\in X\cap Y$ if, and only if, $[x]=[x']\in \dfrac{x}{X\cap Y}$.
+	
+	Combining all of that, we see that $[x+y]=[x'+y']\in \dfrac{X+Y}{Y}$ if, and only if, $[x]=[x']\in \frac{X}{X\cap Y}$.
+	
+	This gives us an obvious correspondence:
+	\[f:\frac{X+Y}{Y}\to\frac{X}{X\cap Y}\]sending each $[x+y]\in \dfrac{X+Y}{Y}$ to $[x]\in \dfrac{X}{X\cap Y}$.
 \end{proof}
