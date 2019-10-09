@@ -4332,11 +4332,14 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 		&=\dfrac{x}{1}\cdot\dfrac{1-x}{1-x}=x
 	\end{align*}
 	\endgroup and
+	\begingroup
+	\addtolength{\jot}{1em}
 	\begin{align*}
-		f(g(y))&=f\left(\frac{y}{y+1}\right)\\
-		&=\dfrac{\frac{y}{y+1}}{1-\frac{y}{y+1}}\\
-		&=\dfrac{\frac{y}{y+1}}{\frac{y+1}{y+1}-\frac{y}{y+1}}\\
-		&=\dfrac{\frac{y}{y+1}}{\frac{1}{y+1}}\\
+		f(g(y))&=f\left(\dfrac{y}{y+1}\right)\\
+		&=\dfrac{\dfrac{y}{y+1}}{1-\dfrac{y}{y+1}}\\
+		&=\dfrac{\dfrac{y}{y+1}}{\dfrac{y+1}{y+1}-\dfrac{y}{y+1}}\\
+		&=\dfrac{\dfrac{y}{y+1}}{\dfrac{1}{y+1}}\\
 		&=\dfrac{y}{1}\cdot\dfrac{y+1}{y+1}=y
-	\end{align*}so $f\circ g=\id_{\R_+}$ and $g\circ f=\id_I$, so they are inverse and, therefore, an isomorphism.
+	\end{align*}
+	\endgroup so $f\circ g=\id_{\R_+}$ and $g\circ f=\id_I$, so they are inverse and, therefore, an isomorphism.
 \end{proof}
