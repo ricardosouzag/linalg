@@ -4342,4 +4342,19 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 		&=\dfrac{y}{1}\cdot\dfrac{y+1}{y+1}=y
 	\end{align*}
 	\endgroup so $f\circ g=\id_{\R_+}$ and $g\circ f=\id_I$, so they are inverse and, therefore, an isomorphism.
+	
+	\bigskip
+	The next step is to show that $I$ is isomorphic not only to $\R_+$, but to $\R$.
+	
+	To see this, first notice that $-I=\{x\in \R\mid -1<x<0\}$ is isomorphic, exactly as above, to the set of negative real numbers - $\R_-$.
+	
+	This shows that the open interval $I':=\{x\in \R\mid -1<x<1\}$ is isomorphic to $\R$ - just send everyone smaller than $0$ to the negatives, everyone greater than $0$ to the positives and zero onto itself.
+	
+	Now we claim that $I\iso I'$. This is easily seen: Take $f':I\to \R$ given by 
+	\[f'(x)=2x-1.\] It's easy to see that $f'(x)$ is positive precisely when $2x>1$ or, in other words, when $x>\frac{1}{2}$. It's also easy to see that $f'(\frac{1}{2})=0$ and that $f'(x)<0$ if, and only if $x<\frac{1}{2}$.
+	
+	Finally, since $0<x<1$, we can see that $0<2x<2$ and so $-1<2x-1<1$ so $\im f'\subseteq I'$.
+	
+	Similarly as above, consider $g':I'\to \R$ given by
+	\[g'(y)=\frac{y}{2}+1.\]
 \end{proof}
