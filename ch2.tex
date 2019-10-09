@@ -4378,14 +4378,31 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 	We will finally prove this theorem, then, by showing that $I\iso I^2$.
 	
 	To do this, take $x\in I$ and write its unique decimal expansion:
-	\[x=0.x_0x_1x_2x_3\cdots x_n\cdots\]with all $a_i\in\N$ such that $0\leq a_i\leq 9$ for all $i\in \N$.
+	\[x=0.x_0x_1x_2x_3... x_n...\]with all $a_i\in\N$ such that $0\leq a_i\leq 9$ for all $i\in \N$.
 	
 	This tells us that we can write all $x\in I$ as a sequence $(a_0,a_1,a_2,\cdots,a_n,\cdots)$ with all terms being natural numbers between $0$ and $9$.
 	
-	As an example, we would write $\frac{1}{3}$ as $0.333\cdots$, so, in this case, $a_i=3$ for all $i\in \N$. So we can represent $\frac{1}{3}$ as the sequence $(3,3,3,\cdots)$.
+	As an example, we would write $\frac{1}{3}$ as $0.333...$, so, in this case, $a_i=3$ for all $i\in \N$. So we can represent $\frac{1}{3}$ as the sequence $(3,3,3,\cdots)$.
 	
-	Notice also that each such sequence determines a unique number in $I$ - given the sequence $(a_0,a_1,a_2,\cdots)$, the number $x=0.a_0a_1a_2\cdots$ is uniquely determined and is in $I$.
+	Notice also that each such sequence determines a unique number in $I$ - given the sequence $(a_0,a_1,a_2,\cdots)$, the number $x=0.a_0a_1a_2...$ is uniquely determined and is in $I$.
 	
-	Since we can think of $I$ as the set of all sequences with natural entries between $0$ and $9$, we can think if $I^2$ as the set of all pairs of such sequences. For instance, the element $((3,3,3,\cdots),(1,2,3,4,\cdots))\in I^2$ and corresponds to the point $(0.333...,0.1234\dots)\in I^2$.
+	Since we can think of $I$ as the set of all sequences with natural entries between $0$ and $9$, we can think if $I^2$ as the set of all pairs of such sequences.
 	
+	For instance, the element $((3,3,3,\cdots),(1,2,3,4,\cdots))\in I^2$ and corresponds to the point $(0.333...,0.1234...)\in I^2$.
+	
+	Now that that's out of the way, we can define the function $\phi:I\to I^2$ given by 
+	\[\phi(a_0,a_1,a_2,\cdots)=((a_0,a_2,a_4,\cdots),(a_1,a_3,a_5,\cdots))\]which breaks each sequence $x\in I$ into a pair of sequences in $I^2$ simply by alternating between even- and odd-indexed entries in the sequence.
+	
+	Conversely, we define $\psi:I^2\to I$ by putting
+	\[\psi((a_0,a_1,a_2,\cdots),(b_0,b_1,b_2,\cdots))=(a_0,b_0,a_1,b_1,\cdots)\]which creates a new sequence in $I$ from a pair of sequences in $I^2$ by alternating between them.
+	
+	Finally, let's show that $\phi=\psi^{-1}$:
+	
+	\begin{align*}
+		\psi(\phi(a_0,a_1,a_2,\cdots))&=\psi((a_0,a_2,a_4,\cdots),(a_1,a_3,a_5,\cdots))=(a_0,a_1,a_2,\cdots)
+	\end{align*}
+	
+	\begin{align*}
+		\phi(\psi((a_0,a_1,a_2,\cdots),(b_0,b_1,b_2,\cdots)))&=\phi(a_0,b_0,a_1,b_1,\cdots)=((a_0,a_1,a_2,\cdots),(b_0,b_1,b_2,\cdots))
+	\end{align*}
 \end{proof}
