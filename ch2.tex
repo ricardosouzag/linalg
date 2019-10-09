@@ -4423,5 +4423,19 @@ Returning, then, to our goal, we need to define a new object before we proceed a
 
 \begin{df}
 	Let $X,Y\leq \R^2$ be two subspaces such that $Y\subseteq X$. We define the \textbf{quotient set of $X$ over $Y$} to be the set $X/Y$ given by
-	\[X/Y:=\{[x]\in \R/Y\mid x\in X\}.\]
+	\[X/Y:=\{[x]\in \R^2/Y\mid x\in X\}.\]
 \end{df}
+
+With this, we can now prove the two remaining theorems:
+
+\begin{theorem}[Second Isomorphism Theorem]
+	Let $X,Y\leq \R^2$ be any two subspaces of $\R^2$. Then:
+	\[\frac{X+Y}{Y}\iso \frac{X}{X\cap Y}.\]
+\end{theorem}
+\begin{proof}
+	First, notice that since $Y\subseteq X+Y$, $X\cap Y\subseteq X$ and that both $X+Y$ and $X\cap Y$ are subspaces, it makes sense to define the two quotients in the statement of this theorem.
+	
+	Before trying to prove this result, then, let us explore these sets a bit more.
+	
+	For instance, take an element of $[v]\in\dfrac{X+Y}{Y}$. By definition, it is the equivalence class of the vector $v$ in the quotient set $\R^2/Y$, where $v\in X+Y$. So, if we take $[u]=[v]$ it means that $v-u\in Y$. But since $v\in X+Y$, we can write $v=\lambda_v x_v+\mu_v y_v$ for some $x_v\in X$, $y_v\in Y$ and $\lambda_v,\mu_v\in \R$. Similarly for $u$, we can write it as $u=\lambda_ux_u+\mu_uy_u$, with $x_u\in X$, $y_u\in Y$ and $\lambda_u,\mu_u\in \R$.
+\end{proof}
