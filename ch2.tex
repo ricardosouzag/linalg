@@ -4315,7 +4315,7 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 	
 	We will prove that $I$ is isomorphic the set of all non-negative real numbers. To do this, consider the map
 	\[f:I\to \R\]defined by
-	\[f(x)=\frac{1-x}{x}.\]Since $x\in I$ implies $0<x<1$, we have that $1-x$ is always positive and $x$ is always positive, so the ratio $\frac{1-x}{x}$ is also always positive. This shows that $\im f\subseteq \R_+$ - where $\R_+$ is the full subset of all positive real numbers.
+	\[f(x)=\frac{x}{1-x}.\]Since $x\in I$ implies $0<x<1$, we have that $1-x$ is always positive and $x$ is always positive, so the ratio $\frac{x}{1-x}$ is also always positive. This shows that $\im f\subseteq \R_+$ - where $\R_+$ is the full subset of all positive real numbers.
 	
 	Consider now the function
 	\[g:\R_+\to \R\]
@@ -4323,9 +4323,17 @@ Since we have covered all possible cases of subspaces, this finishes the proof.
 	
 	Now:
 	\begin{align*}
-		g(f(x))&=g\left(\frac{1-x}{x}\right)\\
-		&=\dfrac{\frac{1-x}{x}}{\frac{1-x}{x}+1}\\
-		&=\dfrac{\frac{1-x}{x}}{\frac{1-x}{x}+\frac{x}{x}}\\
-		&=\dfrac{\frac{1-x}{x}}{\frac{1}{x}}\\
-	\end{align*}
+		g(f(x))&=g\left(\frac{x}{1-x}\right)\\
+		&=\dfrac{\frac{x}{1-x}}{\frac{x}{1-x}+1}\\
+		&=\dfrac{\frac{x}{1-x}}{\frac{x}{1-x}+\frac{1-x}{1-x}}\\
+		&=\dfrac{\frac{x}{1-x}}{\frac{1}{1-x}}\\
+		&=\dfrac{x}{1}\dfrac{1-x}{1-x}=x
+	\end{align*}and
+	\begin{align*}
+		f(g(y))&=f\left(\frac{y}{y+1}\right)\\
+		&=\dfrac{\frac{y}{y+1}}{1-\frac{y}{y+1}}\\
+		&=\dfrac{\frac{y}{y+1}}{\frac{y+1}{y+1}-\frac{y}{y+1}}\\
+		&=\dfrac{\frac{y}{y+1}}{\frac{1}{y+1}}\\
+		&=\dfrac{y}{1}\dfrac{y+1}{y+1}=y
+	\end{align*}so $f\circ g=\id_{\R_+}$ and $g\circ f=\id_I$, so they are inverse and, therefore, an isomorphism.
 \end{proof}
