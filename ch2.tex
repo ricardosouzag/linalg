@@ -4449,6 +4449,14 @@ With this, we can now prove the two remaining theorems:
 	
 	Combining all of that, we see that $[x+y]=[x'+y']\in \dfrac{X+Y}{Y}$ if, and only if, $[x]=[x']\in \frac{X}{X\cap Y}$.
 	
+	But this tells us that $[x+0]=[x+y]$ for all $x\in X$, $y\in Y$ since, clearly, $x-x=0\in Y$.
+	
+	\bigskip
 	This gives us an obvious correspondence:
-	\[f:\frac{X+Y}{Y}\to\frac{X}{X\cap Y}\]sending each $[x+y]\in \dfrac{X+Y}{Y}$ to $[x]\in \dfrac{X}{X\cap Y}$.
+	\[f:\frac{X+Y}{Y}\to\frac{X}{X\cap Y}\]sending each $[x+0]\in \dfrac{X+Y}{Y}$ to $[x]\in \dfrac{X}{X\cap Y}$ and
+	\[g:\frac{X}{X\cap Y}\to \frac{X+Y}{Y}\]sending each $[x]\in\dfrac{X}{X\cap Y}$ to $[x+0]\in \dfrac{X+Y}{Y}$.
+	
+	These functions are trivially inverse to each other, and so they are isomorphisms.
+	
+	This ends the proof.
 \end{proof}
