@@ -4489,9 +4489,11 @@ In Euclidean Geometry, we say that a certain motion is \textit{rigid} if it pres
 \end{lemma}
 \begin{proof}
 	Let $T$ be a rigid motion. Then, by definition,
-	\[\norm{v}^2=\gen{v,v}=\gen{T(v),T(v)}=\norm{T(v)}^2\]so $\norm{v}=\norm{T(v)}$. Analogously:
+	\[\norm{v}^2=\gen{v,v}=\gen{T(v),T(v)}=\norm{T(v)}^2\]so $\norm{v}=\norm{T(v)}$.
 	
-	\[\cos\theta_{v,u}=\frac{\gen{v,u}}{\norm{v}\norm{u}}=\frac{\gen{T(v),T(u)}}{\norm{T(v)}\norm{T(u)}}=\cos\theta_{T(v),T(u)}\]where the second-to-last equation holds by what we've just proven. So if $T$ is a rigid motion it preserves lengths and angles.
+	Analogously:
+	
+	\[\cos\theta_{v,u}=\frac{\gen{v,u}}{\norm{v}\norm{u}}=\frac{\gen{T(v),T(u)}}{\norm{T(v)}\norm{T(u)}}=\cos\theta_{T(v),T(u)}\]where the second equation holds by what we've just proven. So if $T$ is a rigid motion it preserves lengths and angles.
 	
 	\bigskip
 	Conversely, let $T$ be a linear map preserving lengths and angles.
