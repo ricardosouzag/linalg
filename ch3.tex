@@ -40,41 +40,6 @@ The intuition here is also very similar as it was for $\R^2$: $0,v,u$ define a u
 \begin{prop}
 	The addition of vectors in $\R^3$ is associative, commutative, has identity element and inverses.
 \end{prop}
-\begin{proof}
-	Let $v,u,w\in \R^3$ be given by $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$. Then:
-	
-	\begin{itemize}
-		\item \begin{align*}
-			v+(u+w)&=(v_1,v_2,v_3)+((u_1,u_2,u_3)+(w_1,w_2,w_3))\\
-			&=(v_1,v_2,v_3)+(u_1+w_1,u_2+w_2,u_3+w_3)\\
-			&=(v_1+u_1+w_1,v_2+u_2+w_2,v_3+u_3+w_3)\\
-			&=(v_1+u_1,v_2+u_2+v_3+u_3)+(w_1,w_2,w_3)\\
-			&=((v_1,v_2,v_3)+(u_2,u_2,u_3))+(w_1,w_2,w_3)=(v+u)+w
-		\end{align*} so it is associative;
-		
-		\item \begin{align*}
-			v+u&=(v_1,v_2,v_3)+(u_1,u_2,u_3)\\
-			&=(v_1+u_1,v_2+u_2,v_3+u_3)\\
-			&=(u_1+v_1,u_2+v_2,u_3+v_3)\\
-			&=(u_1,u_2,u_3)+(v_1,v_2,v_3)=u+v
-		\end{align*}so it is commutative;
-		
-		\item  \begin{align*}
-			v+0&=(v_1,v_2,v_3)+(0,0,0)\\
-			&=(v_1+0,v_2+0,v_3+0)\\
-			&=(v_1,v_2,v_3)=v\\
-			&=(0+v_1,0+v_2,0+v_3)\\
-			&=(0,0,0)+(v_1,v_2,v_3)=0+v
-		\end{align*}so $0$ is the identity element;
-		
-		\item \begin{align*}
-			v+(-v)&=(v_1,v_2,v_3)+(-v_1,-v_2,-v_3)\\
-			&=(v_1-v_1,v_2-v_2,v_3-v_3)=0
-		\end{align*}so it has inverses.
-	\end{itemize}
-
-This ends the proof.
-\end{proof}
 
 \begin{df}
 	Let us define a few important subsets of $\R^3$:
@@ -116,4 +81,11 @@ This ends the proof.
 	Let $v',v''\in \R v$ - that is, $v'=\lambda' v$ and $v''=\lambda'' v$ for some $\lambda',\lambda''\in \R$. Then, for all $\lambda\in \R$:
 	\[v'+v''=(\lambda' v)+(\lambda ''v)=(\lambda'+\lambda'')v\in \R v\]
 	\[\lambda v'=\lambda(\lambda' v)=(\lambda \lambda')v\in \R v\]so $\R v$ is closed under addition and scalar multiplication.
+	
+	
+	Let $w,w'\in \R v+\R u$ - that is, $w=\lambda v+\mu u$ and $w'=\lambda' v+\mu' u$. Then, for all $\omega \in \R$:
+	\[w+w'=(\lambda v+\mu u)+(\lambda' v+\mu' u)=(\lambda+\lambda ')v+(\mu+\mu')u\in \R v+\R u\]
+	\[\omega w=\omega(\lambda v+\mu u)=(\omega \lambda)v+(\omega \mu)u\in \R v+\R u\]so $\R v+\R u$ is closed under addition and scalar multiplication.
+	
+	This ends the proof.
 \end{proof}
