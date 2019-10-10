@@ -93,6 +93,10 @@ This ends the proof.
 	\[\lambda v:=(\lambda v_1,\lambda v_2,\lambda v_3).\]
 \end{df}
 
+\begin{prop}
+	Scalar multiplication of vectors in $\R^3$ is associative, commutative, has identity element and is distributive over both real and vector addition.
+\end{prop}
+
 \begin{df}
 	Given any vectors $v,u\in\R^3$ we define:
 	\begin{itemize}
@@ -100,3 +104,16 @@ This ends the proof.
 		\item $\R v+\R u:=\{w\in \R^3\mid w=\lambda v+\mu u\mbox{ for some }\lambda,\mu\in \R\}$ the \textbf{plane through zero containing $v$ and $u$}. 
 	\end{itemize}
 \end{df}
+
+\begin{df}
+	A subset $X\subseteq\R^3$ is called a \textbf{subspace} if it is closed under addition and scalar multiplication.
+\end{df}
+
+\begin{prop}
+	Given any two vectors $v,u\in\R^3$, then both $\R v$ and $\R v+\R u$ are subspaces of $\R^3$.
+\end{prop}
+\begin{proof}
+	Let $v',v''\in \R v$ - that is, $v'=\lambda' v$ and $v''=\lambda'' v$ for some $\lambda',\lambda''\in \R$. Then, for all $\lambda\in \R$:
+	\[v'+v''=(\lambda' v)+(\lambda ''v)=(\lambda'+\lambda'')v\in \R v\]
+	\[\lambda v'=\lambda(\lambda' v)=(\lambda \lambda')v\in \R v\]so $\R v$ is closed under addition and scalar multiplication.
+\end{proof}
