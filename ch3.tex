@@ -152,3 +152,11 @@ This ends the proof.
 \begin{prop}
 	Let $f:\R^3\to\R^3$. Then $f$ is linear if, and only if, $$f(x,y,z)=(ax+by+cz,dx+ey+fz,gx+hy+iz)$$ for some $a,b,c,d,e,f,g,h,i\in\R$.
 \end{prop}
+
+\begin{lemma}
+	Let $f$ be a linear function in $\R^3$. Then $f$ is uniquely determined by how it acts on $(1,0,0)$, $(0,1,0)$ and $(0,0,1)$.
+\end{lemma}
+\begin{proof}
+	Since $f$ is linear, we have that for all $(x,y,z)\in\R^3$ the following equation holds:
+	\[f(x,y,z)=f((x,0,0)+(0,y,0)+(0,0,z))=f(x,0,0)+f(0,y,0)+f(0,0,z)=xf(1,0,0)+yf(0,1,0)+zf(0,0,1)\]
+\end{proof}
