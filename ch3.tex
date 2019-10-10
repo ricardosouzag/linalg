@@ -90,13 +90,41 @@ The intuition here is also very similar as it was for $\R^2$: $0,v,u$ define a u
 	This ends the proof.
 \end{proof}
 
-\begin{prop}
-	Given any three vectors $v,u,w\in \R^3$, we have that $\R v+w$ is a line parallel to $\R v$ containing $w$, and $\R v+\R u+w$ is a plane parallel to $\R v+\R u$ containing $w$.
-\end{prop}
+Now let's give some geometric definitions and interpret them with linear algebra:
+
+\begin{df}
+	Two lines are said to be
+	\begin{itemize}
+		\item \textbf{Parallel} if they lie in the same plane and don't meet;
+		\item \textbf{Skew} if they don't lie in the same plane and don't meet;
+		\item \textbf{Transversal} if they meet.
+	\end{itemize}
+
+Similarly, two planes are said to be \textbf{parallel} if they don't meet, and transversal if they meet.
+
+Finally, a line and a plane are said to be \textbf{parallel} if they don't meet.
+\end{df}
 
 \begin{prop}
-	content...
+Any line in $\R^3$ is of the form $\R v+u$ for some vectors $v,u\in \R^3$, and any plane in $\R^3$ is of the form $\R v+\R u+w$ for some vectors $v,u,w\in \R^3$.
 \end{prop}
+\begin{proof}
+	Let $r\subseteq \R^3$ be any line. Then $r\cap \mathds{YZ}$ is either empty, a single point or $r\subseteq \mathds{YZ}$.
+	
+	\begin{itemize}
+		\item If $r\cap\mathds{YZ}$ is a single point $u$, then the line $r'\subseteq\R^3$ which is parallel to $r$ through zero is such that $r=r'+u$.
+		
+		\item If $r\cap \mathds{YZ}$ is empty or $r\subseteq\mathds{YZ}$, we then check $r\cap \mathds{XY}$ which can be, again, either empty, a single point or $r\subseteq \mathds{XY}$.
+		
+		\begin{itemize}
+			\item If $r\cap \mathds{XY}$ is a single point, just do as we did above, taking a parallel through zero and adding this single point to it.
+			
+			\item If $r\cap\mathds{XY}$ is empty, then surely $r\cap\mathds{XZ}$ is non-empty and we can just iterate the construction above.
+			
+			\item If $r\subseteq\mathds{XY}$, then $r=\mathds{XY}\cap\mathds{YZ}=\mathds{Y}$ so it's already a line through zero.
+		\end{itemize}
+	\end{itemize}
+\end{proof}
 
 \newpage
 \subsection{Linear functions IN SPACE!}

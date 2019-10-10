@@ -35,4 +35,4 @@
 \contentsline {chapter}{\numberline {3}Spaaaaaace!}{185}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introduction}{185}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}A small step for mankind... Kinda}{186}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Linear functions IN SPACE!}{188}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.2}Linear functions IN SPACE!}{189}{subsection.3.1.2}
