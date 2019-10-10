@@ -124,6 +124,20 @@ Any line in $\R^3$ is of the form $\R v+u$ for some vectors $v,u\in \R^3$, and a
 			\item If $r\subseteq\mathds{XY}$, then $r=\mathds{XY}\cap\mathds{YZ}=\mathds{Y}$ so it's already a line through zero.
 		\end{itemize}
 	\end{itemize}
+
+Either way, we can always show that $r$ is parallel to a line through zero.
+
+\bigskip
+Let $\pi\subseteq\R^3$ be any plane. Then:
+\begin{itemize}
+	\item If $\pi\cap\mathds{YZ}$ is a line $s$, then we can take $\pi'$ the plane parallel to $\pi$ through zero, and $v=s\cap \mathds{Y}$ Then clearly $\pi=\pi'+v$.
+	
+	\item If $\pi\cap\mathds{YZ}=\varnothing$, then surely $\pi\cap \mathds{X}\neq\varnothing$ and since $\pi\parallel\mathds{YZ}$, we can take $v=\mathds{X}\cap r$ and see that $\pi=\mathds{YX}+v$. 
+\end{itemize}
+
+Once again, we see that no matter what, $\pi$ is always parallel to a plane through zero.
+
+This ends the proof.
 \end{proof}
 
 \newpage
