@@ -132,7 +132,7 @@ Let $\pi\subseteq\R^3$ be any plane. Then:
 \begin{itemize}
 	\item If $\pi\cap\mathds{YZ}$ is a line $s$, then we can take $\pi'$ the plane parallel to $\pi$ through zero, and $v=s\cap \mathds{Y}$ Then clearly $\pi=\pi'+v$.
 	
-	\item If $\pi\cap\mathds{YZ}=\varnothing$, then surely $\pi\cap \mathds{X}\neq\varnothing$ and since $\pi\parallel\mathds{YZ}$, we can take $v=\mathds{X}\cap r$ and see that $\pi=\mathds{YX}+v$. 
+	\item If $\pi\cap\mathds{YZ}=\varnothing$, then surely $\pi\cap \mathds{X}\neq\varnothing$ (since $\mathds{X}\perp\mathds{YZ}$), and since $\pi\parallel\mathds{YZ}$, we can take $v=\mathds{X}\cap r$ and see that $\pi=\mathds{YX}+v$. 
 \end{itemize}
 
 Once again, we see that no matter what, $\pi$ is always parallel to a plane through zero.
@@ -145,4 +145,6 @@ This ends the proof.
 
 \begin{df}
 	Let $f:\R^3\to \R^3$ be a function. We'll say that $f$ is a \textbf{linear function} if $f(v+u)=f(v)+f(u)$ and $f(\lambda v)=\lambda f(v)$ for all $v,u\in \R^3$ and $\lambda\in \R$.
+	
+	We'll denote the set of all linear functions in $\R^3$ by $\hom_\R(\R^3,\R^3)$.
 \end{df}
