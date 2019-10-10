@@ -34,3 +34,44 @@ And we can, as before, define:
 	Given two vectors $v=(v_1,v_2,v_3),u=(u_1,u_2,u_3)\in \R^3$ we define their \textbf{sum} $v+u$ to be the unique vector given by
 	\[v+u:=(v_1+u_1,v_2+u_2,v_3+u_3).\]
 \end{df}
+
+The intuition here is also very similar as it was for $\R^2$: $0,v,u$ define a unique triangle in the space and, by axiom, there's a unique plane containing this triangle. Therefore, $v+u$ is the parallelogram which is contained in that plane and has $0v$ and $0u$ as its sides.
+
+\begin{prop}
+	The addition of vectors in $\R^3$ is associative, commutative, has identity element and inverses.
+\end{prop}
+\begin{proof}
+	Let $v,u,w\in \R^3$ be given by $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$. Then:
+	
+	\begin{itemize}
+		\item \begin{align*}
+			v+(u+w)&=(v_1,v_2,v_3)+((u_1,u_2,u_3)+(w_1,w_2,w_3))\\
+			&=(v_1,v_2,v_3)+(u_1+w_1,u_2+w_2,u_3+w_3)\\
+			&=(v_1+u_1+w_1,v_2+u_2+w_2,v_3+u_3+w_3)\\
+			&=(v_1+u_1,v_2+u_2+v_3+u_3)+(w_1,w_2,w_3)\\
+			&=((v_1,v_2,v_3)+(u_2,u_2,u_3))+(w_1,w_2,w_3)=(v+u)+w
+		\end{align*} so it is associative;
+		
+		\item \begin{align*}
+			v+u&=(v_1,v_2,v_3)+(u_1,u_2,u_3)\\
+			&=(v_1+u_1,v_2+u_2,v_3+u_3)\\
+			&=(u_1+v_1,u_2+v_2,u_3+v_3)\\
+			&=(u_1,u_2,u_3)+(v_1,v_2,v_3)=u+v
+		\end{align*}so it is commutative;
+		
+		\item  \begin{align*}
+			v+0&=(v_1,v_2,v_3)+(0,0,0)\\
+			&=(v_1+0,v_2+0,v_3+0)\\
+			&=(v_1,v_2,v_3)=v\\
+			&=(0+v_1,0+v_2,0+v_3)\\
+			&=(0,0,0)+(v_1,v_2,v_3)=0+v
+		\end{align*}so $0$ is the identity element;
+		
+		\item \begin{align*}
+			v+(-v)&=(v_1,v_2,v_3)+(-v_1,-v_2,-v_3)\\
+			&=(v_1-v_1,v_2-v_2,v_3-v_3)=0
+		\end{align*}so it has inverses.
+	\end{itemize}
+
+This ends the proof.
+\end{proof}
