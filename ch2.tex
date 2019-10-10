@@ -4470,3 +4470,20 @@ With this, we can now prove the two remaining theorems:
 	
 	This shows that $[x]\in X/Y$ implies $[x]\in \R^2/Y$ and ends the proof.
 \end{proof}
+
+This is actually not the full statements of these theorems, but we don't have the tools to actually work with their full statements at this point in time.
+
+\newpage
+\subsection{Solid Moves}
+
+As a final subsection for this chapter, let's talk about rigid movements in the plane.
+
+In Euclidean Geometry, we say that a certain motion is \textit{rigid} if it preserves lengths and angles (and therefore areas). We can however give a better definition for our context:
+
+\begin{df}
+	Let $T:\R^2\to\R^2$ be a linear map. We say that $T$ is a \textbf{rigid motion in $\R^2$} if for any two vectors $v,u\in \R^2$ we have that $\gen{v,u}=\gen{T(v),T(u)}$.
+\end{df}
+
+\begin{lemma}
+	A linear map $T:\R^2\to\R^2$ is a rigid motion if, and only if, for every $v,u\in \R^2$ we have that $\norm{v}=\norm{T(v)}$ and $\cos \theta_{v,u}=\cos\theta_{T(v),T(u)}$.
+\end{lemma}
