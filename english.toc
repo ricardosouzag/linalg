@@ -32,4 +32,6 @@
 \contentsline {subsection}{\numberline {2.4.1}The sight of linear algebra fills you with DETERMINATION}{159}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}The smell of linear functions fills you with DETERMINATION}{167}{subsection.2.4.2}
 \contentsline {subsection}{\numberline {2.4.3}Our First Named Theorem}{173}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Solid Moves}{185}{subsection.2.4.4}
+\contentsline {chapter}{\numberline {3}Spaaaaaace!}{185}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{185}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}A small step for mankind... Kinda}{186}{subsection.3.1.1}

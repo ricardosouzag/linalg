@@ -4472,35 +4472,44 @@ With this, we can now prove the two remaining theorems:
 \end{proof}
 
 This is actually not the full statements of these theorems, but we don't have the tools to actually work with their full statements at this point in time.
-
-\newpage
-\subsection{Solid Moves}
-
-As a final subsection for this chapter, let's talk about rigid movements in the plane.
-
-In Euclidean Geometry, we say that a certain motion is \textit{rigid} if it preserves lengths and angles (and therefore areas). We can however give a better definition for our context:
-
-\begin{df}
-	Let $T:\R^2\to\R^2$ be a linear map. We say that $T$ is a \textbf{rigid motion in $\R^2$} if for any two vectors $v,u\in \R^2$ we have that $\gen{v,u}=\gen{T(v),T(u)}$.
-\end{df}
-
-\begin{lemma}
-	A linear map $T:\R^2\to\R^2$ is a rigid motion if, and only if, for every $v,u\in \R^2$ we have that $\norm{v}=\norm{T(v)}$ and $\cos \theta_{v,u}=\cos\theta_{T(v),T(u)}$.
-\end{lemma}
-\begin{proof}
-	Let $T$ be a rigid motion. Then, by definition,
-	\[\norm{v}^2=\gen{v,v}=\gen{T(v),T(v)}=\norm{T(v)}^2\]so $\norm{v}=\norm{T(v)}$.
-	
-	Analogously:
-	
-	\[\cos\theta_{v,u}=\frac{\gen{v,u}}{\norm{v}\norm{u}}=\frac{\gen{T(v),T(u)}}{\norm{T(v)}\norm{T(u)}}=\cos\theta_{T(v),T(u)}\]where the second equation holds by what we've just proven.
-	
-	So if $T$ is a rigid motion it preserves lengths and angles.
-	
-	\bigskip
-	Conversely, let $T$ be a linear map preserving lengths and angles. Then:
-	
-	\[\gen{T(v),T(u)}=\cos\theta_{T(v),T(u)}\norm{T(v)}\norm{T(u)}=\cos\theta_{v,u}\norm{v}\norm{u}=\gen{v,u}\]so it is a rigid motion.
-	
-	This ends the proof.
-\end{proof}
+%
+%\newpage
+%\subsection{Solid Moves}
+%
+%As a final subsection for this chapter, let's talk about rigid movements in the plane.
+%
+%In Euclidean Geometry, we say that a certain motion is \textit{rigid} if it preserves lengths and angles (and therefore areas). We can however give a better definition for our context:
+%
+%\begin{df}
+%	Let $T:\R^2\to\R^2$ be a function. We say that $T$ is a \textbf{rigid motion in $\R^2$} if for any two vectors $v,u\in \R^2$ we have that $\gen{v,u}=\gen{T(v),T(u)}$.
+%\end{df}
+%
+%\begin{lemma}
+%	A function $T:\R^2\to\R^2$ is a rigid motion if, and only if, for every $v,u\in \R^2$ we have that $\norm{v}=\norm{T(v)}$ and $\cos \theta_{v,u}=\cos\theta_{T(v),T(u)}$.
+%\end{lemma}
+%\begin{proof}
+%	Let $T$ be a rigid motion. Then, by definition,
+%	\[\norm{v}^2=\gen{v,v}=\gen{T(v),T(v)}=\norm{T(v)}^2\]so $\norm{v}=\norm{T(v)}$.
+%	
+%	Analogously:
+%	
+%	\[\cos\theta_{v,u}=\frac{\gen{v,u}}{\norm{v}\norm{u}}=\frac{\gen{T(v),T(u)}}{\norm{T(v)}\norm{T(u)}}=\cos\theta_{T(v),T(u)}\]where the second equation holds by what we've just proven.
+%	
+%	So if $T$ is a rigid motion it preserves lengths and angles.
+%	
+%	\bigskip
+%	Conversely, let $T$ be a function preserving lengths and angles. Then:
+%	
+%	\[\gen{T(v),T(u)}=\cos\theta_{T(v),T(u)}\norm{T(v)}\norm{T(u)}=\cos\theta_{v,u}\norm{v}\norm{u}=\gen{v,u}\]so it is a rigid motion.
+%	
+%	This ends the proof.
+%\end{proof}
+%
+%Let us now characterize all the rigid motions:
+%
+%\begin{prop}
+%	Let $v\in \R^2$ be any vector. Then the map $T_v:\R^2\to\R^2$ given by $T_v(u):=u+v$ is a rigid motion.
+%\end{prop}
+%\begin{proof}
+%	content...
+%\end{proof}
