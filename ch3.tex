@@ -197,6 +197,30 @@ This ends the proof.
 	
 	Conversely, any element of $X$ is, by definition, in the sum $\R v+X$ - for instance, any $x\in X$ can be seen as $0+x$, because, since $\R v$ is a subspace, $0\in \R v$. This shows that $X\subseteq \R v+X$ and ends the proof (because the argument for $Y$ is exactly the same).
 \end{proof}
+\begin{cor}
+	Let $X,Y\leq \R^3$ be any two subspaces of $\R^3$ such that $Y\subseteq X$. Then $X+Y=X$.
+\end{cor}
+\begin{proof}
+	Clearly, we already have $X\subseteq X+Y$ by definition of addition of subspaces.
+	
+	Take then any $x+y\in X+Y$. Since $Y\subseteq X$, we have that $y\in X$, and since $X$ is a subspace, we have that $x+y\in X$. So $X+Y\subseteq X$.
+	
+	This ends the proof.
+\end{proof}
+\begin{cor}
+	Let $X,Y,Z\leq \R^3$ be any three subspaces such that $Z\subseteq X$ or $Z\subseteq X$. Then $X+Y+Z=X+Y$.
+\end{cor}
+\begin{proof}
+	Once again, by definition of subspace addition, we already have that $X+Y\subseteq X+Y+Z$.
+	
+	Take $x+y+z\in X+Y+Z$. Then, since both or either of $Z\subseteq X$ and $Z\subseteq Y$ holds, we see that $z\in X$ or $z\in Y$.
+	
+	In the first case, we now use the fact that $X$ is a subspace, so $x+z\in X$ and therefore $x+y+z=(x+z)+y\in X+Y$, which shows that $X+Y+Z\subseteq X+Y$.
+	
+	In the second case, we use the fact that $Y$ is a subspace, so $y+z\in Y$ and therefore $x+y+z=x+(y+z)\in X+Y$, which shows that $X+Y+Z\subseteq X+Y$.
+	
+	Either way, the result holds and this finishes the proof.
+\end{proof}
 
 \begin{prop}
 	Let $v,u\in \R^3$ be any two non-null vectors. Then for any non-null $w\in\R v$ we have that $\R v=\R w$ and for any non-null $t\in \R v+\R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
