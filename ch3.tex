@@ -183,7 +183,7 @@ This ends the proof.
 \subsection{SubSPACE!!! emissary}
 
 \begin{prop}
-	Let $v,u\in \R^3$ be any two vectors. Then for any $w\in\R v$ we have that $\R v=\R w$ and for any $t\in \R v+\R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
+	Let $v,u\in \R^3$ be any two non-null vectors. Then for any non-null $w\in\R v$ we have that $\R v=\R w$ and for any non-null $t\in \R v+\R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
 \end{prop}
 \begin{proof}
 	If $w\in \R v$, then $w=\lambda v$ for some $\lambda\in \R$. Take then any other $w'\in \R v$. Once again, this means that $w'=\lambda' v$ for some $\lambda'\in \R$. But now, clearly we have
@@ -195,12 +195,14 @@ This ends the proof.
 	Therefore $\R v=\R w$.
 	
 	\bigskip
-	To prove the second statement, we proceed analogously: Take $t\in \R v+\R u$. This means that $t=\tau_1 v+\tau_2 u$ for some $\tau_1,\tau_2\in \R$.
+	To prove the second statement, we proceed analogously: Take $t\in \R v+\R u$. This means that $t=\tau_1 v+\tau_2 u$ for some $\tau_1,\tau_2\in \R$. Notice that at least one of $\tau_1,\tau_2$ must be non-zero, because otherwise $t=0$.
 	
-	Given any $t'\in \R v+\R u$, once again we can write it as $t'=\tau'_1 v+\tau_2' u$, so
+	Given any $t'\in \R v+\R u$, once again we can write it as $t'=\tau'_1 v+\tau_2' u$.
+	
+	If $\tau_1\neq0$, we can then do
 	\begin{align*}
 		t'&=\tau'_1 v+\tau_2' u\\
-		&=\tau'_1\frac{\tau_1}{\tau 1}v+\tau_2'\frac{\tau_2}{\tau_2}u\\
-		&=\frac{\tau_1'}{\tau_1}\tau_1v+\frac{\tau'_2}{\tau_2}\tau_2u
+		&=\tau'_1\frac{\tau_1}{\tau_1}v+\tau_2'\frac{\tau_1}{\tau_1}u\\
+		&=\frac{\tau_1'}{\tau_1}\tau_1v+\frac{\tau'_2}{\tau_1}\tau_1u.
 	\end{align*}
 \end{proof}
