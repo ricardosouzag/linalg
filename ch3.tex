@@ -234,6 +234,7 @@ This ends the proof.
 	Take $x\in X$ and $w\in Y\cap Z$. Then, by definition, $x+w\in X+(Y\cap Z)$. Since $Y$ is a subspace and $w\in Y$, $x+w\in X+Y$. Similarly, since $Z$ is a subspace and $w\in Z$, $x+w\in X+Z$. Therefore, $x+w\in (X+Y)\cap(X+Z)$, so 
 	\[X+(Y\cap Z)\subseteq (X+Y)\cap(X+Z).\]
 	
+	\bigskip
 	Conversely, take $v\in(X+Y)\cap(X+Z)$. However, $X\subseteq X+Y$ and $X\subseteq X+Z$ together imply, by definition of intersection, that $(X+Y)\cap(X+Z)\subseteq X$ - so $v\in X$. Finally, since $X\subseteq X+(Y\cap Z)$, this shows that $v\in X+(Y\cap Z)$, so
 	\[X+(Y\cap Z)=(X+Y)\cap(X+Z).\]
 	
@@ -246,7 +247,15 @@ This ends the proof.
 	
 	This shows $X\cap(Y+Z)\subseteq (X\cap Y)+(X\cap Z)$.
 	
+	\bigskip
 	Conversely, any element of $(X\cap Y)+(X\cap Z)$ is of the form $v+u$ where $v\in X\cap Y$ and $u\in X\cap Z$. Notice, however, that both $v$ and $u$ lie, in particular, in $X$ - and since $X$ is a subspace, $v+u\in X$.
+	
+	On the other hand, since $v\in X\cap Y$ and $u\in X\cap Z$, in particular we have $v\in Y$ and $u\in Z$, so $v+u\in Y+Z$.
+	
+	Since $v+u\in X$ and $v+u\in Y+Z$ we can conclude that $v+u\in X\cap(Y+Z)$ and so
+	\[(X\cap Y)+(X\cap Z)\subseteq X\cap(Y+Z).\]
+	
+	This shows that $X\cap(Y+Z)=(X\cap Y)+(X\cap Z)$ and ends the proof.
 \end{proof}
 
 \begin{prop}
