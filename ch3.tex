@@ -367,7 +367,20 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	Let $\pi,\sigma\subseteq\R^3$ be any two distinct planes through zero. Then $\pi+\sigma=\R^3$.
 \end{prop}
 \begin{proof}
-	Let $\pi=\R p_1\R p_2$ and $\sigma=\R s_1+\R s_2$ for some vectors $p_1,p_2,s_1,s_2\in \R^3$. Notice that (at least) one of
-	\[p_1\parallel s_1\quad\quad p_1\parallel s_2\]
-	\[p_2\parallel s_1\quad\quad p_2\parallel s_2\]must not hold - otherwise, the planes would be equal.
+	Let $\pi=\R v\R u$ and $\sigma=\R w+\R z$ for some vectors $v,u,w,z\in \R^3$.
+	
+	We will show that $\pi+\sigma$ contains $\mb{XY+YZ}$. This suffices, by the preceding lemma.
+	
+	Let $v=(v_1,v_2,v_3), u=(u_1,u_2,u_3), w=(w_1,w_2,w_3)$ and $z=(z_1,z_2,z_3)$. Now we define
+	\[\omega_1=\frac{w_3}{v_3},\quad\quad\zeta_1=\frac{z_1}{u_1}.\]Then:
+	\begin{align*}
+		\omega_1w&=\omega_1(w_1,w_2,w_3)\\
+		&=(\omega_1w_1,\omega_1w_2,v_3)
+	\end{align*}so
+	\[v-\omega_1w=(v_1-\omega_1w_1,v_2-\omega_1w_2,0)\in\mb{XY}\]and similarly,
+	\begin{align*}
+		\zeta_1z&=\zeta_1(z_1,z_2,z_3)\\
+		&=(u_1,\zeta_1z_2,\zeta_1z_3)
+	\end{align*}so
+	\[u-\zeta_1z=(0,\zeta_1z_2,\zeta_1z_3)\in\mb{YZ}.\]
 \end{proof}
