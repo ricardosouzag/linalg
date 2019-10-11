@@ -182,6 +182,22 @@ This ends the proof.
 \newpage
 \subsection{SubSPACE!!! emissary}
 
+\begin{lemma}
+	Let $X,Y\leq \R^3$ be any two subspaces, and take $v\in X\cap Y$. Then not only do we have $\R v\subseteq X\cap Y$, but also $X+\R v=X$ and $Y+\R v=Y$.
+\end{lemma}
+\begin{proof}
+	Let $v\in X\cap Y$ and take $u\in \R v$ - that is, $u=\lambda v$ for some $\lambda\in R$.
+	
+	Since $v\in X$ and $X$ is a subspace, $\mu v\in X$ for all $\mu\in \R$ - in particular, $u=\lambda v\in X$. Similarly for $Y$, since $v\in Y$ and $Y$ is a subspace, $\mu v\in Y$ for all $\mu\in \R$ and so $u=\lambda v\in Y$.
+	
+	But this tells us that $u\in X\cap Y$, by definition of set intersection. This shows that any vector of $\R v$ is in $X\cap Y$ - so $\R v\subseteq X\cap Y$.
+	
+	\bigskip
+	To show the second statement, it suffices to realize that, by the previous statement, every element of $\R v$ already lies in $X$ and that $X$ is a subspace. So taking $u\in \R v$ and $x\in X$, we see that $x+u\in X$, so $X+\R v\subseteq X$.
+	
+	Conversely, any element of $X$ is, by definition, in the sum $\R v+X$ - for instance, any $x\in X$ can be seen as $0+x$, because, since $\R v$ is a subspace, $0\in \R v$. This shows that $X\subseteq \R v+X$ and ends the proof (because the argument for $Y$ is exactly the same).
+\end{proof}
+
 \begin{prop}
 	Let $v,u\in \R^3$ be any two non-null vectors. Then for any non-null $w\in\R v$ we have that $\R v=\R w$ and for any non-null $t\in \R v+\R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
 \end{prop}
@@ -215,6 +231,8 @@ This ends the proof.
 	&=\tau'_1v+\frac{\tau_2'}{\tau_2}\tau_2u\\
 	&=\tau'_1v+\frac{\tau_2'}{\tau_2}(t-\tau_1v)\\
 	&=\tau_1'v+\frac{\tau_2'}{\tau_2}t-\frac{\tau_2'}{\tau_2}\tau_1v\\
-	&=
-	\end{align*}and we see that $t'\in \R t+\R u$.
+	&=\left(\tau_1'-\frac{\tau_2'}{\tau_2}\tau_1\right)v+\frac{\tau_2'}{\tau_2}
+	\end{align*}and we see that $t'\in \R v+\R t$.
+	
+	So clearly, $t'\in \R v+\R u$ implies $t'\in \R t+\R u$ or $t'\in \R v+\R t$ - in other words, $\R v+\R u\subseteq (\R t+\R u)+(\R v+\R t)$.
 \end{proof}
