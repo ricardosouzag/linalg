@@ -183,7 +183,7 @@ This ends the proof.
 \subsection{SubSPACE!!! emissary}
 
 \begin{lemma}
-	Let $X,Y\leq \R^3$ be any two subspaces, and take $v\in X\cap Y$. Then not only do we have $\R v\subseteq X\cap Y$, but also $X+\R v=X$ and $Y+\R v=Y$.
+	Let $X,Y\leq \R^3$ be any two subspaces, and take $v\in X\cap Y$ and $t\in X+Y$. Then not only do we have $\R v\subseteq X\cap Y$ and $\R t\subseteq X+Y$, but also $X+\R v=X$ and $Y+\R v=Y$.
 \end{lemma}
 \begin{proof}
 	Let $v\in X\cap Y$ and take $u\in \R v$ - that is, $u=\lambda v$ for some $\lambda\in R$.
@@ -191,6 +191,11 @@ This ends the proof.
 	Since $v\in X$ and $X$ is a subspace, $\mu v\in X$ for all $\mu\in \R$ - in particular, $u=\lambda v\in X$. Similarly for $Y$, since $v\in Y$ and $Y$ is a subspace, $\mu v\in Y$ for all $\mu\in \R$ and so $u=\lambda v\in Y$.
 	
 	But this tells us that $u\in X\cap Y$, by definition of set intersection. This shows that any vector of $\R v$ is in $X\cap Y$ - so $\R v\subseteq X\cap Y$.
+	
+	\bigskip
+	Similarly for $t$, since $t\in X+Y$, we can write $t=x+y$ for some $x\in X$ and $y\in Y$. Take then $t'\in \R t$ - that is, $t'=\tau t$ for some $\tau\in \R$.
+	
+	Now, this implies that $t'=\tau t=\tau(x+y)=\tau x+\tau y$ and since $X$ and $Y$ are subspaces, $\tau x\in X$ and $\tau y\in Y$ - so $\tau x+\tau y\in X+Y$. This shows $\R t\subseteq X+Y$.	
 	
 	\bigskip
 	To show the second statement, it suffices to realize that, by the previous statement, every element of $\R v$ already lies in $X$ and that $X$ is a subspace. So taking $u\in \R v$ and $x\in X$, we see that $x+u\in X$, so $X+\R v\subseteq X$.
@@ -208,7 +213,7 @@ This ends the proof.
 	This ends the proof.
 \end{proof}
 \begin{cor}
-	Let $X,Y,Z\leq \R^3$ be any three subspaces such that $Z\subseteq X$ or $Z\subseteq X$. Then $X+Y+Z=X+Y$.
+	Let $X,Y,Z\leq \R^3$ be any three subspaces such that both or either of $Z\subseteq X$ and $Z\subseteq Y$ hold. Then $X+Y+Z=X+Y$.
 \end{cor}
 \begin{proof}
 	Once again, by definition of subspace addition, we already have that $X+Y\subseteq X+Y+Z$.
@@ -258,5 +263,7 @@ This ends the proof.
 	&=\left(\tau_1'-\frac{\tau_2'}{\tau_2}\tau_1\right)v+\frac{\tau_2'}{\tau_2}
 	\end{align*}and we see that $t'\in \R v+\R t$.
 	
-	So clearly, $t'\in \R v+\R u$ implies $t'\in \R t+\R u$ or $t'\in \R v+\R t$ - in other words, $\R v+\R u\subseteq (\R t+\R u)+(\R v+\R t)$.
+	So clearly, $t'\in \R v+\R u$ implies $t'\in \R t+\R u$ or $t'\in \R v+\R t$ - in other words, $\R v+\R u\subseteq (\R t+\R u)+(\R v+\R t)$. 
+	
+	But $\R t\subseteq \R v+\R u$.
 \end{proof}
