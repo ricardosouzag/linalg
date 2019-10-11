@@ -315,8 +315,17 @@ This ends the proof.
 \end{df}
 
 \begin{lemma}
+	The following equation holds in $\R^3$:
 	\[\mb{X+Y+Z}=\R^3=\mb{XY+YZ+ZX}.\]
 \end{lemma}
 \begin{proof}
-	content...
+	The first equation is trivial: $\mb X=\R e_1$, $\mb Y=\R e_2$ and $\mb Z=\R e_3$, by definition, and we know that $E=\{e_1,e_2,e_3\}$ is a base. This means that any vector $v\in \R^3$ can be written with uniquely determined scalars $v_1,v_2,v_3\in\R$ as
+	\[v=v_1e_1+v_2e_2+v_3e_3\]this tells us that $v\in \mb{X+Y+Z}$, and so $\R^3\subseteq \mb{X+Y+Z}$.
+	
+	Conversely, we have that $\mb{X+Y+Z}\subseteq \R^3$ simply by the fact that every element of $\mb{X+Y+Z}$ is, by definition, a sum of vectors, all of which lie in $\R^3$ - and hence so does their sum.
+	
+	\bigskip
+	By the same reasoning as above, we clearly have $\mb{XY+YZ+ZX}\subseteq \R^3$ simply because every element of $\mb{XY+YZ+ZX}$ is a vector in $\R^3$.
+	
+	Let us then prove that $\R^3\subseteq \mb{XY+YZ+ZX}$.
 \end{proof}
