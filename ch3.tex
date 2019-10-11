@@ -263,5 +263,12 @@ This ends the proof.
 	&=\left(\tau_1'-\frac{\tau_2'}{\tau_2}\tau_1\right)v+\frac{\tau_2'}{\tau_2}
 	\end{align*}and we see that $t'\in \R v+\R t$.
 	
-	So clearly, $t'\in \R v+\R u$ implies $t'\in \R t+\R u$ or $t'\in \R v+\R t$.
+	So clearly, $t'\in \R v+\R u$ implies either of both of $t'\in \R t+\R u$ and $t'\in \R v+\R t$.
+	
+	\bigskip
+	On the other hand, take $x\in \R t+\R u$. This means that $x=\tau t+\mu u$ for some $\tau,\mu\in \R$. But then, since $t=\tau_1v+\tau_2u$, this tells us that
+	\[x=\tau t+\mu u=\tau(\tau_1v+\tau_2u)+\mu u=(\tau\tau_1)v+(\tau\tau_2+\mu)u\]so $x\in \R v+\R u$ which shows that $\R t+\R u\subseteq \R v+\R u$.
+	
+	Similarly, for all $y\in \R v+\R t$ we can write it as $y=\lambda v+\tau t$ for some $\lambda,\tau\in \R$, so
+	\[y=\lambda v+\tau t=\lambda v+\tau(\tau_1v+\tau_2u)=(\lambda+\tau\tau_1)v+(\tau\tau_2)u\]and we see $y\in \R v+\R u$, which implies $\R v+\R t\subseteq \R v+\R u$.
 \end{proof}
