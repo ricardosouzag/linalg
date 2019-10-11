@@ -315,6 +315,23 @@ This ends the proof.
 \end{df}
 
 \begin{lemma}
+	The planes $\mb{XY}$, $\mb{YZ}$ and $\mb{ZX}$ are just the sums $\mb{X+Y}$, $\mb{Y+Z}$ and $\mb{Z+X}$, respectively.
+\end{lemma}
+\begin{proof}
+	We'll show that $\mb{XY=X+Y}$. The other are analogous and will be left as an exercise to the reader.
+	
+	By definition, $\mb{XY}=\R\times \R\times \{0\}$. This means that $v\in \mb{XY}$ if, and only if, $v=(x,y,0)$ for some $x,y\in \R$.
+	
+	Clearly, then, for all $v\in \mb{XY}$ we can write it as $v=xe_1+ye_2+0e_3=xe_1+y_2$ which shows that $v\in \mb{X+Y}$ - and so $\mb{XY\subseteq X+Y}$.
+	
+	\bigskip
+	Conversely, given any $u\in \mb{X+Y}$ there exists some $x\in \mb X$ and $y\in \mb Y$ such that $u=x+y$. But since $\mb X=\R e_1$, we see that $x=x'e_1$ and since $\mb Y=\Re_2$ we see that $y=y'e_2$, for some $x',y'\in \R$. This tells us that
+	\[u=x+y=x'e_1+y'e_2=x'e_1+y'e_2+0e_3=(x',y',0)\]and so $u\in \mb{XY}$.
+	
+	This shows us that $\mb{XY}\subseteq \mb{X+Y}$, and ends the proof.
+\end{proof}
+
+\begin{lemma}
 	The following equation holds in $\R^3$:
 	\[\mb{X+Y+Z}=\R^3=\mb{XY+YZ+ZX}.\]
 \end{lemma}
