@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  11 OCT 2019 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  11 OCT 2019 16:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1213,20 +1213,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 283.
  (./english.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 283.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 283.
-
-
-Package rerunfilecheck Warning: File `english.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `english.out':
-(rerunfilecheck)             Before: 200E6245379FFC6F0A1E414A059D3F1C;2953
-(rerunfilecheck)             After:  7A3796AE247DC8098C1920A8FDC0B3AF;2757.
+Package rerunfilecheck Info: File `english.out' has not changed.
+(rerunfilecheck)             Checksum: 7A3796AE247DC8098C1920A8FDC0B3AF;2757.
  ) 
 Here is how much of TeX's memory you used:
  36591 strings out of 492646
  866918 string characters out of 6133325
- 1042125 words of memory out of 5000000
+ 1043125 words of memory out of 5000000
  38771 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1247,7 +1240,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (196 pages, 873890 bytes).
+Output written on english.pdf (196 pages, 873321 bytes).
 PDF statistics:
  2252 PDF objects out of 2487 (max. 8388607)
  2015 compressed objects within 21 object streams
