@@ -227,6 +227,22 @@ This ends the proof.
 	Either way, the result holds and this finishes the proof.
 \end{proof}
 
+\begin{lemma}
+	Let $X,Y,Z\leq \R^3$. Then $X+(Y\cap Z)=(X+Y)\cap(X+Z)$ and $X\cap(Y+Z)=(X\cap Y)+(X\cap Z)$.
+\end{lemma}
+\begin{proof}
+	Take $x\in X$ and $w\in Y\cap Z$. Then, by definition, $x+w\in X+(Y\cap Z)$. Since $Y$ is a subspace and $w\in Y$, $x+w\in X+Y$. Similarly, since $Z$ is a subspace and $w\in Z$, $x+w\in X+Z$. Therefore, $x+w\in (X+Y)\cap(X+Z)$, so 
+	\[X+(Y\cap Z)\subseteq (X+Y)\cap(X+Z).\]
+	
+	Conversely, take $v\in(X+Y)\cap(X+Z)$. However, $X\subseteq X+Y$ and $X\subseteq X+Z$ implies, by definition of intersection, that $(X+Y)\cap(X+Z)\subseteq X$ - so $v\in X$. Finally, since $X\subseteq X+(Y\cap Z)$, this shows that $v\in X+(Y\cap Z)$, so
+	\[X+(Y\cap Z)=(X+Y)\cap(X+Z).\]
+	
+	\bigskip
+	The second statement is analogous:
+	
+	Take $v\in X\cap(Y+Z)$.
+\end{proof}
+
 \begin{prop}
 	Let $v,u\in \R^3$ be any two non-null vectors. Then for any non-null $w\in\R v$ we have that $\R v=\R w$ and for any non-null $t\in \R v+\R u$ such that $t\notin \R v$ and $t\notin \R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
 \end{prop}
