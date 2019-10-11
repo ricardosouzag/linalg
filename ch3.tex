@@ -181,3 +181,19 @@ This ends the proof.
 
 \newpage
 \subsection{SubSPACE!!! emissary}
+
+\begin{prop}
+	Let $v,u\in \R^3$ be any two vectors. Then for any $w\in\R v$ we have that $\R v=\R w$ and for any $t\in \R v+\R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
+\end{prop}
+\begin{proof}
+	If $w\in \R v$, then $w=\lambda v$ for some $\lambda\in \R$. Take then any other $w'\in \R v$. Once again, this means that $w'=\lambda' v$ for some $\lambda'\in \R$. But now, clearly we have
+	\[w'=\lambda'v=\lambda'\frac{\lambda}{\lambda}v=\frac{\lambda'}{\lambda}\lambda v=\frac{\lambda'}{\lambda}w\]so $w'\in \R w$ and $\R v\subseteq \R w$.
+	
+	Conversely, every $w'\in \R w$ is of the form $w'=\omega w$ for some $\omega\in \R$, but since $w=\lambda v$, we have that
+	\[w'=\omega w=\omega \lambda v\]so $w'\in \R v$ and $\R w\subseteq \R v$.
+	
+	Therefore $\R v=\R w$.
+	
+	\bigskip
+	
+\end{proof}
