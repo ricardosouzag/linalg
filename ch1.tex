@@ -62,7 +62,7 @@ There is, however, a solution to this. We have a set of axioms for set theory ca
 Just know that if you ever see ZFC anywhere you can rest safe because you're working with a (relatively) safe set of axioms.
 \pagebreak
 \section{Basic results and properties of sets}
-\subsection{Equality always}
+\subsection{Set equality}
 
 As we have previously stated, a \textit{set} is a collection of objects. We will usually denote a set by a capital letter (not always), such as $X$, $A$ or $B$.
 
@@ -289,7 +289,7 @@ Finally, we can use all that we've done so far to construct a very special set -
 	But if we assume that $A\subseteq\varnothing$, we can now use the first statement of this proof, which proves that $\varnothing\subseteq A$, to conclude, by definition of set equality, that $A=\varnothing$, and this finishes the proof.
 \end{proof}
 \pagebreak
-\subsection{United we stand, intersected we... Fall?}
+\subsection{Unions and intersections}
 
 Now that we have a basic understanding of sets and subsets, we're going to build new sets from existing ones.
 
@@ -541,8 +541,8 @@ To really wrap up this section, then, we're gonna make a list of properties for 
 	In the preceding proposition, as well as in maths as a whole, we usually save the parenthesis to mean ``this should be done first''. For instance, $A\cup(B\cup C)$ means ``the union of $A$ and the union of $B$ and $C$", whereas $(A\cup B)\cup C$ means ``the union of the union of $A$ and $B$ and $C$".
 \end{rmk}
 \newpage
-\section{Time to do some actual set theory, none of this introductory bullshit}
-\subsection{How does this function}
+\section{About functions, relations and cardinality}
+\subsection{Functions}
 
 Understanding functions is, basically, the most important thing in all of mathematics - and that's not an overstatement. Even if you forego set theory, the concept of a function still makes sense and it's still at the center of any mathematical discussion.
 
@@ -782,7 +782,7 @@ To expand in that idea - that bijections are the new equality - we're gonna star
 
 The reader is encouraged to \textbf{not} skip this section, although I don't own you, so you do you. This subsection will have many proofs, so it's good for practicing your proofs, but not only that - the reasoning employed here is central to understanding what's behind many of the most intricate results in linear algebra.
 \newpage
-\subsection{Bijection is the new equality}
+\subsection{Bijection as an equality}
 
 \begin{df}
 	Given any two functions $f:A\to B$ and $g:B\to C$, we call the function $g\circ f:A\to C$ defined by $(g\circ f)(a):=g(f(a))$ the \textbf{composition} of $f$ and $g$.
@@ -1016,7 +1016,7 @@ And finally we end this section with a definition.
 	Notice that for finite sets, $\#A$ is precisely the formalization of the intuitive notion of ``number of elements of $A$''.
 \end{rmk}
 \newpage
-\subsection{The {\(A\)} and {\(\Omega\)} of sets}
+\subsection{Universal properties}
 
 Now that we have dealt with functions and their properties, we can use them to define new sets.
 
@@ -1902,7 +1902,7 @@ This ends the proof.
 \end{cor}
 
 \newpage
-\subsection{Relations are hard, sometimes they leave you broken up inside}
+\subsection{Relations, order and quotients}
 
 The next sections should be way less technical, so that's a plus.
 
@@ -2331,7 +2331,7 @@ Since $\leq$ is reflexive, antisymmetric and transitive, it is an order, by defi
 We can finally proceed to the final section.
 
 \newpage
-\subsection{Second order thinking}
+\subsection{About sets of functions}
 
 Now, to finish up our brief talk on set theory, we're gonna talk about sets of functions.
 

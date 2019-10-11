@@ -3,37 +3,37 @@
 \BOOKMARK [2][-]{subsection.1.1.1}{Axioms and you}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Russell's Paradox}{section.1.1}% 4
 \BOOKMARK [1][-]{section.1.2}{Basic results and properties of sets}{chapter.1}% 5
-\BOOKMARK [2][-]{subsection.1.2.1}{Equality always}{section.1.2}% 6
-\BOOKMARK [2][-]{subsection.1.2.2}{United we stand, intersected we... Fall?}{section.1.2}% 7
-\BOOKMARK [1][-]{section.1.3}{Time to do some actual set theory, none of this introductory bullshit}{chapter.1}% 8
-\BOOKMARK [2][-]{subsection.1.3.1}{How does this function}{section.1.3}% 9
-\BOOKMARK [2][-]{subsection.1.3.2}{Bijection is the new equality}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.3}{The A and \040of sets}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.2.1}{Set equality}{section.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.2.2}{Unions and intersections}{section.1.2}% 7
+\BOOKMARK [1][-]{section.1.3}{About functions, relations and cardinality}{chapter.1}% 8
+\BOOKMARK [2][-]{subsection.1.3.1}{Functions}{section.1.3}% 9
+\BOOKMARK [2][-]{subsection.1.3.2}{Bijection as an equality}{section.1.3}% 10
+\BOOKMARK [2][-]{subsection.1.3.3}{Universal properties}{section.1.3}% 11
 \BOOKMARK [2][-]{subsection.1.3.4}{Multiplying sets}{section.1.3}% 12
 \BOOKMARK [2][-]{subsection.1.3.5}{Adding sets?}{section.1.3}% 13
 \BOOKMARK [2][-]{subsection.1.3.6}{Everything is a set!}{section.1.3}% 14
-\BOOKMARK [2][-]{subsection.1.3.7}{Relations are hard, sometimes they leave you broken up inside}{section.1.3}% 15
-\BOOKMARK [2][-]{subsection.1.3.8}{Second order thinking}{section.1.3}% 16
+\BOOKMARK [2][-]{subsection.1.3.7}{Relations, order and quotients}{section.1.3}% 15
+\BOOKMARK [2][-]{subsection.1.3.8}{About sets of functions}{section.1.3}% 16
 \BOOKMARK [0][-]{chapter.2}{Planar Linear Algebra}{}% 17
 \BOOKMARK [1][-]{section.2.1}{Introduction}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.1.1}{Operations and other fun things to do with your friends and family}{section.2.1}% 19
-\BOOKMARK [2][-]{subsection.2.1.2}{R2D2}{section.2.1}% 20
-\BOOKMARK [1][-]{section.2.2}{The realest plane of vectors}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.1}{Getting into shape}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.2}{Subspace emissary}{section.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.3}{You span me right round}{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.1.1}{Operations}{section.2.1}% 19
+\BOOKMARK [2][-]{subsection.2.1.2}{The plane R2}{section.2.1}% 20
+\BOOKMARK [1][-]{section.2.2}{R2 as a set of vectors}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.1}{The shape of R2}{section.2.2}% 22
+\BOOKMARK [2][-]{subsection.2.2.2}{Subspaces}{section.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.3}{Spanning sets and linear dependency}{section.2.2}% 24
 \BOOKMARK [2][-]{subsection.2.2.4}{Back to linearity}{section.2.2}% 25
-\BOOKMARK [1][-]{section.2.3}{Closing the distance}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.3.1}{A systematic approach}{section.2.3}% 27
-\BOOKMARK [2][-]{subsection.2.3.2}{Rotato potato}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.3}{The distance between us}{section.2.3}% 29
-\BOOKMARK [2][-]{subsection.2.3.4}{Geomancy}{section.2.3}% 30
-\BOOKMARK [1][-]{section.2.4}{Homestretch}{chapter.2}% 31
-\BOOKMARK [2][-]{subsection.2.4.1}{The sight of linear algebra fills you with DETERMINATION}{section.2.4}% 32
-\BOOKMARK [2][-]{subsection.2.4.2}{The smell of linear functions fills you with DETERMINATION}{section.2.4}% 33
+\BOOKMARK [1][-]{section.2.3}{About the geometry of R2}{chapter.2}% 26
+\BOOKMARK [2][-]{subsection.2.3.1}{Matrices}{section.2.3}% 27
+\BOOKMARK [2][-]{subsection.2.3.2}{The transpose}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.3}{Distance between points}{section.2.3}% 29
+\BOOKMARK [2][-]{subsection.2.3.4}{Geometry results via linear algebra}{section.2.3}% 30
+\BOOKMARK [1][-]{section.2.4}{Final results}{chapter.2}% 31
+\BOOKMARK [2][-]{subsection.2.4.1}{Determinants}{section.2.4}% 32
+\BOOKMARK [2][-]{subsection.2.4.2}{Determinants and linear functions}{section.2.4}% 33
 \BOOKMARK [2][-]{subsection.2.4.3}{Our First Named Theorem}{section.2.4}% 34
-\BOOKMARK [0][-]{chapter.3}{Spaaaaaace!}{}% 35
+\BOOKMARK [0][-]{chapter.3}{Linear algebra in higher dimensions}{}% 35
 \BOOKMARK [1][-]{section.3.1}{Introduction}{chapter.3}% 36
-\BOOKMARK [2][-]{subsection.3.1.1}{A small step for mankind... Kinda}{section.3.1}% 37
-\BOOKMARK [2][-]{subsection.3.1.2}{Linear functions IN SPACE!}{section.3.1}% 38
-\BOOKMARK [2][-]{subsection.3.1.3}{SubSPACE!!! emissary}{section.3.1}% 39
+\BOOKMARK [2][-]{subsection.3.1.1}{Generalizing to R3}{section.3.1}% 37
+\BOOKMARK [2][-]{subsection.3.1.2}{Linear functions in R3}{section.3.1}% 38
+\BOOKMARK [2][-]{subsection.3.1.3}{Subspaces in R3}{section.3.1}% 39
