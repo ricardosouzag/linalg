@@ -481,7 +481,10 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	To start it off, write $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$.
 	
-	Now, if any two of the last coordinates above are zero - say, $v_3=u_3=0$ - then clearly $\R v+\R u$ already contains $\mb{XY}$ (since $v,u,w$ are coplanar and, therefore, $v,u$ are non-parallel).
+	Now, if any two of the last coordinates above are zero - say, $v_3=u_3=0$ - then clearly $\R v+\R u$ already contains $\mb{XY}$ (since $v,u,w$ are non-coplanar and, therefore, $v,u$ are non-parallel).
 	
 	Therefore, we can assume that, at most, one of the last coordinates is zero.
+	
+	Assume, without loss of generality, that $u_3$ and $w_3$ are certainly non-zero (so $v_3$ can be zero). Then we can define $u':=\dfrac{w_3}{u_3}u$ and see
+	\[u'=\dfrac{w_3}{u_3}u=(u'_1,u_2',w_3)\]where $u'_1:=\dfrac{w_3}{u_3}u_1$ and $u_2':=\dfrac{w_3}{u_3}u_2$.
 \end{proof}
