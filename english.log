@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  12 OCT 2019 00:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  12 OCT 2019 00:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1218,7 +1218,7 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 Here is how much of TeX's memory you used:
  36594 strings out of 492646
  866957 string characters out of 6133325
- 1043148 words of memory out of 5000000
+ 1043143 words of memory out of 5000000
  38772 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
