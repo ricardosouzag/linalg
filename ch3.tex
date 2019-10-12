@@ -487,4 +487,14 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	Assume, without loss of generality, that $u_3$ and $w_3$ are certainly non-zero (so $v_3$ can be zero). Then we can define $u':=\dfrac{w_3}{u_3}u$ and see
 	\[u'=\dfrac{w_3}{u_3}u=(u'_1,u_2',w_3)\]where $u'_1:=\dfrac{w_3}{u_3}u_1$ and $u_2':=\dfrac{w_3}{u_3}u_2$.
+	
+	Now:
+	\[w-u'=(w_1,w_2,w_3)-(u_1',u_2',w_3)=(w_1-u_1',w_2-u_2',0).\]
+	
+	Now we have two possible cases:
+	\begin{itemize}
+		\item If $v_3=0$, then $v=(v_1,v_2,0)$. We claim that $v\nparallel (w-u')$. Indeed, if they were parallel, we'd have
+		\[\lambda_1v_1=w_1-u_1'=\frac{w_1}{u_3}u_3-\dfrac{w_3}{u_3}u_1\]
+		\[\lambda_2v_2=w_2-u_2'=\frac{w_2}{u_3}u_3-\dfrac{w_3}{u_3}u_2\]
+	\end{itemize}
 \end{proof}
