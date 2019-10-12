@@ -317,6 +317,12 @@ This ends the proof.
 \begin{df}
 	Let $v,u,w\in\R^3$ be three vectors. We say that they are \textbf{coplanar} if any one of them is in the plane through the origin containing the other two. In symbols: $v\in \R u+\R w$ or $u\in\R v+\R w$ or $w\in\R v+\R u$. We denote this by $\plane{v}{u}{w}$.
 \end{df}
+\begin{lemma}
+	Let $v,u,w\in \R^3$. Then $v\parallel u$ implies $\plane{v}{u}{w}$.
+\end{lemma}
+\begin{proof}
+	Since $v\parallel u$, $\R v=\R u$, so, clearly, $u\in \R v+\R w$ and $\plane{v}{u}{w}$.
+\end{proof}
 
 \begin{lemma}
 	The planes $\mb{XY}$, $\mb{YZ}$ and $\mb{ZX}$ are just the sums $\mb{X+Y}$, $\mb{Y+Z}$ and $\mb{Z+X}$, respectively.
@@ -469,7 +475,7 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	To start it off, write $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$.
 	
-	Now, if any two of the last coordinates above are zero - say, $v_3=u_3=0$ - then clearly $\R v+\R u$ already contains $\mb{XY}$ (since $\not\plane{v}{u}{w}$ implies $v\nparallel u$).
+	Now, if any two of the last coordinates above are zero - say, $v_3=u_3=0$ - then clearly $\R v+\R u$ already contains $\mb{XY}$ (since $v,u,w$ are coplanar and, therefore, $v,u$ are non-parallel).
 	
 	Therefore, we can assume that, at most, one of the last coordinates is zero.
 \end{proof}
