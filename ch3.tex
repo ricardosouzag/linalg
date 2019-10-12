@@ -465,11 +465,11 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	Let $v,u,w\in\R^3$ be three non-null non-coplanar vectors. Then $\R v+\R u+\R w=\R^3$.
 \end{cor}
 \begin{proof}
-	Let $x\in\R^3$ be any vector. We want to show that $x\in \R v+\R u+\R w$.
+	We'll prove that $\R v+\R u+\R w$ contains all of the planes $\mb{XY}$, $\mb{YZ}$ and $\mb{ZX}$. Since they're pretty much the same proof, we'll only prove it for $\mb{XY}$ and leave the other two as exercises to the reader.
 	
-	If $x$ is in either $\R v$, $\R u$ or $\R w$ the result already follows.
+	To start it off, write $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$.
 	
-	Similarly, if $x$ is in either $\R v+\R u$, $\R u+\R w$ or $\R w+\R v$, the result already follows.
+	Now, if any two of the last coordinates above are zero - say, $v_3=u_3=0$ - then clearly $\R v+\R u$ already contains $\mb{XY}$ (since $\not\plane{v}{u}{w}$ implies $v\nparallel u$).
 	
-	All that's left then is to consider the case where $x$ is in neither $\R v$, $\R u$, $\R w$, $\R v+\R u$, $\R u+\R w$ or $\R w+\R v$.
+	Therefore, we can assume that, at most, one of the last coordinates is zero.
 \end{proof}
