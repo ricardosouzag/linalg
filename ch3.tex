@@ -379,7 +379,7 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	But since $u$ is non-null, we cannot have $u_2=0$. Therefore, we can write
 	\[e_1=\frac{1}{v_1}v\in \R v\]
-	\[e_2=\frac{1}{u_2}(u-v')\in \R v+\R u\], so $\R v +\R u$ contains both $\mb X$ and $\mb Y$ and hence it contains $\mb{XY}$.
+	\[e_2=\frac{1}{u_2}(u-v')\in \R v+\R u,\]so $\R v +\R u$ contains both $\mb X$ and $\mb Y$ and hence it contains $\mb{XY}$.
 	
 	If, instead of $v_2=0$ we had assumed that $u_2=0$ we would have arrived at a similar conclusion.
 	
@@ -421,6 +421,14 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	But $v,u\in\pi$ implies the existence of $\lambda_1,\lambda_2,\mu_1,\mu_2\in \R$ such that
 	\[v=\lambda_1 p+\lambda_2 q\]
 	\[u=\mu_1p+\mu_2q.\]
+	
+	First, notice that we cannot have $\lambda_1=\lambda_2=\mu_1=\mu_2=0$ because that would imply $v=0=u$ and we're assuming they're both non-null. This means that, at least one of $\lambda_1,\lambda_2$ and one of $\mu_1,\mu_2$ must be non-zero.
+	
+	If either $\lambda_2$ or $\mu_2$ are zero, then we're done: For instance, if $\lambda_2=0$ then $v=\lambda_1p\in\R p$, and since $v$ is non-null, $\lambda_1$ cannot be zero. So we can define $v':=\dfrac{\mu_1}{\lambda_1}v$ and see that
+	\[v'=\frac{\mu_1}{\lambda_1}v=\mu_1p\]so
+	\[u-v'=(\mu_1p+\mu_2q)-\mu_1p=\mu_2q.\] Now, since both $v$ and $u$ are non-null, this implies that $\lambda_1$ and $\mu_2$ cannot be zero. So we can write
+	\[p=\frac{1}{\lambda_1}v\in\R v\]
+	\[q=\frac{1}{\mu_2}(u-v')\in\R v+\R u,\]so $\R v+\R u$ contains both $p$ and $q$ - and thus it contains $\pi$.
 \end{proof}
 
 \begin{prop}
