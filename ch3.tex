@@ -377,7 +377,7 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	\[v'=\frac{u_1}{v_1}(v_1,0,0)=\left(u_1,0,0\right)\]so
 	\[u-v'=(0,u_2,0)\in \mb Y.\]
 	
-	But since $u$ is non-null, we cannot have $u_2=0$. Therefore, we can write
+	But since $v\nparallel u$, we cannot have $u_2=0$. Therefore, we can write
 	\[e_1=\frac{1}{v_1}v\in \R v\]
 	\[e_2=\frac{1}{u_2}(u-v')\in \R v+\R u,\]so $\R v +\R u$ contains both $\mb X$ and $\mb Y$ and hence it contains $\mb{XY}$.
 	
@@ -426,9 +426,16 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	If either $\lambda_2$ or $\mu_2$ are zero, then we're done: For instance, if $\lambda_2=0$ then $v=\lambda_1p\in\R p$, and since $v$ is non-null, $\lambda_1$ cannot be zero. So we can define $v':=\dfrac{\mu_1}{\lambda_1}v$ and see that
 	\[v'=\frac{\mu_1}{\lambda_1}v=\mu_1p\]so
-	\[u-v'=(\mu_1p+\mu_2q)-\mu_1p=\mu_2q.\] Now, since both $v$ and $u$ are non-null, this implies that $\lambda_1$ and $\mu_2$ cannot be zero. So we can write
+	\[u-v'=(\mu_1p+\mu_2q)-\mu_1p=\mu_2q.\] Now, since $v\nparallel u$, this implies that $\mu_2$ cannot be zero. So we can write
 	\[p=\frac{1}{\lambda_1}v\in\R v\]
 	\[q=\frac{1}{\mu_2}(u-v')\in\R v+\R u,\]so $\R v+\R u$ contains both $p$ and $q$ - and thus it contains $\pi$.
+	
+	If instead of $\lambda_2$ we had taken $\mu_2$ to be non-zero, we would have arrived at a similar conclusion using essentially the same steps.
+	
+	\bigskip
+	Similarly, we can do the same consideration for the cases where either $\lambda_1$ or $\mu_1$ are zero. For instance, if $\mu_1=0$, then, since $u$ is non-null, we have that $\mu_2\neq 0$, so we can define $u':=\dfrac{\lambda_2}{\mu_2}u$ in such a way that
+	\[u'=\frac{\lambda_2}{\mu_2}u=\lambda_2q,\]so
+	\[v-u'=(\lambda_1p+\lambda_2q)-\lambda_2q=\lambda_1p.\]Once again, since $v$ and $u$ are non-null, we cannot have $\lambda_1$
 \end{proof}
 
 \begin{prop}
