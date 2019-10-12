@@ -445,7 +445,21 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	Now, once again, we see that
 	\[u-v'=(\mu_1p+\mu_2q)-(\lambda'_1p+\mu_2q)=(\mu_1-\lambda_1')p.\]We claim that $\mu_1\neq \lambda_1'$. Indeed, if they were equal we would have
-	\[u=\mu_1p+\mu_2q=\lambda_1'p+\mu_2\frac{\lambda_2}{\lambda_2}q=\frac{\mu_2}{\lambda_2}\lambda_1p+\frac{\mu_2}{\lambda_2}\lambda_2q=\frac{\mu_2}{\lambda_2}(\lambda_1p+\lambda_2q)=\frac{\mu_2}{\lambda_2}v\]
+	\[u=\mu_1p+\mu_2q=\lambda_1'p+\mu_2\frac{\lambda_2}{\lambda_2}q=\frac{\mu_2}{\lambda_2}\lambda_1p+\frac{\mu_2}{\lambda_2}\lambda_2q=\frac{\mu_2}{\lambda_2}(\lambda_1p+\lambda_2q)=\frac{\mu_2}{\lambda_2}v,\]which contradicts the fact that $v\nparallel u$. So $\mu_1\neq\lambda_1'$.
+	
+	This tells us that
+	\[p=\frac{1}{\mu_1-\lambda_1'}(u-v')\]so $p\in\R v+\R u$.
+	
+	\bigskip
+	Analogously, if we define $v'':=\dfrac{\mu_1}{\lambda_1}v$ we can see that
+	\[v''=\frac{\mu_1}{\lambda_1}v=\mu_1p+\frac{\mu_1}{\lambda_1}\lambda_2q.\]For the sake of simplicity, let's call $\lambda_2'':=\frac{\mu_1}{\lambda_1}\lambda_2$, so $v''=\mu_1p+\lambda_2''q$.
+	
+	Once again, we can see that
+	\[u-v''=(\mu_1p+\mu_2q)-(\mu_1p+\lambda_2''q)=(\mu_2-\lambda_2'')q\]and we can see, by the same reasoning, that $\mu_2=\lambda_2''$ if, and only if, $v\parallel u$. Since $v\nparallel u$, then, we can conclude that $\mu_2\neq \lambda_2''$ and so
+	\[q=\frac{1}{\mu_2-\lambda_2''}(u-v'')\]which tells us that $u\in\R v+\R u$.
+	
+	\bigskip
+	Combining these two, we see that both $p$ and $q$ are in $\R v+\R u$ - and thus $\pi$ is also in $\R v+\R u$. This ends the proof.
 \end{proof}
 
 \begin{prop}
