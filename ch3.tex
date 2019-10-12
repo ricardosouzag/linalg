@@ -367,6 +367,39 @@ This ends the proof.
 
 We can now use this to start classifying all subspaces of $\R^3$:
 
+\begin{lemma}
+	Let $v,u\in \mb{XY}$ be two non-null, non-parallel vectors. Then $\R v+\R u=\mb{XY}$.
+\end{lemma}
+\begin{proof}
+	Since both $v,u\in\mb{XY}$ we can write them as $v=(v_1,v_2,0)$ and $u=(u_1,u_2,0)$.
+	
+	If $v_2$ or $u_2$ are zero, then we're done: For instance, if $v_2=0$, then $v=(v_1,0,0)\in \mb X$, and since $v$ is non-null, $v_1\neq 0$. So we can define $v':=\dfrac{u_1}{v_1}v$ and see that
+	\[v'=\frac{u_1}{v_1}(v_1,0,0)=\left(u_1,0,0\right)\]so
+	\[u-v'=(0,u_2,0)\in \mb Y.\]
+	
+	But since $u$ is non-null, we cannot have $u_2=0$. Therefore, we can write
+	\[e_1=\frac{1}{v_1}v\in \R v\]
+	\[e_2=\frac{1}{u_2}(u-v')\in \R v+\R u\], so $\R v +\R u$ contains both $\mb X$ and $\mb Y$ and hence it contains $\mb{XY}$.
+	
+	If, instead of $v_2=0$ we had assumed that $u_2=0$ we would have arrived at a similar conclusion.
+	
+	\bigskip
+	Similarly, we can do the same consideration for the cases where either $v_1$ or $u_1$ are zero. For instance, if $u_1=0$, then, since $u$ is non-null, we have that $u_2\neq 0$, so $u':=\dfrac{v_2}{u_2}u$ is such that
+	\[u'=\frac{v_2}{u_2}(0,u_2,0)=(0,v_2,0)\in \mb Y\]and
+	\[v-u'=(v_1,v_2,0)-(0,v_2,0)=(v_1,0,0)\in \mb X\]so, once again, $\R v+\R u$ contains both $e_1$ and $e_2$ and hence it contains $\mb{XY}$.
+	
+	Once more, we can do the same reasoning for the case where $v_1=0$ and arrive at the same conclusion.
+	
+	\bigskip
+	Finally, let's assume that all of $v_1,v_2,u_1,u_2$ are non-zero. In this case, we define $v':=\dfrac{u_2}{v_2}v$ and see that
+	\[v'=\frac{u_2}{v_2}v=\left(\frac{u_2}{v_2}v_1,u_2,0\right).\] For the sake of simplicity, let's call $v_1':=\dfrac{u_2}{v_2}v_1$ so $v'$ becomes just $(v_1',u_2,0)$.
+	
+	Now, once more, we see that
+	\[u-v'=(u_1-v_1',0,0)\in\mb X.\] We claim that $u_1-v_1'\neq 0$ or, in other words, that $u_1\neq v_1'$. Indeed, if they were equal we would have
+	\[u=(u_1,u_2,0)=\left(v_1',u_2\frac{v_2}{v_2},0\right)=\left(\dfrac{u_2}{v_2}v_1,\frac{u_2}{v_2}v_2,0\right)=\frac{u_2}{v_2}(v_1,v_2,0)=\frac{u_2}{v_2}v\]
+	
+\end{proof}
+
 \begin{prop}
 	Let $v,u,w\in\R^3$ non-coplanar vectors. Then $\R v+\R u+\R w=\R^3$.
 \end{prop}
@@ -375,33 +408,7 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	To start things off, we write, as usual, $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$. For now, we assume all of these coordinates are non-zero. We'll deal with the case when they're zero later:
 	
-	First, take $$u'=\dfrac{v_3}{u_3}u=\left(\dfrac{v_3}{u_3}u_1,\frac{v_3}{u_3}u_2,v_3\right)$$
-\end{proof}
-
-\begin{prop}
-	Let $\pi,\sigma\subseteq\R^3$ be any two distinct planes through zero. Then $\pi+\sigma=\R^3$.
-\end{prop}
-\begin{proof}
-	Let $\pi=\R v+\R u$ and $\sigma=\R w+\R z$ for some vectors $v,u,w,z\in \R^3$.
+	First, take $u':=\dfrac{v_3}{u_3}u\in \R u$. Then: $$u'=\dfrac{v_3}{u_3}u=\left(\dfrac{v_3}{u_3}u_1,\frac{v_3}{u_3}u_2,v_3\right).$$Just for simplicity, let's write $u'_1:=\dfrac{v_3}{u_3}u_1$ and $u'_2:=\dfrac{v_3}{u_3}u_2$. Then:
+	\[v-u'=(v_1-u'_1,v_2-u_2',0)\in \mb{XY}.\]
 	
-	We will show that $\pi+\sigma$ contains $\mb{XY+YZ}$. This suffices, by the preceding lemma.
-	
-	Let $v=(v_1,v_2,v_3), u=(u_1,u_2,u_3), w=(w_1,w_2,w_3)$ and $z=(z_1,z_2,z_3)$.
-	
-	If $v_3=0$ this means that $v\in\mb{XY}$ so $\pi+\sigma$ contains $\mb{XY}$. Similarly, if $u_1=0$ this means that $u\in\mb{YZ}$, so $\pi+\sigma$ contains $\mb{YZ}$.
-	
-	Now we define
-	\[\omega=\frac{w_3}{v_3},\quad\quad\zeta=\frac{z_1}{u_1}.\]
-	
-	Then:
-	\begin{align*}
-		 &=\omega(w_1,w_2,w_3)\\
-		&=(\omega w_1,\omega w_2,v_3)
-	\end{align*}so
-	\[v-\omega w=(v_1-\omega w_1,v_2-\omega w_2,0)\in\mb{XY}\]and similarly,
-	\begin{align*}
-		\zeta z&=\zeta(z_1,z_2,z_3)\\
-		&=(u_1,\zeta z_2,\zeta z_3)
-	\end{align*}so
-	\[u-\zeta z=(0,\zeta z_2,\zeta z_3)\in\mb{YZ}.\]
 \end{proof}
