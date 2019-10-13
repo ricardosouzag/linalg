@@ -493,12 +493,9 @@ We can now use this to start classifying all subspaces of $\R^3$:
 	
 	Now we have two possible cases:
 	\begin{itemize}
-		\item If $v_3=0$, then $v=(v_1,v_2,0)$. We claim that $v\nparallel (w-u')$. Indeed, if they were parallel, we'd have
-		\[\lambda_1v_1=w_1-u_1'=\frac{w_1}{u_3}u_3-\dfrac{w_3}{u_3}u_1=\frac{u_3w_1-u_1w_3}{u_3}\implies v_1=\frac{u_3w_1-u_1w_3}{\lambda_1u_3}\]
-		\[\lambda_2v_2=w_2-u_2'=\frac{w_2}{u_3}u_3-\dfrac{w_3}{u_3}u_2=\frac{u_3w_2-u_2w_3}{u_3}\implies v_2=\frac{u_3w_2-u_2w_3}{\lambda_2u_3}\]and so
-		\[v=\left(\frac{u_3w_1-u_1w_3}{\lambda_1u_3},\frac{u_3w_2-u_2w_3}{\lambda_2u_3},0\right)\]which tells us that $v\in\R u+\R w$.
+		\item If $v_3=0$, then $v=(v_1,v_2,0)$. We claim that $v\nparallel (w-u')$. Indeed, since $w-u'=w-\dfrac{w_3}{u_3}u\in \R u+\R w$, we have that if $v\parallel (w-u')$ then $v\in \R u+\R w$.
 		
-		This tells us that $v\parallel (w-u')$ if, and only if $\plane{v}{u}{w}$, but since we're assuming, by hypothesis, that $v,u,w$ are non-coplanar, we get that $v$ cannot be parallel to $w-u'$.
+		But we're assuming, by hypothesis, that $v,u,w$ are non-coplanar, so we get that $v$ cannot be parallel to $w-u'$.
 		
 		This ends the reasoning for this case, because now $v$ and $w-u'$ are two non-parallel vectors in $\mb{XY}$ and, thus, by the preceding proposition, $\mb{XY}=\R v+\R(w-u')$. But clearly, we have that $w-u'\in \R u+\R w$, which implies $\R(w-u')\subseteq \R u+\R w$ and thus
 		
