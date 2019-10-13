@@ -500,5 +500,19 @@ We can now use this to start classifying all subspaces of $\R^3$:
 		This ends the reasoning for this case, because now $v$ and $w-u'$ are two non-parallel vectors in $\mb{XY}$ and, thus, by the preceding proposition, $\mb{XY}=\R v+\R(w-u')$. But clearly, we have that $w-u'\in \R u+\R w$, which implies $\R(w-u')\subseteq \R u+\R w$ and thus
 		
 		\[\mb{XY}\subseteq\R v+\R u+\R w.\]
+		
+		\item If, however, $v_3$ does not equal zero, we have to do a small adjustment: Let, as before, $v':=\dfrac{w_3}{v_3}v$, so
+		\[v'=\frac{w_3}{v_3}v=(v_1',v_2',w_3)\]where $v_1'=\dfrac{w_3}{v_3}v_1$ and $v_2'=\dfrac{w_3}{v_3}v_2$. Now:
+		
+		\[w-v'=(w_1,w_2,w_3)-(v_1',v_2',w_3)=(w_1-v_1',w_2-v_2',0).\]We claim that $(w-v')\nparallel(w-u')$. Indeed, if they were parallel then there would be some $\lambda\in \R$ such that $(w-v')=\lambda(w-u')$. But then:
+		\begin{gather*}
+			w-v'=\lambda(w-u')\\
+			w-\dfrac{w_3}{v_3}v=\lambda\left(w-\dfrac{w_3}{u_3}u\right)\\
+			w-\dfrac{w_3}{v_3}v=\lambda w-\lambda\dfrac{w_3}{u_3}u\\
+			-\dfrac{w_3}{v_3}v=\lambda w-\lambda\dfrac{w_3}{u_3}u-w\\
+			-\dfrac{w_3}{v_3}v=(\lambda-1) w-\lambda\dfrac{w_3}{u_3}u\\
+			\dfrac{w_3}{v_3}v=\lambda\dfrac{w_3}{u_3}u-(\lambda-1) w
+		\end{gather*}and since we're assuming that $w_3\neq 0$, we see that 
+		\[v=\frac{v_3}{w_3}\left(\lambda\dfrac{w_3}{u_3}u-(\lambda-1) w\right)=\]
 	\end{itemize}
 \end{proof}
