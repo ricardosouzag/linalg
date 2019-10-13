@@ -513,6 +513,20 @@ We can now use this to start classifying all subspaces of $\R^3$:
 			-\dfrac{w_3}{v_3}v=(\lambda-1) w-\lambda\dfrac{w_3}{u_3}u\\
 			\dfrac{w_3}{v_3}v=\lambda\dfrac{w_3}{u_3}u-(\lambda-1) w
 		\end{gather*}and since we're assuming that $w_3\neq 0$, we see that 
-		\[v=\frac{v_3}{w_3}\left(\lambda\dfrac{w_3}{u_3}u-(\lambda-1) w\right)=\]
+		\[v=\frac{v_3}{w_3}\left(\lambda\dfrac{w_3}{u_3}u-(\lambda-1) w\right)=\lambda\frac{v_3}{u_3}u-(\lambda-1)\frac{v_3}{w_3}w\]and so $v\in\R u+\R w$. But this contradicts our initial hypothesis that $v,u,w$ are non-coplanar.
+		
+		This shows that, indeed, $(w-v')\nparallel(w-u')$ and since they're both in $\mb{XY}$ and are non-parallel, we see, by the preceding lemma, that $\mb{XY}\subseteq\R(w-v')+\R(w-u')$.
+		
+		Finally, $(w-v')\in\R v+\R w$ and $(w-u')\in\R u+\R w$ implies that $\R(w-v')+\R(w-u')\subseteq\R v+\R u+\R w$.
+		
+		Combining these two we get that $\mb{XY}\subseteq \R v+\R u+\R w$.
 	\end{itemize}
+
+Either way, we can conclude that if $v,u,w$ are non-coplanar, then $\mb{XY}\subseteq \R v+\R u+\R w$.
+
+\bigskip
+Like we said at the beginning, we can repeat this same argument by eliminating the second or first coordinates to show that both $\mb{YZ}$ and $\mb{ZX}$ are also in $\R v+\R u+\R w$.
+
+This shows that $\mb{XY+YZ+ZX}\subseteq\R v+\R u+\R w$. But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\R w\subseteq\R^3$ shows us that 
+\[\R v+\R u+\R w=\R^3\]which ends the proof.
 \end{proof}
