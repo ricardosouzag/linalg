@@ -206,6 +206,11 @@ In this section we're going to extend the result that said that subspaces of $\R
 	
 	Conversely, any element of $X$ is, by definition, in the sum $\R v+X$ - for instance, any $x\in X$ can be seen as $0+x$, because, since $\R v$ is a subspace, $0\in \R v$. This shows that $X\subseteq \R v+X$ and ends the proof (because the argument for $Y$ is exactly the same).
 \end{proof}
+
+This result is mainly important because it tells us that subspaces are closed under taking subspaces - that is, if you take any subspace $X$ and any element inside it, then the line through that element is still in $X$.
+
+That, combined with the following corollaries, will show that, indeed, subset sum is, in some sense, the ``extension'' of the concept of set union for vector spaces.
+
 \begin{cor}
 	Let $X,Y\leq \R^3$ be any two subspaces of $\R^3$ such that $Y\subseteq X$. Then $X+Y=X$.
 \end{cor}
@@ -216,6 +221,9 @@ In this section we're going to extend the result that said that subspaces of $\R
 	
 	This ends the proof.
 \end{proof}
+\begin{rmk}
+	Compare this to the already known result for sets that $Y\subseteq X$ implies $X\cup Y=Y$.
+\end{rmk}
 \begin{cor}
 	Let $X,Y,Z\leq \R^3$ be any three subspaces such that both or either of $Z\subseteq X$ and $Z\subseteq Y$ hold. Then $X+Y+Z=X+Y$.
 \end{cor}
@@ -230,6 +238,9 @@ In this section we're going to extend the result that said that subspaces of $\R
 	
 	Either way, the result holds and this finishes the proof.
 \end{proof}
+\begin{rmk}
+	Once again, compare this to the already know result about sets that if $Z\subseteq X$ or $Z\subseteq Y$ then $X\cup Y\cup Z=X\cup Y$.
+\end{rmk}
 
 \begin{lemma}
 	Let $X,Y,Z\leq \R^3$. Then $$X+(Y\cap Z)=(X+Y)\cap(X+Z)$$$$X\cap(Y+Z)=(X\cap Y)+(X\cap Z).$$
@@ -261,6 +272,11 @@ In this section we're going to extend the result that said that subspaces of $\R
 	
 	This shows that $X\cap(Y+Z)=(X\cap Y)+(X\cap Z)$ and ends the proof.
 \end{proof}
+\begin{rmk}
+	This is once gain similar to what we had with sets - where unions and intersections distributed over each other.
+\end{rmk}
+
+Now that we're done with some more technical results, let's start characterizing stuffs:
 
 \begin{prop}
 	Let $v,u\in \R^3$ be any two non-null vectors. Then for any non-null $w\in\R v$ we have that $\R v=\R w$ and for any non-null $t\in \R v+\R u$ such that $t\notin \R v$ and $t\notin \R u$ we have that $\R t+\R u=\R v+\R t=\R v+\R u$.
@@ -313,6 +329,13 @@ In this section we're going to extend the result that said that subspaces of $\R
 	
 	This ends the proof.
 \end{proof}
+\begin{rmk}
+	This first result is a generalization of a similar result in $\R^2$ which said that two vectors are parallel if, and only if, they lie in the same line through zero.
+	
+	Indeed, this result tells us not only that, but also that a vector $t$ is in the plane containing two other vectors $v,u$ if, and only if, $v$ is in the plane containing $t,u$ and $u$ is in the plane containing $t,v$.
+	
+	This gives us a lot of insight for the following definitions:
+\end{rmk}
 
 \begin{df}
 	Let $v,u\in \R^3$ be two vectors such that $\R v=\R u$. In this case we say that $v$ and $u$ are \textbf{parallel}, which we denote by $v\parallel u$.
