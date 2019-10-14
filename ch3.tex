@@ -355,6 +355,10 @@ Now that we're done with some more technical results, let's start characterizing
 	Since $v\parallel u$, we have that $\R v=\R u$, so, clearly, $u\in \R v+\R w$ and thus $\plane{v}{u}{w}$.
 \end{proof}
 
+That is, if two vectors are in the same line, then they are already coplanar.
+
+Let's now use these definitions to start breaking $\R^3$ into smaller pieces:
+
 \begin{lemma}
 	The planes $\mb{XY}$, $\mb{YZ}$ and $\mb{ZX}$ are just the sums $\mb{X+Y}$, $\mb{Y+Z}$ and $\mb{Z+X}$, respectively.
 \end{lemma}
@@ -401,6 +405,9 @@ Now that we're done with some more technical results, let's start characterizing
 \begin{proof}
 	The same proof as above, since all of these sums equal $\mb{X+Y+Z}$.
 \end{proof}
+\begin{rmk}
+	All of these can be seen as a generalization of the fact that, in $\R^2$, $\mb{X+Y}=\R^2$. Indeed, we're saying that $\R^3$ can be though of as either a set with three axes ($\mb{X+Y+Z}=\R^3$), two planes ($\mb{XY+YZ=YZ+ZX=ZX+XY}=\R^3$) or an axis and a plane ($\mb{XY+Z=YZ+X=ZX+Y}=\R^3$).
+\end{rmk}
 
 We can now use this to start classifying all subspaces of $\R^3$:
 

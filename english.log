@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 OCT 2019 12:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 OCT 2019 12:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1241,8 +1241,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 185.
 
-[190] [191] [192] [193] [194] [195] [196] [197] [198] [199] [200] [201]
-[202]) [203]
+[190] [191] [192] [193] [194] [195]
+Underfull \hbox (badness 1072) in paragraph at lines 409--410
+\U/dsrom/m/n/12 R[]$\OT1/cmr/m/n/12 ), two planes ($[] = \U/dsrom/m/n/12 R[]$\O
+T1/cmr/m/n/12 ) or an axis and a plane
+ []
+
+[196] [197] [198] [199] [200] [201] [202]) [203]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./english.aux)
@@ -1275,7 +1280,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (204 pages, 899121 bytes).
+Output written on english.pdf (204 pages, 899825 bytes).
 PDF statistics:
  2311 PDF objects out of 2487 (max. 8388607)
  2066 compressed objects within 21 object streams
