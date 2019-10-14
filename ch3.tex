@@ -550,18 +550,18 @@ But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\
 \end{proof}
 
 \begin{cor}
-	Let $X,Y\leq \R^3$ be two subspaces of $\R^3$. Then:
+	Let $X,Y\leq \R^3$ be two distinct subspaces of $\R^3$. Then:
 	\begin{enumerate}[a)]
 		\item If $X=Y=0$, then $X+Y=X\cap Y=0$;
-		\item If $X$ and $Y$ are lines, then $X+Y$ is a plane and $X\cap Y=0$ if, and only if, $X\nparallel Y$;
-		\item If $X$ and $Y$ are planes, then $X+Y=\R^3$ and $X\cap Y$ is a line if, and only if, $X\nparallel Y$.
+		\item If $X$ and $Y$ are lines, then $X+Y$ is a plane and $X\cap Y=0$;
+		\item If $X$ and $Y$ are planes, then $X+Y=\R^3$ and $X\cap Y$ is a line.
 	\end{enumerate}
 \end{cor}
 \begin{proof}
 	\begin{enumerate}[a)]
 		\item This item is trivial.
 		
-		\item Let $X=\R v$ and $Y=\R u$ be two lines. We know that $X\nparallel Y$ if, and only if, $v\nparallel u$. But we also know that $v\nparallel u$ if, and only if, $\R v+\R u$ is a plane and $\R v\cap\R u=0$. This proves this item.
+		\item Let $X=\R v$ and $Y=\R u$ be two lines. We know that $X\neq Y$ if, and only if, $v\nparallel u$. But we also know that $v\nparallel u$ if, and only if, $\R v+\R u$ is a plane and $\R v\cap\R u=0$. This proves this item.
 		
 		\item Let $X=\R v+\R u$ and $Y=\R p+\R q$. We know that $X\cap Y$ is a subset of both $X$ and $Y$ which is also a subspace of $\R^3$. Therefore, $X\cap Y$ is either zero, a line through zero, a plane through zero or $\R^3$.
 		
@@ -569,9 +569,9 @@ But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\
 		
 		So it's either a line or zero.
 		
-		Assume now that $X\nparallel Y$ - that is, $X\neq Y$ (since they're both through zero). 
+		Assume now that $X\neq Y$. 
 		
-		But then, this tells us that any three of $\{v,u,p,q\}$ are non-coplanar - and hence that the sum of the lines through them is $\R^3$.
+		But then, this tells us that any three of $\{v,u,p,q\}$ are non-coplanar - and hence that the sum of the lines through them is $\R^3$ - so we already get that $X+Y=\R^3$.
 		
 		For instance, $v,u,p$ are non-coplanar, so $\R v+\R u+\R p=\R^3$. But this means that there exist some $q_1,q_2,q_3\in\R$ such that 
 		\[q=q_1v+q_2u+q_3p.\]
