@@ -571,9 +571,9 @@ But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\
 		
 		Assume now that $X\neq Y$. 
 		
-		But then, this tells us that any three of $\{v,u,p,q\}$ are non-coplanar - and hence that the sum of the lines through them is $\R^3$ - so we already get that $X+Y=\R^3$.
+		But then, this tells us that at least one triple in $\{v,u,p,q\}$ is non-coplanar - and hence that the sum of the lines through them is $\R^3$ - so we already get that $X+Y=\R^3$.
 		
-		For instance, $v,u,p$ are non-coplanar, so $\R v+\R u+\R p=\R^3$. But this means that there exist some $q_1,q_2,q_3\in\R$ such that 
+		For instance, if $v,u,p$ are non-coplanar, then $X+Y=\R v+\R u+\R p=\R^3$. But this means that there exist some $q_1,q_2,q_3\in\R$ such that 
 		\[q=q_1v+q_2u+q_3p.\]
 		
 		But we can rearrange this into
@@ -581,15 +581,9 @@ But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\
 		
 		So we know that $X\cap Y$ contains a line and isn't a plane - so it can only be that line.
 		
-		\bigskip
-		Finally, if $X\cap Y$ is a line, then let $\R z=X\cap Y$. This means that $z=x_1v+x_2u=y_1p+y_2q$ for some $x_1,x_2,y_1,y_2\in\R$. But since $\R z$ is a line, we get that $z\neq 0$, and so at least one of $x_1,x_2,y_1$ and $y_2$ must be non-zero.
-		
-		Assume, without loss of generality, that $x_1\neq 0$. This means that we can rearrange the previous equation:
-		\begin{gather*}
-			x_1v+x_2u=y_1p+y_2q\\
-			x_1v=y_1p+y_2q-x_2u\\
-			v=\frac{y_1}{x_1}p+\frac{y_2}{x_1}q-\frac{x_2}{x_1}u
-		\end{gather*}and show that $v\in\R p+\R q+\R u$.
+		This shows that $X\cap Y$ is a line and $X+Y=\R^3$.
 	\end{enumerate}
+
+This ends the proof.
 \end{proof}
 
