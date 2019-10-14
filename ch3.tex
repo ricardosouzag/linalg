@@ -565,11 +565,14 @@ But we've already proven that $\mb{XY+YZ+ZX}=\R^3$, so $\R^3\subseteq\R v+\R u+\
 		
 		\item Let $X=\R v+\R u$ and $Y=\R p+\R q$. We know that $X\cap Y$ is a subset of both $X$ and $Y$ which is also a subspace of $\R^3$. Therefore, $X\cap Y$ is either zero, a line through zero, a plane through zero or $\R^3$.
 		
-		It certainly cannot be $\R^3$, since $X\subset\R^3$.
+		It certainly cannot be $\R^3$, since $X\subset\R^3$. It also cannot be a plane, otherwise there would be a plane inside both $X$ and $Y$ which would, at once, be different from both of them and contain two non-parallel vectors - which is impossible.
+		
+		So it's either a line or zero.
 		
 		Assume now that $X\nparallel Y$ - that is, $X\neq Y$ (since they're both through zero). 
 		
-		Take now $z\in X\cap Y$. This means that $z=x_1v+x_2u=y_1p+y_2q$ for some $x_1,x_2,y_1,y_2\in\R$.
+		But then, this tells us that any three of $\{v,u,p,q\}$ are non-coplanar - and hence that the sum of the lines through them is $\R^3$. For instance, $v,u,p$ are non-coplanar, so $\R v+\R u+\R p=\R^3$. But this means that there exists some $q_1,q_2,q_3\in\R$ such that 
+		\[q=q_1v+q_2u+q_3p.\]
 	\end{enumerate}
 \end{proof}
 
