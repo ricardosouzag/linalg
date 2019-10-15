@@ -656,7 +656,24 @@ Now we're going to introduce a notation that will follow and haunt us forever: T
 	\[\sum_{i=1}^nx_i:=x_1+x_2+\cdots+x_n\]so it's just a shorthand notation for not writing long sums.
 \end{df}
 
+\begin{rmk}
+	At this point there are two remarks that need to be made:
+	
+	First, how to interpret the sigma notation. The $i$ is called the summation index. The $i=1$ below the $\sum$ symbol means ``we'll start making $i=1$ and the $n$ above the $um$ symbol means ``we'll stop when $i=n$. They're called, respectively, the summation limits/extremes/starting and ending point.
+	
+	So then the summation proceeds by starting at the starting index and then increasing one by one until it reaches the ending index.
+	
+	
+	\bigskip
+	Second, we've already proven in the set theory chapter that any finite set is in bijection with a natural number - that's why we can take any finite set $X$ and give its elements numbered indices.
+	
+	If $X$ was infinite, however, notice that it wouldn't be possible: For instance, we cannot give natural numbers as indices to the elements of $\R$.
+\end{rmk}
+
 \begin{ex}
 	Let $X=\{x_1,x_2,\cdots,x_n\}\subseteq \R^3$. Then we can write
 	\[\spen X=\sum_{i=1}^n \R x_i\]which is way more compact.
+	
+	Let $E$ be the canonical base of $\R^3$. Then 
+	\[\spen E=\sum_{i=1}^3 \R e_i=\mb{X+Y+Z}=\R^3.\]
 \end{ex}
