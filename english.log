@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  15 OCT 2019 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  15 OCT 2019 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1266,21 +1266,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./english.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 284.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 284.
-
-
-Package rerunfilecheck Warning: File `english.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `english.out':
-(rerunfilecheck)             Before: 7A3796AE247DC8098C1920A8FDC0B3AF;2757
-(rerunfilecheck)             After:  0B45FEF308DC5FCFF77446840AB032CB;2852.
+Package rerunfilecheck Info: File `english.out' has not changed.
+(rerunfilecheck)             Checksum: 0B45FEF308DC5FCFF77446840AB032CB;2852.
  ) 
 Here is how much of TeX's memory you used:
- 36955 strings out of 492646
- 872199 string characters out of 6133325
- 1047827 words of memory out of 5000000
- 39090 multiletter control sequences out of 15000+600000
+ 36958 strings out of 492646
+ 872250 string characters out of 6133325
+ 1048827 words of memory out of 5000000
+ 39091 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,21n,119p,887b,2507s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1300,10 +1293,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (205 pages, 902413 bytes).
+Output written on english.pdf (205 pages, 903343 bytes).
 PDF statistics:
- 2320 PDF objects out of 2487 (max. 8388607)
- 2074 compressed objects within 21 object streams
- 1147 named destinations out of 1200 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2326 PDF objects out of 2487 (max. 8388607)
+ 2080 compressed objects within 21 object streams
+ 1149 named destinations out of 1200 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 
