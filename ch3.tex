@@ -677,3 +677,11 @@ Now we're going to introduce a notation that will follow and haunt us forever: T
 	Let $E$ be the canonical base of $\R^3$. Then 
 	\[\spen E=\sum_{i=1}^3 \R e_i=\mb{X+Y+Z}=\R^3.\]
 \end{ex}
+
+In some sense, the subspace spanned by a set is the smallest subspace containing that set. This can be mode precise with the following statement:
+
+\begin{lemma}
+	Let $X\subseteq\R^3$ be a finite set and let 
+	\[\mc X:=\{Y\leq \R^3\mid X\subseteq Y\}\]be the set of all subspaces of $\R^3$ containing $X$. Then
+	\[\spen X=\bigcap\mc X\]where $\dps\bigcap\mc X$ means ``the intersection of all elements of $\mc X$''.
+\end{lemma}
