@@ -1261,9 +1261,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 640.
 
 [204] [205]
-Underfull \hbox (badness 1152) in paragraph at lines 720--721
+Underfull \hbox (badness 1270) in paragraph at lines 720--721
 []\OT1/cmr/m/n/12 Indeed, $\OMS/cmsy/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
-X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\U/msb/m/n/12 ?\OML/cmm/m/it/12 ; \OMS/c
+E\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\U/msb/m/n/12 ?\OML/cmm/m/it/12 ; \OMS/c
 msy/m/n/12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/
 m/n/12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/
 12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f
@@ -1306,7 +1306,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (207 pages, 910152 bytes).
+Output written on english.pdf (207 pages, 910141 bytes).
 PDF statistics:
  2340 PDF objects out of 2487 (max. 8388607)
  2092 compressed objects within 21 object streams
