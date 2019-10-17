@@ -767,11 +767,9 @@ This gives  us great insight on the following proof:
 	This ends the proof.
 \end{proof}
 \begin{cor}
-	Let $X\subseteq\R^3$ be a finite set. Then $X$ is linearly dependent if, and only if, there's some $x\in X$ such that
-	\[x\in \spen(X\setminus\{x\}).\]
+	Let $X\subseteq\R^3$ be a finite set. Then $X$ is linearly dependent if, and only if, there's some $x\in X$ such that $x\in \spen(X\setminus\{x\})$.
 \end{cor}
 \begin{proof}
-	If there's some $x\in X$ such that
-	\[x\in \spen(X\setminus\{x\}),\]then
-	\[\spen X=\sum_{x_i\in X}\R x_i=\sum_{x_i\in X\setminus \{x\}}x_i+\R x=\spen(X\setminus \{x\})+\R x=\spen (X\setminus \{x\})\]so $X$ is linearly dependent.
+	If there's some $x\in X$ such that $[x\in \spen(X\setminus\{x\})$, then
+	\[\spen X=\sum_{x_i\in X}\R x_i=\sum_{x_i\in X\setminus \{x\}}\R x_i+\R x=\spen(X\setminus \{x\})+\R x=\spen (X\setminus \{x\})\]so $X$ is linearly dependent.
 \end{proof}
