@@ -705,3 +705,11 @@ In some sense, the subspace spanned by a set is the smallest subspace containing
 	This ends the proof.
 	
 \end{proof}
+
+So it makes sense to think of the span of a set of vectors as the ``smallest'' vector space containing that set of vectors. Now we can start working with linear dependency:
+
+\begin{df}
+	Let $X\subseteq\R^3$ be a finite set. We say that $X$ is \textbf{linearly dependent} if there is a proper subset $Y\subset X$ such that $\spen X=\spen Y$.
+	
+	Conversely, we say that $X$ is \textbf{linearly independent} if for all proper subsets $Y\subset X$, we have that $\spen Y\subset \spen X$.
+\end{df}
