@@ -804,3 +804,31 @@ This gives  us great insight on the following proof:
 	
 	This ends the proof.
 \end{proof}
+
+So, all these results together tell us that a set being linearly dependent means that one of the vectors is ``superfluous'' in the sense that it is already spanned by the other vectors in the set. Conversely, a set being linearly independent means that none of the vectors are superfluous, and you need each one of them to span the whole set.
+
+But this has an obvious consequence in $\R^3$:
+
+\begin{lemma}
+	Let $X\subseteq \R^3$ be a finite set. If $\# X>3$ then $X$ is linearly dependent.
+\end{lemma}
+\begin{proof}
+	This is obvious. If $X=\{x_1,x_2,x_3,\cdots,x_n\}$ with $n>3$, then we can consider cases:
+	
+	\begin{itemize}
+		\item $\{x_1,x_2,x_3\}$ is linearly dependent.
+		
+		This would imply that one of them is already spanned by the others - and hence the whole $X$ would be linearly dependent.
+		
+		\item $\{x_1,x_2,x_3\}$ is linearly independent.
+		
+		This would imply that none of them is spanned by the others. In particular, this implies that $x_1$ isn't spanned by $\{x_2,x_3\}$ - that is, $x_1,x_2,x_3$ are non-coplanar.
+		
+		But we know that any three non-null non-coplanar vectors satisfy
+		\[\R x_1+\R x_2+\R x_3=\R^3\]so $\spen\{x_1,x_2,x_3\}=\R^3$. This means that every other vector in $\R^3$ (in particular, any other vector in $X$) is already spanned by $\{x_1,x_2,x_3\}$ - so $X$ is linearly dependent.
+	\end{itemize}
+
+Either way, we can always see that $X$ is linearly dependent.
+
+This ends the proof.
+\end{proof}
