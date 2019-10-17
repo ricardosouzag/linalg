@@ -743,3 +743,26 @@ So it makes sense to think of the span of a set of vectors as the ``smallest'' v
 	Now, clearly, $\{e_1,e_2\}\subset X$ is a proper subset such that 
 	\[\spen\{e_1,e_2\}=\mb{XY}=\spen X\]so $X$ is linearly dependent.
 \end{ex}
+
+This gives  us great insight on the following proof:
+
+\begin{lemma}
+	Let $X\subseteq \R^3$ be a finite set. Then $X$ is linearly dependent if, and only if, there is some $x\in X$ such that $\spen(X\setminus\{x\})=\spen X$.
+\end{lemma}
+\begin{proof}
+	Clearly, if there is some $x\in X$ such that $\spen(X\setminus\{x\})=\spen X$, then $X\setminus\{x\}$ is a proper subset of $X$ which spans the same subspace as $X$, so $X$ is linearly dependent.
+	
+	\bigskip
+	Conversely, if $X$ is linearly dependent, then there's some proper subset $Y\subset X$ such that $\spen Y=\spen X$.
+	
+	Now, let $Z:=X\setminus Y$. Choose any $z\in Z$. We claim that $\spen (X\setminus \{z\})=\spen X$.
+	
+	This is obvious: Since $Y=X\setminus Z$, we have that $Y\subseteq X\setminus \{z\}$, so $\spen Y\subseteq \spen(X\setminus \{z\})$.
+	
+	But $(X\setminus\{z\})\subseteq X$, so $\spen(X\setminus\{z\})\subseteq\spen X$.
+	
+	Finally, since $\spen Y=\spen X$ we get the following expression:
+	\[\spen X=\spen Y\subseteq \spen(X\setminus\{z\})\subseteq\spen X\]and therefore $\spen (X\setminus\{z\})=\spen X$.
+	
+	This ends the proof.
+\end{proof}
