@@ -783,3 +783,24 @@ This gives  us great insight on the following proof:
 	Let $X=\{x_1,x_2,\cdots,x_n\}\subseteq\R^3$ be a finite set. Then $X$ is linearly dependent if, and only if, there are real numbers $a_1,a_2,\cdots,a_n\in \R$ not all zero such that
 	\[a_1x_1+a_2x_2+\cdots+a_nx_n=0.\]
 \end{cor}
+\begin{proof}
+	Let $X$ be linearly dependent. Then there's some $x\in X$ which is spanned by $X\setminus\{x\}$. Let $X\setminus\{x\}=\{x'_1,x'_2,\cdots,x'_{n-1}\}$, just to give those elements a name.
+	
+	But then, $x\in\spen X\setminus\{x\}$ implies the existence of some real numbers $a_1,a_2,\cdots,a_{n-1}\in \R$ such that
+	\[x=a_1x_1'+a_2x_2'\cdots+a_{n-1}x'_{n-1}\]and hence
+	\[a_1x_1'+a_2x'_2+\cdots+a_{n-1}x'_{n-1}+(-1)x=0.\]
+	
+	So there are real numbers $a_1,a_2,\cdots,a_{n-1},(-1)\in \R$ such that
+	\[a_1x_1'+a_2x'_2+\cdots+a_{n-1}x'_{n-1}+(-1)x=0.\]
+	
+	\bigskip
+	Conversely, if there are real numbers $a_1,a_2,\cdots,a_n\in \R$ not all zero such that
+	\[a_1x_1+a_2x_2+\cdots+a_nx_n=0,\]let us assume (without loss of generality) that $a_1\neq 0$. If it isn't you can just do the same reasoning by replacing the first non-null index with 1, and the proof will still work.
+	
+	Since $a_1\neq 0$, we can rewrite the above equation as
+	\[x_1+\frac{a_2}{a_1}x_2+\cdots+\frac{a_n}{a_1}x_n=0.\]Let $a_i':=\dfrac{a_i}{a_1}$ for all $i\leq n$. Then this is just
+	\[x_1+a'_2x_2+\cdots+a'_nx_n=0\] which allows us to do
+	\[x_1=-a'_2x_2-a'_3x_3-\cdots-a'_nx_n.\]But this tells us that $x+1\in\spen X\setminus\{x_1\}$ - and so $X$ is linearly dependent.
+	
+	This ends the proof.
+\end{proof}
