@@ -853,3 +853,12 @@ Similarly, we can talk about the size of spanning sets:
 \begin{proof}
 	Once again, this is the same result, just stated in another manner, and so doesn't require further proof.
 \end{proof}
+
+Now we can combine these two lemmas into a very important lemma:
+
+\begin{lemma}
+	Let $X\subseteq\R^3$ be a finite set of linearly independent vectors such that $\spen X=\R^3$. Then $\#X=3$.
+\end{lemma}
+\begin{proof}
+	Since $X$ is linearly independent, $\#X\leq 3$. But since $X$ spans $\R^3$, $\#X\geq 3$. Combining these, we see that $\#X=3$, as we had claimed.
+\end{proof}
