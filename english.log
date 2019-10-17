@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  17 OCT 2019 12:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  17 OCT 2019 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1260,7 +1260,20 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 640.
 
-[204] [205]) [206]
+[204] [205]
+Underfull \hbox (badness 1152) in paragraph at lines 720--721
+[]\OT1/cmr/m/n/12 Indeed, $\OMS/cmsy/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
+X\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\U/msb/m/n/12 ?\OML/cmm/m/it/12 ; \OMS/c
+msy/m/n/12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/
+m/n/12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/
+12 f\OML/cmm/m/it/12 e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 f
+\OML/cmm/m/it/12 e[]; e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 
+f\OML/cmm/m/it/12 e[]; e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12
+ f\OML/cmm/m/it/12 e[]; e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; E\OMS/cmsy/m/n/
+12 g$\OT1/cmr/m/n/12 , and we know that
+ []
+
+) [206]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./english.aux)
@@ -1293,7 +1306,7 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (207 pages, 910193 bytes).
+Output written on english.pdf (207 pages, 910152 bytes).
 PDF statistics:
  2340 PDF objects out of 2487 (max. 8388607)
  2092 compressed objects within 21 object streams
