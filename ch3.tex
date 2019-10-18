@@ -914,8 +914,15 @@ With this we can now state a similar result to what we have already proved in $\
 		\item \underline{(b) $\implies$ (d)}:
 		
 		If $X$ is a spanning set with three elements, then we've already proven that it is also linearly independent. So $X$ is a linearly independent set which spans $\R^3$.
+		
+		\item \underline{(d) $\implies$ (a)}:
+		
+		Let $X$ be a linearly independent spanning set for $\R^3$. We've already proven that this set has precisely three elements - let them be $X=\{x_1,x_2,x_3\}$.
+		
+		Since $X$ spans $\R^3$, given any $v\in \R^3$ there are (not necessarily unique) real numbers $v_1,v_2,v_3\in\R$ such that
+		\[v=\sum_{i=1}^3v_ix_i.\]
 	\end{itemize}
 
 This ends the proof: Indeed, we've proven
-\[(a)\implies (b)\iff (c)\iff (d)\]
+\[(a)\implies (b)\iff (c)\iff (d)\implies(a)\]
 \end{proof}
