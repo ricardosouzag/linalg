@@ -885,7 +885,7 @@ With this we can now state a similar result to what we have already proved in $\
 		\[\id_{\R^3}(v)=\sum_{i=1}^nv_i\id_{\R^3}(x_i)\]which is just
 		\[v=\sum_{i=1}^nv_ix_i\]and so $v\in \spen X$.
 		
-		This tells us that any $v\in\R^3$ is spanned by $X$ so $X$ spans $\R^3$.
+		This tells us that any $v\in\R^3$ is spanned by $X$, so $X$ spans $\R^3$.
 		
 		We claim that $x_1,x_2,x_3$ are non-coplanar (and hence $\spen X=\spen \{x_1,x_2,x_3\}$).
 		
@@ -902,5 +902,20 @@ With this we can now state a similar result to what we have already proved in $\
 		That tells us that $X$ must have precisely $3$ elements - otherwise there would be some elements which would be able to be written in multiple ways in terms of $X$, which contradicts the fact that $X$ is a base.
 		
 		This shows that a base is a spanning set with three elements.
+		
+		\item \underline{(b) $\iff$ (c)}:
+		
+		In this case, we're always assuming that $X$ has three vectors. We need to show that $X$ is, then, linearly independent if, and only if, it is a spanning set for $\R^3$.
+		
+		Take $v\in \R^3$, any vector. Then $X$ is a spanning set if, and only if, $\spen X=\R x_1+\R x_2+\R x_3$ is $\R^3$. But we have proven that this happens if, and only if, $X$ is a set of non-null, non-coplanar vectors - which is the same as saying that $X$ is linearly independent.
+		
+		So $X$ is a spanning set with three elements if, and only if, it is a linearly independent set with three elements.
+		
+		\item \underline{(b) $\implies$ (d)}:
+		
+		If $X$ is a spanning set with three elements, then we've already proven that it is also linearly independent. So $X$ is a linearly independent set which spans $\R^3$.
 	\end{itemize}
+
+This ends the proof: Indeed, we've proven
+\[(a)\implies (b)\iff (c)\iff (d)\]
 \end{proof}
