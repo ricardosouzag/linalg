@@ -887,11 +887,20 @@ With this we can now state a similar result to what we have already proved in $\
 		
 		This tells us that any $v\in\R^3$ is spanned by $X$ so $X$ spans $\R^3$.
 		
-		Since $X$ is a base, we claim that $x_1,x_2,x_3$ are non-coplanar (and hence $\spen X=\spen \{x_1,x_2,x_3\}$).
+		We claim that $x_1,x_2,x_3$ are non-coplanar (and hence $\spen X=\spen \{x_1,x_2,x_3\}$).
 		
-		Since $X$ is a base, there's a unique way to write any vector in $\R^3$ using vectors in $X$ - in particular, there's a unique way to write $x_1,x_2$ and $x_3$ in terms of $X$:
+		Indeed, since $X$ is a base, there's a unique way to write any vector in $\R^3$ using vectors in $X$ - in particular, there's a unique way to write $x_1,x_2$ and $x_3$ in terms of $X$:
 		\[x_1=1\cdot x_1+0\cdot x_2+0\cdot x_3+\cdots+0\cdot x_n\]
 		\[x_2=0\cdot x_1+1\cdot x_2+0\cdot x_3+\cdots+0\cdot x_n\]
-		\[x_3=0\cdot x_1+0\cdot x_2+1\cdot x_3+\cdots+0\cdot x_n\]this tells us that they're all non-parallel, and that no two of them span the other one - so they are non-coplanar.
+		\[x_3=0\cdot x_1+0\cdot x_2+1\cdot x_3+\cdots+0\cdot x_n\]this tells us that they're all non-parallel, and that no two of them span the other one - so they are non-coplanar. So $\spen X=\spen \{x_1,x_2,x_3\}$.
+		
+		But notice that we can do the same for any $x_i\in X$:
+		\[x_i=0\cdot x_1+\cdots+1\cdot x_i+\cdots+0\cdot x_n.\]
+		
+		So if $n>3$, we'd have two ways of writing any $x_i$ in terms of $X$: Either as $x_i=1\cdot x_i$ or as being spanned by $\{x_1,x_2,x_3\}$. But $X$ is a base, so there's only one way to write any vector in terms of $X$.
+		
+		That tells us that $X$ must have precisely $3$ elements - otherwise there would be some elements which would be able to be written in multiple ways in terms of $X$, which contradicts the fact that $X$ is a base.
+		
+		This shows that a base is a spanning set with three elements.
 	\end{itemize}
 \end{proof}
