@@ -1166,13 +1166,13 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 \end{df}
 
 \begin{df}
-	A finite set $X=\{x_1,x_2,\cdots, x_n\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if $$\hom(X,\R^2)\iso\hom_\R(\R^2,\R^2)$$ that is, given any $(a,b)\in \R^2$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in R$ such that $(a,b)=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_n x_n$, and therefore $f(a,b)=\lambda_1f(x_1)+\lambda_2f(x_2)+\cdots+\lambda_n f(x_n)$.
+	A finite set $X=\{x_1,x_2,\cdots, x_n\}\subseteq \R^2$ is called a \textbf{base of $\R^2$} or a \textbf{basic set} if given any $(a,b)\in \R^2$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in R$ such that $(a,b)=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_n x_n$.
 \end{df}
 
 \begin{rmk}
-	It follows trivially from this definition, taking the linear function $\id_{\R^2}:\R^2\to\R^2$, that given a base $X=\{x_1,x_2,\cdots,x_n\}$, then for any point $v\in\R^2$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in\R$ such that $v=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_nx_n$. 
-	
-	In other words, every vector can be written uniquely as a linear combination of a fixed base.
+	It follows trivially from this definition that a set $X$ is a base if, and only if, the image of any linear function $f:\R^2\to\R^2$ is entirely determined by $f(X)$: Indeed, given any $v\in \R^2$, we can write it as 
+	\[v=\lambda_1x_1+\cdots+\lambda_nx_n\]in a unique way, so $f(v)$ is just
+	\[f(v)=\lambda_1f(x_1)+\cdots+\lambda_nf(x_n).\]
 \end{rmk}
 
 \begin{ex}
