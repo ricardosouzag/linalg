@@ -175,8 +175,14 @@ In this section we're going to define linear functions for $\R^3$ and see that t
 	We'll denote the vectors $(1,0,0)$, $(0,1,0)$ and $(0,0,1)$ by $e_1,e_2$ and $e_3$, respectively.
 \end{df}
 \begin{df}
-	A finite set $X\subseteq\R^3$ is called a \textbf{base} of $\R^3$ if any linear function is uniquely determined by the image of $X$ - that is, if we write $X=\{x_1,x_2,\cdots,x_n\}$, then for all $v\in \R^3$, there are uniquely determined $\lambda_1,\cdots,\lambda_n\in \R$ such that $v=\lambda_1x_1+\cdots+\lambda_nx_n$ and thus the image of $v$ under any linear function $f:\R^3\to\R^3$ is given simply by $f(v)=\lambda_1f(x_1)+\cdots+\lambda_nf(x_n)$.
+	A finite set $X=\{x_1,x_2,\cdots, x_n\}\subseteq \R^3$ is called a \textbf{base of $\R^3$} or a \textbf{basic set} if given any $v\in \R^3$ there is a unique choice of $\lambda_1,\lambda_2,\cdots,\lambda_n\in R$ such that $(a,b)=\lambda_1x_1+\lambda_2x_2+\cdots+\lambda_n x_n$.
 \end{df}
+
+\begin{rmk}
+	It follows trivially from this definition that a set $X$ is a base if, and only if, the image of any linear function $f:\R^3\to\R^3$ is entirely determined by $f(X)$: Indeed, given any $v\in \R^3$, we can write it as 
+	\[v=\lambda_1x_1+\cdots+\lambda_nx_n\]in a unique way, so $f(v)$ is just
+	\[f(v)=\lambda_1f(x_1)+\cdots+\lambda_nf(x_n).\]
+\end{rmk}
 \begin{df}
 	The set $E:=\{e_1,e_2,e_3\}$ is called the \textbf{canonical base} of $\R^3$.
 \end{df}
@@ -937,12 +943,7 @@ With this we can now state a similar result to what we have already proved in $\
 		
 		Therefore, there's a unique way to write each vector $v\in\R^3$ as being spanned by $X$.
 		
-		\bigskip
-		Finally, let $f:\R^3\to\R^3$ be any linear function, and let $v=\sum_{i=1}^3v_ix_i$ as before (but now we know that the $v_i$s are uniquely determined).
-		
-		We can now write $f(v)$ as
-		
-		\[f(v)=\sum_{i=1}^3v_if(x_i),\]by simply applying $f$ on $v$ and using the fact that $f$ is linear. This shows that $f$ is entirely determined by $X$, so $X$ is a base.
+		This shows that $X$ is a base.
 	\end{itemize}
 
 This ends the proof: Indeed, we've proven
