@@ -949,3 +949,62 @@ With this we can now state a similar result to what we have already proved in $\
 This ends the proof: Indeed, we've proven
 \[(a)\implies (c)\iff (b)\iff (d)\implies(a)\]so they're all equivalent.
 \end{proof}
+
+\newpage
+\section{Back to linearity in $\R^3$}
+
+This section we'll explore a bit more about linear functions in $\R^3$, but since most results and proofs are literally the same as in $\R^2$, we're just gonna skip those and only show the new stuff.
+
+\begin{prop}
+	For any linear function $f:\R^3\to\R^3$, both $\im f$ and $\Ker f$ are subspaces.
+\end{prop}
+
+\begin{cor}
+	For any linear function $f$, the image (resp. the kernel) is either zero, a line through zero, a plane through zero or $\R^3$.
+\end{cor}
+
+\begin{prop}
+	Let $f:\R^3\to\R^3$ be a linear function. Then $f$ is injective if, and only if, $\Ker f =0$.
+\end{prop}
+
+\begin{df}
+	Given a function $f:\R^3\to\R^3$ we'll say that \textbf{$f$ is a linear isomorphism} if it is both linear and a bijection.
+\end{df}
+
+\begin{lemma}
+	If $f:\R^3\to\R^3$ is a linear isomorphism, then so is $f^{-1}$.
+\end{lemma}
+
+\begin{prop}
+	Let $f,g:\R^3\to\R^3$ be linear functions. Then both $f\circ g$ and $g\circ f$ are also linear functions.
+\end{prop}
+\begin{cor}
+	If both $f$ and $g$ are linear isomorphisms, then both $f\circ g$ and $g\circ f$ are also linear isomorphisms.
+\end{cor}
+
+\begin{theorem}
+	Let $f:\R^3\to\R^3$ be a linear function. Then the following are equivalent:
+	\begin{enumerate}[a)]
+		\item $f$ is a linear isomorphism;
+		\item $f$ is injective;
+		\item $f$ is surjective.
+	\end{enumerate}
+\end{theorem}
+\begin{proof}
+	Clearly, by definition of linear isomorphism, (a) implies both (b) and (c).
+	
+	\begin{itemize}
+		\item \underline{(b) $\implies$ (a) and (c)}:
+		
+		Let $f$ be injective and take $X\subseteq\R^3$ any base. We'll show that $f(X)$ is non coplanar - and thus that $f(X)$ spans $\R^3$. This suffices, because $f(X)\subseteq \im f$, so we will have shown that $\R^3\subseteq\im f\subseteq \R^3$, and so $\im f=\R^3$.
+		
+		First, notice that since $f$ is injective, $f(x_i)\neq f(x_j)$ for all $i\neq j$ in $\{1,2,3\}$.
+		
+		Suppose $f(x_1)\parallel f(x_2)$ - that is, $f(x_1)=\lambda f(x_2)$ for some $\lambda\in \R$. But, since $X$ is a base, we have that there are uniquely determined $a_1,a_2,a_3,b_1,b_2,b_3\in \R$ such that
+		\[f(x_1)=\sum_{i=1}^na_ix_1\]
+		\[f(x_2)=\sum_{i=1}^nb_ix_i.\]
+		
+		Combining these two with our assumption that $f(x_1)=\lambda f(x_2)$ we get
+		\[\sum_{i=1}^n a_ix_i=\sum_{i=1}^n (\lambda b_i)x_i\]and since $X$ is a base, we see that $a_i=\lambda b_i$ for all $i\leq 3$.
+	\end{itemize}
+\end{proof}
