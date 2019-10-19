@@ -1000,11 +1000,26 @@ This section we'll explore a bit more about linear functions in $\R^3$, but sinc
 		
 		First, notice that since $f$ is injective, $f(x_i)\neq f(x_j)$ for all $i\neq j$ in $\{1,2,3\}$.
 		
-		Suppose $f(x_1)\parallel f(x_2)$ - that is, $f(x_1)=\lambda f(x_2)$ for some $\lambda\in \R$. But, since $X$ is a base, we have that there are uniquely determined $a_1,a_2,a_3,b_1,b_2,b_3\in \R$ such that
-		\[f(x_1)=\sum_{i=1}^na_ix_1\]
-		\[f(x_2)=\sum_{i=1}^nb_ix_i.\]
+		Suppose $f(x_1)\parallel f(x_2)$ - that is, $f(x_1)=\lambda f(x_2)$ for some $\lambda\in \R$.
 		
-		Combining these two with our assumption that $f(x_1)=\lambda f(x_2)$ we get
-		\[\sum_{i=1}^n a_ix_i=\sum_{i=1}^n (\lambda b_i)x_i\]and since $X$ is a base, we see that $a_i=\lambda b_i$ for all $i\leq 3$.
+		But $f$ is linear, so $\lambda f(x_2)=f(\lambda x_2)$.
+		
+		Since $f$ is injective, $f(x_1)=f(\lambda x_2)$ implies $x_1=\lambda x_2$ - that is, $x_1\parallel x_2$.
+		
+		But we know that $X$ is a base, and thus linearly independent - so $x_1\nparallel x_2$. Therefore, $f(x_1)\nparallel f(x_2)$ - since that would lead to a contradiction.
+		
+		
+		\bigskip
+		Analogously, if we assume $\plane{f(x_1)}{f(x_2)}{f(x_3)}$, then we'd have $f(x_1)=\lambda_2f(x_2)+\lambda_3f(x_3)$ for some $\lambda_2,\lambda_3\in \R$ and, once again, since $f$ is linear, this implies $f(x_1)=f(\lambda_2x_2+\lambda_3x_3)$.
+		
+		But $f$ is, once more, linear, so $x_1=\lambda_2x_2+\lambda_3x_3$ and hence $\plane{x_1}{x_2}{x_3}$, which contradicts the fact that $X$ is a base (and thus linearly independent).
+		
+		Therefore, $f(X)$ is also a set with three non-coplanar (i.e. linearly independent) vectors - and hence it is a base. It follows that $f(X)$ spans $\R^3$ and, so, $f$ is surjective.
+		
+		Since $f$ is already injective, it is a linear isomorphism.
+		
+		\item \underline{(c) $\implies$ (a) and (b)}:
+		
+		Assume now that $f$ is a linear surjection, and take $X\subseteq\R^3$ a base for $\R^3$. Since $f$ is a surjection, put $y_i:=f^{-1}(x_i)$ for all $i\leq 3$, and let $Y=\{y_1,y_2,y_3\}$. We claim that $Y$ is a base.
 	\end{itemize}
 \end{proof}
