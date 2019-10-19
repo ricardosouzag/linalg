@@ -1021,5 +1021,21 @@ This section we'll explore a bit more about linear functions in $\R^3$, but sinc
 		\item \underline{(c) $\implies$ (a) and (b)}:
 		
 		Assume now that $f$ is a linear surjection, and take $X\subseteq\R^3$ a base for $\R^3$. Since $f$ is a surjection, put $y_i:=f^{-1}(x_i)$ for all $i\leq 3$, and let $Y=\{y_1,y_2,y_3\}$. We claim that $Y$ is a base.
+		
+		Indeed, following a reasoning similar to what we did before, the fact that $f$ is linear implies that if we could write $y_1=\lambda_2y_2+\lambda_3y_3$, for some $\lambda_2,\lambda_3\in \R$, then we'd get that $x_1=\lambda_2x_2+\lambda_3x_3$ - which contradicts the fact that $X$ is a base. This tells us that $Y$ has three elements and is linearly independent, so it is a base.
+		
+		Take now any $z\in Ker f$ - that is, $f(z)=0$.
+		
+		Since $Y$ is a base, there are some $z_1,z_2,z_3\in\R$ uniquely determined such that 
+		\[z=\sum_{i=1}^3z_iy_i.\]If we now apply $f$ on both sides we get
+		\[0=f(z)=\sum_{i=1}^3z_if(y_i)=\sum_{i=1}^3z_ix_i\]and since $X$ is a base, this implies that $z_i=0$ for all $i\leq 3$.
+		
+		Finally, this tells us that $z=z_1y_1+z_2y_2+z_3y_3=0+0+0=0$.
+		
+		So we shows that any element $z$ in the kernel of $f$ has to be zero. This shows that $\Ker f=0$ and, so, $f$ is injective.
+		
+		Finally, since $f$ is already surjective, it is an isomorphism.
 	\end{itemize}
+
+This ends the proof.
 \end{proof}
