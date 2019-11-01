@@ -417,12 +417,12 @@ To proceed with our studies, then, we're gonna need a new approach.
 		Let $P\in E_A$ be a point. Consider the directed segment $\overrightarrow{AP}$. It is, by definition, a vector in $V_A$ whose endpoint is $P$, and, hence, $t(\overrightarrow{AP})=P$, and so $t$ is surjective.
 	\end{itemize}
 
+Since $t$ is both injective and surjective, it is a bijection. This proves the result.
+\end{proof}
+
 \begin{df}
 	Given any vector $v\in V_A$, we define its \textbf{magnitude} or \textbf{size} or \textbf{norm} to be $\lVert v\rVert:=\lvert AP\rvert$, where $v=\overrightarrow{AP}$.
 \end{df}
-
-Since $t$ is both injective and surjective, it is a bijection. This proves the result.
-\end{proof}
 
 Let now $V^{r,s}_A$ be the following set: Take any two perpendicular lines $r$ and $s$ through $A$. Then, $V^{r,s}_A$ will be the set $(V_A\cap r)\times (V_A\cap s)$ - that is, the set of all pairs vectors of $E_A$ such that the first vector lies entirely in $r$ and the second vector lies entirely in $s$.
 
@@ -1176,27 +1176,9 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 \end{rmk}
 
 \begin{ex}
-	We claim that $\{(1,1),(1,-1)\}$ is a base.
+	We claim that $X=\{(1,1),(1,-1)\}$ is a base.
 	
-	To see this, take any linear function $f:\R^2\to\R^2$.
-	
-	We want to write $f(x,y)=\lambda_1 f(1,1)+\lambda_2 f(1,-1)$ for some $\lambda_1,\lambda_2\in\R$. We claim that $\lambda_1:=\dfrac{x+y}{2}$ and $\lambda_2:=\dfrac{x-y}{2}$ are the ones we're looking for.
-	
-	Indeed:
-	\begin{align*}
-		\lambda_1 f(1,1)+\lambda_2 f(1,-1)&=\frac{x+y}{2}f(1,1)+\frac{x-y}{2}f(1,-1)\\
-		&=f\left(\frac{x+y}{2},\frac{x+y}{2}\right)+f\left(\frac{x-y}{2},\frac{y-x}{2}\right)\\
-		&=f\left(\frac{x+y}{2}+\frac{x-y}{2},\frac{x+y}{2}+\frac{y-x}{2}\right)=f(x,y)
-	\end{align*}
-	
-	Assume now that $\lambda_1',\lambda_2'\in \R$ are other such numbers - that is, $f(x,y)=\lambda_1'f(1,1)+\lambda_2'f(1,-1)$. We need to show that $\lambda_1=\lambda_1'$ and $\lambda_2=\lambda_2'$. But:
-	
-	\begin{align*}
-		f(x,y)&=\lambda_1'f(1,1)+\lambda_2'f(1,-1)\\
-		&=f(\lambda_1',\lambda_1')+f(\lambda_2',-\lambda_2')\\
-		&=f(\lambda_1'+\lambda_2',\lambda_1'-\lambda_2')
-	\end{align*}for all linear functions. In particular, for the identity function we see that 
-	\[(x,y)=(\lambda_1'+\lambda_2',\lambda_1'-\lambda_2')\]and so $x=\lambda_1'+\lambda_2'$ and $y=\lambda_1'-\lambda_2'$.
+	To see this, take any $v\in\R^2$. Assume that there are two possible ways to write $v$ in terms of $X$: $v=\lambda_1 (1,1)+\lambda_2(1,-1)=\lambda'_1(1,1)+\lambda'_2(1,-1)$.
 	
 	Solving this, we see that $\lambda_1'=\dfrac{x+y}{2}=\lambda_1$ and $\lambda_2'=\dfrac{x-y}{2}=\lambda_2$.
 	

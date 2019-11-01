@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  1 NOV 2019 12:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  1 NOV 2019 13:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 ...irst Named Theorem}{173}{subsection.2.4.3}
+l.34 ...irst Named Theorem}{172}{subsection.2.4.3}
                                                    [1
 
 ])
@@ -1165,42 +1165,42 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 751.
 
 [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104]
-[105] [106] [107] [108] [109]
-Overfull \hbox (16.02257pt too wide) in paragraph at lines 1575--1576
+[105] [106] [107] [108]
+Overfull \hbox (16.02257pt too wide) in paragraph at lines 1557--1558
 []\OT1/cmr/bx/n/12 Corollary 2.2.3.6. []\OT1/cmr/m/it/12 Let $\OMS/cmsy/m/n/12 
 f\OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g ^^R \U/dsrom/m/n/12 R[]
 $ \OT1/cmr/m/it/12 be any col-lec-tion of vec-tors. Then $[]\OMS/cmsy/m/n/12 f\
 OML/cmm/m/it/12 v[]; v[]; []  ; v[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 =
  []
 
-[110] [111] [112] [113] [114] [115] [116] [117] [118]
+[109] [110] [111] [112] [113] [114] [115] [116] [117]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1861.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 1861.
+(hyperref)                removing `math shift' on input line 1843.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1861.
+(hyperref)                removing `superscript' on input line 1843.
 
-[119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129] [130]
-[131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141] [142]
-[143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153] [154]
-[155] [156] [157] [158] [159] [160] [161]
-Overfull \hbox (0.22801pt too wide) in paragraph at lines 3626--3627
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1843.
+
+[118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
+[130] [131] [132] [133] [134] [135] [136] [137] [138] [139] [140] [141]
+[142] [143] [144] [145] [146] [147] [148] [149] [150] [151] [152] [153]
+[154] [155] [156] [157] [158] [159] [160]
+Overfull \hbox (0.22801pt too wide) in paragraph at lines 3608--3609
 []\OT1/cmr/bx/n/12 Proposition 2.4.1.8. []\OT1/cmr/m/it/12 Let $\OML/cmm/m/it/1
 2 v; u \OMS/cmsy/m/n/12 2 \U/dsrom/m/n/12 R[]$\OT1/cmr/m/it/12 . Then the (un-s
 igned) area of the tri-an-gle $\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 vu$ \OT1/cmr/m
 /it/12 is just $[]$. 
  []
 
-[162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173]
-[174] [175] [176] [177] [178] [179] [180] [181] [182] [183]) [184] (./ch3.tex
+[161] [162] [163] [164] [165] [166] [167] [168] [169] [170] [171] [172]
+[173] [174] [175] [176] [177] [178] [179] [180] [181] [182]) [183] (./ch3.tex
 Chapter 3.
-[185
+[184
 
 ]
 
@@ -1215,7 +1215,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 18.
 
-[186] [187] [188]
+[185] [186] [187]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 144.
@@ -1228,7 +1228,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 144.
 
-[189] [190]
+[188] [189]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 191.
@@ -1241,13 +1241,13 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 191.
 
-[191] [192] [193] [194] [195] [196]
+[190] [191] [192] [193] [194] [195]
 Underfull \hbox (badness 1072) in paragraph at lines 415--416
 \U/dsrom/m/n/12 R[]$\OT1/cmr/m/n/12 ), two planes ($[] = \U/dsrom/m/n/12 R[]$\O
 T1/cmr/m/n/12 ) or an axis and a plane
  []
 
-[197] [198] [199] [200] [201] [202] [203] [204]
+[196] [197] [198] [199] [200] [201] [202] [203]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 646.
@@ -1260,7 +1260,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 646.
 
-[205] [206]
+[204] [205]
 Underfull \hbox (badness 1270) in paragraph at lines 726--727
 []\OT1/cmr/m/n/12 Indeed, $\OMS/cmsy/m/n/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 
 E\OT1/cmr/m/n/12 ) = \OMS/cmsy/m/n/12 f\U/msb/m/n/12 ?\OML/cmm/m/it/12 ; \OMS/c
@@ -1273,7 +1273,7 @@ f\OML/cmm/m/it/12 e[]; e[]\OMS/cmsy/m/n/12 g\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12
 12 g$\OT1/cmr/m/n/12 , and we know that
  []
 
-[207] [208] [209] [210] [211] [212] [213]
+[206] [207] [208] [209] [210] [211] [212]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 954.
@@ -1286,7 +1286,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 954.
 
-[214] [215]
+[213] [214]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1046.
@@ -1299,7 +1299,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1046.
 
-) [216]
+) [215]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./english.aux)
@@ -1309,8 +1309,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: 39F816EA35D0EAAF96BEBC587AF15059;2997.
  ) 
 Here is how much of TeX's memory you used:
- 37047 strings out of 492646
- 873622 string characters out of 6133325
+ 37046 strings out of 492646
+ 873614 string characters out of 6133325
  1047827 words of memory out of 5000000
  39113 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
@@ -1332,10 +1332,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (217 pages, 940342 bytes).
+Output written on english.pdf (216 pages, 938837 bytes).
 PDF statistics:
- 2456 PDF objects out of 2487 (max. 8388607)
- 2197 compressed objects within 22 object streams
- 1216 named destinations out of 1440 (max. 500000)
+ 2448 PDF objects out of 2487 (max. 8388607)
+ 2190 compressed objects within 22 object streams
+ 1215 named destinations out of 1440 (max. 500000)
  349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
