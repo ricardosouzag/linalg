@@ -1189,14 +1189,13 @@ This shows that the vectors $(1,0)$ and $(0,1)$ are very special. If you know wh
 		&=\left(\frac{x+y}{2}+\frac{x-y}{2},\frac{x+y}{2}+\frac{y-x}{2}\right)=(x,y)
 	\end{align*}
 	
-	Assume now that $\lambda_1',\lambda_2'\in \R$ are other such numbers - that is, $f(x,y)=\lambda_1'f(1,1)+\lambda_2'f(1,-1)$. We need to show that $\lambda_1=\lambda_1'$ and $\lambda_2=\lambda_2'$. But:
+	Assume now that $\lambda_1',\lambda_2'\in \R$ are other such numbers - that is, $f(x,y)=\lambda_1'(1,1)+\lambda_2'(1,-1)$. We need to show that $\lambda_1=\lambda_1'$ and $\lambda_2=\lambda_2'$. But:
 	
 	\begin{align*}
-		f(x,y)&=\lambda_1'f(1,1)+\lambda_2'f(1,-1)\\
-		&=f(\lambda_1',\lambda_1')+f(\lambda_2',-\lambda_2')\\
-		&=f(\lambda_1'+\lambda_2',\lambda_1'-\lambda_2')
-	\end{align*}for all linear functions. In particular, for the identity function we see that 
-	\[(x,y)=(\lambda_1'+\lambda_2',\lambda_1'-\lambda_2')\]and so $x=\lambda_1'+\lambda_2'$ and $y=\lambda_1'-\lambda_2'$.
+		(x,y)&=\lambda_1'(1,1)+\lambda_2'(1,-1)\\
+		&=(\lambda_1',\lambda_1')+(\lambda_2',-\lambda_2')\\
+		&=(\lambda_1'+\lambda_2',\lambda_1'-\lambda_2').
+	\end{align*}
 	
 	Solving this, we see that $\lambda_1'=\dfrac{x+y}{2}=\lambda_1$ and $\lambda_2'=\dfrac{x-y}{2}=\lambda_2$.
 	
