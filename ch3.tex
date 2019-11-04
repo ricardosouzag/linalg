@@ -1151,15 +1151,18 @@ Now let's go back to talking about square matrices.
 
 \begin{lemma}
 	Given $X,X'\in M_{3\times 1}(\R)$, $Y,Y'\in M_{1\times 3}(\R)$ and $\lambda \in \R$, then the following equations hold:
-	\begin{enumerate}[a)]
-		\item $(X+X')_{i,j}=X_{i,j}+X'_{i,j}$
-		\item $(Y+Y')_{i,j}=Y_{i,j}+Y'_{i,j}$
-		\item $(\lambda X)_{i,j}=\lambda X_{i,j}$
-		\item $(\lambda Y)_{i,j}=\lambda Y_{i,j}$
-		\item $(X^t)_{i,j}=X_{j,i}$
-		\item $(Y^t)_{i,j}=Y_{j,i}$
-		\item $(YX)_{i,j}=\sum_{l=1}^3 Y_{i,l}X_{l,j}$
-	\end{enumerate}for all $i,j$.
+	\begin{multicols}{2}
+		\begin{enumerate}[a)]
+			\item $(X+X')_{i,j}=X_{i,j}+X'_{i,j}$
+			\item $(Y+Y')_{i,j}=Y_{i,j}+Y'_{i,j}$
+			\item $(\lambda X)_{i,j}=\lambda X_{i,j}$
+			\item $(\lambda Y)_{i,j}=\lambda Y_{i,j}$
+			\item $(X^t)_{i,j}=X_{j,i}$
+			\item $(Y^t)_{i,j}=Y_{j,i}$
+			\item $(YX)_{i,j}=\sum_{l=1}^3 Y_{i,l}X_{l,j}$
+		\end{enumerate}
+	\end{multicols}
+	for all $i,j$.
 \end{lemma}
 
 \begin{prop}
