@@ -1112,3 +1112,25 @@ Once again, this is just a restatement of the same results as matrices in $\R^2$
 \begin{prop}
 	The additions defined above are associative, commutative, have identity and inverse elements, and the scalar multiplications defined above are associative, commutative, have identity and inverse elements, and are distributive over both scalar and matrix addition.
 \end{prop}
+
+
+\begin{df}
+	Given any two matrices $X\in M_{3\times 1}(\R)$ and $Y\in M_{1\times 3}(\R)$, we define the product $YX$ to be the $1\times 1$ matrix given by
+	\[YX:=\begin{pmatrix}
+	\sum_{i=1}^3x_iy_i
+	\end{pmatrix}\]where $X=\begin{pmatrix}
+	x_1\\x_2\\x_3
+	\end{pmatrix}$ and $Y=\begin{pmatrix}
+	y_1&y_2&y_3
+	\end{pmatrix}$.
+\end{df}
+
+\begin{prop}
+	The following equations hold:
+	\begin{enumerate}[a)]
+		\item $(Y+Y')X=YX+Y'X$
+		\item $Y(X+X')=YX+YX'$
+		\item $\lambda(YX)=(\lambda Y)X=Y(\lambda X)$
+		\item $(YX)^t=X^tY^t$
+	\end{enumerate}for all $Y,Y'\in M_{1\times 3}(\R)$, $X,X'\in M_{3\times 1}(\R)$ and $\lambda\in \R$.
+\end{prop}
