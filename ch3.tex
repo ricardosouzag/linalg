@@ -1165,13 +1165,15 @@ Now let's go back to talking about square matrices.
 	for all $i,j$.
 \end{lemma}
 
+This makes it easier to state and prove many of the results that will follow for matrices.
+
 \begin{prop}
 	There is a bijection between $M_{3\times 3}(\R)$ and $\hom_\R(\R^3,\R^3)$.
 \end{prop}
 
 \begin{df}
 	The above bijection induces for any two matrices $X,Y\in M_{3\times 3}(\R)$ and any real number $\lambda\in \R$ the following operations:
-	\[X+Y=\begin{pmatrix}
-	content...
-	\end{pmatrix}\]
+	\[(X+Y)_{i,j}:=X_{i,j}+Y_{i,j}\]
+	\[(\lambda X)_{i,j}:=\lambda X_{i,j}\]
+	\[(XY)_{i,j}:=\sum_{l=1}^3X_{i,l}Y_{l,j}\]where $i,j\leq 3$.
 \end{df}
