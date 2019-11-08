@@ -1188,5 +1188,22 @@ This makes it easier to state and prove many of the results that will follow for
 \end{proof}
 
 \begin{df}
-	content...
+	We'll call the matrix $I$ above the \textbf{identity matrix of $\R^3$}.
 \end{df}
+
+Once again, we'll define how to multiply $3\times 3$ matrices by $3\times 1$ matrices by applying all the isomorphisms we have so far:
+
+\begin{df}
+	We define the \textbf{evaluation map} $ev:\hom_\R(\R^3,\R^3)\times\R^3\to \R^3$ to be the map given by $ev(f,v):=f(v)$.
+\end{df}
+
+\begin{df}
+	Given any $A\in M_{3\times 3}(\R)$ and any $X\in M_{3\times 1}(\R)$, we define the multiplication $AX$ to be the extension of the evaluation map to matrices.
+	
+	In other words, if we let $f_A\in \hom_\R(\R^3,\R^3)$ be the image of $A$ under the isomorphism $M_{3\times 3}(\R)\iso\hom_\R(\R^3,\R^3)$ and $v_X$ be the image of $X$ under the isomorphism $M_{3\times 1}(\R)\iso \R^3$ then $ev(f_A,v_X)$ is a vector in $\R^3$, so we can look at its inverse image under the above-mentioned isomorphism and call it $AX$.
+\end{df}
+
+\begin{lemma}
+	If $A=(a_{i,j})_{i,j\leq 3}$ and $X=(x_{i,1})_{i\leq 3}$ then $AX$ is given by
+	\[(AX)_{i,j}=\sum_{l=1}^3a_{i,l}x_{l,1}.\]
+\end{lemma}
