@@ -1177,3 +1177,16 @@ This makes it easier to state and prove many of the results that will follow for
 	\[(\lambda X)_{i,j}:=\lambda X_{i,j}\]
 	\[(XY)_{i,j}:=\sum_{l=1}^3X_{i,l}Y_{l,j}\]where $i,j\leq 3$.
 \end{df}
+\begin{lemma}
+	There's a unique matrix $I\in M_{3\times 3}(\R)$ such that $IX=XI=I$ for all $X\in M_{3\times 3}(\R)$.
+\end{lemma}
+\begin{proof}
+	If we define \[I_{i,j}:=\begin{cases}
+	1, \mbox{ if }i=j\\
+	0, \mbox{otherwise}
+	\end{cases}\]then $I:=(I_{i,j})_{i,j\leq 3}$ can be easily shown to satisfy $IX=XI=X$ for all $X\in M_{3\times 3}(\R)$.
+\end{proof}
+
+\begin{df}
+	content...
+\end{df}
