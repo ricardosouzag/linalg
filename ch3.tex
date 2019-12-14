@@ -1209,10 +1209,26 @@ Once again, we'll define how to multiply $3\times 3$ matrices by $3\times 1$ mat
 \end{lemma}
 
 \begin{df}
-	Similarly, given any $A\in M_{3\times 3}(\R)$ and any $Y\in M_{1\times 3}(\R)$, we define the multiplication $YA$ to be $AY^t$.
+	Similarly, given any $A\in M_{3\times 3}(\R)$ and any $Y\in M_{1\times 3}(\R)$, we define the multiplication $YA$ to be $(A^tY^t)^t$.
 \end{df}
 
 \begin{lemma}
 	If $A=(a_{i,j})_{i,j\leq 3}$ and $Y=(y_{1,j})_{j\leq 3}$ then $YA$ is given by
 \[(YA)_{1,j}=\sum_{l=1}^3y_{1,l}a_{l,j}.\]
 \end{lemma}
+
+\begin{prop}
+	Let $A,A' \in M_{3\times 3}(\R)$, $X,X'\in M_{3\times 1}(\R)$, $Y,Y'\in M_{1\times 3}(\R)$ and $\lambda \in \R$. Then the following hold:
+	\begin{enumerate}[a)]
+		\item $Y(AX)=(YA)X$
+		\item $\lambda(AX)=(\lambda A)X=A(\lambda X)$
+		\item $\lambda(YA)=(\lambda Y)A=Y(\lambda A)$
+		\item $A(X+X')=AX+AX'$
+		\item $(Y+Y')A=YA+Y'A$
+		\item $(A+A')X=AX+A'X$
+		\item $Y(A+A')=YA+YA'$
+		\item $(AX)^t=X^tA^t$
+		\item $(YA)^t=A^tX^t$
+		\item 
+	\end{enumerate}
+\end{prop}
