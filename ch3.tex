@@ -1329,3 +1329,10 @@ Let's start off with some results that were true in $\R^2$ and continue being tr
 	Given any vector $v$ and any line $r$ both in $\R^3$, we define the \textbf{distance between $v$ and $r$} to be the real number $d(v,r)$ which is given by
 	\[d(v,r):=\min_{u\in r}\{d(v,u)\}.\]
 \end{df}
+
+\begin{prop}
+	Given any vector $v\in \R^3$ and any line $r\subseteq \R^3$, there's a unique vector $u\in r$ such that $d(v,u)=d(v,r)$. In other words, given any point and any line, we can always compute the distance between them.
+\end{prop}
+\begin{cor}
+	Given any vector $v\in \R^3$ and any line $r\subseteq \R^3$, then a vector $u\in r$ satisfies $d(v,u)=d(v,r)$ if, and only if, the line connecting $v$ and $u$ is orthogonal to $r$ - that is, $(v-u)\perp r$.
+\end{cor}
