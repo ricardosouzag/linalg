@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 DEC 2019 11:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  14 DEC 2019 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1312,7 +1312,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1242.
 
-) [219] [220]
+[219]) [220]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 284.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 284.
  (./english.aux)
@@ -1322,8 +1322,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: E7003507F91BADAE422D846A9A0D5056;3066.
  ) 
 Here is how much of TeX's memory you used:
- 37130 strings out of 492646
- 874744 string characters out of 6133325
+ 37137 strings out of 492646
+ 874837 string characters out of 6133325
  1047827 words of memory out of 5000000
  39117 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
@@ -1345,10 +1345,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (221 pages, 954421 bytes).
+Output written on english.pdf (221 pages, 955201 bytes).
 PDF statistics:
- 2568 PDF objects out of 2984 (max. 8388607)
- 2303 compressed objects within 24 object streams
- 1295 named destinations out of 1440 (max. 500000)
+ 2580 PDF objects out of 2984 (max. 8388607)
+ 2315 compressed objects within 24 object streams
+ 1302 named destinations out of 1440 (max. 500000)
  357 words of extra memory for PDF output out of 10000 (max. 10000000)
 

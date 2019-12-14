@@ -1293,3 +1293,17 @@ And now we can define distance in $\R^3$:
 	Given any two vectors $v,u\in \R^3$, we define the \textbf{distance between $v$ and $u$} to be the real number $d(v,u)$ given by
 	\[d(v,u):=\norm{v-u}.\]
 \end{df}
+
+And it follows trivially that this distance satisfies the same properties as it did in $\R^2$:
+
+\begin{prop}
+	Let $v,u,w\in \R^3$. Then:
+	\begin{enumerate}[a)]
+		\item $d(v,u)=d(u,v)$;
+		\item $d(v,u)\geq 0$, with equality happening if, and only if, $v=u$;
+		\item $d(v,u)\leq d(v,w)+d(w,u)$.
+	\end{enumerate}
+\end{prop}
+\begin{cor}
+	Item (c) above is an equality if, and only if, $w\in \R v+\R u$.
+\end{cor}
