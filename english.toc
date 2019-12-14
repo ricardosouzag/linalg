@@ -40,3 +40,4 @@
 \contentsline {subsection}{\numberline {3.1.4}Spanning sets and linear dependency in $\mathds {R}^3$}{204}{subsection.3.1.4}
 \contentsline {subsection}{\numberline {3.1.5}Back to linearity in $\mathds {R}^3$}{213}{subsection.3.1.5}
 \contentsline {subsection}{\numberline {3.1.6}Matrices in $\mathds {R}^3$}{215}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Distances in $\mathds {R}^3$}{219}{subsection.3.1.7}
