@@ -1205,5 +1205,14 @@ Once again, we'll define how to multiply $3\times 3$ matrices by $3\times 1$ mat
 
 \begin{lemma}
 	If $A=(a_{i,j})_{i,j\leq 3}$ and $X=(x_{i,1})_{i\leq 3}$ then $AX$ is given by
-	\[(AX)_{i,j}=\sum_{l=1}^3a_{i,l}x_{l,1}.\]
+	\[(AX)_{i,1}=\sum_{l=1}^3a_{i,l}x_{l,1}.\]
+\end{lemma}
+
+\begin{df}
+	Similarly, given any $A\in M_{3\times 3}(\R)$ and any $Y\in M_{1\times 3}(\R)$, we define the multiplication $YA$ to be $AY^t$.
+\end{df}
+
+\begin{lemma}
+	If $A=(a_{i,j})_{i,j\leq 3}$ and $Y=(y_{1,j})_{j\leq 3}$ then $YA$ is given by
+\[(YA)_{1,j}=\sum_{l=1}^3y_{1,l}a_{l,j}.\]
 \end{lemma}
