@@ -1338,3 +1338,15 @@ Let's start off with some results that were true in $\R^2$ and continue being tr
 \end{cor}
 
 Aside from those, all the results concerning shapes (rectangles, rhombi and circles) still hold.
+
+However, unlike in $\R^2$, we cannot define a ``canonical'' orthogonal vector $v^\perp$ to any given vector $v$. Let's explain why:
+
+\begin{prop}
+	Let $v\in \R^3$ be any non-null vector. Then the set $v^\perp:=\{u\in \R^3\mid v\perp u\}$ is a plane.
+\end{prop}
+\begin{proof}
+	From what we've already done, it suffices to show that $v^\perp$ is spanned by two vectors.
+	
+	Let $v=(v_1,v_2,v_3)$. Then we can rewrite $v^\perp$ as 
+	\[v^\perp=\{(x,y,z)\in \R^3\mid v_1x+v_2y+v_3z=0\},\]by definition of orthogonality.
+\end{proof}
