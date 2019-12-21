@@ -1358,3 +1358,18 @@ However, unlike in $\R^2$, we cannot define a ``canonical'' orthogonal vector $v
 		&=\left(-\frac{v_2}{v_1}u_2,u_2,0\right)+\left(-\frac{v_3}{v_1}u_3,0,u_3\right)=u_2\left(-\frac{v_2}{v_1},1,0\right)+u_3\left(-\frac{v_3}{v_1},0,1\right)
 	\end{align*}and since $\left\{\left(-\frac{v_2}{v_1},1,0\right),\left(-\frac{v_3}{v_1},0,1\right)\right\}$ are linearly independent, this means that $$v^\perp = \spen\left\{\left(-\frac{v_2}{v_1},1,0\right),\left(-\frac{v_3}{v_1},0,1\right)\right\}=\R\left(-\frac{v_2}{v_1},1,0\right)+\R\left(-\frac{v_3}{v_1},0,1\right)$$or, in other words, $v^\perp$ is a plane.
 \end{proof}
+
+Therefore, we can't just do as we did in $\R^2$ and pick one of two orthogonal vectors with the same size as given vector (since it was just a line). Now we have infinitely many orthogonal vectors with the same size as a given vector, so there's not obvious choice of which one of these is going to be our "chosen vector".
+
+That's why, going forward, we're going to use the following definition for $v^\perp$:
+
+\begin{df}
+	Given any non-null vector $v\in \R^3$, we define its \textbf{orthogonal complement} to be the plane $v^\perp$ given by
+	\[v^\perp:=\{u\in \R^3\mid v\perp u\}.\]
+\end{df}
+
+What's interesting about this definition is that not only is the orthogonal complement of any vector a plane (as we've shown above), but also the converse is true:
+
+\begin{lemma}
+	Let $\pi\subseteq\R^3$ be any plane containing zero. Then there's some vector $v\in \R^3$ such that $\pi=v^\perp$.
+\end{lemma}
