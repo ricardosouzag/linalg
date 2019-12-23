@@ -1373,3 +1373,14 @@ What's interesting about this definition is that not only is the orthogonal comp
 \begin{lemma}
 	Let $\pi\subseteq\R^3$ be any plane containing zero. Then there's some vector $v\in \R^3$ such that $\pi=v^\perp$.
 \end{lemma}
+
+This will actually require some other lemmas first in order to prove it. We can, however, prove the following slightly weaker statement:
+
+\begin{prop}
+	Let Let $\pi\subseteq\R^3$ be any plane containing zero and $v\in \R^3$ such that $v\perp \pi$ - in other words, $v\perp u$ for all $u\in \pi$. Then $\pi=v^\perp$.
+\end{prop}
+\begin{proof}
+	Since, by hypothesis, $v\perp u$ for all $u\in \pi$, we have that every $u\in \pi$ is also in $v^\perp$, and so $\pi\subseteq v^\perp$. Since we already know that $v^\perp$ is a plane, we get that $\pi=v^\perp$.
+\end{proof}
+
+In other words, all that we need to prove in order to prove the preceding lemma is that given any plane $\pi$ we can always find a vector $v$ such that $v\perp \pi$. That's precisely what we're going to do now:
