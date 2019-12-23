@@ -1386,3 +1386,11 @@ This will actually require some other lemmas first in order to prove it. We can,
 In other words, all that we need to prove in order to prove the preceding lemma is that given any plane $\pi$ we can always find a vector $v$ such that $v\perp \pi$. That's precisely what we're going to do now.
 
 To do that, however, we'll need to work slightly backwards from what we did back in $\R^2$. If you'll recall, we started by defining what $v^\perp$ meant, and then we defined $\det(v,u)$ to be $\gen{v,u^\perp}$.
+
+Here we're going to do the opposite: We'll first describe what the determinant is, and then we'll use that to define the orthogonal vector to a given plane.
+
+\bigskip
+We can start off by giving an intuitive definition:
+\begin{df}
+	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the cube with edges $f(e_1),f(e_2),f(e_3)$.
+\end{df}
