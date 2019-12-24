@@ -1470,7 +1470,9 @@ To do that, first we'll need to give more structure to $\R^3$:
 	
 	\begin{itemize}
 		\item $v(1)u$ failing tells us that $v_1\not<u_1$ - or, in other words, $v_1\geq u_1$, since $\R$ is totally ordered.
-		\item $v(2)u$ failing tells us that either or both of these is true: $v_1\neq u_1$ and $v_2\not<u_2$.
+		\item $v(2)u$ failing tells us that either or both of these is true: $v_1\neq u_1$ and $v_2\not<u_2$. But since $\R$ is totally ordered, $v_2\not<u_2$ is just the same as $v_2\geq u_2$.
+		\item $v(3)u$ failing tells us that either or all of these is true: $v_1\neq u_1$, $v_2\neq u_2$ and $v_3\not<u_3$. Once again, since $\R$ is totally ordered, $v_3\not<u_3$ is the same as $v_3\geq u_3$.
+		\item $v(4)u$ failing tells us that either or all of these is true: $v_1\neq u_1$, $v_2\neq u_2$ and $v_3\neq u_3$.
 	\end{itemize}	
 \end{proof}
 We can start off by giving an intuitive definition:
