@@ -1492,6 +1492,13 @@ To do that, first we'll need to give more structure to $\R^3$:
 	
 	Finally we check the final letter: $z_3<v_3$, so $v$ comes last.
 \end{ex}
+
+And, just before actually defining the determinant, we have to give one last definition:
+
+\begin{df}
+	Let $(X,\leq)$ be a totally ordered set. A function $f:X\to X$ is said to \textbf{preserve cyclic order} if for all $x\leq y\leq z$ in $X$ we have that either of $f(x)\leq f(y)\leq f(z)$, $f(y)\leq f(z)\leq f(x)$ or $f(z)\leq f(x)\leq f(y)$ hold.
+\end{df}
+
 We can start off by giving an intuitive definition:
 \begin{df}
 	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the cube with edges $f(e_1),f(e_2),f(e_3)$. In other words
