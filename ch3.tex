@@ -1464,17 +1464,17 @@ To do that, first we'll need to give more structure to $\R^3$:
 
 	This shows that $\leq$ is indeed an order in $\R^3$.
 	
-	Now all that's left is to show that it is a total order - i.e., that given any two vectors $v,u\in\R^3$ then either $v\leq u$ or $u\leq v$ hold.
+	Now all that's left is to show that it is a total order - i.e., that given any two vectors $v,u\in\R^3$ then either or both of $v\leq u$ and $u\leq v$ hold.
 	
 	To do that, take any $v,u\in \R^3$.
 	\begin{itemize}
 		\item If $v_1<u_1$ or $u_1<v_1$, then we're done (the first case tells us $v(1)u$ and hence $v\leq u$, and the second case tells us $u(1)v$ and hence $u\leq v$). Otherwise we have $v_1=u_1$ and we now check the second entries.
 		\item If $v_2<u_2$ or $u_2<v_2$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(2)u$ and $u(2)v$ respectively). Otherwise we have $v_2=u_2$.
 		\item If $v_3<u_3$ or $u_3<v_3$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step) and $v_2=u_2$ (otherwise we would have stopped in the second step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(3)u$ and $u(3)v$ respectively). Otherwise we have $v_3=u_3$.
-		\item But now we have $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$ (otherwise we would have stopped at either the first, second or third steps) and this $v=u$.
+		\item But now we have $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$ (otherwise we would have stopped at either the first, second or third steps) and thus $v=u$, so both $v\leq u$ and $u\leq v$ hold.
 	\end{itemize}
 
-	No matter the case, then, we can always conclude either $v\leq u$ or $u\leq v$. This implies that $\leq$ is a total order and finishes the proof.
+	No matter the case, then, we can always conclude either or both of $v\leq u$ and $u\leq v$. This implies that $\leq$ is a total order and finishes the proof.
 \end{proof}
 We can start off by giving an intuitive definition:
 \begin{df}
