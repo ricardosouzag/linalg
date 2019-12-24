@@ -1393,15 +1393,33 @@ Here we're going to do the opposite: We'll first describe what the determinant i
 To do that, first we'll need to give more structure to $\R^3$:
 
 \begin{df}
-	Let $\leq$ in $\R^3$ be a relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if,
-	\begin{itemize}
+	Let $\leq$ in $\R^3$ be a relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if, any of the following hold:
+	\begin{itemize}		
 		\item $v_1\leq u_1$;
 		\item $v_1=u_1$, but $v_2\leq u_2$;
-		\item $v_1=u_1$ and $v_2=u_2$, but $v_3\leq u_3$.
-	\end{itemize}.
+		\item $v_1=u_1$ and $v_2=u_2$, but $v_3\leq u_3$;
+		\item $v_i=u_i$ for all $1\leq i\leq 3$.
+	\end{itemize}
 
 	This is an order, which is called the \textbf{lexicographical order}, or dictionary order.
 \end{df}
+
+\begin{prop}
+	$\R^3$ with the lexicographical order is a totally-ordered set.
+\end{prop}
+\begin{proof}
+	First, let us show that $\leq$ the lexicographical order is indeed an order:
+	
+	\begin{itemize}
+		\item \underline{$\leq$ is reflexive:}
+		
+		This is trivial, by definition of $\leq$.
+		
+		\item \underline{$\leq$ is antisymmetric:}
+		
+		Let $v,u\in \R^3$ be such that $v\leq u$ and $u\leq v$. We need to show that this implies $v=u$.
+	\end{itemize}
+\end{proof}
 We can start off by giving an intuitive definition:
 \begin{df}
 	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the cube with edges $f(e_1),f(e_2),f(e_3)$. In other words
