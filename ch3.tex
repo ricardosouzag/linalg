@@ -1434,7 +1434,7 @@ To do that, first we'll need to give more structure to $\R^3$:
 			\begin{center}
 				\begin{tabu}{|c|[2pt]c|c|c|c|}
 					\hline
-					 & $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
+					& $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
 					$v(1)u$ &&&& \\\hline
 					$v(2)u$ &&&&\\\hline
 					$v(3)u$ &&&&\\\hline
@@ -1443,7 +1443,7 @@ To do that, first we'll need to give more structure to $\R^3$:
 			\end{center}		
 		Here, $u(2)w$, for instance, should be read as ``$u\leq w$ because they satisfy condition (2) in the definition of $\leq$'' - or, in other words, $u(2)w$ means ``$u_1=w_1$, but $u_2<w_2$'' - and so on.
 		
-		That said, this is how this table should be filled-in: For instance, suppose we have $v\leq u$ because $v(3)u$ and $u\leq w$ because $u(2)w$. This means that ``$v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$'' and ``$u_1=w_1$, but $u_2<w_2$''.
+		That said, this is how this table should be filled-in: For instance, suppose we have $v\leq u$ because $v(3)u$, and $u\leq w$ because $u(2)w$. This means that ``$v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$'' and ``$u_1=w_1$, but $u_2<w_2$''.
 		
 		So combining these two into a single statement we get ``$v_1=u_1=w_1$, $v_2=u_2<w_2$ and $v_3<u_3$'' - which, in particular, tells us that ``$v_1=w_1$, but $v_2<w_2$'' which is the definition of $v(2)w$.
 		
@@ -1461,6 +1461,16 @@ To do that, first we'll need to give more structure to $\R^3$:
 			\end{tabu}
 		\end{center}which tells us that no matter the reason why $v\leq u$ and $u\leq w$, this is always enough to conclude $v\leq w$ - and thus $\leq$ is transitive.
 	\end{itemize}
+
+	This shows that $\leq$ is indeed an order in $\R^3$.
+	
+	Now all that's left is to show that it is a total order - i.e., that given any two vectors $v,u\in\R^3$ then either $v\leq u$ or $u\leq v$ hold.
+	
+	To do that, take any $v,u\in \R^3$. If $v\leq u$, then we're done. Otherwise, by definition of $\leq$, we have that all of $v(1)u$, $v(2)u$, $v(3)u$ and $v(4)u$ fail (because, once again by definition of $\leq$, if at least one of them was true, then we'd have $v\leq u$).
+	
+	$v(1)u$ failing tells us that $v_1\not<u_1$ - or, in other words, $v_1\geq u_1$, since $\R$ is totally ordered.
+	
+	$v(2)u$ failing tells us that either or both of these is true: $v_1\neq u_1$ and $v_2\not<u_2$.
 \end{proof}
 We can start off by giving an intuitive definition:
 \begin{df}
