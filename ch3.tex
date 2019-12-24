@@ -1393,7 +1393,7 @@ Here we're going to do the opposite: We'll first describe what the determinant i
 To do that, first we'll need to give more structure to $\R^3$:
 
 \begin{df}
-	Let $\leq$ in $\R^3$ be a relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if, any of the following hold:
+	Let $\leq$ in $\R^3$ be the relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if, any of the following hold:
 	\begin{itemize}		
 		\item $v_1< u_1$;
 		\item $v_1=u_1$, but $v_2< u_2$;
@@ -1417,7 +1417,25 @@ To do that, first we'll need to give more structure to $\R^3$:
 		
 		\item \underline{$\leq$ is antisymmetric:}
 		
-		Let $v,u\in \R^3$ be such that $v\leq u$ and $u\leq v$. We need to show that this implies $v=u$.
+		Let $v,u\in \R^3$ be such that $v\leq u$ and $u\leq v$. We need to show that this implies $v=u$. We'll do this by considering all the possible cases as to why $v\leq u$:
+		
+		\begin{itemize}
+			\item If $v_1\leq u_1$, then $u_1>v_1$ which contradicts $u\leq v$, so this cannot happen.
+			\item If $v_1=u_1$, but $v_2<u_2$, then $u_2>v_2$ which contradicts $u\leq v$, so this cannot happen.
+			\item If $v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$, then $u_3>v_3$ which contradicts $u\leq v$, so this cannot happen.
+			\item If $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$, this implies $v=u$ which doesn't contradict $u\leq v$.
+		\end{itemize}
+	
+		Since the only case for $v\leq u$ which doesn't contradict $u\leq v$ is $v=u$, we have that $\leq$ is indeed antisymmetric.
+		
+		\item \underline{$\leq$ is transitive:}
+		
+		Let $v,u,w\in \R^3$ be such that $v\leq u$ and $u\leq w$. We need to show that this implies $v\leq w$. We once again need to do that by considering all possible cases. To do so, we'll use the following table:
+		
+		\begin{tabu}{c|c|c|c|c}
+			\hline
+			$\leq$ & $u_1< w_1$ & $u_1=w_1$, $u_2<w_2$ & $u_1=w_1$, $u_2=w_2$, $u_3<w_3$&$u_1=w_1$, $u_2=w_2$, $u_3=w_3$
+		\end{tabu}
 	\end{itemize}
 \end{proof}
 We can start off by giving an intuitive definition:
