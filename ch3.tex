@@ -1394,11 +1394,11 @@ To do that, first we'll need to give more structure to $\R^3$:
 
 \begin{df}
 	Let $\leq$ in $\R^3$ be a relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if,
-	\begin{enumerate}[(1)]
+	\begin{itemize}
 		\item $v_1\leq u_1$;
-		\item otherwise, if $v_2\leq u_2$;
-		\item otherwise, if $v_3\leq u_3$.
-	\end{enumerate}.
+		\item $v_1=u_1$, but $v_2\leq u_2$;
+		\item $v_1=u_1$ and $v_2=u_2$, but $v_3\leq u_3$.
+	\end{itemize}.
 
 	This is an order, which is called the \textbf{lexicographical order}, or dictionary order.
 \end{df}

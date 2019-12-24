@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  24 DEC 2019 12:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.15)  24 DEC 2019 12:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1335,8 +1335,8 @@ Package rerunfilecheck Info: File `english.out' has not changed.
 (rerunfilecheck)             Checksum: A8B4670B096195968CB092AC31F71229;3134.
  ) 
 Here is how much of TeX's memory you used:
- 37170 strings out of 492646
- 875347 string characters out of 6133325
+ 37167 strings out of 492646
+ 875323 string characters out of 6133325
  1047827 words of memory out of 5000000
  39121 multiletter control sequences out of 15000+600000
  18046 words of font info for 77 fonts, out of 8000000 for 9000
@@ -1358,10 +1358,10 @@ ic/amsfonts/cm/cmsy8.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmti12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsr
 om12.pfb><c:/texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb
 ><c:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on english.pdf (224 pages, 965754 bytes).
+Output written on english.pdf (224 pages, 965746 bytes).
 PDF statistics:
- 2628 PDF objects out of 2984 (max. 8388607)
- 2360 compressed objects within 24 object streams
- 1331 named destinations out of 1440 (max. 500000)
+ 2625 PDF objects out of 2984 (max. 8388607)
+ 2357 compressed objects within 24 object streams
+ 1328 named destinations out of 1440 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
