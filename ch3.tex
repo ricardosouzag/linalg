@@ -1431,16 +1431,30 @@ To do that, first we'll need to give more structure to $\R^3$:
 		\item \underline{$\leq$ is transitive:}
 		
 		Let $v,u,w\in \R^3$ be such that $v\leq u$ and $u\leq w$. We need to show that this implies $v\leq w$. We once again need to do that by considering all possible cases. To do so, we'll use the following table:
-		\begin{center}
 			\begin{tabu}{|c|[2pt]c|c|c|c|}
 				\hline
 				$\leq$ & $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
-				$v(1)u$ & $v(1)w$ & $v(1)w$ & $v(1)w$ & $v(1)w$\\\hline
+				$v(1)u$ & \\\hline
 				$v(2)u$ & $v(1)w$ & $v(2)w$ & $v(2)w$ & $v(2)w$\\\hline
 				$v(3)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(3)w$\\\hline
 				$v(4)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(4)w$\\\hline
-			\end{tabu}
-		\end{center}
+			\end{tabu}Here, $u(2)w$, for instance, should be read as ``$u\leq w$ because they satisfy condition (2) in the definition of $\leq$'' - or, in other words, $u(2)w$ means ``$u_1=w_1$, but $u_2<w_2$'' - and so on.
+		
+		That said, this is how this table should be read: For instance, suppose we have $v(3)u$ and $u(2)w$. This means that ``$v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$'' and ``$u_1=w_1$, but $u_2<w_2$''.
+		
+		So combining these two into a single statement we get ``$v_1=u_1=w_1$, $v_2=u_2<w_2$ and $v_3<u_3$'' - which, in particular, tells us that ``$v_1=w_1$, but $v_2<w_2$'' which is the definition of $v(2)w$.
+		
+		So we put $v(2)w$ in the row $v(3)u$ and column $u(2)w$.
+		
+		Proceeding like this for all rows and columns, we get the following table:
+		\begin{tabu}{|c|[2pt]c|c|c|c|}
+			\hline
+			$\leq$ & $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
+			$v(1)u$ & $v(1)w$ & $v(1)w$ & $v(1)w$ & $v(1)w$\\\hline
+			$v(2)u$ & $v(1)w$ & $v(2)w$ & $v(2)w$ & $v(2)w$\\\hline
+			$v(3)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(3)w$\\\hline
+			$v(4)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(4)w$\\\hline
+		\end{tabu}
 		
 	\end{itemize}
 \end{proof}
