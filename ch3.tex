@@ -1390,7 +1390,19 @@ To do that, however, we'll need to work slightly backwards from what we did back
 Here we're going to do the opposite: We'll first describe what the determinant is, and then we'll use that to define the orthogonal vector to a given plane.
 
 \bigskip
+To do that, first we'll need to give more structure to $\R^3$:
+
+\begin{df}
+	Let $\leq$ in $\R^3$ be a relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if,
+	\begin{enumerate}[(1)]
+		\item $v_1\leq u_1$;
+		\item otherwise, if $v_2\leq u_2$;
+		\item otherwise, if $v_3\leq u_3$.
+	\end{enumerate}.
+
+	This is an order, which is called the \textbf{lexicographical order}, or dictionary order.
+\end{df}
 We can start off by giving an intuitive definition:
 \begin{df}
-	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the cube with edges $f(e_1),f(e_2),f(e_3)$.
+	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the cube with edges $f(e_1),f(e_2),f(e_3)$. In other words
 \end{df}
