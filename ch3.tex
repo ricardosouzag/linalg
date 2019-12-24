@@ -1480,7 +1480,15 @@ To do that, first we'll need to give more structure to $\R^3$:
 \begin{ex}
 	Let us compare some vectors to see what's going on in here:
 	
-	Let $v=(1,2,3)$, $u=(1,0,0)$, $w=(-3,1,4)$ and $z=(1,2,-4)$. We claim that $w\leq u\leq z\leq v$.
+	Let $v=(1,2,3)$, $u=(1,0,0)$, $w=(-3,1,4)$ and $z=(1,2,-4)$.
+	
+	We claim that $w\leq u\leq z\leq v$.
+	
+	To see that, think of vectors as ``words'' in a dictionary. You start by comparing the first letter (in this case, the first entry): $w_1<v_1=u_1=z_1$, so we know $w$ comes before the others.
+	
+	Now we check the second letter: $u_2<v_2=z_2$ so we know $u$ comes after $w$, but before $v$ and $z$.
+	
+	Finally we check the final letter: $z_3<v_3$, so $v$ comes last.
 \end{ex}
 We can start off by giving an intuitive definition:
 \begin{df}
