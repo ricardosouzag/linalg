@@ -1414,7 +1414,25 @@ u_1w_1x+u_1w_2y+u_1w_3z=0
 	w_1(-u_2y-u_3z)+u_1w_2y+u_1w_3z&=0\\
 	(u_1w_2-u_2w_1)y+(u_1w_3-u_3w_1)z&=0\\
 	(u_1w_2-u_2w_1)y&=-(u_1w_3-u_3w_1)z
-\end{align*}
+\end{align*}and we see that any value of $z$ determines a unique value of $y$, and these two together determine a unique value for $x$.
+
+So if we take, for instance, $z=u_1w_2-u_2w_1$, then the last equation becomes
+\[(u_1w_2-u_2w_1)y=-(u_1w_3-u_3w_1)(u_1w_2-u_2w_1)\]which has an obvious solution: $y=-(u_1w_3-u_3w_1)=u_3w_1-u_1w_3$.
+
+Finally, if we replaces these two values back in the expression for $u_1x$ we get:
+\begin{align*}
+	u_1x&=-u_2y-u_3z\\
+	&=-u_2(u_3w_1-u_1w_3)-u_3(u_1w_2-u_2w_1)\\
+	&=-u_2u_3w_1+u_1u_2w_3-u_1u_3w_2+u_2u_3w_1\\
+	&=u_1u_2w_3-u_1u_3w_2=u_1(u_2w_3-u_3w_2)
+\end{align*}and hence $x=u_2w_3-u_3w_2$.
+
+This tells us that
+\[v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)\]is a solution to
+\[\begin{cases}
+u_1x+u_2y+u_3z=0\\
+w_1x+w_2y+w_3z=0.
+\end{cases}\]Indeed:
 
 \begin{lemma}
 	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $$v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$$ is such that $v\perp \pi$.
