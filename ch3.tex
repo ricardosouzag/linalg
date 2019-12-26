@@ -1408,7 +1408,13 @@ Isolating $u_1x$ in the first equation and multiplying the second one by $u_1$ g
 \[\begin{cases}
 u_1x=-u_2y-u_3z\\
 u_1w_1x+u_1w_2y+u_1w_3z=0
-\end{cases}\]
+\end{cases}\]so now if we replace the value of $u_1x$ given by the first equation in the second one, it becomes
+\begin{align*}
+	u_1w_1x+u_1w_2y+u_1w_3z&=0\\
+	w_1(-u_2y-u_3z)+u_1w_2y+u_1w_3z&=0\\
+	(u_1w_2-u_2w_1)y+(u_1w_3-u_3w_1)z&=0\\
+	(u_1w_2-u_2w_1)y&=-(u_1w_3-u_3w_1)z
+\end{align*}
 
 \begin{lemma}
 	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $$v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$$ is such that $v\perp \pi$.
