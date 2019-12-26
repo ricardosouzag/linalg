@@ -1391,16 +1391,16 @@ Now we would like to use this to define determinants. So we need to do what we d
 
 In other words, all that we need to do in order to define a determinant is show that given any plane $\pi$ we can always find a uniquely determined vector $v$ such that $v\perp \pi$. That's precisely what we're going to do now.
 
+Now, we need to find a vector that is at once orthogonal to both $u$ and $w$. Remember that given any vector $u$, its orthogonal space $u^\perp$ is a plane. In other words, 
+\[u^\perp=\{(x,y,z)\in \R^3\mid u_1x+u_2y+u_3z=0\}\]is a plane. Similarly, 
+\[w^\perp=\{(x,y,z)\in \R^3\mid w_1x+w_2y+w_3z=0\}\]is also a plane. Therefore, $u^\perp\cap w^\perp$ is a line, given by
+\[u^\perp\cap w^\perp=\{(x,y,z)\in\R^3\mid u_1x+u_2y+u_3z=0\mbox{ and }w_1x+w_2y+w_3z=0\}.\]
+
 \begin{lemma}
 	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $$v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$$ is such that $v\perp \pi$.
 \end{lemma}
 \begin{proof}
-	This is just an easy computation:
-	
-	\begin{align*}
-		\gen{v,u}&=\gen{(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1),(u_1,u_2,u_3)}\\
-		&=u_1(u_2w_3-u_3w_2)+u_2(,u_3w_1-u_1w_3)+u_3(u_1w_2-u_2w_1)
-	\end{align*}
+	This is just an easy computation and will be left as an exercise (just check that $\gen{v,u}=\gen{v,w}=0$).
 \end{proof}
 
 \bigskip
