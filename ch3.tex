@@ -1387,20 +1387,13 @@ What's interesting about this definition is that not only is the orthogonal comp
 	But $v^\perp$ is a plane, so the only way it can contain $\pi$ is if it is equal to $\pi$. It follows then that $\pi= v^\perp$ and this ends the proof.
 \end{proof}
 
-This will actually require some other lemmas first in order to prove it. We can, however, prove the following slightly weaker statement:
+Now we would like to use this to define determinants. So we need to do what we did before, in $\R^2$: There, we defined the determinant of $v,u$ as $\gen{v,u^\perp}$ because $u^\perp$ was a unique vector depending entirely on $u$. We would like, then, to, given $u,w$, get a unique vector $p$ such that the determinant of $v,u,w$ is just $\gen{v,p}$.
 
-\begin{prop}
-	Let Let $\pi\subseteq\R^3$ be any plane containing zero and $v\in \R^3$ such that $v\perp \pi$ - in other words, $v\perp u$ for all $u\in \pi$. Then $\pi=v^\perp$.
-\end{prop}
-\begin{proof}
-	Since, by hypothesis, $v\perp u$ for all $u\in \pi$, we have that every $u\in \pi$ is also in $v^\perp$, and so $\pi\subseteq v^\perp$. Since we already know that $v^\perp$ is a plane, we get that $\pi=v^\perp$.
-\end{proof}
+In other words, all that we need to do in order to define a determinant is show that given any plane $\pi$ we can always find a uniquely determined vector $v$ such that $v\perp \pi$. That's precisely what we're going to do now.
 
-In other words, all that we need to prove in order to prove the preceding lemma is that given any plane $\pi$ we can always find a vector $v$ such that $v\perp \pi$. That's precisely what we're going to do now.
-
-To do that, however, we'll need to work slightly backwards from what we did back in $\R^2$. If you'll recall, we started by defining what $v^\perp$ meant, and then we defined $\det(v,u)$ to be $\gen{v,u^\perp}$.
-
-Here we're going to do the opposite: We'll first describe what the determinant is, and then we'll use that to define the orthogonal vector to a given plane.
+\begin{lemma}
+	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$ is such that $v\perp \pi$.
+\end{lemma}
 
 \bigskip
 To do that, first we'll need to give more structure to $\R^3$:
