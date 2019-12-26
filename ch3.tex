@@ -1373,6 +1373,19 @@ What's interesting about this definition is that not only is the orthogonal comp
 \begin{lemma}
 	Let $\pi\subseteq\R^3$ be any plane containing zero. Then there's some vector $v\in \R^3$ such that $\pi=v^\perp$.
 \end{lemma}
+\begin{proof}
+	Let $\pi=\R u+\R w$ for some $u,w\in \R^3$. Then both $u^\perp$ and $w^\perp$ are planes and, by definition, any vector in $w^\perp\cap w^\perp$ is at once orthogonal to both $u$ and $w$.
+	
+	But $u^\perp$ and $w^\perp$ are planes, and we know that two planes intersect in a line. So $u^\perp\cap w^\perp$ is a line and, therefore, there is some vector $v\in \R^3$ such that $u^\perp\cap w^\perp = \R v$. Like we said before, we already know that $v\perp u$ and $v\perp w$.
+	
+	Let us prove that $v^\perp = \pi$. Take any $p\in \pi$. So, by definition, there exists $\mu,\omega\in \R$ such that $p=\mu u+\omega w$. Therefore:
+	\begin{align*}
+		\gen{v,p}&=\gen{v,\mu u+\omega w}\\
+		&=\mu\gen{v,u}+\omega\gen{v,w}=0
+	\end{align*}so $v\perp p$ for all $p\in \pi$ - that is, $v\perp \pi$. This tells us that $\pi\subseteq v^\perp$.
+	
+	But $v^\perp$ is a plane, so the only way it can contain $\pi$ is if it is equal to $\pi$. It follows then that $\pi= v^\perp$ and this ends the proof.
+\end{proof}
 
 This will actually require some other lemmas first in order to prove it. We can, however, prove the following slightly weaker statement:
 
