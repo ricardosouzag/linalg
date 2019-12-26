@@ -1492,6 +1492,11 @@ One final result tells us that there's a very strong connection between the cros
 	We can now proceed:
 	\begin{align*}
 		\norm{u\times w}^2&=(u_2w_3-u_3w_2)^2+(u_3w_1-u_1w_3)^2+(u_1w_2-u_2w_1)^2\\
+		&=(u_1w_2)^2+(u_1w_3)^2+(u_2w_1)^2+(u_2w_3)^2+(u_3w_1)^2+(u_3w_2)^2\\
+		&\ -2u_1u_2w_1w_2-2u_1u_3w_1w_3-2u_2u_3w_2w_3\\
+		&=\sum_{\substack{i,j=1\\i\neq j
+		}}^3(u_iw_j)^2\\
+		&\ -
 		&=\sum_{\substack{i,j=1\\i\neq j
 		}}^3(u_iw_j)^2-\sum_{\substack{i,j=1\\i\neq j}}^3u_iu_jw_iw_j
 	\end{align*}and see that 
