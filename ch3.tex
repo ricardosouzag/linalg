@@ -1441,6 +1441,29 @@ w_1x+w_2y+w_3z=0.
 	This is just an easy computation and will be left as an exercise (just check that $\gen{v,u}=\gen{v,w}=0$).
 \end{proof}
 
+With this we can finally define:
+
+\begin{df}
+	Given any two vectors $u,w\in \R^3$, we define the \textbf{cross product} between $u$ and $w$ to be the vector $u\times w\in \R^3$ given by
+	\[u\times w:=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1).\]
+\end{df}
+
+Now we need to show that this is indeed a good definition. In other words, out of the infinitely many points in $u^\perp\cap w^\perp$ we chose this one precisely. But why? What special properties does it have that no other point has?
+
+\begin{df}
+	Let $\pi_{\mathds X},\pi_{\mathds Y},\pi_{\mathds Z}:\R^3\to \R$ be the maps given by 
+	\begin{align*}
+		\pi_{\mathds X}(x,y,z)&:=x\\
+		\pi_{\mathds Y}(x,y,z)&:=y\\
+		\pi_{\mathds Z}(x,y,z)&:=z
+	\end{align*}and $\pi_{\mathds XY},\pi_{\mathds YZ},\pi_{\mathds XZ}:\R^3\to \R^2$ be the maps given by
+	\begin{align*}
+	\pi_{\mathds XY}(x,y,z)&:=(x,y)\\
+	\pi_{\mathds YZ}(x,y,z)&:=(y,z)\\
+	\pi_{\mathds XZ}(x,y,z)&:=(x,z).
+	\end{align*}These maps are called the \textbf{canonical projections} onto the $\mathds{X}$-, $\mathds{Y}$- and $\mathds{Z}$-axes, respectively, and onto the $\mathds{XY}$-, $\mathds{YZ}$- and $\mathds{XZ}$-planes, respectively.
+\end{df}
+
 \bigskip
 To do that, first we'll need to give more structure to $\R^3$:
 
