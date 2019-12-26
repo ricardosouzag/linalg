@@ -1394,7 +1394,11 @@ In other words, all that we need to do in order to define a determinant is show 
 Now, we need to find a vector that is at once orthogonal to both $u$ and $w$. Remember that given any vector $u$, its orthogonal space $u^\perp$ is a plane. In other words, 
 \[u^\perp=\{(x,y,z)\in \R^3\mid u_1x+u_2y+u_3z=0\}\]is a plane. Similarly, 
 \[w^\perp=\{(x,y,z)\in \R^3\mid w_1x+w_2y+w_3z=0\}\]is also a plane. Therefore, $u^\perp\cap w^\perp$ is a line, given by
-\[u^\perp\cap w^\perp=\{(x,y,z)\in\R^3\mid u_1x+u_2y+u_3z=0\mbox{ and }w_1x+w_2y+w_3z=0\}.\]
+\[u^\perp\cap w^\perp=\{(x,y,z)\in\R^3\mid u_1x+u_2y+u_3z=0\mbox{ and }w_1x+w_2y+w_3z=0\}.\]In other words, any vector of $u^\perp\cap w^\perp$ is just a solution to the linear system
+\[\begin{cases}
+u_1x+u_2y+u_3z=0\\
+w_1x+w_2y+w_3z=0
+\end{cases}.\]
 
 \begin{lemma}
 	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $$v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$$ is such that $v\perp \pi$.
