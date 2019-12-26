@@ -1487,8 +1487,9 @@ One final result tells us that there's a very strong connection between the cros
 	Let $u,w\in \R^3$. Then $$(\norm{u}\norm{w})^2=\abs{\gen{u,w}}^2+\norm{u\times w}^2.$$In other words, $\norm{u\times w}=\norm{u}\norm{w}\sin\theta$ where $\theta$ is the angle between $u$ and $w$.
 \end{theorem}
 \begin{proof}
-	By definition, $\norm{u\times w}^2=\gen{u\times w,u\times w}$, and this, in turn, is just
-	\[\gen{u\times w,u\times w}=\pi_{\mathds X}(u\times w)^2+\pi_{\mathds Y}(u\times w)^2+\pi_{\mathds Z}(u\times w)^2.\]We can now proceed:
+	By definition, $\norm{u\times w}^2=\gen{u\times w,u\times w}$.
+	
+	We can now proceed:
 	\begin{align*}
 		\norm{u\times w}^2&=(u_2w_3-u_3w_2)^2+(u_3w_1-u_1w_3)^2+(u_1w_2-u_2w_1)^2\\
 		&=\sum_{\substack{i,j=1\\i\neq j
