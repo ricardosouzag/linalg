@@ -1538,6 +1538,11 @@ Now that that's out of the way, we can finally define:
 \begin{lemma}
 	Given any three vectors $v,u,w\in \R^3$ then $v\in\R u+\R w$ if, and only if, $\det(v,u,w)=0$.
 \end{lemma}
+\begin{proof}
+	Let $v\in \R^3$ be such that $\det(v,u,w)=0$. Then, by the definition of determinant, we see that $\gen{v,u\times w}=0$, and so, $v\perp u\times w$. But, by definition of cross product, $(u\times w)^\perp=\R u+\R w$. Since $v\perp u\times w$, this tells us that $v\in \R u+\R w$.
+	
+	Conversely, if $v\in \R u+\R w$ then $v$ is orthogonal to any vector $p$ such that $p^\perp=\R u+\R w$. Since $(u\times w)=\R u+\R w$, by definition, we have that $v\perp u\times w$ and thus $\gen{v,u\times w}=0$. But $\gen{v,u\times w}=\det(v,u,w)$, so the result follows.
+\end{proof}
 
 \bigskip
 To do that, first we'll need to give more structure to $\R^3$:
