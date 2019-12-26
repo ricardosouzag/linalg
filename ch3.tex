@@ -1468,7 +1468,12 @@ Now we can state and prove:
 
 \begin{lemma}
 	Let $u,w\in \R^3$. Then
-	\[u\times w=\left(\det(\pi_{\mathds {YZ}}(u),\pi_{\mathds {YZ}}(w)),\det(\pi_{\mathds {XZ}}(w),\pi_{\mathds {XZ}}(u)),\det(\pi_{\mathds {XY}}(u),\pi_{\mathds {XY}}(w))\right).\]
+	\[u\times w=\left(\det(\pi_{\mathds {YZ}}(u),\pi_{\mathds {YZ}}(w)),\det(\pi_{\mathds {XZ}}(w),\pi_{\mathds {XZ}}(u)),\det(\pi_{\mathds {XY}}(u),\pi_{\mathds {XY}}(w))\right).\]In other words,
+	\begin{align*}
+		\pi_{\mathds X}(u\times w)&=\det(\pi_{\mathds {YZ}}(u),\pi_{\mathds {YZ}}(w))\\
+		\pi_{\mathds Y}(u\times w)&=\det(\pi_{\mathds {XZ}}(w),\pi_{\mathds {XZ}}(u))\\
+		\pi_{\mathds Z}(u\times w)&=\det(\pi_{\mathds {XY}}(u),\pi_{\mathds {XY}}(w)).
+	\end{align*}
 \end{lemma}
 
 \bigskip
