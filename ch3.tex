@@ -1394,6 +1394,14 @@ In other words, all that we need to do in order to define a determinant is show 
 \begin{lemma}
 	Let $\pi=\R u+\R v$ be any plane in $\R^3$. Then $$v=(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)$$ is such that $v\perp \pi$.
 \end{lemma}
+\begin{proof}
+	This is just an easy computation:
+	
+	\begin{align*}
+		\gen{v,u}&=\gen{(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1),(u_1,u_2,u_3)}\\
+		&=u_1(u_2w_3-u_3w_2)+u_2(,u_3w_1-u_1w_3)+u_3(u_1w_2-u_2w_1)
+	\end{align*}
+\end{proof}
 
 \bigskip
 To do that, first we'll need to give more structure to $\R^3$:
