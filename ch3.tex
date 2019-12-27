@@ -1715,8 +1715,13 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 
 \begin{lemma}
 	Let $v,u,w\in \R^3$. Then:
-	\begin{enumerate}[(i.)]
+	\begin{enumerate}[a)]
 		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
 		\item $\det(v,w,u)=-\det(v,u,w)$.
 	\end{enumerate}
 \end{lemma}
+\begin{proof}
+	\begin{enumerate}[a)]
+		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(u,w,v)}=\norm{\det(w,v,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is to prove that they have the same sign.
+	\end{enumerate}
+\end{proof}
