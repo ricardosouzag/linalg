@@ -1703,7 +1703,7 @@ Finally we can prove the following theorem:
 	
 	Remember that $\det(v,u,w)=\gen{v,u\times w}$. In our case, we have that $v=\lambda_1u+\lambda_2w+\lambda_2(u\times w)$. Not only that, but both $u$ and $w$ are orthogonal to $u\times w$, so:
 	\begin{alignat*}{3}
-		\gen{v,u\times w}&=\gen{\lambda_1u+\lambda_2w+\lambda_2(u\times w),u\times w}\\
+		\gen{v,u\times w}&=\gen{\lambda_1u&&+\lambda_2w&&+\lambda_2(u\times w),u\times w}\\
 		&=\lambda_1\gen{u,u\times w}&&+\lambda_2\gen{w,u\times w}&&+\lambda_3\gen{u\times w,u\times w}\\
 		&=0&&+0&&+\lambda_3\norm{u\times w}^2=\lambda_3\norm{u\times w}^2.
 	\end{alignat*}Therefore, $\abs{\det(v,u,w)}=\abs{\lambda_3\norm{u\times w}^2}=\abs{\lambda_3}\norm{u\times w}^2$, which is precisely the expression we had obtained previously for the volume of the parallelepiped with sides $v,u,w$.
