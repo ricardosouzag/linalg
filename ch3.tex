@@ -1736,16 +1736,20 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 \begin{lemma}
 	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then:
 	\begin{enumerate}[a)]
-		\item $\det(v,w,u)=-\det(v,u,w)$.
-		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
+		\item $\det(v,w,u)=-\det(v,u,w)$;
+		\item $\det(v,u,w)=-\det(u,v,w)$;
+		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$.
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
 	\begin{enumerate}[a)]
 		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(v,w,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is prove that they have opposite signs.
 		
-		But that's easy to do: We know that
-		\[\det(v,u,w)=\gen{v,u\times w}=\lambda_3\norm{u\times w}^2\]and
-		\[\det(v,w,u)=\gen{v,w\times u}=\lambda_3\norm{w\times u}^2.\]
+		But that's easy to do:
+		\begin{align*}
+			\det(v,u,w)&=\gen{v,u\times w}\\
+			&=\gen{v,-(w\times u)}\\
+			&=-\gen{v,w\times u}=-\det(v,w,u).
+		\end{align*}So we indeed have that $\det(v,u,w)=-\det(v,w,u)$.
 	\end{enumerate}
 \end{proof}
