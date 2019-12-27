@@ -1760,7 +1760,8 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 		\begin{align*}
 			\det(v,u,w)&=\gen{v,u\times w}\\
 			&=\gen{\lambda_1w+\lambda_2(u\times w)+\lambda_3(v\times w),u\times w}\\
-			&=\lambda_1\gen{w,u\times w}+\lambda_2\gen{u\times w,u\times w}+\lambda_3\gen{v\times w,u\times w}
+			&=\lambda_1\gen{w,u\times w}+\lambda_2\gen{u\times w,u\times w}+\lambda_3\gen{v\times w,u\times w}\\
+			&=\lambda_2\norm{u\times w}^2+\lambda_3\gen{v\times w,u\times w}
 		\end{align*}
 	\end{enumerate}
 \end{proof}
