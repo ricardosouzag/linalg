@@ -1686,7 +1686,7 @@ In order to do that, however, we need to establish a small result first:
 Finally we can prove the following theorem:
 
 \begin{theorem}
-	Let $v,u,w\in \R^3$. Then the volume of the parallelepiped with sides $v,u,w$ is precisely $\det(v,u,w)$.
+	Let $v,u,w\in \R^3$. Then the volume of the parallelepiped with sides $v,u,w$ is precisely $\abs{\det(v,u,w)}$.
 \end{theorem}
 \begin{proof}
 	We know that the volume of a parallelepiped is the product of its base are by its height. By the preceding lemma, we already know that its base area is just $\norm{u\times w}$. We need, once again, to determine its height.
@@ -1701,5 +1701,14 @@ Finally we can prove the following theorem:
 	
 	Finally, we need to connect this expression with the determinant. 
 	
-	First, remember that $\norm{u\times w}^2=(\norm{u}\norm{w})^2-\abs{\gen{u,w}}^2$.
+	Remember that $\det(v,u,w)=\gen{v,u\times w}$. In our case, we have that $v=\lambda_1u+\lambda_2w+\lambda_2(u\times w)$. Not only that, but both $u$ and $w$ are orthogonal to $u\times w$, so:
+	\begin{align*}
+		\gen{v,u\times w}&=\gen{\lambda_1u+\lambda_2w+\lambda_2(u\times w),u\times w}\\
+		&=\lambda_1\gen{u,u\times w}+\lambda_2\gen{w,u\times w}+\lambda_3\gen{u\times w,u\times w}\\
+		&=0+0+\lambda_3\norm{u\times w}^2=\lambda_3\norm{u\times w}^2.
+	\end{align*}Therefore, $\abs{\det(v,u,w)}=\abs{\lambda_3\norm{u\times w}^2}=\abs{\lambda_3}\norm{u\times w}^2$, which is precisely the expression we had obtained previously for the volume of the parallelepiped with sides $v,u,w$.
+	
+	This ends the proof.
+	
+	
 \end{proof}
