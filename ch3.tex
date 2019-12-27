@@ -1525,6 +1525,26 @@ One final result tells us that there's a very strong connection between the cros
 	}}^3(u_iw_j)^2-\sum_{\substack{i,j=1\\i\neq j}}^3u_iu_jw_iw_j\right)\\&=\abs{\gen{u,w}}^2+\norm{u\times w}^2.
 	\end{align*}This ends the proof.
 \end{proof}
+\begin{cor}
+	For any two vectors, $u,w\in \R^3$ we have that $u\times w=-(w\times u)$.
+\end{cor}
+\begin{proof}
+	Clearly,
+	\begin{align*}
+		\abs{u\times w}&=\norm{u}\norm{w}\sin \theta\\
+		&=\norm{w}\norm{u}\sin\theta=\abs{w\times u}
+	\end{align*}so they have the same size. This means that either $u\times w=w\times u$ or $u\times w=-(w\times u)$.
+	
+	Now we can just compute $w\times u$:
+	
+	\begin{align*}
+		w\times u &= (w_2u_3-w_3u_2,w_3u_1-w_1u_3,w_1u_2-w_2u_1)\\
+		&=(-(u_2w_3-u_3w_2),-(u_3w_1-u_1w_3),-(u_1w_2-u_2w_1))\\
+		&=-(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)=-(u\times w).
+	\end{align*}
+	
+	The result now follows.
+\end{proof}
 
 This should convince that the cross product we've defined is indeed very powerful and important.
 
@@ -1716,12 +1736,16 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 \begin{lemma}
 	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then:
 	\begin{enumerate}[a)]
-		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
 		\item $\det(v,w,u)=-\det(v,u,w)$.
+		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
 	\begin{enumerate}[a)]
-		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(u,w,v)}=\norm{\det(w,v,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is prove that they have the same sign.
+		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(v,w,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is prove that they have opposite signs.
+		
+		But that's easy to do: We know that
+		\[\det(v,u,w)=\gen{v,u\times w}=\lambda_3\norm{u\times w}^2\]and
+		\[\det(v,w,u)=\gen{v,w\times u}=\lambda_3\norm{w\times u}^2.\]
 	\end{enumerate}
 \end{proof}
