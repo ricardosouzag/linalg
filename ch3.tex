@@ -1782,6 +1782,8 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 	
 	Notice that we could have accomplished this by simply using the above lemma:
 	\[\det(e_3,e_2,e_1)=\det(e_1,e_3,e_2)=-\det(e_1,e_2,e_3)=-1.\]
+	
+	This example shows us that determinants are intrinsically related to the order in $\R^3$: All of $\det(e_1,e_2,e_3)$, $\det(e_2,e_3,e_1)$ and $\det(e_3,e_1,e_2)$ are the same because they respect the cycle $e_3\leq e_2\leq e_1$. Conversely, $\det(e_1,e_3,e_2)$, $\det(e_3,e_2,e_1)$ and $\det(e_2,e_1,e_3)$ are the same, but different from the other three, because they \textbf{don't} preserve the cycle $e_3\leq e_2\leq e_1$.
 \end{ex}
 \begin{cor}
 	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then $\det(v,u,w)>0$ if, and only if, either of $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w\leq u$ holds.
