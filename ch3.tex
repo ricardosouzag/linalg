@@ -1753,5 +1753,14 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 		\end{align*}So we indeed have that $\det(v,u,w)=-\det(v,w,u)$.
 		
 		\item First, notice that since $w\perp u\times w$ and $w\perp v\times w$, we have that $w^\perp=\R(u\times w)+\R(v\times w)$ and therefore $\{w,u\times w,v\times w\}$ is a base for $\R^3$.
+		
+		This means that there are unique $\lambda_1,\lambda_2,\lambda_3\in \R$ as well as $\mu_1,\mu_2,\mu_3\in \R$ such that
+		\[v=\lambda_1w+\lambda_2(u\times w)+\lambda_3(v\times w)\]
+		\[u=\mu_1w+\mu_2(u\times w)+\mu_3(v\times w).\]Now we can compute:
+		\begin{align*}
+			\det(v,u,w)&=\gen{v,u\times w}\\
+			&=\gen{\lambda_1w+\lambda_2(u\times w)+\lambda_3(v\times w),u\times w}\\
+			&=\lambda_1\gen{w,u\times w}+\lambda_2\gen{u\times w,u\times w}+\lambda_3\gen{v\times w,u\times w}
+		\end{align*}
 	\end{enumerate}
 \end{proof}
