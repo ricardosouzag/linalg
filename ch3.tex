@@ -1737,8 +1737,8 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then:
 	\begin{enumerate}[a)]
 		\item $\det(v,w,u)=-\det(v,u,w)$;
-		\item $\det(v,u,w)=-\det(u,v,w)$;
-		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$.
+		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$		
+		\item $\det(v,u,w)=-\det(u,v,w)$
 	\end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -1752,16 +1752,20 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 			&=-\gen{v,w\times u}=-\det(v,w,u).
 		\end{align*}So we indeed have that $\det(v,u,w)=-\det(v,w,u)$.
 		
-		\item First, notice that since $w\perp u\times w$ and $w\perp v\times w$, we have that $w^\perp=\R(u\times w)+\R(v\times w)$ and therefore $\{w,u\times w,v\times w\}$ is a base for $\R^3$.
-		
-		This means that there are unique $\lambda_1,\lambda_2,\lambda_3\in \R$ as well as $\mu_1,\mu_2,\mu_3\in \R$ such that
-		\[v=\lambda_1w+\lambda_2(u\times w)+\lambda_3(v\times w)\]
-		\[u=\mu_1w+\mu_2(u\times w)+\mu_3(v\times w).\]Now we can compute:
+		\item This result follows from the definition of cross products: Let $v=(v_1,v_2,v_3)$, $u=(u_1,u_2,u_3)$ and $w=(w_1,w_2,w_3)$. Then:
 		\begin{align*}
 			\det(v,u,w)&=\gen{v,u\times w}\\
-			&=\gen{\lambda_1w+\lambda_2(u\times w)+\lambda_3(v\times w),u\times w}\\
-			&=\lambda_1\gen{w,u\times w}+\lambda_2\gen{u\times w,u\times w}+\lambda_3\gen{v\times w,u\times w}\\
-			&=\lambda_2\norm{u\times w}^2+\lambda_3\gen{v\times w,u\times w}
-		\end{align*}
+			&=\gen{v,(u_2w_3-u_3w_2,u_3w_1-u_1w_3,u_1w_2-u_2w_1)}\\
+			&=v_1(u_2w_3-u_3w_2)+v_2(u_3w_1-u_1w_3)+v_3(u_1w_2-u_2w_1)\\
+			&=v_1u_2w_3-v_1u_3w_2+v_2u_3w_1-v_2u_1w_3+v_3u_1w_2-v_3u_2w_1\\
+			&=v_3u_1w_2-v_2u_1w_3+v_1u_2w_3-v_3u_2w_1+v_2u_3w_1-v_1u_3w_2\\
+			&=u_1(v_3w_2-v_2w_3)+u_2(v_1w_3-v_3w_1)+u_3(v_2w_1-v_1w_2)\\
+			&=\gen{u,w\times v}=\det(u,w,v).
+		\end{align*}The same computation works for the other case, and will be left as an exercise for the reader.
+		
+		\item This item follows trivially from the previous items:
+		\[\det(u,v,w)=\det(v,w,u)=-\det(v,u,w)\]where the first equality follows from (b) and the second equality follows from (a).
+		
+		This proves the result.
 	\end{enumerate}
 \end{proof}
