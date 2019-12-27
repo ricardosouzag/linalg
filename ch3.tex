@@ -1774,6 +1774,14 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 	Just as an example of all of these results, let's compute the determinant of the canonical basis vectors: $e_1,e_2,e_3$. To do that, we first need to compute $e_2\times e_3$:
 	\[e_2\times e_3=(1\cdot 1-0\cdot0,0\cdot0-0\cdot1,0\cdot0-1\cdot0)=(1,0,0)=e_1\]so therefore
 	\[\det(e_1,e_2,e_3)=\gen{e_1,e_2\times e_3}=\gen{e_1,e_1}=1+0+0=1.\]
+	
+	On the other hand, if we were to take these in a non-cyclic manner - say, $\det(e_3,e_2,e_1)$ then we claim that the determinant will be negative:
+	
+	\[e_2\times e_1=(1\cdot0-0\cdot0,0\cdot1-0\cdot0,0\cdot0-1\cdot1)=(0,0,-1)=-e_3\]and therefore
+	\[\det(e_3,e_2,e_1)=\gen{e_3,e_2\times e_1}=\gen{e_3,-e_3}=-\gen{e_3,e_3}=-1.\]
+	
+	Notice that we could have accomplished this by simply using the above lemma:
+	\[\det(e_3,e_2,e_1)=\det(e_1,e_3,e_2)=-\det(e_1,e_2,e_3)=-1.\]
 \end{ex}
 \begin{cor}
 	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then $\det(v,u,w)>0$ if, and only if, either of $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w\leq u$ holds.
