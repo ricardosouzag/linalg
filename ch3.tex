@@ -1686,7 +1686,7 @@ In order to do that, however, we need to establish a small result first:
 Finally we can prove the following theorem:
 
 \begin{theorem}
-	Let $v,u,w\in \R^3$. Then the volume of the parallelepiped with sides $v,u,w$ is precisely $\abs{\det(v,u,w)}$.
+	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then the volume of the parallelepiped with sides $v,u,w$ is precisely $\abs{\det(v,u,w)}$.
 \end{theorem}
 \begin{proof}
 	We know that the volume of a parallelepiped is the product of its base are by its height. By the preceding lemma, we already know that its base area is just $\norm{u\times w}$. We need, once again, to determine its height.
@@ -1714,7 +1714,7 @@ Finally we can prove the following theorem:
 Finally, to actually prove the theorem we want, we need to prove one final result:
 
 \begin{lemma}
-	Let $v,u,w\in \R^3$. Then:
+	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then:
 	\begin{enumerate}[a)]
 		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
 		\item $\det(v,w,u)=-\det(v,u,w)$.
@@ -1722,6 +1722,6 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 \end{lemma}
 \begin{proof}
 	\begin{enumerate}[a)]
-		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(u,w,v)}=\norm{\det(w,v,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is to prove that they have the same sign.
+		\item The previous theorem tells us that $\norm{\det(v,u,w)}=\norm{\det(u,w,v)}=\norm{\det(w,v,u)}$, since they all describe the same real number: The volume of a parallelepiped with sides $v,u,w$. So all that's left for us to do is prove that they have the same sign.
 	\end{enumerate}
 \end{proof}
