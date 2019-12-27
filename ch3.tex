@@ -1665,3 +1665,20 @@ To see that this coincides with our previous definition of determinant we need t
 \begin{theorem}
 	Given any linear function $f:\R^3\to \R^3$, we have that\[\det f=\det(f(e_1),f(e_2),f(e_3)).\]
 \end{theorem}
+
+In order to do that, however, we need to establish a few results first:
+
+\begin{lemma}
+	Let $u,w\in \R^3$ be any two vectors. The area of the parallelogram with sides $u,w$ is precisely $\norm{u\times w}$.
+\end{lemma}
+\begin{proof}
+	We know that the area of a parallelogram is the product of its base length by its height. Take $u$ to be its base and let $r$ be a perpendicular to $\R u$ through the endpoint of $w$. Let $u'$ be $r\cap \R u$.
+	
+	Clearly, then, by construction, $0u'w$ is a right triangle. Notice also that the angles $w0u$ and $w0u'$ are the same, by construction. Let this angle be denote by $\theta$.
+	
+	Therefore, we know that $\sin\theta = \dfrac{d(u',w)}{\norm{w}}$ and so $d(u',w)=\norm{w}\cdot \sin\theta$.
+	
+	But since the line segment $u'w$ is the height of the parallelogram, this tells us that its area is just $\norm{u}\norm{w}\sin\theta$ which is precisely the norm of $u\times w$.
+	
+	This ends the proof.
+\end{proof}
