@@ -1683,12 +1683,19 @@ In order to do that, however, we need to establish a small result first:
 	This ends the proof.
 \end{proof}
 
-Finally we can proof the theorem:
+Finally we can prove the following theorem:
 
+\begin{theorem}
+	Let $v,u,w\in \R^3$. Then the volume of the parallelepiped with sides $v,u,w$ is precisely $\det(v,u,w)$.
+\end{theorem}
 \begin{proof}
-	We know that the volume of a parallelepiped is the product of its base are by its height. By the preceding lemma, we already know that its base area is just $\abs{u\times w}$. We need, once again, to determine its height.
+	We know that the volume of a parallelepiped is the product of its base are by its height. By the preceding lemma, we already know that its base area is just $\norm{u\times w}$. We need, once again, to determine its height.
 	
 	Since $u\times w\perp \R u+\R w$, we know that $\R u+\R w+\R(u\times w)=\R^3$. In other words, $\{u,w,u\times w\}$ is a base for $\R^3$.
 	
-	By definition of base, then, there exist some real numbers $\lambda_1,\lambda_2,\lambda_3$ such that $v=\lambda_1u+\lambda_2w+\lambda_3(u\times w)$.
+	By definition of base, then, there exist some real numbers $\lambda_1,\lambda_2,\lambda_3$ such that $$v=\lambda_1u+\lambda_2w+\lambda_3(u\times w).$$Let $v':=\lambda_1u+\lambda_2w\in \R u+\R w$ and $v'':=\lambda_3(u\times w)\in \R(u\times w)$.
+	
+	Clearly, then, since $u\times w\perp \R u+\R w$, we know that the triangle $0v'v$ is a right triangle. Not only that, but the triangle's height is, by construction, $v''$ (since $v=v'+v''$).
+	
+	Therefore, the height of the parallelepiped is also $v''$.
 \end{proof}
