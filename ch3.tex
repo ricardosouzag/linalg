@@ -1770,10 +1770,36 @@ Finally, to actually prove the theorem we want, we need to prove one final resul
 	\end{enumerate}
 \end{proof}
 
+\begin{ex}
+	Just as an example of all of these results, let's compute the determinant of the canonical basis vectors: $e_1,e_2,e_3$. To do that, we first need to compute $e_2\times e_3$:
+	\[e_2\times e_3=(1\cdot 1-0\cdot0,0\cdot0-0\cdot1,0\cdot0-1\cdot0)=(1,0,0)=e_1\]so therefore
+	\[\det(e_1,e_2,e_3)=\gen{e_1,e_2\times e_3}=\gen{e_1,e_1}=1+0+0=1.\]
+\end{ex}
+\begin{cor}
+	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then $\det(v,u,w)>0$ if, and only if, either of $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w\leq u$ holds.
+\end{cor}
+\begin{proof}
+	From one of the previous results, we already know that $\det(v,u,w)=\lambda_3\norm{u\times w}^2$, where $v=\lambda_1u+\lambda_2w+\lambda_3(u\times w)$. From this we know that the sign of $\det(v,u,w)$ is just the sign of $\lambda_3$.
+	
+	Now look at $u$ and $w$. Since $\R^3$ is totally ordered, then either $u\geq w$ or $u\leq w$.
+	
+	If $u\leq w$
+\end{proof}
+
 Finally we can prove the theorem.
 
 \begin{proof}
 	Let $f:\R^3\to\R^3$ be any linear function, and let, as usual, $e_1,e_2,e_3$ be the canonical base. Denote $v=f(e_1),u=f(e_2),w=f(e_3)$.
 	
 	We already know that $\abs{\det(v,u,w)}=\abs{\det f}$ since they both describe the volume of the parallelepiped with sides $v,u,w$.
+	
+	We now ask: Do they have the same sign? If they do, then we're done. Otherwise, define $g:\R^3\to \R^3$ by putting $g(e_1)=v,g(e_2)=w,g(e_3)=u$.
+	
+	Now, clearly either $g$ or $f$ is cyclic: If $f$ is cyclic, then either $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w\leq u$ hold (since $e_3\leq e_2\leq e_1$). But no matter which one of these hold, $g$ can't be cyclic: If the first one holds, then $g(e_2)\leq g(e_3)\leq g(e_1)$; if the second one holds, then $g(e_3)\leq g(e_1)\leq g(e_2)$; if the third one holds, then $g(e_1)\leq g(e_2)\leq g(e_3)$.
+	
+	Analogously we can show, by the same argument, that if $g$ is cyclic, then $f$ cannot be.
+	
+	This shows that $\det f=-\det g$. We also already know that $\det(v,u,w)=\det(v,w,u)$.
+	
+	Combining these two, we see that either $\det f=\det(v,u,w)$ or $\det g=\det (v,u,w)$.
 \end{proof}
