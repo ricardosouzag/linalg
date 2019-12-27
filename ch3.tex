@@ -1708,7 +1708,15 @@ Finally we can prove the following theorem:
 		&=0+0+\lambda_3\norm{u\times w}^2=\lambda_3\norm{u\times w}^2.
 	\end{align*}Therefore, $\abs{\det(v,u,w)}=\abs{\lambda_3\norm{u\times w}^2}=\abs{\lambda_3}\norm{u\times w}^2$, which is precisely the expression we had obtained previously for the volume of the parallelepiped with sides $v,u,w$.
 	
-	This ends the proof.
-	
-	
+	This ends the proof.	
 \end{proof}
+
+Finally, to actually prove the theorem we want, we need to prove one final result:
+
+\begin{lemma}
+	Let $v,u,w\in \R^3$. Then:
+	\begin{enumerate}[(i.)]
+		\item $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$
+		\item $\det(v,w,u)=-\det(v,u,w)$.
+	\end{enumerate}
+\end{lemma}
