@@ -1685,6 +1685,10 @@ In order to do that, however, we need to establish a small result first:
 
 Finally we can proof the theorem:
 
-\begin{proof}[of the theorem]
-	content...
+\begin{proof}
+	We know that the volume of a parallelepiped is the product of its base are by its height. By the preceding lemma, we already know that its base area is just $\abs{u\times w}$. We need, once again, to determine its height.
+	
+	Since $u\times w\perp \R u+\R w$, we know that $\R u+\R w+\R(u\times w)=\R^3$. In other words, $\{u,w,u\times w\}$ is a base for $\R^3$.
+	
+	By definition of base, then, there exist some real numbers $\lambda_1,\lambda_2,\lambda_3$ such that $v=\lambda_1u+\lambda_2w+\lambda_3(u\times w)$.
 \end{proof}
