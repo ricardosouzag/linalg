@@ -1912,12 +1912,12 @@ Which we now can readily extend to
 
 \begin{lemma}
 	Given any matrix $A\in M_{3\times 3}(\R)$ written as $A=(a_{i,j})$, we have that
-	\[\det A=a_{1,1}\det A'-a_{1,2}\det A''+a_{1,3}\det A'''\]where $A',A'',A'''\in M_{2\times 2}(\R)$ are the following matrices:
+	\[\det A=a_{1,1}\det A'-a_{2,1}\det A''+a_{3,1}\det A'''\]where $A',A'',A'''\in M_{2\times 2}(\R)$ are the following matrices:
 	\[A':=\begin{pmatrix}
 	a_{2,2}&a_{2,3}\\a_{3,2}&a_{3,3}
 	\end{pmatrix},\quad A'':=\begin{pmatrix}
-	a_{2,1}&a_{2,3}\\a_{3,1}&a_{3,3}
+	a_{1,2}&a_{1,3}\\a_{3,2}&a_{3,3}
 	\end{pmatrix},\quad A''':=\begin{pmatrix}
-	a_{2,1}&a_{2,2}\\a_{3,1}&a_{3,2}
+	a_{1,2}&a_{1,3}\\a_{2,2}&a_{2,3}
 	\end{pmatrix}.\]
 \end{lemma}
