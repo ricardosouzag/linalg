@@ -1564,129 +1564,131 @@ Now that that's out of the way, we can finally define:
 	Conversely, if $v\in \R u+\R w$ then $v$ is orthogonal to any vector $p$ such that $p^\perp=\R u+\R w$. Since $(u\times w)^\perp=\R u+\R w$, by definition, we have that $v\perp u\times w$ and thus $\gen{v,u\times w}=0$. But $\gen{v,u\times w}=\det(v,u,w)$, so the result follows.
 \end{proof}
 
-Finally, we want to end this section by giving to the determinant a geometric interpretation, just as we did in $\R^2$. But to do that, first we'll need to give more structure to $\R^3$:
+Finally, we want to end this section by giving to the determinant a geometric interpretation, just as we did in $\R^2$
 
-\begin{df}
-	Let $\leq$ in $\R^3$ be the relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if, any of the following hold:
-	\begin{enumerate}[(1)]		
-		\item $v_1< u_1$;
-		\item $v_1=u_1$, but $v_2< u_2$;
-		\item $v_1=u_1$ and $v_2=u_2$, but $v_3< u_3$;
-		\item $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$.
-	\end{enumerate}
+%But to do that, first we'll need to give more structure to $\R^3$:
+%
+%\begin{df}
+%	Let $\leq$ in $\R^3$ be the relation given by: $(v_1,v_2,v_3)\leq (u_1,u_2,u_3)$ if, and only if, any of the following hold:
+%	\begin{enumerate}[(1)]		
+%		\item $v_1< u_1$;
+%		\item $v_1=u_1$, but $v_2< u_2$;
+%		\item $v_1=u_1$ and $v_2=u_2$, but $v_3< u_3$;
+%		\item $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$.
+%	\end{enumerate}
+%
+%	This is an order, which is called the \textbf{lexicographical order}, or dictionary order.
+%\end{df}
+%
+%\begin{prop}
+%	$\R^3$ with the lexicographical order is a totally-ordered set.
+%\end{prop}
+%\begin{proof}
+%	First, let us show that $\leq$ the lexicographical order is indeed an order:
+%	
+%	\begin{itemize}
+%		\item \underline{$\leq$ is reflexive:}
+%		
+%		This is trivial, by definition of $\leq$.
+%		
+%		\item \underline{$\leq$ is antisymmetric:}
+%		
+%		Let $v,u\in \R^3$ be such that $v\leq u$ and $u\leq v$. We need to show that this implies $v=u$. We'll do this by considering all the possible cases as to why $v\leq u$:
+%		
+%		\begin{itemize}
+%			\item If $v_1\leq u_1$, then $u_1>v_1$ which contradicts $u\leq v$, so this cannot happen.
+%			\item If $v_1=u_1$, but $v_2<u_2$, then $u_2>v_2$ which contradicts $u\leq v$, so this cannot happen.
+%			\item If $v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$, then $u_3>v_3$ which contradicts $u\leq v$, so this cannot happen.
+%			\item If $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$, this implies $v=u$ which doesn't contradict $u\leq v$.
+%		\end{itemize}
+%	
+%		Since the only case for $v\leq u$ which doesn't contradict $u\leq v$ is $v=u$, we have that $\leq$ is indeed antisymmetric.
+%		
+%		\item \underline{$\leq$ is transitive:}
+%		
+%		Let $v,u,w\in \R^3$ be such that $v\leq u$ and $u\leq w$. We need to show that this implies $v\leq w$. We once again need to do that by considering all possible cases. To do so, we'll use the following table:
+%			\begin{center}
+%				\begin{tabu}{|c|[2pt]c|c|c|c|}
+%					\hline
+%					& $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
+%					$v(1)u$ &&&& \\\hline
+%					$v(2)u$ &&&&\\\hline
+%					$v(3)u$ &&&&\\\hline
+%					$v(4)u$ &&&&\\\hline
+%				\end{tabu}
+%			\end{center}		
+%		Here, $u(2)w$, for instance, should be read as ``$u\leq w$ because they satisfy condition (2) in the definition of $\leq$'' - or, in other words, $u(2)w$ means ``$u_1=w_1$, but $u_2<w_2$'' - and so on.
+%		
+%		That said, this is how this table should be filled-in: For instance, suppose we have $v\leq u$ because $v(3)u$, and $u\leq w$ because $u(2)w$. This means that ``$v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$'' and ``$u_1=w_1$, but $u_2<w_2$''.
+%		
+%		So combining these two into a single statement we get ``$v_1=u_1=w_1$, $v_2=u_2<w_2$ and $v_3<u_3$'' - which, in particular, tells us that ``$v_1=w_1$, but $v_2<w_2$'' which is the definition of $v(2)w$.
+%		
+%		So we put $v(2)w$ in the row $v(3)u$ and column $u(2)w$.
+%		
+%		Proceeding like this for all rows and columns, we get the following table:
+%		\begin{center}
+%			\begin{tabu}{|c|[2pt]c|c|c|c|}
+%				\hline
+%				& $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
+%				$v(1)u$ & $v(1)w$ & $v(1)w$ & $v(1)w$ & $v(1)w$\\\hline
+%				$v(2)u$ & $v(1)w$ & $v(2)w$ & $v(2)w$ & $v(2)w$\\\hline
+%				$v(3)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(3)w$\\\hline
+%				$v(4)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(4)w$\\\hline
+%			\end{tabu}
+%		\end{center}which tells us that no matter the reason why $v\leq u$ and $u\leq w$, this is always enough to conclude $v\leq w$ - and thus $\leq$ is transitive.
+%	\end{itemize}
+%
+%	This shows that $\leq$ is indeed an order in $\R^3$.
+%	
+%	Now all that's left is to show that it is a total order - i.e., that given any two vectors $v,u\in\R^3$ then either or both of $v\leq u$ and $u\leq v$ hold.
+%	
+%	To do that, take any $v,u\in \R^3$.
+%	\begin{itemize}
+%		\item If $v_1<u_1$ or $u_1<v_1$, then we're done (the first case tells us $v(1)u$ and hence $v\leq u$, and the second case tells us $u(1)v$ and hence $u\leq v$). Otherwise we have $v_1=u_1$ and we now check the second entries.
+%		\item If $v_2<u_2$ or $u_2<v_2$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(2)u$ and $u(2)v$ respectively). Otherwise we have $v_2=u_2$.
+%		\item If $v_3<u_3$ or $u_3<v_3$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step) and $v_2=u_2$ (otherwise we would have stopped in the second step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(3)u$ and $u(3)v$ respectively). Otherwise we have $v_3=u_3$.
+%		\item But now we have $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$ (otherwise we would have stopped at either the first, second or third steps) and thus $v=u$, so both $v\leq u$ and $u\leq v$ hold.
+%	\end{itemize}
+%
+%	No matter the case, then, we can always conclude either or both of $v\leq u$ and $u\leq v$. This implies that $\leq$ is a total order and finishes the proof.
+%\end{proof}
+%
+%\begin{ex}
+%	Let us compare some vectors to see what's going on in here:
+%	
+%	Let $v=(1,2,3)$, $u=(1,0,0)$, $w=(-3,1,4)$ and $z=(1,2,-4)$.
+%	
+%	We claim that $w\leq u\leq z\leq v$.
+%	
+%	To see that, think of vectors as ``words'' in a dictionary.
+%	
+%	You start by comparing the first letter: $w_1<v_1=u_1=z_1$, so we know $w$ comes before the others.
+%	
+%	Now we check the second letter: $u_2<v_2=z_2$ so we know $u$ comes after $w$, but before $v$ and $z$.
+%	
+%	Finally we check the final letter: $z_3<v_3$, so $v$ comes last.
+%\end{ex}
+%
+%And, just before actually defining the determinant, we have to give one last definition:
+%
+%\begin{df}
+%	Let $(X,\leq_X)$ and $(Y,\leq_Y)$ be totally ordered sets. A function $f:X\to Y$ is said to be a \textbf{cycle} if for all $x\leq_X y\leq_X z$ in $X$ we have that either of $f(x)\leq_Y f(y)\leq_Y f(z)$, $f(y)\leq_Y f(z)\leq_Y f(x)$ or $f(z)\leq_Y f(x)\leq_Y f(y)$ hold.
+%\end{df}
+%
+%We can start off by giving an intuitive definition:
+%\begin{df}
+%	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the parallelepiped with edges $f(e_1),f(e_2),f(e_3)$, where the sign is positive if $f:\{e_1,e_2,e_3\}\to\{f(e_1),f(e_2),f(e_3)\}$ is a cycle, and negative otherwise.
+%\end{df}
+%
+%It might seem a weird definition at first, but if you notice all we're doing is the same thing we did for $\R^2$ - where the determinant gave us the area of a parallelogram and its sign was just telling us if the base vectors needed to be flipped, or not. Here we're doing the same thing, but replacing ``area'' with ``volume''.
+%
+%To see that this coincides with our previous definition of determinant we need to prove the following result:
 
-	This is an order, which is called the \textbf{lexicographical order}, or dictionary order.
-\end{df}
-
-\begin{prop}
-	$\R^3$ with the lexicographical order is a totally-ordered set.
-\end{prop}
-\begin{proof}
-	First, let us show that $\leq$ the lexicographical order is indeed an order:
-	
-	\begin{itemize}
-		\item \underline{$\leq$ is reflexive:}
-		
-		This is trivial, by definition of $\leq$.
-		
-		\item \underline{$\leq$ is antisymmetric:}
-		
-		Let $v,u\in \R^3$ be such that $v\leq u$ and $u\leq v$. We need to show that this implies $v=u$. We'll do this by considering all the possible cases as to why $v\leq u$:
-		
-		\begin{itemize}
-			\item If $v_1\leq u_1$, then $u_1>v_1$ which contradicts $u\leq v$, so this cannot happen.
-			\item If $v_1=u_1$, but $v_2<u_2$, then $u_2>v_2$ which contradicts $u\leq v$, so this cannot happen.
-			\item If $v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$, then $u_3>v_3$ which contradicts $u\leq v$, so this cannot happen.
-			\item If $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$, this implies $v=u$ which doesn't contradict $u\leq v$.
-		\end{itemize}
-	
-		Since the only case for $v\leq u$ which doesn't contradict $u\leq v$ is $v=u$, we have that $\leq$ is indeed antisymmetric.
-		
-		\item \underline{$\leq$ is transitive:}
-		
-		Let $v,u,w\in \R^3$ be such that $v\leq u$ and $u\leq w$. We need to show that this implies $v\leq w$. We once again need to do that by considering all possible cases. To do so, we'll use the following table:
-			\begin{center}
-				\begin{tabu}{|c|[2pt]c|c|c|c|}
-					\hline
-					& $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
-					$v(1)u$ &&&& \\\hline
-					$v(2)u$ &&&&\\\hline
-					$v(3)u$ &&&&\\\hline
-					$v(4)u$ &&&&\\\hline
-				\end{tabu}
-			\end{center}		
-		Here, $u(2)w$, for instance, should be read as ``$u\leq w$ because they satisfy condition (2) in the definition of $\leq$'' - or, in other words, $u(2)w$ means ``$u_1=w_1$, but $u_2<w_2$'' - and so on.
-		
-		That said, this is how this table should be filled-in: For instance, suppose we have $v\leq u$ because $v(3)u$, and $u\leq w$ because $u(2)w$. This means that ``$v_1=u_1$ and $v_2=u_2$, but $v_3<u_3$'' and ``$u_1=w_1$, but $u_2<w_2$''.
-		
-		So combining these two into a single statement we get ``$v_1=u_1=w_1$, $v_2=u_2<w_2$ and $v_3<u_3$'' - which, in particular, tells us that ``$v_1=w_1$, but $v_2<w_2$'' which is the definition of $v(2)w$.
-		
-		So we put $v(2)w$ in the row $v(3)u$ and column $u(2)w$.
-		
-		Proceeding like this for all rows and columns, we get the following table:
-		\begin{center}
-			\begin{tabu}{|c|[2pt]c|c|c|c|}
-				\hline
-				& $u(1)w$ & \(u(2)w\) & \(u(3)w\) & \(u(4)w\)\\\tabucline[2pt]{-}
-				$v(1)u$ & $v(1)w$ & $v(1)w$ & $v(1)w$ & $v(1)w$\\\hline
-				$v(2)u$ & $v(1)w$ & $v(2)w$ & $v(2)w$ & $v(2)w$\\\hline
-				$v(3)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(3)w$\\\hline
-				$v(4)u$ & $v(1)w$ & $v(2)w$ & $v(3)w$ & $v(4)w$\\\hline
-			\end{tabu}
-		\end{center}which tells us that no matter the reason why $v\leq u$ and $u\leq w$, this is always enough to conclude $v\leq w$ - and thus $\leq$ is transitive.
-	\end{itemize}
-
-	This shows that $\leq$ is indeed an order in $\R^3$.
-	
-	Now all that's left is to show that it is a total order - i.e., that given any two vectors $v,u\in\R^3$ then either or both of $v\leq u$ and $u\leq v$ hold.
-	
-	To do that, take any $v,u\in \R^3$.
-	\begin{itemize}
-		\item If $v_1<u_1$ or $u_1<v_1$, then we're done (the first case tells us $v(1)u$ and hence $v\leq u$, and the second case tells us $u(1)v$ and hence $u\leq v$). Otherwise we have $v_1=u_1$ and we now check the second entries.
-		\item If $v_2<u_2$ or $u_2<v_2$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(2)u$ and $u(2)v$ respectively). Otherwise we have $v_2=u_2$.
-		\item If $v_3<u_3$ or $u_3<v_3$, since we already have $v_1=u_1$ (otherwise we would have stopped in the first step) and $v_2=u_2$ (otherwise we would have stopped in the second step), we're done (because these imply $v\leq u$ and $u\leq v$ by $v(3)u$ and $u(3)v$ respectively). Otherwise we have $v_3=u_3$.
-		\item But now we have $v_1=u_1$, $v_2=u_2$ and $v_3=u_3$ (otherwise we would have stopped at either the first, second or third steps) and thus $v=u$, so both $v\leq u$ and $u\leq v$ hold.
-	\end{itemize}
-
-	No matter the case, then, we can always conclude either or both of $v\leq u$ and $u\leq v$. This implies that $\leq$ is a total order and finishes the proof.
-\end{proof}
-
-\begin{ex}
-	Let us compare some vectors to see what's going on in here:
-	
-	Let $v=(1,2,3)$, $u=(1,0,0)$, $w=(-3,1,4)$ and $z=(1,2,-4)$.
-	
-	We claim that $w\leq u\leq z\leq v$.
-	
-	To see that, think of vectors as ``words'' in a dictionary.
-	
-	You start by comparing the first letter: $w_1<v_1=u_1=z_1$, so we know $w$ comes before the others.
-	
-	Now we check the second letter: $u_2<v_2=z_2$ so we know $u$ comes after $w$, but before $v$ and $z$.
-	
-	Finally we check the final letter: $z_3<v_3$, so $v$ comes last.
-\end{ex}
-
-And, just before actually defining the determinant, we have to give one last definition:
-
-\begin{df}
-	Let $(X,\leq_X)$ and $(Y,\leq_Y)$ be totally ordered sets. A function $f:X\to Y$ is said to be a \textbf{cycle} if for all $x\leq_X y\leq_X z$ in $X$ we have that either of $f(x)\leq_Y f(y)\leq_Y f(z)$, $f(y)\leq_Y f(z)\leq_Y f(x)$ or $f(z)\leq_Y f(x)\leq_Y f(y)$ hold.
-\end{df}
-
-We can start off by giving an intuitive definition:
-\begin{df}
-	Let $f:\R^3\to\R^3$ be a linear function. We define the \textbf{determinant of $f$} to be the real number $\det f$ given by the signed volume of the parallelepiped with edges $f(e_1),f(e_2),f(e_3)$, where the sign is positive if $f:\{e_1,e_2,e_3\}\to\{f(e_1),f(e_2),f(e_3)\}$ is a cycle, and negative otherwise.
-\end{df}
-
-It might seem a weird definition at first, but if you notice all we're doing is the same thing we did for $\R^2$ - where the determinant gave us the area of a parallelogram and its sign was just telling us if the base vectors needed to be flipped, or not. Here we're doing the same thing, but replacing ``area'' with ``volume''.
-
-To see that this coincides with our previous definition of determinant we need to prove the following result:
-
-\begin{theorem}
-	Given any linear function $f:\R^3\to \R^3$, we have that\[\det f=\det(f(e_1),f(e_2),f(e_3)).\]
-\end{theorem}
-
-In order to do that, however, we need to establish a small result first:
+%\begin{theorem}
+%	Given any linear function $f:\R^3\to \R^3$, we have that\[\det f=\det(f(e_1),f(e_2),f(e_3)).\]
+%\end{theorem}
+%
+%In order to do that, however, we need to establish a small result first:
 
 \begin{lemma}
 	Let $u,w\in \R^3$ be any two vectors. The area of the parallelogram with sides $u,w$ is precisely $\norm{u\times w}$.
