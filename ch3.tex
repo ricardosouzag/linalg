@@ -1941,3 +1941,6 @@ Which we now can readily extend to
 	Let $f,f',f'':\R^3\to \R^3$ be linear functions such that
 	\[f(e_1)=f'(e_2)=f''(e_3),\quad f(e_2)=f'(e_3)=f''(e_1),\quad f(e_3)=f'(e_1)=f''(e_2).\] Then $\det f=\det f'=\det f''$, as well as $\det A_f=\det A_{f'}=\det A_{f''}$ where $A_f,A_{f'},A_{f''}$ are the matrices corresponding to the linear functions $f,f',f''$ on the canonical basis, respectively.
 \end{cor}
+\begin{proof}
+	This follows immediately from the fact that $\det(v,u,w)=\det(w,v,u)=\det(u,w,v)$ for any vectors $v,u,w\in\R^3$.
+\end{proof}
