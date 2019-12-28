@@ -1896,15 +1896,22 @@ And, just before actually defining the sign of the determinant, we have to give 
 	
 	This example shows us that determinants are intrinsically related to the order in $\R^3$: All of $\det(e_1,e_2,e_3)$, $\det(e_2,e_3,e_1)$ and $\det(e_3,e_1,e_2)$ are the same because they respect the cycle $e_3\leq e_2\leq e_1$. Conversely, $\det(e_1,e_3,e_2)$, $\det(e_3,e_2,e_1)$ and $\det(e_2,e_1,e_3)$ are the same, but different from the other three, because they \textbf{don't} preserve the cycle $e_3\leq e_2\leq e_1$.
 \end{ex}
-\begin{cor}
-	Let $v,u,w\in \R^3$ be non-coplanar vectors. Then $\det(v,u,w)>0$ if, and only if, either of $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w\leq u$ holds.
-\end{cor}
+
+Now we can define
+\begin{df}
+	Let $f:\R^3\to \R^3$ be a linear function. We define its \textbf{determinant} to be the real number $\det f$ given by
+	\[\det f:=\det(f(e_1),f(e_2),f(e_3)).\]
+\end{df}
+
+\begin{prop}
+	Let $f:\R^3\to \R^3$ be a linear function and let $v=f(e_1)$, $u=f(e_2)$ and $w=f(e_3)$. Then $\det(v,u,w)$ is positive if $f$ is a cycle, and negative otherwise.
+\end{prop}
 \begin{proof}
-	From one of the previous results, we already know that $\det(v,u,w)=\lambda_3\norm{u\times w}^2$, where $v=\lambda_1u+\lambda_2w+\lambda_3(u\times w)$. From this we know that the sign of $\det(v,u,w)$ is just the sign of $\lambda_3$.
+	If $f$ is a cycle, then either $w\leq u\leq v$, $u\leq v\leq w$ or $v\leq w \leq u$.
 	
-	Now look at $u$ and $w$. Since $\R^3$ is totally ordered, then either $u\geq w$ or $u\leq w$.
+	Define $f',f'':\R^3\to\R^3$ linear functions by putting $v=f(e_1)=f'(e_2)=f''(e_3)$, $u=f(e_2)=f'(e_3)=f''(e_1)$ and $w=f(e_3)=f'(e_2)=f''(e_1)$.
 	
-	If $u\leq w$
+	Now we have that $\det f=\det f'=\det f''$, since $\det(v,u,w)=\det(u,w,v)=\det(w,v,u)$.
 \end{proof}
 
 Finally we can prove the theorem.
